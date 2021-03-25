@@ -11,9 +11,9 @@ I moved to a new apartment a few weeks ago and noticed that I couldn't reliably 
 ### Setup
 The main components of this project are a Raspberry Pi 4 and a digital sound sensor I found on [makershop](https://www.makershop.de/sensoren/sound/schall-sensor-modul/). The whole setup is possible because the Pi is living in the control cabinet next to the doorbell, together with the router. I also advise assigning a static local IP address to the Pi.
 
-{{<figures>}}
+{{<flex>}}
   {{<figure src="posts/raspbell.jpg">}}
-{{</figures>}}
+{{</flex>}}
 
 Setting up the whole thing was much easier than expected. Just connect VCC, GND and OUT to the correct pins on the Pi and you are good to go. The sensor also has a potentiometer which allows fine-tuning its sensitivity. That's necessary because the sensor is digital and outputs either a high or a low signal to the GPIO pin.
 

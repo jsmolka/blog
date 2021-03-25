@@ -2,7 +2,7 @@
   {{ $src := (add "/static/img/" (.Get "src")) | safeURL }}
   {{ $alt := default $src (.Get "caption") }}
 
-  <figure class="ml-0 mt-6 sm:ml-6 sm:mt-0 first:ml-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
+  <figure class="w-full ml-0 mt-6 sm:ml-6 sm:mt-0 first:ml-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
     {{ (printf "![%s](%s)" $alt $src) | $.Page.RenderString }}
     {{ if .Get "caption" }}
       <figcaption>{{ $alt }}</figcaption>
