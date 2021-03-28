@@ -28,6 +28,8 @@ In included an audio sample in the previous progress report which
 {{</flex>}}
 
 ### AGS Aging
+- edging closer to perfection?
+- show dma improvements in mgba suite
 
 ### DMA Improvements
 - three birds with one stone https://github.com/jsmolka/eggvance/commit/551edfcaa6ebe162acc18f9dc0d424b498147166
@@ -36,5 +38,6 @@ In included an audio sample in the previous progress report which
 - Top Gun thing, is this worth it?
 - min window size
 - weird behavior after moving / resizing
+- talk about people aborting projects early
 
 ### Conclusion

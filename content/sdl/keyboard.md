@@ -1,5 +1,5 @@
 ---
-title: "Keycodes"
+title: "Keyboard"
 author: "Julian Smolka"
 summary: "A list of possible SDL keycodes."
 date: 2021-03-26

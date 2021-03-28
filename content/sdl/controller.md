@@ -1,5 +1,5 @@
 ---
-title: "Buttons"
+title: "Controller"
 author: "Julian Smolka"
 summary: "A list of possible SDL controller buttons."
 date: 2021-03-26
