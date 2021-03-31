@@ -1,5 +1,89 @@
 [
     {
+        "date": "2021-03-31T14:25:56Z",
+        "type": "Ride",
+        "distance": 76957.0,
+        "time": 9396,
+        "elevation": 281.9
+    },
+    {
+        "date": "2021-03-29T12:54:09Z",
+        "type": "Ride",
+        "distance": 73655.9,
+        "time": 9368,
+        "elevation": 270.7
+    },
+    {
+        "date": "2021-03-28T12:00:31Z",
+        "type": "Ride",
+        "distance": 73632.1,
+        "time": 8663,
+        "elevation": 270.4
+    },
+    {
+        "date": "2021-03-25T15:11:45Z",
+        "type": "Ride",
+        "distance": 73659.0,
+        "time": 8866,
+        "elevation": 269.8
+    },
+    {
+        "date": "2021-03-24T15:00:55Z",
+        "type": "Ride",
+        "distance": 53647.7,
+        "time": 6698,
+        "elevation": 167.3
+    },
+    {
+        "date": "2021-03-22T14:54:22Z",
+        "type": "Ride",
+        "distance": 47881.7,
+        "time": 6052,
+        "elevation": 136.2
+    },
+    {
+        "date": "2021-03-14T14:51:56Z",
+        "type": "Ride",
+        "distance": 49156.5,
+        "time": 5764,
+        "elevation": 59.2
+    },
+    {
+        "date": "2021-03-02T14:23:07Z",
+        "type": "Ride",
+        "distance": 73903.7,
+        "time": 9394,
+        "elevation": 271.0
+    },
+    {
+        "date": "2021-02-28T13:34:55Z",
+        "type": "Ride",
+        "distance": 74027.8,
+        "time": 9154,
+        "elevation": 270.0
+    },
+    {
+        "date": "2021-02-25T15:06:32Z",
+        "type": "Ride",
+        "distance": 73913.7,
+        "time": 9288,
+        "elevation": 271.0
+    },
+    {
+        "date": "2021-02-23T14:59:44Z",
+        "type": "Ride",
+        "distance": 73835.4,
+        "time": 9808,
+        "elevation": 271.1
+    },
+    {
+        "date": "2021-02-20T10:25:25Z",
+        "type": "Ride",
+        "distance": 100272.0,
+        "time": 13370,
+        "elevation": 404.8
+    },
+    {
         "date": "2021-02-04T14:43:57Z",
         "type": "Ride",
         "distance": 49333.2,
