@@ -16,6 +16,8 @@ In included an audio sample in the previous progress report which
   {{<audio src="emerald-theme.mp3" caption="Audio 3: Pokémon Emerald intro theme">}}
 {{</flex>}}
 
+- compare psg supporting function with fifos (add emerald battle frontier example)
+
 ### Scheduler
 - first vector
 - heap?
@@ -34,10 +36,17 @@ In included an audio sample in the previous progress report which
 ### DMA Improvements
 - three birds with one stone https://github.com/jsmolka/eggvance/commit/551edfcaa6ebe162acc18f9dc0d424b498147166
 
+### Blending
+- 2 bugs fixed
+
+### ImGui
+- min window size
+- weird behavior after moving / resizing on Windows
+
+
 ### Miscellaneous
 - Top Gun thing, is this worth it?
-- min window size
-- weird behavior after moving / resizing
-- talk about people aborting projects early
 
 ### Conclusion
+- talk about people aborting projects early
+- GB -> NES -> NDS
