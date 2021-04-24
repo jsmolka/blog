@@ -4,10 +4,15 @@ pre[class*="language-"],
 code[class*="language-"] {
   @apply font-mono;
   @apply text-md;
-  @apply text-gray-900;
+  @apply text-light-800;
   @apply whitespace-pre;
   @apply leading-relaxed;
   @apply hyphens-none;
+
+  .dark-mode & {
+    @apply bg-dark-600;
+    @apply text-dark-200;
+  }
 
   .table {
     @apply inline
@@ -25,8 +30,12 @@ pre[class*="language-"] {
 :not(pre) > code {
   @apply font-mono;
   @apply text-md;
-  @apply text-gray-900;
-  @apply bg-gray-100;
+  @apply text-light-800;
+
+  .dark-mode & {
+    @apply bg-dark-600;
+    @apply text-dark-200;
+  }
 
   padding-left: 4px;
   padding-right: 4px;
@@ -42,6 +51,11 @@ pre[class*="language-"] {
 .token.doctype,
 .token.prolog {
   color: #b8bfcc;
+  // color: lighten(#636f88, 15%);
+
+  .dark-mode & {
+    color: #636f88;
+  }
 }
 
 .token.boolean,
@@ -57,10 +71,18 @@ pre[class*="language-"] {
 .token.url,
 .token.variable {
   color: saturate(darken($frost-2, 10%), 20%);
+
+  .dark-mode & {
+    color: $frost-2;
+  }
 }
 
 .token.number {
   color: saturate($aurora-4, 10%);
+
+  .dark-mode & {
+    color: $aurora-4;
+  }
 }
 
 .token.attr-name,
@@ -72,6 +94,10 @@ pre[class*="language-"] {
 .token.selector,
 .token.string {
   color: saturate(darken($aurora-3, 10%), 10%);
+
+  .dark-mode & {
+    color: $aurora-3;
+  }
 }
 
 .token.atrule,
@@ -79,6 +105,10 @@ pre[class*="language-"] {
 .token.function,
 .token.class-name {
   color: saturate(darken($frost-1, 10%), 10%);
+
+  .dark-mode & {
+    color: $frost-1;
+  }
 }
 
 .token.bold,

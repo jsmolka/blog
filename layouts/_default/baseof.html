@@ -3,7 +3,7 @@
   <head>
     {{ partial "head" . }}
   </head>
-  <body x-data="{ menu: false }" :class="{ 'overflow-hidden': menu }" class="flex flex-col min-w-screen min-h-screen m-0 p-0 font-body bg-white text-gray-900">
+  <body x-data="{ menu: false, dark: theme.isDark }" :class="{ 'overflow-hidden': menu }" class="flex flex-col min-w-screen min-h-screen m-0 p-0 font-body bg-white text-gray-900 dark:bg-dark-500">
     {{ partial "header" . }}
     {{ block "main" . }}
     {{ end }}

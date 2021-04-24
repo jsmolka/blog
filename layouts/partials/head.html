@@ -26,5 +26,5 @@
   {{ partial "javascript" (dict "context" . "paths" $scripts "name" "js/prism.js") }}
 {{ end }}
 
-{{ partial "esbuild-defer" (dict "context" . "path" "js/alpine.js") }}
+{{ partial "esbuild-defer" (dict "context" . "path" "js/main.js") }}
 {{ partial "esbuild-async" (dict "context" . "path" "js/headroom.js") }}
