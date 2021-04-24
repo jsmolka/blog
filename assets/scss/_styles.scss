@@ -8,6 +8,10 @@ body {
 ::selection {
   @apply text-gray-900;
   @apply bg-blue-200;
+
+  .dark-mode & {
+    @apply bg-blue-300;
+  }
 }
 
 ::-webkit-scrollbar {

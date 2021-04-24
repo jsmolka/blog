@@ -8,12 +8,14 @@ function shuffle(array) {
   }
 }
 
-function animate() {
+function init() {
   gsap.registerPlugin(CSSPlugin);
 
   const element = document.getElementById('index-icon');
   element.classList.toggle('hidden', false);
+}
 
+function animate() {
   const rectangles = Array.from(document.getElementsByTagName('rect'));
   shuffle(rectangles);
 
@@ -25,4 +27,5 @@ function animate() {
   }, 0.01);
 }
 
+init();
 animate();

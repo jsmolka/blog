@@ -1,4 +1,4 @@
-<header class="fixed top-0 z-10 w-full bg-dark-600 text-light-300 shadow-header">
+<header class="fixed top-0 z-10 w-full bg-dark-600 text-light-100 shadow-header">
   <nav class="flex justify-between max-w-screen-xl mx-auto">
     <div class="mr-4">
       <a class="flex items-center h-18 px-4" href="{{ .Site.BaseURL }}">
@@ -10,15 +10,15 @@
     <div class="ml-4">
       <div class="sm:flex hidden hover:text-light-500">
         {{ range .Site.Menus.main }}
-          <a class="flex items-center h-18 px-4 hover:text-light-300" href="{{ .URL | absURL }}">
+          <a class="flex items-center h-18 px-4 hover:text-light-100" href="{{ .URL | absURL }}">
             {{ $active := hasPrefix (urls.Parse $.Permalink).Path .URL }}
             <div class="relative inline-flex flex-col justify-center h-full">
               <span>{{ .Name }}</span>
-              <span class="absolute bottom-0 {{ if $active }}nav-item-animation h-1{{ else }}h-0{{ end }} w-full bg-light-300"></span>
+              <span class="absolute bottom-0 {{ if $active }}nav-item-animation h-1{{ else }}h-0{{ end }} w-full bg-light-100"></span>
             </div>
           </a>
         {{ end }}
-        <button @click="dark = theme.toggle()" class="inline-flex px-4 items-center justify-center rounded-md hover:text-light-300 focus:outline-none">
+        <button @click="dark = theme.toggle()" class="inline-flex px-4 items-center justify-center rounded-md hover:text-light-100 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" x-show="!dark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
@@ -36,7 +36,7 @@
         </button>
       </div>
       <div class="flex sm:hidden">
-        <button @click="dark = theme.toggle()" class="inline-flex p-2 items-center justify-center rounded-md hover:text-light-300 focus:outline-none">
+        <button @click="dark = theme.toggle()" class="inline-flex p-2 items-center justify-center rounded-md hover:text-light-100 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" x-show="!dark" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
@@ -62,7 +62,7 @@
   </nav>
 </header>
 <div class="aboslute top-0 min-h-18 w-full bg-dark-600"></div>
-<div x-cloak x-show="menu" class="mobile-menu block sm:hidden w-full bg-dark-600 text-light-300 overflow-y-auto shadow-header select-none">
+<div x-cloak x-show="menu" class="mobile-menu block sm:hidden w-full bg-dark-600 text-light-100 overflow-y-auto shadow-header select-none">
   <div class="flex flex-col mb-4 hover:text-light-500">
     {{ range .Site.Menus.main }}
       <a class="flex justify-center items-center h-18 hover:text-gray-50" href="{{ .URL | absURL }}">{{ .Name }}</a>
