@@ -6,7 +6,7 @@ date: 2020-04-12
 type: blank
 ---
 <div x-data="{ controls: false }" class="content w-full flex flex-col flex-1 items-center justify-center max-w-screen-xl mx-auto my-4 px-4 py-8 sm:py-16">
-  <canvas id="canvas" class="w-full bg-white"></canvas>
+  <canvas id="canvas" class="w-full bg-dark-500"></canvas>
   <input id="gba-input" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
   <input id="sav-input" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
   <div class="flex mt-6">
@@ -64,6 +64,10 @@ type: blank
     fs: new FileSystem(),
     canvas: document.getElementById('canvas'),
 
+    onRuntimeInitialized() {
+      this.updateBackground(theme.isDark);
+    },
+
     async readUrl(url) {
       return new Promise(resolve => {
         const request = new XMLHttpRequest();
@@ -106,10 +110,22 @@ type: blank
     async loadSav() {
       const data = await this.readFile(inputSav);
       this.eggvanceLoadSav(this.fs.write(data, 'sav'));
+    },
+
+    updateBackground(dark) {
+      this.eggvanceSetBackground(
+        dark
+          ? 0xFF2B3137
+          : 0xFFFFFFFF
+      );
     }
   };
 
   window.onload = () => {
+    theme.onChanged = dark => {
+      Module.updateBackground(dark)
+    };
+
     const canvas = document.getElementById('canvas');
     const width  = canvas.clientWidth;
     const height = 2 * width / 3;

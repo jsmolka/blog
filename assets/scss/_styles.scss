@@ -7,10 +7,10 @@ body {
 
 ::selection {
   @apply text-gray-900;
-  @apply bg-blue-200;
+  @apply bg-blue-light;
 
   .dark-mode & {
-    @apply bg-blue-300;
+    @apply bg-blue-dark;
   }
 }
 
@@ -25,17 +25,17 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-light-500;
+  @apply bg-light-400;
 
   .dark-mode & {
-    @apply bg-dark-400;
+    @apply bg-dark-200;
   }
 
   &:hover {
-    @apply bg-light-600;
+    @apply bg-light-500;
 
     .dark-mode & {
-      @apply bg-dark-300;
+      @apply bg-dark-100;
     }
   }
 }

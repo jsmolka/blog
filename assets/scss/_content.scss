@@ -1,14 +1,13 @@
 @import "colors";
 
 .content {
-  @apply text-dark-700;
-
-  .dark-mode & {
-    @apply text-light-300;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
+    @apply text-dark-800;
+
+    .dark-mode & {
+      @apply text-light-200;
+    }
 
     a {
       @apply relative;
@@ -22,10 +21,10 @@
     @screen anchor {
       a:before {
         @apply absolute;
-        @apply text-blue-200;
+        @apply text-blue-light;
 
         .dark-mode & {
-          @apply text-blue-300;
+          @apply text-blue-dark;
         }
 
         content: "#";
@@ -82,10 +81,10 @@
   }
 
   a {
-    background-image: linear-gradient(to right, $blue-200 0%, $blue-200 100%);
+    background-image: linear-gradient(to right, $blue-light 0%, $blue-light 100%) ;
 
     .dark-mode & {
-      background-image: linear-gradient(to right, $blue-400 0%, $blue-400 100%);
+      background-image: linear-gradient(to right, $blue-dark 0%, $blue-dark 100%);
     }
 
     background-repeat: no-repeat;
@@ -149,7 +148,11 @@
   table, th, td {
     @apply p-2;
     @apply border;
-    @apply border-gray-500;
+    @apply border-light-400;
+
+    .dark-mode & {
+      @apply border-dark-100;
+    }
   }
 
   th {
@@ -160,9 +163,14 @@
     @apply relative;
     @apply px-4;
     @apply py-4;
-    @apply bg-gray-100;
+    @apply bg-light-100;
     @apply border-l-6;
-    @apply border-blue-200;
+    @apply border-blue-light;
+
+    .dark-mode & {
+      @apply bg-dark-600;
+      @apply border-blue-dark;
+    }
   }
 
   @screen sm {
@@ -172,7 +180,11 @@
       &::before {
         @apply absolute;
         @apply text-6xl;
-        @apply text-blue-200;
+        @apply text-blue-light;
+
+        .dark-mode & {
+          @apply text-blue-dark;
+        }
 
         content: "\201C";
         top: -8px;

@@ -4,14 +4,12 @@ pre[class*="language-"],
 code[class*="language-"] {
   @apply font-mono;
   @apply text-md;
-  @apply text-light-800;
   @apply whitespace-pre;
   @apply leading-relaxed;
   @apply hyphens-none;
 
   .dark-mode & {
     @apply bg-dark-600;
-    @apply text-dark-200;
   }
 
   .table {
@@ -25,16 +23,19 @@ pre[class*="language-"] {
   @apply p-4;
   @apply overflow-auto;
   @apply shadow-xs;
+
+  .dark-mode & {
+    @apply shadow-none;
+  }
 }
 
 :not(pre) > code {
   @apply font-mono;
   @apply text-md;
-  @apply text-light-800;
+  @apply bg-light-100;
 
   .dark-mode & {
     @apply bg-dark-600;
-    @apply text-dark-200;
   }
 
   padding-left: 4px;
@@ -51,7 +52,6 @@ pre[class*="language-"] {
 .token.doctype,
 .token.prolog {
   color: #b8bfcc;
-  // color: lighten(#636f88, 15%);
 
   .dark-mode & {
     color: #636f88;
