@@ -1,16 +1,14 @@
-import 'alpinejs';
-
 class Theme {
   constructor() {
     this.onChanged = dark => {};
   }
 
-  get html() {
-    return document.getElementsByTagName('html')[0];
+  get classList() {
+    return document.getElementsByTagName('html')[0].classList;
   }
 
   get isDark() {
-    this.html.classList.contains("dark-mode");
+    return this.classList.contains("dark-mode");
   }
 
   updateMetaColor(dark) {
@@ -21,13 +19,13 @@ class Theme {
 
   init() {
     const theme = window.localStorage.getItem('theme');
-    const dark = this.html.classList.toggle('dark-mode', theme == null || theme === 'dark');
+    const dark = this.classList.toggle('dark-mode', theme == null || theme === 'dark');
 
     this.updateMetaColor(dark);
   }
 
   toggle() {
-    const dark = this.html.classList.toggle('dark-mode');
+    const dark = this.classList.toggle('dark-mode');
     window.localStorage.setItem('theme', dark ? 'dark' : 'light');
 
     this.updateMetaColor(dark);

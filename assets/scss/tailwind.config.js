@@ -100,7 +100,8 @@ module.exports = {
   variants: {
     backgroundColor: [
       'dark',
-      'hover'
+      'hover',
+      'group-hover'
     ],
     borderColor: [
       'dark',
@@ -109,6 +110,7 @@ module.exports = {
     textColor: [
       'dark',
       'hover',
+      'group-hover',
       'focus'
     ],
     margin: [
