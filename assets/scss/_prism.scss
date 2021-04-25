@@ -22,7 +22,9 @@ pre[class*="language-"] {
   @apply my-6;
   @apply p-4;
   @apply overflow-auto;
-  @apply shadow-xs;
+  @apply ring-1;
+  @apply ring-black;
+  @apply ring-opacity-5;
 
   .dark-mode & {
     @apply shadow-none;

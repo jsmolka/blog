@@ -1,3 +1,5 @@
+const root = __dirname + '/../../';
+
 module.exports = {
   theme: {
     fontFamily: {
@@ -27,8 +29,8 @@ module.exports = {
           700: '#48a8f5',
           800: '#349ff4',
           900: '#2196f3',
-          'dark': '#4482af',
-          'light': '#95ccf9'
+          dark: '#4482af',
+          light: '#95ccf9'
         },
         dark: {
           100: '#5f6469',
@@ -115,5 +117,14 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-dark-mode')()
-  ]
+  ],
+  purge: {
+    enabled: process.env.HUGO_ENVIRONMENT === 'production',
+    content: [
+      root + 'assets/**/*.scss',
+      root + 'content/**/*.md',
+      root + 'content/**/*.html',
+      root + 'layouts/**/*.html'
+    ]
+  }
 }
