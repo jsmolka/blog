@@ -1,4 +1,4 @@
-{{ if in (.Site.BaseURL | string) "localhost" }}
+{{ if .context.Site.IsServer }}
   {{ $script := resources.Get .path | js.Build }}
   <script type="text/javascript" src="{{ $script.Permalink }}" async></script>
 {{ else }}
