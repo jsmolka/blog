@@ -3,10 +3,11 @@
 pre[class*="language-"],
 code[class*="language-"] {
   @apply font-mono;
-  @apply text-md;
   @apply whitespace-pre;
   @apply leading-relaxed;
   @apply hyphens-none;
+
+  font-size: 0.925rem;
 
   .dark-mode & {
     @apply bg-dark-600;
@@ -33,13 +34,13 @@ pre[class*="language-"] {
 
 :not(pre) > code {
   @apply font-mono;
-  @apply text-md;
   @apply bg-light-100;
 
   .dark-mode & {
     @apply bg-dark-600;
   }
 
+  font-size: 0.925rem;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 2px;

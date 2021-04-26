@@ -3,6 +3,7 @@ import 'chartjs-adapter-moment';
 import { Chart, LineController, LineElement, PointElement, LinearScale, TimeScale, Filler, Legend, Tooltip } from 'chart.js';
 
 Chart.register(LineController, LineElement, LinearScale, PointElement, TimeScale, Filler, Legend, Tooltip);
+Chart.defaults.font.family = '"Roboto", sans-serif';
 
 moment.updateLocale('de', {
   week: {

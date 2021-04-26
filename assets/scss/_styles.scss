@@ -3,6 +3,7 @@ body {
 
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "calt" 0;
 }
 
 ::selection {
