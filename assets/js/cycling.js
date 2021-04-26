@@ -22,10 +22,14 @@ const config = {
         time: {
           unit: 'week',
           unitStepSize: 1
+        },
+        ticks: {
+          color: ''
         }
       },
       y: {
         ticks: {
+          color: '',
           callback: function(value) {
             return `${value} km`;
           }
@@ -179,14 +183,14 @@ class Activities extends Array {
 class Dataset {
   constructor(label, data, hidden) {
     this.label = label;
-    this.borderColor = 'rgba(33, 150, 243, 1)';
+    this.borderColor = 'rgb(33, 150, 243)';
     this.backgroundColor = 'rgba(33, 150, 243, 0.1)';
     this.borderWidth = 1;
     this.lineTension = 0;
     this.pointRadius = 5;
     this.pointHitRadius = 5;
     this.pointBorderColor = 'rgba(33, 150, 243, 1)';
-    this.pointBackgroundColor = 'rgb(233, 245, 254, 1)';
+    this.pointBackgroundColor = theme.isDark ? 'rgb(39, 59, 73)' : 'rgb(233, 245, 254)';
     this.pointHoverRadius = 5;
     this.data = data;
     this.hidden = hidden;
@@ -229,6 +233,15 @@ class Statistics {
     this.titleCallback = titleCallback || this.titleCallback;
     this.unit = unit || this.unit;
 
+    if (theme.isDark) {
+      Chart.defaults.color = '#e0e0e0';
+      config.options.scales.x.ticks.color = '#e0e0e0';
+      config.options.scales.y.ticks.color = '#e0e0e0';
+    } else {
+      Chart.defaults.color = '#1a1d21';
+      config.options.scales.x.ticks.color = '#1a1d21';
+      config.options.scales.y.ticks.color = '#1a1d21';
+    }
 
     const years = new Map();
     for (const activity of this.groupCallback(this.activities)) {
@@ -304,6 +317,10 @@ async function init() {
       activity => activity.titleMonth,
       'month'
     );
+  };
+
+  theme.onChanged = () => {
+    stats.update();
   };
 }
 
