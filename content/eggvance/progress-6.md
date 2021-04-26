@@ -178,7 +178,7 @@ That might not sound like a problem until you realize that we are on the hottest
 I really love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channel relatively quickly, and decided to add it. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well working APU / DSP, but it never was supposed to be a part of this report.
 
 {{<flex>}}
-  {{<audio src="tengoku.mp3" caption="Audio 1: Intro sequence of Rhythm Tengoku with some nice stereo">}}
+  {{<audio src="eggvance/tengoku.mp3" caption="Audio 1: Intro sequence of Rhythm Tengoku with some nice stereo">}}
 {{</flex>}}
 
 I'll write another one where I describe some of the sound basics and also give some examples. Most of the GBAs sound is composed of FIFO samples, so it's hard to show all audio channels in action and how they add up into a nice result.

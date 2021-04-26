@@ -210,7 +210,7 @@
     }
 
     &:hover {
-      @apply bg-light-100;
+      background: mix($light-100, $light-200, 75%);
 
       .dark-mode & {
         @apply bg-dark-400;

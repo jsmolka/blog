@@ -13,7 +13,7 @@ This were some productive weeks for me. I made visible, audible and technical pr
 In included an audio sample in the previous progress report which
 
 {{<flex>}}
-  {{<audio src="emerald-theme.mp3" caption="Audio 3: Pokémon Emerald intro theme">}}
+  {{<audio src="eggvance/emerald-theme.mp3" caption="Audio 3: Pokémon Emerald intro theme">}}
 {{</flex>}}
 
 - compare psg supporting function with fifos (add emerald battle frontier example)
@@ -25,8 +25,8 @@ In included an audio sample in the previous progress report which
 - problems with running late https://github.com/jsmolka/eggvance/issues/18
 
 {{<flex>}}
-  {{<audio src="gba-bios-metallic.mp3" caption="Audio 1: Metallic GBA BIOS">}}
-  {{<audio src="gba-bios.mp3" caption="Audio 2: Fixed GBA BIOS">}}
+  {{<audio src="eggvance/gba-bios-metallic.mp3" caption="Audio 1: Metallic GBA BIOS">}}
+  {{<audio src="eggvance/gba-bios.mp3" caption="Audio 2: Fixed GBA BIOS">}}
 {{</flex>}}
 
 ### AGS Aging

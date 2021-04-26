@@ -19,6 +19,10 @@ const config = {
   options: {
     scales: {
       x: {
+        grid: {
+          color: '',
+          borderColor: ''
+        },
         type: 'time',
         time: {
           unit: 'week',
@@ -29,9 +33,13 @@ const config = {
         }
       },
       y: {
+        grid: {
+          color: '',
+          borderColor: ''
+        },
         ticks: {
           color: '',
-          callback: function(value) {
+          callback: value => {
             return `${value} km`;
           }
         }
@@ -238,10 +246,18 @@ class Statistics {
       Chart.defaults.color = '#e0e0e0';
       config.options.scales.x.ticks.color = '#e0e0e0';
       config.options.scales.y.ticks.color = '#e0e0e0';
+      config.options.scales.x.grid.color = 'rgba(255, 255, 255, 0.05)';
+      config.options.scales.y.grid.color = 'rgba(255, 255, 255, 0.05)';
+      config.options.scales.x.grid.borderColor = 'rgba(255, 255, 255, 0.1)';
+      config.options.scales.y.grid.borderColor = 'rgba(255, 255, 255, 0.1)';
     } else {
       Chart.defaults.color = '#1a1d21';
       config.options.scales.x.ticks.color = '#1a1d21';
       config.options.scales.y.ticks.color = '#1a1d21';
+      config.options.scales.x.grid.color = 'rgba(0, 0, 0, 0.05)';
+      config.options.scales.y.grid.color = 'rgba(0, 0, 0, 0.05)';
+      config.options.scales.x.grid.borderColor = 'rgba(0, 0, 0, 0.1)';
+      config.options.scales.y.grid.borderColor = 'rgba(0, 0, 0, 0.1)';
     }
 
     const years = new Map();
@@ -264,10 +280,9 @@ class Statistics {
       return this.titleCallback(items[0].raw.activity);
     };
 
-    let lastDataset = null;
-
     const sortedYears = new Map([...years.entries()].sort());
 
+    let lastDataset = null;
     this.config.data.datasets.length = 0;
     for (const [year, data] of sortedYears.entries()) {
       // Connect datasets, first item is latest activity

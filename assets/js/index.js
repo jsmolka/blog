@@ -8,24 +8,17 @@ function shuffle(array) {
   }
 }
 
-function init() {
-  gsap.registerPlugin(CSSPlugin);
+gsap.registerPlugin(CSSPlugin);
 
-  const element = document.getElementById('index-icon');
-  element.classList.toggle('hidden', false);
-}
+const element = document.getElementById('index-icon');
+element.classList.toggle('hidden', false);
 
-function animate() {
-  const rectangles = Array.from(document.getElementsByTagName('rect'));
-  shuffle(rectangles);
+const rectangles = Array.from(document.getElementsByTagName('rect'));
+shuffle(rectangles);
 
-  const timeline = new TimelineMax();
-  timeline.staggerFrom(rectangles, 0.5, {
-    y: 16,
-    scale: 0,
-    ease: Quad.easeInOut
-  }, 0.01);
-}
-
-init();
-animate();
+const timeline = new TimelineMax();
+timeline.staggerFrom(rectangles, 0.5, {
+  y: 16,
+  scale: 0,
+  ease: Quad.easeInOut
+}, 0.01);

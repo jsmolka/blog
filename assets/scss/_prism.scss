@@ -7,8 +7,6 @@ code[class*="language-"] {
   @apply leading-relaxed;
   @apply hyphens-none;
 
-  font-size: 0.925rem;
-
   .dark-mode & {
     @apply bg-dark-600;
   }
@@ -16,6 +14,8 @@ code[class*="language-"] {
   .table {
     @apply inline
   }
+
+  font-size: 0.910rem;
 }
 
 pre[class*="language-"] {
@@ -40,7 +40,7 @@ pre[class*="language-"] {
     @apply bg-dark-600;
   }
 
-  font-size: 0.925rem;
+  font-size: 0.910rem;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 2px;
