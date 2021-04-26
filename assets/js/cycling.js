@@ -1,7 +1,66 @@
 import moment from 'moment';
-import { Chart, BarController, BarElement, CategoryScale, LinearScale } from 'chart.js';
+import 'chartjs-adapter-moment';
+import { Chart, LineController, LineElement, PointElement, LinearScale, TimeScale, Filler, Legend, Tooltip } from 'chart.js';
 
-Chart.register(BarController, BarElement, CategoryScale, LinearScale);
+Chart.register(LineController, LineElement, LinearScale, PointElement, TimeScale, Filler, Legend, Tooltip);
+
+moment.updateLocale('de', {
+  week: {
+    dow: 1  // Because weeks don't start on Sunday...
+  }
+});
+
+const config = {
+  type: 'line',
+  data: {
+    datasets: []
+  },
+  options: {
+    scales: {
+      x: {
+        type: 'time',
+        time: {
+          unit: 'week',
+          unitStepSize: 1
+        }
+      },
+      y: {
+        ticks: {
+          callback: function(value) {
+            return `${value} km`;
+          }
+        }
+      }
+    },
+    plugins: {
+      legend: {},
+      tooltip: {
+        xPadding: 8,
+        yPadding: 8,
+        bodySpacing: 4,
+        cornerRadius: 0,
+        displayColors: false,
+        callbacks: {
+          label: item => {
+            const activity = item.raw.activity;
+
+            // Prevent double info for connection points of datasets
+            if (item.dataset.label !== activity.date.year()) {
+              return null;
+            }
+
+            return [
+              `Distance: ${activity.displayDistance}`,
+              `Moving time: ${activity.displayTime}`,
+              `Average speed: ${activity.displayAverage}`,
+              `Elevation gain: ${activity.displayElevation}`
+            ];
+          }
+        }
+      }
+    }
+  }
+};
 
 class Activity {
   constructor(date, time, distance, elevation) {
@@ -55,19 +114,6 @@ class Activities extends Array {
     return new Promise(resolve => {
       const request = new XMLHttpRequest();
 
-      var enumerateDaysBetweenDates = function(startDate, endDate) {
-        var dates = [];
-
-        var currDate = moment(startDate).startOf('day');
-        var lastDate = moment(endDate).startOf('day');
-
-        while(currDate.add(1, 'days').diff(lastDate) < 0) {
-            dates.push(currDate.clone().toDate());
-        }
-
-        return dates;
-      };
-
       request.open('GET', url);
       request.responseType = 'json';
       request.onload = () => {
@@ -83,15 +129,6 @@ class Activities extends Array {
             datum.elevation
           ));
         }
-
-        for (const date of enumerateDaysBetweenDates(this[this.length - 1].date, this[0].date)) {
-          this.push(new Activity(date, 0, 0, 0));
-        }
-
-        this.sort((a, b) => {
-          return moment.utc(a.date).diff(moment.utc(b.date))
-        });
-
         resolve(this);
       }
       request.send();
@@ -120,13 +157,15 @@ class Activities extends Array {
   groupByDay() {
     return this.groupBy(
       activity => activity.date.format('Y-w-D'),
-      activity => activity.date.clone());
+      activity => activity.date.clone()
+    );
   }
 
   groupByWeek() {
     return this.groupBy(
       activity => activity.date.format('Y-w'),
-      activity => activity.date.clone().endOf('week'));
+      activity => activity.date.clone().endOf('week')
+    );
   }
 
   groupByMonth() {
@@ -137,47 +176,135 @@ class Activities extends Array {
   }
 }
 
-const data = {
-  labels: [],
-  datasets: [{
-    label: 'My First Dataset',
-    data: [],
-    backgroundColor: [
-      '#5bb1f6',
-      '#2196f3',
-    ],
-    categoryPercentage: 1,
-    barPercentage: 1,
-  }]
-};
+class Dataset {
+  constructor(label, data, hidden) {
+    this.label = label;
+    this.borderColor = 'rgba(33, 150, 243, 1)';
+    this.backgroundColor = 'rgba(33, 150, 243, 0.1)';
+    this.borderWidth = 1;
+    this.lineTension = 0;
+    this.pointRadius = 5;
+    this.pointHitRadius = 5;
+    this.pointBorderColor = 'rgba(33, 150, 243, 1)';
+    this.pointBackgroundColor = 'rgb(233, 245, 254, 1)';
+    this.pointHoverRadius = 5;
+    this.data = data;
+    this.hidden = hidden;
+    this.fill = true;
+  }
+}
 
-const config = {
-  type: 'bar',
-  data: data,
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  },
-};
+class Statistics {
+  constructor() {
+    this.chart = null;
+    this.hidden = new Set();
+    this.config = Object.assign({}, config);
+    this.activities = new Activities();
 
-async function init() {
-  const activities = new Activities();
-  await activities.fetch('/static/data/strava.json');
-
-  const labels = [];
-  const values = [];
-  for (const activity of activities.groupByWeek()) {
-    labels.push(activity.titleDay);
-    values.push(activity.distance);
+    // Cached update values
+    this.groupCallback = activities => activities.groupByWeek();
+    this.titleCallback = activity => activity.titleWeek;
+    this.unit = 'week';
   }
 
-  data.labels = labels;
-  data.datasets[0].data = values;
+  async init() {
+    await this.activities.fetch('/static/data/strava.json');
 
-  var myBarChart = new Chart(document.getElementById('chart').getContext('2d'), config);
+    this.config.options.plugins.legend.onClick = (event, item) => {
+      const year = item.text;
+      if (this.hidden.has(year)) {
+        this.hidden.delete(year);
+      } else {
+        this.hidden.add(year);
+      }
+      this.update();
+    }
+
+    this.update();
+  }
+
+  update(groupCallback, titleCallback, unit) {
+    // Used passed or cached values
+    this.groupCallback = groupCallback || this.groupCallback;
+    this.titleCallback = titleCallback || this.titleCallback;
+    this.unit = unit || this.unit;
+
+
+    const years = new Map();
+    for (const activity of this.groupCallback(this.activities)) {
+      const year = activity.date.year();
+
+      if (!years.has(year)) {
+        years.set(year, []);
+      }
+
+      years.get(year).push({
+        x: activity.date,
+        y: activity.distance,
+        activity: activity
+      });
+    }
+
+    this.config.options.scales.x.time.unit = this.unit;
+    this.config.options.plugins.tooltip.callbacks.title = items => {
+      return this.titleCallback(items[0].raw.activity);
+    };
+
+    let lastDataset = null;
+
+    const sortedYears = new Map([...years.entries()].sort());
+
+    this.config.data.datasets.length = 0;
+    for (const [year, data] of sortedYears.entries()) {
+      // Connect datasets, first item is latest activity
+      if (lastDataset && lastDataset.length > 0) {
+        data.push(lastDataset[0])
+      }
+
+      const dataset = new Dataset(year, data, this.hidden.has(year));
+
+      this.config.data.datasets.push(dataset);
+
+      if (!dataset.hidden) {
+        lastDataset = data;
+      }
+    }
+
+    if (this.chart) {
+      this.chart.update(this.config);
+    } else {
+      this.chart = new Chart(document.getElementById('chart').getContext('2d'), this.config);
+    }
+  }
+}
+
+async function init() {
+  const stats = new Statistics();
+  await stats.init();
+
+  document.getElementById('btnDay').onclick = () => {
+    stats.update(
+      activities => activities.groupByDay(),
+      activity => activity.titleDay,
+      'week'
+    );
+  };
+
+  document.getElementById('btnWeek').onclick = () => {
+    stats.update(
+      activities => activities.groupByWeek(),
+      activity => activity.titleWeek,
+      'week'
+    );
+  };
+
+  document.getElementById('btnMonth').onclick = () => {
+    stats.update(
+      activities => activities.groupByMonth(),
+      activity => activity.titleMonth,
+      'month'
+    );
+  };
 }
 
 init();
