@@ -103,11 +103,6 @@
   figcaption {
     @apply mt-1;
     @apply text-sm;
-    @apply text-dark-500;
-
-    .dark-mode & {
-       @apply text-light-400;
-    }
   }
 
   ul {
@@ -187,7 +182,7 @@
         }
 
         content: "\201C";
-        top: 12px;
+        top: 9px;
         left: 12px;
       }
     }
