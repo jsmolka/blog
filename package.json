@@ -5,7 +5,7 @@
     "alpinejs": "^2.8.2",
     "autoprefixer": "^10.2.5",
     "chart.js": "^3.2.0",
-	  "chartjs-adapter-moment": "^1.0.0",
+    "chartjs-adapter-moment": "^1.0.0",
     "glob": "^7.1.6",
     "gsap": "^3.6.1",
     "hamburgers": "^1.1.3",
