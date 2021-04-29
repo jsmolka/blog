@@ -20,6 +20,6 @@
     "tailwindcss-dark-mode": "^1.1.7"
   },
   "scripts": {
-    "prism": "node scripts/prism.js"
+    "transform": "node scripts/transform.js"
   }
 }

@@ -13,7 +13,7 @@ git rm -r *
 
 rem build
 hugo -s .. -d %dir%
-cmd /c npm run prism
+cmd /c npm run transform
 
 rem commit and overwrite
 git checkout --orphan newDeploy
