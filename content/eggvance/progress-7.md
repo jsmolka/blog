@@ -43,10 +43,13 @@ In included an audio sample in the previous progress report which
 - min window size
 - weird behavior after moving / resizing on Windows
 
-
 ### Miscellaneous
 - Top Gun thing, is this worth it?
 
-### Conclusion
+### Conclusion and future
 - talk about people aborting projects early
-- GB -> NES -> NDS
+- GB -> NES -> NDS (no posts for GB / NES)
+- GB to improve architecture, does not need to be super accurate
+- NES to apply the learned to a "new" system
+- NDS as magnum opus with long occupation
+  - start with #0.x progress reports and learn NDS programming first
