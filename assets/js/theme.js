@@ -13,7 +13,7 @@ class Theme {
 
   init() {
     const theme = window.localStorage.getItem('theme');
-    this.classList.toggle('dark-mode', theme == null || theme === 'dark');
+    this.classList.toggle('dark-mode', theme === 'dark');
   }
 
   toggle() {
