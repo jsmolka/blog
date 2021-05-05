@@ -7,7 +7,7 @@ type: post
 ---
 Over four months have passed since the last progress report. During that period I invested a lot of time into cleaning up the current codebase, improving performance and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots of before / after comparisons.
 
-### State Dependent Dispatching
+### State dependent dispatching
 The first topic I want to talk about is something I call 'state dependent dispatching' (even though dispatching is probably the wrong technical term for this situation). Emulators must handle lots of hardware states simultaneously in order to function correctly. Most of them can be changed by writing to an I/O registers or even during the execution of a single instruction. Examples for such states in GBA are:
 
 - Which mode is the processor in?
@@ -121,7 +121,7 @@ What would a performance post be without comparing numbers. I originally intende
 | <span class="font-mono">[326b4809](https://github.com/jsmolka/eggvance/commit/326b4809b398f051807a93b2bc4e9879fef60567)</span> | Improved state dispatching | 556.9 fps       | 574.4 fps      |
 {{</table>}}
 
-### Efficient Bit Iteration
+### Efficient bit iteration
 The block data transfer instructions of the ARM7 encode their transferred registers in a binary register list (`rlist`). Each set bit in this list represents a register which needs to be transferred during execution. Take `0b0111` for example, which will transfer registers one to three but not register four.
 
 Emulating these instructions requires iterating all bits in the `rlist` and transferring set ones. The code below shows a simple (and naive) example of doing it. In each iteration we shift the bits in the `rlist` to the right and increase the current bit index `x` by one. We do this until the `rlist` equals zero which means that there are no more bits left to transfer. Inside the loop we check if the lowest bit is set and then use the bit index to transfer the correct register.
@@ -177,7 +177,7 @@ All of this sounds nice until to have to figure out errors. The whole thing can 
 
 A demonstration can be found [here]({{<ref "wasm.html">}}).
 
-### Improving Tests
+### Improving tests
 The last part of this progress report is dedicated to my [GBA test suite](https://github.com/jsmolka/gba-suite). I developed most of it simultaneously with the eggvance CPU to ensure correctness. The whole thing is writting is pure assembly to have the maximum control over it. This was especially important during the start where lots of instructions weren't implemented yet. At some point I move the suite into its own repository because it became its own project.
 
 Since then it resulted in some CPU edge case fixes in [mGBA](https://github.com/mgba-emu/mgba) and other open-source emulators. These poor developers had to work with a test suite which was meant for personal usage. It had no user interface at all and stored the number of the first failed test in a register. The only graphical things about it were a green screen on success and a red screen after failing a test. That's why I decided to add a minimal user interface.

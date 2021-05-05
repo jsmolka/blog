@@ -14,7 +14,7 @@ After writing a basic [Chip-8](https://github.com/jsmolka/sandbox-cpp/tree/maste
   {{<figure src="eggvance/yoshi-title-screen.png" caption="Figure 2 - Yoshi's Island">}}
 {{</flex>}}
 
-### Early Steps
+### Early steps
 The first thing I did was implement the CPU, an ARM7TDMI to the precise, which took me a couple months. My main sources for this were the official ARM datasheet and [GBATEK](https://problemkaputt.de/gbatek.htm). The most important thing I did during all that time was to write CPU tests which cover pretty much all common and most of the edge cases. This turned out to be a great time investment because I could rely on my CPU implementation when debugging problems related to other parts of the emulator. The code below shows a simple test for the ARM multiply instruction.
 
 ```armv4t
@@ -54,7 +54,7 @@ The last thing I did was clean up the memory interface. I implemented things lik
 - 07/08/19: Displays all tonc demos
 - 17/08/19: Runs Pokémon Emerald
 
-### Some Working Games
+### Some working games
 - Advance Wars
 - Castlevania - Aria of Sorrow
 - Mario Kart - Super Circuit

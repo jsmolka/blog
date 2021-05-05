@@ -7,7 +7,7 @@ type: post
 ---
 Hello there! It has been quite a while since the last progress report, two months to be exact. Development of the emulator has slowed down a little during that time because I started working as a JavaScript developer. Apart from cleaning up my codebase, I also fixed and implemented some things which might be of interest to some people.
 
-### Bitmap Modes
+### Bitmap modes
 The GBA has six different background modes which are evenly split into three tile-based and three bitmap modes. One would assume that games utilize bitmaps as much as tiles, but that's not the case in reality. Tiles tend to be faster and easier to understand and are therefore used in most games. One rare example of a game using bitmap modes is DOOM II, which uses them to display the scene created by its internal software renderer. Due to this kind of games being so rare, I didn't notice bugs in the bitmap implementation until very recently, when I was going through some of the demos on [gbadev.org](https://www.gbadev.org/).
 
 {{<flex>}}
@@ -42,7 +42,7 @@ void PPU::renderBgMode5(int bg) {
 
 The fixed version of the renderer applies the `transform` function to the current pixel, which returns the coordinates inside the bitmap. Those are then used to determine the pixels color. The matrix used in the Yeti demo scales the bitmap by two and thus fills the entire screen. The black pixels on the right are caused by the game and not by the emulator.
 
-### Color Masking
+### Color masking
 The GBA uses the BGR555 format to encode colors and stores them in 16-bit units. Most colors are stored in the palette RAM which is a dedicated area in memory with a size of 0x400 bytes. It consists of two halves which are used to store background and sprite colors. The first color in each half can be used to draw transparent pixels. An obvious use case for this are sprites, which aren't always perfect squares. If a pixel has been marked as transparent, the next pixel in the drawing order will be displayed.
 
 {{<flex>}}
@@ -66,7 +66,7 @@ u16 Palette::colorBG(int index, int bank) {
 
 This problem can be eliminated with a quite simple solution. Every color read from the palette needs to be masked with 0x7FFF in order to clear the most significant bit. This prevents confusing transparent pixels with malformed white pixels (figure 3).
 
-### Sprite Tile Restrictions
+### Sprite tile restrictions
 
 This issue is another prime example for the 'most games don't use bitmaps, therefore I can't test them' category. If you compare both figures down below you will notice some strange, colorful pixels in the upper left corner of figure 6. Those are uninitialized sprites (or objects if you listen to Nintendo) which were wrongfully rendered by the emulator.
 

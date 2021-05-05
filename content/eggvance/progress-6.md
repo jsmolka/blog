@@ -7,7 +7,7 @@ type: post
 ---
 2020 came to an end and left me with an output of two progress reports and a simple, short release note. That's less than I was hoping for, but the most time this year went into improving the code base and some performance tinkering for personal pleasure. In my defense, the last progress report had much higher quality than the previous ones, and I'd like to keep it this way!
 
-### Undefined Behavior
+### Undefined behavior
 In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4) which has been reported by fleroviux in June last year. He tried to play Pokémon Sapphire and his game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
 
 {{<flex>}}
@@ -76,7 +76,7 @@ Unfortunately, the replacement BIOS doesn't reproduce this behavior. Here we ret
 
 I fixed the bug when working on something completely different. Reads from unused memory regions return values based on prefetched values in the CPUs pipeline. There were some small issues in that code that were fixed in [this commit](https://github.com/jsmolka/eggvance/commit/213c7ab0a18502125b725536c433da3bf90d0b84). It seems that the game tries to access unused memory regions at some point when running the loop with the wrong loop counter and returning 'proper bad value' fixes the freezing behavior.
 
-### Sprite Render Cycles
+### Sprite render cycles
 This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fix compared to the previous one and has also been reported by fleroviux. The total available render cycles for sprites are 1210 if the H-Blank interval free bit in the display control register is set or 954 otherwise. This means that the amount of sprites per scanline is limited. If you ignore that limit you get something like in figure 3, where the sprite on top overlaps with the status bar.
 
 {{<flex>}}
@@ -86,7 +86,7 @@ This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fi
 
 Calculating the number of cycles it takes to render a sprite is quite easy. It takes `width` cycles for normal and `2 * width + 10` cycles for sprites with affine transformations. Sprites with x-coordinates outside of the screen also affect this quota and programmers should be mindful to explicitly disable sprites instead of moving them outside the screen.
 
-### Real-Time Clock
+### Real-time clock
 The next thing I want to talk about is an actual new feature in the emulator. If you own a third generation Pokémon game and start it, you will notice that it complains about a drained battery. Time based events will no longer work because its internal real-time clock ran dry.
 
 {{<flex>}}
@@ -142,7 +142,7 @@ Debugging the game showed that Sennen Kazoku didn't set SCK high in step one of 
  }
 ```
 
-### Accuracy Improvements
+### Accuracy improvements
 I mentioned three remaining things in the last release [release post]({{<relref "release-0.2.md">}}): RTC emulation, improved accuracy, and audio. With RTC off the list, there was only one thing left before I could start implementing audio. Even though eggvance is quite accurate, it has some problems in the timing section because [prefetch](https://mgba.io/2015/06/27/cycle-counting-prefetch/) isn't emulated.
 
 Here are some of the things I implemented / changed:
