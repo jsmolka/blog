@@ -30,21 +30,43 @@ The initial implementation of these channels was unoptimized and caused quite th
 {{</flex>}}
 
 ### Scheduler
-As time went on
-
-- first vector
-- heap?
-- circular list with infinite head
-- problems with running late https://github.com/jsmolka/eggvance/issues/18
+As time went on it became more and more apparent that I needed some sort of scheduling in my emulator. There were lots of cycling counters scattered across the codebase which slowed the emulator down and increased complexity. Not having a scheduler also caused some audio [issues](https://github.com/jsmolka/eggvance/issues/14) if a game made good use of halting because it led to issues with the frame sequencer.
 
 {{<flex>}}
-  {{<audio src="eggvance/gba-bios-metallic.mp3" caption="Audio 1: Metallic GBA BIOS">}}
-  {{<audio src="eggvance/gba-bios.mp3" caption="Audio 2: Fixed GBA BIOS">}}
+  {{<audio src="eggvance/gba-bios-metallic.mp3" caption="Audio 4: Metallic GBA BIOS">}}
+  {{<audio src="eggvance/gba-bios.mp3" caption="Audio 5: Fixed GBA BIOS">}}
 {{</flex>}}
 
-### AGS Aging
-- edging closer to perfection?
-- show dma improvements in mgba suite
+I tested different data structures in terms of performance and decided to go with a circular doubly linked list. The list must be doubly linked to allow fast removal of scheduled events. Being cirular improves performance because it eliminates null check in the code. To prevent infinite looping during insertion there must be a dummy event at the last position.
+
+```cpp
+void insert(Event& item) {
+  Event*  node = &item;
+  Event** iter = &head;
+
+  while (**iter < *node)
+    iter = &(*iter)->next;
+
+  node->prev = (*iter)->prev;
+  node->next = (*iter);
+  node->prev->next = node;
+  node->next->prev = node;
+
+  (*iter) = node;
+}
+
+void remove(Event& item) {
+  Event* node = &item;
+
+  node->prev->next = node->next;
+  node->next->prev = node->prev;
+
+  if (head == node)
+    head = node->next;
+}
+```
+
+<!-- Conclusion? -->
 
 ### DMA Improvements
 - three birds with one stone https://github.com/jsmolka/eggvance/commit/551edfcaa6ebe162acc18f9dc0d424b498147166
@@ -52,12 +74,13 @@ As time went on
 ### Blending
 - 2 bugs fixed
 
+### AGS Aging
+- edging closer to perfection?
+- show dma improvements in mgba suite
+
 ### ImGui
 - min window size
 - weird behavior after moving / resizing on Windows
-
-### Miscellaneous
-- Top Gun thing, is this worth it?
 
 ### Mother 3
 
