@@ -113,7 +113,7 @@ What would a performance post be without comparing numbers. I originally intende
 
 {{<table>}}
 |                                                             Commit                                                             | Improvement                | Pokémon Emerald | Yoshi's Island |
-|:------------------------------------------------------------------------------------------------------------------------------:|----------------------------|-----------------|----------------|
+|:-------------------------------------------------------------------------------------------------------------------------------|:---------------------------|:----------------|:---------------|
 | <span class="font-mono">[368955c0](https://github.com/jsmolka/eggvance/commit/368955c02f911243aaf2b2e8dfc9ce9d849b8f93)</span> | Baseline                   | 432.1 fps       | 455.0 fps      |
 | <span class="font-mono">[7007ab8a](https://github.com/jsmolka/eggvance/commit/7007ab8a2a9721cf47c437fb20d4f1e2e560fc43)</span> | GPR class removed          | 460.8 fps       | 481.7 fps      |
 | <span class="font-mono">[fc00b845](https://github.com/jsmolka/eggvance/commit/fc00b845df0963aca0ddfcf4598a5672ac930d8f)</span> | Instruction template LUTs  | 489.4 fps       | 511.7 fps      |
@@ -221,8 +221,8 @@ text_glyph_data:
 With the all text rendering functions in place I was able to add a simple user interface. It shows whether or not the test suite succeeded and also adds the number of the failed test if there was one. This should make it much easier for developers to use the test suite. Of course you still have to refer to the actual source code to understand what the test did but that shouldn't be a problem for most people.
 
 {{<flex>}}
-  {{<figure src="eggvance/suite-passed.png" caption="Figure 1 - Test suite passed">}}
-  {{<figure src="eggvance/suite-failed.png" caption="Figure 2 - Test suite failed">}}
+  {{<figure src="eggvance/suite-passed.png" caption="Figure 1: Test suite passed">}}
+  {{<figure src="eggvance/suite-failed.png" caption="Figure 2: Test suite failed">}}
 {{</flex>}}
 
 ### Conclusion

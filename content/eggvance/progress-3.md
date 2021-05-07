@@ -11,7 +11,7 @@ This month in an average emulator - a complete rewrite. That's what happens when
 The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. Each instruction has a different number of fixed and variable bits. Fixed bits provide information about the used format while variable bits are used to encode parameters like registers, flags and immediate values. As a result of having 16 additional bits, ARM instructions tend to be much more complex and versatile in their nature.
 
 {{<flex>}}
-  {{<figure src="eggvance/thumb-format.png" caption="Figure 1 - Thumb format">}}
+  {{<figure src="eggvance/thumb-format.png" caption="Figure 1: Thumb format">}}
 {{</flex>}}
 
 Figure 1 shows a small subset of the 19 possible Thumb instruction formats. When looking at them as a whole you will notice that they can be decoded by using the most significant 8 bits. In the previous version of the emulator decoding and executing an instruction where two separate steps. First a static array of enumerations was used to identify the instruction format and then a switch-case executed the matching instruction handler.
@@ -55,8 +55,8 @@ void ARM::executeThumb(u16 instr) {
 At some point in development the emulator was able to boot every tested game apart from the Sonic Advance titles. Resolving issues like this usually involves running my emulator against established ones like No$GBA. After two hours of comparing I ended up noticing that a different value of the RCNT register, which is used for multiplayer functionality, caused a chain of events leading to the screen shown in figure 2.
 
 {{<flex>}}
-  {{<figure src="eggvance/sonic-rcnt-bug.png" caption="Figure 2 - Uninitialized RCNT">}}
-  {{<figure src="eggvance/sonic-rcnt.png" caption="Figure 3 - Initalized RCNT">}}
+  {{<figure src="eggvance/sonic-rcnt-bug.png" caption="Figure 2: Uninitialized RCNT">}}
+  {{<figure src="eggvance/sonic-rcnt.png" caption="Figure 3: Initalized RCNT">}}
 {{</flex>}}
 
 This problem was caused by skipping the BIOS and directly jumping inside the ROM. Apart from showing the animated intro sequence, the BIOS also initializes registers like RCNT and DISPCNT to their default value. I knew about this and properly initialized all implemented registers to their post-BIOS state, but RCNT is not, and probably never will be, used in my emulator and was therefore left untouched. Doing a test run with the BIOS could've saved me a couple of hours but that's something I usually don't do during development.
@@ -111,8 +111,8 @@ u32 ARM::adc(u32 op1, u32 op2, bool flags) {
 Using a 64-bit integer to store the second operand with added carry was the first improvement over the standard `add` function. Sadly this didn't fix all the problems. Comparing my results to the expected results of the mGBA test suite made me realize that the carry flag is only taken into consideration for carry detection and is completely ignored for overflow detection. The code above shows my final `adc` function (note the usage of `opc`).
 
 {{<flex>}}
-  {{<figure src="eggvance/mgba-carry-fail.png" caption="Figure 4 - Carry tests fail">}}
-  {{<figure src="eggvance/mgba-carry-pass.png" caption="Figure 5 - Carry tests pass">}}
+  {{<figure src="eggvance/mgba-carry-fail.png" caption="Figure 4: Carry tests fail">}}
+  {{<figure src="eggvance/mgba-carry-pass.png" caption="Figure 5: Carry tests pass">}}
 {{</flex>}}
 
 ### Config
@@ -135,6 +135,6 @@ deadzone = 16000
 That's all for this progress report. A Windows build for the latest version can be found on [GitHub](https://github.com/jsmolka/eggvance/releases). I used profile guided optimization to squeeze out the last drop of performance (most games can be played at 10x the normal speed). Of course the current version is not perfect and bug free, audio is still missing and there are crashes and visual bugs in a few games like DOOM II.
 
 {{<flex>}}
-  {{<figure src="eggvance/doom-bug-1.png" caption="Figure 6 - DOOM II bug">}}
-  {{<figure src="eggvance/doom-bug-2.png" caption="Figure 7 - DOOM II bug">}}
+  {{<figure src="eggvance/doom-bug-1.png" caption="Figure 6: DOOM II bug">}}
+  {{<figure src="eggvance/doom-bug-2.png" caption="Figure 7: DOOM II bug">}}
 {{</flex>}}

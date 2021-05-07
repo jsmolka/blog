@@ -28,20 +28,20 @@ switch (mmio.dispcnt.mode) {
 The code snippet above shows the parts of the PPU which contribute to rendering the Pokémon Emerald title screen. The used backgrounds and their rendering functions are dependent on the selected video mode found in the DISPCNT register. The produced layers can be seen in figures 1 to 4.
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-layer-bg0.png" caption="Figure 1 - Background layer 0">}}
-  {{<figure src="eggvance/emerald-layer-bg1.png" caption="Figure 2 - Background layer 1">}}
+  {{<figure src="eggvance/emerald-layer-bg0.png" caption="Figure 1: Background layer 0">}}
+  {{<figure src="eggvance/emerald-layer-bg1.png" caption="Figure 2: Background layer 1">}}
 {{</flex>}}
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-layer-bg2.png" caption="Figure 3 - Background layer 2">}}
-  {{<figure src="eggvance/emerald-layer-obj.png" caption="Figure 4 - Object layer">}}
+  {{<figure src="eggvance/emerald-layer-bg2.png" caption="Figure 3: Background layer 2">}}
+  {{<figure src="eggvance/emerald-layer-obj.png" caption="Figure 4: Object layer">}}
 {{</flex>}}
 
 One of the most challenging aspects of emulating the PPU is combining the different layers into the final scene. That's what the `collapse` function is doing. The process itself is rather straightforward for simple scenes. Just loop over the layers from highest to lowest priority and use the first opaque pixel you find. It gets much harder when dealing with effects like windows and color blending which need to look at multiple layers at the same time. An example for color blending can be found in figure 5.
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-layer-blend.png" caption="Figure 5 - Blending backgrounds 0 and 1">}}
-  {{<figure src="eggvance/emerald-title-screen.png" caption="Figure 6 - Final scene">}}
+  {{<figure src="eggvance/emerald-layer-blend.png" caption="Figure 5: Blending backgrounds 0 and 1">}}
+  {{<figure src="eggvance/emerald-title-screen.png" caption="Figure 6: Final scene">}}
 {{</flex>}}
 
 The predecessor of the `collapse` function ate a sizable amount of CPU time and was a prime candidate to be reworked. The new and heavily templated [version](https://github.com/jsmolka/eggvance/blob/d89f078a1ecf74c98837cc26b8f9ee2c6a1980f5/eggvance/src/ppu/collapse.inl) has improved performance by around 30-35%. It also fixed several bugs that were related to object windows.
