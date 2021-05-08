@@ -14,8 +14,6 @@ async function main() {
       const dom = await jsdom.JSDOM.fromFile(file);
       const doc = dom.window.document;
 
-      Prism.highlightAllUnder(doc);
-
       if (doc.getElementsByTagName('code').length > 0) {
         const preloadMono = doc.createElement('link');
         preloadMono.setAttribute('rel', 'preload');
@@ -24,6 +22,8 @@ async function main() {
         preloadMono.setAttribute('type', 'font/woff2');
         preloadMono.setAttribute('as', 'font');
         doc.head.appendChild(preloadMono);
+
+        Prism.highlightAllUnder(doc);
       }
 
       if (doc.getElementsByClassName('font-bit').length > 0) {
