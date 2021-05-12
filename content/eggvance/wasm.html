@@ -100,7 +100,7 @@ type: blank
     async loadDemo(button) {
       button.innerHTML = 'Loading...';
       try {
-        const data = await this.readUrl('/static/data/celeste.gba');
+        const data = await this.readUrl('/data/celeste.gba');
         this.eggvanceLoadGba(this.fs.write(data, 'gba'));
       } finally {
         button.innerHTML = 'Load demo';
@@ -140,4 +140,4 @@ type: blank
     }
   }
 </script>
-<script src="/static/wasm/eggvance.js" async></script>
+<script src="/wasm/eggvance.js" async></script>

@@ -17,7 +17,7 @@ async function main() {
       if (doc.getElementsByTagName('code').length > 0) {
         const preloadMono = doc.createElement('link');
         preloadMono.setAttribute('rel', 'preload');
-        preloadMono.setAttribute('href', '/static/font/mono/JetBrainsMono-Regular.woff2');
+        preloadMono.setAttribute('href', '/font/mono/JetBrainsMono-Regular.woff2');
         preloadMono.setAttribute('crossorigin', 'anonymous');
         preloadMono.setAttribute('type', 'font/woff2');
         preloadMono.setAttribute('as', 'font');
@@ -29,7 +29,7 @@ async function main() {
       if (doc.getElementsByClassName('font-bit').length > 0) {
         const preloadBit = doc.createElement('link');
         preloadBit.setAttribute('rel', 'preload');
-        preloadBit.setAttribute('href', '/static/font/bit/BitOutline.woff2');
+        preloadBit.setAttribute('href', '/font/bit/BitOutline.woff2');
         preloadBit.setAttribute('crossorigin', 'anonymous');
         preloadBit.setAttribute('type', 'font/woff2');
         preloadBit.setAttribute('as', 'font');

@@ -1,4 +1,4 @@
-{{ $img := imageConfig (.Destination | safeURL) }}
+{{ $img := imageConfig ((printf "/static/%s" .Destination) | safeURL) }}
 
 <a href="{{ .Destination | safeURL }}" target="_blank">
   <img
