@@ -11,10 +11,11 @@
       <div class="sm:flex hidden hover:text-light-500">
         {{ range .Site.Menus.main }}
           <a class="flex items-center h-18 px-4 hover:text-light-200" href="{{ .URL | absURL }}">
-            {{ $active := hasPrefix (urls.Parse $.Permalink).Path .URL }}
             <div class="relative inline-flex flex-col justify-center h-full">
               <span>{{ .Name }}</span>
-              <span class="absolute bottom-0 {{ if $active }}nav-item-animation h-1{{ else }}h-0{{ end }} w-full bg-light-200"></span>
+              {{ if hasPrefix (urls.Parse $.Permalink).Path .URL }}
+                <span class="absolute bottom-0 nav-item-animation h-1 w-full bg-light-200"></span>
+              {{ end }}
             </div>
           </a>
         {{ end }}
