@@ -5,7 +5,7 @@ summary: "The seventh progress report of the eggvance GBA emulator."
 date: 2021-05-11
 type: post
 ---
-These were some productive weeks for me. I made visible, audible and technical progress which pushed the project over the finish line. I never intended for this emulator to be good, hell, I didn't even know if I could do it at all. It started working on it with the expectation of running Pokémon Emerald someday. The current version blows this expectation out of the window to the point that you could recommend it to another person. So let's go over the final improvements of version 1.0.
+These were some productive weeks for me. I made visible, audible and technical progress which pushed the project over the finish line. I never intended for this emulator to be good, hell, I didn't even know if I could do it at all. I started working on it with the expectation of running Pokémon Emerald someday. The current version blows this expectation out of the window to the point that you could recommend it to another person. So let's go over the final improvements of version 1.0.
 
 ### Beep boop
 Audio has been one of the most challenging things for me to do. I pushed it back to a late stage in development because my brain just couldn't grasp the idea of combining frequencies and amplitudes into something that sounds pleasant to the human ear. Emphasis on pleasant. I was talking about that with a college and he noted that audio issues stand out much more than minor graphical glitches. High quality audio emulation is important and I made good progress on that front over the last months.
