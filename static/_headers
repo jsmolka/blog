@@ -1,0 +1,35 @@
+/audio/*
+  Cache-Control: public
+  Cache-Control: max-age=604800
+
+/css/*
+  Cache-Control: public
+  Cache-Control: max-age=365000000
+  Cache-Control: immutable
+
+/data/*
+  Cache-Control: public
+  Cache-Control: max-age=600
+
+/font/*
+  Cache-Control: public
+  Cache-Control: max-age=365000000
+  Cache-Control: immutable
+
+/icon/*
+  Cache-Control: public
+  Cache-Control: max-age=365000000
+  Cache-Control: immutable
+
+/img/*
+  Cache-Control: public
+  Cache-Control: max-age=604800
+
+/js/*
+  Cache-Control: public
+  Cache-Control: max-age=365000000
+  Cache-Control: immutable
+
+/wasm/*
+  Cache-Control: public
+  Cache-Control: max-age=600
