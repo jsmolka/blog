@@ -1,4 +1,4 @@
-baseURL      = "https://smolka.dev/"
+baseURL      = "https://smolka.dev"
 title        = "Smolka"
 copyright    = "Julian Smolka"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
@@ -39,36 +39,3 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
   [markup.highlight]
     codeFences = false
-
-[module]
-  [[module.mounts]]
-    source = "static/CNAME"
-    target = "static/CNAME"
-
-  [[module.mounts]]
-    source = "static/audio"
-    target = "static/static/audio"
-
-  [[module.mounts]]
-    source = "static/data"
-    target = "static/static/data"
-
-  [[module.mounts]]
-    source = "static/font"
-    target = "static/static/font"
-
-  [[module.mounts]]
-    source = "static/icon"
-    target = "static/static/icon"
-
-  [[module.mounts]]
-    source = "static/img"
-    target = "static/static/img"
-
-  [[module.mounts]]
-    source = "static/wasm"
-    target = "static/static/wasm"
-
-  [[module.mounts]]
-    source = "icon/website/web"
-    target = "static"

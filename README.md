@@ -1,4 +1,4 @@
-# jsmolka.github.io
+# website
 I might publish stuff here.
 
 ## Setup
