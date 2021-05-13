@@ -1,7 +1,7 @@
 <header class="fixed top-0 z-10 w-full bg-dark-600 text-light-200 shadow-header select-none">
   <nav class="flex justify-between max-w-screen-xl mx-auto">
     <div class="mr-4">
-      <a class="flex items-center h-18 px-4" href="{{ .Site.BaseURL }}">
+      <a class="flex items-center h-18 px-4" href="{{ .Site.BaseURL }}" aria-label="Home">
         <div class="h-8">
           {{ partial "logo" . }}
         </div>
@@ -19,7 +19,7 @@
             </div>
           </a>
         {{ end }}
-        <button @click="dark = theme.toggle()" class="inline-flex px-4 items-center justify-center rounded-md hover:text-light-200 focus:outline-none">
+        <button @click="dark = theme.toggle()" class="inline-flex px-4 items-center justify-center rounded-md hover:text-light-200 focus:outline-none" aria-label="Toggle theme">
           <svg xmlns="http://www.w3.org/2000/svg" x-show="!dark" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
@@ -37,7 +37,7 @@
         </button>
       </div>
       <div class="flex sm:hidden">
-        <button @click="dark = theme.toggle()" class="inline-flex p-2 items-center justify-center rounded-md hover:text-light-200 focus:outline-none">
+        <button @click="dark = theme.toggle()" class="inline-flex p-2 items-center justify-center rounded-md hover:text-light-200 focus:outline-none" aria-label="Toggle theme">
           <svg xmlns="http://www.w3.org/2000/svg" x-show="!dark" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
           </svg>
@@ -53,7 +53,7 @@
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
         </button>
-        <button :class="{ 'is-active': menu }" @click="menu = !menu" class="hamburger hamburger--squeeze h-18 focus:outline-none">
+        <button :class="{ 'is-active': menu }" @click="menu = !menu" class="hamburger hamburger--squeeze h-18 focus:outline-none" aria-label="Open menu">
           <span class="hamburger-box align-middle">
             <span class="hamburger-inner"></span>
           </span>
