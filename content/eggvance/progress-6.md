@@ -64,7 +64,7 @@ mov       r12, 0x4000000  ; addr: 0000018C  data: E3A0C301
 mov       r2, 0x4         ; addr: 00000190  data: E3A02004
 ```
 
-It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs two staged instruction pipeline, we've already fetched the value at address 0x190, and its value will be returned for future protected BIOS reads (like dereferenced null pointers). In this case, the value has its sign bit set and the loop is never executed.
+It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs two-staged instruction pipeline, we've already fetched the value at address 0x190, and its value will be returned for future protected BIOS reads (like dereferenced null pointers). In this case, the value has its sign bit set and the loop is never executed.
 
 ```armv4t
 movs      pc, lr                ; addr: 000000AC  data: E1B0F00E
@@ -87,7 +87,7 @@ This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fi
 Calculating the number of cycles it takes to render a sprite is quite easy. It takes `width` cycles for normal and `2 * width + 10` cycles for sprites with affine transformations. Sprites with x-coordinates outside of the screen also affect this quota and programmers should be mindful to explicitly disable sprites instead of moving them outside the screen.
 
 ### Real-time clock
-The next thing I want to talk about is an actual new feature in the emulator. If you own a third generation Pokémon game and start it, you will notice that it complains about a drained battery. Time based events will no longer work because its internal real-time clock ran dry.
+The next thing I want to talk about is an actual new feature in the emulator. If you own a third-generation Pokémon game and start it, you will notice that it complains about a drained battery. Time-based events will no longer work because its internal real-time clock ran dry.
 
 {{<flex>}}
   {{<figure src="eggvance/emerald-bad-rtc.png" caption="Figure 5: Empty battery warning">}}
@@ -170,12 +170,12 @@ And the resulting [mGBA suite](https://github.com/mgba-emu/suite) coverage compa
 | Edge case      | 1            | 2            | 6          | 1          | 10    |
 {{</table>}}
 
-I was happy to finally have something you could call relatively cycle accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald home town down to mere 485 fps. I was shocked, but the issue turned out to be easier than expected. The MSVC optimizer just didn't inline the prefetch code.
+I was happy to finally have something you could call relatively cycle-accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald hometown down to mere 485 fps. I was shocked, but the issue turned out to be easier than expected. The MSVC optimizer just didn't inline the prefetch code.
 
 That might not sound like a problem until you realize that we are on the hottest of paths out there. It gets called millions of times per second, so eliminating the function call overhead is very important. After force inlining it, I was back at 575 fps which is a nice value. My goal is to finish the emulator at something around 500 fps mark for demanding games (the ones that don't utilize the CPUs halt functionality, I am looking at you GameFreak devs).
 
 ### Sound?
-I really love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channel relatively quickly, and decided to add it. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well working APU / DSP, but it never was supposed to be a part of this report.
+I love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channel relatively quickly, and decided to add it. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well-working APU / DSP, but it never was supposed to be a part of this report.
 
 {{<flex>}}
   {{<audio src="eggvance/tengoku.mp3" caption="Audio 1: Intro sequence of Rhythm Tengoku with some nice stereo">}}

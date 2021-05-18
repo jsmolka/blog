@@ -5,9 +5,9 @@ summary: "The first progress report of the eggvance GBA emulator."
 date: 2019-08-31
 type: post
 ---
-At the end of last year I finished my introduction project to C++. Since then, I read a couple of books about the language and I really started to like it. Finishing my previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ class where one of my fellow students asked if the emulator I was playing on was the project for the class. I said no but the idea got stuck in my head (thanks Robert).
+At the end of last year, I finished my introduction project to C++. Since then, I read a couple of books about the language and started to like it. Finishing my previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ class where one of my fellow students asked if the emulator I was playing on was the project for the class. I said no but the idea got stuck in my head (thanks Robert).
 
-After writing a basic [Chip-8](https://github.com/jsmolka/sandbox-cpp/tree/master/chip8) emulator and a less than half finished [GB](https://github.com/jsmolka/egg-gb) emulator, I moved on to the GBA because that's what I really wanted to do. Now, exactly seven months after the initial commit, I feel like the emulator is in a state that is worth talking about.
+After writing a basic [Chip-8](https://github.com/jsmolka/sandbox-cpp/tree/master/chip8) emulator and a less than half-finished [GB](https://github.com/jsmolka/egg-gb) emulator, I moved on to the GBA because that's what I really wanted to do. Now, exactly seven months after the initial commit, I feel like the emulator is in a state that is worth talking about.
 
 {{<flex>}}
   {{<figure src="eggvance/emerald-title-screen.png" caption="Figure 1: Pokemon Emerald">}}
@@ -15,7 +15,7 @@ After writing a basic [Chip-8](https://github.com/jsmolka/sandbox-cpp/tree/maste
 {{</flex>}}
 
 ### Early steps
-The first thing I did was implement the CPU, an ARM7TDMI to the precise, which took me a couple months. My main sources for this were the official ARM datasheet and [GBATEK](https://problemkaputt.de/gbatek.htm). The most important thing I did during all that time was to write CPU tests which cover pretty much all common and most of the edge cases. This turned out to be a great time investment because I could rely on my CPU implementation when debugging problems related to other parts of the emulator. The code below shows a simple test for the ARM multiply instruction.
+The first thing I did was implement the CPU, an ARM7TDMI to the precise, which took me a couple of months. My main sources for this were the official ARM datasheet and [GBATEK](https://problemkaputt.de/gbatek.htm). The most important thing I did during all that time was to write CPU tests which cover pretty much all common and most of the edge cases. This turned out to be a great time investment because I could rely on my CPU implementation when debugging problems related to other parts of the emulator. The code below shows a simple test for the ARM multiply instruction.
 
 ```armv4t
 t300:                    ; test 300
@@ -30,15 +30,14 @@ f300:
     failed  300
 ```
 
-Three months after the initial commit I had a more or less reliable CPU implementation. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal - implementing graphics. Understanding how they work just by going through GBATEK was near impossible due to its nature of being a reference document. As a result of that I went along TONC's GBA programming tutorials and reverse engineered all the given examples for graphics, effects, timers, interrupts and DMA (Direct Memory Access). The figures below show examples for affine backgrounds and sprites. Both use matrix transformations to alter the scene shown on the screen.
+Three months after the initial commit I had a more or less reliable CPU implementation. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal - implementing graphics. Understanding how they work just by going through GBATEK was near impossible due to its nature of being a reference document. As a result of that, I went along with TONCs GBA programming tutorials and reverse engineered all the given examples for graphics, effects, timers, interrupts and DMA (Direct Memory Access). The figures below show examples for affine backgrounds and sprites. Both use matrix transformations to alter the scene shown on the screen.
 
 {{<flex>}}
   {{<figure src="eggvance/tonc-sbb-aff.png" caption="Figure 3: Affine tiled background">}}
   {{<figure src="eggvance/tonc-obj-aff.png" caption="Figure 4: Affine sprite">}}
 {{</flex>}}
 
-The last thing I did was clean up the memory interface. I implemented things like bus widths, memory mirroring and read / write only registers. This actually fixed some of the bugs I had and allowed me to play through Pokémon Emerald. A precondition for playing through a whole game was implementing cartridge backup types like SRAM, EEPROM and Flash. Finding out which save type to use and wrapping my head around how they all work took some time but I managed to figure it out.
-
+The last thing I did was clean up the memory interface. I implemented things like bus widths, memory mirroring and read / write only registers. This fixed some of the bugs I had and allowed me to play through Pokémon Emerald. A precondition for playing through a whole game was implementing cartridge backup types like SRAM, EEPROM and Flash. Finding out which save type to use and wrapping my head around how they all work took some time but I managed to figure it out.
 
 ### Milestones
 - 30/01/19: Initial commit
@@ -66,4 +65,4 @@ The last thing I did was clean up the memory interface. I implemented things lik
 - The Legend of Zelda - A Link To The Past & Four Swords
 
 ### Conclusion
-All of this progress sounds great. Sadly you can't hear it because there is no audio implementation just yet. That's the last thing I'll do. Before that I need to improve accuracy and performance (it's not bad but I could be better) of the emulator. This report will serve as a baseline and I'll make more of those with specific progress information in the future.
+All of this progress sounds great. Sadly you can't hear it because there is no audio implementation just yet. That's the last thing I'll do. Before that, I need to improve the accuracy and performance (it's not bad but I could be better) of the emulator. This report will serve as a baseline and I'll make more of those with specific progress information in the future.
