@@ -31,7 +31,7 @@ The optimized version runs up until the current point in time and provides no mo
 {{</flex>}}
 
 ### Scheduler
-As time went on it became more and more apparent that I needed some sort of scheduling in my emulator. There were lots of cycle counters scattered across the codebase which slowed the emulator down and increased complexity. Not having a scheduler also caused some audio [issues](https://github.com/jsmolka/eggvance/issues/14) if a game made good use of halting. It led to problems with the frame sequencer which skipped a sample or two and resulted metallic sounds.
+As time went on it became more and more apparent that I needed some sort of scheduling in my emulator. There were lots of cycle counters scattered across the codebase which slowed the emulator down and increased complexity. Not having a scheduler also caused some audio [issues](https://github.com/jsmolka/eggvance/issues/14) if a game made good use of halting. It led to problems with the frame sequencer which skipped a sample or two and resulted in metallic sounds.
 
 {{<flex>}}
   {{<audio src="eggvance/gba-bios-metallic.mp3" caption="Audio 4: Metallic GBA BIOS">}}
