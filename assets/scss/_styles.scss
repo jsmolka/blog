@@ -64,11 +64,11 @@ body {
 .nav-item-animation {
   @keyframes animation {
     0% {
-      width: 0;
+      transform: scaleX(0);
     }
 
     100% {
-      width: 100%;
+      transform: scaleX(100%);
     }
   }
 
