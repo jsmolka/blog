@@ -30,7 +30,7 @@ f300:
     failed  300
 ```
 
-Three months after the initial commit I had a more or less reliable CPU implementation. It was still missing some crucial things like hardware and software interrupts, but those weren’t important for the upcoming goal - implementing graphics. Understanding how they work just by going through GBATEK was near impossible due to its nature of being a reference document. As a result of that I went along TONC’s GBA programming tutorials and reverse engineered all the given examples for graphics, effects, timers, interrupts and DMA (Direct Memory Access). The figures below show examples for affine backgrounds and sprites. Both use matrix transformations to alter the scene shown on the screen.
+Three months after the initial commit I had a more or less reliable CPU implementation. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal - implementing graphics. Understanding how they work just by going through GBATEK was near impossible due to its nature of being a reference document. As a result of that I went along TONC's GBA programming tutorials and reverse engineered all the given examples for graphics, effects, timers, interrupts and DMA (Direct Memory Access). The figures below show examples for affine backgrounds and sprites. Both use matrix transformations to alter the scene shown on the screen.
 
 {{<flex>}}
   {{<figure src="eggvance/tonc-sbb-aff.png" caption="Figure 3: Affine tiled background">}}

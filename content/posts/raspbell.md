@@ -27,7 +27,7 @@ GPIO.add_event_detect(args.pin, GPIO.FALLING, callback=alert, bouncetime=5000)
 ```
 
 ### Websockets
-One hurdle to overcome was transferring the acquired data from the Pi to my computer. The easiest solution seemed to be websockets. Start a simple websocket server on the Pi since it’s running all the time anyway and connect the computer once it boots. This also allows the inclusion of more devices in the future.
+One hurdle to overcome was transferring the acquired data from the Pi to my computer. The easiest solution seemed to be websockets. Start a simple websocket server on the Pi since it's running all the time anyway and connect the computer once it boots. This also allows the inclusion of more devices in the future.
 
 ```python
 connected = set()
