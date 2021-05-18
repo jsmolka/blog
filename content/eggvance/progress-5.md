@@ -218,7 +218,7 @@ text_glyph_data:
         ldmfd   sp!, {r2-r4, pc}        ; Function epilogue
 ```
 
-With the all text rendering functions in place I was able to add a simple user interface. It shows whether or not the test suite succeeded and also adds the number of the failed test if there was one. This should make it much easier for developers to use the test suite. Of course you still have to refer to the actual source code to understand what the test did but that shouldn't be a problem for most people.
+With all text rendering functions in place, I was able to add a simple user interface. It shows whether or not the test suite succeeded and also adds the number of the failed test if there was one. This should make it much easier for developers to use the test suite. Of course, you still have to refer to the actual source code to understand what the test did but that shouldn't be a problem for most people.
 
 {{<flex>}}
   {{<figure src="eggvance/suite-passed.png" caption="Figure 1: Test suite passed">}}
@@ -226,6 +226,6 @@ With the all text rendering functions in place I was able to add a simple user i
 {{</flex>}}
 
 ### Conclusion
-This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-Feburary and I am finishing the conclusion in early June. Formulating text and walking other people through ideas has never been a strength of mine.
+This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February and I am finishing the conclusion in early June. Formulating text and walking other people through ideas has never been a strength of mine.
 
 Anyway, I hope to finish most of the cleanup sometime soon and then write another progress report once I'm ready to release version 0.2. I want it to be as stable and accurate as possible before I devote time to implement more advanced things like audio emulation and CPU prefetching.

@@ -7,10 +7,10 @@ type: post
 ---
 One month has passed since the last update and I'm back with another progress report. This month I've focused on improving the accuracy and the performance of the pixel processing unit (PPU). Its main purpose is converting the data stored inside memory, like VRAM and OAM (Object Attribute Memory), into pixels you can see on the screen.
 
-### Rendering engine
-Let's begin with the most interesting thing I've done during the last month - rewriting the rendering engine. The Game Boy Advance can use up to four different backgrounds and an object layer. Each background and object has its own priority which determines the drawing order. Backgrounds with high priority are drawn in front of backgrounds with low priority. Transparent areas inside backgrounds are used to display the background with the next highest priority.
+### Render engine
+Let's begin with the most interesting thing I've done during the last month: rewriting the render engine. The Game Boy Advance can use up to four different backgrounds and an object layer. Each background and object has its own priority which determines the drawing order. Backgrounds with high priority are drawn in front of backgrounds with low priority. Transparent areas inside backgrounds are used to display the background with the next highest priority.
 
-When talking about the rendering engine, I mean the part of the emulator which combines the different layers into the final scene you can see on the screen. The name of this part changed during development and ended up being `collapse`.
+When talking about the render engine, I mean the part of the emulator which combines the different layers into the final scene you can see on the screen. The name of this part changed during development and ended up being `collapse`.
 
 ```cpp
 renderObjects();
@@ -25,7 +25,7 @@ switch (mmio.dispcnt.mode) {
 }
 ```
 
-The code snippet above shows the parts of the PPU which contribute to rendering the Pokémon Emerald title screen. The used backgrounds and their rendering functions are dependent on the selected video mode found in the DISPCNT register. The produced layers can be seen in figures 1 to 4.
+The code snippet above shows the parts of the PPU which contribute to render the Pokémon Emerald title screen. The used backgrounds and their render functions are dependent on the selected video mode found in the DISPCNT register. The produced layers can be seen in figures 1 to 4.
 
 {{<flex>}}
   {{<figure src="eggvance/emerald-layer-bg0.png" caption="Figure 1: Background layer 0">}}
