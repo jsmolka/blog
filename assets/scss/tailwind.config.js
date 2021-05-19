@@ -6,10 +6,12 @@ module.exports = {
       bit: [
         '"Bit Outline"',
         '"Roboto"',
+        'system-ui',
         'sans-serif'
       ],
-      body: [
+      main: [
         '"Roboto"',
+        'system-ui',
         'sans-serif'
       ],
       mono: [

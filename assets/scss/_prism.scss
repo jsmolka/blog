@@ -4,6 +4,7 @@ pre[class*="language-"],
 code[class*="language-"] {
   @apply font-mono;
   @apply whitespace-pre;
+  @apply text-sm;
   @apply leading-relaxed;
   @apply hyphens-none;
 
@@ -14,8 +15,6 @@ code[class*="language-"] {
   .table {
     @apply inline
   }
-
-  font-size: 0.910rem;
 }
 
 pre[class*="language-"] {
@@ -34,16 +33,14 @@ pre[class*="language-"] {
 
 :not(pre) > code {
   @apply font-mono;
-  @apply bg-light-100;
 
   .dark-mode & {
     @apply bg-dark-600;
   }
 
+  background: mix($light-100, $light-200, 33%);
+  padding: 0.075em 0.375em;
   font-size: 0.910rem;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-bottom: 2px;
 }
 
 [class*="language-"] .namespace {
