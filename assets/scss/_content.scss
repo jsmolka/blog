@@ -5,7 +5,7 @@
     @apply font-bold;
     @apply text-dark-800;
 
-    .dark-mode & {
+    .dark & {
       @apply text-light-200;
     }
 
@@ -13,7 +13,7 @@
       @apply relative;
       @apply bg-none;
 
-      .dark-mode & {
+      .dark & {
         @apply bg-none;
       }
     }
@@ -23,7 +23,7 @@
         @apply absolute;
         @apply text-blue-light;
 
-        .dark-mode & {
+        .dark & {
           @apply text-blue-dark;
         }
 
@@ -83,7 +83,7 @@
   a {
     background-image: linear-gradient(to right, $blue-light 0%, $blue-light 100%) ;
 
-    .dark-mode & {
+    .dark & {
       background-image: linear-gradient(to right, $blue-dark 0%, $blue-dark 100%);
     }
 
@@ -146,7 +146,7 @@
     @apply border;
     @apply border-light-400;
 
-    .dark-mode & {
+    .dark & {
       @apply border-dark-100;
     }
   }
@@ -163,7 +163,7 @@
     @apply border-l-6;
     @apply border-blue-light;
 
-    .dark-mode & {
+    .dark & {
       @apply bg-dark-600;
       @apply border-blue-dark;
     }
@@ -178,7 +178,7 @@
         @apply text-6xl;
         @apply text-blue-light;
 
-        .dark-mode & {
+        .dark & {
           @apply text-blue-dark;
         }
 
@@ -199,7 +199,7 @@
     @apply border-dark-200;
     @apply select-none;
 
-    .dark-mode & {
+    .dark & {
       @apply text-light-300;
       @apply bg-dark-500;
       @apply border-light-500;
@@ -208,7 +208,7 @@
     &:hover {
       background: mix($light-100, $light-200, 75%);
 
-      .dark-mode & {
+      .dark & {
         @apply bg-dark-400;
       }
     }

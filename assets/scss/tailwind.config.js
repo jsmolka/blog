@@ -1,6 +1,7 @@
 const root = __dirname + '/../../';
 
 module.exports = {
+  darkMode: 'class',
   theme: {
     fontFamily: {
       bit: [
@@ -83,8 +84,7 @@ module.exports = {
       width: {
         'list-key': '144px'
       }
-    },
-    darkSelector: '.dark-mode'
+    }
   },
   future: {
     removeDeprecatedGapUtilities: true,
@@ -117,9 +117,6 @@ module.exports = {
       'responsive'
     ]
   },
-  plugins: [
-    require('tailwindcss-dark-mode')()
-  ],
   purge: {
     enabled: process.env.HUGO_ENVIRONMENT === 'production',
     content: [

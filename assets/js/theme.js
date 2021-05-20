@@ -8,16 +8,16 @@ class Theme {
   }
 
   get isDark() {
-    return this.classList.contains("dark-mode");
+    return this.classList.contains('dark');
   }
 
   init() {
     const theme = window.localStorage.getItem('theme');
-    this.classList.toggle('dark-mode', theme === 'dark');
+    this.classList.toggle('dark', theme === 'dark');
   }
 
   toggle() {
-    const dark = this.classList.toggle('dark-mode');
+    const dark = this.classList.toggle('dark');
     window.localStorage.setItem('theme', dark ? 'dark' : 'light');
 
     this.onChanged(dark);

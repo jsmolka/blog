@@ -8,7 +8,7 @@ code[class*="language-"] {
   @apply leading-relaxed;
   @apply hyphens-none;
 
-  .dark-mode & {
+  .dark & {
     @apply bg-dark-600;
   }
 
@@ -26,7 +26,7 @@ pre[class*="language-"] {
   @apply ring-black;
   @apply ring-opacity-5;
 
-  .dark-mode & {
+  .dark & {
     @apply shadow-none;
   }
 }
@@ -34,7 +34,7 @@ pre[class*="language-"] {
 :not(pre) > code {
   @apply font-mono;
 
-  .dark-mode & {
+  .dark & {
     @apply bg-dark-600;
   }
 
@@ -53,7 +53,7 @@ pre[class*="language-"] {
 .token.prolog {
   color: #b8bfcc;
 
-  .dark-mode & {
+  .dark & {
     color: #636f88;
   }
 }
@@ -72,7 +72,7 @@ pre[class*="language-"] {
 .token.variable {
   color: saturate(darken($frost-2, 10%), 20%);
 
-  .dark-mode & {
+  .dark & {
     color: $frost-2;
   }
 }
@@ -80,7 +80,7 @@ pre[class*="language-"] {
 .token.number {
   color: saturate($aurora-4, 10%);
 
-  .dark-mode & {
+  .dark & {
     color: $aurora-4;
   }
 }
@@ -95,7 +95,7 @@ pre[class*="language-"] {
 .token.string {
   color: saturate(darken($aurora-3, 10%), 10%);
 
-  .dark-mode & {
+  .dark & {
     color: $aurora-3;
   }
 }
@@ -106,7 +106,7 @@ pre[class*="language-"] {
 .token.class-name {
   color: saturate(darken($frost-1, 10%), 10%);
 
-  .dark-mode & {
+  .dark & {
     color: $frost-1;
   }
 }
