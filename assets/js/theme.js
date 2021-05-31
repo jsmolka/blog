@@ -1,5 +1,6 @@
 class Theme {
   constructor() {
+    this.init();
     this.onChanged = dark => {};
   }
 
@@ -8,13 +9,13 @@ class Theme {
   }
 
   init() {
-    const dark = !!localStorage.getItem('dark');
-    document.documentElement.classList.toggle('dark', dark);
+    const theme = localStorage.getItem('theme');
+    document.documentElement.classList.toggle('dark', theme === 'dark');
   }
 
   toggle() {
     const dark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
     this.onChanged(dark);
 
     return dark;
@@ -22,4 +23,3 @@ class Theme {
 }
 
 window.theme = new Theme();
-window.theme.init();
