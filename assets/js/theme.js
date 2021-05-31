@@ -3,23 +3,18 @@ class Theme {
     this.onChanged = dark => {};
   }
 
-  get classList() {
-    return document.getElementsByTagName('html')[0].classList;
-  }
-
   get isDark() {
-    return this.classList.contains('dark');
+    return document.documentElement.classList.contains('dark');
   }
 
   init() {
-    const theme = window.localStorage.getItem('theme');
-    this.classList.toggle('dark', theme === 'dark');
+    const dark = !!localStorage.getItem('dark');
+    document.documentElement.classList.toggle('dark', dark);
   }
 
   toggle() {
-    const dark = this.classList.toggle('dark');
-    window.localStorage.setItem('theme', dark ? 'dark' : 'light');
-
+    const dark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('dark', dark);
     this.onChanged(dark);
 
     return dark;
