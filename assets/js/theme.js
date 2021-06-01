@@ -1,16 +1,13 @@
 class Theme {
   constructor() {
-    this.init();
+    const theme = localStorage.getItem('theme');
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+
     this.onChanged = dark => {};
   }
 
   get isDark() {
     return document.documentElement.classList.contains('dark');
-  }
-
-  init() {
-    const theme = localStorage.getItem('theme');
-    document.documentElement.classList.toggle('dark', theme === 'dark');
   }
 
   toggle() {
