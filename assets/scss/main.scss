@@ -1,21 +1,15 @@
 @tailwind base;
 @tailwind components;
 
-/* purgecss start ignore */
 @import "alpine";
-@import "bit-outline";
 @import "content";
+@import "fonts";
 @import "hamburger";
 @import "headroom";
-@import "mono";
 @import "prism";
-@import "roboto";
 @import "single";
 @import "styles";
-/* purgecss end ignore */
 
 @tailwind utilities;
 
-/* purgecss start ignore */
 @import "utilities";
-/* purgecss end ignore */
