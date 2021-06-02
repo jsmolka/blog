@@ -47,7 +47,7 @@ html, body {
   }
 }
 
-.mobile-menu {
+.menu {
   @apply fixed;
   @apply z-20;
 
@@ -65,19 +65,4 @@ html, body {
       @apply bg-gray-400;
     }
   }
-}
-
-.nav-item-animation {
-  @keyframes animation {
-    0% {
-      transform: scaleX(0);
-    }
-
-    100% {
-      transform: scaleX(100%);
-    }
-  }
-
-  transform-origin: left;
-  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s 1 animation;
 }
