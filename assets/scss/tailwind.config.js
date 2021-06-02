@@ -10,7 +10,7 @@ module.exports = {
         'system-ui',
         'sans-serif'
       ],
-      main: [
+      roboto: [
         '"Roboto"',
         'system-ui',
         'sans-serif'
@@ -62,12 +62,11 @@ module.exports = {
         3: '3px',
         6: '6px'
       },
-      fontSize: {
-        md: '0.95rem',
-        index: '5rem',
-      },
       height: {
         18: '4.5rem'
+      },
+      maxWidth: {
+        96: '24rem'
       },
       minHeight: {
         18: '4.5rem'
@@ -79,10 +78,6 @@ module.exports = {
       },
       screens: {
         anchor: '832px',
-        'list-body': '384px'
-      },
-      width: {
-        'list-key': '144px'
       }
     }
   },

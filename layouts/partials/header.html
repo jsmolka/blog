@@ -1,4 +1,4 @@
-<header class="fixed top-0 z-10 w-screen bg-dark-600 text-light-200 shadow-header select-none">
+<header class="fixed top-0 z-10 w-full bg-dark-600 text-light-200 shadow-header select-none">
   <nav class="flex justify-between max-w-screen-xl mx-auto">
     <div class="mr-4">
       <a class="flex items-center h-18 px-4" href="{{ .Site.BaseURL }}" aria-label="Home">
@@ -46,8 +46,8 @@
     </div>
   </nav>
 </header>
-<div class="w-screen min-h-18 bg-dark-600"></div>
-<div x-cloak x-show="menu" class="menu sm:hidden w-screen bg-dark-600 text-light-200 overflow-y-auto shadow-header select-none">
+<div class="w-full min-h-18 bg-dark-600"></div>
+<div x-cloak x-show="menu" class="menu sm:hidden w-full bg-dark-600 text-light-200 overflow-y-auto shadow-header select-none">
   <div class="flex flex-col mb-4 hover:text-light-500">
     {{ range .Site.Menus.main }}
       <a class="flex justify-center items-center h-18 hover:text-light-200" href="{{ .URL | absURL }}">{{ .Name }}</a>
