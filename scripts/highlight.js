@@ -6,7 +6,7 @@ const Prism = require('../assets/js/vendor/prism.min');
 
 require('../assets/js/prism');
 
-async function main() {
+function main() {
   const pattern = path.join(__dirname, '..', 'public', '**', '*.html');
 
   glob(pattern, async (error, files) => {

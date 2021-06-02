@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc && npm run transform"
+command = "hugo --gc && npm run highlight"
 
 [context.production.environment]
 HUGO_VERSION = "0.83.1"

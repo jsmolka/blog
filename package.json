@@ -1,6 +1,9 @@
 {
   "name": "jsmolka.github.io",
   "author": "Julian Smolka",
+  "scripts": {
+    "highlight": "node scripts/highlight.js"
+  },
   "dependencies": {
     "alpinejs": "^2.8.2",
     "chart.js": "^3.3.2",
@@ -19,8 +22,5 @@
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^2.1.2"
-  },
-  "scripts": {
-    "transform": "node scripts/transform.js"
   }
 }
