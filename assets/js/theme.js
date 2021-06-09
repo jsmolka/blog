@@ -1,22 +1,18 @@
-class Theme {
-  constructor() {
-    const theme = localStorage.getItem('theme');
-    document.documentElement.classList.toggle('dark', theme === 'dark');
+// Toggle theme
 
-    this.onChanged = dark => {};
-  }
+const getTheme = window.localStorage && window.localStorage.getItem("theme");
+const themeToggle = document.querySelector(".theme-toggle");
+const isDark = getTheme === "dark";
 
-  get isDark() {
-    return document.documentElement.classList.contains('dark');
-  }
-
-  toggle() {
-    const dark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    this.onChanged(dark);
-
-    return dark;
-  }
+if (getTheme !== null) {
+  document.body.classList.toggle("dark-theme", isDark);
 }
 
-window.theme = new Theme();
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+  window.localStorage &&
+    window.localStorage.setItem(
+      "theme",
+      document.body.classList.contains("dark-theme") ? "dark" : "light",
+    );
+});

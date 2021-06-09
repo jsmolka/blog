@@ -1,6 +1,0 @@
-{{ $script := slice }}
-{{ range $path := .paths }}
-  {{ $script = $script | append (resources.Get $path) }}
-{{ end }}
-{{ $script = $script | resources.Concat .name }}
-<script type="text/javascript" src="{{ if .Site.IsServer }}{{ $script.Permalink }}{{ else }}{{ ($script | minify | fingerprint ).Permalink }}{{ end }}" defer></script>

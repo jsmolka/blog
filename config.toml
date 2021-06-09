@@ -1,41 +1,47 @@
-baseURL      = "https://smolka.dev"
-title        = "Smolka"
-copyright    = "Julian Smolka"
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
-
-[author]
-  name = "Julian Smolka"
+baseurl = "/"
+languageCode = "en-us"
+paginate = 5
 
 [params]
-  description     = "Mediocre posts about emulation and micro optimizations."
-  contentUrl      = "https://github.com/jsmolka/jsmolka.github.io/tree/master/content"
-  birthDate       = "1998-05-11"
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-  language        = "en-US"
+  # dir name of your blog content (default is `content/posts`)
+  contentTypeName = "post"
+  # "light" or "dark"
+  defaultTheme = "dark"
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 2
+  # Enable to show reading time in minutes for posts
+  showReadingTime = false
 
-[menu]
-  [[menu.main]]
-    name = "About"
-    url  = "/about"
+[languages]
+  [languages.en]
+    title = "Hello Friend"
+    subtitle = "A simple theme for Hugo"
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    writtenBy = "Written by"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    newerPosts = "Newer posts"
+    olderPosts = "Older posts"
+    minuteReadingTime = "min read"
+    dateFormatSingle = "2006-01-02"
+    dateFormatList = "2006-01-02"
 
-  [[menu.main]]
-    name = "Cycling"
-    url  = "/cycling"
+    [languages.en.params.logo]
+      logoText = "hello friend"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
-  [[menu.main]]
-    name = "eggvance"
-    url  = "/eggvance"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      typographer = false
-
-    [markup.goldmark.renderer]
-      unsafe = true
-
-  [markup.highlight]
-    codeFences = false
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "showcase"
+        name = "Showcase"
+        url = "/showcase"

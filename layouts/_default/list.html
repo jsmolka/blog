@@ -1,32 +1,71 @@
 {{ define "main" }}
-  <div class="w-full px-4 py-8 sm:py-16 bg-dark-600">
-    <div class="flex flex-col text-center">
-      <span class="max-w-screen-lg mx-auto mb-2 text-light-200 text-4xl font-bold">{{ .Title }}</span>
-      <span class="max-w-screen-sm mx-auto text-light-400">{{ .Summary }}</span>
-    </div>
-    {{ .Content }}
-  </div>
-  <div class="w-full max-w-screen-md mx-auto px-4 py-8 sm:py-16">
-    {{ range .Data.Pages.GroupByDate "2006" }}
-      <div class="block sm:flex mb-8 last:mb-0">
-        <div class="w-36 mr-0 sm:mr-8 mt-0 sm:mt-1 mb-1 sm:mb-0 font-bit text-5xl leading-none">{{ .Key }}</div>
-        <div class="w-full sm:max-w-96">
-          {{ range .Pages }}
-            <div class="border-b border-dashed border-light-400 dark:border-dark-100">
-              <a class="flex justify-between py-4" href="{{ .Permalink }}">
-                <span>{{ .Title }}</span>
-                <span>
-                  {{ if .Site.Params.dateformNum }}
-                    {{ .Date.Format .Site.Params.dateformShort }}
-                  {{ else }}
-                    {{ .Date.Format "Jan 2" }}
-                  {{ end }}
-                </span>
-              </a>
-            </div>
+  <div class="posts">
+    {{ range .Pages }}
+      <div class="post on-list">
+        <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h1>
+        <div class="post-meta">
+          {{ if .Date }}
+            <span class="post-date">
+              {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
+            </span>
+
+            {{ if $.Site.Params.LastModDisplay }}
+              {{ partial "lastmod.html" . }}
+            {{ end }}
+          {{ end }}
+          {{ with .Params.Author }}
+            <span class="post-author"
+              >— {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }}</span
+            >{{ end }}
+
+
+          {{ if $.Site.Params.ShowReadingTime }}
+            <span class="post-read-time"
+              >— {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}</span
+            >
           {{ end }}
         </div>
+
+        {{ if .Params.tags }}
+          <span class="post-tags">
+            {{ range .Params.tags }}
+              <a href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">#{{ . }}</a>&nbsp;
+            {{ end }}
+          </span>
+        {{ end }}
+
+        {{ if .Params.Cover }}
+          <figure class="post-cover">
+         {{ if .Params.UseRelativeCover }}
+            <img src="{{ (printf "%s%s" .Permalink .Params.Cover ) }}" alt="{{ .Params.CoverAlt | plainify | default .Title }}" />
+          {{ else }}
+            <img src="{{ .Params.Cover | absURL }}" alt="{{ .Params.CoverAlt | plainify | default .Title }}" />
+            {{ end }}
+
+            {{ if .Params.CoverCaption }}
+              <figcaption class="center">{{ .Params.CoverCaption | markdownify }}</figcaption>
+            {{ end }}
+          </figure>
+        {{ end }}
+
+        <div class="post-content">
+          {{ with .Description }}
+            {{ . | markdownify }}
+            {{ else }}
+            {{ if .Truncated }}
+              {{ .Summary }}
+            {{ end }}
+          {{ end }}
+        </div>
+        {{ if not .Params.hideReadMore }}
+          <div>
+            <a class="read-more button" href="{{ .RelPermalink }}"
+              >{{ $.Site.Params.ReadMore | default "Read more" }} →</a
+            >
+          </div>
+        {{ end }}
       </div>
     {{ end }}
+    {{ partial "pagination.html" . }}
   </div>
 {{ end }}

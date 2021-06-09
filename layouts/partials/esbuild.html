@@ -1,7 +1,0 @@
-{{ if .context.Site.IsServer }}
-  {{ $script := resources.Get .path | js.Build }}
-  <script type="text/javascript" src="{{ $script.Permalink }}"></script>
-{{ else }}
-  {{ $script := resources.Get .path | js.Build (dict "minify" true) | fingerprint }}
-  <script type="text/javascript" src="{{ $script.Permalink }}"></script>
-{{ end }}
