@@ -1,2 +1,14 @@
-node_modules
-public
+# Hugo
+public/
+resources/
+
+# Node
+node_modules/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+
+# OAuth
+token.json

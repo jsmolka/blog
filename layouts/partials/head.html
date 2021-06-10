@@ -14,10 +14,17 @@
 <!-- head custom -->
 {{- partial "prepended_head.html" . }}
 
-<!-- Theme CSS -->
-<link rel="stylesheet" href="{{ "assets/style.css" | absURL }}" />
-<!-- Custom CSS to override theme properties (/static/style.css) -->
-<link rel="stylesheet" href="{{ "style.css" | absURL }}" />
+{{ partial "style" . }}
+{{ partial "favicons" . }}
+
+{{ if .Site.IsServer }}
+  {{ $scripts := slice }}
+  {{ $scripts = $scripts | append "js/vendor/prism.min.js" }}
+  {{ $scripts = $scripts | append "js/prism.js" }}
+  {{ partial "javascript" (dict "ctx" . "paths" $scripts "name" "js/prism.js") }}
+{{ end }}
+
+{{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
 
 <!-- Icons -->
 <link

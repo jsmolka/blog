@@ -1,0 +1,2 @@
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS "css/main.css" | postCSS (dict "config" "assets/scss/postcss.config.js") }}
+<link rel="stylesheet" href="{{ if .Site.IsServer }}{{ $style.Permalink }}{{ else }}{{ ($style | minify | fingerprint).Permalink }}{{ end }}">

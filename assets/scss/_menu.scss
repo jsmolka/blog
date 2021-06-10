@@ -1,4 +1,4 @@
-@define-mixin menu {
+@mixin menu {
   position: absolute;
   background: var(--header);
   box-shadow: var(--shadow);
@@ -19,7 +19,7 @@
   font-weight: 500;
 
   @media (--phone) {
-    @mixin menu;
+    @include menu;
     border: none;
     top: 50px;
     right: 10px;
@@ -84,7 +84,7 @@
     }
 
     &-more {
-      @mixin menu;
+      @include menu;
       top: 35px;
       left: 0;
 
@@ -101,7 +101,7 @@
           transform: rotate(90deg);
           line-height: 1;
 
-          @mixin greater-icon 5px;
+          @include greater-icon(5px);
         }
       }
 
