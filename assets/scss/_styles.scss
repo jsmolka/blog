@@ -28,6 +28,24 @@ body {
   }
 }
 
+::selection {
+  color: #222;
+  background: var(--accent);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-secondary);
+
+  &:hover {
+    background: var(--background-tertiary);
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
 }

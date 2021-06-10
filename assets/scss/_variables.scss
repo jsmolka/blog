@@ -2,10 +2,12 @@
   /* light theme color */
   --background: #fff;
   --background-secondary: #eaeaea;
+  --background-tertiary: #ccc;
   --header: #fafafa;
   --color: #222;
   --color-secondary: #999;
   --border-color: #dcdcdc;
+  --accent: #6ebaf7;
 
   /* variables for js, must be the same as these in @custom-media queries */
   --phoneWidth: (max-width: 684px);
@@ -16,10 +18,12 @@ body.dark-theme {
   /* dark theme colors */
   --background: #292a2d;
   --background-secondary: #3b3d42;
+  --background-tertiary: #4f535c;
   --header: #252627;
   --color: #a9a9b3;
   --color-secondary: #73747b;
   --border-color: #4a4b50;
+  --accent: #48a8f5;
 }
 
 @mixin media-phone {

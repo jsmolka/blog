@@ -11,9 +11,6 @@
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-<!-- head custom -->
-{{- partial "prepended_head.html" . }}
-
 {{ partial "style" . }}
 {{ partial "favicons" . }}
 
@@ -43,6 +40,3 @@
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
-
-<!-- head custom -->
-{{- partial "extended_head.html" . }}

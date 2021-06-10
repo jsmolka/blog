@@ -10,9 +10,9 @@
         <ul class="menu__sub-inner">
           <li class="menu__sub-inner-more-trigger">
             {{ $.Site.Params.MenuMore | default "Show more" }}
-            <span class="menu__sub-inner-more-trigger-icon"
-              >{{ partial "greater-icon.html" . }}</span
-            >
+            <span class="menu__sub-inner-more-trigger-icon">
+              {{ partial "greater-icon.html" . }}
+            </span>
           </li>
           <ul class="menu__sub-inner-more hidden">
             {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
