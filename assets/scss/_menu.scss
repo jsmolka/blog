@@ -18,7 +18,7 @@
   padding-right: 24px;
   font-weight: 500;
 
-  @media (--phone) {
+  @include media-phone {
     @include menu;
     border: none;
     top: 50px;
@@ -39,7 +39,7 @@
     padding: 0;
 
     &--desktop {
-      @media (--phone) {
+      @include media-phone {
         display: none;
       }
     }
@@ -47,7 +47,7 @@
     &--mobile {
       display: none;
 
-      @media (--phone) {
+      @include media-phone {
         display: block;
       }
     }
@@ -61,7 +61,7 @@
       }
     }
 
-    @media (--phone) {
+    @include media-phone {
       flex-direction: column;
       align-items: flex-start;
       padding: 0;

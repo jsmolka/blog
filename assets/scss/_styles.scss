@@ -23,7 +23,7 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
 
-  @media (--phone) {
+  @include media-phone {
     font-size: 1rem;
   }
 }
@@ -48,7 +48,7 @@ h4 {
   font-size: 1.125rem;
 }
 
-@media (--phone) {
+@include media-phone {
   h1 {
     font-size: 2rem;
   }
@@ -148,7 +148,7 @@ pre {
   font-size: .9rem;
   overflow: auto;
 
-  @media (--phone) {
+  @include media-phone {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -167,7 +167,7 @@ blockquote {
   margin: 40px;
   padding: 10px 20px;
 
-  @media (--phone) {
+  @include media-phone {
     margin: 10px;
     padding: 10px;
   }
@@ -211,7 +211,7 @@ ul, ol {
   margin-left: 40px;
   padding: 0;
 
-  @media (--phone) {
+  @include media-phone {
     margin-left: 20px;
   }
 }
@@ -235,7 +235,7 @@ ol ol {
   justify-content: center;
   margin: 50px 0;
 
-  @media (--phone) {
+  @include media-phone {
     margin-top: 0;
   }
 }
