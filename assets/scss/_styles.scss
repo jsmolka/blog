@@ -1,23 +1,11 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",  Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+  font-feature-settings: "calt" 0, "tnum", "case", "rlig", "cv01", "cv02", "cv03", "cv04", "cv07";
   line-height: 1.54;
-  background-color: var(--background);
   color: var(--color);
+  background: var(--background);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -39,10 +27,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--background-secondary);
+  background: var(--scroll);
 
   &:hover {
-    background: var(--background-tertiary);
+    background: var(--scroll-hover);
   }
 }
 

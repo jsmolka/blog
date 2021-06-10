@@ -1,28 +1,29 @@
 :root {
-  /* light theme color */
-  --background: #fff;
+  --color: #222222;
+  --color-secondary: #999999;
+  --background: #ffffff;
   --background-secondary: #eaeaea;
-  --background-tertiary: #ccc;
   --header: #fafafa;
-  --color: #222;
-  --color-secondary: #999;
   --border-color: #dcdcdc;
+  --scroll: rgba(0, 0, 0, 0.25);
+  --scroll-hover: rgba(0, 0, 0, 0.4);
   --accent: #6ebaf7;
 
-  /* variables for js, must be the same as these in @custom-media queries */
+  // Used in JavaScript
+  // Todo: remove, make JS work wihout this
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
 }
 
 body.dark-theme {
-  /* dark theme colors */
-  --background: #292a2d;
-  --background-secondary: #3b3d42;
-  --background-tertiary: #4f535c;
-  --header: #252627;
   --color: #a9a9b3;
   --color-secondary: #73747b;
+  --background: #292a2d;
+  --background-secondary: #3b3d42;
+  --header: #252627;
   --border-color: #4a4b50;
+  --scroll: rgba(255, 255, 255, 0.2);
+  --scroll-hover: rgba(255, 255, 255, 0.35);
   --accent: #48a8f5;
 }
 
@@ -38,7 +39,7 @@ body.dark-theme {
   }
 }
 
-@mixin greater-icon($stroke-width: 3px, $width: .95rem, $height: 100%) {
+@mixin greater-icon($stroke-width: 3px, $width: 0.95rem, $height: 100%) {
   .greater-icon {
     width: $width;
     height: $height;
@@ -49,9 +50,3 @@ body.dark-theme {
     }
   }
 }
-
-/* HOW TO USE */
-
-/*@media (--phone) {*/
-  /*margin-top: 0;*/
-/*}*/
