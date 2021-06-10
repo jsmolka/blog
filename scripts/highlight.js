@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 const jsdom = require('jsdom');
-const Prism = require('../assets/js/vendor/prism.min');
 
 require('../assets/js/prism');
 

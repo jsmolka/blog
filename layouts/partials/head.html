@@ -18,29 +18,20 @@
 {{ partial "favicons" . }}
 
 {{ if .Site.IsServer }}
-  {{ $scripts := slice }}
-  {{ $scripts = $scripts | append "js/vendor/prism.min.js" }}
-  {{ $scripts = $scripts | append "js/prism.js" }}
-  {{ partial "javascript" (dict "ctx" . "paths" $scripts "name" "js/prism.js") }}
+  {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
 {{ end }}
 
 {{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
 
-<!-- Icons -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="144x144"
-  href="{{ "img/apple-touch-icon-144-precomposed.png" | absURL }}"
-/>
 <link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}" />
 
 <!-- Fonts -->
-<link href="{{ "assets/fonts/Inter-Italic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "assets/fonts/Inter-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "assets/fonts/Inter-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "assets/fonts/Inter-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "assets/fonts/Inter-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "assets/fonts/Inter-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Inter-Italic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Inter-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Inter-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Inter-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Inter-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Inter-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 
 <!-- Twitter Card -->
 {{ template "_internal/twitter_cards.html" . }}
