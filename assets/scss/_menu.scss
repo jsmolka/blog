@@ -86,7 +86,7 @@
     &-more {
       @include menu;
       top: 35px;
-      left: 0;
+      right: 0;
 
       &-trigger {
         display: inline-flex;
@@ -133,5 +133,10 @@
     margin-left: 10px;
     cursor: pointer;
     user-select: none;
+    display: none;
+
+    @include media-phone {
+      display: block;
+    }
   }
 }
