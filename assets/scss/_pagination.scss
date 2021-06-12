@@ -76,10 +76,14 @@
   }
 
   &.next .button__icon {
-    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
   }
 
   &.previous .button__icon {
-    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
   }
 }

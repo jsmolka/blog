@@ -59,9 +59,9 @@
         </div>
         {{ if not .Params.hideReadMore }}
           <div>
-            <a class="read-more button" href="{{ .RelPermalink }}"
-              >{{ $.Site.Params.ReadMore | default "Read more" }} →</a
-            >
+            <a class="read-more button" href="{{ .RelPermalink }}">
+              {{ $.Site.Params.ReadMore | default "Read more" }}&nbsp;{{ partial "arrow-right" }}
+            </a>
           </div>
         {{ end }}
       </div>
