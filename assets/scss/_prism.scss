@@ -31,7 +31,6 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   color: var(--color);
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.075) 0px 0px 0px 1px;
-  border-radius: 8px;
 
   .dark-theme & {
     box-shadow: none;
@@ -41,7 +40,6 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"] {
   padding: .1em;
-  border-radius: .3em;
   white-space: normal;
 }
 
@@ -109,7 +107,6 @@ pre[class*="language-"] {
   }
 }
 
-
 .token.important,
 .token.bold {
   font-weight: bold;
@@ -124,6 +121,18 @@ pre[class*="language-"] {
 
 .token.inserted {
   color: green;
+}
+
+pre > code .token.deleted:not(.prefix) {
+  display: block;
+  background-color: rgba(255, 0, 0, 0.1);
+  color: inherit;
+}
+
+pre > code .token.inserted:not(.prefix) {
+  display: block;
+  background-color: rgba(0, 255, 128, 0.1);
+  color: inherit;
 }
 
 pre[class*="language-"].line-numbers {
@@ -206,7 +215,7 @@ div.code-toolbar > .toolbar span {
   padding: 0 0.5em;
   background: #f5f2f0;
   background: rgba(224, 224, 224, 0.2);
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
 }
 

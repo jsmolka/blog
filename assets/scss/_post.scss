@@ -6,6 +6,21 @@
   text-align: justify;
   hyphens: auto;
 
+  h1, h2, h3, h4, h5, h6 {
+    position: relative;
+    padding-bottom: 10px;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      content: "";
+    }
+  }
+
   @include media-tablet {
     max-width: 660px;
     text-align: left;
@@ -50,6 +65,52 @@
 
   &-content {
     margin-top: 30px;
+
+    a[href^="#fn:"] {
+      text-decoration: none;
+
+      &:before {
+        content: '[';
+      }
+
+      &:after {
+        content: ']';
+      }
+    }
+
+    sup {
+      position: relative;
+      font-size: 1rem;
+      vertical-align: baseline;
+      top: 0;
+    }
+
+    .footnotes {
+      a[href^="#fnref:"] {
+        text-decoration: none;
+      }
+
+      hr {
+        display: none;
+      }
+
+      ol {
+        margin-left: 1.5rem;
+      }
+
+      li {
+        counter-increment: footnote-count;
+
+        &::marker {
+          padding-right: 10px;
+          content: "[" counter(footnote-count)"]";
+        }
+
+        p {
+          padding-left: 10px;
+        }
+      }
+    }
   }
 
   &-cover {
