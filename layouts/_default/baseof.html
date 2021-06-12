@@ -17,10 +17,6 @@
       <div class="content">
         {{ block "main" . }} {{ end }}
       </div>
-
-      {{ block "footer" . }}
-        {{ partial "footer.html" . }}
-      {{ end }}
     </div>
 
     {{ if $.Site.GoogleAnalytics }}
