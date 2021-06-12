@@ -1,3 +1,14 @@
+$frost-0: #8fbcbb;
+$frost-1: #88c0d0;
+$frost-2: #81a1c1;
+$frost-3: #5e81ac;
+
+$aurora-0: #bf616a;
+$aurora-1: #d08770;
+$aurora-2: #ebcb8b;
+$aurora-3: #a3be8c;
+$aurora-4: #b48ead;
+
 code[class*="language-"],
 pre[class*="language-"] {
   background: none;
@@ -12,15 +23,20 @@ pre[class*="language-"] {
 
 pre[class*="language-"] {
   padding: 1em;
-  margin: .5em 0;
+  margin: 0.5em 0;
   overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #212020 !important;
-  color: inherit !important;
+  color: var(--color);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.075) 0px 0px 0px 1px;
   border-radius: 8px;
+
+  .dark-theme & {
+    box-shadow: none;
+    background: var(--header);
+  }
 }
 
 :not(pre) > code[class*="language-"] {
@@ -29,63 +45,70 @@ pre[class*="language-"] {
   white-space: normal;
 }
 
+.token.cdata,
 .token.comment,
-.token.block-comment,
-.token.prolog,
 .token.doctype,
-.token.cdata {
-  color: rgba(255, 255, 255, .4);
-}
+.token.prolog {
+  color: #b8bfcc;
 
-.token.punctuation {
-  color: #a9a9b3;
-}
-
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-  color: #e2777a;
-}
-
-.token.function-name {
-  color: #6196cc;
+  .dark-theme & {
+    color: #636f88;
+  }
 }
 
 .token.boolean,
-.token.number,
-.token.function {
-  color: #f08d49;
-}
-
-.token.property,
-.token.class-name,
 .token.constant,
-.token.symbol {
-  color: #f8c555;
-}
-
-.token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-  color: #cc99cd;
-}
-
-.token.string,
-.token.char,
-.token.attr-value,
-.token.regex,
-.token.variable {
-  color: #7ec699;
-}
-
-.token.operator,
+.token.deleted,
 .token.entity,
-.token.url {
-  color: #67cdcc;
+.token.keyword,
+.token.operator,
+.token.property,
+.token.punctuation,
+.token.symbol,
+.token.tag,
+.token.url,
+.token.variable {
+  color: saturate(darken($frost-2, 10%), 20%);
+
+  .dark-theme & {
+    color: $frost-2;
+  }
 }
+
+.token.number {
+  color: saturate($aurora-4, 10%);
+
+  .dark-theme & {
+    color: $aurora-4;
+  }
+}
+
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.important,
+.token.regex,
+.token.selector,
+.token.string {
+  color: saturate(darken($aurora-3, 10%), 10%);
+
+  .dark-theme & {
+    color: $aurora-3;
+  }
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: saturate(darken($frost-1, 10%), 10%);
+
+  .dark-theme & {
+    color: $frost-1;
+  }
+}
+
 
 .token.important,
 .token.bold {
@@ -124,7 +147,6 @@ pre[class*="language-"].line-numbers > code {
   letter-spacing: -1px;
   border-right: 1px solid #999;
 	user-select: none;
-
 }
 
 .line-numbers-rows > span {

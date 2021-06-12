@@ -12,30 +12,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum met
 
 Nulla libero turpis, lacinia vitae cursus ut, auctor dictum nisl. Fusce varius felis nec sem ullamcorper, at convallis nisi vestibulum. Duis risus odio, porta sit amet placerat mollis, tincidunt non mauris. Suspendisse fringilla, `odio a dignissim pharetra`, est urna sollicitudin urna, eu scelerisque magna ex vitae tellus.
 
-```css
-/* PostCSS code */
-
-pre {
-  background: #1a1a1d;
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  overflow: auto;
-
-  @media (--phone) {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  code {
-    background: none !important;
-    color: #ccc;
-    padding: 0;
-    font-size: inherit;
-  }
-}
-```
-
 ```cpp
 void insert(Event& item) {
   Event*  node = &item;
@@ -53,37 +29,18 @@ void insert(Event& item) {
 }
 ```
 
-```js
-// JS code
-
-const menuTrigger = document.querySelector('.menu-trigger')
-const menu = document.querySelector('.menu')
-const mobileQuery = getComputedStyle(document.body).getPropertyValue('--phoneWidth')
-const isMobile = () => window.matchMedia(mobileQuery).matches
-const isMobileMenu = () => {
-  menuTrigger.classList.toggle('hidden', !isMobile())
-  menu.classList.toggle('hidden', isMobile())
-}
-
-isMobileMenu()
-
-menuTrigger.addEventListener('click', () => menu.classList.toggle('hidden'))
-
-window.addEventListener('resize', isMobileMenu)
-```
-
-```html
-<!-- HTML code -->
-
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-    {{ range .Pages }}
-      {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</section>
-```
+| Test           | eggvance 0.1 | eggvance 0.2 | eggvance 0.3 | eggvance 1.0 | Total |
+|:---------------|:-------------|:-------------|:-------------|:-------------|:------|
+| Memory         | 1452         | 1456         | 1552         | 1552         | 1552  |
+| Timing         | 457          | 404          | 1496         | 1496         | 1660  |
+| DMA            | 1048         | 1048         | 1220         | 1256         | 1256  |
+| Timer count-up | 356          | 365          | 496          | 496          | 936   |
+| Shifter        | 139          | 140          | 140          | 140          | 140   |
+| I/O read       | 123          | 123          | 123          | 123          | 123   |
+| Carry          | 93           | 93           | 93           | 93           | 93    |
+| Timer IRQ      | 0            | 28           | 65           | 65           | 90    |
+| Multiply long  | 52           | 52           | 52           | 52           | 72    |
+| Edge case      | 1            | 1            | 2            | 6            | 10    |
 
 #### Header 4
 
