@@ -1,9 +1,9 @@
 .post {
   width: 100%;
   max-width: 800px;
-  text-align: justify;
-  padding: 20px;
   margin: 20px auto;
+  padding: 20px;
+  text-align: justify;
   hyphens: auto;
 
   @include media-tablet {
