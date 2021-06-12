@@ -1,28 +1,19 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta
-  name="description"
-  content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"
-/>
-<meta
-  name="keywords"
-  content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
-/>
+<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"/>
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-{{ partial "style" . }}
 {{ partial "favicons" . }}
+
+{{ partial "style" . }}
+{{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
 
 {{ if .Site.IsServer }}
   {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
 {{ end }}
 
-{{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
-
-<link rel="shortcut icon" href="{{ "img/favicon.png" | absURL }}" />
-
-<!-- Fonts -->
 <link href="{{ "/fonts/Inter-Italic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 <link href="{{ "/fonts/Inter-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 <link href="{{ "/fonts/Inter-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
@@ -30,13 +21,9 @@
 <link href="{{ "/fonts/Inter-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 <link href="{{ "/fonts/Inter-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 
-<!-- Twitter Card -->
+{{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 
-<!-- OG data -->
-{{ template "_internal/opengraph.html" . }}
-
-<!-- RSS | JSON -->
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 {{ end -}}
