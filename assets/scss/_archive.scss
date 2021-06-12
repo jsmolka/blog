@@ -16,7 +16,7 @@
       }
 
       &:not(:last-of-type) {
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border);
       }
     }
 
@@ -28,7 +28,7 @@
       }
 
       &:not(:last-of-type) {
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border);
       }
 
       &-header {
@@ -57,7 +57,7 @@
     padding: 20px 0;
 
     &:not(:last-of-type) {
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border);
     }
 
     &-title {

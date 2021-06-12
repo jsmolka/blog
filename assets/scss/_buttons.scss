@@ -23,8 +23,6 @@ a.button {
   cursor: pointer;
   outline: none;
 
-  /* variants */
-
   &.outline {
     background: transparent;
     border-color: var(--background-secondary);
@@ -49,9 +47,6 @@ a.button {
     background: none;
     font-size: 1rem;
   }
-
-
-  /* sizes */
 
   &.small {
     font-size: .8rem;
