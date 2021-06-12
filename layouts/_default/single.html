@@ -4,32 +4,33 @@
 
   <div class="post">
     <h1 class="post-title">{{ .Title | markdownify }}</h1>
-    <div class="post-meta">
-      {{ if .Date | default nil }}
-        <span class="post-date">
-          {{ .Date.Format ($.Site.Params.DateFormatSingle | default "2006-01-02") }}
-        </span>
+    {{ if not .Params.HideMeta | default false }}
+      <div class="post-meta">
+        {{ if .Date | default nil }}
+          <span class="post-date">
+            {{ .Date.Format ($.Site.Params.DateFormatSingle | default "2006-01-02") }} —
+          </span>
 
-        {{ if eq .Type $contentTypeName }}
-          {{ if $.Site.Params.LastModDisplay }}
-            {{ partial "lastmod.html" . }}
+          {{ if eq .Type $contentTypeName }}
+            {{ if $.Site.Params.LastModDisplay }}
+              {{ partial "lastmod.html" . }}
+            {{ end }}
           {{ end }}
         {{ end }}
-      {{ end }}
 
-      {{ with .Params.Author }}
-        <span class="post-author">
-          — {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }}
-        </span>
-      {{ end }}
+        {{ with .Params.Author }}
+          <span class="post-author">
+            {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }} —
+          </span>
+        {{ end }}
 
-
-      {{ if $.Site.Params.ShowReadingTime }}
-        <span class="post-read-time">
-          — {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
-        </span>
-      {{ end }}
-    </div>
+        {{ if $.Site.Params.ShowReadingTime }}
+          <span class="post-read-time">
+            {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
+          </span>
+        {{ end }}
+      </div>
+    {{ end}}
 
     {{ if .Params.tags }}
       <span class="post-tags">

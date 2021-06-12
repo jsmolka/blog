@@ -1,5 +1,5 @@
 baseurl = "/"
-languageCode = "en-us"
+languageCode = "en-US"
 paginate = 5
 
 [params]
@@ -7,6 +7,7 @@ paginate = 5
   defaultTheme = "light"
   showMenuItems = 1
   showReadingTime = true
+  birthDate = "1998-05-11"
 
 [languages]
   [languages.en]

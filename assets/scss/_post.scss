@@ -1,12 +1,14 @@
 .post {
   width: 100%;
   max-width: 800px;
-  text-align: left;
+  text-align: justify;
   padding: 20px;
   margin: 20px auto;
+  hyphens: auto;
 
   @include media-tablet {
     max-width: 660px;
+    text-align: left;
   }
 
   &:not(:last-of-type) {

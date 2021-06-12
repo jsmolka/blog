@@ -1,56 +1,24 @@
-@mixin inter-font {
-  font-family: 'Inter';
-  font-display: swap;
-  font-feature-settings: "calt" 0, "tnum", "case", "rlig", "cv01", "cv02", "cv03", "cv04", "cv07";
+@mixin roboto-font($weight, $name) {
+  @font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    font-style: normal;
+    font-weight: $weight;
+    src: url('/fonts/Roboto-' + $name + '.woff2') format('woff2'),
+         url('/fonts/Roboto-' + $name + '.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    font-style: italic;
+    font-weight: $weight;
+    src: url('/fonts/Roboto-' + $name + 'Italic.woff2') format('woff2'),
+         url('/fonts/Roboto-' + $name + 'Italic.woff') format('woff');
+  }
 }
 
-@font-face {
-  @include inter-font;
-
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Inter-Regular.woff2") format("woff2"),
-       url("/fonts/Inter-Regular.woff") format("woff");
-}
-@font-face {
-  @include inter-font;
-
-  font-style: italic;
-  font-weight: 400;
-  src: url("/fonts/Inter-Italic.woff2") format("woff2"),
-       url("/fonts/Inter-Italic.woff") format("woff");
-}
-
-@font-face {
-  @include inter-font;
-
-  font-style: normal;
-  font-weight: 600;
-  src: url("/fonts/Inter-Medium.woff2") format("woff2"),
-       url("/fonts/Inter-Medium.woff") format("woff");
-}
-@font-face {
-  @include inter-font;
-
-  font-style: italic;
-  font-weight: 600;
-  src: url("/fonts/Inter-MediumItalic.woff2") format("woff2"),
-       url("/fonts/Inter-MediumItalic.woff") format("woff");
-}
-
-@font-face {
-  @include inter-font;
-
-  font-style: normal;
-  font-weight: 800;
-  src: url("/fonts/Inter-Bold.woff2") format("woff2"),
-       url("/fonts/Inter-Bold.woff") format("woff");
-}
-@font-face {
-  @include inter-font;
-
-  font-style: italic;
-  font-weight: 800;
-  src: url("/fonts/Inter-BoldItalic.woff2") format("woff2"),
-       url("/fonts/Inter-BoldItalic.woff") format("woff");
-}
+@include roboto-font(400, 'Regular');
+@include roboto-font(500, 'Medium');
+@include roboto-font(700, 'Bold');
+@include roboto-font(900, 'Black');

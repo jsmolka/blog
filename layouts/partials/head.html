@@ -6,7 +6,6 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
 {{ partial "favicons" . }}
-
 {{ partial "style" . }}
 {{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
 
@@ -14,12 +13,14 @@
   {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
 {{ end }}
 
-<link href="{{ "/fonts/Inter-Italic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Inter-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Inter-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Inter-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Inter-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Inter-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-RegularItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-Black.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="{{ "/fonts/Roboto-BlackItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
