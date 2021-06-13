@@ -1,4 +1,6 @@
-@import "normalize";
+@tailwind base;
+@tailwind components;
+
 @import "variables";
 
 @import "archive";
@@ -14,3 +16,5 @@
 @import "prism";
 @import "styles";
 @import "terms";
+
+@tailwind utilities;
