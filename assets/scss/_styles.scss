@@ -28,9 +28,9 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(var(--complement), 0.2);
+  @apply bg-complement-alpha-200;
 
   &:hover {
-    background: rgba(var(--complement), 0.3);
+    @apply bg-complement-alpha-300;
   }
 }

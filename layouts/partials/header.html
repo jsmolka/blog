@@ -1,19 +1,23 @@
-<header class="header">
-  <span class="header__inner">
+<header class="relative flex justify-center items-center p-5 bg-var-header">
+  <div class="flex justify-between items-center w-full max-w-screen-md mx-auto">
     {{ partial "logo.html" . }}
-    <span class="header__right">
+    <div class="flex flex-row-reverse md:flex-row items-center">
       {{ if len $.Site.Menus }}
         {{ partial "menu.html" . }}
-        <span class="menu-trigger">
+        <button class="button-none menu-trigger">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
           </svg>
-        </span>
+        </button>
       {{ end }}
-      <span class="theme-toggle">
-        {{ partial "theme-icon.html" . }}
-      </span>
-    </span>
-  </span>
+      <div class="flex justify-center items-center">
+        <button id="theme-toggle" class="button-none">
+          <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>

@@ -17,6 +17,8 @@ module.exports = {
   darkMode: 'class',
   theme: {
     colors: {
+      current: 'currentColor',
+      transparent: 'transparent',
       var: {
         'color': 'var(--color)',
         'color-secondary': 'var(--color-secondary)',
@@ -25,8 +27,20 @@ module.exports = {
         'header': 'var(--header)',
         'border': 'var(--border)',
         'menu-hover': 'var(--menu-hover)',
-        'accent': 'var(--accent)',
-        'complement': 'var(--complement)'
+        'accent': 'var(--accent)'
+      },
+      complement: {
+        alpha: {
+          100: 'rgba(var(--complement), 0.1)',
+          200: 'rgba(var(--complement), 0.2)',
+          300: 'rgba(var(--complement), 0.3)',
+          400: 'rgba(var(--complement), 0.4)',
+          500: 'rgba(var(--complement), 0.5)',
+          600: 'rgba(var(--complement), 0.6)',
+          700: 'rgba(var(--complement), 0.7)',
+          800: 'rgba(var(--complement), 0.8)',
+          900: 'rgba(var(--complement), 0.9)'
+        }
       }
     },
     fontFamily: {

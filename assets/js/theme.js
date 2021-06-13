@@ -1,6 +1,6 @@
 if (localStorage) {
   const theme = localStorage.getItem('theme');
-  const themeToggle = document.querySelector('.theme-toggle');
+  const themeToggle = document.getElementById('theme-toggle');
 
   if (theme) {
     document.body.classList.toggle('dark', theme === 'dark');

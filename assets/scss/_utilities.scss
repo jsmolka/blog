@@ -1,0 +1,13 @@
+.button-none {
+  @apply m-0;
+  @apply p-0;
+  @apply bg-transparent;
+  @apply text-current;
+  @apply border-none;
+
+  &:hover {
+    @apply bg-transparent;
+    @apply text-current;
+    @apply border-none;
+  }
+}
