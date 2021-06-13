@@ -5,23 +5,21 @@
   --background-secondary: #eaeaea;
   --header: #fafafa;
   --border: #dcdcdc;
-  --scroll: rgba(0, 0, 0, 0.2);
-  --scroll-hover: rgba(0, 0, 0, 0.3);
   --menu-hover: rgba(0, 0, 0, 0.05);
   --accent: #6ebaf7;
+  --complement: 0, 0, 0
 }
 
-body.dark-theme {
+.dark {
   --color: #a9a9b3;
   --color-secondary: #73747b;
   --background: #292a2d;
   --background-secondary: #3b3d42;
   --header: #252627;
   --border: #4a4b50;
-  --scroll: rgba(255, 255, 255, 0.2);
-  --scroll-hover: rgba(255, 255, 255, 0.3);
   --menu-hover: rgba(255, 255, 255, 0.05);
   --accent: #48a8f5;
+  --complement: 255, 255, 255
 }
 
 @mixin media-phone {
