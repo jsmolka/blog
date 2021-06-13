@@ -1,8 +1,8 @@
 const root = __dirname + '/../../';
 
-function font(font) {
+function font(name) {
   return [
-    font,
+    name,
     'system-ui',
     '-apple-system',
     '"Segoe UI"',
@@ -14,7 +14,6 @@ function font(font) {
 }
 
 module.exports = {
-  darkMode: 'class',
   theme: {
     colors: {
       current: 'currentColor',
@@ -46,10 +45,16 @@ module.exports = {
     fontFamily: {
       roboto: font('Roboto'),
       jetBrainsMono: font('JetBrainsMono')
-    },
-    extends: {}
+    }
   },
-  variants: {},
+  variants: {
+    extend: {
+      margin: [
+        'first',
+        'last'
+      ]
+    }
+  },
   purge: {
     enabled: process.env.HUGO_ENVIRONMENT === 'production',
     content: [

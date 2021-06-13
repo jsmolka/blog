@@ -1,23 +1,50 @@
-<header class="relative flex justify-center items-center p-5 bg-var-header">
+<header class="flex justify-center items-center p-5 bg-var-header">
   <div class="flex justify-between items-center w-full max-w-screen-md mx-auto">
     {{ partial "logo.html" . }}
-    <div class="flex flex-row-reverse md:flex-row items-center">
+    <!-- Desktop -->
+    <div class="hidden md:flex items-center">
       {{ if len $.Site.Menus }}
-        {{ partial "menu.html" . }}
-        <button class="button-none menu-trigger">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <div class="mr-5 pr-6 border-r">
+          {{ range $.Site.Menus.main }}
+            {{ if not .HasChildren }}
+              <a class="mr-5 last:mr-0" href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
+      <button class="theme-button button-none">
+        <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile -->
+    <div class="flex md:hidden">
+      <button class="theme-button button-none">
+        <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
+        </svg>
+      </button>
+      <span class="ml-3">
+        <button id="menu-button" class="button-none">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none" />
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
           </svg>
         </button>
-      {{ end }}
-      <div class="flex justify-center items-center">
-        <button id="theme-toggle" class="button-none">
-          <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
-          </svg>
-        </button>
-      </div>
+      </span>
+      <!-- Menu -->
+      <span id="menu" class="hidden">
+        {{ if len $.Site.Menus }}
+          <div class="absolute top-14 right-5 flex flex-col p-1 bg-var-header rounded shadow-menu z-10">
+            {{ range $.Site.Menus.main }}
+              {{ if not .HasChildren }}
+                <a class="p-2" href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </span>
     </div>
   </div>
 </header>

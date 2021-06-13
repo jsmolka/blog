@@ -1,24 +1,20 @@
-const mobileTrigger = document.querySelector(".menu-trigger");
-const mobileMenu = document.querySelector(".menu__inner--mobile");
-const desktopTrigger = document.querySelector(".menu__sub-inner-more-trigger");
-const desktopMenu = document.querySelector(".menu__sub-inner-more");
+const menu = document.getElementById('menu');
+const menuButton = document.getElementById('menu-button');
 
-if (mobileTrigger && mobileMenu && desktopTrigger && desktopMenu) {
+if (menu && menuButton) {
   const hide = () => {
-    mobileMenu.classList.add('hidden');
-    desktopMenu.classList.add('hidden');
+    menu.classList.add('hidden');
   };
 
   window.addEventListener("click", hide);
   window.addEventListener('resize', hide);
 
-  const toggle = (trigger, menu) => {
-    trigger.addEventListener("click", event => {
-      event.stopPropagation();
-      menu.classList.toggle("hidden");
-    });
-  };
+  menu.addEventListener('click', event => {
+    event.stopPropagation();
+  });
 
-  toggle(mobileTrigger, mobileMenu);
-  toggle(desktopTrigger, desktopMenu);
+  menuButton.addEventListener("click", event => {
+    event.stopPropagation();
+    menu.classList.toggle("hidden");
+  });
 }

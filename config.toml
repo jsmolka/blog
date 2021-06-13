@@ -5,7 +5,6 @@ paginate = 5
 [params]
   contentTypeName = "post"
   defaultTheme = "light"
-  showMenuItems = 1
   showReadingTime = true
   birthDate = "1998-05-11"
 
