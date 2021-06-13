@@ -1,8 +1,10 @@
 {{ if .Get "src" }}
-  <figure class="{{ with .Get "position"}}{{ . }}{{ else -}} left {{- end }}" >
-    <img src="{{ .Get "src" | safeURL }}" {{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }} {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} />
+  {{ $src := add "/img/" (.Get "src") | safeURL }}
+  {{ $alt := default $src (.Get "caption") }}
+  <figure class="w-full ml-0 mt-6 sm:ml-6 sm:mt-0 first:ml-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
+    {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
     {{ if .Get "caption" }}
-      <figcaption class="{{ with .Get "captionPosition"}}{{ . }}{{ else -}} center {{- end }}" {{ with .Get "captionStyle" }} style="{{ . | safeCSS }}" {{ end }}>{{ .Get "caption" | markdownify }}</figcaption>
+      <figcaption>{{ $alt }}</figcaption>
     {{ end }}
   </figure>
 {{ end }}
