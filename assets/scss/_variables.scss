@@ -7,7 +7,6 @@
   --border: #dcdcdc;
   --menu-hover: rgba(0, 0, 0, 0.05);
   --accent: #6ebaf7;
-  --complement: 0, 0, 0
 }
 
 .dark {
@@ -19,7 +18,6 @@
   --border: #4a4b50;
   --menu-hover: rgba(255, 255, 255, 0.05);
   --accent: #48a8f5;
-  --complement: 255, 255, 255
 }
 
 @mixin media-phone {

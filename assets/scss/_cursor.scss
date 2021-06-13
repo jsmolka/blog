@@ -1,0 +1,23 @@
+.cursor {
+  @apply block;
+  @apply w-2.5;
+  @apply h-4;
+  @apply bg-var-accent;
+
+  border-radius: 1px;
+  animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+  0% {
+    @apply opacity-0;
+  }
+
+  50% {
+    @apply opacity-100;
+  }
+
+  100% {
+    @apply opacity-0;
+  }
+}
