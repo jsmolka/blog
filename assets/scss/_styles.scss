@@ -28,17 +28,17 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rbga(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 
   .dark & {
-    background: rbga(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   &:hover {
-    background: rbga(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 
     .dark & {
-      background: rbga(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.3);
     }
   }
 }
