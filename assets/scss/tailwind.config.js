@@ -66,6 +66,10 @@ module.exports = {
       margin: [
         'first',
         'last'
+      ],
+      padding: [
+        'first',
+        'last'
       ]
     }
   },
