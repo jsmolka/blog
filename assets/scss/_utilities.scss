@@ -12,6 +12,18 @@
   }
 }
 
+.hyphens-none {
+  hyphens: none;
+}
+
+.hyphens-auto {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+
 .shadow-menu {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12)
 }

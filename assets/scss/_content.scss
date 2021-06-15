@@ -1,0 +1,123 @@
+.content {
+  h1, h2, h3, h4, h5, h6 {
+    @apply relative;
+    @apply pb-3;
+    @apply font-bold;
+
+    &:after {
+      @apply absolute;
+      @apply bottom-0;
+      @apply left-0;
+      @apply w-16;
+      @apply bg-var-accent;
+
+      height: 3px;
+      content: "";
+    }
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h5, h6 {
+    @apply text-base;
+  }
+
+  @screen md {
+    h1 {
+      @apply text-4xl;
+    }
+
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3 {
+      @apply text-2xl;
+    }
+
+    h4 {
+      @apply text-xl;
+    }
+
+    h5 {
+      @apply text-lg;
+    }
+
+    h6 {
+      @apply text-base;
+    }
+  }
+
+  a {
+    @apply underline;
+  }
+
+  figure {
+    a:after {
+      @apply absolute;
+      @apply inset-0;
+    }
+  }
+
+  figcaption {
+    @apply mt-1;
+    @apply text-sm;
+    @apply text-center;
+    @apply opacity-80;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  table {
+    @apply w-full;
+    @apply border-collapse;
+  }
+
+  table, th, td {
+    @apply p-2;
+    @apply border;
+  }
+
+  th {
+    @apply font-bold;
+    @apply bg-var-background-secondary;
+  }
+
+  blockquote {
+    @apply relative;
+    @apply mx-2;
+    @apply px-6;
+    @apply py-2;
+    @apply border-l-2;
+  }
+
+  @screen md {
+    blockquote {
+      @apply mx-8;
+    }
+  }
+
+  audio {
+    @apply w-full;
+  }
+}

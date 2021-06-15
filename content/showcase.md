@@ -29,6 +29,7 @@ void insert(Event& item) {
 }
 ```
 
+{{<table>}}
 | Test           | eggvance 0.1 | eggvance 0.2 | eggvance 0.3 | eggvance 1.0 | Total |
 |:---------------|:-------------|:-------------|:-------------|:-------------|:------|
 | Memory         | 1452         | 1456         | 1552         | 1552         | 1552  |
@@ -41,12 +42,15 @@ void insert(Event& item) {
 | Timer IRQ      | 0            | 28           | 65           | 65           | 90    |
 | Multiply long  | 52           | 52           | 52           | 52           | 72    |
 | Edge case      | 1            | 1            | 2            | 6            | 10    |
+{{</table>}}
 
 ### Header
 
 Note [^1]
 
 Note [^2]
+
+[I am a link]()
 
 Curabitur scelerisque felis viverra varius scelerisque. Ut enim libero, molestie gravida blandit at, mollis ornare tellus. Cras arcu mi, ultrices vel pulvinar vel, volutpat eu tortor. Nullam nec eros quis massa ultrices iaculis sed in metus. Praesent sollicitudin sem sit amet orci tempor gravida.
 

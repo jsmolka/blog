@@ -10,15 +10,9 @@
     {{ end }}
     {{ partial "head.html" . }}
   </head>
-  <body class="{{ if ne $.Site.Params.defaultTheme "light" -}} dark {{- end -}}">
+  <body class="flex flex-col {{ if ne $.Site.Params.defaultTheme "light" -}} dark {{- end -}}">
     {{ partial "header.html" . }}
 
-    <div class="content">
-      {{ block "main" . }} {{ end }}
-    </div>
-
-    {{ if $.Site.GoogleAnalytics }}
-      {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
+    {{ block "main" . }} {{ end }}
   </body>
 </html>

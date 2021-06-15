@@ -1,46 +1,46 @@
-$frost-0: #8fbcbb;
-$frost-1: #88c0d0;
-$frost-2: #81a1c1;
-$frost-3: #5e81ac;
+@import "nord";
 
-$aurora-0: #bf616a;
-$aurora-1: #d08770;
-$aurora-2: #ebcb8b;
-$aurora-3: #a3be8c;
-$aurora-4: #b48ead;
+pre[class*="language-"],
+code[class*="language-"] {
+  @apply font-jet-brains-mono;
+  @apply whitespace-pre;
+  @apply text-sm;
+  @apply leading-relaxed;
+  @apply hyphens-none;
 
-code[class*="language-"],
-pre[class*="language-"] {
-  background: none;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  tab-size: 4;
-  hyphens: none;
-}
+  .dark & {
+    @apply bg-var-header;
+  }
 
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  color: var(--color);
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.075) 0px 0px 0px 1px;
-
-  .dark-theme & {
-    box-shadow: none;
-    background: var(--header);
+  .table {
+    @apply inline
   }
 }
 
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  white-space: normal;
+pre[class*="language-"] {
+  @apply relative;
+  @apply my-6;
+  @apply p-4;
+  @apply overflow-auto;
+
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.075) 0px 0px 0px 1px;
+
+  .dark & {
+    @apply shadow-none;
+  }
+}
+
+:not(pre) > code {
+  @apply font-jet-brains-mono;
+  @apply bg-var-background-secondary;
+  @apply rounded;
+
+  padding: 0.075em 0.375em;
+  font-size: 0.910rem;
+}
+
+[class*="language-"] .namespace {
+  @apply opacity-75;
 }
 
 .token.cdata,
@@ -49,7 +49,7 @@ pre[class*="language-"] {
 .token.prolog {
   color: #b8bfcc;
 
-  .dark-theme & {
+  .dark & {
     color: #636f88;
   }
 }
@@ -68,7 +68,7 @@ pre[class*="language-"] {
 .token.variable {
   color: saturate(darken($frost-2, 10%), 20%);
 
-  .dark-theme & {
+  .dark & {
     color: $frost-2;
   }
 }
@@ -76,7 +76,7 @@ pre[class*="language-"] {
 .token.number {
   color: saturate($aurora-4, 10%);
 
-  .dark-theme & {
+  .dark & {
     color: $aurora-4;
   }
 }
@@ -91,7 +91,7 @@ pre[class*="language-"] {
 .token.string {
   color: saturate(darken($aurora-3, 10%), 10%);
 
-  .dark-theme & {
+  .dark & {
     color: $aurora-3;
   }
 }
@@ -102,159 +102,26 @@ pre[class*="language-"] {
 .token.class-name {
   color: saturate(darken($frost-1, 10%), 10%);
 
-  .dark-theme & {
+  .dark & {
     color: $frost-1;
   }
 }
 
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.inserted {
-  color: green;
+.token.bold,
+.token.important {
+  @apply font-bold;
 }
 
 pre > code .token.deleted:not(.prefix) {
-  display: block;
+  @apply block;
+
   background-color: rgba(255, 0, 0, 0.1);
   color: inherit;
 }
 
 pre > code .token.inserted:not(.prefix) {
-  display: block;
+  @apply block;
+
   background-color: rgba(0, 255, 128, 0.1);
   color: inherit;
-}
-
-pre[class*="language-"].line-numbers {
-  position: relative;
-  padding-left: 3.8em;
-  counter-reset: linenumber;
-}
-
-pre[class*="language-"].line-numbers > code {
-  position: relative;
-  white-space: inherit;
-}
-
-.line-numbers .line-numbers-rows {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  font-size: 100%;
-  left: -3.8em;
-  width: 3em;
-  letter-spacing: -1px;
-  border-right: 1px solid #999;
-	user-select: none;
-}
-
-.line-numbers-rows > span {
-  pointer-events: none;
-  display: block;
-  counter-increment: linenumber;
-}
-
-.line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #999;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right;
-}
-
-div.code-toolbar {
-  position: relative;
-}
-
-div.code-toolbar > .toolbar {
-  position: absolute;
-  top: 0.3em;
-  right: 0.2em;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-div.code-toolbar:hover > .toolbar {
-  opacity: 1;
-}
-
-div.code-toolbar > .toolbar .toolbar-item {
-  display: inline-block;
-}
-
-div.code-toolbar > .toolbar a {
-  cursor: pointer;
-}
-
-div.code-toolbar > .toolbar button {
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  user-select: none;
-}
-
-div.code-toolbar > .toolbar a,
-div.code-toolbar > .toolbar button,
-div.code-toolbar > .toolbar span {
-  color: #bbb;
-  font-size: 0.8em;
-  padding: 0 0.5em;
-  background: #f5f2f0;
-  background: rgba(224, 224, 224, 0.2);
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0.5em;
-}
-
-div.code-toolbar > .toolbar a:hover,
-div.code-toolbar > .toolbar a:focus,
-div.code-toolbar > .toolbar button:hover,
-div.code-toolbar > .toolbar button:focus,
-div.code-toolbar > .toolbar span:hover,
-div.code-toolbar > .toolbar span:focus {
-  color: inherit;
-  text-decoration: none;
-}
-
-.command-line-prompt {
-  border-right: 1px solid #999;
-  display: block;
-  float: left;
-  font-size: 100%;
-  letter-spacing: -1px;
-  margin-right: 1em;
-  pointer-events: none;
-	user-select: none;
-}
-
-.command-line-prompt > span:before {
-  color: #999;
-  content: ' ';
-  display: block;
-  padding-right: 0.8em;
-}
-
-.command-line-prompt > span[data-user]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] $";
-}
-
-.command-line-prompt > span[data-user="root"]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] #";
-}
-
-.command-line-prompt > span[data-prompt]:before {
-  content: attr(data-prompt);
 }

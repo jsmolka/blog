@@ -18,6 +18,7 @@ module.exports = {
   important: true,
   theme: {
     colors: {
+      black: 'black',
       current: 'currentColor',
       transparent: 'transparent',
       var: {
@@ -56,8 +57,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      roboto: font('Roboto'),
-      jetBrainsMono: font('JetBrainsMono')
+      'roboto': font('Roboto'),
+      'jet-brains-mono': font('JetBrainsMono')
     }
   },
   variants: {

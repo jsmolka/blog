@@ -1,148 +1,104 @@
+@import "content";
+
 .post {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  text-align: justify;
-  hyphens: auto;
+  @extend .content;
 
-  h1, h2, h3, h4, h5, h6 {
-    position: relative;
-    padding-bottom: 10px;
+  @apply text-left;
+  @apply hyphens-auto;
+  @apply leading-relaxed;
 
-    &::after {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--accent);
-      content: "";
+  @screen md {
+    @apply text-justify;
+  }
+
+  * {
+    &:first-child {
+      @apply mt-0;
+    }
+
+    &:last-child {
+      @apply mb-0;
     }
   }
 
-  @include media-tablet {
-    max-width: 660px;
-    text-align: left;
+  p {
+    @apply my-4;
+  }
+
+  ul {
+    @apply my-4;
+    @apply ml-4;
+  }
+
+  ol {
+    @apply my-4;
+    @apply ml-8;
+  }
+
+  @screen sm {
+    ul {
+      @apply ml-8;
+    }
+
+    ol {
+      @apply ml-12;
+    }
+  }
+
+  blockquote {
+    @apply my-6;
+  }
+
+  a[href^="#fn:"] {
+    @apply no-underline;
+
+    &:before {
+      content: '[';
+    }
+
+    &:after {
+      content: ']';
+    }
+  }
+
+  sup {
+    @apply relative;
+    @apply top-0;
+    @apply text-base;
+
+    vertical-align: baseline;
+  }
+
+  .footnotes {
+
+    a[href^="#fnref:"] {
+      @apply no-underline;
+    }
+
+    hr {
+      @apply hidden;
+    }
+
+    ol {
+      @apply ml-6;
+    }
+
+    li {
+      counter-increment: footnote-count;
+
+      &::marker {
+        @apply pr-2;
+        content: "[" counter(footnote-count)"]";
+      }
+
+      p {
+        padding-left: 10px;
+      }
+    }
   }
 
   &:not(:last-of-type) {
-    border-bottom: 1px solid var(--border);
-  }
-
-  &-meta {
-    font-size: 1rem;
-    margin-bottom: 10px;
-
-    @include media-phone {
-      font-size: .85rem;
-    }
-  }
-
-  &-title {
-    font-size: 2.625rem;
-    margin: 0 0 20px;
-
-    @include media-phone {
-      font-size: 2rem;
-    }
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  &-tags {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    opacity: .5;
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  &-content {
-    margin-top: 30px;
-
-    a[href^="#fn:"] {
-      text-decoration: none;
-
-      &:before {
-        content: '[';
-      }
-
-      &:after {
-        content: ']';
-      }
-    }
-
-    sup {
-      position: relative;
-      font-size: 1rem;
-      vertical-align: baseline;
-      top: 0;
-    }
-
-    .footnotes {
-      a[href^="#fnref:"] {
-        text-decoration: none;
-      }
-
-      hr {
-        display: none;
-      }
-
-      ol {
-        margin-left: 1.5rem;
-      }
-
-      li {
-        counter-increment: footnote-count;
-
-        &::marker {
-          padding-right: 10px;
-          content: "[" counter(footnote-count)"]";
-        }
-
-        p {
-          padding-left: 10px;
-        }
-      }
-    }
-  }
-
-  &-cover {
-    margin: 40px -50px;
-    width: 860px;
-    max-width: 860px;
-
-    img {
-      margin: 0 auto;
-      border-radius: 8px;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
-    }
-
-    @include media-tablet {
-      margin: 20px 0;
-      width: 100%;
-    }
-  }
-}
-
-.post--regulation {
-  h1 {
-    justify-content: center;
-  }
-
-  h2 {
-    justify-content: center;
-    margin-bottom: 10px;
-
-    &+ h2 {
-      margin-top: -10px;
-      margin-bottom: 20px;
-    }
+    @apply border-b;
+    @apply border-var-border;
   }
 }
