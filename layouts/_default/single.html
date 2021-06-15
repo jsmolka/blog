@@ -17,13 +17,13 @@
       </div>
     {{ end}}
 
-    {{ if .Params.tags }}
-      <div class="mb-6 opacity-50">
+    <div class="mb-6 opacity-50">
+      {{ if .Params.tags }}
         {{ range .Params.tags }}
           <a class="no-underline" href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">#{{ . }}</a>&nbsp;
         {{ end }}
-      </div>
-    {{ end }}
+      {{ end }}
+    </div>
 
     {{ .Content }}
   </div>
