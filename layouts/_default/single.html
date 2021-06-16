@@ -7,8 +7,10 @@
           {{ .Date.Format ($.Site.Params.DateFormatSingle | default "2006-01-02") }} —
         {{ end }}
 
-        {{ with .Params.Author }}
-          {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }} —
+        {{ if $.Site.Params.ShowAuthor }}
+          {{ with .Params.Author }}
+            {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }} —
+          {{ end }}
         {{ end }}
 
         {{ if $.Site.Params.ShowReadingTime }}
