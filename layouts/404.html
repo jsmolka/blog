@@ -1,20 +1,18 @@
 {{ define "main" }}
-  <div class="post">
-    <h1 class="post-title">404</h1>
+  <div class="post max-w-screen-sm md:max-w-screen-md m-auto px-4 py-10 md:py-24">
+    <h1 class="mb-6">{{ "404" | markdownify }}</h1>
     <div class="post-content">
       <p>Sorry, this page seems to be missing.</p>
       {{ if .Site.Taxonomies.tags }}
-        <p>Maybe these tags will help you find what you're looking for.</p>
-        <div class="terms">
-          <ul class="terms__list">
-            {{ range .Site.Taxonomies.tags }}
-              <li class="terms__term">
-                <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>
-                <span class="terms__term-count">{{ .Count }}</span>
-              </li>
-            {{ end }}
-          </ul>
-        </div>
+        <p>Maybe these tags will help you find what you're looking for:</p>
+        <ul>
+          {{ range .Site.Taxonomies.tags }}
+            <li class="mb-3">
+              <a class="no-underline" href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>
+              <span class="bg-var-background-secondary ml-1 px-3 py-0.5 text-xs rounded">{{ .Count }}</span>
+            </li>
+          {{ end }}
+        </ul>
       {{ end }}
     </div>
   </div>

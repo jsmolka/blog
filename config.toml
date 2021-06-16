@@ -1,6 +1,7 @@
 baseurl = "/"
 languageCode = "en-US"
 paginate = 5
+disableKinds = ["RSS", "taxonomyTerm"]
 
 [params]
   contentTypeName = "post"
