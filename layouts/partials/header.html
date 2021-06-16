@@ -10,7 +10,7 @@
         <div class="mr-5 pr-5 border-r">
           {{ range $.Site.Menus.main }}
             {{ if not .HasChildren }}
-              <a class="p-2 mr-1 last:mr-0 rounded hover:bg-alpha-black-20 dark:hover:bg-alpha-white-40" href="{{ .URL }}">{{ .Name }}</a>
+              <a class="p-2 mr-1 last:mr-0 rounded hover:bg-hover-alpha-light dark:hover:bg-hover-alpha-dark" href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
           {{ end }}
         </div>
@@ -40,7 +40,7 @@
           <div class="absolute top-14 right-4 flex flex-col p-1 bg-var-header rounded shadow-menu z-10">
             {{ range $.Site.Menus.main }}
               {{ if not .HasChildren }}
-                <a class="p-2 rounded hover:bg-alpha-black-20 dark:hover:bg-alpha-white-40" href="{{ .URL }}">{{ .Name }}</a>
+                <a class="p-2 rounded hover:bg-hover-alpha-light dark:hover:bg-hover-alpha-dark" href="{{ .URL }}">{{ .Name }}</a>
               {{ end }}
             {{ end }}
           </div>

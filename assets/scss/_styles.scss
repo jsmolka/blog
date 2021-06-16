@@ -1,10 +1,5 @@
 @import "variables";
 
-html {
-  @apply w-full;
-  @apply h-full;
-}
-
 body {
   @apply w-full;
   @apply h-full;
@@ -17,6 +12,35 @@ body {
 
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
+
+  ::selection {
+    @apply bg-var-accent;
+
+    color: $light-color;
+  }
+
+  &::-webkit-scrollbar {
+    @apply w-2;
+    @apply bg-var-background;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &.dark {
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
 }
 
 button:focus {
@@ -25,31 +49,4 @@ button:focus {
 
 audio:focus {
   @apply outline-none;
-}
-
-::selection {
-  @apply bg-var-accent;
-
-  color: #222222;
-}
-
-::-webkit-scrollbar {
-  @apply w-2;
-  @apply bg-var-background;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-
-  .dark & {
-    background: rgba(255, 255, 255, 0.2);
-  }
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.3);
-
-    .dark & {
-      background: rgba(255, 255, 255, 0.3);
-    }
-  }
 }
