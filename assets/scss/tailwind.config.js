@@ -27,15 +27,8 @@ module.exports = {
         'background-secondary': 'var(--background-secondary)',
         'header': 'var(--header)',
         'border': 'var(--border)',
-        'menu-hover': 'var(--menu-hover)',
         'accent': 'var(--accent)'
       },
-      hover: {
-        alpha: {
-          light: 'rgba(0, 0, 0, 0.02)',
-          dark: 'rgba(255, 255, 255, 0.04)'
-        }
-      }
     },
     fontFamily: {
       'roboto': font('Roboto'),

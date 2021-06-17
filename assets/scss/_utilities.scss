@@ -1,3 +1,5 @@
+@import "variables";
+
 .button-none {
   @apply m-0;
   @apply p-0;
@@ -26,4 +28,14 @@
 
 .shadow-menu {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12)
+}
+
+.hover\:text-menu {
+  &:hover {
+    color: lighten($light-color, 55%);
+
+    .dark & {
+      color: darken($dark-color, 25%);
+    }
+  }
 }
