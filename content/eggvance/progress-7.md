@@ -1,7 +1,7 @@
 ---
 title: "Progress Report #7"
 author: "Julian Smolka"
-description: "The seventh progress report of the eggvance GBA emulator."
+summary: "The seventh progress report of the eggvance GBA emulator."
 tags: ["eggvance", "emulation", "programming"]
 date: 2021-05-11
 type: post

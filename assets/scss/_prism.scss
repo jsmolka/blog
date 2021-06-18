@@ -8,10 +8,6 @@ code[class*="language-"] {
   @apply leading-relaxed;
   @apply hyphens-none;
 
-  .dark & {
-    @apply bg-var-header;
-  }
-
   .table {
     @apply inline
   }
@@ -22,10 +18,10 @@ pre[class*="language-"] {
   @apply my-6;
   @apply p-4;
   @apply overflow-auto;
-
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.075) 0px 0px 0px 1px;
+  @apply shadow-code;
 
   .dark & {
+    @apply bg-var-header;
     @apply shadow-none;
   }
 }

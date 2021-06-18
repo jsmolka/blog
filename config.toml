@@ -1,12 +1,12 @@
 baseurl = "https://smolka.dev"
 title = "smolka"
-languageCode = "en-US"
 paginate = 5
 disableKinds = ["RSS", "taxonomyTerm"]
 disableHugoGeneratorInject = true
 
 [params]
   title = "Smolka"
+  language = "en-US"
   keywords = "smolka, blog, programming, emulation, eggvance, cycling"
   newerPosts = "Go forward in time"
   olderPosts = "Go back in time"
