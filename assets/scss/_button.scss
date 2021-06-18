@@ -1,16 +1,20 @@
 button, .button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 18px;
-  margin-bottom: 5px;
-  background: var(--background-secondary);
-  text-decoration: none;
-  text-align: center;
-  font-weight: 400;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  appearance: none;
-  cursor: pointer;
+  @apply relative;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply px-4;
+  @apply py-2;
+  @apply bg-var-background-secondary;
+  @apply rounded;
+  @apply no-underline;
+  @apply cursor-pointer;
+
+  &:hover {
+    background: darken($light-background-secondary, 3%);
+
+    .dark & {
+      background: lighten($dark-background-secondary, 3%);
+    }
+  }
 }

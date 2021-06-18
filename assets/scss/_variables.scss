@@ -1,5 +1,6 @@
 $light-color: #222222;
 $light-color-secondary: #999999;
+$light-color-tertiary: #919191;
 $light-background: #ffffff;
 $light-background-secondary: #eaeaea;
 $light-header: #fafafa;
@@ -9,6 +10,7 @@ $light-accent: #6ebaf7;
 
 $dark-color: #a9a9b3;
 $dark-color-secondary: #73747b;
+$dark-color-tertiary: #69696f;
 $dark-background: #292a2d;
 $dark-background-secondary: #3b3d42;
 $dark-header: #252627;
@@ -19,6 +21,7 @@ $dark-accent: #48a8f5;
 :root {
   --color: #{$light-color};
   --color-secondary: #{$light-color-secondary};
+  --color-tertiary: #{$light-color-tertiary};
   --background: #{$light-background};
   --background-secondary: #{$light-background-secondary};
   --header: #{$light-header};
@@ -30,6 +33,7 @@ $dark-accent: #48a8f5;
 .dark {
   --color: #{$dark-color};
   --color-secondary: #{$dark-color-secondary};
+  --color-tertiary: #{$dark-color-tertiary};
   --background: #{$dark-background};
   --background-secondary: #{$dark-background-secondary};
   --header: #{$dark-header};

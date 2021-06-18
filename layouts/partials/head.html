@@ -1,36 +1,41 @@
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-<meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"/>
-<meta name="robots" content="noodp" />
-<link rel="canonical" href="{{ .Permalink }}" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+  <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"/>
+  <link rel="canonical" href="{{ .Permalink }}" />
 
-{{ partial "favicons" . }}
-{{ partial "style" . }}
-{{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
+  <title>
+    {{- if .IsHome -}}
+      {{- $.Site.Title -}}
+    {{- else -}}
+      {{- .Title -}}
+    {{- end -}}
+  </title>
 
-{{ if .Site.IsServer }}
-  {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
-{{ end }}
+  {{ partial "favicons" . }}
+  {{ partial "style" . }}
+  {{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
 
-<link href="{{ "/fonts/Roboto-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-RegularItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-Black.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/Roboto-BlackItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/JetBrainsMono-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/JetBrainsMono-RegularItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/JetBrainsMono-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/JetBrainsMono-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/JetBrainsMono-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="{{ "/fonts/JetBrainsMono-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  {{ if .Site.IsServer }}
+    {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
+  {{ end }}
 
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+  <link href="{{ "/fonts/Roboto-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-RegularItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-Black.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/Roboto-BlackItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/JetBrainsMono-Regular.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/JetBrainsMono-RegularItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/JetBrainsMono-Medium.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/JetBrainsMono-MediumItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/JetBrainsMono-Bold.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
+  <link href="{{ "/fonts/JetBrainsMono-BoldItalic.woff2" | absURL }}" rel="preload" type="font/woff2" as="font" crossorigin="">
 
-{{ range .AlternativeOutputFormats -}}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-{{ end -}}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+</head>

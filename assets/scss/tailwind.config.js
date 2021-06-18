@@ -23,6 +23,7 @@ module.exports = {
       var: {
         'color': 'var(--color)',
         'color-secondary': 'var(--color-secondary)',
+        'color-tertiary': 'var(--color-tertiary)',
         'background': 'var(--background)',
         'background-secondary': 'var(--background-secondary)',
         'header': 'var(--header)',

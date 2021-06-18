@@ -1,32 +1,27 @@
 {{ define "main" }}
   <div class="post max-w-screen-sm md:max-w-screen-md m-auto px-4 py-10 md:py-24">
     <h1 class="mb-6">{{ .Title | markdownify }}</h1>
+
     {{ if .Params.ShowMeta | default true }}
-      <div class="mb-1">
-        {{ if .Date | default nil }}
+      <div class="flex">
+        {{ if .Date }}
           {{ .Date.Format ($.Site.Params.DateFormatSingle | default "2006-01-02") }} —
         {{ end }}
 
-        {{ if $.Site.Params.ShowAuthor }}
-          {{ with .Params.Author }}
-            {{ $.Site.Params.WrittenBy | default "Written by" }} {{ . }} —
-          {{ end }}
-        {{ end }}
-
-        {{ if $.Site.Params.ShowReadingTime }}
-          {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
-        {{ end }}
+        {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
       </div>
     {{ end}}
 
-    <div class="mb-6 opacity-50">
-      {{ if .Params.tags }}
+    {{ if .Params.tags }}
+      <div class="flex mt-1 text-var-color-tertiary">
         {{ range .Params.tags }}
-          <a class="no-underline" href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">#{{ . }}</a>&nbsp;
+          <a class="mr-2 no-underline" href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">#{{ . }}</a>
         {{ end }}
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
 
-    {{ .Content }}
+    <div class="mt-6">
+      {{ .Content }}
+    </div>
   </div>
 {{ end }}

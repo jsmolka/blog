@@ -4,20 +4,20 @@
   @apply h-4;
   @apply bg-var-accent;
 
+  @keyframes pulsate {
+    0% {
+      @apply opacity-0;
+    }
+
+    50% {
+      @apply opacity-100;
+    }
+
+    100% {
+      @apply opacity-0;
+    }
+  }
+
   border-radius: 1px;
-  animation: cursor 1s infinite;
-}
-
-@keyframes cursor {
-  0% {
-    @apply opacity-0;
-  }
-
-  50% {
-    @apply opacity-100;
-  }
-
-  100% {
-    @apply opacity-0;
-  }
+  animation: pulsate 1s infinite;
 }
