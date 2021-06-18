@@ -26,6 +26,7 @@ module.exports = {
         'background': 'var(--background)',
         'background-secondary': 'var(--background-secondary)',
         'header': 'var(--header)',
+        'header-secondary': 'var(--header-secondary)',
         'border': 'var(--border)',
         'accent': 'var(--accent)'
       },

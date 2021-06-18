@@ -3,6 +3,7 @@ $light-color-secondary: #999999;
 $light-background: #ffffff;
 $light-background-secondary: #eaeaea;
 $light-header: #fafafa;
+$light-header-secondary: darken($light-header, 2.75%);
 $light-border: #dcdcdc;
 $light-accent: #6ebaf7;
 
@@ -11,6 +12,7 @@ $dark-color-secondary: #73747b;
 $dark-background: #292a2d;
 $dark-background-secondary: #3b3d42;
 $dark-header: #252627;
+$dark-header-secondary: lighten($dark-header, 5%);
 $dark-border: #4a4b50;
 $dark-accent: #48a8f5;
 
@@ -20,6 +22,7 @@ $dark-accent: #48a8f5;
   --background: #{$light-background};
   --background-secondary: #{$light-background-secondary};
   --header: #{$light-header};
+  --header-secondary: #{$light-header-secondary};
   --border: #{$light-border};
   --accent: #{$light-accent};
 }
@@ -30,6 +33,7 @@ $dark-accent: #48a8f5;
   --background: #{$dark-background};
   --background-secondary: #{$dark-background-secondary};
   --header: #{$dark-header};
+  --header-secondary: #{$dark-header-secondary};
   --border: #{$dark-border};
   --accent: #{$dark-accent};
 }

@@ -1,20 +1,20 @@
-<header class="flex justify-center items-center bg-var-header">
-  <div class="flex justify-between items-center w-full max-w-screen-sm md:max-w-screen-md mx-auto">
-    <a class="flex items-center p-4 no-underline" href="{{ $.Site.BaseURL }}">
+<header class="bg-var-header">
+  <div class="flex justify-between items-center w-full h-16 max-w-screen-sm md:max-w-screen-md mx-auto p-2">
+    <a class="flex items-center p-2" href="{{ $.Site.BaseURL }}">
       <span class="text-lg font-bold">{{ $.Site.Params.Logo.logoText }}</span>
-      <span class="cursor ml-1 mb-0.5" />
+      <span class="cursor ml-1" />
     </a>
     <!-- Desktop -->
-    <div class="hidden md:flex items-center hover:text-menu">
+    <div class="hidden md:flex items-center">
       {{ if len $.Site.Menus }}
         {{ range $.Site.Menus.main }}
           {{ if not .HasChildren }}
-            <a class="px-4 py-4 hover:text-var-color" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="mx-1 px-2 py-1 rounded hover:bg-var-header-secondary" href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
         {{ end }}
       {{ end }}
-      <div class="h-6 ml-2 mr-1 border-r border-var-color"></div>
-      <button class="theme-button button-none p-4 hover:text-var-color">
+      <div class="h-6 mx-2 border-r"></div>
+      <button class="theme-button button-none mx-1 p-1 rounded-full hover:bg-var-header-secondary">
         <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
         </svg>
@@ -22,12 +22,12 @@
     </div>
     <!-- Mobile -->
     <div class="flex md:hidden">
-      <button class="theme-button button-none">
+      <button class="theme-button button-none mx-1 p-1 rounded-full hover:bg-var-header-secondary">
         <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
         </svg>
       </button>
-      <button id="menu-button" class="button-none ml-3">
+      <button id="menu-button" class="button-none mx-1 p-1 rounded hover:bg-var-header-secondary">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0h24v24H0z" fill="none" />
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
@@ -36,10 +36,10 @@
       <!-- Menu -->
       <span id="menu" class="hidden">
         {{ if len $.Site.Menus }}
-          <div class="absolute top-14 right-4 flex flex-col p-1 bg-var-header rounded shadow-menu z-10">
+          <div class="absolute top-14 right-4 flex flex-col p-1 bg-var-header rounded shadow-menu z-50">
             {{ range $.Site.Menus.main }}
               {{ if not .HasChildren }}
-                <a class="p-2 rounded" href="{{ .URL }}">{{ .Name }}</a>
+                <a class="p-2 rounded hover:bg-var-header-secondary" href="{{ .URL }}">{{ .Name }}</a>
               {{ end }}
             {{ end }}
           </div>
