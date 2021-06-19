@@ -7,5 +7,5 @@
     {{ $PageContext = .Site }}
   {{ end }}
   {{ $paginator := .Paginate (where $PageContext.RegularPages "Type" $contentTypeName) }}
-  {{ partial "list" . }}
+  {{ partial "post/list" . }}
 {{ end }}

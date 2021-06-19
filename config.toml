@@ -5,12 +5,8 @@ disableKinds = ["RSS", "taxonomyTerm"]
 disableHugoGeneratorInject = true
 
 [params]
-  title = "Smolka"
   language = "en-US"
   keywords = "smolka, blog, programming, emulation, eggvance, cycling"
-  newerPosts = "Go forward in time"
-  olderPosts = "Go back in time"
-  minuteReadingTime = "min read"
   dateFormatSingle = "2006-01-02"
   dateFormatList = "2006-01-02"
   contentTypeName = "post"

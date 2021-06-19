@@ -3,6 +3,6 @@
   {{ partial "head.html" . }}
   <body class="flex flex-col {{ if ne $.Site.Params.defaultTheme "light" -}} dark {{- end -}}">
     {{ partial "header.html" . }}
-    {{ block "main" . }} {{ end }}
+    {{ block "main" . }}{{ end }}
   </body>
 </html>

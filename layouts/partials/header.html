@@ -15,23 +15,16 @@
       {{ end }}
       <div class="h-6 mx-2 border-r"></div>
       <button class="theme-button button-none mx-1 p-1 rounded-full hover:bg-var-header-secondary">
-        <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
-        </svg>
+        {{ partial "icon/theme" 24 }}
       </button>
     </div>
     <!-- Mobile -->
     <div class="flex md:hidden">
       <button class="theme-button button-none mx-1 p-1 rounded-full hover:bg-var-header-secondary">
-        <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 43C34.493 43 43 34.493 43 24 43 13.507 34.493 5 24 5 13.507 5 5 13.507 5 24 5 34.493 13.507 43 24 43ZM9 24C9 15.716 15.716 9 24 9V39C15.716 39 9 32.284 9 24Z" />
-        </svg>
+        {{ partial "icon/theme" 24 }}
       </button>
       <button id="menu-button" class="button-none mx-1 p-1 rounded hover:bg-var-header-secondary">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-        </svg>
+        {{ partial "icon/hamburger" 24 }}
       </button>
       <!-- Menu -->
       <span id="menu" class="hidden">

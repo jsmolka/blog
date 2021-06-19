@@ -3,22 +3,8 @@
     <h1 class="mb-6">{{ .Title | markdownify }}</h1>
 
     {{ if .Params.ShowMeta | default true }}
-      <div class="flex">
-        {{ if .Date }}
-          {{ .Date.Format ($.Site.Params.DateFormatSingle | default "2006-01-02") }} —
-        {{ end }}
-
-        {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
-      </div>
+      {{ partial "post/meta" . }}
     {{ end}}
-
-    {{ if .Params.tags }}
-      <div class="flex mt-1 text-var-color-tertiary">
-        {{ range .Params.tags }}
-          <a class="mr-2 no-underline" href="{{ (urlize (printf "tags/%s" . )) | absURL }}/">#{{ . }}</a>
-        {{ end }}
-      </div>
-    {{ end }}
 
     <div class="mt-6">
       {{ .Content }}
