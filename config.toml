@@ -26,8 +26,8 @@ disableHugoGeneratorInject = true
 
   [[menu.main]]
     identifier = "posts"
-    name = "Post"
-    url = "/post"
+    name = "Posts"
+    url = "/posts"
 
 [markup]
   [markup.goldmark]
