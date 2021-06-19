@@ -20,6 +20,11 @@ disableHugoGeneratorInject = true
     url = "/about"
 
   [[menu.main]]
+    identifier = "cycling"
+    name = "Cycling"
+    url = "/cycling"
+
+  [[menu.main]]
     identifier = "eggvance"
     name = "eggvance"
     url = "/eggvance"

@@ -2,6 +2,7 @@
 <html lang="{{ .Site.Params.Language }}">
   <head>
     {{ partial "head.html" . }}
+    {{ partial "esbuild-async" (dict "ctx" . "path" "js/cycling.js") }}
   </head>
   <body class="flex flex-col {{ if ne $.Site.Params.defaultTheme "light" -}} dark {{- end -}}">
     {{ partial "header.html" . }}
@@ -9,3 +10,4 @@
     {{ end }}
   </body>
 </html>
+
