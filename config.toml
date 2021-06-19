@@ -13,10 +13,6 @@ disableHugoGeneratorInject = true
   defaultTheme = "light"
   birthDate = "1998-05-11"
 
-  [params.logo]
-    logoText = "smolka"
-    logoHomeLink = "/"
-
 [menu]
   [[menu.main]]
     identifier = "about"

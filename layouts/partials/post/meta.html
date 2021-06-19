@@ -1,6 +1,6 @@
 <div class="flex">
   {{ if .Date }}
-    {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }} —
+    {{ .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }} &mdash;
   {{ end }}
 
   {{ .ReadingTime }} min read

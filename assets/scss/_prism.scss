@@ -9,7 +9,7 @@ code[class*="language-"] {
   @apply hyphens-none;
 
   .table {
-    @apply inline
+    display: inline !important;
   }
 }
 

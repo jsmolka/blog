@@ -74,10 +74,9 @@
   }
 
   figcaption {
-    @apply mt-1;
+    @apply mt-1.5;
     @apply text-sm;
     @apply text-center;
-    @apply opacity-80;
   }
 
   ul {
@@ -105,10 +104,11 @@
 
   blockquote {
     @apply relative;
-    @apply mx-2;
     @apply px-6;
-    @apply py-2;
-    @apply border-l-2;
+    @apply py-3;
+    @apply bg-var-header;
+    @apply border-l-4;
+    @apply border-var-background-secondary;
   }
 
   @screen md {
