@@ -14,4 +14,4 @@ npm install
 ```
 
 ## Credit
-The theme is based on [Material](https://material.io/) and [hello-friend-ng](https://github.com/rhazdon/hugo-theme-hello-friend-ng).
+The theme is based on [Hello Friend](https://github.com/panr/hugo-theme-hello-friend).

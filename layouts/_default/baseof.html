@@ -2,8 +2,10 @@
 <html lang="{{ .Site.Params.Language }}">
   <head>
     {{ partial "head.html" . }}
+    {{ block "head" . }}
+    {{ end }}
   </head>
-  <body class="flex flex-col {{ if ne $.Site.Params.defaultTheme "light" -}} dark {{- end -}}">
+  <body class="flex flex-col {{ if eq $.Site.Params.defaultTheme "dark" -}} dark {{- end -}}">
     {{ partial "header.html" . }}
     {{ block "main" . }}
     {{ end }}

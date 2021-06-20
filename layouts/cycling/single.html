@@ -1,3 +1,7 @@
+{{ define "head" }}
+  {{ partial "esbuild-async" (dict "ctx" . "path" "js/cycling.js") }}
+{{ end }}
+
 {{ define "main" }}
   {{ .Content }}
 {{ end }}

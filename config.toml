@@ -1,5 +1,5 @@
-baseurl = "https://smolka.dev"
 title = "smolka"
+baseurl = "https://smolka.dev"
 paginate = 5
 disableKinds = ["RSS", "taxonomyTerm"]
 disableHugoGeneratorInject = true
@@ -7,30 +7,25 @@ disableHugoGeneratorInject = true
 [params]
   language = "en-US"
   keywords = "smolka, blog, programming, emulation, eggvance, cycling"
-  dateFormatSingle = "2006-01-02"
-  dateFormatList = "2006-01-02"
-  contentTypeName = "post"
-  defaultTheme = "light"
+  defaultTheme = "dark"
+  contentType = "post"
+  dateFormat = "2006-01-02"
   birthDate = "1998-05-11"
 
 [menu]
   [[menu.main]]
-    identifier = "about"
     name = "About"
     url = "/about"
 
   [[menu.main]]
-    identifier = "cycling"
     name = "Cycling"
     url = "/cycling"
 
   [[menu.main]]
-    identifier = "eggvance"
     name = "eggvance"
     url = "/eggvance"
 
   [[menu.main]]
-    identifier = "posts"
     name = "Posts"
     url = "/posts"
 

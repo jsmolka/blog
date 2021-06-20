@@ -1,6 +1,5 @@
 ---
 title: "Sleep"
-author: "Julian Smolka"
 summary: "Thoughts about Why We Sleep by Matthew Walker."
 date: 2020-03-27
 type: post

@@ -1,6 +1,5 @@
 ---
 title: "Progress Report #5"
-author: "Julian Smolka"
 summary: "The fifth progress report of the eggvance GBA emulator."
 tags: ["eggvance", "emulation", "programming"]
 date: 2020-06-06
