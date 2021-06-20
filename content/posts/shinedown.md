@@ -29,4 +29,4 @@ The concert itself was amazing. Brent Smith, the lead singer, mixed his almost s
 - Brilliant
 
 ### Notes
-[^1]: [this one](https://www.youtube.com/watch?v=8IF_aFuJ7MM)
+[^1]: Future me here. It's was [this one](https://www.youtube.com/watch?v=8IF_aFuJ7MM).
