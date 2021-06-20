@@ -11,7 +11,7 @@ draft: true
 >
 > &mdash; Dr. Allan Rechtschaffen
 
-During the last months I have read the book Why We Sleep twice. Its author, [Matthew Walker](https://en.wikipedia.org/wiki/Matthew_Walker_(scientist)), is a British scientist and professor of neuroscience and psychology. In his book he tries to explain the various stages of sleep and their impact on the body in a scientific way. Even though Walker tries to follow a scientific methodology, most of his claims lack citations of the papers in question which led to valid [criticism](https://guzey.com/books/why-we-sleep/).
+During the last months I have read the book Why We Sleep twice. Its author, [Matthew Walker](https://en.wikipedia.org/wiki/Matthew_Walker_(scientist)), is a British scientist and professor of neuroscience and psychology. In his book he tries to explain the various stages of sleep and their impact on the body in a scientific way. Even though Walker tries to follow a scientific methodology, most of his claims lack citations of the papers in question which led to valid [criticism](https://guzey.com/books/why-we-posts/).
 
 Some of the most interesting sections in the book are not about sleep itself but a lack thereof. When talking to other people about the importance of sleep I found it difficult to remember facts about the negative impact of too little sleep on your overall health. This was my main motivation to read the book a second time and mark everything interesting and disturbing I come across. In this post I want to connect the facts stated with the studies they originated from.
 
@@ -88,7 +88,7 @@ Another study examined the German MONICA / KORA Myocardial Infarction Registry w
 An article published in the New English Journal of Medicine analyzed 1,398,784 traffic accidents in Canada during the years 1991 and 1992. The accidents on Mondays before, immediately after and one week after a DST transition were used to observe the consequences of small changes in the amount of sleep on humans. The spring shift caused an 8 percent increase and the autumn shift a 6 percent decrease in accidents [^coren-dst]. Interesting is the slight increase in accidents on Mondays following a DST transition, regardless of losing or gaining one hour of sleep opportunity.
 
 {{<flex>}}
- {{<figure src="sleep/dst-traffic-accidents.png" caption="Number of traffic accidents on the mondays before and after a DST transition" class="w-full sm:w-2/3">}}
+ {{<figure src="posts/dst-traffic-accidents.png" caption="Number of traffic accidents on the mondays before and after a DST transition" class="w-full sm:w-2/3">}}
 {{</flex>}}
 
 <!-- Todo: not sure if should be included -->
@@ -98,8 +98,8 @@ A study [^lim-sleep-fragmentation] published in 2013 took a group of 737 older a
 Participants underwent structured annual evaluations which included nineteen neuropsychological tests to identify the development of Alzheimer's disease and to assess the rate of their cognitive decline. Over a six year period individuals with a high fragmentation of sleep (90th percentile) showed a 1.5 fold increase in risk of developing AD and a more rapid rate of cognitive decline.
 
 {{<flex>}}
-  {{<figure src="sleep/sleep-fragmentation-ad-probability.jpg" caption="Expected risk of developing AD for high (solid line, 90th percentile) and low (dotted line, 10th percentile) levels of sleep fragmentation">}}
-  {{<figure src="sleep/sleep-fragmentation-cognitive-decline.jpg" caption="Expected cognitive decline for high (solid line, 90th percentile) and low (dotted line, 10th percentile) levels of sleep fragmentation">}}
+  {{<figure src="posts/sleep-fragmentation-ad-probability.jpg" caption="Expected risk of developing AD for high (solid line, 90th percentile) and low (dotted line, 10th percentile) levels of sleep fragmentation">}}
+  {{<figure src="posts/sleep-fragmentation-cognitive-decline.jpg" caption="Expected cognitive decline for high (solid line, 90th percentile) and low (dotted line, 10th percentile) levels of sleep fragmentation">}}
 {{</flex>}}
 
 The authors end their work with the following conclusion.
