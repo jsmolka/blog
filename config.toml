@@ -6,7 +6,8 @@ disableHugoGeneratorInject = true
 
 [params]
   language = "en-US"
-  keywords = "smolka, blog, programming, emulation, eggvance, cycling"
+  description = "Mediocre posts about emulation and micro optimizations."
+  keywords = ["smolka", "blog", "eggvance"]
   defaultTheme = "dark"
   contentType = "post"
   dateFormat = "2006-01-02"
