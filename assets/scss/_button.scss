@@ -1,9 +1,8 @@
 button, .button {
-  @apply relative;
   @apply flex;
   @apply justify-center;
   @apply items-center;
-  @apply px-4;
+  @apply px-3;
   @apply py-2;
   @apply bg-var-background-secondary;
   @apply rounded;

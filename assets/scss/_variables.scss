@@ -6,7 +6,6 @@ $light-background-secondary: #f0f0f0;
 $light-header: #fafafa;
 $light-header-secondary: darken($light-header, 2.75%);
 $light-border: #dcdcdc;
-$light-accent: #48a8f5;
 
 $dark-color: #a9a9b3;
 $dark-color-secondary: #73747b;
@@ -16,7 +15,6 @@ $dark-background-secondary: #3b3d42;
 $dark-header: #252627;
 $dark-header-secondary: lighten($dark-header, 5%);
 $dark-border: #4a4b50;
-$dark-accent: #48a8f5;
 
 :root {
   --color: #{$light-color};
@@ -27,7 +25,7 @@ $dark-accent: #48a8f5;
   --header: #{$light-header};
   --header-secondary: #{$light-header-secondary};
   --border: #{$light-border};
-  --accent: #{$light-accent};
+  --accent: #48a8f5;
 }
 
 .dark {
@@ -39,5 +37,4 @@ $dark-accent: #48a8f5;
   --header: #{$dark-header};
   --header-secondary: #{$dark-header-secondary};
   --border: #{$dark-border};
-  --accent: #{$dark-accent};
 }

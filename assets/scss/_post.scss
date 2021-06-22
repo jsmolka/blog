@@ -30,28 +30,27 @@
     @apply my-4;
   }
 
-  ul {
-    @apply my-4;
-    @apply ml-4;
-  }
-
-  ol {
+  ol, ul {
     @apply my-4;
     @apply ml-8;
-  }
 
-  @screen sm {
-    ul {
-      @apply ml-8;
-    }
+    li {
+      @apply mb-0.5;
 
-    ol {
-      @apply ml-12;
+      &:last-child {
+        @apply mb-0;
+      }
     }
   }
 
   blockquote {
     @apply my-6;
+  }
+
+  @screen md {
+    blockquote {
+      @apply mx-8;
+    }
   }
 
   a[href^="#fn:"] {
@@ -75,7 +74,6 @@
   }
 
   .footnotes {
-
     a[href^="#fnref:"] {
       @apply no-underline;
     }
@@ -85,7 +83,7 @@
     }
 
     ol {
-      @apply ml-6;
+      @apply ml-5;
     }
 
     li {
