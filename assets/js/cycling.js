@@ -177,14 +177,14 @@ class Activities extends Array {
   groupByWeek() {
     return this.groupBy(
       activity => activity.date.format('Y-w'),
-      activity => activity.date.clone().endOf('week')
+      activity => activity.date.clone().startOf('week')
     );
   }
 
   groupByMonth() {
     return this.groupBy(
       activity => activity.date.format('Y-M'),
-      activity => activity.date.clone().endOf('month')
+      activity => activity.date.clone().startOf('month')
     );
   }
 }
@@ -314,7 +314,7 @@ async function init() {
   const stats = new Statistics();
   await stats.init();
 
-  document.getElementById('group-day').onclick = () => {
+  document.getElementById('groupDayButton').onclick = () => {
     stats.update(
       activities => activities.groupByDay(),
       activity => activity.titleDay,
@@ -322,7 +322,7 @@ async function init() {
     );
   };
 
-  document.getElementById('group-week').onclick = () => {
+  document.getElementById('groupWeekButton').onclick = () => {
     stats.update(
       activities => activities.groupByWeek(),
       activity => activity.titleWeek,
@@ -330,7 +330,7 @@ async function init() {
     );
   };
 
-  document.getElementById('group-month').onclick = () => {
+  document.getElementById('groupMonthButton').onclick = () => {
     stats.update(
       activities => activities.groupByMonth(),
       activity => activity.titleMonth,
