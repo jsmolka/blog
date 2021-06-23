@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Params.Language }}">
+<html lang="{{ .Site.Params.Language }}" class="{{ $.Site.Params.defaultTheme }}">
   <head>
     {{ partial "head.html" . }}
     {{ block "head" . }}
     {{ end }}
   </head>
-  <body class="flex flex-col {{ if eq $.Site.Params.defaultTheme "dark" -}} dark {{- end -}}">
+  <body class="flex flex-col">
     {{ partial "header.html" . }}
     {{ block "main" . }}
     {{ end }}
