@@ -5,9 +5,9 @@ date: 2020-04-12
 type: blank
 ---
 <div class="content w-full flex flex-col flex-1 items-center justify-center max-w-screen-xl mx-auto my-4 px-4 py-8 sm:py-16">
-  <canvas id="canvas" class="w-full bg-white dark:bg-dark-500"></canvas>
-  <input id="gba-input" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
-  <input id="sav-input" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
+  <canvas id="canvas" class="w-full select-none"></canvas>
+  <input id="inputGba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
+  <input id="inputSav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
   <div class="flex mt-6">
     <div class="mr-2">
       <button onclick="inputGba.click()">Load rom</button>
@@ -19,10 +19,10 @@ type: blank
       <button onclick="Module.loadDemo(this)">Load demo</button>
     </div>
     <div class="ml-2">
-      <button id="controls-button">Show controls</button>
+      <button id="controlsButton">Show controls</button>
     </div>
   </div>
-  <div id="controls-table" class="w-full max-w-screen-md mt-6 hidden">
+  <div id="controlsTable" class="w-full max-w-screen-md mt-6 hidden">
   {{<markdown>}}
   | Emulator            | Keyboard | Controller |
   |:--------------------|:---------|:-----------|
@@ -43,8 +43,8 @@ type: blank
 </div>
 
 <script type="text/javascript">
-  const inputGba = document.getElementById('gba-input');
-  const inputSav = document.getElementById('sav-input');
+  const inputGba = document.getElementById('inputGba');
+  const inputSav = document.getElementById('inputSav');
 
   class FileSystem {
     constructor() {
@@ -122,8 +122,8 @@ type: blank
 
   window.onload = () => {
     const controls = {
-      table: document.getElementById('controls-table'),
-      button: document.getElementById('controls-button')
+      table: document.getElementById('controlsTable'),
+      button: document.getElementById('controlsButton')
     };
 
     controls.button.addEventListener('click', () => {
