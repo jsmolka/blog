@@ -338,7 +338,7 @@ async function init() {
     );
   };
 
-  theme.onChanged = () => {
+  window.theme.onChange = () => {
     stats.update();
   };
 }

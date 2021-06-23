@@ -1,5 +1,5 @@
 const menu = document.getElementById('menu');
-const menuButton = document.getElementById('menu-button');
+const menuButton = document.getElementById('menuButton');
 
 if (menu && menuButton) {
   const hide = () => {

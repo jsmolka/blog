@@ -1,7 +1,7 @@
 {{ if .ctx.Site.IsServer }}
-  {{ $script := resources.Get .path | js.Build }}
+  {{ $script := resources.Get .path | js.Build (dict "target" "es2015") }}
   <script type="text/javascript" src="{{ $script.Permalink }}" async></script>
 {{ else }}
-  {{ $script := resources.Get .path | js.Build (dict "minify" true) | fingerprint }}
+  {{ $script := resources.Get .path | js.Build (dict "target" "es2015" "minify" true) | fingerprint }}
   <script type="text/javascript" src="{{ $script.Permalink }}" async></script>
 {{ end }}

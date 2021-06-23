@@ -1,32 +1,25 @@
-class Theme {
-  constructor() {
-    const theme = localStorage.getItem('theme');
-    if (theme) {
-      document.documentElement.classList.toggle('dark', theme === 'dark');
-    }
+const html = document.documentElement;
 
-    this.onChanged = dark => {};
-  }
-
+window.theme = {
   get isDark() {
-    return document.documentElement.classList.contains('dark');
-  }
+    return html.classList.contains('dark');
+  },
 
   toggle() {
-    const dark = document.documentElement.classList.toggle('dark');
+    const dark = html.classList.toggle('dark');
     localStorage.setItem('theme', dark ? 'dark' : 'light');
-    this.onChanged(dark);
+    this.onChange(dark);
+  },
 
-    return dark;
-  }
+  onChange: dark => {}
 }
 
-window.theme = new Theme();
+const theme = localStorage.getItem('theme');
+if (theme) {
+  html.classList.toggle('dark', theme === 'dark');
+}
 
-const themeButtons = document.getElementsByClassName('theme-button');
-
-for (const themeButton of themeButtons) {
-  themeButton.addEventListener('click', () => {
-    window.theme.toggle();
-  });
+for (const id of ['themeButtonDesktop', 'themeButtonMobile']) {
+  const button = document.getElementById(id);
+  button?.addEventListener('click', () => window.theme.toggle());
 }
