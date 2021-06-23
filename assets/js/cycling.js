@@ -11,6 +11,16 @@ moment.updateLocale('de', {
   }
 });
 
+const palette = {
+  get color() { return window.theme.isDark ? 'rgb(169, 169, 179)' : 'rgb(34, 34, 34)'; },
+  get border() { return window.theme.isDark ? 'rgb(72, 168, 245)' : 'rgb(72, 168, 245)'; },
+  get background() { return window.theme.isDark ? 'rgba(72, 168, 245, 0.1)' : 'rgba(72, 168, 245, 0.1)'; },
+  get pointBorder() { return window.theme.isDark ? 'rgb(72, 168, 245)' : 'rgb(72, 168, 245)'; },
+  get pointBackground() { return window.theme.isDark ? 'rgb(43, 55, 64)' : 'rgb(235, 246, 253)'; },
+  get gridColor() { return window.theme.isDark ? 'rgba(255, 255, 255, 0.05)' : 'rgba(0, 0, 0, 0.05)'; },
+  get gridBorder() { return window.theme.isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'; }
+}
+
 const config = {
   type: 'line',
   data: {
@@ -191,18 +201,15 @@ class Activities extends Array {
 
 class Dataset {
   constructor(label, data, hidden) {
-    const border = 'rgb(72, 168, 245)';
-    const background = 'rgba(72, 168, 245, 0.1)';
-
     this.label = label;
-    this.borderColor = border;
-    this.backgroundColor = background;
+    this.borderColor = palette.border;
+    this.backgroundColor = palette.background;
     this.borderWidth = 1;
     this.lineTension = 0;
     this.pointRadius = 5;
     this.pointHitRadius = 5;
-    this.pointBorderColor = border;
-    this.pointBackgroundColor = theme.isDark ? 'rgb(43, 55, 64)' : 'rgb(235, 246, 253)';
+    this.pointBorderColor = palette.pointBorder;
+    this.pointBackgroundColor = palette.pointBackground;
     this.pointHoverRadius = 5;
     this.data = data;
     this.hidden = hidden;
@@ -245,23 +252,13 @@ class Statistics {
     this.titleCallback = titleCallback || this.titleCallback;
     this.unit = unit || this.unit;
 
-    if (theme.isDark) {
-      Chart.defaults.color = '#a9a9b3';
-      config.options.scales.x.ticks.color = '#a9a9b3';
-      config.options.scales.y.ticks.color = '#a9a9b3';
-      config.options.scales.x.grid.color = 'rgba(255, 255, 255, 0.05)';
-      config.options.scales.y.grid.color = 'rgba(255, 255, 255, 0.05)';
-      config.options.scales.x.grid.borderColor = 'rgba(255, 255, 255, 0.1)';
-      config.options.scales.y.grid.borderColor = 'rgba(255, 255, 255, 0.1)';
-    } else {
-      Chart.defaults.color = '#222222';
-      config.options.scales.x.ticks.color = '#222222';
-      config.options.scales.y.ticks.color = '#222222';
-      config.options.scales.x.grid.color = 'rgba(0, 0, 0, 0.05)';
-      config.options.scales.y.grid.color = 'rgba(0, 0, 0, 0.05)';
-      config.options.scales.x.grid.borderColor = 'rgba(0, 0, 0, 0.1)';
-      config.options.scales.y.grid.borderColor = 'rgba(0, 0, 0, 0.1)';
-    }
+    Chart.defaults.color = palette.color;
+    config.options.scales.x.ticks.color = palette.color;
+    config.options.scales.y.ticks.color = palette.color;
+    config.options.scales.x.grid.color = palette.gridColor;
+    config.options.scales.y.grid.color = palette.gridColor;
+    config.options.scales.x.grid.borderColor = palette.gridBorder;
+    config.options.scales.y.grid.borderColor = palette.gridBorder;
 
     const years = new Map();
     for (const activity of this.groupCallback(this.activities)) {

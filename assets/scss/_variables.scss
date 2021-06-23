@@ -1,22 +1,22 @@
-$light-color: #222222;
-$light-color-secondary: #999999;
+$light-color: rgb(34, 34, 34);
+$light-color-secondary: rgb(153, 153, 153);
 $light-color-tertiary: lighten($light-color-secondary, 5%);
-$light-background: #ffffff;
-$light-background-secondary: #f2f2f2;
-$light-header: #fafafa;
+$light-background: rgb(255, 255, 255);
+$light-background-secondary: rgb(242, 242, 242);
+$light-header: rgb(250, 250, 250);
 $light-header-secondary: darken($light-header, 2.5%);
-$light-border: #dcdcdc;
-$light-accent: #6ebaf7;
+$light-border: rgb(220, 220, 220);
+$light-accent: rgb(110, 186, 247);
 
-$dark-color: #a9a9b3;
-$dark-color-secondary: #73747b;
+$dark-color: rgb(169, 169, 179);
+$dark-color-secondary: rgb(115, 116, 123);
 $dark-color-tertiary: darken($dark-color-secondary, 5%);
-$dark-background: #292a2d;
-$dark-background-secondary: #3b3d42;
-$dark-header: #252627;
+$dark-background: rgb(41, 42, 45);
+$dark-background-secondary: rgb(59, 61, 66);
+$dark-header: rgb(37, 38, 39);
 $dark-header-secondary: lighten($dark-header, 2.5%);
-$dark-border: #4a4b50;
-$dark-accent: #48a8f5;
+$dark-border: rgb(74, 75, 80);
+$dark-accent: rgb(72, 168, 245);
 
 :root {
   --color: #{$light-color};

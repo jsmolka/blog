@@ -13,7 +13,7 @@ button, .button {
     background: darken($light-background-secondary, 3%);
 
     .dark & {
-      background: lighten($dark-background-secondary, 4%);
+      background: lighten($dark-background-secondary, 3%);
     }
   }
 }
