@@ -1,6 +1,6 @@
 <header class="bg-var-header">
   <div class="flex justify-between items-center w-full h-16 max-w-screen-sm md:max-w-screen-md mx-auto p-2">
-    <a class="flex items-center p-2" href="{{ $.Site.BaseURL }}">
+    <a class="flex items-center px-2 py-0.5" href="{{ $.Site.BaseURL }}">
       <span class="text-lg font-bold">{{ $.Site.Title }}</span>
       <span class="cursor ml-1" />
     </a>
@@ -9,31 +9,31 @@
       {{ if len $.Site.Menus }}
         {{ range $.Site.Menus.main }}
           {{ if not .HasChildren }}
-            <a class="mx-1 px-2 py-1 rounded hover:bg-var-header-secondary" href="{{ .URL }}">{{ .Name }}</a>
+            <a class="mx-1 px-2 py-1 rounded hover:alpha" href="{{ .URL }}">{{ .Name }}</a>
           {{ end }}
         {{ end }}
       {{ end }}
       <div class="h-6 mx-2 border-r"></div>
-      <button id="themeButtonDesktop" class="button-none mx-1 p-1 rounded-full hover:bg-var-header-secondary">
+      <button id="themeButtonDesktop" class="button-none mx-1 p-1 rounded-full hover:alpha">
         {{ partial "icon/theme" 24 }}
       </button>
     </div>
     <!-- Mobile -->
     <div class="flex md:hidden">
-      <button id="themeButtonMobile" class="button-none mx-1 p-1 rounded-full hover:bg-var-header-secondary">
+      <button id="themeButtonMobile" class="button-none mx-1 p-1 rounded-full hover:alpha">
         {{ partial "icon/theme" 24 }}
       </button>
       <div class="relative">
-        <button id="menuButton" class="button-none mx-1 p-1 rounded hover:bg-var-header-secondary">
+        <button id="menuButton" class="button-none mx-1 p-1 rounded hover:alpha">
           {{ partial "icon/hamburger" 24 }}
         </button>
         <!-- Menu -->
         <span id="menu" class="hidden">
           {{ if len $.Site.Menus }}
-            <div class="absolute top-10 right-1 flex flex-col p-1 bg-var-header rounded shadow-menu z-50">
+            <div class="absolute top-10 right-1 flex flex-col p-1 rounded shadow-menu z-50 bg-var-header dark:bg-var-header-secondary hover:alpha">
               {{ range $.Site.Menus.main }}
                 {{ if not .HasChildren }}
-                  <a class="p-2 rounded hover:bg-var-header-secondary" href="{{ .URL }}">{{ .Name }}</a>
+                  <a class="p-2 rounded hover:alpha" href="{{ .URL }}">{{ .Name }}</a>
                 {{ end }}
               {{ end }}
             </div>

@@ -4,7 +4,7 @@ $light-color-tertiary: lighten($light-color-secondary, 5%);
 $light-background: #ffffff;
 $light-background-secondary: #f2f2f2;
 $light-header: #fafafa;
-$light-header-secondary: darken($light-header, 2.75%);
+$light-header-secondary: darken($light-header, 2.5%);
 $light-border: #dcdcdc;
 $light-accent: #6ebaf7;
 
@@ -14,7 +14,7 @@ $dark-color-tertiary: darken($dark-color-secondary, 5%);
 $dark-background: #292a2d;
 $dark-background-secondary: #3b3d42;
 $dark-header: #252627;
-$dark-header-secondary: lighten($dark-header, 5%);
+$dark-header-secondary: lighten($dark-header, 2.5%);
 $dark-border: #4a4b50;
 $dark-accent: #48a8f5;
 

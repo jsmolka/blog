@@ -31,3 +31,15 @@
 .shadow-code {
   box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.075) 0px 0px 0px 1px;
 }
+
+.hover\:alpha {
+  &:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .dark & {
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+}
