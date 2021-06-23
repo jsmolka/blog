@@ -1,3 +1,5 @@
+@import "variables";
+
 .content {
   h1, h2, h3, h4, h5, h6 {
     @apply relative;
@@ -58,6 +60,12 @@
   table, th, td {
     @apply p-2;
     @apply border;
+
+    border-color: mix($light-color-secondary, $light-background, 50%);
+
+    .dark & {
+      border-color: mix($dark-color-secondary, $dark-background, 50%);
+    }
   }
 
   th {
