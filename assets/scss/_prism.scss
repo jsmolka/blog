@@ -16,7 +16,8 @@ code[class*="language-"] {
 pre[class*="language-"] {
   @apply relative;
   @apply my-6;
-  @apply p-4;
+  @apply px-5;
+  @apply py-4;
   @apply overflow-auto;
   @apply shadow-code;
 
