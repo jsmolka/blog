@@ -35,7 +35,7 @@
     @apply ml-8;
 
     li {
-      @apply mb-0.5;
+      @apply mb-1;
 
       &:last-child {
         @apply mb-0;
@@ -47,10 +47,8 @@
     @apply my-6;
   }
 
-  @screen md {
-    blockquote {
-      @apply mx-8;
-    }
+  audio {
+    @apply w-full;
   }
 
   a[href^="#fn:"] {

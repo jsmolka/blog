@@ -35,6 +35,11 @@ module.exports = {
     fontFamily: {
       'roboto': font('Roboto'),
       'jet-brains-mono': font('JetBrainsMono')
+    },
+    extend: {
+      borderWidth: {
+        6: '6px'
+      }
     }
   },
   variants: {
