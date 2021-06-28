@@ -41,7 +41,7 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader) {
 }
 ```
 
-This `is inline code` and some following text.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed `diam nonumy` eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 
 This is an ordered list with:
 1. item 1

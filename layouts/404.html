@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="post max-w-screen-md m-auto px-4 py-10 md:py-24">
+    <h1 class="mb-6">404</h1>
+    <p>Sorry, this page seems to be missing.</p>
+    <ul>
+      {{ range (first 5 .Site.Taxonomies.tags.ByCount) }}
+        <li class="mb-2">
+          <a class="inline-flex items-center no-underline" href="{{ .Page.Permalink }}">
+            <span>#{{ .Page.Title }}</span>
+            <span class="ml-1.5 px-1.5 py-0.5 bg-var-background-secondary text-xs rounded">{{ .Count }}</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}

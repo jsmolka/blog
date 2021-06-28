@@ -4,7 +4,6 @@
   @apply bg-transparent;
   @apply text-current;
   @apply border-none;
-  @apply rounded-none;
 
   &:hover {
     @apply bg-transparent;
@@ -35,7 +34,7 @@
 
 .hover\:alpha {
   &:hover {
-    background: rgba(0, 0, 0, 0.025);
+    background: rgba(0, 0, 0, 0.02);
   }
 
   .dark & {
