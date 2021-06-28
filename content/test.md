@@ -41,6 +41,8 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader) {
 }
 ```
 
+This `is inline code` and some following text.
+
 This is an ordered list with:
 1. item 1
 2. and item 2
