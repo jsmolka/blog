@@ -21,7 +21,7 @@ $transparent: rgba(0, 0, 0, 0);
   }
 }
 
-.green-audio-player {
+.audio-player {
 	width: 400px;
 	min-width: 300px;
 	height: 56px;
@@ -36,18 +36,6 @@ $transparent: rgba(0, 0, 0, 0);
 	background-color: $white;
 	box-sizing: border-box;
 	outline: none;
-
-	&.player-accessible {
-		.play-pause-btn,
-		.controls,
-		.volume__button,
-		.volume__controls,
-		.download {
-			&:hover {
-				outline: dotted 1px $gray;
-			}
-		}
-	}
 
 	svg,
 	img {
@@ -118,7 +106,6 @@ $transparent: rgba(0, 0, 0, 0);
 	}
 
 	.controls {
-		font-family: "Roboto", sans-serif;
 		font-size: 16px;
 		line-height: 18px;
 		color: $text;
@@ -228,17 +215,6 @@ $transparent: rgba(0, 0, 0, 0);
 				bottom: -164px;
 				left: -3px;
 			}
-		}
-	}
-
-	.download {
-		display: none;
-		margin-left: 16px;
-		cursor: pointer;
-		outline: none;
-
-		&:focus {
-			outline: none;
 		}
 	}
 
