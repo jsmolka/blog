@@ -1,6 +1,8 @@
+import initMenu from './menu';
+
 // TODO: save volume in localestorage
 
-class AudioPlayer {
+export default class AudioPlayer {
   static instances = [];
 
   constructor(container) {
@@ -12,6 +14,8 @@ class AudioPlayer {
     this.progress = container.querySelector('#audioProgress');
     this.progressBar = container.querySelector('#audioProgressBar');
     this.playPauseButton = container.querySelector('#audioPlayPauseButton');
+    this.volumeButton = container.querySelector('.audio-volume-button');
+    this.volumeMenu = container.querySelector('.audio-volume-menu');
 
     // NO EARRAPE IN DEV
     this.audio.volume = 0.1;
@@ -26,7 +30,7 @@ class AudioPlayer {
   }
 
   initEvents() {
-    this.audio.addEventListener('loadedmetadata', () => this.updateTime());
+    this.audio.addEventListener('loadedmetadata', () => this.updateTime());  // TODO: enabled interactions after this, call initEvents in here?
     this.audio.addEventListener('play', () => this.playing = true);
     this.audio.addEventListener('pause', () => this.playing = false);
     this.audio.addEventListener('ended', () => this.playing = false);
@@ -73,6 +77,8 @@ class AudioPlayer {
     });
 
     this.playPauseButton.addEventListener('click', () => this.toggle());
+
+    initMenu(this.volumeMenu, this.volumeButton);
   }
 
   play() {
@@ -125,27 +131,34 @@ class AudioPlayer {
   }
 
   static get template() {
-    return `
+    return /* html */ `
       <div class="flex items-center w-full px-2 py-2 bg-var-background-secondary rounded-sm shadow-sm">
-        <div id="audioPlayPauseButton" class="select-none cursor-pointer">
-          <svg id="audioPlayIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
-            <path d="M7.752 5.439l10.508 6.13a.5.5 0 0 1 0 .863l-10.508 6.13A.5.5 0 0 1 7 18.128V5.871a.5.5 0 0 1 .752-.432z" />
+        <div id="audioPlayPauseButton" class="pb-px text-var-color-secondary hover:text-var-color select-none cursor-pointer">
+          <svg id="audioPlayIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.5">
+          <path d="M9 8.482v7.036L15.03 12 9 8.482zM7.752 5.44l10.508 6.13a.5.5 0 0 1 0 .863l-10.508 6.13A.5.5 0 0 1 7 18.128V5.871a.5.5 0 0 1 .752-.432z" />
           </svg>
           <svg id="audioPauseIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor">
             <path d="M15 7a1 1 0 0 1 2 0v10a1 1 0 1 1-2 0V7zM7 7a1 1 0 1 1 2 0v10a1 1 0 1 1-2 0V7z" />
           </svg>
         </div>
-        <div id="audioTime" class="ml-2 mr-3.5 text-sm">0:00 / 0:00</div>
-        <div id="audioProgressBar" class="flex flex-1 py-2 cursor-pointer">
-          <div class="flex flex-1 h-1 bg-var-background">
+        <div id="audioTime" class="ml-2 text-sm">0:00 / 0:00</div>
+        <div id="audioProgressBar" class="flex flex-1 mx-3.5 py-2 cursor-pointer">
+          <div class="flex flex-1 h-1 bg-var-background-tertiary">
             <div id="audioProgress" class="bg-var-accent"></div>
           </div>
-        </div
+        </div>
+        <div class="relative">
+          <div class="audio-volume-button text-var-color-secondary hover:text-var-color select-none cursor-pointer">
+            <svg id="audioPlayIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="0.5">
+              <path d="M13 7.22L9.603 10H6v4h3.603L13 16.78V7.22zM8.889 16H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h3.889l5.294-4.332a.5.5 0 0 1 .817.387v15.89a.5.5 0 0 1-.817.387L8.89 16zm9.974.591l-1.422-1.422A3.993 3.993 0 0 0 19 12c0-1.43-.75-2.685-1.88-3.392l1.439-1.439A5.991 5.991 0 0 1 21 12c0 1.842-.83 3.49-2.137 4.591z" />
+            </svg>
+          </div>
+          <div class="audio-volume-menu hidden">
+            <div class="absolute top-12 right-4 bg-var-accent px-2 py-8">
+            </div>
+          </div>
+        </div>
       </div>
     `;
   }
-}
-
-for (const container of document.getElementsByClassName('audio-container')) {
-  new AudioPlayer(container);
 }

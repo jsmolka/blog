@@ -26,6 +26,7 @@ module.exports = {
         'color-tertiary': 'var(--color-tertiary)',
         'background': 'var(--background)',
         'background-secondary': 'var(--background-secondary)',
+        'background-tertiary': 'var(--background-tertiary)',
         'header': 'var(--header)',
         'header-secondary': 'var(--header-secondary)',
         'border': 'var(--border)',

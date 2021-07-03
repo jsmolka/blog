@@ -1,19 +1,21 @@
-const menu = document.getElementById('menu');
-const menuButton = document.getElementById('menuButton');
+export default function initMenu(menu, button) {
+  if (!(menu && button)) {
+    return;
+  }
 
-if (menu && menuButton) {
-  const hide = () => {
+  window.addEventListener('click', () => {
     menu.classList.add('hidden');
-  };
+  });
 
-  window.addEventListener("click", hide);
-  window.addEventListener('resize', hide);
+  window.addEventListener('resize', () => {
+    menu.classList.add('hidden');
+  });
 
   menu.addEventListener('click', event => {
     event.stopPropagation();
   });
 
-  menuButton.addEventListener("click", event => {
+  button.addEventListener('click', event => {
     event.stopPropagation();
     menu.classList.toggle("hidden");
   });
