@@ -6,8 +6,8 @@ type: blank
 ---
 <div class="content w-full flex flex-col items-center justify-center max-w-screen-xl m-auto px-4 py-10 md:py-24">
   <canvas id="canvas" class="w-full select-none"></canvas>
-  <input id="inputGba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
-  <input id="inputSav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
+  <input id="eggvance-gba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
+  <input id="eggvance-sav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
   <div class="flex mt-6">
     <div class="mr-2">
       <button onclick="inputGba.click()">Load rom</button>
@@ -19,10 +19,10 @@ type: blank
       <button onclick="Module.loadDemo(this)">Load demo</button>
     </div>
     <div class="ml-2">
-      <button id="controlsButton">Show controls</button>
+      <button id="eggvance-controls-button">Show controls</button>
     </div>
   </div>
-  <div id="controlsTable" class="w-full max-w-screen-md mt-6 hidden">
+  <div id="eggvance-controls-table" class="w-full max-w-screen-md mt-6 hidden">
   {{<markdown>}}
   | Emulator            | Keyboard | Controller |
   |:--------------------|:---------|:-----------|
@@ -43,8 +43,8 @@ type: blank
 </div>
 
 <script type="text/javascript">
-  const inputGba = document.getElementById('inputGba');
-  const inputSav = document.getElementById('inputSav');
+  const inputGba = document.getElementById('eggvance-gba');
+  const inputSav = document.getElementById('eggvabce-sav');
 
   class FileSystem {
     constructor() {
@@ -122,8 +122,8 @@ type: blank
 
   window.onload = () => {
     const controls = {
-      table: document.getElementById('controlsTable'),
-      button: document.getElementById('controlsButton')
+      table: document.getElementById('eggvance-controls-table'),
+      button: document.getElementById('eggvance-controls-button')
     };
 
     controls.button.addEventListener('click', () => {

@@ -1,5 +1,117 @@
 [
     {
+        "date": "2021-06-29T17:11:31Z",
+        "type": "Ride",
+        "distance": 80214.8,
+        "time": 9203,
+        "elevation": 276.1
+    },
+    {
+        "date": "2021-06-26T05:30:02Z",
+        "type": "Ride",
+        "distance": 180436.0,
+        "time": 21598,
+        "elevation": 332.1
+    },
+    {
+        "date": "2021-06-22T14:49:30Z",
+        "type": "Ride",
+        "distance": 85315.4,
+        "time": 9565,
+        "elevation": 275.5
+    },
+    {
+        "date": "2021-06-20T05:18:01Z",
+        "type": "Ride",
+        "distance": 81194.2,
+        "time": 9731,
+        "elevation": 301.4
+    },
+    {
+        "date": "2021-06-19T06:18:36Z",
+        "type": "Ride",
+        "distance": 92663.8,
+        "time": 10631,
+        "elevation": 324.5
+    },
+    {
+        "date": "2021-06-17T17:14:48Z",
+        "type": "Ride",
+        "distance": 44564.9,
+        "time": 5069,
+        "elevation": 125.8
+    },
+    {
+        "date": "2021-06-16T15:03:27Z",
+        "type": "Ride",
+        "distance": 77750.1,
+        "time": 9169,
+        "elevation": 268.2
+    },
+    {
+        "date": "2021-06-14T15:04:18Z",
+        "type": "Ride",
+        "distance": 105023.0,
+        "time": 12595,
+        "elevation": 370.6
+    },
+    {
+        "date": "2021-06-13T08:25:10Z",
+        "type": "Ride",
+        "distance": 53370.7,
+        "time": 6557,
+        "elevation": 412.8
+    },
+    {
+        "date": "2021-06-11T15:02:10Z",
+        "type": "Ride",
+        "distance": 104993.0,
+        "time": 12199,
+        "elevation": 369.5
+    },
+    {
+        "date": "2021-06-09T14:49:13Z",
+        "type": "Ride",
+        "distance": 104961.0,
+        "time": 12287,
+        "elevation": 369.3
+    },
+    {
+        "date": "2021-06-07T14:48:13Z",
+        "type": "Ride",
+        "distance": 104706.0,
+        "time": 12150,
+        "elevation": 369.1
+    },
+    {
+        "date": "2021-06-06T17:15:52Z",
+        "type": "Ride",
+        "distance": 60784.4,
+        "time": 6531,
+        "elevation": 209.2
+    },
+    {
+        "date": "2021-06-04T20:10:00Z",
+        "type": "Ride",
+        "distance": 48306.3,
+        "time": 5828,
+        "elevation": 136.5
+    },
+    {
+        "date": "2021-06-03T14:57:16Z",
+        "type": "Ride",
+        "distance": 106740.0,
+        "time": 12618,
+        "elevation": 370.6
+    },
+    {
+        "date": "2021-06-01T14:50:22Z",
+        "type": "Ride",
+        "distance": 103952.0,
+        "time": 12015,
+        "elevation": 359.8
+    },
+    {
         "date": "2021-05-31T14:12:36Z",
         "type": "Ride",
         "distance": 64075.3,

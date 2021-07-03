@@ -311,7 +311,7 @@ async function init() {
   const stats = new Statistics();
   await stats.init();
 
-  document.getElementById('groupDayButton').onclick = () => {
+  document.getElementById('cycling-group-day').onclick = () => {
     stats.update(
       activities => activities.groupByDay(),
       activity => activity.titleDay,
@@ -319,7 +319,7 @@ async function init() {
     );
   };
 
-  document.getElementById('groupWeekButton').onclick = () => {
+  document.getElementById('cycling-group-week').onclick = () => {
     stats.update(
       activities => activities.groupByWeek(),
       activity => activity.titleWeek,
@@ -327,7 +327,7 @@ async function init() {
     );
   };
 
-  document.getElementById('groupMonthButton').onclick = () => {
+  document.getElementById('cycling-group-month').onclick = () => {
     stats.update(
       activities => activities.groupByMonth(),
       activity => activity.titleMonth,

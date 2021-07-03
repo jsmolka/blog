@@ -4,6 +4,8 @@ button, .button {
   @apply px-3;
   @apply py-2;
   @apply bg-var-background-secondary;
+  @apply rounded-sm;
+  @apply shadow-sm;
   @apply no-underline;
   @apply cursor-pointer;
 

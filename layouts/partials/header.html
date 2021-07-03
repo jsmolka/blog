@@ -14,21 +14,21 @@
         {{ end }}
       {{ end }}
       <div class="h-6 mx-4 border-r"></div>
-      <button id="themeButtonDesktop" class="button-none h-full px-4 hover:alpha">
+      <button class="theme-button button-none h-full px-4 hover:alpha">
         {{ partial "icon/theme" 24 }}
       </button>
     </div>
     <!-- Mobile -->
     <div class="flex sm:hidden h-full">
-      <button id="themeButtonMobile" class="button-none h-full px-4 hover:alpha">
+      <button class="theme-button button-none h-full px-4 hover:alpha">
         {{ partial "icon/theme" 24 }}
       </button>
       <div class="relative">
-        <button id="menuButton" class="button-none h-full px-4 hover:alpha">
-          {{ partial "icon/hamburger" 24 }}
+        <button class="menu-button button-none h-full px-4 hover:alpha">
+          {{ partial "icon/menu" 24 }}
         </button>
         <!-- Menu -->
-        <div id="menu" class="hidden">
+        <div class="menu hidden">
           {{ if len $.Site.Menus }}
             <div class="absolute top-12 right-4 flex flex-col p-1 shadow-menu z-50 bg-var-header dark:bg-var-header-secondary hover:alpha">
               {{ range $.Site.Menus.main }}
