@@ -1,5 +1,41 @@
+import EventHandler from "./eventHandler";
+
 // TODO: save volume in localestorage
 // TODO: mobile can only mute / unmute
+
+class BarEventHandler {
+  constructor(bar) {
+    this.onDown = event => {};
+    this.onMove = event => {};
+    this.onUp = event => {};
+
+    new EventHandler(bar).onDown(event => {
+      if (event.button === 2) {
+        return;
+      }
+
+      window.document.body.classList.add('select-none');
+      window.document.body.classList.add('cursor-pointer');
+
+      this.onDown(event);
+
+      const handler = new EventHandler(window);
+
+      handler.onMove(event => {
+        this.onMove(event);
+      });
+
+      handler.onUp(event => {
+        handler.offAll();
+
+        window.document.body.classList.remove('select-none');
+        window.document.body.classList.remove('cursor-pointer');
+
+        this.onUp(event);
+      })
+    });
+  }
+}
 
 export default class AudioPlayer {
   static instances = [];
@@ -13,92 +49,130 @@ export default class AudioPlayer {
     this.progress = container.querySelector('#audioProgress');
     this.progressBar = container.querySelector('#audioProgressBar');
     this.playPauseButton = container.querySelector('#audioPlayPauseButton');
+    this.volumeButton = container.querySelector('.audio-volume-button');
+    this.volume = container.querySelector('.audio-volume');
     this.volumeBar = container.querySelector('.audio-volume-bar');
 
-    // NO EARRAPE IN DEV
     this.audio.volume = 0.1;
-
-    this.initEvents();
+    this.audio.addEventListener('loadedmetadata', () => {
+      this.initEvents();
+      this.updateVolume();
+      this.updateTime();
+    });
 
     AudioPlayer.instances.push(this);
   }
 
-  get isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+  get isVolumeAdjustable() {
+    const volume = this.audio.volume;
+    const volumeTest = volume < 0.5 ? (volume + 0.01) : (volume - 0.01);
+
+    this.audio.volume = volumeTest;
+    const adjustable = this.audio.volume === volumeTest;
+    this.audio.volume = volume;
+
+    return adjustable;
   }
 
   calcRelativePosition(event, element) {
-    return ((event.pageX ?? event?.touches[0]?.pageX ?? 0) - element.offsetLeft) / element.offsetWidth;
+    return Math.min(1, Math.max(0, ((event.pageX ?? event?.touches[0]?.pageX ?? 0) - element.offsetLeft) / element.offsetWidth));
   }
 
   initEvents() {
-    // TODO: enabled interactions after this, call initEvents in here?
-    this.audio.addEventListener('loadedmetadata', () => {
-      this.updateVolume();
-      this.updateTime();
-    });
-    this.audio.addEventListener('play', () => this.playing = true);
-    this.audio.addEventListener('pause', () => this.playing = false);
-    this.audio.addEventListener('ended', () => this.playing = false);
+    this.audio.addEventListener('play', this.updatePlayPause.bind(this));
+    this.audio.addEventListener('pause', this.updatePlayPause.bind(this));
+    this.audio.addEventListener('ended', this.updatePlayPause.bind(this));
     this.audio.addEventListener('timeupdate', () => {
       this.updateProgress();
       this.updateTime();
     });
 
-    const start = this.isTouchDevice ? 'touchstart' : 'mousedown';
-    const move = this.isTouchDevice ? 'touchmove' : 'mousemove';
-    const end = this.isTouchDevice ? 'touchend' : 'mouseup';
+    this.playPauseButton.addEventListener('click', () => this.toggle());
 
-    this.progressBar.addEventListener(start, event => {
-      const wasPlaying = this.playing;
+    this.initProgressEvents();
+    this.initVolumeEvents();
+  }
 
-      // Todo: don't pause on click?
-      this.pause();
+  initProgressEvents() {
+    const handler = new BarEventHandler(this.progressBar);
 
-      const update = event => {
-        this.audio.currentTime = this.calcRelativePosition(event, this.progressBar) * this.audio.duration;
+    const setCurrentTime = event => {
+      this.audio.currentTime = this.calcRelativePosition(event, this.progressBar) * this.audio.duration;
+    };
+
+    let wasPaused = false;
+
+    handler.onDown = event => {
+      wasPaused = this.audio.paused;
+      if (!wasPaused) {
+        this.pause()
       }
+      setCurrentTime(event);
+    };
 
-      update(event);
+    handler.onMove = event => {
+      setCurrentTime(event);
+    }
 
-      const finish = () => {
-        if (wasPlaying) {
-          this.play();
-        }
+    handler.onUp = event => {
+      setCurrentTime(event);
+      if (!wasPaused) {
+        this.play();
+      }
+    }
+  }
 
-        window.document.body.classList.remove('select-none');
-        window.document.body.classList.remove('cursor-pointer');
-        window.removeEventListener(move, update);
-        window.removeEventListener(end, update);
-        window.removeEventListener(end, finish);
+  initVolumeEvents() {
+    if (this.isVolumeAdjustable) {
+      let volumeHovered = false;
+      let volumeGrabbed = false;
+
+      const updateLayout = () => {
+        const show = volumeHovered || volumeGrabbed;
       };
 
-      window.document.body.classList.add('select-none');
-      window.document.body.classList.add('cursor-pointer');
-      window.addEventListener(move, update);
-      window.addEventListener(end, update);
-      window.addEventListener(end, finish);
-    });
+      this.volumeButton.addEventListener('mouseenter', () => {
+        volumeHovered = true;
+        updateLayout();
+      });
 
-    this.playPauseButton.addEventListener('click', () => this.toggle());
+      this.volumeButton.addEventListener('mouseleave', () => {
+        volumeHovered = false;
+        updateLayout();
+      });
+
+      const handler = new BarEventHandler(this.volumeBar);
+
+      const setVolume = event => {
+        this.audio.volume = this.calcRelativePosition(event, this.volumeBar);
+        this.updateVolume();
+      };
+
+      handler.onDown = setVolume.bind(this);
+      handler.onMove = setVolume.bind(this);
+      handler.onUp = setVolume.bind(this);
+    } else {
+      // Todo: update icon
+      this.volumeButton.addEventListener('click', () => this.audio.muted = !this.audio.muted);
+    }
   }
 
   play() {
     for (const instance of AudioPlayer.instances) {
       instance.pause();
     }
-    this.audio.play();
+    return this.audio.play();
   }
 
   pause() {
-    this.audio.pause();
+    return this.audio.pause();
   }
 
   toggle() {
-    if (this.playing) {
-      this.pause();
+    if (this.audio.paused) {
+      return this.play();
     } else {
-      this.play();
+      return this.pause();
     }
   }
 
@@ -112,7 +186,7 @@ export default class AudioPlayer {
   }
 
   updateVolume() {
-    this.volumeBar.style.width = 100 * this.audio.volume + "%";
+    this.volume.style.width = 100 * this.audio.volume + "%";
   }
 
   updateProgress() {
@@ -123,21 +197,12 @@ export default class AudioPlayer {
     this.time.innerHTML = `${AudioPlayer.formatTime(this.audio.currentTime)} / ${AudioPlayer.formatTime(this.audio.duration)}`;
   }
 
-  updatePlayPauseIcon() {
+  updatePlayPause() {
     const playIcon = this.container.querySelector('#audioPlayIcon');
     const pauseIcon = this.container.querySelector('#audioPauseIcon');
 
-    playIcon.classList.toggle('hidden', this.playing);
-    pauseIcon.classList.toggle('hidden', !this.playing);
-  }
-
-  get playing() {
-    return this._playing ?? false;
-  }
-
-  set playing(value) {
-    this._playing = value;
-    this.updatePlayPauseIcon();
+    playIcon.classList.toggle('hidden', !this.audio.paused);
+    pauseIcon.classList.toggle('hidden', this.audio.paused);
   }
 
   static get template() {
@@ -157,10 +222,10 @@ export default class AudioPlayer {
             <div id="audioProgress" class="bg-var-accent"></div>
           </div>
         </div>
-        <div class="group flex items-center">
-          <div class="hidden group-hover:flex flex-1 mx-3.5 py-2 cursor-pointer w-20">
+        <div class="flex items-center">
+          <div class="audio-volume-bar flex mx-3.5 py-2 cursor-pointer w-20">
             <div class="flex flex-1 h-1 bg-var-background-tertiary">
-              <div class="audio-volume-bar bg-var-accent"></div>
+              <div class="audio-volume bg-var-accent"></div>
             </div>
           </div>
           <div class="audio-volume-button text-var-color-secondary group-hover:text-var-color select-none cursor-pointer">
