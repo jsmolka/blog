@@ -4,25 +4,25 @@ summary: "WebAssembly port of the eggvance GBA emulator."
 date: 2020-04-12
 type: blank
 ---
-<div class="content w-full flex flex-col items-center justify-center max-w-screen-xl m-auto px-4 py-10 md:py-24">
+<div v-scope="{ controls: false }" class="content w-full flex flex-col items-center justify-center max-w-screen-xl m-auto px-4 py-10 md:py-24">
   <canvas id="canvas" class="w-full select-none"></canvas>
   <input id="eggvance-gba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
   <input id="eggvance-sav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
   <div class="flex mt-6">
     <div class="mr-2">
-      <button onclick="inputGba.click()">Load rom</button>
+      <button onclick="gba.click()">Load rom</button>
     </div>
     <div class="mx-2">
-      <button onclick="inputSav.click()">Load save</button>
+      <button onclick="sav.click()">Load save</button>
     </div>
     <div class="mx-2">
       <button onclick="Module.loadDemo(this)">Load demo</button>
     </div>
     <div class="ml-2">
-      <button id="eggvance-controls-button">Show controls</button>
+      <button @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
     </div>
   </div>
-  <div id="eggvance-controls-table" class="w-full max-w-screen-md mt-6 hidden">
+  <div v-cloak v-show="controls" class="w-full max-w-screen-md mt-6">
   {{<markdown>}}
   | Emulator            | Keyboard | Controller |
   |:--------------------|:---------|:-----------|
@@ -43,8 +43,8 @@ type: blank
 </div>
 
 <script type="text/javascript">
-  const inputGba = document.getElementById('eggvance-gba');
-  const inputSav = document.getElementById('eggvabce-sav');
+  const gba = document.getElementById('eggvance-gba');
+  const sav = document.getElementById('eggvabce-sav');
 
   class FileSystem {
     constructor() {
@@ -92,7 +92,7 @@ type: blank
     },
 
     async loadGba() {
-      const data = await this.readFile(inputGba);
+      const data = await this.readFile(gba);
       this.eggvanceLoadGba(this.fs.write(data, 'gba'));
     },
 
@@ -107,7 +107,7 @@ type: blank
     },
 
     async loadSav() {
-      const data = await this.readFile(inputSav);
+      const data = await this.readFile(sav);
       this.eggvanceLoadSav(this.fs.write(data, 'sav'));
     },
 
@@ -121,16 +121,6 @@ type: blank
   };
 
   window.onload = () => {
-    const controls = {
-      table: document.getElementById('eggvance-controls-table'),
-      button: document.getElementById('eggvance-controls-button')
-    };
-
-    controls.button.addEventListener('click', () => {
-      const hidden = controls.table.classList.toggle('hidden');
-      controls.button.innerText = hidden ? 'Show controls' : 'Hide controls';
-    });
-
     theme.onChange = dark => {
       Module.updateBackground(dark)
     };

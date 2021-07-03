@@ -73,10 +73,10 @@ const config = {
             }
 
             return [
-              `Distance: ${activity.displayDistance}`,
-              `Moving time: ${activity.displayTime}`,
-              `Average speed: ${activity.displayAverage}`,
-              `Elevation gain: ${activity.displayElevation}`
+              `Distance: ${activity.labelDistance}`,
+              `Moving time: ${activity.labelTime}`,
+              `Average speed: ${activity.labelAverage}`,
+              `Elevation gain: ${activity.labelElevation}`
             ];
           }
         }
@@ -97,7 +97,7 @@ class Activity {
     return Math.round(value * 10) / 10;
   }
 
-  get displayTime() {
+  get labelTime() {
     // Workaround to show more than 23 hours
     const basis = moment().startOf('day').add(this.time, 'seconds');
     const hours = Math.trunc(this.time / 3600);
@@ -105,29 +105,29 @@ class Activity {
     return basis.format(`${hours}:mm:ss`);
   }
 
-  get displayDistance() {
+  get labelDistance() {
     return `${this.round(this.distance)} km`;
   }
 
-  get displayAverage() {
+  get labelAverage() {
     const hours = this.time / 3600;
 
     return `${this.round(this.distance / hours)} km/h`;
   }
 
-  get displayElevation() {
+  get labelElevation() {
     return `${this.round(this.elevation)} m`;
   }
 
-  get titleDay() {
+  get labelDay() {
     return this.date.format('MMM D, H:mm');
   }
 
-  get titleWeek() {
+  get labelWeek() {
     return `${this.date.startOf('week').format('MMM D')} - ${this.date.endOf('week').format('MMM D')}`;
   }
 
-  get titleMonth() {
+  get labelMonth() {
     return this.date.format('MMMM');
   }
 }
@@ -226,7 +226,7 @@ class Statistics {
 
     // Cached update values
     this.groupCallback = activities => activities.groupByWeek();
-    this.titleCallback = activity => activity.titleWeek;
+    this.titleCallback = activity => activity.labelWeek;
     this.unit = 'week';
   }
 
@@ -302,8 +302,32 @@ class Statistics {
     if (this.chart) {
       this.chart.update(this.config);
     } else {
-      this.chart = new Chart(document.getElementById('chart').getContext('2d'), this.config);
+      this.chart = new Chart(document.getElementById('cycling-chart').getContext('2d'), this.config);
     }
+  }
+
+  groupByDay() {
+    this.update(
+      activities => activities.groupByDay(),
+      activity => activity.labelDay,
+      'week'
+    );
+  }
+
+  groupByWeek() {
+    this.update(
+      activities => activities.groupByWeek(),
+      activity => activity.labelWeek,
+      'week'
+    );
+  }
+
+  groupByMonth() {
+    this.update(
+      activities => activities.groupByMonth(),
+      activity => activity.labelMonth,
+      'month'
+    );
   }
 }
 
@@ -311,33 +335,11 @@ async function init() {
   const stats = new Statistics();
   await stats.init();
 
-  document.getElementById('cycling-group-day').onclick = () => {
-    stats.update(
-      activities => activities.groupByDay(),
-      activity => activity.titleDay,
-      'week'
-    );
-  };
-
-  document.getElementById('cycling-group-week').onclick = () => {
-    stats.update(
-      activities => activities.groupByWeek(),
-      activity => activity.titleWeek,
-      'week'
-    );
-  };
-
-  document.getElementById('cycling-group-month').onclick = () => {
-    stats.update(
-      activities => activities.groupByMonth(),
-      activity => activity.titleMonth,
-      'month'
-    );
-  };
-
   window.theme.onChange = () => {
     stats.update();
   };
+
+  window.stats = stats;
 }
 
 init();
