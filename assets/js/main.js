@@ -8,9 +8,8 @@ const menuButton = document.getElementById('menuButton');
 
 initMenu(menu, menuButton);
 
-// Todo: .audio-player instead?
-for (const container of document.querySelectorAll('.audio-container')) {
-  new AudioPlayer(container);
+for (const player of document.querySelectorAll('.audio-player')) {
+  new AudioPlayer(player);
 }
 
 window.theme = new Theme();
