@@ -2,21 +2,21 @@
 title: "WebAssembly Port"
 summary: "WebAssembly port of the eggvance GBA emulator."
 date: 2020-04-12
-type: blank
+type: eggvance
 ---
 <div v-scope="{ controls: false }" class="content w-full flex flex-col items-center justify-center max-w-screen-xl m-auto px-4 py-10 md:py-24">
   <canvas id="canvas" class="w-full select-none"></canvas>
-  <input id="eggvance-gba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba()">
-  <input id="eggvance-sav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav()">
+  <input id="eggvance-gba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba(this)">
+  <input id="eggvance-sav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav(this)">
   <div class="flex mt-6">
     <div class="mr-2">
-      <button onclick="gba.click()">Load rom</button>
+      <button @click="document.getElementById('eggvance-gba').click()">Load rom</button>
     </div>
     <div class="mx-2">
-      <button onclick="sav.click()">Load save</button>
+      <button @click="document.getElementById('eggvance-sav').click()">Load save</button>
     </div>
     <div class="mx-2">
-      <button onclick="Module.loadDemo(this)">Load demo</button>
+      <button @click="Module.loadDemo($el)">Load demo</button>
     </div>
     <div class="ml-2">
       <button @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
@@ -41,102 +41,4 @@ type: blank
   {{</markdown>}}
   </div>
 </div>
-
-<script type="text/javascript">
-  const gba = document.getElementById('eggvance-gba');
-  const sav = document.getElementById('eggvabce-sav');
-
-  class FileSystem {
-    constructor() {
-      this.id = 0;
-    }
-
-    write(data, ext) {
-      const filename = `data${this.id++}.${ext}`;
-      FS.writeFile(filename, data);
-
-      return filename;
-    }
-  }
-
-  var Module = {
-    fs: new FileSystem(),
-    canvas: document.getElementById('canvas'),
-
-    onRuntimeInitialized() {
-      this.updateBackground(theme.isDark);
-    },
-
-    async readUrl(url) {
-      return new Promise(resolve => {
-        const request = new XMLHttpRequest();
-
-        request.open('GET', url);
-        request.responseType = 'arraybuffer';
-        request.onload = event => {
-          resolve(new Uint8Array(request.response));
-        }
-        request.send();
-      });
-    },
-
-    async readFile(input) {
-      return new Promise(resolve => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          resolve(new Uint8Array(reader.result));
-        }
-        reader.readAsArrayBuffer(input.files[0]);
-        input.value = '';
-      });
-    },
-
-    async loadGba() {
-      const data = await this.readFile(gba);
-      this.eggvanceLoadGba(this.fs.write(data, 'gba'));
-    },
-
-    async loadDemo(button) {
-      button.innerHTML = 'Loading...';
-      try {
-        const data = await this.readUrl('/data/celeste.gba');
-        this.eggvanceLoadGba(this.fs.write(data, 'gba'));
-      } finally {
-        button.innerHTML = 'Load demo';
-      }
-    },
-
-    async loadSav() {
-      const data = await this.readFile(sav);
-      this.eggvanceLoadSav(this.fs.write(data, 'sav'));
-    },
-
-    updateBackground(dark) {
-      this.eggvanceSetBackground(
-        dark
-          ? 0xFF292A2D
-          : 0xFFFFFFFF
-      );
-    }
-  };
-
-  window.onload = () => {
-    theme.onChange = dark => {
-      Module.updateBackground(dark)
-    };
-
-    const canvas = document.getElementById('canvas');
-    const width  = canvas.clientWidth;
-    const height = 2 * width / 3;
-
-    const style = document.createElement('style');
-    style.appendChild(document.createTextNode(`#canvas { width: ${width}px; height: ${height}px }`));
-    document.head.appendChild(style);
-
-    window.onresize = () => {
-      style.remove();
-      canvas.height = 2 * canvas.width / 3;
-    }
-  }
-</script>
 <script src="/data/eggvance.js" async></script>

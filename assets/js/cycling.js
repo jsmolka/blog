@@ -302,7 +302,7 @@ class Statistics {
     if (this.chart) {
       this.chart.update(this.config);
     } else {
-      this.chart = new Chart(document.getElementById('cycling-chart').getContext('2d'), this.config);
+      this.chart = new Chart(document.getElementById('canvas').getContext('2d'), this.config);
     }
   }
 
