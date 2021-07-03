@@ -64,7 +64,7 @@ export default class AudioPlayer {
     this.audio.removeAttribute('controls');
     this.audio.addEventListener('loadedmetadata', () => {
       this.updateTime();
-      this.setVolume(parseFloat(localStorage.getItem('volume') || '0.1'));
+      this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
       this.initEvents();
     });
 
