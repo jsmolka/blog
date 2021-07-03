@@ -1,6 +1,6 @@
 import EventHandler from "./eventHandler";
 
-// TODO: save volume in localestorage
+// TODO: save volume in localestorage, set volume globally
 // TODO: mobile can only mute / unmute
 
 class BarEventHandler {
@@ -49,6 +49,7 @@ export default class AudioPlayer {
     this.progress = container.querySelector('#audioProgress');
     this.progressBar = container.querySelector('#audioProgressBar');
     this.playPauseButton = container.querySelector('#audioPlayPauseButton');
+    this.volumeContainer = container.querySelector('.audio-volume-container');
     this.volumeButton = container.querySelector('.audio-volume-button');
     this.volume = container.querySelector('.audio-volume');
     this.volumeBar = container.querySelector('.audio-volume-bar');
@@ -129,14 +130,16 @@ export default class AudioPlayer {
 
       const updateLayout = () => {
         const show = volumeHovered || volumeGrabbed;
+        this.volumeBar.classList.toggle('w-20', show);
+        this.volumeBar.classList.toggle('w-0', !show);
       };
 
-      this.volumeButton.addEventListener('mouseenter', () => {
+      this.volumeContainer.addEventListener('mouseenter', () => {
         volumeHovered = true;
         updateLayout();
       });
 
-      this.volumeButton.addEventListener('mouseleave', () => {
+      this.volumeContainer.addEventListener('mouseleave', () => {
         volumeHovered = false;
         updateLayout();
       });
@@ -148,9 +151,21 @@ export default class AudioPlayer {
         this.updateVolume();
       };
 
-      handler.onDown = setVolume.bind(this);
-      handler.onMove = setVolume.bind(this);
-      handler.onUp = setVolume.bind(this);
+      handler.onDown = event => {
+        setVolume(event);
+      };
+
+      handler.onMove = event => {
+        setVolume(event);
+        volumeGrabbed = true;
+        updateLayout();
+      };
+
+      handler.onUp = event => {
+        setVolume(event);
+        volumeGrabbed = false;
+        updateLayout();
+      };
     } else {
       // Todo: update icon
       this.volumeButton.addEventListener('click', () => this.audio.muted = !this.audio.muted);
@@ -217,14 +232,14 @@ export default class AudioPlayer {
           </svg>
         </div>
         <div id="audioTime" class="ml-2 text-sm">0:00 / 0:00</div>
-        <div id="audioProgressBar" class="flex flex-1 mx-3.5 py-2 cursor-pointer">
+        <div id="audioProgressBar" class="flex flex-1 ml-3.5 mr-3 py-2 cursor-pointer">
           <div class="flex flex-1 h-1 bg-var-background-tertiary">
             <div id="audioProgress" class="bg-var-accent"></div>
           </div>
         </div>
-        <div class="flex items-center">
-          <div class="audio-volume-bar flex mx-3.5 py-2 cursor-pointer w-20">
-            <div class="flex flex-1 h-1 bg-var-background-tertiary">
+        <div class="audio-volume-container flex items-center">
+          <div class="audio-volume-bar flex py-2 cursor-pointer w-0 transition-width duration-500 ease-in-out">
+            <div class="flex flex-1 h-1 ml-1.5 mr-3 bg-var-background-tertiary">
               <div class="audio-volume bg-var-accent"></div>
             </div>
           </div>
