@@ -1,20 +1,20 @@
 $light-color: rgb(34, 34, 34);
-$light-color-secondary: lighten($light-color, 46.5%);
-$light-color-tertiary: lighten($light-color-secondary, 5%);
+$light-color-secondary: lighten($light-color, 37.5%);
+$light-color-tertiary: lighten($light-color, 50%);
 $light-background: rgb(255, 255, 255);
 $light-background-secondary: darken($light-background, 5%);
-$light-background-tertiary: darken($light-background-secondary, 5%);
+$light-background-tertiary: darken($light-background, 10%);
 $light-header: rgb(250, 250, 250);
 $light-header-secondary: darken($light-header, 2.5%);
 $light-border: rgb(220, 220, 220);
 $light-accent: rgb(110, 186, 247);
 
 $dark-color: rgb(169, 169, 179);
-$dark-color-secondary: darken($dark-color, 20%);
-$dark-color-tertiary: darken($dark-color-secondary, 5%);
+$dark-color-secondary: darken($dark-color, 12.5%);
+$dark-color-tertiary: darken($dark-color, 25%);
 $dark-background: rgb(41, 42, 45);
 $dark-background-secondary: lighten($dark-background, 7.5%);
-$dark-background-tertiary: lighten($dark-background-secondary, 7.5%);
+$dark-background-tertiary: lighten($dark-background, 15%);
 $dark-header: rgb(37, 38, 39);
 $dark-header-secondary: lighten($dark-header, 2.5%);
 $dark-border: rgb(74, 75, 80);
