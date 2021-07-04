@@ -202,7 +202,19 @@ export default class AudioPlayer {
       }
     }
 
-    this.audio.volume = volume;
+    // https://stackoverflow.com/a/846249/7057528
+    const logarithmic = value => {
+      const minp = 0;
+      const maxp = 1;
+      const minl = 1;
+      const maxl = 250;
+      const minv = Math.log(minl);
+      const maxv = Math.log(maxl);
+
+      return (Math.exp(minv + (maxv - minv) / (maxp - minp) * (value - minp)) - minl) / maxl;
+    };
+
+    this.audio.volume = logarithmic(volume);
     this.volume.barValue.style.width = 100 * volume + "%";
     localStorage.setItem('volume', volume.toString());
 
