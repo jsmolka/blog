@@ -1,5 +1,5 @@
 $light-color: rgb(34, 34, 34);
-$light-color-secondary: lighten($light-color, 37.5%);
+$light-color-secondary: lighten($light-color, 47.5%);
 $light-color-tertiary: lighten($light-color, 50%);
 $light-background: rgb(255, 255, 255);
 $light-background-secondary: darken($light-background, 5%);
@@ -10,7 +10,7 @@ $light-border: rgb(220, 220, 220);
 $light-accent: rgb(110, 186, 247);
 
 $dark-color: rgb(169, 169, 179);
-$dark-color-secondary: darken($dark-color, 12.5%);
+$dark-color-secondary: darken($dark-color, 15%);
 $dark-color-tertiary: darken($dark-color, 25%);
 $dark-background: rgb(41, 42, 45);
 $dark-background-secondary: lighten($dark-background, 7.5%);
