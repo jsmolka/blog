@@ -89,6 +89,7 @@
 
       &::marker {
         @apply pr-2;
+
         content: "[" counter(footnote-count)"]";
       }
 
