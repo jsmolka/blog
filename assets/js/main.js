@@ -1,4 +1,3 @@
-import { createApp } from 'petite-vue';
 import AudioPlayer from './audio';
 import initMenu from './menu';
 import Theme from './theme';
@@ -17,5 +16,3 @@ window.theme = new Theme();
 for (const button of document.querySelectorAll('header .theme-button')) {
   button.addEventListener('click', () => window.theme.toggle());
 }
-
-createApp().mount();

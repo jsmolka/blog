@@ -1,6 +1,7 @@
 import moment from 'moment';
 import 'chartjs-adapter-moment';
 import { Chart, LineController, LineElement, PointElement, LinearScale, TimeScale, Filler, Legend, Tooltip } from 'chart.js';
+import { createApp } from 'petite-vue';
 
 Chart.register(LineController, LineElement, LinearScale, PointElement, TimeScale, Filler, Legend, Tooltip);
 Chart.defaults.font.family = '"Roboto", system-ui, apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
@@ -332,6 +333,8 @@ class Statistics {
 }
 
 async function init() {
+  createApp().mount();
+
   const stats = new Statistics();
   await stats.init();
 

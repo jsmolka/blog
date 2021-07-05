@@ -1,3 +1,5 @@
+import { createApp } from 'petite-vue';
+
 class FileSystem {
   constructor() {
     this.id = 0;
@@ -71,6 +73,8 @@ window.Module = {
     );
   }
 };
+
+createApp().mount();
 
 window.onload = () => {
   theme.onChange = dark => {

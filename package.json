@@ -5,10 +5,10 @@
     "highlight": "node scripts/highlight.js"
   },
   "dependencies": {
-    "chart.js": "^3.3.2",
+    "chart.js": "^3.4.1",
     "chartjs-adapter-moment": "^1.0.0",
     "moment": "^2.29.1",
-    "petite-vue": "^0.2.1"
+    "petite-vue": "^0.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

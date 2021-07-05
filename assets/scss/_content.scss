@@ -61,10 +61,10 @@
     @apply p-2;
     @apply border;
 
-    border-color: mix($light-color-tertiary, $light-background, 45%);
+    border-color: mix($light-color, $light-background, 25%);
 
     .dark & {
-      border-color: mix($dark-color-tertiary, $dark-background, 45%);
+      border-color: mix($dark-color, $dark-background, 25%);
     }
   }
 
@@ -80,6 +80,10 @@
     @apply bg-var-header;
     @apply border-l-6;
     @apply border-var-background-tertiary;
+
+    .dark & {
+      @apply border-var-background-secondary;
+    }
   }
 
   @screen sm {
@@ -94,10 +98,10 @@
 
         content: "\201C";
         font-family: Arial, sans-serif;
-        color: darken($light-background-tertiary, 7.5%);
+        color: darken($light-background-tertiary, 5%);
 
         .dark & {
-          color: lighten($dark-background-tertiary, 7.5%);
+          color: lighten($dark-background-secondary, 5%);
         }
       }
     }
