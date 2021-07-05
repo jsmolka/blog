@@ -98,10 +98,10 @@
 
         content: "\201C";
         font-family: Arial, sans-serif;
-        color: darken($light-background-tertiary, 5%);
+        color: darken($light-background-tertiary, 4.5%);
 
         .dark & {
-          color: lighten($dark-background-secondary, 5%);
+          color: lighten($dark-background-secondary, 3.5%);
         }
       }
     }
