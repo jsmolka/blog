@@ -6,6 +6,8 @@ $light-background-secondary: darken($light-background, 5%);
 $light-background-tertiary: darken($light-background, 10%);
 $light-header: rgb(250, 250, 250);
 $light-header-secondary: darken($light-header, 2.5%);
+$light-audio: lighten($light-color, 45%);
+$light-audio-secondary: lighten($light-color, 27.5%);
 $light-border: rgb(220, 220, 220);
 $light-accent: rgb(110, 186, 247);
 
@@ -17,6 +19,8 @@ $dark-background-secondary: lighten($dark-background, 7.5%);
 $dark-background-tertiary: lighten($dark-background, 15%);
 $dark-header: rgb(37, 38, 39);
 $dark-header-secondary: lighten($dark-header, 2.5%);
+$dark-audio: $dark-color-secondary;
+$dark-audio-secondary: $dark-color;
 $dark-border: rgb(74, 75, 80);
 $dark-accent: rgb(72, 168, 245);
 
@@ -29,6 +33,8 @@ $dark-accent: rgb(72, 168, 245);
   --background-tertiary: #{$light-background-tertiary};
   --header: #{$light-header};
   --header-secondary: #{$light-header-secondary};
+  --audio: #{$light-audio};
+  --audio-secondary: #{$light-audio-secondary};
   --border: #{$light-border};
   --accent: #{$light-accent};
 }
@@ -42,6 +48,8 @@ $dark-accent: rgb(72, 168, 245);
   --background-tertiary: #{$dark-background-tertiary};
   --header: #{$dark-header};
   --header-secondary: #{$dark-header-secondary};
+  --audio: #{$dark-audio};
+  --audio-secondary: #{$dark-audio-secondary};
   --border: #{$dark-border};
   --accent: #{$dark-accent};
 }

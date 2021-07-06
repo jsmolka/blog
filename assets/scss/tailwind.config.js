@@ -29,6 +29,8 @@ module.exports = {
         'background-tertiary': 'var(--background-tertiary)',
         'header': 'var(--header)',
         'header-secondary': 'var(--header-secondary)',
+        'audio': 'var(--audio)',
+        'audio-secondary': 'var(--audio-secondary)',
         'border': 'var(--border)',
         'accent': 'var(--accent)'
       },
