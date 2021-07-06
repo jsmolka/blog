@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Params.Language }}" class="{{ $.Site.Params.defaultTheme }}">
+
+<html lang="{{ .Site.Params.Language }}" class="{{ if eq $.Site.Params.defaultTheme "dark" }}dark{{ end }}">
   <head>
     {{ partial "head.html" . }}
     {{ block "head" . }}

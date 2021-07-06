@@ -248,7 +248,7 @@ class Statistics {
   }
 
   update(groupCallback, titleCallback, unit) {
-    // Used passed or cached values
+    // Use passed or cached values
     this.groupCallback = groupCallback || this.groupCallback;
     this.titleCallback = titleCallback || this.titleCallback;
     this.unit = unit || this.unit;
