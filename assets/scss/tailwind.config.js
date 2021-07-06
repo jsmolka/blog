@@ -60,6 +60,7 @@ module.exports = {
   purge: {
     enabled: process.env.HUGO_ENVIRONMENT === 'production',
     content: [
+      root + 'assets/**/*.js',
       root + 'assets/**/*.scss',
       root + 'content/**/*.md',
       root + 'content/**/*.html',
