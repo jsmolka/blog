@@ -32,7 +32,7 @@
 
   ol, ul {
     @apply my-4;
-    @apply ml-8;
+    @apply ml-6;
 
     li {
       @apply mb-1;
@@ -40,6 +40,12 @@
       &:last-child {
         @apply mb-0;
       }
+    }
+  }
+
+  @screen sm {
+    ol, ul {
+      @apply ml-9;
     }
   }
 
