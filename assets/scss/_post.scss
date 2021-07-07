@@ -32,7 +32,7 @@
 
   ol, ul {
     @apply my-4;
-    @apply ml-6;
+    @apply ml-5;
 
     li {
       @apply mb-1;
@@ -45,7 +45,7 @@
 
   @screen sm {
     ol, ul {
-      @apply ml-9;
+      @apply ml-10;
     }
   }
 
