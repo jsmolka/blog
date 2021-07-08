@@ -3,7 +3,7 @@ title: "Cycling"
 summary: "Cycling stats exported from Strava."
 type: cycling
 ---
-<div class="w-full flex flex-col items-center justify-center max-w-screen-xl m-auto px-4 py-10 md:py-24">
+<div class="wrapper-offset w-full flex flex-col items-center justify-center max-w-screen-xl">
   <canvas id="canvas" class="w-full select-none"></canvas>
   <div class="flex mt-6">
     <button class="mr-2" @click="window.stats && window.stats.groupByDay()">Group by day</button>

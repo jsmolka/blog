@@ -4,7 +4,7 @@ summary: "WebAssembly port of the eggvance GBA emulator."
 date: 2020-04-12
 type: eggvance
 ---
-<div v-scope="{ controls: false }" class="w-full flex flex-col items-center justify-center max-w-screen-xl m-auto px-4 py-10 md:py-24">
+<div v-scope="{ controls: false }" class="wrapper-offset w-full flex flex-col items-center justify-center max-w-screen-xl">
   <canvas id="canvas" class="w-full select-none"></canvas>
   <input ref="inputGba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba(this)">
   <input ref="inputSav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav(this)">

@@ -51,17 +51,22 @@
   width: fit-content;
 }
 
-.wrapper {
-  @apply max-w-screen-sm;
+.wrapper-offset {
   @apply m-auto;
   @apply px-4;
   @apply py-10;
 
-  @screen md {
-    @apply max-w-screen-md;
-  }
-
   @screen sm {
     @apply py-24;
+  }
+}
+
+.wrapper {
+  @extend .wrapper-offset;
+
+  @apply max-w-screen-sm;
+
+  @screen lg {
+    @apply max-w-screen-md;
   }
 }
