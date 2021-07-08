@@ -195,13 +195,7 @@ export default class AudioPlayer {
     this.audio.pause();
   }
 
-  setVolume(volume, recursive = true) {
-    if (recursive) {
-      for (const instance of AudioPlayer.instances) {
-        instance.setVolume(volume, false);
-      }
-    }
-
+  setVolume(volume) {
     // https://stackoverflow.com/a/846249/7057528
     const logarithmic = value => {
       const minp = 0;
