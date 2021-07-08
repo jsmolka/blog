@@ -1,27 +1,30 @@
 @import "variables";
 
 .content {
-  h1, h2 {
-    @apply pb-3;
-  }
-
-  h3, h4, h5, h6 {
-    @apply pb-2;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     @apply relative;
+    @apply w-content;
+    @apply pb-3;
     @apply font-bold;
 
     &:after {
       @apply absolute;
       @apply bottom-0;
       @apply left-0;
-      @apply w-16;
+      @apply w-10;
+      @apply max-w-full;
       @apply bg-var-accent;
 
       height: 3px;
       content: "";
+    }
+  }
+
+  @screen sm {
+    h1, h2, h3, h4, h5, h6 {
+      &:after {
+        @apply w-16;
+      }
     }
   }
 
