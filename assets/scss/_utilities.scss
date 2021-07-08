@@ -50,3 +50,18 @@
 .w-content {
   width: fit-content;
 }
+
+.wrapper {
+  @apply max-w-screen-sm;
+  @apply m-auto;
+  @apply px-4;
+  @apply py-10;
+
+  @screen md {
+    @apply max-w-screen-md;
+  }
+
+  @screen sm {
+    @apply py-24;
+  }
+}
