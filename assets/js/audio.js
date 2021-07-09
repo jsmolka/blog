@@ -78,20 +78,22 @@ export default class AudioPlayer {
   }
 
   get isMobileDevice() {
-    // Older iOS devices
-    const isVolumeAdjustable = () => {
-      const volume = this.audio.volume;
-      const volumeTest = volume < 0.5 ? (volume + 0.01) : (volume - 0.01);
-
-      this.audio.volume = volumeTest;
-      const result = this.audio.volume === volumeTest;
-      this.audio.volume = volume;
-
-      return result;
+    // Seems to "work" up until iOS 13
+    // https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html
+    const isIosAudioQuirk = () => {
+      const audio = new Audio();
+      audio.volume = 0.5;
+      return audio.volume === 1;
     };
 
+    // Apple specific, works on iPad with iOS 14.6
     // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
-    return /Mobi|Android/i.test(navigator.userAgent) || typeof navigator.standalone === 'boolean' || !isVolumeAdjustable();
+    const isIosStandalone = () => {
+      return typeof navigator.standalone === 'boolean';
+    };
+
+    // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
+    return /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) || isIosStandalone() || isIosAudioQuirk();
   }
 
   relativePosition(event, element) {
