@@ -18,9 +18,7 @@ class BarEventHandler {
 
       const handler = new EventHandler(window);
 
-      handler.onMove(event => {
-        this.onMove(event);
-      });
+      handler.onMove(this.onMove.bind(this));
 
       handler.onUp(event => {
         handler.offAll();
@@ -83,7 +81,21 @@ export default class AudioPlayer {
   }
 
   relativePosition(event, element) {
-    return Math.min(1, Math.max(0, ((event.pageX ?? event?.touches[0]?.pageX ?? 0) - element.offsetLeft) / element.offsetWidth));
+    const getPageX = event => {
+      if (event instanceof MouseEvent) {
+        return event.pageX;
+      } else if (event instanceof TouchEvent) {
+        if (event.touches.length > 0) {
+          return event.touches[0].pageX;
+        } else if (event.targetTouches.length > 0) {
+          return event.targetTouches[0].pageX;
+        } else if (event.changedTouches.length > 0) {
+          return event.changedTouches[event.changedTouches.length - 1].pageX;
+        }
+      }
+      return 0;
+    };
+    return Math.min(1, Math.max(0, (getPageX(event) - element.offsetLeft) / element.offsetWidth));
   }
 
   initEvents() {
