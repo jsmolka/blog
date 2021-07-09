@@ -61,8 +61,13 @@ export default class AudioPlayer {
     this.audio = container.getElementsByTagName('audio')[0];
     this.audio.removeAttribute('controls');
     this.audio.addEventListener('loadedmetadata', () => {
+      if (this.isMobileDevice || !this.isVolumeAdjustable) {
+        this.setVolume(1);
+      } else {
+        this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
+      }
+
       this.updateTime();
-      this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
       this.initEvents();
     });
 
@@ -78,6 +83,10 @@ export default class AudioPlayer {
     this.audio.volume = volume;
 
     return adjustable;
+  }
+
+  get isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
   }
 
   relativePosition(event, element) {
@@ -149,7 +158,7 @@ export default class AudioPlayer {
   }
 
   initVolumeEvents() {
-    if (this.isVolumeAdjustable) {
+    if (!this.isMobileDevice && this.isVolumeAdjustable) {
       let hovered = false;
       let grabbed = false;
 
