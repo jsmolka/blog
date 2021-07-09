@@ -1,4 +1,5 @@
 import EventHandler from "./eventHandler";
+import { clamp } from "./utils";
 
 class BarEventHandler {
   constructor(bar) {
@@ -18,7 +19,9 @@ class BarEventHandler {
 
       const handler = new EventHandler(window);
 
-      handler.onMove(this.onMove.bind(this));
+      handler.onMove(event => {
+        this.onMove(event);
+      });
 
       handler.onUp(event => {
         handler.offAll();
@@ -60,19 +63,11 @@ export default class AudioPlayer {
 
     this.audio = container.getElementsByTagName('audio')[0];
     this.audio.removeAttribute('controls');
-
-    const isVolumeAdjustable = this.isVolumeAdjustable;
-    this.progress.bar.classList.toggle('mr-3', isVolumeAdjustable);
-    this.progress.bar.classList.toggle('mr-2', !isVolumeAdjustable);
-    this.volume.container.classList.toggle('hidden', !isVolumeAdjustable);
-
     this.audio.addEventListener('loadedmetadata', () => {
-      if (isVolumeAdjustable) {
-        if (this.isMobileDevice) {
-          this.setVolume(1);
-        } else {
-          this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
-        }
+      if (this.isMobileDevice) {
+        this.setVolume(1);
+      } else {
+        this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
       }
 
       this.updateTime();
@@ -82,19 +77,21 @@ export default class AudioPlayer {
     AudioPlayer.instances.push(this);
   }
 
-  get isVolumeAdjustable() {
-    const volume = this.audio.volume;
-    const volumeTest = volume < 0.5 ? (volume + 0.01) : (volume - 0.01);
-
-    this.audio.volume = volumeTest;
-    const isVolumeAdjustable = this.audio.volume === volumeTest;
-    this.audio.volume = volume;
-
-    return isVolumeAdjustable;
-  }
-
   get isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
+    // Older iOS devices
+    const isVolumeAdjustable = () => {
+      const volume = this.audio.volume;
+      const volumeTest = volume < 0.5 ? (volume + 0.01) : (volume - 0.01);
+
+      this.audio.volume = volumeTest;
+      const result = this.audio.volume === volumeTest;
+      this.audio.volume = volume;
+
+      return result;
+    };
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
+    return /Mobi|Android/i.test(navigator.userAgent) || typeof navigator.standalone === 'boolean' || !isVolumeAdjustable();
   }
 
   relativePosition(event, element) {
@@ -112,7 +109,7 @@ export default class AudioPlayer {
       }
       return 0;
     };
-    return Math.min(1, Math.max(0, (getPageX(event) - element.offsetLeft) / element.offsetWidth));
+    return clamp((getPageX(event) - element.offsetLeft) / element.offsetWidth, 0, 1);
   }
 
   initEvents() {
@@ -166,16 +163,12 @@ export default class AudioPlayer {
   }
 
   initVolumeEvents() {
-    if (!this.isVolumeAdjustable) {
-      return;
-    }
-
     if (this.isMobileDevice) {
       this.volume.button.addEventListener('click', () => {
         this.audio.muted = !this.audio.muted;
         this.updateVolumeIcon();
       });
-    } else if (this.isVolumeAdjustable) {
+    } else {
       let hovered = false;
       let grabbed = false;
 
@@ -229,19 +222,9 @@ export default class AudioPlayer {
   }
 
   setVolume(volume) {
-    // https://stackoverflow.com/a/846249/7057528
-    const logarithmic = value => {
-      const minp = 0;
-      const maxp = 1;
-      const minl = 1;
-      const maxl = 250;
-      const minv = Math.log(minl);
-      const maxv = Math.log(maxl);
+    volume = clamp(volume, 0, 1);
 
-      return (Math.exp(minv + (maxv - minv) / (maxp - minp) * (value - minp)) - minl) / maxl;
-    };
-
-    this.audio.volume = logarithmic(volume);
+    this.audio.volume = Math.pow(volume, 3);
     this.volume.barValue.style.width = 100 * volume + "%";
     localStorage.setItem('volume', volume.toString());
 
