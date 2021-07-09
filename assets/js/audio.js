@@ -58,13 +58,14 @@ export default class AudioPlayer {
       buttonPath: container.querySelector('.audio-volume-button-path')
     };
 
+    this.audio = container.getElementsByTagName('audio')[0];
+    this.audio.removeAttribute('controls');
+
     const isVolumeAdjustable = this.isVolumeAdjustable;
     this.progress.bar.classList.toggle('mr-3', isVolumeAdjustable);
     this.progress.bar.classList.toggle('mr-2', !isVolumeAdjustable);
     this.volume.container.classList.toggle('hidden', !isVolumeAdjustable);
 
-    this.audio = container.getElementsByTagName('audio')[0];
-    this.audio.removeAttribute('controls');
     this.audio.addEventListener('loadedmetadata', () => {
       if (isVolumeAdjustable) {
         if (this.isMobileDevice) {
