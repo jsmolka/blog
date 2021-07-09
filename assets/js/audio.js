@@ -58,13 +58,20 @@ export default class AudioPlayer {
       buttonPath: container.querySelector('.audio-volume-button-path')
     };
 
+    const isVolumeAdjustable = this.isVolumeAdjustable;
+    this.progress.bar.classList.toggle('mr-3', isVolumeAdjustable);
+    this.progress.bar.classList.toggle('mr-2', !isVolumeAdjustable);
+    this.volume.container.classList.toggle('hidden', !isVolumeAdjustable);
+
     this.audio = container.getElementsByTagName('audio')[0];
     this.audio.removeAttribute('controls');
     this.audio.addEventListener('loadedmetadata', () => {
-      if (this.isMobileDevice || !this.isVolumeAdjustable) {
-        this.setVolume(1);
-      } else {
-        this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
+      if (isVolumeAdjustable) {
+        if (this.isMobileDevice) {
+          this.setVolume(1);
+        } else {
+          this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
+        }
       }
 
       this.updateTime();
@@ -79,10 +86,10 @@ export default class AudioPlayer {
     const volumeTest = volume < 0.5 ? (volume + 0.01) : (volume - 0.01);
 
     this.audio.volume = volumeTest;
-    const adjustable = this.audio.volume === volumeTest;
+    const isVolumeAdjustable = this.audio.volume === volumeTest;
     this.audio.volume = volume;
 
-    return adjustable;
+    return isVolumeAdjustable;
   }
 
   get isMobileDevice() {
@@ -158,7 +165,16 @@ export default class AudioPlayer {
   }
 
   initVolumeEvents() {
-    if (!this.isMobileDevice && this.isVolumeAdjustable) {
+    if (!this.isVolumeAdjustable) {
+      return;
+    }
+
+    if (this.isMobileDevice) {
+      this.volume.button.addEventListener('click', () => {
+        this.audio.muted = !this.audio.muted;
+        this.updateVolumeIcon();
+      });
+    } else if (this.isVolumeAdjustable) {
       let hovered = false;
       let grabbed = false;
 
@@ -197,11 +213,6 @@ export default class AudioPlayer {
         grabbed = false;
         updateUi();
       };
-    } else {
-      this.volume.button.addEventListener('click', () => {
-        this.audio.muted = !this.audio.muted;
-        this.updateVolumeIcon();
-      });
     }
   }
 
