@@ -62,7 +62,7 @@ export default class AudioPlayer {
     };
 
     this.audio = container.getElementsByTagName('audio')[0];
-    this.audio.removeAttribute('controls');
+    this.audio.classList.add('hidden');
     this.audio.addEventListener('loadedmetadata', () => {
       if (this.isMobileDevice) {
         this.setVolume(1);
