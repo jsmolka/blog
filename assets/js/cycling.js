@@ -232,7 +232,7 @@ class Statistics {
   }
 
   async init() {
-    await this.activities.fetch('/data/strava.json');
+    await this.activities.fetch('/data/day/strava.json');
 
     this.config.options.plugins.legend.onClick = (event, item) => {
       const year = item.text;

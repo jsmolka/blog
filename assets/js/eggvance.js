@@ -53,7 +53,7 @@ window.Module = {
   async loadDemo(button) {
     button.innerHTML = 'Loading...';
     try {
-      const data = await this.readUrl('/data/celeste.gba');
+      const data = await this.readUrl('/data/year/celeste.gba');
       this.eggvanceLoadGba(this.fs.write(data, 'gba'));
     } finally {
       button.innerHTML = 'Load demo';
