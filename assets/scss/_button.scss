@@ -10,10 +10,10 @@ button, .button {
   @apply cursor-pointer;
 
   &:hover {
-    background: darken($light-background-secondary, 2.5%);
+    background: darken($light-background-secondary, 4%);
 
     .dark & {
-      background: lighten($dark-background-secondary, 5%);
+      background: lighten($dark-background-secondary, 4%);
     }
   }
 }

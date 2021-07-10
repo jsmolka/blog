@@ -30,7 +30,7 @@ pre[class*="language-"] {
 :not(pre) > code {
   @apply font-jet-brains-mono;
   @apply bg-var-background-secondary;
-  @apply rounded;
+  @apply rounded-sm;
 
   padding: 0.05em 0.3em;
   font-size: 0.91rem;

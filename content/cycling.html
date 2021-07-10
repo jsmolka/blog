@@ -4,7 +4,7 @@ summary: "Cycling stats exported from Strava."
 type: cycling
 ---
 <div class="wrapper-offset flex flex-col items-center justify-center w-full max-w-screen-xl">
-  <canvas id="canvas" class="w-full select-none"></canvas>
+  <canvas id="canvas" class="w-full bg-var-background select-none"></canvas>
   <div class="flex mt-6">
     <button class="mr-2" @click="window.stats && window.stats.groupByDay()">Group by day</button>
     <button class="mx-2" @click="window.stats && window.stats.groupByWeek()">Group by week</button>

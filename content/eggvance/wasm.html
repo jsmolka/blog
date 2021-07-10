@@ -5,7 +5,7 @@ date: 2020-04-12
 type: eggvance
 ---
 <div v-scope="{ controls: false }" class="wrapper-offset w-full flex flex-col items-center justify-center max-w-screen-xl">
-  <canvas id="canvas" class="w-full select-none"></canvas>
+  <canvas id="canvas" class="w-full bg-var-background select-none"></canvas>
   <input ref="inputGba" class="hidden" type="file" accept=".gba" onchange="Module.loadGba(this)">
   <input ref="inputSav" class="hidden" type="file" accept=".sav" onchange="Module.loadSav(this)">
   <div class="flex mt-6">
