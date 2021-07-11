@@ -5,7 +5,7 @@
     <ul>
       {{ range (first 5 .Site.Taxonomies.tags.ByCount) }}
         <li class="mb-2">
-          <a class="inline-flex items-center no-underline" href="{{ .Page.Permalink }}">
+          <a class="inline-flex items-center no-underline" href="{{ .Page.RelPermalink }}">
             <span>#{{ .Page.Title }}</span>
             <span class="ml-1.5 px-1.5 py-0.5 bg-var-background-secondary text-xs rounded">{{ .Count }}</span>
           </a>

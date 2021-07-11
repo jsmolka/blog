@@ -2,7 +2,7 @@
   {{ range .Paginator.Pages }}
     <div class="post py-10 first:pt-0 last:pb-0">
       <h1 class="mb-6">
-        <a class="no-underline" href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        <a class="no-underline" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
       </h1>
 
       {{ partial "post/meta" . }}
