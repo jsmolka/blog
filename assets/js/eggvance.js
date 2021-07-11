@@ -27,7 +27,7 @@ window.Module = {
 
       request.open('GET', url);
       request.responseType = 'arraybuffer';
-      request.onload = event => {
+      request.onload = () => {
         resolve(new Uint8Array(request.response));
       }
       request.send();
