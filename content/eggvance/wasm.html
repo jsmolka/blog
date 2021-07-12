@@ -6,8 +6,8 @@ type: eggvance
 ---
 <div v-scope="{ controls: false }" class="wrapper-offset w-full flex flex-col items-center justify-center max-w-screen-xl">
   <canvas id="canvas" class="w-full bg-var-background select-none"></canvas>
-  <input class="hidden" type="file" accept=".gba" @change="Module.loadGba($el)">
-  <input class="hidden" type="file" accept=".sav" @change="Module.loadSav($el)">
+  <input ref="inputGba" class="hidden" type="file" accept=".gba" @change="Module.loadGba($el)">
+  <input ref="inputSav" class="hidden" type="file" accept=".sav" @change="Module.loadSav($el)">
   <div class="flex mt-6">
     <button class="mr-2" @click="$refs.inputGba.click()">Load rom</button>
     <button class="mx-2" @click="$refs.inputSav.click()">Load save</button>
