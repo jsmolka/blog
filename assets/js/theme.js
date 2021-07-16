@@ -8,12 +8,17 @@ function updateMetaThemeColor(dark) {
 
 export default class Theme {
   constructor() {
-    const theme = localStorage.getItem('theme');
+    let theme = localStorage.getItem('theme');
+    if (!theme && matchMedia?.('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark';
+    }
+
     if (theme) {
       const dark = theme === 'dark';
       html.classList.toggle('dark', dark);
       updateMetaThemeColor(dark);
     }
+
     this.onChange = dark => {};
   }
 
