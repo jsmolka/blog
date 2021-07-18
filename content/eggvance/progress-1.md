@@ -47,7 +47,7 @@ Even with all of those precautions in place, there was always that bad feeling o
 
 Three months after the initial commit I had a more or less reliable CPU implementation in place. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal &mdash; graphics. The months of blind progress were coming to an end.
 
-Understanding how they work just by going through GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through [TONCs GBA programming tutorials](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and DMA (Direct Memory Access). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
+Understanding how they work just by going through GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and DMA (Direct Memory Access). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
 
 {{<flex>}}
   {{<figure src="eggvance/tonc-sbb-aff.png" caption="Figure 3: Affine tiled background">}}
@@ -61,15 +61,15 @@ A precondition for playing through a whole game were working save implementation
 ### Milestones
 - 19/01/30 &mdash; Initial commit
 - 19/04/20 &mdash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
-- 19/05/02 &mdash; Displays tonc bitmap demos
-- 19/05/29 &mdash; Displays tonc regular sprite and background demos
-- 19/06/08 &mdash; Displays tonc affine sprite and background demos
-- 19/06/27 &mdash; Displays tonc graphic effect demos
-- 19/07/03 &mdash; Displays tonc interrupt and bios call demos
-- 19/07/11 &mdash; Displays tonc mode 7 demos
+- 19/05/02 &mdash; Displays Tonc bitmap demos
+- 19/05/29 &mdash; Displays Tonc regular sprite and background demos
+- 19/06/08 &mdash; Displays Tonc affine sprite and background demos
+- 19/06/27 &mdash; Displays Tonc graphic effect demos
+- 19/07/03 &mdash; Displays Tonc interrupt and bios call demos
+- 19/07/11 &mdash; Displays Tonc mode 7 demos
 - 19/07/14 &mdash; Runs Kirby: Nightmare In Dreamland
 - 19/07/16 &mdash; Displays the BIOS
-- 19/08/07 &mdash; Displays all tonc demos
+- 19/08/07 &mdash; Displays all Tonc demos
 - 19/08/17 &mdash; Runs Pokémon Emerald
 
 ### Some working games
