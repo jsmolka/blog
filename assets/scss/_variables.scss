@@ -39,23 +39,6 @@ $dark-accent: rgb(72, 168, 245);
   --accent: #{$light-accent};
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color: #{$dark-color};
-    --color-secondary: #{$dark-color-secondary};
-    --color-tertiary: #{$dark-color-tertiary};
-    --background: #{$dark-background};
-    --background-secondary: #{$dark-background-secondary};
-    --background-tertiary: #{$dark-background-tertiary};
-    --header: #{$dark-header};
-    --header-secondary: #{$dark-header-secondary};
-    --audio: #{$dark-audio};
-    --audio-secondary: #{$dark-audio-secondary};
-    --border: #{$dark-border};
-    --accent: #{$dark-accent};
-  }
-}
-
 .dark {
   --color: #{$dark-color};
   --color-secondary: #{$dark-color-secondary};
