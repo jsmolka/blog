@@ -7,7 +7,7 @@ type: post
 ---
 I finished my introduction project to C++ at the end of last year. Since then, I have read some books about the language and it really started to grow on me. It appears to be quite versatile and expressive with lots of horrific corners you better stay away from.
 
-Finishing the previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ programming class [^1] where one of my fellow students asked if the emulator I was playing on was the project for it. I responded with "no" but the idea got stuck in my head.
+Finishing the previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ programming class [^1] where one of my fellow students asked if the emulator I was playing on was the project for the class. I responded with "no" but the idea got stuck in my head.
 
 ### Black box
 The inner workings of an emulator were completely alien to me. It was a black box that took input in form of ROMs and produced output in form of childhood nostalgia. Not knowing anything about video console emulation or something alike, I headed out to [/r/EmuDev](https://www.reddit.com/r/EmuDev/) and asked how to get started. The people there proposed the typical order for someone new to emulation:
@@ -47,7 +47,7 @@ Even with all of those precautions in place, there was always that bad feeling o
 
 Three months after the initial commit I had a more or less reliable CPU implementation in place. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal &mdash; graphics. The months of blind progress were coming to an end.
 
-Understanding how they work just by going through GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and DMA (Direct Memory Access). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
+Understanding how they work just by going through GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and direct memory access (DMA). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
 
 {{<flex>}}
   {{<figure src="eggvance/tonc-sbb-aff.png" caption="Figure 3: Affine tiled background">}}
