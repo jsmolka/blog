@@ -63,8 +63,8 @@ Using a list might seem counterintuitive but most events are scheduled on short 
 Nintendo developed a test cartridge for the GBA called [AGS Aging](https://tcrf.net/AGS_Aging_Cartridge). It contains a fair amount of demanding hardware tests for various parts of the system. It fails on most emulators and even some GBA hardware clones. There is only one emulator that I know of which passes all tests: [NanoBoyAdvance](https://github.com/fleroviux/NanoBoyAdvance). This is mostly due to the extremely accurate prefetch buffer emulation.
 
 {{<flex>}}
-  {{<figure src="eggvance/ags-0.3.png" caption="Figure 1: eggvance 0.3">}}
-  {{<figure src="eggvance/ags-1.0.png" caption="Figure 2: eggvance 1.0">}}
+  {{<image src="eggvance/ags-0.3.png" caption="Figure 1: eggvance 0.3">}}
+  {{<image src="eggvance/ags-1.0.png" caption="Figure 2: eggvance 1.0">}}
 {{</flex>}}
 
 The amount of red in version 0.3 made me quite sad. I thought it would pass more but it didn't even run through the whole suite without locking up. Missing SIO emulation and the resulting lack of interrupting caused an infinite loop in a test. Proper multiplayer functionality is out of scope for this project so a barebones SIO implementation has been added to at least pass the test.
@@ -94,8 +94,8 @@ All that being said, passing tests might not translate well into actual game cov
 Towards the end of development, some issues were remaining and I couldn't quite figure out their cause. There were randomly occurring black lines in Pokémon Emerald, interfering and flickering backgrounds in The Legend of Zelda as well as annoying typing sounds on the right ear during the Final Fantasy VI intro sequence.
 
 {{<flex>}}
-  {{<figure src="eggvance/dma-bug-emerald.png" caption="Figure 3: Random black lines at the top">}}
-  {{<figure src="eggvance/dma-bug-zelda.png" caption="Figure 4: Background interference">}}
+  {{<image src="eggvance/dma-bug-emerald.png" caption="Figure 3: Random black lines at the top">}}
+  {{<image src="eggvance/dma-bug-zelda.png" caption="Figure 4: Background interference">}}
 {{</flex>}}
 
 {{<flex>}}
@@ -111,8 +111,8 @@ Blending also required some more work. Acrobat Kid uses semi-transparent objects
 I removed them with a slight rework and fixed the issue. That also eliminated problems in Castlevania which I thought were completely unrelated. It used to display garbage values for one frame when entering the menu.
 
 {{<flex>}}
-  {{<figure src="eggvance/acrobat-kid-bug.png" caption="Figure 5: Acrobat Kid menu bug">}}
-  {{<figure src="eggvance/castlevania-menu-bug.png" caption="Figure 6: Castlevania menu bug">}}
+  {{<image src="eggvance/acrobat-kid-bug.png" caption="Figure 5: Acrobat Kid menu bug">}}
+  {{<image src="eggvance/castlevania-menu-bug.png" caption="Figure 6: Castlevania menu bug">}}
 {{</flex>}}
 
 ### User interface
@@ -123,8 +123,8 @@ So I did the usual Google search for small, cross-platform UI libraries and ende
 Now everything can be configured in the UI and the emulator should be more accessible to new users.
 
 {{<flex>}}
-  {{<figure src="eggvance/gui-1.png" caption="Figure 7: Video layer selection">}}
-  {{<figure src="eggvance/gui-2.png" caption="Figure 8: Controller config">}}
+  {{<image src="eggvance/gui-1.png" caption="Figure 7: Video layer selection">}}
+  {{<image src="eggvance/gui-2.png" caption="Figure 8: Controller config">}}
 {{</flex>}}
 
 ### Performance
@@ -148,13 +148,13 @@ I invested quite some time in optimizations and I think it paid off in the end.
 Finishing the emulator also meant finally getting to "test" some games. The one I can't recommend enough is Mother 3. It's the final installment of the Mother series, best known for its second entry EarthBound. Unfortunately, Nintendo never bothered to release the game in the western world so we have to rely on the excellent [fan translation](http://mother3.fobby.net/). Do yourself a favor and take some time out of your day to play this gem of a game. It has everything you want:
 
 {{<flex>}}
-  {{<figure src="eggvance/m3-shark.png" caption="Figure 9: Weird creatures">}}
-  {{<figure src="eggvance/m3-toilet.png" caption="Figure 10: Golden toilets">}}
+  {{<image src="eggvance/m3-shark.png" caption="Figure 9: Weird creatures">}}
+  {{<image src="eggvance/m3-toilet.png" caption="Figure 10: Golden toilets">}}
 {{</flex>}}
 
 {{<flex>}}
-  {{<figure src="eggvance/m3-shrooms.png" caption="Figure 11: Mushroom trips">}}
-  {{<figure src="eggvance/m3-rats.png" caption="Figure 12: Rat corpses">}}
+  {{<image src="eggvance/m3-shrooms.png" caption="Figure 11: Mushroom trips">}}
+  {{<image src="eggvance/m3-rats.png" caption="Figure 12: Rat corpses">}}
 {{</flex>}}
 
 ### Conclusion and the future

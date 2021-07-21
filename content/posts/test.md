@@ -22,12 +22,12 @@ Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ei
 > &mdash; Me
 
 {{<flex>}}
-  {{<audio src="eggvance/emerald-frontier.mp3" caption="Audio 3: Pokémon Emerald battle frontier theme all channels">}}
+  {{<audio src="eggvance/emerald-frontier.mp3" caption="Audio 3: Pokémon Emerald battle frontier theme all [channels](https://github.com)">}}
 {{</flex>}}
 
 {{<flex>}}
-  {{<figure src="eggvance/suite-passed.png" caption="Figure 1: Test suite passed">}}
-  {{<figure src="eggvance/suite-failed.png" caption="Figure 2: Test suite failed">}}
+  {{<image src="eggvance/suite-passed.png" caption="Figure 1: [Test suite passed](https://www.google.de)" alt="Alternate">}}
+  {{<image src="eggvance/suite-failed.png" caption="Figure 2: Test suite failed">}}
 {{</flex>}}
 
 ```c

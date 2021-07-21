@@ -11,8 +11,8 @@ type: post
 In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4) which has been reported by fleroviux in June last year. He tried to play Pokémon Sapphire and his game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
 
 {{<flex>}}
-  {{<figure src="eggvance/sapphire-bad-bios-bug.png" caption="Figure 1: Freezing during intro sequence">}}
-  {{<figure src="eggvance/sapphire-bad-bios.png" caption="Figure 2: In the truck where we belong">}}
+  {{<image src="eggvance/sapphire-bad-bios-bug.png" caption="Figure 1: Freezing during intro sequence">}}
+  {{<image src="eggvance/sapphire-bad-bios.png" caption="Figure 2: In the truck where we belong">}}
 {{</flex>}}
 
 He used the bundled replacement BIOS made by Normmatt where bugs in games are to be expected. I tried it with the original one, and the freezing stopped happening. So I closed the issue and blamed the BIOS for doing some unexpected things, but he quickly reassured me that the bug wasn't happening in his emulator or mGBA when using the same BIOS. I verified that and was left scratching my head about the possible origin of this problem.
@@ -80,8 +80,8 @@ I fixed the bug when working on something completely different. Reads from unuse
 This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fix compared to the previous one and has also been reported by fleroviux. The total available render cycles for sprites are 1210 if the H-Blank interval free bit in the display control register is set or 954 otherwise. This means that the amount of sprites per scanline is limited. If you ignore that limit you get something like in figure 3, where the sprite on top overlaps with the status bar.
 
 {{<flex>}}
-  {{<figure src="eggvance/gunstar-sprite-cycles-bug.png" caption="Figure 3: Gunstar Super Heroes without render cycles">}}
-  {{<figure src="eggvance/gunstar-sprite-cycles.png" caption="Figure 4: Gunstar Super Heroes with render cycles">}}
+  {{<image src="eggvance/gunstar-sprite-cycles-bug.png" caption="Figure 3: Gunstar Super Heroes without render cycles">}}
+  {{<image src="eggvance/gunstar-sprite-cycles.png" caption="Figure 4: Gunstar Super Heroes with render cycles">}}
 {{</flex>}}
 
 Calculating the number of cycles it takes to render a sprite is quite easy. It takes `width` cycles for normal and `2 * width + 10` cycles for sprites with affine transformations. Sprites with x-coordinates outside of the screen also affect this quota and programmers should be mindful to explicitly disable sprites instead of moving them outside the screen.
@@ -90,8 +90,8 @@ Calculating the number of cycles it takes to render a sprite is quite easy. It t
 The next thing I want to talk about is an actual new feature in the emulator. If you own a third-generation Pokémon game and start it, you will notice that it complains about a drained battery. Time-based events will no longer work because its internal real-time clock ran dry.
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-bad-rtc.png" caption="Figure 5: Empty battery warning">}}
-  {{<figure src="eggvance/emerald-bad-flash.png" caption="Figure 6: Ever saw that back then? (bonus)">}}
+  {{<image src="eggvance/emerald-bad-rtc.png" caption="Figure 5: Empty battery warning">}}
+  {{<image src="eggvance/emerald-bad-flash.png" caption="Figure 6: Ever saw that back then? (bonus)">}}
 {{</flex>}}
 
 Until now, eggvance perfectly emulated old Pokémon cartridges in the sense that both RTCs don't work (it's a feature). The RTC is connected to three of the four GamePak GPIO pins as follows:
@@ -117,15 +117,15 @@ Receiving a command byte looks like this:
 Combining these two flows allows us to implement a functioning RTC. The documentation in GBATEK can be quite confusing in that regard because it first describes the NDS RTC and then the differences to GBA one. Once everything has been put into place, I was able to grow berries in the Pokémon Emerald.
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-berry-1.png" caption="Figure 7: Berry first stage">}}
-  {{<figure src="eggvance/emerald-berry-2.png" caption="Figure 8: Berry last stage">}}
+  {{<image src="eggvance/emerald-berry-1.png" caption="Figure 7: Berry first stage">}}
+  {{<image src="eggvance/emerald-berry-2.png" caption="Figure 8: Berry last stage">}}
 {{</flex>}}
 
 I later stumbled across a NanoboyAdvance [issue](https://github.com/fleroviux/NanoboyAdvance/issues/136) reported by Robert Peip, which mentions that the RTC doesn't work in Sennen Kazoku. The game boots and then show an error screen mentioning 'broken clock equipment'. I tested it in my emulator and observed the same result.
 
 {{<flex>}}
-  {{<figure src="eggvance/sennen-rtc-bug.png" caption="Figure 9: Complaining about a bad RTC">}}
-  {{<figure src="eggvance/sennen-rtc.png" caption="Figure 10: It works!">}}
+  {{<image src="eggvance/sennen-rtc-bug.png" caption="Figure 9: Complaining about a bad RTC">}}
+  {{<image src="eggvance/sennen-rtc.png" caption="Figure 10: It works!">}}
 {{</flex>}}
 
 Debugging the game showed that Sennen Kazoku didn't set SCK high in step one of the transfer sequence. I removed the conditions and then everything worked as expected. Other games with RTCs continued to work with that change, so I kept it.

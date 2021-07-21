@@ -28,20 +28,20 @@ switch (mmio.dispcnt.mode) {
 The code snippet above shows the parts of the PPU which contribute to render the Pokémon Emerald title screen. The used backgrounds and their render functions are dependent on the selected video mode found in the DISPCNT register. The produced layers can be seen in figures 1 to 4.
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-layer-bg0.png" caption="Figure 1: Background layer 0">}}
-  {{<figure src="eggvance/emerald-layer-bg1.png" caption="Figure 2: Background layer 1">}}
+  {{<image src="eggvance/emerald-layer-bg0.png" caption="Figure 1: Background layer 0">}}
+  {{<image src="eggvance/emerald-layer-bg1.png" caption="Figure 2: Background layer 1">}}
 {{</flex>}}
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-layer-bg2.png" caption="Figure 3: Background layer 2">}}
-  {{<figure src="eggvance/emerald-layer-obj.png" caption="Figure 4: Object layer">}}
+  {{<image src="eggvance/emerald-layer-bg2.png" caption="Figure 3: Background layer 2">}}
+  {{<image src="eggvance/emerald-layer-obj.png" caption="Figure 4: Object layer">}}
 {{</flex>}}
 
 One of the most challenging aspects of emulating the PPU is combining the different layers into the final scene. That's what the `collapse` function is doing. The process itself is rather straightforward for simple scenes. Just loop over the layers from highest to lowest priority and use the first opaque pixel you find. It gets much harder when dealing with effects like windows and color blending which need to look at multiple layers at the same time. An example of color blending can be found in figure 5.
 
 {{<flex>}}
-  {{<figure src="eggvance/emerald-layer-blend.png" caption="Figure 5: Blending backgrounds 0 and 1">}}
-  {{<figure src="eggvance/emerald-title-screen.png" caption="Figure 6: Final scene">}}
+  {{<image src="eggvance/emerald-layer-blend.png" caption="Figure 5: Blending backgrounds 0 and 1">}}
+  {{<image src="eggvance/emerald-title-screen.png" caption="Figure 6: Final scene">}}
 {{</flex>}}
 
 The predecessor of the `collapse` function ate a sizable amount of CPU time and was a prime candidate to be reworked. The new and heavily templated [version](https://github.com/jsmolka/eggvance/blob/d89f078a1ecf74c98837cc26b8f9ee2c6a1980f5/eggvance/src/ppu/collapse.inl) has improved performance by around 30-35%. It also fixed several bugs that were related to object windows.
@@ -50,7 +50,7 @@ The predecessor of the `collapse` function ate a sizable amount of CPU time and 
 Even though the GBA is using an LCD, its hardware behaves like a CRT (Cathode Ray Tube). In those displays, the electron beam has to return to the start of the next line after finishing the previous one. This period is called horizontal blank (or H-Blank). Once the whole frame has been drawn, the beam must return to the beginning of the frame which is called vertical blank (or V-Blank). A visual representation of this process can be found in figure 7 (with line numbers of the classic Game Boy, <a href="http://imrannazar.com/GameBoy-Emulation-in-JavaScript:-GPU-Timings">source</a>).
 
 {{<flex>}}
-  {{<figure src="eggvance/blanking-intervals.png" caption="Figure 7: Blanking intervals" class="w-full sm:w-1/2">}}
+  {{<image src="eggvance/blanking-intervals.png" caption="Figure 7: Blanking intervals" class="w-full sm:w-1/2">}}
 {{</flex>}}
 
 Most of the game logic and graphics processing is done during the blanking intervals because they don't interfere with the scanline drawing process. Another reason is the fact that access to video memory outside of the blanking intervals is either restricted or has negative side effects, like reducing the total number of displayable objects. This restriction can be lifted by setting the "forced blank"-bit in the DISPCNT register, which causes a white line to be displayed. There isn't much to do emulation-wise apart from filling the current scanline with white pixels.
