@@ -272,7 +272,7 @@ export default class AudioPlayer {
   get template() {
     return /* html */ `
       <div class="flex items-center pl-2 pr-2.5 py-2 bg-var-background-secondary rounded-sm shadow-sm">
-        <svg class="audio-play-pause-button mb-px text-var-audio hover:text-var-audio-secondary select-none cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <svg class="audio-play-pause-button ripple mb-px text-var-audio hover:text-var-audio-secondary rounded-sm select-none cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
           <path class="audio-play-pause-button-path" d="${icons.play}" />
         </svg>
         <div class="audio-time ml-2 text-sm text-var-audio-secondary">0:00 / 0:00</div>
