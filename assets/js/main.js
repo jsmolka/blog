@@ -1,6 +1,6 @@
-import ripplet from 'ripplet.js';
 import AudioPlayer from './audio';
 import initMenu from './menu';
+import ripplet from './ripplet';
 import Theme from './theme';
 
 window.theme = new Theme();
@@ -17,9 +17,6 @@ const menu = document.querySelector('header .menu');
 const menuButton = document.querySelector('header .menu-button');
 
 initMenu(menu, menuButton);
-
-ripplet.defaultOptions.spreadingDuration = '0.2s';
-ripplet.defaultOptions.spreadingTimingFunction = 'ease-out';
 
 for (const element of document.querySelectorAll('button:not(.button-none), .button, .ripple')) {
   element.addEventListener('pointerdown', ripplet);

@@ -1,4 +1,5 @@
 import EventHandler from './eventHandler';
+import ripplet from './ripplet';
 import { clamp } from './utils';
 
 class BarEventHandler {
@@ -130,6 +131,7 @@ export default class AudioPlayer {
       this.updateProgress();
     });
 
+    this.playPause.button.addEventListener('pointerdown', ripplet);
     this.playPause.button.addEventListener('click', () => {
       if (this.audio.paused) {
         this.play();
@@ -173,6 +175,7 @@ export default class AudioPlayer {
 
   initVolumeEvents() {
     if (this.isMobileDevice) {
+      this.volume.button.addEventListener('pointerdown', ripplet);
       this.volume.button.addEventListener('click', () => {
         this.audio.muted = !this.audio.muted;
         this.updateVolumeIcon();
@@ -271,25 +274,29 @@ export default class AudioPlayer {
 
   get template() {
     return /* html */ `
-      <div class="flex items-center pl-2 pr-2.5 py-2 bg-var-background-secondary rounded-sm shadow-sm">
-        <svg class="audio-play-pause-button ripple mb-px text-var-audio hover:text-var-audio-secondary rounded-sm select-none cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path class="audio-play-pause-button-path" d="${icons.play}" />
-        </svg>
-        <div class="audio-time ml-2 text-sm text-var-audio-secondary">0:00 / 0:00</div>
-        <div class="audio-progress-bar flex flex-1 ml-3.5 mr-3 py-2 cursor-pointer">
+      <div class="flex items-center p-1 bg-var-background-secondary rounded-sm shadow-sm">
+        <div class="audio-play-pause-button p-1 text-var-audio hover:text-var-audio-secondary rounded-sm select-none cursor-pointer">
+          <svg class="mb-px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path class="audio-play-pause-button-path" d="${icons.play}" />
+          </svg>
+        </div>
+        <div class="audio-time ml-1 text-sm text-var-audio-secondary">0:00 / 0:00</div>
+        <div class="audio-progress-bar flex flex-1 ml-3.5 mr-2 py-2.5 cursor-pointer">
           <div class="flex flex-1 h-1 bg-var-background-tertiary">
             <div class="audio-progress-bar-value bg-var-audio"></div>
           </div>
         </div>
-        <div class="audio-volume-container flex items-center">
-          <div class="audio-volume-bar flex w-0 py-2 cursor-pointer transition-width duration-500 ease-in-out">
-            <div class="flex flex-1 h-1 ml-1.5 mr-3 bg-var-background-tertiary">
+        <div class="audio-volume-container flex items-center rounded-sm">
+          <div class="audio-volume-bar flex w-0 py-2.5 cursor-pointer transition-width duration-500 ease-in-out">
+            <div class="flex flex-1 h-1 ml-2.5 mr-2 bg-var-background-tertiary">
               <div class="audio-volume-bar-value bg-var-audio"></div>
             </div>
           </div>
-          <svg class="audio-volume-button text-var-audio hover:text-var-audio-secondary select-none cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path class="audio-volume-button-path" d="${icons.volume}" />
-          </svg>
+          <div class="audio-volume-button p-1 text-var-audio hover:text-var-audio-secondary rounded-sm select-none cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path class="audio-volume-button-path" d="${icons.volume}" />
+            </svg>
+          </div>
         </div>
       </div>
     `;
