@@ -18,6 +18,6 @@ const menuButton = document.querySelector('header .menu-button');
 
 initMenu(menu, menuButton);
 
-for (const element of document.querySelectorAll('button:not(.button-none), .button, .ripple')) {
+for (const element of document.querySelectorAll('button, .button, .ripple')) {
   element.addEventListener('pointerdown', ripplet);
 }
