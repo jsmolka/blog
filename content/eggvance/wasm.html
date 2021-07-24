@@ -11,8 +11,16 @@ type: eggvance
   <div class="flex mt-6">
     <button class="mr-2" @click="$refs.inputGba.click()">Load rom</button>
     <button class="mx-2" @click="$refs.inputSav.click()">Load save</button>
-    <button class="mx-2" @click="Module.loadDemo($el)">Load demo</button>
-    <button class="ml-2" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
+    <div class="mx-2 overflow-hidden">
+      <div class="ripple">
+        <button class="no-ripple" @click="Module.loadDemo($el)">Load demo</button>
+      </div>
+    </div>
+    <div class="ml-2 overflow-hidden">
+      <div class="ripple">
+        <button class="no-ripple" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
+      </div>
+    </div>
   </div>
   <div v-cloak v-show="controls" class="w-full max-w-screen-md mt-6">
   {{<markdown>}}

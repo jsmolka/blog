@@ -16,6 +16,7 @@ class FileSystem {
 window.Module = {
   fs: new FileSystem(),
   canvas: document.getElementById('canvas'),
+  fetching: false,
 
   onRuntimeInitialized() {
     this.updateBackground(theme.isDark);
@@ -51,11 +52,17 @@ window.Module = {
   },
 
   async loadDemo(button) {
+    if (this.fetching) {
+      return;
+    }
+
+    this.fetching = true;
     button.innerHTML = 'Loading...';
     try {
       const data = await this.readUrl('/data/year/celeste.gba');
       this.eggvanceLoadGba(this.fs.write(data, 'gba'));
     } finally {
+      this.fetching = false;
       button.innerHTML = 'Load demo';
     }
   },
