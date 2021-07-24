@@ -17,9 +17,9 @@ Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ei
 | eggvance 1.0 | 550.4 fps       | 501.6 fps      | 866.6 fps  |
 {{</table>}}
 
-> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
->
-> &mdash; Me
+{{<quote cite="Julius [Caesar](smolka.dev)">}}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+{{</quote>}}
 
 {{<flex>}}
   {{<audio src="eggvance/emerald-frontier.mp3" caption="Audio 3: Pokémon Emerald battle frontier theme all [channels](https://github.com)">}}

@@ -86,35 +86,17 @@
 
   blockquote {
     @apply relative;
-    @apply px-5;
-    @apply py-4;
-    @apply bg-var-header;
+    @apply pl-4;
+    @apply py-2;
     @apply border-l-6;
     @apply border-var-background-tertiary;
 
     .dark & {
       @apply border-var-background-secondary;
     }
-  }
 
-  @screen sm {
-    blockquote {
-      @apply pl-12;
-
-      &::before {
-        @apply absolute;
-        @apply top-1.5;
-        @apply left-3;
-        @apply text-7xl;
-
-        content: "\201C";
-        font-family: Arial, sans-serif;
-        color: darken($light-background-tertiary, 4.5%);
-
-        .dark & {
-          color: lighten($dark-background-secondary, 3.5%);
-        }
-      }
+    cite {
+      @apply not-italic;
     }
   }
 }

@@ -1,0 +1,6 @@
+<blockquote>
+  {{ .Inner | $.Page.RenderString }}
+  {{ with .Get "cite" }}
+    <cite class="block mt-1.5">&mdash; {{ . | $.Page.RenderString }}</cite>
+  {{ end }}
+</blockquote>
