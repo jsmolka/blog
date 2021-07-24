@@ -31,14 +31,14 @@
   }
 
   ol, ul {
-    @apply my-4;
+    @apply my-6;
     @apply ml-5;
 
     li {
-      @apply mb-1;
+      @apply mt-1.5;
 
-      &:last-child {
-        @apply mb-0;
+      &:first-child {
+        @apply mt-0;
       }
     }
   }

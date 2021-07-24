@@ -21,8 +21,8 @@ Getting the Chip-8 to work took a couple of hours. It was neither interesting no
 I then moved on to the GB and hoped for equally fast progress. I soon realized that it would require much more time to get something working (what a surprise /s) and decided to abandon it because it wasn't what I wanted to do [^2]. I wanted to write a GBA emulator and that's what I did. Now, exactly seven months after the initial commit, I feel like it's in a state that is worth talking about [^3].
 
 {{<flex>}}
-  {{<image src="eggvance/emerald-title-screen.png" caption="Figure 1: Pokemon Emerald">}}
-  {{<image src="eggvance/yoshi-title-screen.png" caption="Figure 2: Yoshi's Island">}}
+  {{<image src="eggvance/emerald-title-screen.png" caption="Pokémon Emerald">}}
+  {{<image src="eggvance/yoshi-title-screen.png" caption="Yoshi's Island">}}
 {{</flex>}}
 
 ### Initial progress
@@ -50,8 +50,8 @@ Three months after the initial commit I had a more or less reliable CPU implemen
 Understanding how they work just by going through GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and direct memory access (DMA). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
 
 {{<flex>}}
-  {{<image src="eggvance/tonc-sbb-aff.png" caption="Figure 3: Affine tiled background">}}
-  {{<image src="eggvance/tonc-obj-aff.png" caption="Figure 4: Affine sprite">}}
+  {{<image src="eggvance/tonc-sbb-aff.png" caption="Affine tiled background">}}
+  {{<image src="eggvance/tonc-obj-aff.png" caption="Affine sprite">}}
 {{</flex>}}
 
 The last thing I did was clean up the memory interface. I implemented things like bus widths, memory mirroring, and read/write only registers. This fixed some of the bugs I had in Pokémon Emerald and allowed me to play through the game, one of my primary milestones.
@@ -59,18 +59,18 @@ The last thing I did was clean up the memory interface. I implemented things lik
 A precondition for playing through a whole game were working save implementations for SRAM, EEPROM, and Flash. Finding out which one to use and understanding how each of them works took some time but I managed to figure it out in the end.
 
 ### Milestones
-- 19/01/30 &mdash; Initial commit
-- 19/04/20 &mdash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
-- 19/05/02 &mdash; Displays Tonc bitmap demos
-- 19/05/29 &mdash; Displays Tonc regular sprite and background demos
-- 19/06/08 &mdash; Displays Tonc affine sprite and background demos
-- 19/06/27 &mdash; Displays Tonc graphic effect demos
-- 19/07/03 &mdash; Displays Tonc interrupt and bios call demos
-- 19/07/11 &mdash; Displays Tonc mode 7 demos
-- 19/07/14 &mdash; Runs Kirby: Nightmare In Dreamland
-- 19/07/16 &mdash; Displays the BIOS
-- 19/08/07 &mdash; Displays all Tonc demos
-- 19/08/17 &mdash; Runs Pokémon Emerald
+- 19/01/30 &ndash; Initial commit
+- 19/04/20 &ndash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
+- 19/05/02 &ndash; Displays Tonc bitmap demos
+- 19/05/29 &ndash; Displays Tonc regular sprite and background demos
+- 19/06/08 &ndash; Displays Tonc affine sprite and background demos
+- 19/06/27 &ndash; Displays Tonc graphic effect demos
+- 19/07/03 &ndash; Displays Tonc interrupt and bios call demos
+- 19/07/11 &ndash; Displays Tonc mode 7 demos
+- 19/07/14 &ndash; Runs Kirby: Nightmare In Dreamland
+- 19/07/16 &ndash; Displays the BIOS
+- 19/08/07 &ndash; Displays all Tonc demos
+- 19/08/17 &ndash; Runs Pokémon Emerald
 
 ### Some working games
 - Advance Wars
