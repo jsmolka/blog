@@ -73,7 +73,7 @@ export default class AudioPlayer {
     this.audio.classList.add('hidden');
     this.audio.addEventListener('loadedmetadata', () => {
       if (this.isMobileDevice) {
-        this.setVolume(1);
+        this.setVolume(0.66);
       } else {
         this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
       }
