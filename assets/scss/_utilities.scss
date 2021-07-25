@@ -70,3 +70,15 @@
     @apply max-w-screen-md;
   }
 }
+
+.dark\:block {
+  .dark & {
+    display: block !important;
+  }
+}
+
+.dark\:hidden {
+  .dark & {
+    display: none !important;
+  }
+}

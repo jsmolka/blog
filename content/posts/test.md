@@ -27,7 +27,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 {{<flex>}}
   {{<image src="eggvance/suite-passed.png" caption="Figure 1: [Test suite passed](https://www.google.de)" alt="Alternate">}}
-  {{<image src="eggvance/suite-failed.png" caption="Figure 2: Test suite failed">}}
+  {{<image src="eggvance/suite-failed.png" srcDark="eggvance/suite-failed.png" caption="Figure 2: Test suite failed">}}
 {{</flex>}}
 
 ```c
