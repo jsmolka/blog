@@ -1,3 +1,7 @@
-<div class="my-6 overflow-x-auto">
+{{ $caption := .Get "caption" }}
+<figure class="my-6 overflow-x-auto">
   {{ .Inner | markdownify }}
-</div>
+  {{ if $caption }}
+  <figcaption class="mt-1.5 text-center">{{ $caption }}</figcaption>
+  {{ end }}
+</figure>

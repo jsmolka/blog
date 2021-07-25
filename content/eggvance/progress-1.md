@@ -45,7 +45,7 @@ f300:
 
 Even with all of those precautions in place, there was always that bad feeling of a CPU bug lingering in the back of my mind when something didn't work as expected. I already had some of those, and they are a pain in the ass to find.
 
-Three months after the initial commit I had a more or less reliable CPU implementation in place. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal &mdash; graphics. The months of blind progress were coming to an end.
+Three months after the initial commit I had a more or less reliable CPU implementation in place. It was still missing some crucial things like hardware and software interrupts, but those weren't important for the upcoming goal: graphics. The months of blind progress were coming to an end.
 
 Understanding how they work just by going through GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and direct memory access (DMA). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
 

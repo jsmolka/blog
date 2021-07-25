@@ -8,7 +8,7 @@ type: post
 One month has passed since the last progress report and I'm back with another one. Most of this months effort went into accuracy and performance improvements of the pixel processing unit (PPU). Its main purpose is converting data stored in memory like VRAM and object attribute memory (OAM) into pixels on the screen.
 
 ### Rendering engine
-Let's begin with the most interesting thing I've done during the last month &mdash; a rewrite of the rendering engine. The Game Boy Advance can use up to four different backgrounds and an object layer. Each background and object has its own priority which determines the drawing order. Backgrounds with high priority are drawn in front of backgrounds with low priority. Transparent areas inside backgrounds are used to display the background with the next highest priority.
+Let's begin with the most interesting thing I've done during the last month: a rewrite of the rendering engine. The Game Boy Advance can use up to four different backgrounds and an object layer. Each background and object has its own priority which determines the drawing order. Backgrounds with high priority are drawn in front of backgrounds with low priority. Transparent areas inside backgrounds are used to display the background with the next highest priority.
 
 When talking about the rendering engine, I mean the part of the emulator that combines the different layers into the final scene shown on the screen. Its name changed several times during development and ended up being `collapse`.
 
@@ -25,7 +25,7 @@ switch (mmio.dispcnt.mode) {
 }
 ```
 
-The code above shows the parts of the PPU which take part in rendering the Pokémon Emerald title screen. The used backgrounds and their render function are dependent on the selected video mode in the display control register. You can see the resulting four layers in the following images.
+The code above shows the parts of the PPU which take part in rendering the Pokémon Emerald title screen. The used backgrounds and their render function are dependent on the selected video mode in the DISPCNT register. You can see the resulting four layers in the following images.
 
 {{<flex>}}
   {{<image src="eggvance/emerald-layer-bg0.png" caption="Background layer 0">}}
@@ -53,7 +53,7 @@ Even though the GBA is using an LCD, its hardware behaves more like a CRT. In th
   {{<image src="eggvance/blanking-intervals.png" caption="Blanking intervals on the classic Game Boy ([source](http://imrannazar.com/GameBoy-Emulation-in-JavaScript:-GPU-Timings))" alt="Blanking intervals on the Game Boy" class="sm:w-1/2">}}
 {{</flex>}}
 
-Most of the game logic and graphics processing takes place during the blanking intervals because they don't interfere with scanline drawing. Another reason is the fact that access to video memory outside of the blanking intervals is either restricted or has negative side effects, like reducing the total number of displayable objects. These restrictions can be lifted by setting the "forced blank" bit in the display control register, which causes a white line to be displayed. There isn't much to do emulation-wise apart from filling the current scanline with white pixels.
+Most of the game logic and graphics processing takes place during the blanking intervals because they don't interfere with scanline drawing. Another reason is the fact that access to video memory outside of the blanking intervals is either restricted or has negative side effects, like reducing the total number of displayable objects. These restrictions can be lifted by setting the "forced blank" bit in the DISPCNT register, which causes a white line to be displayed. There isn't much to do emulation-wise apart from filling the current scanline with white pixels.
 
 ```cpp
 if (mmio.dispcnt.force_blank) {
