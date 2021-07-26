@@ -115,8 +115,8 @@ This problem was caused by skipping the BIOS and directly jumping inside the ROM
 Running mGBA's [test suite](https://github.com/mgba-emu/suite) made me realize flaws in my carry/overflow detection mechanism for arithmetic operations, which caused sprite flickering bugs in games like Mario Kart.
 
 {{<flex>}}
-  {{<image src="eggvance/mario-kart-flickering-1.png" caption="Mario Kart sprite flickering #1">}}
-  {{<image src="eggvance/mario-kart-flickering-2.png" caption="Mario Kart sprite flickering #2">}}
+  {{<image src="eggvance/mario-kart-flickering-1.png" caption="Mario Kart sprites invisible">}}
+  {{<image src="eggvance/mario-kart-flickering-2.png" caption="Mario Kart sprites visible">}}
 {{</flex>}}
 
 The basic add, subtract and reverse subtract operations were doing fine, but their "[operation] with carry" counterparts resulted in a wrong carry or overflow flag. I found a nice [website](http://teaching.idallen.com/dat2343/10f/notes/040_overflow.txt) that explains overflow detection for basic addition and subtraction.
@@ -195,6 +195,6 @@ deadzone = 16000
 That's all for this progress report. A Windows build of the latest version can be found on [GitHub](https://github.com/jsmolka/eggvance/releases). I used profile-guided optimization to squeeze out the last drop of performance &mdash; most games can be played at 10x the normal speed. Of course, the current version is not perfect and bug-free, audio is still missing, and there are crashes and visual bugs in a few games like DOOM II.
 
 {{<flex>}}
-  {{<image src="eggvance/doom-bug-1.png" caption="DOOM II bug #1">}}
-  {{<image src="eggvance/doom-bug-2.png" caption="DOOM II bug #2">}}
+  {{<image src="eggvance/doom-bug-1.png" caption="DOOM II black floor">}}
+  {{<image src="eggvance/doom-bug-2.png" caption="DOOM II rainbow floor">}}
 {{</flex>}}
