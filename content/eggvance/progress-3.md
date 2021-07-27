@@ -10,7 +10,7 @@ This month in your favorite emulator: a complete rewrite. That's what happens wh
 ### Optimizing instruction execution
 The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. Each instruction has a different number of fixed and variable bits. Fixed bits provide information about the used format, while variable bits are used to encode parameters like registers, register lists, flags, and immediate values. As a result of having 16 additional bits, ARM instructions tend to be much more complex.
 
-{{<table caption="Thumb instruction examples">}}
+{{<table>}}
   <table>
     <thead>
       <th colspan="10">Pattern</th>
