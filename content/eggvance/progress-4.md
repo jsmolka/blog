@@ -7,7 +7,7 @@ type: post
 ---
 Hello there! It has been quite a while since the last progress report, two months to be exact. Development of the emulator has slowed down a little during that time because I started working full-time. Apart from cleaning up the codebase, I also fixed and implemented some things which might be of interest to some people.
 
-### Bitmap modes
+### Bitmap Modes
 The GBA has six different background modes that are evenly split into three tile-based and three bitmap modes. One would assume that games utilize bitmaps as much as tiles, but that's not the case in reality. Tiles tend to be faster and easier to understand and are therefore used in most games. One rare example of a game using bitmap modes is DOOM II, which uses them to display the scene created by its internal software renderer. Due to this kind of game being so rare, I didn't notice bugs in the bitmap implementation until very recently, when I was going through some of the demos on [gbadev.org](https://www.gbadev.org/).
 
 {{<flex>}}
@@ -15,7 +15,7 @@ The GBA has six different background modes that are evenly split into three tile
   {{<image src="eggvance/yeti-bitmap.png" caption="Yeti demo with matrix transformation">}}
 {{</flex>}}
 
-The images above show the technically impressive [Yeti demo](https://www.gbadev.org/demos.php?showinfo=568). It's a first-person shooter with a custom 3D engine and uses background mode 5 to display the scene. The dimensions of the bitmap are 160x128 (the screen dimensions are 240x160). The left image shows an old version of the emulator, which directly copied the bitmap to the screen without further processing. That was incorrect because bitmaps can make use of the rotation/scaling matrix.
+The images above show the technically impressive [Yeti demo](https://www.gbadev.org/demos.php?showinfo=568). It's a first-person shooter with a custom 3D engine and uses background mode 5 to display the scene. The resolution of the bitmap in this mode is 160x128 pixels. The left image shows an old version of the emulator, which directly copied the bitmap to the 240x160 pixel screen without further processing. That was incorrect because bitmaps can make use of the rotation/scaling matrix.
 
 ```cpp
 void PPU::renderBgMode5(int bg) {
@@ -42,7 +42,7 @@ void PPU::renderBgMode5(int bg) {
 
 The fixed version of the renderer applies the `transform` function to the current pixel, which returns the coordinates inside the bitmap. Those are then used to determine the pixel's color. The matrix used in the Yeti demo scales the bitmap by two and thus fills the entire screen. The black pixels on the right are part of the game and not by the emulator.
 
-### Color masking
+### Color Masking
 The Game Boy Advance encodes colors in the BGR555 format and stores them in 16-bit halfwords. They are stored in a dedicated area in memory called palette RAM (PRAM). It consists of two 512 byte blocks for background and sprite colors. The first color of each block can be used to draw transparent pixels. An obvious use case for this are sprites, which aren't always perfect squares. If a pixel has been marked as transparent, the next pixel in the drawing order will be displayed.
 
 {{<flex>}}
@@ -64,9 +64,9 @@ u16 Palette::colorBG(int index, int bank) {
 }
 ```
 
-The problem can be fixed with a quite simple solution. Every color read from the palette needs to be masked with 0x7FFF to clear the most significant bit. This prevents confusing transparent pixels with malformed white pixels.
+The problem can be fixed with a quite simple solution. Every color read from the palette needs to be masked with 0x7FFF to clear the most significant bit. That prevents confusing transparent pixels with malformed white pixels.
 
-### Sprite tile restrictions
+### Sprite Tile Restrictions
 This issue is another prime example for the "most games don't use bitmaps, therefore I can't test them" category. If you compare both images down below, you will notice some strange, colorful pixels in the top left corner of the first one. Those are uninitialized sprites that were wrongfully rendered by the emulator.
 
 {{<flex>}}
@@ -77,10 +77,10 @@ This issue is another prime example for the "most games don't use bitmaps, there
 The cause of this problem is best described in Martin Korths [GBATEK](https://problemkaputt.de/gbatek.htm#lcdobjoverview), which is the most comprehensive and complete reference document for the GBA. That even holds up when comparing against Nintendos official programming manual.
 
 {{<quote cite="Martin Korth, [GBATEK](https://problemkaputt.de/gbatek.htm)">}}
-OBJs are always combined of one or more 8x8 pixel Tiles (much like BG Tiles in BG Modes 0 &ndash; 2). However, OBJ Tiles are stored in a separate area in VRAM: 06010000 &ndash; 06017FFF (32 KBytes) in BG Mode 0 &ndash; 2, or 06014000 &ndash; 06017FFF (16 KBytes) in BG Mode 3 &ndash; 5. Depending on the size of the above area (16K or 32K), and on the OBJ color depth (4bit or 8bit), 256 &ndash; 1024 8x8 dots OBJ Tiles can be defined.
+OBJs are always combined of one or more 8x8 pixel Tiles (much like BG Tiles in BG Modes 0-2). However, OBJ Tiles are stored in a separate area in VRAM: 06010000-06017FFF (32 KBytes) in BG Mode 0-2, or 06014000-06017FFF (16 KBytes) in BG Mode 3-5. Depending on the size of the above area (16K or 32K), and on the OBJ color depth (4bit or 8bit), 256-1024 8x8 dots OBJ Tiles can be defined.
 {{</quote>}}
 
-The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 &ndash; 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames which occupy the first 0x4000 bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
+The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 to 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames which occupy the first 0x4000 bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
 
 ```cpp
 u32 addr = mmu.vram.mirror(entry.base_tile + size * tile.offset(tiles));

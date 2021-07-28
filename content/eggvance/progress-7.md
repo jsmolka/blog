@@ -7,7 +7,7 @@ type: post
 ---
 These were some productive weeks for me. I made visible, audible, and technical progress, which pushed the project over the finish line. I never intended for this emulator to be good. Hell, I didn't even know if I could do it at all. I started working on it with the expectation of running Pokémon Emerald someday. The current version blows this expectation out of the window to the point that you could actually recommend it to another person. So let's go over the final improvements of version 1.0.
 
-### Beep boop
+### Beep Boop
 Audio has been one of the most challenging things for me to do. I pushed it back to a late stage in development because my brain just couldn't grasp the idea of combining frequencies and amplitudes into something that sounds pleasant to the human ear, with emphasis on pleasant. I was talking about that with a college, and he noted that audio issues stand out much more than minor graphical glitches. High-quality audio emulation is important, and I made good progress on that front over the last few months.
 
 Sound processing on the Game Boy Advance can be divided into two parts: FIFO and PSG channels. The former are a new addition to the console and account for most of the sound you hear in games. They are quite different from the legacy PSG channels in that they use a stream of precomposed 8-bit samples. The samples are fed to the FIFO using DMA. It can store up to 32 of them at a time and automatically refills itself once half-empty to ensure smooth sound output.
@@ -59,7 +59,7 @@ void insert(Event& item) {
 
 Using a list might seem counterintuitive, but most events are scheduled on short notice (like interrupt delays) or are infrequent enough to not tank performance. The scheduler itself was a great addition. It decreased complexity and improved performance as well as readability.
 
-### Edging closer to perfection
+### Edging closer to Perfection
 Nintendo developed a test cartridge for the GBA called [AGS Aging](https://tcrf.net/AGS_Aging_Cartridge). It contains a fair amount of demanding hardware tests for various parts of the system. It fails on most emulators and even some GBA hardware clones. There is only one emulator that I know of which passes all tests: [NanoBoyAdvance](https://github.com/fleroviux/NanoBoyAdvance). That is mostly due to the extremely accurate prefetch buffer emulation.
 
 {{<flex>}}
@@ -90,7 +90,7 @@ The last failing tests are extremely timing sensitive and don't even pass in mGB
 
 All that being said, passing tests might not translate well into actual game coverage. But it certainly helps and gives us programmer's some peace of mind.
 
-### DMA latches
+### DMA Latches
 Towards the end of development, some issues were remaining, and I couldn't quite figure out their cause. There were randomly occurring black lines in Pokémon Emerald, interfering and flickering backgrounds in The Legend of Zelda, as well as annoying typing sounds on the right ear during the Final Fantasy VI intro sequence.
 
 {{<flex>}}
@@ -115,7 +115,7 @@ I removed them with a slight rework and fixed the issue. That also eliminated pr
   {{<image src="eggvance/castlevania-menu-bug.png" caption="Castlevania menu bug">}}
 {{</flex>}}
 
-### User interface
+### User Interface
 The missing user interface was one of the things that blocked the release of version 1.0. Because what would a final version be without some convenience? I didn't want to use Qt because it's such a huge dependency to pull into such a small project. Apart from that, I like small binaries, and using Qt makes that pretty much impossible.
 
 So I did the usual Google search for small, cross-platform UI libraries and ended up with the infamous [ImGui](https://github.com/ocornut/imgui) by ocornut. Adding it to the project was nothing more than copying some files and including them in the build process. Unfortunately, ImGui doesn't play nice with `SDL_Renderer`, which I used to render the frame buffer to the screen. I switched from that to an OpenGL texture and got a small FPS boost as a bonus.
@@ -157,5 +157,5 @@ Finishing the emulator also meant finally getting to "test" some games. The one 
   {{<image src="eggvance/m3-rats.png" caption="Rat corpses">}}
 {{</flex>}}
 
-### Epilogue and the future
+### Epilogue and the Future
 That's it. I am done here. Version 1.0 is out, and it's more than I ever wanted it to be. It took almost two and a half years to get from zero to this point. Two and a half years of long nights, frustrating debugging, and obsessive behavior. Next, I want to downgrade eggvance into a GB emulator and improve the architecture. I want to get rid of global state and better separate the frontend and backend. Then I want to apply the learned things to another system like the NES and finally move on to NDS emulation.

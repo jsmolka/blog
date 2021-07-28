@@ -7,8 +7,8 @@ type: post
 ---
 Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance, and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
 
-### State-dependent dispatching
-The first thing I want to talk about is something I call "state-dependent dispatching" (even though dispatching is probably the wrong technical term for this situation). Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
+### State-dependent Dispatching
+The first thing I want to talk about is something I call "state-dependent dispatching," even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
 
 - Which mode is the processor in?
 - Is the CPU halted until the next interrupt?
@@ -16,7 +16,7 @@ The first thing I want to talk about is something I call "state-dependent dispat
 - Are timers running?
 - Is DMA active?
 
-That amounts to five invariants that need to be checked before, while, or after every executed instruction. The old CPU implementation used a nested if-else chain to evaluate each state and act accordingly. That sounds quite reasonable until you realize that this is the hot path we are talking about. Now it is time for me to present you the innermost CPU loop, the pit of hell and profilers worst nightmare (a shortened pseudo-code skeleton at least):
+That amounts to five invariants that need to be checked before, while, or after every executed instruction. The old CPU implementation used a nested if-else chain to evaluate each state and act accordingly. That sounds quite reasonable until you realize that this is the hot path we are talking about. Now it is time for me to present you the innermost CPU loop, the pit of hell and profilers worst nightmare:
 
 ```cpp
 void ARM::execute() {
@@ -50,7 +50,7 @@ void ARM::execute() {
 
 It looks much worse than it actually is, but you get the idea. Lots of different states require lots of if-else statements. The result is code with many branches, something a modern CPU doesn't like. Emulators are known for their bad branch prediction because the branches don't tend to follow a predictable pattern. Adding more branches to each instruction just aggravates this problem.
 
-So how can we get around this massive if-else chain and transform it into something faster? Well, most of these states change rather infrequently and don't need constant re-evaluation. Therefore the easiest thing would be storing the current emulator state in a variable and then calling a dispatch function made for that specific state until it changes. That reduces the number of branches to almost zero and their runtime overhead to a minimum.
+So how can we get around this massive if-else chain and transform it into something faster? Well, most of these states change rather infrequently and don't require constant re-evaluation. Therefore the easiest thing to do is storing the current emulator state in a variable and then calling a dispatch function made for that specific state until it changes. That reduces the number of branches to almost zero and their runtime overhead to a minimum.
 
 ```cpp
 class ARM {
@@ -65,18 +65,18 @@ class ARM {
 }
 ```
 
-I'll explain "state-dependent dispatching" for the processor mode. There exists a specific `bx` instruction (speak "branch and exchange") that allows the processor to change its mode. If the lowest bit in the target address is equal to one, the processor changes its mode to Thumb. Otherwise, it remains in ARM mode. The example given below changes the `state` variable when switching from ARM to Thumb mode. If we want to change back from Thumb to ARM mode, we need to clear this flag again.
+I'll explain "state-dependent dispatching" for the processor mode. There exists a specific `bx` instruction, speak "branch and exchange," that allows the processor to change its mode. If the lowest bit in the target address is set, the processor changes its mode to Thumb. Otherwise, it remains in ARM mode. The example given below changes the `state` variable when switching from ARM to Thumb mode. If we want to change back from Thumb to ARM mode, we need to clear this flag again.
 
 ```cpp
 if (cpsr.t = addr & 0x1) {
   // Change processor state to thumb
   state |= kStateThumb;
 } else {
-  // No state changes
+  // No state change
 }
 ```
 
-Actions similar to this have to be done at all places which relate to states defined in the `State` enum. Once we have a functional `state` variable in place, we can start thinking about writing a `dispatch` function that considers the state. The five different states require 32 unique dispatch functions to be defined (the number of plausible combinations is lower). Here we can use C++'s templates to create an optimized dispatch function for each state case without writing more than one function (the current implementation looks like [this](https://github.com/jsmolka/eggvance/blob/5d36e1067d15bb0d611719d8d7022de567a0488b/eggvance/src/arm/arm.cpp#L69)).
+Actions similar to this need to be done at all places which relate to states defined in the `State` enum. Once we have a functional `state` variable in place, we can start thinking about writing a `dispatch` function that considers the state. The five different states require 32 unique dispatch functions to be defined (the number of plausible combinations is lower). Here we can use C++'s templates to create an optimized dispatch function for each state case without writing more than one function. The current implementation looks like [this](https://github.com/jsmolka/eggvance/blob/5d36e1067d15bb0d611719d8d7022de567a0488b/eggvance/src/arm/arm.cpp#L69).
 
 ```cpp
 template<uint state>
@@ -108,7 +108,7 @@ void ARM::run(int cycles) {
 }
 ```
 
-What would a performance post be without comparing numbers? I originally intended this one to be about multiple improvements, but I decided to focus on the most important thing. GPR class removal and instruction template LUTs aren't nearly as interesting and impactful as "state-dependent dispatching" (the second one has also been discussed in a previous [progress report]({{<ref "progress-3.md#optimizing-instruction-execution">}})). Now take a step back and look at these wonderful results:
+What would a performance post be without comparing numbers? I originally intended this one to be about multiple improvements, but I decided to focus on the most important thing. GPR class removal and instruction template LUTs aren't nearly as interesting and impactful as "state-dependent dispatching". The second one has also been discussed in a previous [progress report]({{<ref "progress-3.md#optimizing-instruction-execution">}}). Now take a step back and look at these wonderful results:
 
 {{<table>}}
 | Commit                                                                                          | Improvement                | Pokémon Emerald | Yoshi's Island |
@@ -120,7 +120,7 @@ What would a performance post be without comparing numbers? I originally intende
 | [326b4809](https://github.com/jsmolka/eggvance/commit/326b4809b398f051807a93b2bc4e9879fef60567) | Improved state dispatching | 556.9 fps       | 574.4 fps      |
 {{</table>}}
 
-### Efficient bit iteration
+### Efficient Bit Iteration
 The block data transfer instructions of the ARM7 encode the transferred registers in a binary register list (`rlist`). Each set bit in this list represents a register that needs to be transferred during execution. Take `0b0111` for example, which will transfer registers one to three but not register four.
 
 Emulating these instructions requires iterating all bits in the `rlist` and transferring set ones. The code below shows a simple (and naive) example of doing it. In each iteration, we shift the bits in the `rlist` to the right and increase the current bit index `x` by one. We do this until the `rlist` equals zero, which means that there are no more bits left to transfer. Inside the loop, we check if the lowest bit is set and then use the bit index to transfer the correct register.
@@ -172,11 +172,11 @@ function loadFile(input) {
 }
 ```
 
-All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one, that broke the emulator. It turned out to be the `canonical` function, which requires a file to exist. Otherwise, it throws an error.
+All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
 
-A demonstration can be found [here]({{<ref "wasm.html">}}).
+The result can be tested [here]({{<ref "wasm.html">}}).
 
-### Improving tests
+### Improving Tests
 The last part of this progress report is dedicated to my [GBA test suite](https://github.com/jsmolka/gba-suite). I developed most of it simultaneously with the eggvance CPU to ensure correctness. The whole thing is writing is pure assembly to have the maximum control over it. That was especially important during the start when most instructions weren't implemented yet. At some point, I moved the test suite into a separate repository because it became its own project.
 
 Since then, it has resulted in some CPU edge-case fixes in [mGBA](https://github.com/mgba-emu/mgba) and other open-source emulators. These poor developers had to work with a test suite that was meant for personal use. It had no user interface at all and stored the number of the first failed test in a register. The only graphical things about it were a green screen on success and a red screen on failure. That's why I decided to add a minimal user interface.
