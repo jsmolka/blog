@@ -172,7 +172,7 @@ function loadFile(input) {
 }
 ```
 
-All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one, that broke the emulator. It turned out to be the `std::filesystem::canonical` function, which requires a file to exist. Otherwise, it throws an error.
+All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one, that broke the emulator. It turned out to be the `canonical` function, which requires a file to exist. Otherwise, it throws an error.
 
 A demonstration can be found [here]({{<ref "wasm.html">}}).
 
