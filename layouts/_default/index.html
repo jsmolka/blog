@@ -1,9 +1,10 @@
 {{ define "main" }}
-  {{ $context := . }}
-  {{ if .IsHome }}
-    {{ $context = .Site }}
+  {{ $types := slice "post" "eggvance" }}
+  {{ $pages := slice }}
+  {{ range $types }}
+    {{ $pages = $pages | append (where $.Site.RegularPages "Type" .) }}
   {{ end }}
-  {{ $contentType := $.Site.Params.ContentType | default "posts" }}
-  {{ $paginator := .Paginate (where $context.RegularPages "Type" $contentType) }}
+  {{ $pages = sort $pages "Date" "desc" }}
+  {{ $paginator := .Paginate $pages }}
   {{ partial "post/list" . }}
 {{ end }}
