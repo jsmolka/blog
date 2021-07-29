@@ -1,6 +1,6 @@
 ---
 title: "Progress Report #4"
-summary: "The fourth progress report of the eggvance GBA emulator."
+summary: "Fourth progress report of the eggvance GBA emulator."
 tags: ["eggvance", "emulation", "programming"]
 date: 2020-01-07
 type: post
