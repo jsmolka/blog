@@ -9,7 +9,6 @@ disableHugoGeneratorInject = true
   description = "Mediocre posts about emulation and micro optimizations."
   keywords = ["smolka", "blog", "eggvance"]
   defaultTheme = "light"
-  contentType = "post"
   dateFormat = "2006/01/02"
   birthDate = "1998-05-11"
 
@@ -25,6 +24,10 @@ disableHugoGeneratorInject = true
   [[menu.main]]
     name = "eggvance"
     url = "/eggvance"
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts"
 
 [markup]
   [markup.goldmark]
