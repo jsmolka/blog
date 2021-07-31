@@ -8,7 +8,7 @@ disableHugoGeneratorInject = true
   language = "en-US"
   description = "Mediocre posts about emulation and micro optimizations."
   keywords = ["smolka", "blog", "eggvance"]
-  defaultTheme = "light"
+  defaultTheme = "dark"
   dateFormat = "2006/01/02"
   birthDate = "1998-05-11"
 
