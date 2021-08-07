@@ -20,7 +20,7 @@ export default class EventHandler {
     };
 
     this.element.addEventListener(mouseEvent, mouseInterceptor);
-    this.element.addEventListener(touchEvent, touchInterceptor);
+    this.element.addEventListener(touchEvent, touchInterceptor, { passive: true });
 
     this.interceptors.push({
       event: mouseEvent,
