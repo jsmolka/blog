@@ -3,5 +3,11 @@
   <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
 {{ else }}
   {{ $script := resources.Get .path | js.Build (dict "target" "es2015" "minify" true) | fingerprint }}
-  <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
+  {{ if .inline | default false }}
+    <script type="text/javascript">
+      {{ $script.Content | safeJS }}
+    </script>
+  {{ else }}
+    <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
+  {{ end }}
 {{ end }}
