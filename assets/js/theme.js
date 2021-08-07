@@ -34,3 +34,5 @@ export default class Theme {
     this.onChange(dark);
   }
 }
+
+window.theme = new Theme();

@@ -1,9 +1,6 @@
 import AudioPlayer from './audio';
 import initMenu from './menu';
 import ripplet from './ripplet';
-import Theme from './theme';
-
-window.theme = new Theme();
 
 for (const button of document.querySelectorAll('header .theme-button')) {
   button.addEventListener('click', () => window.theme.toggle());

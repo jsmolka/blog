@@ -1,3 +1,4 @@
+{{ partial "esbuild" (dict "ctx" . "path" "js/theme.js") }}
 {{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
 {{ if .Site.IsServer }}
   {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
