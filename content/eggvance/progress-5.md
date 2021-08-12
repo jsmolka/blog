@@ -224,7 +224,7 @@ With all text rendering functions in place, I was able to add a simple user inte
   {{<image src="eggvance/suite-failed.png" caption="Test suite failed">}}
 {{</flex>}}
 
-### Epilogue
+### Final Words
 This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February, and am now finishing the article in early June. Formulating text and walking other people through ideas has never been a strength of mine.
 
 Anyway, I hope to finish most of the cleanup sometime soon and then write another progress report once I'm ready to release version 0.2. I want it to be as stable and accurate as possible before I devote time to implement more advanced things like audio emulation and CPU prefetching.

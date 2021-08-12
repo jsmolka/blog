@@ -184,7 +184,7 @@ I love my writing efficiency. I began this progress report at the start of Janua
 
 I'll write another one where I describe the sound basics and also give some examples. Most of the GBAs sound is composed of FIFO samples, so it's hard to show all audio channels in action and how they are combined into a nice result.
 
-### Epilogue
+### Final Words
 That's it. I'm done. The roadmap for this year is:
 
 - ~~Implement all sound channels~~

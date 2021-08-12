@@ -43,5 +43,5 @@ It's a static website, so hosting will be easy regardless of the provider. Doing
 - **Netlify** is where the website spent its childhood. The performance and asset optimization are great. Unfortunately, it opposed some annoying restrictions on my code. Netlify automatically redirects assets with mixed-case names to their "canonical" lowercase definition, but that wasn't the deal-breaker. For some reason, the performance for larger files was awful. The WebAssembly version of my GBA emulator and its demo took forever to load.
 - **Vercel** is where the website will grow up. Performance is great, and cache control is configurable via regex path strings. There are no restrictions opposed on assets, and the default CI works well with Hugo and NPM. It feels like initial image loading is slightly slower than on Netlify but not enough for me to care about it.
 
-### Epilogue
+### Final Words
 I like how the website turned out to be. It went to many iterations, and I never was as content with any of them as I'm with the current. Time to fill it with some content!

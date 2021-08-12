@@ -83,7 +83,7 @@ A precondition for playing through a whole game were working save implementation
 - Yoshi's Island: Super Mario Advance 3
 - The Legend of Zelda: A Link To The Past & Four Swords
 
-### Epilogue
+### Final Words
 All of this progress sounds great. Sadly you can't hear it because there is no audio implementation just yet. That's the last thing I'll do. Before that, I need to improve the accuracy and performance of the emulator. It's not bad, but I could be better. This report will serve as a baseline, and I'll try to make more of those with specific information in the future.
 
 ### Notes

@@ -88,7 +88,7 @@ if (addr < 0x1'4000 && io.dispcnt.isBitmap())
     continue;
 ```
 
-### Epilogue
+### Final Words
 That's it with the changes worth writing about, and even those were pretty meh. Most of the things I did during the last months were minor accuracy improvements and cleanups in the codebase. Even the DOOM II color problems have been fixed with a rather simple [commit](https://github.com/jsmolka/eggvance/commit/36e2cdd38e795d09a39594353e256b5b83fe9c47). Another important thing is the addition of Linux and macOS support. Removing Windows-dependent code and writing a simple CMake file took more time than I'd like to admit.
 
 {{<flex>}}

@@ -157,5 +157,5 @@ Finishing the emulator also meant finally getting to "test" some games. The one 
   {{<image src="eggvance/m3-rats.png" caption="Rat corpses">}}
 {{</flex>}}
 
-### Epilogue and the Future
+### Final Words and the Future
 That's it. I am done here. Version 1.0 is out, and it's more than I ever wanted it to be. It took almost two and a half years to get from zero to this point. Two and a half years of long nights, frustrating debugging, and obsessive behavior. Next, I want to downgrade eggvance into a GB emulator and improve the architecture. I want to get rid of global state and better separate the frontend and backend. Then I want to apply the learned things to another system like the NES and finally move on to NDS emulation.
