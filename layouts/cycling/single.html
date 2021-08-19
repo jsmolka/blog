@@ -1,7 +1,0 @@
-{{ define "head" }}
-  {{ partial "esbuild-defer" (dict "ctx" . "path" "js/cycling.js") }}
-{{ end }}
-
-{{ define "main" }}
-  {{ .Content }}
-{{ end }}

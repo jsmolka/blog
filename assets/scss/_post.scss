@@ -7,10 +7,6 @@
   @apply hyphens-auto;
   @apply leading-relaxed;
 
-  @screen sm {
-    @apply text-justify;
-  }
-
   * {
     &:first-child {
       @apply mt-0;

@@ -71,12 +71,7 @@
   table, th, td {
     @apply p-2;
     @apply border;
-
-    border-color: mix($light-color, $light-background, 25%);
-
-    .dark & {
-      border-color: mix($dark-color, $dark-background, 25%);
-    }
+    @apply border-var-border;
   }
 
   th {

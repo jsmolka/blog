@@ -1,4 +1,4 @@
-<header class="bg-var-header">
+<header class="bg-var-header shadow-sm">
   <div class="flex justify-between items-center w-full h-16 max-w-screen-sm lg:max-w-screen-md mx-auto">
     <a class="flex items-center h-full px-4" href="{{ $.Site.BaseURL }}">
       <span class="text-lg font-bold">{{ $.Site.Title }}</span>
@@ -30,7 +30,7 @@
         <!-- Menu -->
         <div class="menu hidden">
           {{ if len $.Site.Menus }}
-            <div class="absolute top-12 right-4 flex flex-col p-1 shadow-menu z-50 bg-var-header dark:bg-var-header-secondary hover:alpha">
+            <div class="absolute top-12 right-4 flex flex-col p-1 shadow-menu z-50 bg-var-header-menu hover:alpha">
               {{ range $.Site.Menus.main }}
                 {{ if not .HasChildren }}
                   <a class="p-4 hover:alpha" href="{{ .URL }}">{{ .Name }}</a>
