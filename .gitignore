@@ -5,13 +5,13 @@ resources/
 # Node
 node_modules/
 
+# OAuth
+token.json
+
 # Python
 *.pyc
 *.pyo
 *.pyd
-
-# OAuth
-token.json
 
 # VS Code
 jsconfig.json

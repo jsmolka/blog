@@ -12,6 +12,3 @@ Install node packages.
 ```
 npm install
 ```
-
-## Credit
-The theme is based on [Hello Friend](https://github.com/panr/hugo-theme-hello-friend).
