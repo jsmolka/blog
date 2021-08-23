@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="flow post py-16">
+  <h1 class="mb-6">{{ .Title | markdownify }}</h1>
+
+  <div class="mt-6">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

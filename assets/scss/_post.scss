@@ -1,0 +1,8 @@
+@import "content";
+
+.post {
+  @extend .content;
+
+  @apply text-justify;
+  @apply leading-relaxed;
+}

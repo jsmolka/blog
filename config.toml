@@ -1,14 +1,14 @@
-title = "smolka"
+title = "Smolka"
 baseurl = "https://smolka.dev"
-paginate = 5
+paginate = 4
 disableKinds = ["RSS", "taxonomyTerm"]
 disableHugoGeneratorInject = true
 
 [params]
   language = "en-US"
-  description = "Mediocre posts about emulation and micro optimizations."
-  keywords = ["smolka", "blog", "eggvance"]
-  defaultTheme = "light"
+  description = "One obsession at a time."
+  keywords = ["smolka", "cycling", "eggvance"]
+  theme = "light"
   dateFormat = "2006/01/02"
   birthDate = "1998-05-11"
 
@@ -18,12 +18,12 @@ disableHugoGeneratorInject = true
     url = "/about"
 
   [[menu.main]]
-    name = "eggvance"
-    url = "/eggvance"
+    name = "Drizzle"
+    url = "/drizzle"
 
   [[menu.main]]
-    name = "Posts"
-    url = "/posts"
+    name = "Eggvance"
+    url = "/eggvance"
 
 [markup]
   [markup.goldmark]

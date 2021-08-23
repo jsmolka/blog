@@ -1,55 +1,21 @@
-$light-color: rgb(34, 34, 34);
-$light-color-secondary: lighten($light-color, 47.5%);
-$light-color-tertiary: lighten($light-color, 50%);
-$light-background: rgb(255, 255, 255);
-$light-background-secondary: darken($light-background, 5%);
-$light-background-tertiary: darken($light-background, 10%);
-$light-header: rgb(250, 250, 250);
-$light-header-menu: $light-background;
-$light-audio: lighten($light-color, 45%);
-$light-audio-secondary: lighten($light-color, 27.5%);
-$light-border: mix($light-color, $light-background, 12.5%);
-$light-accent: rgb(110, 186, 247);
-
-$dark-color: rgb(169, 169, 179);
-$dark-color-secondary: darken($dark-color, 15%);
-$dark-color-tertiary: darken($dark-color, 25%);
-$dark-background: rgb(41, 42, 45);
-$dark-background-secondary: lighten($dark-background, 7.5%);
-$dark-background-tertiary: lighten($dark-background, 15%);
-$dark-header: rgb(37, 38, 39);
-$dark-header-menu: lighten($dark-header, 2.5%);
-$dark-audio: $dark-color-secondary;
-$dark-audio-secondary: $dark-color;
-$dark-border: mix($dark-color, $dark-background, 20%);
-$dark-accent: rgb(72, 168, 245);
+$neutral-0: #333;
+$neutral-1: #555;
+$neutral-2: #777;
+$neutral-3: #aaa;
+$neutral-4: #ccc;
+$neutral-5: #eee;
+$neutral-6: #f4f4f4;
+$neutral-7: #fff;
+$accent: rgb(72, 168, 245);
 
 :root {
-  --color: #{$light-color};
-  --color-secondary: #{$light-color-secondary};
-  --color-tertiary: #{$light-color-tertiary};
-  --background: #{$light-background};
-  --background-secondary: #{$light-background-secondary};
-  --background-tertiary: #{$light-background-tertiary};
-  --header: #{$light-header};
-  --header-menu: #{$light-header-menu};
-  --audio: #{$light-audio};
-  --audio-secondary: #{$light-audio-secondary};
-  --border: #{$light-border};
-  --accent: #{$light-accent};
-}
-
-.dark {
-  --color: #{$dark-color};
-  --color-secondary: #{$dark-color-secondary};
-  --color-tertiary: #{$dark-color-tertiary};
-  --background: #{$dark-background};
-  --background-secondary: #{$dark-background-secondary};
-  --background-tertiary: #{$dark-background-tertiary};
-  --header: #{$dark-header};
-  --header-menu: #{$dark-header-menu};
-  --audio: #{$dark-audio};
-  --audio-secondary: #{$dark-audio-secondary};
-  --border: #{$dark-border};
-  --accent: #{$dark-accent};
+  --neutral-0: #{$neutral-0};
+  --neutral-1: #{$neutral-1};
+  --neutral-2: #{$neutral-2};
+  --neutral-3: #{$neutral-3};
+  --neutral-4: #{$neutral-4};
+  --neutral-5: #{$neutral-5};
+  --neutral-6: #{$neutral-6};
+  --neutral-7: #{$neutral-7};
+  --accent: #{$accent};
 }

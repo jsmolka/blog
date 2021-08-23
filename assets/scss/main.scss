@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 
+@import "variables";
+@import "flow";
+@import "fonts";
+@import "html";
+@import "post";
+
 @tailwind utilities;
 
 @import "utilities";

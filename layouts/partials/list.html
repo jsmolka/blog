@@ -1,0 +1,15 @@
+<div class="mb-16">
+  {{ range .Paginator.Pages }}
+    <a class="flex justify-between items-center py-4 first:border-t border-b border-neutral-5" href="{{ .RelPermalink }}">
+      <span class="pr-3">
+        {{ with .Params.Category }}
+          <span class="text-neutral-3">{{ . | markdownify }} / </span>
+        {{ end }}
+        {{ .Title | markdownify }}
+      </span>
+
+      <span class="text-sm text-neutral-3">{{ .Date.Format .Site.Params.dateFormat }}</span>
+    </a>
+  {{ end }}
+</div>
+{{ partial "pagination.html" . }}

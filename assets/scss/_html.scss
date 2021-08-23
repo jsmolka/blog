@@ -1,0 +1,44 @@
+@import "variables";
+
+html, body {
+  @apply w-full;
+  @apply h-full;
+}
+
+body {
+  @apply m-0;
+  @apply p-0;
+  @apply text-neutral-0;
+  @apply bg-neutral-7;
+  @apply font-inter;
+  @apply antialiased;
+
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: lighten($accent, 32.5%);
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+  @apply h-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-4;
+
+  &:hover {
+    @apply bg-neutral-3;
+  }
+}
+
+button:focus {
+  @apply outline-none;
+}
+
+audio:focus {
+  @apply outline-none;
+}
