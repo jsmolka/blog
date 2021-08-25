@@ -17,6 +17,10 @@
     @apply border-b;
     @apply border-primary;
     @apply border-dashed;
+
+    a {
+      @apply no-underline;
+    }
   }
 
   h1 { @apply text-3xl;  }

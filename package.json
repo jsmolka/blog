@@ -4,7 +4,9 @@
   "scripts": {
     "highlight": "node scripts/highlight.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "petite-vue": "^0.2.3"
+  },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "glob": "^7.1.7",

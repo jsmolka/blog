@@ -1,0 +1,19 @@
+{{ $caption := .Get "caption" }}
+{{ $src := add "/img/" (.Get "src") | safeURL }}
+{{ $srcDark := (add "/img/" (.Get "srcDark") | safeURL) }}
+{{ $alt := .Get "alt" | default $caption }}
+<figure class="w-full ml-0 mt-6 sm:ml-6 sm:mt-0 first:ml-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
+  {{ if and (.Get "src") (.Get "srcDark") }}
+    <span class="hidden dark:block">
+      {{ printf "![%s](%s)" $alt $srcDark | $.Page.RenderString }}
+    </span>
+    <span class="block dark:hidden">
+      {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
+    </span>
+  {{ else }}
+    {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
+  {{ end }}
+  {{ if $caption }}
+    <figcaption class="mt-1.5 text-sm text-center">{{ $caption | $.Page.RenderString }}</figcaption>
+  {{ end }}
+</figure>

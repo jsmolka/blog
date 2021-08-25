@@ -1,0 +1,4 @@
+{{ define "main" }}
+  {{ $paginator := .Paginate .Pages }}
+  {{ partial "list" . }}
+{{ end }}

@@ -1,6 +1,6 @@
 title = "Smolka"
 baseurl = "https://smolka.dev"
-paginate = 4
+paginate = 10
 disableKinds = ["RSS", "taxonomyTerm"]
 disableHugoGeneratorInject = true
 

@@ -1,0 +1,3 @@
+{{ $diff := now.Sub (time .Site.Params.birthDate) }}
+{{ $years := div (div $diff.Hours 24) 365.2422 }}
+{{- math.Floor $years -}}
