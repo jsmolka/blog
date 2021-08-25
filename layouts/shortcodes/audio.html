@@ -1,6 +1,6 @@
 {{ $caption := .Get "caption" }}
 {{ $src := add "/audio/" (.Get "src") | safeURL }}
-<figure class="w-full ml-0 mt-6 sm:ml-6 sm:mt-0 first:ml-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
+<figure class="self-start w-full ml-0 sm:ml-6 first:ml-0 mt-6 sm:mt-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
   <div class="audio-player w-full">
     <audio controls preload="metadata">
       <source src="{{ $src }}" type="audio/mpeg">

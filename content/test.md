@@ -1,7 +1,6 @@
 ---
 title: "Test"
 summary: "This is a test site."
-tags: ["testing", "those", "dimmed", "tags"]
 date: 2021-06-24
 type: post
 draft: true
@@ -20,21 +19,23 @@ Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ei
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 {{<flex>}}
-  {{<image src="eggvance/suite-passed.png" caption="Figure 1: [Test suite passed](https://www.google.de)" alt="Alternate">}}
-  {{<image src="eggvance/suite-failed.png" srcDark="eggvance/suite-failed.png" caption="Figure 2: Test suite failed">}}
+  {{<image src="eggvance/suite-passed.png" caption="[Test suite passed](/)" alt="Alternate">}}
+  {{<image src="eggvance/suite-failed.png" srcDark="eggvance/suite-failed.png" caption="Test suite failed">}}
 {{</flex>}}
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 {{<flex>}}
-  {{<audio src="eggvance/emerald-frontier.mp3" caption="Audio 3: Pokémon Emerald battle frontier theme all [channels](https://github.com)">}}
+  {{<audio src="eggvance/emerald-frontier.mp3" caption="Pokémon Emerald battle frontier theme all [channels](/)">}}
 {{</flex>}}
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 > Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 >
-> -- Me
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+>
+> --- Me
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -51,29 +52,24 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader) {
 }
 ```
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed `diam nonumy` eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+Lorem ipsum dolor sit amet, consetetur `sadipscing` elitr, sed diam `nonumy` eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-This is an ordered list with:
-1. item 1
-2. and item 2
-3. and item 3
-4. and item 4
+1. Lorem ipsum
+2. Lorem ipsum
+3. Lorem ipsum
+4. Lorem ipsum
 
-This is an unordered list with:
-- item 1
-- and item 2
-- and item 3
-- and item 4
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum [^2] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+- Lorem ipsum
+- Lorem ipsum
+- Lorem ipsum
+- Lorem ipsum
 
 Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum [^2] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ### Test
 
-Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum [^2] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-### This is a long heading
 Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum [^2] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ### Notes

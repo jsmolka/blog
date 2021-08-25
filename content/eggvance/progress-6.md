@@ -1,7 +1,6 @@
 ---
 title: "Progress Report #6"
 summary: "Sixth progress report of the eggvance GBA emulator."
-tags: ["eggvance", "emulation", "programming"]
 date: 2021-02-03
 type: post
 ---
@@ -34,9 +33,9 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader) {
 
 At first glance, there seems to be nothing wrong with it, but this comment doesn't agree:
 
-{{<quote cite="[camthesaxman](https://github.com/pret/pokeruby/blame/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L89)">}}
-BUG: This results in a null pointer dereference when `mapHeader->connections` is `NULL`, causing `count` to be assigned a garbage value. This garbage value just so happens to have the most significant bit set, so it is treated as negative and the loop below thankfully never executes in this scenario.
-{{</quote>}}
+>BUG: This results in a null pointer dereference when `mapHeader->connections` is `NULL`, causing `count` to be assigned a garbage value. This garbage value just so happens to have the most significant bit set, so it is treated as negative and the loop below thankfully never executes in this scenario.
+>
+> --- [camthesaxman](https://github.com/pret/pokeruby/blame/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L89)
 
 I never ran into this bug during testing because it has been fixed in [Pokémon Emerald](https://github.com/pret/pokeemerald/blob/64460e01aede2bbcaa8d1dd18dd3fab590fa4a6e/src/fieldmap.c#L114), and that's the game I usually use for quick testing (and pure nostalgia). The dereferenced null pointer returns something they call garbage, which is quite offensive to the poor BIOS, in my opinion. Why the BIOS? Because it starts at address zero, and that's where a dereferenced null pointer reads from.
 

@@ -1,7 +1,7 @@
 title = "Smolka"
 baseurl = "https://smolka.dev"
 paginate = 10
-disableKinds = ["RSS", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 disableHugoGeneratorInject = true
 
 [params]
@@ -28,7 +28,7 @@ disableHugoGeneratorInject = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
-      typographer = true
+      typographer = false
 
     [markup.goldmark.renderer]
       unsafe = true

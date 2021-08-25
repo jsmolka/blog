@@ -6,7 +6,7 @@
 
 <!-- Preload -->
 <link href="/fonts/merriweather-400.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
-<link href="/fonts/merrieather-700.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/fonts/merriweather-700.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
 <link href="/fonts/mono-400.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
 
 <!-- Favicon -->
@@ -29,6 +29,7 @@
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS "css/main.css" | postCSS (dict "config" "assets/scss/postcss.config.js") }}
 <link rel="stylesheet" href="{{ if .Site.IsServer }}{{ $style.RelPermalink }}{{ else }}{{ ($style | minify | fingerprint).RelPermalink }}{{ end }}">
 
+{{ partial "esbuild" (dict "ctx" . "path" "js/theme.js" "inline" true) }}
 {{ if .Site.IsServer }}
   {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
 {{ end }}

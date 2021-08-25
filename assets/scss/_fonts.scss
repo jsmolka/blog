@@ -4,8 +4,8 @@
     font-weight: $weight;
     font-style: normal;
     font-display: swap;
-    src: url('/fonts/' + $name + '-' + $weight + '.woff2') format('woff2'),
-         url('/fonts/' + $name + '-' + $weight + '.woff') format('woff');
+    src: url('/fonts/#{$name}-#{$weight}.woff2') format('woff2'),
+         url('/fonts/#{$name}-#{$weight}.woff') format('woff');
   }
 
   @font-face {
@@ -13,8 +13,8 @@
     font-weight: $weight;
     font-style: italic;
     font-display: swap;
-    src: url('/fonts/' + $name + '-' + $weight + '-italic.woff2') format('woff2'),
-         url('/fonts/' + $name + '-' + $weight + '-italic.woff') format('woff');
+    src: url('/fonts/#{$name}-#{$weight}-italic.woff2') format('woff2'),
+         url('/fonts/#{$name}-#{$weight}-italic.woff') format('woff');
   }
 }
 

@@ -1,7 +1,6 @@
 ---
 title: "Progress Report #7"
 summary: "Seventh progress report of the eggvance GBA emulator."
-tags: ["eggvance", "emulation", "programming"]
 date: 2021-05-11
 type: post
 ---
@@ -75,7 +74,7 @@ The last failing tests are extremely timing sensitive and don't even pass in mGB
 
 {{<table>}}
 | Test           | eggvance 0.1 | eggvance 0.2 | eggvance 0.3 | eggvance 1.0 | Total |
-|:---------------|:-------------|:-------------|:-------------|:-------------|:------|
+|:---------------|:-------------|:-------------|:-------------|:-------------|-------|
 | Memory         | 1452         | 1456         | 1552         | 1552         | 1552  |
 | Timing         | 457          | 404          | 1496         | 1496         | 1660  |
 | DMA            | 1048         | 1048         | 1220         | 1256         | 1256  |

@@ -1,6 +1,6 @@
 <header class="border-b border-primary border-dashed">
   <nav class="wrapper-x flex justify-between items-center py-3">
     <a class="font-bold tracking-widest uppercase" href="{{ $.Site.BaseURL }}">{{- $.Site.Title -}}</a>
-    <span class="cursor-pointer">Dark</span>
+    <span class="cursor-pointer text-sm select-none" onclick="window.theme && window.theme.toggle()">Dark</span>
   </nav>
 </header>

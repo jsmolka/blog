@@ -1,4 +1,6 @@
 {{ define "main" }}
-  {{ $paginator := .Paginate .Pages }}
-  {{ partial "list" . }}
+  <div class="wrapper-x wrapper-y">
+    {{ $paginator := .Paginate .Pages }}
+    {{ partial "list" . }}
+  </div>
 {{ end }}
