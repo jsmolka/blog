@@ -1,8 +1,151 @@
-@import "content";
+@import "variables";
 
 .post {
-  @extend .content;
+  @apply text-left;
+  @apply hyphens-auto;
+  @apply leading-7;
 
-  @apply text-justify;
-  @apply leading-relaxed;
+  @screen md {
+    @apply text-justify;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply mt-8;
+    @apply mb-4;
+    @apply pb-1;
+    @apply font-bold;
+    @apply border-b;
+    @apply border-primary;
+    @apply border-dashed;
+  }
+
+  h1 { @apply text-3xl;  }
+  h2 { @apply text-2xl;  }
+  h3 { @apply text-xl;   }
+  h4 { @apply text-lg;   }
+  h5 { @apply text-base; }
+  h6 { @apply text-base; }
+
+  @screen sm {
+    h1 { @apply text-4xl;  }
+    h2 { @apply text-3xl;  }
+    h3 { @apply text-2xl;  }
+    h4 { @apply text-xl;   }
+    h5 { @apply text-lg;   }
+    h6 { @apply text-base; }
+  }
+
+  p, ul, ol, blockquote {
+    @apply mt-4;
+    @apply mb-6;
+  }
+
+  a {
+    @apply underline;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  ul, ol {
+    @apply ml-5;
+
+    li {
+      @apply mt-1.5;
+
+      &:first-child {
+        @apply mt-0;
+      }
+    }
+  }
+
+  @screen sm {
+    ol, ul {
+      @apply ml-10;
+    }
+  }
+
+  table {
+    @apply w-full;
+    @apply border-collapse;
+
+    thead tr {
+      @apply border-b-2;
+    }
+
+    tbody tr {
+      @apply border-b;
+    }
+
+    th, td {
+      @apply px-3;
+      @apply py-2;
+    }
+  }
+
+  blockquote {
+    @apply px-3;
+    @apply py-2;
+    @apply border;
+    @apply border-dashed;
+
+    border-left: 5px solid var(--primary);
+
+    p {
+      @apply m-0;
+    }
+  }
+
+  a[href^="#fn:"] {
+    @apply no-underline;
+
+    &:before {
+      content: '[';
+    }
+
+    &:after {
+      content: ']';
+    }
+  }
+
+  sup {
+    @apply relative;
+    @apply top-0;
+    @apply text-base;
+
+    vertical-align: baseline;
+  }
+
+  .footnotes {
+    a[href^="#fnref:"] {
+      @apply no-underline;
+    }
+
+    hr {
+      @apply hidden;
+    }
+
+    ol {
+      @apply ml-5;
+    }
+
+    li {
+      counter-increment: footnote-count;
+
+      &::marker {
+        @apply pr-2;
+
+        content: "[" counter(footnote-count)"]";
+      }
+
+      p {
+        padding-left: 10px;
+      }
+    }
+  }
 }

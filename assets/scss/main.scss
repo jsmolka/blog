@@ -2,10 +2,11 @@
 @tailwind components;
 
 @import "variables";
-@import "flow";
 @import "fonts";
 @import "html";
 @import "post";
+@import "prism";
+@import "wrapper";
 
 @tailwind utilities;
 

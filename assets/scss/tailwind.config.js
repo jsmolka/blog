@@ -1,29 +1,23 @@
 const root = __dirname + '/../../';
 
-const font = name => [ name, 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif' ];
-
 module.exports = {
   darkMode: 'class',
   theme: {
     colors: {
-      accent: {
-        DEFAULT: 'var(--accent)',
-        faded: 'var(--accent-faded)',
-      },
-      neutral: {
-        0: 'var(--neutral-0)',
-        1: 'var(--neutral-1)',
-        2: 'var(--neutral-2)',
-        3: 'var(--neutral-3)',
-        4: 'var(--neutral-4)',
-        5: 'var(--neutral-5)',
-        6: 'var(--neutral-6)',
-        7: 'var(--neutral-7)',
-      },
+      primary: 'var(--primary)',
+      secondary: 'var(--secondary)',
+      tertiary: 'var(--tertiary)',
     },
     fontFamily: {
-      inter: font('Inter'),
+      merriweather: ['merriweather', 'serif'],
+      mono: ['mono', 'monospace'],
     },
+    screens: {
+      sm: '480px',
+      md: '45rem',
+      lg: '976px',
+      xl: '1440px',
+    }
   },
   variants: {
     extend: {

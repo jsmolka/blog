@@ -15,5 +15,9 @@
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS "css/main.css" | postCSS (dict "config" "assets/scss/postcss.config.js") }}
 <link rel="stylesheet" href="{{ if .Site.IsServer }}{{ $style.RelPermalink }}{{ else }}{{ ($style | minify | fingerprint).RelPermalink }}{{ end }}">
 
+{{ if .Site.IsServer }}
+  {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
+{{ end }}
+
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}

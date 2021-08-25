@@ -8,9 +8,9 @@ html, body {
 body {
   @apply m-0;
   @apply p-0;
-  @apply text-neutral-0;
-  @apply bg-neutral-7;
-  @apply font-inter;
+  @apply text-primary;
+  @apply bg-tertiary;
+  @apply font-merriweather;
   @apply antialiased;
 
   scroll-behavior: smooth;
@@ -19,21 +19,22 @@ body {
 }
 
 ::selection {
-  background: lighten($accent, 32.5%);
+  @apply text-tertiary;
+  @apply bg-primary;
 }
 
-::-webkit-scrollbar {
-  @apply w-2;
-  @apply h-2;
-}
+// ::-webkit-scrollbar {
+//   @apply w-2;
+//   @apply h-2;
+// }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-neutral-4;
+// ::-webkit-scrollbar-thumb {
+//   background: red;
 
-  &:hover {
-    @apply bg-neutral-3;
-  }
-}
+//   &:hover {
+//     background: blue;
+//   }
+// }
 
 button:focus {
   @apply outline-none;

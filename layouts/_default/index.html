@@ -1,12 +1,5 @@
 {{ define "main" }}
-  <div class="flow py-16">
-    <div class="flex justify-center mb-16 font-bold text-neutral-1 text-sm tracking-widest uppercase">
-      {{ range $.Site.Menus.main }}
-        {{ if not .HasChildren }}
-          <a class="mx-4" href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
-      {{ end }}
-    </div>
+  <div class="wrapper-x wrapper-y py-16">
     {{ $types := slice "post" "eggvance" }}
     {{ $pages := slice }}
     {{ range $types }}

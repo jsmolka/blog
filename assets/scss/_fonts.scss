@@ -1,8 +1,27 @@
-@font-face {
-  font-family: 'Inter';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url("/fonts/Inter.woff2") format("woff2");
+@mixin font($name, $weight) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+    src: url('/fonts/' + $name + '-' + $weight + '.woff2') format('woff2'),
+         url('/fonts/' + $name + '-' + $weight + '.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: italic;
+    font-display: swap;
+    src: url('/fonts/' + $name + '-' + $weight + '-italic.woff2') format('woff2'),
+         url('/fonts/' + $name + '-' + $weight + '-italic.woff') format('woff');
+  }
 }
+
+@include font('merriweather', 300);
+@include font('merriweather', 400);
+@include font('merriweather', 700);
+@include font('merriweather', 900);
+@include font('mono', 400);
+@include font('mono', 500);
+@include font('mono', 700);

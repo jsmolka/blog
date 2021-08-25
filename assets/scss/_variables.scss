@@ -1,21 +1,9 @@
-$neutral-0: #333;
-$neutral-1: #555;
-$neutral-2: #777;
-$neutral-3: #aaa;
-$neutral-4: #ccc;
-$neutral-5: #eee;
-$neutral-6: #f4f4f4;
-$neutral-7: #fff;
-$accent: rgb(72, 168, 245);
+$primary: rgb(51, 51, 51);
+$secondary: #555;
+$tertiary: rgb(255, 255, 255);
 
 :root {
-  --neutral-0: #{$neutral-0};
-  --neutral-1: #{$neutral-1};
-  --neutral-2: #{$neutral-2};
-  --neutral-3: #{$neutral-3};
-  --neutral-4: #{$neutral-4};
-  --neutral-5: #{$neutral-5};
-  --neutral-6: #{$neutral-6};
-  --neutral-7: #{$neutral-7};
-  --accent: #{$accent};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --tertiary: #{$tertiary};
 }

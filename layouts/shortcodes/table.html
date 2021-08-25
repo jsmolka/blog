@@ -1,0 +1,7 @@
+{{ $caption := .Get "caption" }}
+<figure class="mt-4 mb-6 overflow-x-auto">
+  {{ .Inner | markdownify }}
+  {{ if $caption }}
+    <figcaption class="mt-1.5 text-center">{{ $caption }}</figcaption>
+  {{ end }}
+</figure>
