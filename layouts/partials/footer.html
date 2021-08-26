@@ -1,7 +1,0 @@
-<div class="wrapper-x flex justify-center text-sm">
-  {{ range $.Site.Menus.main }}
-    {{ if not .HasChildren }}
-      <a class="px-3 py-6 hover:alpha" href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
-  {{ end }}
-</div>

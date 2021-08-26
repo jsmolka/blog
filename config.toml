@@ -28,7 +28,7 @@ disableHugoGeneratorInject = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
-      typographer = false
+      typographer = true
 
     [markup.goldmark.renderer]
       unsafe = true

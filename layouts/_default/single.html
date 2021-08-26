@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $meta := .Params.Meta | default true }}
-<div class="post wrapper-x wrapper-y py-16">
+<div class="post wrapper-x wrapper-y py-24">
   <h1 class="{{ if $meta -}} mb-2 {{- else -}} mb-6 {{ end }}">{{ .Title | markdownify }}</h1>
   {{ if $meta }}
     <div class="mb-6 text-secondary">
