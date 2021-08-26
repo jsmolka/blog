@@ -13,10 +13,10 @@ module.exports = {
       mono: ['mono', 'monospace'],
     },
     screens: {
-      sm: '30rem',
+      sm: '40rem',
       md: '45rem',
-      lg: '61rem',
-      xl: '90rem',
+      lg: '64rem',
+      xl: '80rem',
     },
   },
   variants: {
