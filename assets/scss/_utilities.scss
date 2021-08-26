@@ -9,3 +9,12 @@
   hyphenate-limit-last: always;
   hyphenate-limit-zone: 8%;
 }
+
+.reserve:after {
+  display: block;
+  content: attr(reserve);
+  height: 1px;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
