@@ -1,37 +1,35 @@
-import EventHandler from './eventHandler';
+import { attach } from './events';
 import { clamp } from './utils';
 
-class BarEventHandler {
-  constructor(bar) {
-    this.onDown = event => {};
-    this.onMove = event => {};
-    this.onUp = event => {};
+class BarEvents {
+  constructor(element) {
+    this.down = event => {};
+    this.move = event => {};
+    this.up   = event => {};
 
-    new EventHandler(bar).onDown(event => {
+    attach(element);
+
+    const down = event => {
       if (event.button === 2) {
         return;
       }
 
-      window.document.body.classList.add('select-none');
-      window.document.body.classList.add('cursor-pointer');
-
-      this.onDown(event);
-
-      const handler = new EventHandler(window);
-
-      handler.onMove(event => {
-        this.onMove(event);
-      });
-
-      handler.onUp(event => {
-        handler.offAll();
-
+      const up = event => {
+        window.removeEventListener('smolka::move', this.move);
+        window.removeEventListener('smolka::up', up);
         window.document.body.classList.remove('select-none');
         window.document.body.classList.remove('cursor-pointer');
+        this.up(event);
+      };
 
-        this.onUp(event);
-      })
-    });
+      window.addEventListener('smolka::move', this.move);
+      window.addEventListener('smolka::up', up);
+      window.document.body.classList.add('select-none');
+      window.document.body.classList.add('cursor-pointer');
+      this.down(event);
+    };
+
+    element.addEventListener('smolka::down', down);
   }
 }
 
@@ -49,7 +47,7 @@ export default class AudioPlayer {
     container.innerHTML += this.template;
 
     this.time = container.querySelector('.audio-time');
-    this.reserveTimeSpace();
+    this.reserveTimeWidth();
 
     this.progress = {
       bar: container.querySelector('.audio-progress-bar'),
@@ -79,7 +77,6 @@ export default class AudioPlayer {
       }
 
       this.updateTime();
-      this.reserveTimeSpace();
       this.initEvents();
     });
 
@@ -145,7 +142,7 @@ export default class AudioPlayer {
   }
 
   initProgressEvents() {
-    const handler = new BarEventHandler(this.progress.bar);
+    const events = new BarEvents(this.progress.bar);
 
     const setCurrentTime = event => {
       this.audio.currentTime = this.relativePosition(event, this.progress.barValue.parentNode) * this.audio.duration;
@@ -153,7 +150,7 @@ export default class AudioPlayer {
 
     let wasPaused = false;
 
-    handler.onDown = event => {
+    events.down = event => {
       wasPaused = this.audio.paused;
       if (!wasPaused) {
         this.pause()
@@ -161,11 +158,11 @@ export default class AudioPlayer {
       setCurrentTime(event);
     };
 
-    handler.onMove = event => {
+    events.move = event => {
       setCurrentTime(event);
     };
 
-    handler.onUp = event => {
+    events.up = event => {
       setCurrentTime(event);
       if (!wasPaused) {
         this.play();
@@ -187,8 +184,6 @@ export default class AudioPlayer {
         const show = hovered || grabbed;
         this.volume.bar.classList.toggle('w-20', show);
         this.volume.bar.classList.toggle('w-0', !show);
-        this.volume.button.classList.toggle('text-var-audio-secondary', show);
-        this.volume.button.classList.toggle('text-var-audio', !show);
       };
 
       this.volume.container.addEventListener('mouseenter', () => {
@@ -201,19 +196,19 @@ export default class AudioPlayer {
         updateUi();
       });
 
-      const handler = new BarEventHandler(this.volume.bar);
+      const events = new BarEvents(this.volume.bar);
 
-      handler.onDown = event => {
+      events.down = event => {
         this.setVolume(this.relativePosition(event, this.volume.barValue.parentNode));
       };
 
-      handler.onMove = event => {
+      events.move = event => {
         this.setVolume(this.relativePosition(event, this.volume.barValue.parentNode));
         grabbed = true;
         updateUi();
       };
 
-      handler.onUp = event => {
+      events.up = event => {
         this.setVolume(this.relativePosition(event, this.volume.barValue.parentNode));
         grabbed = false;
         updateUi();
@@ -253,6 +248,7 @@ export default class AudioPlayer {
     };
 
     this.time.innerHTML = `${format(this.audio.currentTime)} / ${format(this.audio.duration)}`;
+    this.reserveTimeWidth();
   }
 
   updateProgress() {
@@ -271,7 +267,7 @@ export default class AudioPlayer {
       : icons.volume;
   }
 
-  reserveTimeSpace() {
+  reserveTimeWidth() {
     const widestNumber = '6';
     const nonNumberCharacters = ': / :';
 

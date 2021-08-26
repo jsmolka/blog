@@ -59,7 +59,7 @@ window.Module = {
     this.fetching = true;
     button.innerHTML = 'Loading...';
     try {
-      const data = await this.readUrl('/data/year/celeste.gba');
+      const data = await this.readUrl('/data/celeste.gba');
       this.eggvanceLoadGba(this.fs.write(data, 'gba'));
     } finally {
       this.fetching = false;
@@ -84,7 +84,7 @@ window.Module = {
 createApp().mount();
 
 window.onload = () => {
-  theme.onChange = dark => {
+  window.theme.onChange = dark => {
     Module.updateBackground(dark)
   };
 
