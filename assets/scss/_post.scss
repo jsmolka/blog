@@ -9,24 +9,36 @@
     @apply text-justify;
   }
 
-  *:first-child {
-    @apply mt-0;
+  & > * {
+    @apply mt-4;
+    @apply mb-6;
+
+    &:first-child {
+      @apply mt-0;
+    }
+
+    &:last-child {
+      @apply mb-0;
+    }
   }
 
-  *:last-child {
-    @apply mb-0;
+  h1 {
+    @apply mb-3;
+    @apply pb-3;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply mb-1;
+    @apply pb-1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply mt-10;
-    @apply mb-2;
-    @apply pb-1;
-    @apply pb-2;
-    @apply font-bold;
+    @apply mt-9;
     @apply text-left;
-    @apply border-b;
-    @apply border-primary;
+    @apply font-bold;
+    @apply border-b-2;
     @apply border-dashed;
+    @apply border-midpoint;
 
     a {
       @apply no-underline;
@@ -49,16 +61,11 @@
     h6 { @apply text-base; }
   }
 
-  p {
-    @apply my-6;
-  }
-
   a {
     @apply underline;
   }
 
   ul, ol {
-    @apply my-6;
     @apply ml-5;
 
     li {
@@ -71,12 +78,12 @@
   }
 
   @screen sm {
-    ol, ul {
+    ul, ol {
       @apply ml-10;
     }
   }
 
-  ul { @apply list-disc; }
+  ul { @apply list-disc;    }
   ol { @apply list-decimal; }
 
   table {
@@ -85,12 +92,12 @@
 
     thead tr {
       @apply border-b-2;
-      @apply border-secondary;
+      @apply border-midpoint;
     }
 
     tbody tr {
       @apply border-b;
-      @apply border-secondary;
+      @apply border-midpoint;
     }
 
     th, td {
@@ -100,19 +107,20 @@
   }
 
   blockquote {
-    @apply my-6;
-    @apply px-3;
-    @apply py-2;
-    @apply border;
+    @apply px-4;
+    @apply py-2.5;
+    @apply border-2;
     @apply border-dashed;
+    @apply border-midpoint;
 
-    border-left: 5px solid var(--primary);
+    border-left-width: 5px;
+    border-left-style: solid;
 
     p {
       @apply my-0;
 
       &:not(:first-child) {
-        @apply mt-6;
+        @apply mt-3;
       }
     }
   }
@@ -155,7 +163,7 @@
       &::marker {
         @apply pr-2;
 
-        content: "[" counter(footnote-count)"]";
+        content: "[" counter(footnote-count) "]";
       }
 
       p {

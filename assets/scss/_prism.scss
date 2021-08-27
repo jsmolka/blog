@@ -38,22 +38,15 @@ code[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  @apply mt-4;
-  @apply mb-6;
-  @apply px-3;
-  @apply py-2;
-  @apply border;
+  @apply px-4;
+  @apply py-2.5;
+  @apply border-2;
   @apply border-dashed;
+  @apply border-midpoint;
   @apply overflow-auto;
 }
 
 :not(pre) > code {
-  background: darken($tertiary, 7.5%);
-
-  .dark & {
-    background: lighten($dark-tertiary, 10%);
-  }
-
   padding: 0.1rem 0.3rem;
 }
 

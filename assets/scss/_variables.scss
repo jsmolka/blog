@@ -2,10 +2,20 @@ $primary: rgb(51, 51, 51);
 $secondary: lighten($primary, 25%);
 $tertiary: rgb(255, 255, 255);
 
+$color: #333;
+$midpoint: #ccc;
+$background: #fff;
+$color-faded: mix($color, $midpoint, 50%);
+
 :root {
   --primary: #{$primary};
   --secondary: #{$secondary};
   --tertiary: #{$tertiary};
+
+  --color: #{$color};
+  --midpoint: #{$midpoint};
+  --background: #{$background};
+  --color-faded: #{$color-faded};
 }
 
 $dark-primary: rgb(169, 169, 179);

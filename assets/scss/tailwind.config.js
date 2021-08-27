@@ -7,6 +7,10 @@ module.exports = {
       primary: 'var(--primary)',
       secondary: 'var(--secondary)',
       tertiary: 'var(--tertiary)',
+      'color': 'var(--color)',
+      'color-faded': 'var(--color-faded)',
+      'midpoint': 'var(--midpoint)',
+      'background': 'var(--background)',
     },
     fontFamily: {
       merriweather: ['merriweather', 'serif'],
