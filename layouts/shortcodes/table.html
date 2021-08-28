@@ -1,7 +1,6 @@
-{{ $caption := .Get "caption" }}
 <figure class="overflow-x-auto">
-  {{ .Inner | markdownify }}
-  {{ if $caption }}
-    <figcaption class="mt-1.5 text-center">{{ $caption }}</figcaption>
+  {{ .Inner | $.Page.RenderString }}
+  {{ with .Get "caption" }}
+    <figcaption class="mt-1.5 text-sm text-center">{{ . | $.Page.RenderString }}</figcaption>
   {{ end }}
 </figure>

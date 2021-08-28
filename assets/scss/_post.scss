@@ -33,7 +33,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply mt-9;
+    @apply mt-8;
     @apply text-left;
     @apply font-bold;
     @apply border-b-2;
@@ -103,6 +103,10 @@
     th, td {
       @apply px-3;
       @apply py-2;
+    }
+
+    th {
+      @apply pt-0;
     }
   }
 

@@ -1,12 +1,20 @@
-{{ $config := imageConfig ((add "/static/" .Destination) | safeURL) }}
-
+{{ $config := imageConfig (add "/static/" .Destination) }}
 <a href="{{ .Destination | safeURL }}" target="_blank">
   <img
-    class="w-full"
-    src="{{ .Destination | safeURL }}"
+    class="lozad noscript-hidden w-full"
+    data-src="{{ .Destination | safeURL }}"
     alt="{{ .Text }}"
     width="{{ $config.Width }}"
     height="{{ $config.Height }}"
-    loading="lazy"
   />
+  <noscript>
+    <img
+      class="w-full"
+      src="{{ .Destination | safeURL }}"
+      alt="{{ .Text }}"
+      width="{{ $config.Width }}"
+      height="{{ $config.Height }}"
+      loading="lazy"
+    />
+  </noscript>
 </a>

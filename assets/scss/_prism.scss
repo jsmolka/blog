@@ -123,16 +123,21 @@ pre[class*="language-"] {
   @apply font-bold;
 }
 
-pre > code .token.deleted:not(.prefix) {
+pre > code .token.deleted:not(.prefix), code .token.inserted:not(.prefix) {
   @apply block;
+  @apply -mx-4;
 
-  background-color: rgba(255, 0, 0, 0.1);
   color: inherit;
+
+  & > *:first-child {
+    @apply ml-4;
+  }
+}
+
+pre > code .token.deleted:not(.prefix) {
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
 pre > code .token.inserted:not(.prefix) {
-  @apply block;
-
   background-color: rgba(0, 255, 128, 0.1);
-  color: inherit;
 }

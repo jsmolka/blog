@@ -1,12 +1,13 @@
-{{ $caption := .Get "caption" }}
-{{ $src := add "/audio/" (.Get "src") | safeURL }}
 <figure class="self-start w-full ml-0 sm:ml-6 first:ml-0 mt-6 sm:mt-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
-  <div class="audio-player w-full">
-    <audio controls preload="metadata">
-      <source src="{{ $src }}" type="audio/mpeg">
-    </audio>
+  {{ $cap := .Get "caption" }}
+  {{ $src := add "/audio/" (.Get "src") | safeURL }}
+  <div class="audio-player lozad w-full">
+    <audio class="noscript-hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata"></audio>
+    <noscript>
+      <audio src="{{ $src }}" type="audio/mp3" controls preload="metadata"></audio>
+    </noscript>
   </div>
-  {{ if $caption }}
-    <figcaption class="mt-1.5 text-sm text-center">{{ $caption | $.Page.RenderString }}</figcaption>
+  {{ with $cap }}
+    <figcaption class="mt-1.5 text-sm text-center">{{ . | $.Page.RenderString }}</figcaption>
   {{ end }}
 </figure>

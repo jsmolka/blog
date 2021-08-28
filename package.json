@@ -5,6 +5,7 @@
     "highlight": "node scripts/highlight.js"
   },
   "dependencies": {
+    "lozad": "^1.16.0",
     "petite-vue": "^0.2.3"
   },
   "devDependencies": {
