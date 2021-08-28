@@ -1,6 +1,7 @@
 ---
 title: "Progress Report #7"
 summary: "Seventh progress report of the eggvance GBA emulator."
+category: "Eggvance"
 date: 2021-05-11
 type: post
 ---

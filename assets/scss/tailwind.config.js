@@ -11,6 +11,7 @@ module.exports = {
       'color-faded': 'var(--color-faded)',
       'midpoint': 'var(--midpoint)',
       'background': 'var(--background)',
+      'accent': 'var(--accent)',
     },
     fontFamily: {
       merriweather: ['merriweather', 'serif'],

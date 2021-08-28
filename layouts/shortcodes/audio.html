@@ -2,9 +2,9 @@
   {{ $cap := .Get "caption" }}
   {{ $src := add "/audio/" (.Get "src") | safeURL }}
   <div class="audio-player lozad w-full">
-    <audio class="noscript-hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata"></audio>
+    <audio class="noscript-hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata" />
     <noscript>
-      <audio src="{{ $src }}" type="audio/mp3" controls preload="metadata"></audio>
+      <audio src="{{ $src }}" type="audio/mp3" controls preload="metadata" />
     </noscript>
   </div>
   {{ with $cap }}

@@ -7,7 +7,7 @@ draft: true
 ---
 Lorem ipsum [^1] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum [^2] dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-{{<table caption="[Table caption](/)">}}
+{{<table>}}
 | Version      | Pokémon Emerald | Yoshi's Island | Mother 3   |
 |:-------------|:----------------|:---------------|:-----------|
 | eggvance 0.1 | 575.7 fps       | 513.1 fps      | 639.4 fps  |

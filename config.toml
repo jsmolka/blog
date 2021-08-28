@@ -18,12 +18,12 @@ disableHugoGeneratorInject = true
     url = "/about"
 
   [[menu.main]]
-    name = "Drizzle"
-    url = "/drizzle"
+    name = "Posts"
+    url = "/posts"
 
   [[menu.main]]
-    name = "Eggvance"
-    url = "/eggvance"
+    name = "Projects"
+    url = "/projects"
 
 [markup]
   [markup.goldmark]
