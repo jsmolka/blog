@@ -1,13 +1,13 @@
 title = "Smolka"
 baseurl = "https://smolka.dev"
 paginate = 10
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomyTerm"]
 disableHugoGeneratorInject = true
 
 [params]
   language = "en-US"
-  description = "One obsession at a time."
-  keywords = ["smolka", "cycling", "eggvance"]
+  description = "Just another dark corner of the internet."
+  keywords = ["smolka", "programming", "eggvance", "cycling"]
   theme = "light"
   dateFormat = "2006/01/02"
   birthDate = "1998-05-11"
@@ -24,6 +24,18 @@ disableHugoGeneratorInject = true
   [[menu.main]]
     name = "Projects"
     url = "/projects"
+
+  [[menu.footer]]
+    name = "GitHub"
+    url = "https://github.com/jsmolka"
+
+  [[menu.footer]]
+    name = "RSS"
+    url = "/index.xml"
+
+  [[menu.footer]]
+    name = "Strava"
+    url = "https://www.strava.com/athletes/juliansmolka"
 
 [markup]
   [markup.goldmark]

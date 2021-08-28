@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Params.Language }}" class="{{ if eq $.Site.Params.theme "dark" }}dark{{ end }}">
+<html lang="{{- .Site.Params.Language -}}" {{ if eq $.Site.Params.theme "dark" }}class="dark"{{ end }}>
   <head>
-    {{ partial "head.html" . }}
+    {{ partial "head" . }}
     {{ block "head" . }}
     {{ end }}
   </head>
   <body class="flex flex-col">
-    {{ partial "header.html" . }}
+    {{ partial "header" . }}
     {{ block "main" . }}
     {{ end }}
+    {{ partial "footer" . }}
   </body>
 </html>

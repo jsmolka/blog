@@ -1,0 +1,14 @@
+<div class="mt-0 text-color-faded">
+  {{ if .Date }}
+    {{ .Date.Format ($.Site.Params.DateFormat | default "2006-01-02") }} &mdash;
+  {{ end }}
+  {{ .ReadingTime }} min read
+
+  {{ if .Params.keywords }}
+    <div class="flex flex-wrap mt-1">
+      {{ range .Params.keywords }}
+        <a class="mr-2 last:mr-0" href="{{ (urlize (printf "tags/%s/" . )) | absURL }}" style="text-decoration: none">#{{ . }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

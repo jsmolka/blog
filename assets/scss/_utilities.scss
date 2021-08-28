@@ -18,3 +18,9 @@
   overflow: hidden;
   visibility: hidden;
 }
+
+.wrap {
+  @apply max-w-screen-md;
+  @apply mx-auto;
+  @apply px-4;
+}

@@ -4,6 +4,6 @@
   {{ $alt := .Get "alt" | default $cap }}
   {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
   {{ with $cap }}
-    <figcaption class="mt-1.5 text-sm text-center">{{ . | $.Page.RenderString }}</figcaption>
+    <figcaption class="mt-1.5 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>
