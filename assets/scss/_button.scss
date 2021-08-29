@@ -1,0 +1,18 @@
+button, .button {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply px-3;
+  @apply py-2;
+  @apply text-color;
+  @apply bg-background;
+  @apply font-bold;
+  @apply border-2;
+  @apply border-color;
+  @apply cursor-pointer;
+
+  &:hover {
+    @apply text-background;
+    @apply bg-color;
+  }
+}

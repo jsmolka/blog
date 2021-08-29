@@ -1,13 +1,13 @@
 {{ if (or .Paginator.HasPrev .Paginator.HasNext) }}
   <div class="flex justify-center items-center">
     {{ if .Paginator.HasPrev }}
-      <a class="button flex items-center first:mr-2 font-bold" href="{{ .Paginator.Prev.URL }}">
+      <a class="button first:mr-2" href="{{ .Paginator.Prev.URL }}">
         <span class="mr-1">{{ partial "icon/arrow-left" "1rem" }}</span>
         <span>Go forward in time</span>
       </a>
     {{ end }}
     {{ if .Paginator.HasNext }}
-      <a class="button flex items-center last:ml-2 font-bold" href="{{ .Paginator.Next.URL }}">
+      <a class="button last:ml-2" href="{{ .Paginator.Next.URL }}">
         <span>Go back in time</span>
         <span class="ml-1">{{ partial "icon/arrow-right" "1rem" }}</span>
       </a>
