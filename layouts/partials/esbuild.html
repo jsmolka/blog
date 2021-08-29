@@ -1,6 +1,6 @@
 {{ if .ctx.Site.IsServer }}
   {{ $script := resources.Get .path | js.Build (dict "target" "es2015") }}
-  <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
+  <script type="text/javascript" src="{{ $script.Permalink }}"></script>
 {{ else }}
   {{ $script := resources.Get .path | js.Build (dict "target" "es2015" "minify" true) | fingerprint }}
   {{ if .inline | default false }}
@@ -8,6 +8,6 @@
       {{ $script.Content | safeJS }}
     </script>
   {{ else }}
-    <script type="text/javascript" src="{{ $script.RelPermalink }}"></script>
+    <script type="text/javascript" src="{{ $script.Permalink }}"></script>
   {{ end }}
 {{ end }}
