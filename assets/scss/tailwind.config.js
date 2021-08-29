@@ -2,8 +2,15 @@ const root = __dirname + '/../../';
 
 module.exports = {
   darkMode: 'class',
+  corePlugins: {
+    container: false,
+  },
   theme: {
     colors: {
+      alpha: {
+        10: 'rgba(0, 0, 0, 0.1)',
+      },
+      dark: 'rgb(37, 38, 39)',
       neutral: {
         1: 'var(--neutral-1)',
         2: 'var(--neutral-2)',
@@ -24,9 +31,6 @@ module.exports = {
       xl: '80rem',
     },
     extend: {
-      boxShadow: {
-        container: 'inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)',
-      },
       width: {
         fit: 'fit-content',
       },
@@ -34,6 +38,9 @@ module.exports = {
   },
   variants: {
     extend: {
+      borderStyle: [
+        'dark',
+      ],
       borderWidth: [
         'first',
         'last',

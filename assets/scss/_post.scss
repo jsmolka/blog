@@ -112,12 +112,8 @@
   blockquote {
     @apply px-4;
     @apply py-2.5;
-    @apply border;
-    @apply border-dashed;
+    @apply border-l-4;
     @apply border-neutral-3;
-
-    border-left-width: 5px;
-    border-left-style: solid;
 
     p {
       @apply my-0;
