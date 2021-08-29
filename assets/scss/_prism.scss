@@ -1,24 +1,4 @@
-@import "variables";
-
-$aurora-0: #bf616a;
-$aurora-1: #d08770;
-$aurora-2: #ebcb8b;
-$aurora-3: #a3be8c;
-$aurora-4: #b48ead;
-
-$frost-0: #8fbcbb;
-$frost-1: #88c0d0;
-$frost-2: #81a1c1;
-$frost-3: #5e81ac;
-
-$snow-storm-0: #d8dee9;
-$snow-storm-1: #e5e9f0;
-$snow-storm-2: #eceff4;
-
-$polar-night-0: #2e3440;
-$polar-night-1: #3b4252;
-$polar-night-2: #434c5e;
-$polar-night-3: #4c566a;
+@import "nord";
 
 code {
   @apply font-mono;
@@ -40,7 +20,7 @@ code[class*="language-"] {
 pre[class*="language-"] {
   @apply px-4;
   @apply py-2.5;
-  @apply border-2;
+  @apply border;
   @apply border-dashed;
   @apply border-neutral-3;
   @apply overflow-x-auto;

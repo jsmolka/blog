@@ -14,7 +14,7 @@ module.exports = {
       accent: 'var(--accent)',
     },
     fontFamily: {
-      merriweather: 'merriweather, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+      merriweather: 'roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
       mono: 'mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     },
     screens: {
@@ -22,6 +22,14 @@ module.exports = {
       md: '45rem',
       lg: '64rem',
       xl: '80rem',
+    },
+    extend: {
+      boxShadow: {
+        container: 'inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)',
+      },
+      width: {
+        fit: 'fit-content',
+      },
     },
   },
   variants: {

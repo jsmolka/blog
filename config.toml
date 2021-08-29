@@ -1,4 +1,4 @@
-title = "Smolka"
+title = "smolka"
 baseurl = "https://smolka.dev"
 paginate = 10
 disableKinds = ["taxonomyTerm"]

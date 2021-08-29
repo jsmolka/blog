@@ -280,7 +280,7 @@ export default class AudioPlayer {
 
   get template() {
     return /* html */ `
-      <div class="flex items-center p-1 text-neutral-2 border-2 border-dashed border-neutral-3">
+      <div class="flex items-center p-1 text-neutral-2 border border-dashed border-neutral-3">
         <div class="audio-play-pause-button p-1 select-none cursor-pointer">
           <svg class="mb-px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path class="audio-play-pause-button-path" d="${icons.play}" />

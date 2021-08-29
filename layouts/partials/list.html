@@ -1,18 +1,18 @@
 {{ range .Paginator.Pages }}
-  <div class="py-8 first:pt-0 border-b-2 border-dashed border-neutral-3">
-    <h1 class="mb-6 text-2xl sm:text-3xl font-bold">
+  <div class="post py-8 first:pt-0 border-b-2 border-dashed border-neutral-3">
+    <h1>
       <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
     </h1>
 
     {{ partial "meta" . }}
 
-    <div class="post mt-6">
+    <div class="mb-0">
       {{ with .Summary }}
         {{ . | $.Page.RenderString }}
       {{ end }}
     </div>
 
-    <a class="inline-flex items-center mt-2 font-bold" href="{{ .RelPermalink }}">
+    <a class="inline-flex items-center mt-2 font-bold" href="{{ .RelPermalink }}" style="text-decoration: none">
       <span>Read more</span>
       <span class="ml-1">{{ partial "icon/arrow-right" "1rem" }}</span>
     </a>

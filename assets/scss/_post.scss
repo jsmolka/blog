@@ -10,8 +10,7 @@
   }
 
   & > * {
-    @apply mt-2;
-    @apply mb-6;
+    @apply my-6;
 
     &:first-child {
       @apply mt-0;
@@ -22,23 +21,31 @@
     }
   }
 
-  h1 {
-    @apply mb-3;
+  h1, h2  {
+    @apply pb-4;
+  }
+
+  h3, h4, h5, h6 {
     @apply pb-3;
   }
 
-  h2, h3, h4, h5, h6 {
-    @apply mb-2;
-    @apply pb-2;
-  }
-
   h1, h2, h3, h4, h5, h6 {
-    @apply mt-9;
-    @apply text-left;
+    @apply relative;
+    @apply w-fit;
+    @apply mt-8;
     @apply font-bold;
-    @apply border-b-2;
-    @apply border-dashed;
-    @apply border-neutral-3;
+
+    &:after {
+      @apply absolute;
+      @apply bottom-0;
+      @apply left-0;
+      @apply w-16;
+      @apply max-w-full;
+      @apply bg-accent;
+
+      height: 3px;
+      content: "";
+    }
 
     a {
       @apply no-underline;
@@ -105,7 +112,7 @@
   blockquote {
     @apply px-4;
     @apply py-2.5;
-    @apply border-2;
+    @apply border;
     @apply border-dashed;
     @apply border-neutral-3;
 
