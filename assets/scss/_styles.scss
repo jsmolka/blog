@@ -20,8 +20,9 @@ body {
 }
 
 ::selection {
-  @apply bg-neutral-1;
-  @apply text-neutral-5;
+  @apply bg-accent;
+
+  color: $neutral-1;
 }
 
 ::-webkit-scrollbar {
