@@ -1,5 +1,5 @@
 <footer class="flex items-center mx-auto py-6 text-sm">
   {{ range $.Site.Menus.footer }}
-    <a class="mr-6 last:mr-0" href="{{ .URL | absURL }}" {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}>{{- .Name | safeHTML -}}</a>
+    <a class="mr-6 last:mr-0" href="{{ .URL | safeURL }}" {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}>{{- .Name | safeHTML -}}</a>
   {{ end }}
 </footer>
