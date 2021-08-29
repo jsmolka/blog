@@ -1,23 +1,21 @@
-<div class="mb-16">
-  {{ range .Paginator.Pages }}
-    <div class="py-8 first:pt-0 border-b-2 border-dashed border-neutral-3">
-      <h1 class="mb-6 text-2xl sm:text-3xl font-bold">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </h1>
+{{ range .Paginator.Pages }}
+  <div class="py-8 first:pt-0 border-b-2 border-dashed border-neutral-3">
+    <h1 class="mb-6 text-2xl sm:text-3xl font-bold">
+      <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
+    </h1>
 
-      {{ partial "meta" . }}
+    {{ partial "meta" . }}
 
-      <div class="post mt-6">
-        {{ with .Summary }}
-          {{ . | markdownify }}
-        {{ end }}
-      </div>
-
-      <a class="inline-flex items-center mt-2 font-bold" href="{{ .RelPermalink }}">
-        <span>Read more</span>
-        <span class="ml-1">{{ partial "icon/arrow-right" "1rem" }}</span>
-      </a>
+    <div class="post mt-6">
+      {{ with .Summary }}
+        {{ . | $.Page.RenderString }}
+      {{ end }}
     </div>
-  {{ end }}
-</div>
+
+    <a class="inline-flex items-center mt-2 font-bold" href="{{ .RelPermalink }}">
+      <span>Read more</span>
+      <span class="ml-1">{{ partial "icon/arrow-right" "1rem" }}</span>
+    </a>
+  </div>
+{{ end }}
 {{ partial "pagination" . }}

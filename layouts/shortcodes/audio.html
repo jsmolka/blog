@@ -1,7 +1,7 @@
 <figure class="self-start w-full ml-0 sm:ml-6 first:ml-0 mt-6 sm:mt-0 first:mt-0 {{ with .Get "class" }}{{ . }}{{ end }}">
   {{ $cap := .Get "caption" }}
   {{ $src := add "/audio/" (.Get "src") | safeURL }}
-  <div class="audio-player lozad w-full">
+  <div class="audio-player w-full">
     <audio class="noscript-hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata" />
     <noscript>
       <audio src="{{ $src }}" type="audio/mp3" controls preload="metadata" />

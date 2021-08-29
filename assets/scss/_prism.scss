@@ -23,7 +23,7 @@ $polar-night-3: #4c566a;
 code {
   @apply font-mono;
 
-  font-size: 0.9rem;
+  font-size: 0.925rem;
 }
 
 pre[class*="language-"],
@@ -43,7 +43,7 @@ pre[class*="language-"] {
   @apply border-2;
   @apply border-dashed;
   @apply border-neutral-3;
-  @apply overflow-auto;
+  @apply overflow-x-auto;
 }
 
 :not(pre) > code {

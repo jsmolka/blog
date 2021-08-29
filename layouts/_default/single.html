@@ -1,10 +1,13 @@
 {{ define "main" }}
   <div class="post wrap w-full my-auto py-16">
-    {{ $meta := .Params.Meta | default true }}
-    <h1 class="{{ if $meta }}mb-2{{ end }}">{{- .Title | $.Page.RenderString -}}</h1>
-    {{ if $meta }}
-      {{ partial "meta" . }}
-    {{ end}}
+    {{ $showTitle := .Params.ShowTitle | default true }}
+    {{ if $showTitle }}
+      {{ $showMeta := .Params.ShowMeta | default true }}
+      <h1 class="{{ if $showMeta }}mb-2{{ end }}">{{- .Title | safeHTML -}}</h1>
+      {{ if $showMeta }}
+        {{ partial "meta" . }}
+      {{ end}}
+    {{ end }}
     {{ .Content }}
   </div>
 {{ end }}

@@ -73,7 +73,7 @@ export default class AudioPlayer {
       if (this.isMobileDevice) {
         this.setVolume(0.66);
       } else {
-        this.setVolume(parseFloat(localStorage.getItem('volume') || '0.5'));
+        this.setVolume(parseFloat(localStorage.getItem('volume') ?? '0.66'));
       }
 
       this.updateTime();

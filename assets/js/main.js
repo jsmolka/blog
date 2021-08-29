@@ -3,22 +3,22 @@ import AudioPlayer from './audioPlayer';
 import { attach } from './events';
 import initMenu from './menu';
 
-const load = function(element) {
-  if (element.classList.contains('audio-player')) {
-    for (const audio of element.querySelectorAll('audio')) {
-      load(audio);
-    }
-  } else {
-    element.src = element.getAttribute('data-src');
-  }
-}
-
-const observer = lozad('.lozad', {
+const lozadOptions = {
   rootMargin: '256px 0px',
-  load
-});
+};
 
+const observer = lozad('.lozad', lozadOptions);
 observer.observe();
+
+const audioObserver = lozad('.audio-player', {
+  ...lozadOptions,
+  load: function(element) {
+    for (const audio of element.querySelectorAll('audio')) {
+      audio.src = audio.getAttribute('data-src');
+    }
+  }
+});
+audioObserver.observe();
 
 for (const element of document.querySelectorAll('.audio-player')) {
   new AudioPlayer(element);

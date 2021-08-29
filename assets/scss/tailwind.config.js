@@ -14,8 +14,8 @@ module.exports = {
       accent: 'var(--accent)',
     },
     fontFamily: {
-      merriweather: ['merriweather', 'serif'],
-      mono: ['mono', 'monospace'],
+      merriweather: 'merriweather, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+      mono: 'mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     },
     screens: {
       sm: '40rem',
@@ -38,7 +38,7 @@ module.exports = {
         'first',
         'last',
       ],
-    }
+    },
   },
   purge: {
     enabled: process.env.HUGO_ENVIRONMENT === 'production',
