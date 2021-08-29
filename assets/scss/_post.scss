@@ -38,7 +38,7 @@
     @apply font-bold;
     @apply border-b-2;
     @apply border-dashed;
-    @apply border-midpoint;
+    @apply border-neutral-3;
 
     a {
       @apply no-underline;
@@ -84,12 +84,12 @@
 
     thead tr {
       @apply border-b-2;
-      @apply border-midpoint;
+      @apply border-neutral-3;
     }
 
     tbody tr {
       @apply border-b;
-      @apply border-midpoint;
+      @apply border-neutral-3;
     }
 
     th, td {
@@ -107,7 +107,7 @@
     @apply py-2.5;
     @apply border-2;
     @apply border-dashed;
-    @apply border-midpoint;
+    @apply border-neutral-3;
 
     border-left-width: 5px;
     border-left-style: solid;

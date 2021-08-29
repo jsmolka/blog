@@ -4,14 +4,14 @@ module.exports = {
   darkMode: 'class',
   theme: {
     colors: {
-      primary: 'var(--primary)',
-      secondary: 'var(--secondary)',
-      tertiary: 'var(--tertiary)',
-      'color': 'var(--color)',
-      'color-faded': 'var(--color-faded)',
-      'midpoint': 'var(--midpoint)',
-      'background': 'var(--background)',
-      'accent': 'var(--accent)',
+      neutral: {
+        1: 'var(--neutral-1)',
+        2: 'var(--neutral-2)',
+        3: 'var(--neutral-3)',
+        4: 'var(--neutral-4)',
+        5: 'var(--neutral-5)',
+      },
+      accent: 'var(--accent)',
     },
     fontFamily: {
       merriweather: ['merriweather', 'serif'],

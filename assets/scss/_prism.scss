@@ -28,8 +28,8 @@ code {
 
 pre[class*="language-"],
 code[class*="language-"] {
-  @apply whitespace-pre;
   @apply leading-relaxed;
+  @apply whitespace-pre;
   @apply hyphens-none;
 
   .table {
@@ -42,11 +42,13 @@ pre[class*="language-"] {
   @apply py-2.5;
   @apply border-2;
   @apply border-dashed;
-  @apply border-midpoint;
+  @apply border-neutral-3;
   @apply overflow-auto;
 }
 
 :not(pre) > code {
+  @apply bg-neutral-4;
+
   padding: 0.1rem 0.3rem;
 }
 

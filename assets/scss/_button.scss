@@ -4,15 +4,15 @@ button, .button {
   @apply items-center;
   @apply px-3;
   @apply py-2;
-  @apply text-color;
-  @apply bg-background;
+  @apply text-neutral-1;
+  @apply bg-neutral-5;
   @apply font-bold;
   @apply border-2;
-  @apply border-color;
+  @apply border-neutral-1;
   @apply cursor-pointer;
 
   &:hover {
-    @apply text-background;
-    @apply bg-color;
+    @apply text-neutral-5;
+    @apply bg-neutral-1;
   }
 }
