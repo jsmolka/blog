@@ -1,7 +1,7 @@
 ---
 title: "Test"
 summary: "This is a test site."
-keywords: ["these", "are", "nice", "tags"]
+tags: ["these", "are", "nice", "tags"]
 date: 2021-06-24
 type: post
 draft: true

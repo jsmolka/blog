@@ -4,9 +4,9 @@
   {{ end }}
   {{ .ReadingTime }} min read
 
-  {{ if .Params.keywords }}
+  {{ if .Params.Tags }}
     <div class="flex flex-wrap mt-1">
-      {{ range .Params.keywords }}
+      {{ range .Params.Tags }}
         <a class="mr-2 last:mr-0" href="{{ (urlize (printf "tags/%s/" . )) | absURL }}" style="text-decoration: none">#{{ . }}</a>
       {{ end }}
     </div>

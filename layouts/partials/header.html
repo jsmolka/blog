@@ -15,17 +15,17 @@
         <a class="flex items-center h-full px-4" href="{{ .URL | safeURL }}">{{ .Name }}</a>
       {{ end }}
       <div class="theme-button flex items-center h-full -mr-4 px-4 cursor-pointer select-none">
-        {{ partial "icon-theme" 20 }}
+        {{ partial "icon/theme" 20 }}
       </div>
     </div>
     <!-- Mobile -->
     <div class="flex sm:hidden items-center">
       <div class="theme-button flex items-center h-full px-4 cursor-pointer select-none">
-        {{ partial "icon-theme" 20 }}
+        {{ partial "icon/theme" 20 }}
       </div>
       <div class="relative h-full">
         <button class="menu-button flex items-center h-full -mr-4 px-4">
-          {{ partial "icon-menu" 24 }}
+          {{ partial "icon/menu" 24 }}
         </button>
         <!-- Menu -->
         <div class="menu hidden">

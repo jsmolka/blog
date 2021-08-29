@@ -1,9 +1,23 @@
 <div class="mb-16">
   {{ range .Paginator.Pages }}
-    <a class="flex justify-between items-center py-4 border-b-2 border-dashed border-midpoint" href="{{ .RelPermalink }}">
-      <span class="pr-3">{{- .Title | $.Page.RenderString -}}</span>
-      <span>{{ .Date.Format .Site.Params.dateFormat }}</span>
-    </a>
+    <div class="py-8 first:pt-0 border-b-2 border-dashed border-midpoint">
+      <h1 class="mb-6 text-2xl sm:text-3xl font-bold">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h1>
+
+      {{ partial "meta" . }}
+
+      <div class="post mt-6">
+        {{ with .Summary }}
+          {{ . | markdownify }}
+        {{ end }}
+      </div>
+
+      <a class="inline-flex items-center mt-2 font-bold" href="{{ .RelPermalink }}">
+        <span>Read more</span>
+        <span class="ml-1">{{ partial "icon/arrow-right" "1rem" }}</span>
+      </a>
+    </div>
   {{ end }}
 </div>
 {{ partial "pagination" . }}
