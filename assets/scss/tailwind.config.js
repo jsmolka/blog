@@ -7,10 +7,6 @@ module.exports = {
   },
   theme: {
     colors: {
-      alpha: {
-        10: 'rgba(0, 0, 0, 0.1)',
-      },
-      dark: 'rgb(37, 38, 39)',
       neutral: {
         1: 'var(--neutral-1)',
         2: 'var(--neutral-2)',
@@ -19,6 +15,8 @@ module.exports = {
         5: 'var(--neutral-5)',
       },
       accent: 'var(--accent)',
+      header: 'var(--header)',
+      border: 'var(--border)',
     },
     fontFamily: {
       merriweather: 'roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',

@@ -12,7 +12,7 @@ Finishing the previous project also meant looking for a new one. The idea of cre
 ### Black Box
 The inner workings of an emulator were completely alien to me. It was a black box that took input in form of ROMs and produced output in form of childhood nostalgia. Not knowing anything about video console emulation or something alike, I headed out to [/r/EmuDev](https://www.reddit.com/r/EmuDev/) and asked how to get started. The people there proposed the typical order for someone new to emulation:
 
-1. Write a [Chip-8](https://en.wikipedia.org/wiki/CHIP-8) emulator -- the "Hello World" of emulation
+1. Write a [Chip-8](https://en.wikipedia.org/wiki/CHIP-8) emulator &ndash; the "Hello World" of emulation
 2. Write an emulator for a simpler console like the GB or the NES
 3. Do the thing you actually want to do
 
@@ -59,18 +59,18 @@ The last thing I did was clean up the memory interface. I implemented things lik
 A precondition for playing through a whole game were working save implementations for SRAM, EEPROM, and Flash. Finding out which one to use and understanding how each of them works took some time, but I managed to figure it out in the end.
 
 ### Milestones
-- 19/01/30 -- Initial commit
-- 19/04/20 -- Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
-- 19/05/02 -- Displays Tonc bitmap demos
-- 19/05/29 -- Displays Tonc regular sprite and background demos
-- 19/06/08 -- Displays Tonc affine sprite and background demos
-- 19/06/27 -- Displays Tonc graphic effect demos
-- 19/07/03 -- Displays Tonc interrupt and bios call demos
-- 19/07/11 -- Displays Tonc mode 7 demos
-- 19/07/14 -- Runs Kirby: Nightmare In Dreamland
-- 19/07/16 -- Displays the BIOS
-- 19/08/07 -- Displays all Tonc demos
-- 19/08/17 -- Runs Pokémon Emerald
+- 19/01/30 &ndash; Initial commit
+- 19/04/20 &ndash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
+- 19/05/02 &ndash; Displays Tonc bitmap demos
+- 19/05/29 &ndash; Displays Tonc regular sprite and background demos
+- 19/06/08 &ndash; Displays Tonc affine sprite and background demos
+- 19/06/27 &ndash; Displays Tonc graphic effect demos
+- 19/07/03 &ndash; Displays Tonc interrupt and bios call demos
+- 19/07/11 &ndash; Displays Tonc mode 7 demos
+- 19/07/14 &ndash; Runs Kirby: Nightmare In Dreamland
+- 19/07/16 &ndash; Displays the BIOS
+- 19/08/07 &ndash; Displays all Tonc demos
+- 19/08/17 &ndash; Runs Pokémon Emerald
 
 ### Some Working Games
 - Advance Wars

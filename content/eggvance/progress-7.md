@@ -59,7 +59,7 @@ void insert(Event& item) {
 
 Using a list might seem counterintuitive, but most events are scheduled on short notice (like interrupt delays) or are infrequent enough to not tank performance. The scheduler itself was a great addition. It decreased complexity and improved performance as well as readability.
 
-### Edging closer to Perfection
+### Edging Closer to Perfection
 Nintendo developed a test cartridge for the GBA called [AGS Aging](https://tcrf.net/AGS_Aging_Cartridge). It contains a fair amount of demanding hardware tests for various parts of the system. It fails on most emulators and even some GBA hardware clones. There is only one emulator that I know of which passes all tests: [NanoBoyAdvance](https://github.com/fleroviux/NanoBoyAdvance). That is mostly due to the extremely accurate prefetch buffer emulation.
 
 {{<flex>}}

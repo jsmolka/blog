@@ -7,7 +7,7 @@ type: post
 ---
 Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance, and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
 
-### State-dependent Dispatching
+### State-Dependent Dispatching
 The first thing I want to talk about is something I call "state-dependent dispatching," even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
 
 - Which mode is the processor in?

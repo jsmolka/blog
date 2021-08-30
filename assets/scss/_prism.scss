@@ -20,14 +20,13 @@ code[class*="language-"] {
 pre[class*="language-"] {
   @apply px-4;
   @apply py-2.5;
-  @apply bg-neutral-5;
+  @apply bg-header;
   @apply border;
-  @apply border-alpha-10;
+  @apply border-border;
   @apply overflow-x-auto;
 
   .dark & {
-    @apply bg-dark;
-    @apply border-none;
+    @apply border-header;
   }
 }
 

@@ -5,9 +5,11 @@ button, .button {
   @apply py-1;
   @apply bg-neutral-5;
   @apply text-neutral-1;
-  @apply font-bold;
-  @apply border-2;
+  @apply font-medium;
+  @apply border;
   @apply border-neutral-1;
+  @apply rounded-sm;
+  @apply shadow-sm;
   @apply cursor-pointer;
 
   &:hover {

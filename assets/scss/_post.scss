@@ -3,14 +3,15 @@
 .post {
   @apply text-left;
   @apply hyphens-auto;
-  @apply leading-7;
+
+  line-height: 1.7rem;
 
   @screen md {
     @apply text-justify;
   }
 
   & > * {
-    @apply my-6;
+    @apply my-5;
 
     &:first-child {
       @apply mt-0;
@@ -22,11 +23,11 @@
   }
 
   h1, h2  {
-    @apply pb-4;
+    @apply pb-3;
   }
 
   h3, h4, h5, h6 {
-    @apply pb-3;
+    @apply pb-2;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -102,6 +103,7 @@
     th, td {
       @apply px-3;
       @apply py-2;
+      @apply whitespace-nowrap;
     }
 
     th {
@@ -119,7 +121,7 @@
       @apply my-0;
 
       &:not(:first-child) {
-        @apply mt-3;
+        @apply mt-2.5;
       }
     }
   }

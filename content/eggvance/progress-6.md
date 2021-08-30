@@ -36,7 +36,7 @@ At first glance, there seems to be nothing wrong with it, but this comment doesn
 
 >BUG: This results in a null pointer dereference when `mapHeader->connections` is `NULL`, causing `count` to be assigned a garbage value. This garbage value just so happens to have the most significant bit set, so it is treated as negative and the loop below thankfully never executes in this scenario.
 >
-> --- [camthesaxman](https://github.com/pret/pokeruby/blame/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L89)
+> &mdash; [camthesaxman](https://github.com/pret/pokeruby/blame/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L89)
 
 I never ran into this bug during testing because it has been fixed in [Pokémon Emerald](https://github.com/pret/pokeemerald/blob/64460e01aede2bbcaa8d1dd18dd3fab590fa4a6e/src/fieldmap.c#L114), and that's the game I usually use for quick testing (and pure nostalgia). The dereferenced null pointer returns something they call garbage, which is quite offensive to the poor BIOS, in my opinion. Why the BIOS? Because it starts at address zero, and that's where a dereferenced null pointer reads from.
 
@@ -51,7 +51,7 @@ I never ran into this bug during testing because it has been fixed in [Pokémon 
 04000400-04FFFFFF   Not used
 ```
 
-The BIOS in the Game Boy Advance is read-protected to prevent dumping (guess how that turned out). That means we can only read from the BIOS if the program counter is inside of it. In plain English: only BIOS functions can read BIOS memory. Otherwise, it will return the last read value, which will be the one located at address:
+The BIOS in the Game Boy Advance is read-protected to prevent dumping. Guess how that turned out. That means we can only read from the BIOS if the program counter is inside of it. In plain English: only BIOS functions can read BIOS memory. Otherwise, it will return the last read value, which will be the one located at address:
 
 - 0x0DC+8 after startup
 - 0x188+8 after SWI
@@ -66,7 +66,7 @@ mov       r12, 0x4000000  ; addr: 0000018C  data: E3A0C301
 mov       r2, 0x4         ; addr: 00000190  data: E3A02004
 ```
 
-It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs three-staged instruction pipeline, we've already fetched the value at address 0x190, and its value will be returned for future protected BIOS reads (like dereferenced null pointers). In this case, the value has its sign bit set, and the loop body is never executed.
+It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs three-staged instruction pipeline, we've already fetched the value at address 0x190, and its value will be returned for future protected BIOS reads like dereferenced null pointers. In this case, the value has its sign bit set, and the loop body is never executed.
 
 ```armv4t
 movs      pc, lr                ; addr: 000000AC  data: E1B0F00E
@@ -173,7 +173,7 @@ And the resulting [mGBA suite](https://github.com/mgba-emu/suite) coverage compa
 
 I was happy to finally have something you could call relatively cycle-accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald hometown down to mere 485 fps. I was shocked, but the issue turned out to be easier to fix than expected. The MSVC optimizer just didn't inline the prefetch code.
 
-That might not sound like a problem until you realize that we are on the hottest of paths out there. It gets called millions of times per second, so eliminating the function call overhead is very important. After force inlining it, I was back at 575 fps which is a good value. My goal is to finish the emulator at something around the 500 fps mark for demanding games (the ones that don't utilize the CPUs halt functionality, I am looking at you GameFreak devs).
+That might not sound like a problem until you realize that we are on the hottest of paths out there. It gets called millions of times per second, so eliminating the function call overhead is very important. After force inlining it, I was back at 575 fps which is a good value. My goal is to finish the emulator at something around the 500 fps mark for demanding games. The ones that don't utilize the CPUs halt functionality. I am looking at you GameFreak devs.
 
 ### Sound?
 I love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channels relatively quickly, and decided to merge them. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well-working APU/DSP, but it never was supposed to be a part of this report.
