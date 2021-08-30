@@ -88,7 +88,7 @@ This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fi
 
 Calculating the number of cycles it takes to render a sprite is quite easy. It takes `width` cycles for normal and `2 * width + 10` cycles for sprites with affine transformations. Enabled sprites with x-coordinates outside of the screen also affect this quota, and programmers should be mindful to explicitly disable them instead of moving them outside the screen.
 
-### Real-time Clock
+### Real-Time Clock
 The next thing I want to talk about is an actual new feature of the emulator. If you own a third-generation Pokémon game and start it, you will notice that it complains about a drained battery. Time-based events will no longer work because its internal real-time clock ran dry.
 
 {{<flex>}}

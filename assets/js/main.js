@@ -4,7 +4,7 @@ import { attach } from './events';
 import initMenu from './menu';
 
 const lozadOptions = {
-  rootMargin: '256px 0px',
+  rootMargin: '512px',
 };
 
 const observer = lozad('.lozad', lozadOptions);
