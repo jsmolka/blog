@@ -8,8 +8,6 @@ button, .button {
   @apply font-medium;
   @apply border;
   @apply border-neutral-1;
-  @apply rounded-sm;
-  @apply shadow-sm;
   @apply cursor-pointer;
 
   &:hover {
