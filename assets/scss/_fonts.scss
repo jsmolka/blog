@@ -18,14 +18,10 @@
   }
 }
 
-@include font('merriweather', 300);
-@include font('merriweather', 400);
-@include font('merriweather', 700);
-@include font('merriweather', 900);
-@include font('mono', 400);
-@include font('mono', 500);
-@include font('mono', 700);
 @include font('roboto', 400);
 @include font('roboto', 500);
 @include font('roboto', 700);
 @include font('roboto', 900);
+@include font('mono', 400);
+@include font('mono', 500);
+@include font('mono', 700);
