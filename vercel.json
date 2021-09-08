@@ -2,8 +2,6 @@
   "github": {
     "silent": true
   },
-  "cleanUrls": true,
-  "trailingSlash": false,
   "headers": [
     {
       "source": "/data/(.*)",
