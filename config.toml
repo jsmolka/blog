@@ -15,11 +15,11 @@ disableHugoGeneratorInject = true
 [menu]
   [[menu.main]]
     name = "About"
-    url = "/about"
+    url = "/about/"
 
   [[menu.main]]
     name = "Projects"
-    url = "/projects"
+    url = "/projects/"
 
   [[menu.footer]]
     name = "GitHub"
