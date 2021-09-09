@@ -47,7 +47,6 @@ export default class AudioPlayer {
     container.innerHTML += this.template;
 
     this.time = container.querySelector('.audio-time');
-    this.reserveTimeWidth();
 
     this.progress = {
       bar: container.querySelector('.audio-progress-bar'),
@@ -248,7 +247,6 @@ export default class AudioPlayer {
     };
 
     this.time.innerHTML = `${format(this.audio.currentTime)} / ${format(this.audio.duration)}`;
-    this.reserveTimeWidth();
   }
 
   updateProgress() {
@@ -267,17 +265,6 @@ export default class AudioPlayer {
       : icons.volume;
   }
 
-  reserveTimeWidth() {
-    const widestNumber = '6';
-    const nonNumberCharacters = ': / :';
-
-    const time = this.time.innerHTML;
-    const numbers = time.length - nonNumberCharacters.length;
-    const widestCombination = widestNumber.repeat(numbers) + nonNumberCharacters;
-
-    this.time.setAttribute('reserve', widestCombination);
-  }
-
   get template() {
     return /* html */ `
       <div class="flex items-center p-1 text-neutral-2 border border-border">
@@ -286,7 +273,7 @@ export default class AudioPlayer {
             <path class="audio-play-pause-button-path" d="${icons.play}" />
           </svg>
         </div>
-        <div class="audio-time ml-1 text-sm text-center reserve">0:00 / 0:00</div>
+        <div class="audio-time ml-1 text-sm text-center">0:00 / 0:00</div>
         <div class="audio-progress-bar flex flex-1 ml-3.5 mr-2 py-2.5 cursor-pointer">
           <div class="flex flex-1 h-1 bg-neutral-3">
             <div class="audio-progress-bar-value bg-neutral-2"></div>
