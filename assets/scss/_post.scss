@@ -90,30 +90,21 @@
     @apply text-left;
     @apply border-collapse;
 
-    thead tr {
-      @apply border-b-2;
-      @apply border-neutral-3;
-    }
-
-    tbody tr {
-      @apply border-b;
-      @apply border-neutral-3;
-    }
-
     th, td {
       @apply px-3;
       @apply py-2;
+      @apply border;
+      @apply border-neutral-3;
       @apply whitespace-nowrap;
     }
 
     th {
-      @apply pt-0;
+      @apply bg-neutral-4;
     }
   }
 
   blockquote {
-    @apply px-4;
-    @apply py-2.5;
+    @apply p-5;
     @apply border-l-4;
     @apply border-neutral-3;
 
