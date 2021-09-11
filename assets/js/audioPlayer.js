@@ -273,7 +273,7 @@ export default class AudioPlayer {
             <path class="audio-play-pause-button-path" d="${icons.play}" />
           </svg>
         </div>
-        <div class="audio-time ml-1 text-sm text-center">0:00 / 0:00</div>
+        <div class="audio-time ml-1 pt-px text-sm text-center">0:00 / 0:00</div>
         <div class="audio-progress-bar flex flex-1 ml-3.5 mr-2 py-2.5 cursor-pointer">
           <div class="flex flex-1 h-1 bg-neutral-3">
             <div class="audio-progress-bar-value bg-neutral-2"></div>
