@@ -8,7 +8,7 @@ showTitle: false
 eggvance is a fast and accurate Game Boy Advance emulator written in C++. The processor grew instruction by instruction in conjunction with its [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all weird edge cases covered.
 
 {{<flex>}}
-  {{<image src="eggvance/emerald-victory.png" caption="Pokémon Emerald hall of fame">}}
+  {{<image src="eggvance/emerald-fame.png" caption="Pokémon Emerald hall of fame">}}
   {{<image src="eggvance/gui-3.png" caption="ImGui user interface">}}
 {{</flex>}}
 
