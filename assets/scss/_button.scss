@@ -9,6 +9,8 @@ button, .button {
   @apply border;
   @apply border-neutral-1;
   @apply cursor-pointer;
+  @apply rounded-sm;
+  @apply shadow-sm;
 
   &:hover {
     @apply bg-neutral-1;
