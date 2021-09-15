@@ -123,7 +123,7 @@ Combining these two flows allows us to implement a functioning RTC. The document
   {{<image src="eggvance/emerald-berry-2.png" caption="Time to harvest">}}
 {{</flex>}}
 
-I later stumbled across a NanoBoyAdvance [issue](https://github.com/fleroviux/NanoboyAdvance/issues/136) reported by Robert Peip, which mentions that the RTC doesn't work in Sennen Kazoku. The game boots and then shows an error screen mentioning "broken clock equipment." I tested it in my emulator and observed the same behavior.
+I later stumbled across a NanoBoyAdvance [issue](https://github.com/fleroviux/NanoboyAdvance/issues/136) reported by Robert Peip, which mentions that the RTC doesn't work in Sennen Kazoku. The game boots and then shows an error screen mentioning "broken clock equipment". I tested it in my emulator and observed the same behavior.
 
 {{<flex>}}
   {{<image src="eggvance/sennen-rtc-bug.png" caption="Complaints about a bad RTC">}}

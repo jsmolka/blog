@@ -7,7 +7,7 @@ type: post
 ---
 I finished my introduction project to C++ at the end of last year. Since then, I've read some books and watched a couple of performance-orientated talks about the language, and it really started to grow on me. It is quite versatile and expressive with lots of horrific corners you better stay away from. Mastering this beast seems like an impossible task, but I'll do my best.
 
-Finishing the previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ programming class [^1] where one of my fellow students asked if the emulator I was playing on was the project for the class. I responded with "no," but the idea got stuck in my head.
+Finishing the previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ programming class [^1] where one of my fellow students asked if the emulator I was playing on was the project for the class. I responded with "no", but the idea got stuck in my head.
 
 ### Black Box
 The inner workings of an emulator were completely alien to me. It was a black box that took input in form of ROMs and produced output in form of childhood nostalgia. Not knowing anything about video console emulation or something alike, I headed out to [/r/EmuDev](https://www.reddit.com/r/EmuDev/) and asked how to get started. The people there proposed the typical order for someone new to emulation:

@@ -8,7 +8,7 @@ type: post
 Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance, and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
 
 ### State-Dependent Dispatching
-The first thing I want to talk about is something I call "state-dependent dispatching," even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
+The first thing I want to talk about is something I call "state-dependent dispatching", even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
 
 - Which mode is the processor in?
 - Is the CPU halted until the next interrupt?
@@ -65,7 +65,7 @@ class ARM {
 }
 ```
 
-I'll explain "state-dependent dispatching" for the processor mode. There exists a specific `bx` instruction, speak "branch and exchange," that allows the processor to change its mode. If the lowest bit in the target address is set, the processor changes its mode to Thumb. Otherwise, it remains in ARM mode. The example given below changes the `state` variable when switching from ARM to Thumb mode. If we want to change back from Thumb to ARM mode, we need to clear this flag again.
+I'll explain "state-dependent dispatching" for the processor mode. There exists a specific `bx` instruction, speak "branch and exchange", that allows the processor to change its mode. If the lowest bit in the target address is set, the processor changes its mode to Thumb. Otherwise, it remains in ARM mode. The example given below changes the `state` variable when switching from ARM to Thumb mode. If we want to change back from Thumb to ARM mode, we need to clear this flag again.
 
 ```cpp
 if (cpsr.t = addr & 0x1) {
@@ -154,7 +154,7 @@ for (uint x : bits::iter(rlist)) {
 }
 ```
 
-In the end, this whole section could also be titled "premature optimization." Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions, and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
+In the end, this whole section could also be titled "premature optimization". Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions, and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
 
 ### Emscripten
 At some point during the last months, porting the emulator to WebAssembly crossed my mind and hooked me for some days. Reading through the [emscripten](https://emscripten.org/index.html) documentation made me realize that there wasn't much left to do to port an SDL2-based application to WebAssembly. I had to remove some platform-specific code, which is always a good thing, and add a modified `main` function. Compiling isn't much different compared to Linux and macOS, which were working fine already.
