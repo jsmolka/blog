@@ -13,6 +13,7 @@ body {
   @apply font-roboto;
   @apply antialiased;
 
+  font-feature-settings: "liga" 0;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
