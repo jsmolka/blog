@@ -4,6 +4,9 @@ summary: "A list of notable projects."
 showMeta: false
 showTitle: false
 ---
+# drizzle
+A dynamic interpreted programming language that isn't public yet. Check out the progress [here]({{<ref "drizzle">}}).
+
 # eggvance
 eggvance is a fast and accurate Game Boy Advance emulator written in C++. The processor grew instruction by instruction in conjunction with its [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all weird edge cases covered.
 
