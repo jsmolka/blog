@@ -7,7 +7,7 @@ type: post
 ---
 2020 came to an end and left me with an output of two progress reports and a simple, short release note. That's less than I was hoping for, but most time this year went into improving the codebase and some performance tinkering for personal pleasure. In my defense, the last progress report had a much higher quality than the ones before, and I'd like to keep it this way!
 
-### Undefined Behavior
+## Undefined Behavior
 In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4), which has been reported by fleroviux in June last year. He tried to play Pokémon Sapphire, and his game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
 
 {{<flex>}}
@@ -78,7 +78,7 @@ Unfortunately, the replacement BIOS doesn't reproduce this behavior. Here we ret
 
 I fixed the bug eventually when working on something seemingly unrelated. Reads from unused memory regions return values based on prefetched values in the CPUs pipeline. There were some small issues in that code that were fixed with [this commit](https://github.com/jsmolka/eggvance/commit/213c7ab0a18502125b725536c433da3bf90d0b84). It seems that the game tries to access unused memory regions at some point when running the loop with the corrupted loop counter, and returning the "proper bad value" fixes the freezing behavior.
 
-### Sprite Render Cycles
+## Sprite Render Cycles
 This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fix compared to the previous one. The available amount of sprite render cycles is limited to 1210 if the "H-Blank interval free" bit in the DISPCNT register is set or 954 otherwise. That means the amount of sprites per scanline is limited. If you ignore that limit, you end up with something like the first image, where the sprite on top overlaps with the status bar.
 
 {{<flex>}}
@@ -88,7 +88,7 @@ This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fi
 
 Calculating the number of cycles it takes to render a sprite is quite easy. It takes `width` cycles for normal and `2 * width + 10` cycles for sprites with affine transformations. Enabled sprites with x-coordinates outside of the screen also affect this quota, and programmers should be mindful to explicitly disable them instead of moving them outside the screen.
 
-### Real-Time Clock
+## Real-Time Clock
 The next thing I want to talk about is an actual new feature of the emulator. If you own a third-generation Pokémon game and start it, you will notice that it complains about a drained battery. Time-based events will no longer work because its internal real-time clock ran dry.
 
 {{<flex>}}
@@ -143,7 +143,7 @@ Debugging the game showed that Sennen Kazoku didn't set SCK high in step one of 
  }
 ```
 
-### Accuracy Improvements
+## Accuracy Improvements
 I mentioned three remaining things in the last [release post]({{<relref "release-0.2.md">}}): RTC emulation, improved accuracy, and audio. With RTC off the list, there was only one thing left before I could start implementing audio. Even though eggvance was quite accurate, it had some problems in the timing section because it didn't emulate the [prefetch buffer](https://mgba.io/2015/06/27/cycle-counting-prefetch/).
 
 Here are some of the things I implemented/changed:
@@ -175,7 +175,7 @@ I was happy to finally have something you could call relatively cycle-accurate. 
 
 That might not sound like a problem until you realize that we are on the hottest of paths out there. It gets called millions of times per second, so eliminating the function call overhead is very important. After force inlining it, I was back at 575 fps which is a good value. My goal is to finish the emulator at something around the 500 fps mark for demanding games. The ones that don't utilize the CPUs halt functionality. I am looking at you GameFreak devs.
 
-### Sound?
+## Sound?
 I love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channels relatively quickly, and decided to merge them. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well-working APU/DSP, but it never was supposed to be a part of this report.
 
 {{<flex>}}
@@ -184,7 +184,7 @@ I love my writing efficiency. I began this progress report at the start of Janua
 
 I'll write another one where I describe the sound basics and also give some examples. Most of the GBAs sound is composed of FIFO samples, so it's hard to show all audio channels in action and how they are combined into a nice result.
 
-### Final Words
+## Final Words
 That's it. I'm done. The roadmap for this year is:
 
 - ~~Implement all sound channels~~

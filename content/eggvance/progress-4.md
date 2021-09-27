@@ -7,7 +7,7 @@ type: post
 ---
 Hello there! It has been quite a while since the last progress report, two months to be exact. Development of the emulator has slowed down a little during that time because I started working full-time. Apart from cleaning up the codebase, I also fixed and implemented some things which might be of interest to some people.
 
-### Bitmap Modes
+## Bitmap Modes
 The GBA has six different background modes that are evenly split into three tile-based and three bitmap modes. One would assume that games utilize bitmaps as much as tiles, but that's not the case in reality. Tiles tend to be faster and easier to understand and are therefore used in most games. One rare example of a game using bitmap modes is DOOM II, which uses them to display the scene created by its internal software renderer. Due to this kind of game being so rare, I didn't notice bugs in the bitmap implementation until very recently, when I was going through some of the demos on [gbadev.org](https://www.gbadev.org/).
 
 {{<flex>}}
@@ -42,7 +42,7 @@ void PPU::renderBgMode5(int bg) {
 
 The fixed version of the renderer applies the `transform` function to the current pixel, which returns the coordinates inside the bitmap. Those are then used to determine the pixel's color. The matrix used in the Yeti demo scales the bitmap by two and thus fills the entire screen. The black pixels on the right are part of the game and not by the emulator.
 
-### Color Masking
+## Color Masking
 The Game Boy Advance encodes colors in the BGR555 format and stores them in 16-bit halfwords. They are stored in a dedicated area in memory called palette RAM (PRAM). It consists of two 512 byte blocks for background and sprite colors. The first color of each block can be used to draw transparent pixels. An obvious use case for this are sprites, which aren't always perfect squares. If a pixel has been marked as transparent, the next pixel in the drawing order will be displayed.
 
 {{<flex>}}
@@ -66,7 +66,7 @@ u16 Palette::colorBG(int index, int bank) {
 
 The problem can be fixed with a quite simple solution. Every color read from the palette needs to be masked with 0x7FFF to clear the most significant bit. That prevents confusing transparent pixels with malformed white pixels.
 
-### Sprite Tile Restrictions
+## Sprite Tile Restrictions
 This issue is another prime example for the "most games don't use bitmaps, therefore I can't test them" category. If you compare both images down below, you will notice some strange, colorful pixels in the top left corner of the first one. Those are uninitialized sprites that were wrongfully rendered by the emulator.
 
 {{<flex>}}
@@ -88,7 +88,7 @@ if (addr < 0x1'4000 && io.dispcnt.isBitmap())
     continue;
 ```
 
-### Final Words
+## Final Words
 That's it with the changes worth writing about, and even those were pretty meh. Most of the things I did during the last months were minor accuracy improvements and cleanups in the codebase. Even the DOOM II color problems have been fixed with a rather simple [commit](https://github.com/jsmolka/eggvance/commit/36e2cdd38e795d09a39594353e256b5b83fe9c47). Another important thing is the addition of Linux and macOS support. Removing Windows-dependent code and writing a simple CMake file took more time than I'd like to admit.
 
 {{<flex>}}

@@ -9,7 +9,7 @@ I finished my introduction project to C++ at the end of last year. Since then, I
 
 Finishing the previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ programming class [^1] where one of my fellow students asked if the emulator I was playing on was the project for the class. I responded with "no", but the idea got stuck in my head.
 
-### Black Box
+## Black Box
 The inner workings of an emulator were completely alien to me. It was a black box that took input in form of ROMs and produced output in form of childhood nostalgia. Not knowing anything about video console emulation or something alike, I headed out to [/r/EmuDev](https://www.reddit.com/r/EmuDev/) and asked how to get started. The people there proposed the typical order for someone new to emulation:
 
 1. Write a [Chip-8](https://en.wikipedia.org/wiki/CHIP-8) emulator &ndash; the "Hello World" of emulation
@@ -25,7 +25,7 @@ I then moved on to the GB and hoped for equally fast progress. I soon realized t
   {{<image src="eggvance/yoshi-title-screen.png" caption="Yoshi's Island title screen">}}
 {{</flex>}}
 
-### Initial Progress
+## Initial Progress
 The first thing I did was implement the CPU, an ARM7TDMI to be precise. It's the heart of the console and dictates the clock at which all other components of the system tick. The three-stage pipeline and different memory access and cycle types make it quite hard to understand, especially when coming from the relatively simple Game Boy Z80-ish processor. Fortunately, the documentation is quite good. You can rely on the official ARM one or Martin Korths infamous [GBATEK](https://problemkaputt.de/gbatek.htm) if you're into condensed stuff.
 
 I implemented the instructions one by one and wrote multiple tests for each of them. They cover pretty much all of the common and the important edge cases. That turned out to be a great time investment because I could rely on my CPU implementation being relatively robust while debugging problems related to other parts of the emulator. The following code shows a simple test for the ARM multiply instruction:
@@ -58,7 +58,7 @@ The last thing I did was clean up the memory interface. I implemented things lik
 
 A precondition for playing through a whole game were working save implementations for SRAM, EEPROM, and Flash. Finding out which one to use and understanding how each of them works took some time, but I managed to figure it out in the end.
 
-### Milestones
+## Milestones
 - 19/01/30 &ndash; Initial commit
 - 19/04/20 &ndash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
 - 19/05/02 &ndash; Displays Tonc bitmap demos
@@ -72,7 +72,7 @@ A precondition for playing through a whole game were working save implementation
 - 19/08/07 &ndash; Displays all Tonc demos
 - 19/08/17 &ndash; Runs Pokémon Emerald
 
-### Some Working Games
+## Some Working Games
 - Advance Wars
 - Castlevania: Aria of Sorrow
 - Mario Kart: Super Circuit
@@ -83,10 +83,10 @@ A precondition for playing through a whole game were working save implementation
 - Yoshi's Island: Super Mario Advance 3
 - The Legend of Zelda: A Link To The Past & Four Swords
 
-### Final Words
+## Final Words
 All of this progress sounds great. Sadly you can't hear it because there is no audio implementation just yet. That's the last thing I'll do. Before that, I need to improve the accuracy and performance of the emulator. It's not bad, but I could be better. This report will serve as a baseline, and I'll try to make more of those with specific information in the future.
 
-### Notes
+## Notes
 [^1]: What a boring class this was. The lecturer went over the basics of structured programming and the C/C++ memory model. At least I could use the time to work on my side projects.
 [^2]: I'll revisit GB emulation at some point in the future but for now, it just isn't what I want to do.
 [^3]: I regret not starting this earlier. The sensation of getting even the simplest demo to work was amazing, and booting Pokémon Emerald for the first time made me jump across the room in euphoria.

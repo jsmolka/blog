@@ -1,8 +1,8 @@
 {{ range .Paginator.Pages }}
   <div class="post py-8 first:pt-0 border-b-2 border-dashed border-neutral-3">
-    <h1>
+    <h2>
       <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
-    </h1>
+    </h2>
 
     {{ partial "meta" . }}
 

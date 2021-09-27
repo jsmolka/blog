@@ -7,7 +7,7 @@ type: post
 ---
 Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance, and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
 
-### State-Dependent Dispatching
+## State-Dependent Dispatching
 The first thing I want to talk about is something I call "state-dependent dispatching", even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
 
 - Which mode is the processor in?
@@ -120,7 +120,7 @@ What would a performance post be without comparing numbers? I originally intende
 | [326b4809](https://github.com/jsmolka/eggvance/commit/326b4809b398f051807a93b2bc4e9879fef60567) | Improved state dispatching | 556.9 fps       | 574.4 fps      |
 {{</table>}}
 
-### Efficient Bit Iteration
+## Efficient Bit Iteration
 The block data transfer instructions of the ARM7 encode the transferred registers in a binary register list (`rlist`). Each set bit in this list represents a register that needs to be transferred during execution. Take `0b0111` for example, which will transfer registers one to three but not register four.
 
 Emulating these instructions requires iterating all bits in the `rlist` and transferring set ones. The code below shows a simple (and naive) example of doing it. In each iteration, we shift the bits in the `rlist` to the right and increase the current bit index `x` by one. We do this until the `rlist` equals zero, which means that there are no more bits left to transfer. Inside the loop, we check if the lowest bit is set and then use the bit index to transfer the correct register.
@@ -156,7 +156,7 @@ for (uint x : bits::iter(rlist)) {
 
 In the end, this whole section could also be titled "premature optimization". Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions, and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
 
-### Emscripten
+## Emscripten
 At some point during the last months, porting the emulator to WebAssembly crossed my mind and hooked me for some days. Reading through the [emscripten](https://emscripten.org/index.html) documentation made me realize that there wasn't much left to do to port an SDL2-based application to WebAssembly. I had to remove some platform-specific code, which is always a good thing, and add a modified `main` function. Compiling isn't much different compared to Linux and macOS, which were working fine already.
 
 The included filesystem API is a nice abstraction around the fact that browsers don't have access to the filesystem without special permission by the user. It allows placing data in a buffer and then accessing it like a normal file from within the C++ code.
@@ -176,7 +176,7 @@ All of this sounds nice great to have to figure out errors. The whole thing can 
 
 The result can be tested [here]({{<ref "wasm.html">}}).
 
-### Improving Tests
+## Improving Tests
 The last part of this progress report is dedicated to my [GBA test suite](https://github.com/jsmolka/gba-suite). I developed most of it simultaneously with the eggvance CPU to ensure correctness. The whole thing is writing is pure assembly to have the maximum control over it. That was especially important during the start when most instructions weren't implemented yet. At some point, I moved the test suite into a separate repository because it became its own project.
 
 Since then, it has resulted in some CPU edge-case fixes in [mGBA](https://github.com/mgba-emu/mgba) and other open-source emulators. These poor developers had to work with a test suite that was meant for personal use. It had no user interface at all and stored the number of the first failed test in a register. The only graphical things about it were a green screen on success and a red screen on failure. That's why I decided to add a minimal user interface.
@@ -224,7 +224,7 @@ With all text rendering functions in place, I was able to add a simple user inte
   {{<image src="eggvance/suite-failed.png" caption="Test suite failed">}}
 {{</flex>}}
 
-### Final Words
+## Final Words
 This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February, and am now finishing the article in early June. Formulating text and walking other people through ideas has never been a strength of mine.
 
 Anyway, I hope to finish most of the cleanup sometime soon and then write another progress report once I'm ready to release version 0.2. I want it to be as stable and accurate as possible before I devote time to implement more advanced things like audio emulation and CPU prefetching.

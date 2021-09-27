@@ -7,7 +7,7 @@ type: post
 ---
 This month in your favorite emulator: a complete rewrite. That's what happens when you aren't satisfied with your project and have a whole month of spare time at your disposal. Some parts have been reused, but almost every area has been improved to some extent, accuracy and performance-wise.
 
-### Optimizing Instruction Execution
+## Optimizing Instruction Execution
 The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. Each instruction has a different number of fixed and variable bits. Fixed bits provide information about the used format, while variable bits are used to encode parameters like registers, register lists, flags, and immediate values. As a result of having 16 additional bits, ARM instructions tend to be much more complex.
 
 {{<table>}}
@@ -101,7 +101,7 @@ void ARM::executeThumb(u16 instr) {
 }
 ```
 
-### Initializing Unused Registers
+## Initializing Unused Registers
 At some point in development, the emulator was able to boot every tested game apart from the Sonic Advance series. Resolving issues like this usually involves running my emulator against established ones like No$GBA. After two hours of comparing, I ended up noticing that a different value of the RCNT register, which is used for multiplayer functionality, caused a chain of events that lead to gray bars on the screen instead of the intro and soft-locked the game.
 
 {{<flex>}}
@@ -111,7 +111,7 @@ At some point in development, the emulator was able to boot every tested game ap
 
 This problem was caused by skipping the BIOS and directly jumping inside the ROM. Apart from showing the animated intro sequence, the BIOS also initializes registers like RCNT and DISPCNT to their default value. I knew about this and properly initialized all implemented registers to their post-BIOS state, but RCNT is not, and probably never will be, used in my emulator and was, therefore, left untouched. Doing a test run with the BIOS could've saved me a couple of hours but, that's something I usually don't do during development.
 
-### Fixing Arithmetic Operations
+## Fixing Arithmetic Operations
 Running mGBA's [test suite](https://github.com/mgba-emu/suite) made me realize flaws in my carry/overflow detection mechanism for arithmetic operations, which caused sprite flickering bugs in games like Mario Kart.
 
 {{<flex>}}
@@ -175,7 +175,7 @@ Using a 64-bit integer to store the second operand with added carry was the firs
   {{<image src="eggvance/mgba-carry-pass.png" caption="Carry tests pass">}}
 {{</flex>}}
 
-### Config
+## Config
 One thing I wanted to have in the first release version was a customizable config. In terms of format, I decided to go with [TOML](https://github.com/toml-lang/toml) because I like its general structure and clarity. The config allows the user to freely configure keyboard and controller mappings for general input and shortcuts like fullscreen and different emulation speeds. A snippet of the general options is shown below, and the full version can be found on [GitHub](https://github.com/jsmolka/eggvance/blob/f2a1e0311e5467b3b91fa69b6ab4a7ddc292f525/eggvance/eggvance.toml).
 
 ```toml
@@ -191,7 +191,7 @@ save_dir = ""
 deadzone = 16000
 ```
 
-### Final Words
+## Final Words
 That's all for this progress report. A Windows build of the latest version can be found on [GitHub](https://github.com/jsmolka/eggvance/releases). I used profile-guided optimization to squeeze out the last drop of performance &mdash; most games can be played at 10x the normal speed. Of course, the current version is not perfect and bug-free, audio is still missing, and there are crashes and visual bugs in a few games like DOOM II.
 
 {{<flex>}}
