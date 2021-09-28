@@ -26,7 +26,6 @@ function main() {
         const href = link.getAttribute('href');
         if (isInternalLink(href)) {
           link.setAttribute('href', href.slice(0, -1));
-          console.log(href)
           changed = true;
         }
       }
