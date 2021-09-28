@@ -2,7 +2,7 @@
   "name": "website",
   "author": "Julian Smolka",
   "scripts": {
-    "highlight": "node scripts/highlight.js"
+    "postprocess": "node scripts/postprocess.js"
   },
   "dependencies": {
     "lozad": "^1.16.0",

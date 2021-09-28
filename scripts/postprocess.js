@@ -13,9 +13,25 @@ function main() {
       const dom = await jsdom.JSDOM.fromFile(file);
       const doc = dom.window.document;
 
+      let changed = false;
+
+      // Static syntax highlighting
       if (doc.getElementsByTagName('code').length > 0) {
         Prism.highlightAllUnder(doc);
+      }
 
+      // Remove trailing backslash from links
+      const isInternalLink = href => href.match(/^(https:\/\/smolka\.dev)?\/.*\/$/);
+      for (const link of doc.getElementsByTagName('a')) {
+        const href = link.getAttribute('href');
+        if (isInternalLink(href)) {
+          link.setAttribute('href', href.slice(0, -1));
+          console.log(href)
+          changed = true;
+        }
+      }
+
+      if (changed) {
         fs.writeFileSync(file, dom.serialize());
       }
     }
