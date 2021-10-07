@@ -36,17 +36,17 @@ Arithmetic operations accept the three primitive data types:
 Operands in mixed operations are promoted to the highest ranked operand type to prevent loss of information. That means adding a float to an int results in a float. An exception to this rule is division, where the result will always be a float. Bitwise operations work similar to arithmetic ones but don't accept float values.
 
 ```cmd
-Line 1 | 1 >> 0.1
-
-TypeError: bad operand types for '>>': 'int' and 'float'
+Line 1 | 255 >> 0xZ
+                  ^
+SyntaxError: expected hex digit
 ```
 
 I tried to make errors as informative as possible. Syntax errors can be reported with their exact location because I'm either scanning or compiling tokens at that time. Runtime errors like the one above happen during bytecode execution, and the best I can do is show the line number where the error occurred.
 
 ```cmd
-Line 1 | 255 >> 0xZ
-                  ^
-SyntaxError: expected hex digit
+Line 1 | 1 >> 0.1
+
+TypeError: bad operand types for '>>': 'int' and 'float'
 ```
 
 That's about it. There is still a lot of coding and documenting ahead of me. Next, I will implement statements and with that assignment, printing, and assertions for automatic testing, which is currently limited to the scanner.
