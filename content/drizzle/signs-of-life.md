@@ -58,9 +58,9 @@ void Vm::power() {
 The `binary` function also takes care of implicit type promotions. Inside the handler, we need to check which type the operands have and act accordingly. If the handler returns `false`, the operation doesn't support the operand types, and the VM throws a type error.
 
 ```error
-Line 1 | 0xFF & 0.1
+Line 1 | "test" ** 2
 
-TypeError: bad operand types for '&': 'int' and 'float'
+TypeError: bad operand types for '**': 'string' and 'int'
 ```
 
 Nothing more to see here. Next up are functions, classes, garbage collection, and some proper tests/documentation of the current state.
