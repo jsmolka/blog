@@ -29,12 +29,15 @@ pre[class*="language-"] {
     @apply bg-header;
     @apply border-header;
   }
+
+  margin-left: calc(-1rem - 1px);
+  margin-right: calc(-1rem - 1px);
 }
 
 :not(pre) > code {
   @apply bg-neutral-4;
 
-  padding: 0.1rem 0.3rem;
+  padding: 0.05rem 0.3rem 0.15rem 0.3rem;
 }
 
 [class*="language-"] .namespace {

@@ -17,6 +17,7 @@ module.exports = {
       accent: 'var(--accent)',
       header: 'var(--header)',
       border: 'var(--border)',
+      meta: 'var(--meta)',
     },
     fontFamily: {
       roboto: 'roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',

@@ -69,16 +69,11 @@
 
     li {
       @apply mt-1.5;
+      @apply pl-2;
 
       &:first-child {
         @apply mt-0;
       }
-    }
-  }
-
-  @screen sm {
-    ul, ol {
-      @apply ml-10;
     }
   }
 
@@ -103,7 +98,8 @@
   }
 
   blockquote {
-    @apply p-5;
+    @apply py-4;
+    @apply pl-5;
     @apply border-l-4;
     @apply border-neutral-3;
 
