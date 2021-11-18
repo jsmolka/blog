@@ -7,6 +7,12 @@ module.exports = {
   },
   theme: {
     colors: {
+      base: {
+        0: 'var(--base-0)',
+        1: 'var(--base-1)',
+        2: 'var(--base-2)',
+        3: 'var(--base-3)',
+      },
       neutral: {
         1: 'var(--neutral-1)',
         2: 'var(--neutral-2)',

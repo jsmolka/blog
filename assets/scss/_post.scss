@@ -34,7 +34,8 @@
     @apply relative;
     @apply w-fit;
     @apply mt-10;
-    @apply font-bold;
+    @apply text-base-1;
+    @apply font-extrabold;
 
     &:after {
       @apply absolute;

@@ -1,17 +1,10 @@
-<header class="bg-header border-b border-border dark:border-header">
-  <noscript>
-    <nav class="post py-2 bg-neutral-1 text-neutral-5">
-      <p class="container">I tried my best to make this website work without JavaScript. Please consider enabling it. There are no ads or trackers, and the download size is ~10kb.</p>
-    </nav>
-  </noscript>
+<header class="text-base-1">
   <nav class="container flex justify-between h-14">
     <a class="flex items-center h-full -ml-4 px-4" href="{{ $.Site.BaseURL }}">
-      <span class="font-bold">{{ $.Site.Title }}</span>
+      <span class="block font-extrabold pb-0.5">{{ $.Site.Title }}</span>
       <span class="cursor ml-1.5" />
     </a>
-    <!-- Desktop -->
-    {{ $mobileMenu := gt (len $.Site.Menus.main) 2 }}
-    <div class="{{ if $mobileMenu }}hidden sm:flex{{ else }}flex{{ end }} items-center">
+    <div class="flex items-center">
       {{ range $.Site.Menus.main }}
         <a class="flex items-center h-full px-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
       {{ end }}
@@ -19,26 +12,5 @@
         {{ partial "icon/theme" 20 }}
       </div>
     </div>
-    <!-- Mobile -->
-    {{ if $mobileMenu }}
-      <div class="flex sm:hidden items-center">
-        <div class="theme-button flex items-center h-full px-4 cursor-pointer select-none">
-          {{ partial "icon/theme" 20 }}
-        </div>
-        <div class="relative h-full">
-          <div class="menu-button flex items-center h-full -mr-4 px-4 cursor-pointer select-none">
-            {{ partial "icon/menu" 24 }}
-          </div>
-          <!-- Menu -->
-          <div class="menu hidden">
-            <div class="absolute top-14 -right-4 flex flex-col p-1 z-50 bg-header border border-t-0 border-border dark:border-header">
-              {{ range $.Site.Menus.main }}
-                <a class="px-4 py-3" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-      </div>
-    {{ end }}
   </nav>
 </header>

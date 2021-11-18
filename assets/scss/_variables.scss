@@ -6,7 +6,12 @@ $neutral-4: mix($neutral-3, $neutral-5, 25%);
 $header: rgb(250, 250, 250);
 $border: rgb(229, 229, 229);
 $accent: rgb(110, 186, 247);
-$meta: rgba($neutral-1, 0.33);
+
+$base-0: rgb(255, 255, 255);
+$base-1: mix(rgb( 36,  41,  47), rgb(106, 115, 125), 66%);
+$base-2: rgb(106, 115, 125);
+$base-3: rgb(247, 249, 252);  // base 1?
+$meta: rgba($base-1, 0.33);
 
 :root {
   --neutral-1: #{$neutral-1};
@@ -18,6 +23,11 @@ $meta: rgba($neutral-1, 0.33);
   --border: #{$border};
   --accent: #{$accent};
   --meta: #{$meta};
+
+  --base-0: #{$base-0};
+  --base-1: #{$base-1};
+  --base-2: #{$base-2};
+  --base-3: #{$base-3};
 }
 
 $dark-neutral-1: rgb(169, 169, 179);
@@ -28,7 +38,12 @@ $dark-neutral-4: mix($dark-neutral-3, $dark-neutral-5, 40%);
 $dark-header: rgb(37, 38, 39);
 $dark-border: rgb(63, 64, 66);
 $dark-accent: rgb(72, 168, 245);
-$dark-meta: rgba($dark-neutral-1, 0.33);
+
+$dark-base-0: rgb( 27,  31,  36);
+$dark-base-1: mix(rgb(255, 255, 255), rgb(139, 148, 158), 50%);
+$dark-base-2: rgb(139, 148, 158);
+$dark-base-3: rgb( 35,  42,  47);
+$dark-meta: rgba($dark-base-2, 0.33);
 
 .dark {
   --neutral-1: #{$dark-neutral-1};
@@ -39,4 +54,9 @@ $dark-meta: rgba($dark-neutral-1, 0.33);
   --header: #{$dark-header};
   --border: #{$dark-border};
   --meta: #{$dark-meta};
+
+  --base-0: #{$dark-base-0};
+  --base-1: #{$dark-base-1};
+  --base-2: #{$dark-base-2};
+  --base-3: #{$dark-base-3};
 }
