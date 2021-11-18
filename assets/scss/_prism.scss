@@ -18,17 +18,17 @@ code[class*="language-"] {
 }
 
 pre[class*="language-"] {
+  @apply -mx-4;
   @apply px-4;
   @apply py-2.5;
   @apply bg-base-3;
+  @apply shadow-sm;
   @apply overflow-x-auto;
-
-  margin-left: calc(-1rem - 1px);
-  margin-right: calc(-1rem - 1px);
 }
 
 :not(pre) > code {
   @apply bg-base-3;
+  @apply shadow-sm;
 
   padding: 0.05rem 0.3rem 0.15rem 0.3rem;
 }

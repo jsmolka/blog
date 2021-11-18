@@ -70,7 +70,7 @@
 
     li {
       @apply mt-1.5;
-      @apply pl-2;
+      @apply pl-1.5;
 
       &:first-child {
         @apply mt-0;
@@ -78,8 +78,33 @@
     }
   }
 
-  ul { @apply list-disc;    }
-  ol { @apply list-decimal; }
+  @screen sm {
+    ul, ol {
+      @apply ml-10;
+    }
+  }
+
+  ul {
+    @apply list-none;
+
+    li {
+      position: relative;
+      &:before {
+        @apply absolute;
+        @apply w-2;
+        @apply h-2;
+        @apply bg-base-2;
+
+        content: '';
+        top: 0.65rem;
+        left: -1rem;
+      }
+    }
+  }
+
+  ol {
+    @apply list-decimal;
+  }
 
   table {
     @apply w-full;
@@ -94,7 +119,8 @@
     }
 
     th {
-      @apply bg-neutral-4;
+      @apply font-bold;
+      @apply text-base-1;
     }
   }
 
