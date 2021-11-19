@@ -267,21 +267,21 @@ export default class AudioPlayer {
 
   get template() {
     return /* html */ `
-      <div class="flex items-center p-1 text-neutral-2 bg-neutral-4 rounded-sm shadow-sm">
+      <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 rounded-sm">
         <div class="audio-play-pause-button p-1 select-none cursor-pointer">
           <svg class="mb-px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path class="audio-play-pause-button-path" d="${icons.play}" />
           </svg>
         </div>
-        <div class="audio-time ml-1 pt-px text-sm text-center" style="font-feature-settings: 'tnum' 1" >0:00 / 0:00</div>
+        <div class="audio-time ml-1 pb-0.5 text-sm text-center" style="font-feature-settings: 'tnum' 1" >0:00 / 0:00</div>
         <div class="audio-progress-bar flex flex-1 ml-3.5 mr-2 py-2.5 cursor-pointer">
-          <div class="flex flex-1 h-1 bg-neutral-3">
+          <div class="flex flex-1 h-1 bg-backdrop-3">
             <div class="audio-progress-bar-value bg-neutral-2"></div>
           </div>
         </div>
         <div class="audio-volume-container flex items-center">
           <div class="audio-volume-bar flex w-0 py-2.5 cursor-pointer transition-width duration-500 ease-in-out">
-            <div class="flex flex-1 h-1 ml-2.5 mr-2 bg-neutral-3">
+            <div class="flex flex-1 h-1 ml-2.5 mr-2 bg-backdrop-3">
               <div class="audio-volume-bar-value bg-neutral-2"></div>
             </div>
           </div>

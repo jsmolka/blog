@@ -1,4 +1,3 @@
-$accent: rgb(110, 186, 247);
 $base-0: rgb(255, 255, 255);
 $base-1: mix(rgb( 36,  41,  47), rgb(106, 115, 125), 66%);
 $base-2: rgb(106, 115, 125);
@@ -6,8 +5,19 @@ $base-3: rgb(247, 249, 252);  // base 1?
 $base-4: mix($base-0, $base-1, 66%);
 $meta: rgba($base-1, 0.33);
 
+$accent: rgb(106, 185, 255);
+
+$backdrop-0: rgb(255, 255, 255);  // Background
+$backdrop-1: rgb(247, 249, 252);  // Code
+$backdrop-2: rgb(242, 244, 247);  // Audio
+$backdrop-3: rgb(227, 229, 232);  // Audio bar
+
+$neutral-0: rgb( 60,  66,  74);  // Headings
+$neutral-1: rgb(106, 115, 125);  // Text
+$neutral-2: mix($backdrop-0, $neutral-0, 50%);  // Audio text
+$neutral-3: mix($backdrop-0, $neutral-0, 75%);  // Border/meta
+
 :root {
-  --accent: #{$accent};
   --meta: #{$meta};
 
   --base-0: #{$base-0};
@@ -15,6 +25,18 @@ $meta: rgba($base-1, 0.33);
   --base-2: #{$base-2};
   --base-3: #{$base-3};
   --base-4: #{$base-4};
+
+  --accent: #{$accent};
+
+  --backdrop-0: #{$backdrop-0};
+  --backdrop-1: #{$backdrop-1};
+  --backdrop-2: #{$backdrop-2};
+  --backdrop-3: #{$backdrop-3};
+
+  --neutral-0: #{$neutral-0};
+  --neutral-1: #{$neutral-1};
+  --neutral-2: #{$neutral-2};
+  --neutral-3: #{$neutral-3};
 }
 
 $dark-base-0: rgb( 27,  31,  36);
@@ -24,6 +46,18 @@ $dark-base-3: rgb( 35,  42,  47);
 $dark-base-4: mix($dark-base-0, $dark-base-1, 66%);
 $dark-meta: rgba($dark-base-2, 0.33);
 
+$dark-accent: rgb(105, 184, 254);
+
+$dark-backdrop-0: rgb(27, 31, 36);  // Background
+$dark-backdrop-1: rgb(35, 42, 47);  // Code
+$dark-backdrop-2: rgb(40, 47, 52);  // Audio
+$dark-backdrop-3: rgb(55, 63, 67);  // Audio bar
+
+$dark-neutral-0: rgb(197, 202, 207);  // Headings
+$dark-neutral-1: rgb(139, 148, 158);  // Text
+$dark-neutral-2: mix($dark-backdrop-0, $dark-neutral-0, 50%);  // Audio text
+$dark-neutral-3: mix($dark-backdrop-0, $dark-neutral-0, 75%);  // Border/meta
+
 .dark {
   --meta: #{$dark-meta};
 
@@ -32,4 +66,16 @@ $dark-meta: rgba($dark-base-2, 0.33);
   --base-2: #{$dark-base-2};
   --base-3: #{$dark-base-3};
   --base-4: #{$dark-base-4};
+
+  --accent: #{$dark-accent};
+
+  --backdrop-0: #{$dark-backdrop-0};
+  --backdrop-1: #{$dark-backdrop-1};
+  --backdrop-2: #{$dark-backdrop-2};
+  --backdrop-3: #{$dark-backdrop-3};
+
+  --neutral-0: #{$dark-neutral-0};
+  --neutral-1: #{$dark-neutral-1};
+  --neutral-2: #{$dark-neutral-2};
+  --neutral-3: #{$dark-neutral-3};
 }

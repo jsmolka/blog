@@ -7,6 +7,18 @@ module.exports = {
   },
   theme: {
     colors: {
+      backdrop: {
+        0: 'var(--backdrop-0)',
+        1: 'var(--backdrop-1)',
+        2: 'var(--backdrop-2)',
+        3: 'var(--backdrop-3)',
+      },
+      neutral: {
+        0: 'var(--neutral-0)',
+        1: 'var(--neutral-1)',
+        2: 'var(--neutral-2)',
+        3: 'var(--neutral-3)',
+      },
       base: {
         0: 'var(--base-0)',
         1: 'var(--base-1)',

@@ -21,12 +21,12 @@ pre[class*="language-"] {
   @apply -mx-4;
   @apply px-4;
   @apply py-2.5;
-  @apply bg-base-3;
+  @apply bg-backdrop-1;
   @apply overflow-x-auto;
 }
 
 :not(pre) > code {
-  @apply bg-base-3;
+  @apply bg-backdrop-1;
 
   padding: 0.05rem 0.3rem 0.15rem 0.3rem;
 }
