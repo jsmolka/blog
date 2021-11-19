@@ -22,7 +22,8 @@ body {
 ::selection {
   @apply bg-accent;
 
-  color: $neutral-1;
+  // Todo: color
+  // color: $neutral-1;
 }
 
 ::-webkit-scrollbar {

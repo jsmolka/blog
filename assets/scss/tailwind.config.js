@@ -12,17 +12,9 @@ module.exports = {
         1: 'var(--base-1)',
         2: 'var(--base-2)',
         3: 'var(--base-3)',
-      },
-      neutral: {
-        1: 'var(--neutral-1)',
-        2: 'var(--neutral-2)',
-        3: 'var(--neutral-3)',
-        4: 'var(--neutral-4)',
-        5: 'var(--neutral-5)',
+        4: 'var(--base-4)',
       },
       accent: 'var(--accent)',
-      header: 'var(--header)',
-      border: 'var(--border)',
       meta: 'var(--meta)',
     },
     fontFamily: {
