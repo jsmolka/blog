@@ -1,14 +1,14 @@
 <header class="text-base-1">
-  <nav class="container flex justify-between h-14">
-    <a class="flex items-center h-full -ml-4 px-4" href="{{ $.Site.BaseURL }}">
-      <span class="block pb-0.5 font-extrabold">{{ $.Site.Title }}</span>
-      <span class="cursor ml-1.5" />
+  <nav class="container flex justify-between items-center h-14">
+    <a class="flex items-center" href="{{ $.Site.BaseURL }}">
+      <span class="block font-extrabold">{{ $.Site.Title }}</span>
+      <span class="cursor -mb-0.5 ml-1.5" />
     </a>
     <div class="flex items-center">
       {{ range $.Site.Menus.main }}
-        <a class="flex items-center h-full px-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
+        <a class="flex items-center mx-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
       {{ end }}
-      <div class="theme-button flex items-center h-full -mr-4 px-4 cursor-pointer select-none">
+      <div class="theme-button flex items-center h-full mt-0.5 ml-4 cursor-pointer select-none">
         {{ partial "icon/theme" 20 }}
       </div>
     </div>

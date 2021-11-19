@@ -2,18 +2,18 @@ button, .button {
   @apply flex;
   @apply items-center;
   @apply px-2;
-  @apply py-1;
-  @apply bg-neutral-5;
-  @apply text-neutral-1;
+  @apply pt-0.5;
+  @apply pb-1;
+  @apply bg-base-0;
+  @apply text-base-2;
   @apply font-medium;
   @apply border;
-  @apply border-neutral-1;
+  @apply border-base-2;
   @apply cursor-pointer;
   @apply rounded-sm;
-  @apply shadow-sm;
 
   &:hover {
-    @apply bg-neutral-1;
-    @apply text-neutral-5;
+    @apply bg-base-1;
+    @apply text-base-0;
   }
 }
