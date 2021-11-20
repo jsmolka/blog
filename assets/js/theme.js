@@ -2,7 +2,7 @@ const html = document.documentElement;
 
 function updateThemeColor(dark) {
   const meta = document.querySelector('meta[name=theme-color]');
-  meta?.setAttribute('content', dark ? '#292a2d' : '#ffffff');
+  meta?.setAttribute('content', dark ? '#1b1f24' : '#ffffff');
 }
 
 function init() {

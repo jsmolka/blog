@@ -15,25 +15,33 @@ class Events {
   constructor(element) {
     this.touch = false;
     this.element = element;
+    this.handler = {
+      touchstart: this.touchstart.bind(this),
+      touchmove: this.touchmove.bind(this),
+      touchend: this.touchend.bind(this),
+      mousedown: this.mousedown.bind(this),
+      mousemove: this.mousemove.bind(this),
+      mouseup: this.mouseup.bind(this),
+    };
     this.attach();
   }
 
   attach() {
-    this.element.addEventListener('touchstart', this.touchstart.bind(this), { passive: true });
-    this.element.addEventListener('touchmove', this.touchmove.bind(this), { passive: true });
-    this.element.addEventListener('touchend', this.touchend.bind(this), { passive: true });
-    this.element.addEventListener('mousedown', this.mousedown.bind(this));
-    this.element.addEventListener('mousemove', this.mousemove.bind(this));
-    this.element.addEventListener('mouseup', this.mouseup.bind(this));
+    this.element.addEventListener('touchstart', this.handler.touchstart, { passive: true });
+    this.element.addEventListener('touchmove', this.handler.touchmove, { passive: true });
+    this.element.addEventListener('touchend', this.handler.touchend, { passive: true });
+    this.element.addEventListener('mousedown', this.handler.mousedown);
+    this.element.addEventListener('mousemove', this.handler.mousemove);
+    this.element.addEventListener('mouseup', this.handler.mouseup);
   }
 
   detach() {
-    this.element.removeEventListener('touchstart', this.touchstart);
-    this.element.removeEventListener('touchmove', this.touchmove);
-    this.element.removeEventListener('touchend', this.touchend);
-    this.element.removeEventListener('mousedown', this.mousedown);
-    this.element.removeEventListener('mousemove', this.mousemove);
-    this.element.removeEventListener('mouseup', this.mouseup);
+    this.element.removeEventListener('touchstart', this.handler.touchstart);
+    this.element.removeEventListener('touchmove', this.handler.touchmove);
+    this.element.removeEventListener('touchend', this.handler.touchend);
+    this.element.removeEventListener('mousedown', this.handler.mousedown);
+    this.element.removeEventListener('mousemove', this.handler.mousemove);
+    this.element.removeEventListener('mouseup', this.handler.mouseup);
   }
 
   touchstart(event) {

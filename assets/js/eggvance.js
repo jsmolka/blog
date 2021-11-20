@@ -75,7 +75,7 @@ window.Module = {
   updateBackground(dark) {
     this.eggvanceSetBackground(
       dark
-        ? 0xff292a2d
+        ? 0xff1b1f24
         : 0xffffffff
     );
   }
