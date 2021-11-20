@@ -19,15 +19,7 @@ module.exports = {
         2: 'var(--neutral-2)',
         3: 'var(--neutral-3)',
       },
-      base: {
-        0: 'var(--base-0)',
-        1: 'var(--base-1)',
-        2: 'var(--base-2)',
-        3: 'var(--base-3)',
-        4: 'var(--base-4)',
-      },
       accent: 'var(--accent)',
-      meta: 'var(--meta)',
     },
     fontFamily: {
       alliance: 'alliance, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',

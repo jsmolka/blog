@@ -8,12 +8,12 @@ html, body {
 body {
   @apply m-0;
   @apply p-0;
-  @apply bg-base-0;
-  @apply text-base-2;
+  @apply bg-backdrop-0;
+  @apply text-neutral-1;
   @apply font-alliance;
   @apply antialiased;
 
-  font-feature-settings: "ss01", "ss02";
+  font-feature-settings: "ss01", "ss02", "ss03";
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
@@ -22,8 +22,7 @@ body {
 ::selection {
   @apply bg-accent;
 
-  // Todo: color
-  // color: $neutral-1;
+  color: $neutral-0;
 }
 
 ::-webkit-scrollbar {

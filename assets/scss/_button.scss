@@ -4,16 +4,16 @@ button, .button {
   @apply px-2;
   @apply pt-0.5;
   @apply pb-1;
-  @apply bg-base-0;
-  @apply text-base-2;
+  @apply bg-backdrop-0;
+  @apply text-neutral-0;
   @apply font-medium;
   @apply border;
-  @apply border-base-2;
+  @apply border-neutral-1;
   @apply cursor-pointer;
   @apply rounded-sm;
 
   &:hover {
-    @apply bg-base-1;
-    @apply text-base-0;
+    @apply bg-neutral-0;
+    @apply text-backdrop-0;
   }
 }
