@@ -24,10 +24,6 @@ for (const element of document.querySelectorAll('.audio-player')) {
   new AudioPlayer(element);
 }
 
-for (const button of document.querySelectorAll('header .theme-button')) {
-  button.addEventListener('click', () => window.theme?.toggle());
-}
-
 const menu = document.querySelector('header .menu');
 const menuButton = document.querySelector('header .menu-button');
 

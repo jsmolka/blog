@@ -8,7 +8,6 @@ disableHugoGeneratorInject = true
   language = "en-US"
   description = "Just another dark corner of the internet."
   tags = ["smolka", "programming", "eggvance", "cycling"]
-  theme = "light"
   dateFormat = "2006/01/02"
   birthDate = "1998-05-11"
 

@@ -1,37 +1,46 @@
+import mitt from 'mitt';
+
 const html = document.documentElement;
 
-function updateThemeColor(dark) {
-  const meta = document.querySelector('meta[name=theme-color]');
-  meta?.setAttribute('content', dark ? '#1b1f24' : '#ffffff');
-}
-
-function init() {
-  const theme = localStorage.getItem('theme');
-
-  const dark = theme
-    ? theme === 'dark'
-    : matchMedia('(prefers-color-scheme: dark)').matches;
-
-  html.classList.toggle('dark', dark);
-  updateThemeColor(dark);
-}
-
-export default class Theme {
+class Theme {
   constructor() {
-    init();
-
-    this.onChange = dark => {};
+    Object.assign(this, mitt());
+    this.setMode(localStorage.getItem('theme') ?? 'system');
   }
 
   get isDark() {
-    return html.classList.contains('dark');
+    switch (html.getAttribute('theme') ?? 'system') {
+      case 'system':
+        return matchMedia('(prefers-color-scheme: dark)').matches;
+      case 'dark':
+        return true;
+      case 'light':
+        return false;
+      default:
+        return false;
+    }
   }
 
-  toggle() {
-    const dark = html.classList.toggle('dark');
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    updateThemeColor(dark);
-    this.onChange(dark);
+  setMode(mode) {
+    html.setAttribute('theme', mode);
+    localStorage.setItem('theme', mode);
+
+    const dark = html.classList.toggle('dark', this.isDark);
+    const meta = document.querySelector('meta[name=theme-color]');
+    meta?.setAttribute('content', dark ? '#1b1f24' : '#ffffff');
+    this.emit('change', dark);
+  }
+
+  setModeSystem() {
+    this.setMode('system');
+  }
+
+  setModeDark() {
+    this.setMode('dark');
+  }
+
+  setModeLight() {
+    this.setMode('light');
   }
 }
 

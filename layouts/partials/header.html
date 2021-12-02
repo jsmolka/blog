@@ -10,15 +10,27 @@
       {{ range $.Site.Menus.main }}
         <a class="flex items-center h-full px-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
       {{ end }}
-      <div class="theme-button flex items-center h-full -mr-4 -mb-0.5 px-4 cursor-pointer select-none">
-        {{ partial "icon/theme" 20 }}
-      </div>
+      <span class="block-theme-system">
+        <div onclick="theme.setModeDark()" class="flex items-center h-full -mr-4 -mb-0.5 px-4 cursor-pointer select-none">
+          {{ partial "icon/theme-system" 20 }}
+        </div>
+      </span>
+      <span class="block-theme-dark">
+        <div onclick="theme.setModeLight()" class="flex items-center h-full -mr-4 -mb-0.5 px-4 cursor-pointer select-none">
+          {{ partial "icon/theme-dark" 20 }}
+        </div>
+      </span>
+      <span class="block-theme-light">
+        <div onclick="theme.setModeSystem()" class="flex items-center h-full -mr-4 -mb-0.5 px-4 cursor-pointer select-none">
+          {{ partial "icon/theme-light" 20 }}
+        </div>
+      </span>
     </div>
     <!-- Mobile -->
     {{ if $mobileMenu }}
       <div class="flex sm:hidden items-center">
         <div class="theme-button flex items-center h-full px-4 cursor-pointer select-none">
-          {{ partial "icon/theme" 20 }}
+          {{ partial "icon/theme-system" 20 }}
         </div>
         <div class="relative h-full">
           <div class="menu-button flex items-center h-full -mr-4 px-4 cursor-pointer select-none">

@@ -1,0 +1,21 @@
+.block-theme-system, .block-theme-dark, .block-theme-light {
+  @apply hidden;
+}
+
+html[theme=system] {
+  .block-theme-system {
+    @apply block;
+  }
+}
+
+html[theme=dark] {
+  .block-theme-dark {
+    @apply block;
+  }
+}
+
+html[theme=light] {
+  .block-theme-light {
+    @apply block;
+  }
+}
