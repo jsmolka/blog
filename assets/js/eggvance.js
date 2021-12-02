@@ -84,9 +84,9 @@ window.Module = {
 createApp().mount();
 
 window.onload = () => {
-  window.theme.onChange = dark => {
-    Module.updateBackground(dark)
-  };
+  window.theme.on('change', dark => {
+    Module.updateBackground(dark);
+  });
 
   const canvas = document.getElementById('canvas');
   const width = canvas.clientWidth;

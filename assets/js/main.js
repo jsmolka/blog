@@ -1,7 +1,7 @@
+import './menu';
 import lozad from 'lozad';
 import AudioPlayer from './audioPlayer';
 import { attach } from './events';
-import initMenu from './menu';
 
 const lozadOptions = {
   rootMargin: '512px',
@@ -23,10 +23,5 @@ audioObserver.observe();
 for (const element of document.querySelectorAll('.audio-player')) {
   new AudioPlayer(element);
 }
-
-const menu = document.querySelector('header .menu');
-const menuButton = document.querySelector('header .menu-button');
-
-initMenu(menu, menuButton);
 
 attach(window);
