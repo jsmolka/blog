@@ -9,10 +9,10 @@ const lozadOptions = {
 const observer = lozad('.lozad', lozadOptions);
 observer.observe();
 
-const audioObserver = lozad('.audio-player', {
+const audioObserver = lozad('.lozad-audio', {
   ...lozadOptions,
   load: function(element) {
-    for (const audio of element.querySelectorAll('audio')) {
+    for (const audio of element.getElementsByTagName('audio')) {
       audio.src = audio.getAttribute('data-src');
     }
   }
@@ -24,7 +24,8 @@ const store = reactive({
 });
 
 createApp({
-  store
+  store,
+  AudioPlayer,
 }).mount();
 
 window.addEventListener('click', () => {
@@ -34,7 +35,3 @@ window.addEventListener('click', () => {
 window.addEventListener('resize', () => {
   store.menu = false;
 });
-
-for (const element of document.querySelectorAll('.audio-player')) {
-  new AudioPlayer(element);
-}
