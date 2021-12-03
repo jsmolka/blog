@@ -20,6 +20,10 @@
   hyphenate-limit-zone: 8%;
 }
 
+.touch-action-none {
+  touch-action: none;
+}
+
 .wide-image {
   img {
     width: auto !important;

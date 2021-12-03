@@ -1,5 +1,6 @@
-import { attach } from './events';
-import { clamp } from './utils';
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
 
 class BarEvents {
   constructor(element) {
@@ -7,29 +8,27 @@ class BarEvents {
     this.move = event => {};
     this.up   = event => {};
 
-    attach(element);
-
     const down = event => {
       if (event.button === 2) {
         return;
       }
 
       const up = event => {
-        window.removeEventListener('smolka::move', this.move);
-        window.removeEventListener('smolka::up', up);
+        window.removeEventListener('pointermove', this.move);
+        window.removeEventListener('pointerup', up);
         window.document.body.classList.remove('select-none');
         window.document.body.classList.remove('cursor-pointer');
         this.up(event);
       };
 
-      window.addEventListener('smolka::move', this.move);
-      window.addEventListener('smolka::up', up);
+      window.addEventListener('pointermove', this.move);
+      window.addEventListener('pointerup', up);
       window.document.body.classList.add('select-none');
       window.document.body.classList.add('cursor-pointer');
       this.down(event);
     };
 
-    element.addEventListener('smolka::down', down);
+    element.addEventListener('pointerdown', down);
   }
 }
 
@@ -267,7 +266,7 @@ export default class AudioPlayer {
 
   get template() {
     return /* html */ `
-      <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 rounded-sm">
+      <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 rounded-sm touch-action-none">
         <div class="audio-play-pause-button p-1 select-none cursor-pointer">
           <svg class="mb-px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path class="audio-play-pause-button-path" d="${icons.play}" />
