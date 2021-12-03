@@ -1,7 +1,6 @@
 const root = __dirname + '/../../';
 
 module.exports = {
-  darkMode: 'class',
   corePlugins: {
     container: false,
   },
@@ -39,9 +38,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      borderStyle: [
-        'dark',
-      ],
       borderWidth: [
         'first',
         'last',

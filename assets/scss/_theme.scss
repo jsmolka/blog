@@ -1,21 +1,21 @@
-.block-theme-system, .block-theme-dark, .block-theme-light {
+.flex-theme-system, .flex-theme-dark, .flex-theme-light {
   @apply hidden;
 }
 
 html[theme=system] {
-  .block-theme-system {
-    @apply block;
+  .flex-theme-system {
+    @apply flex;
   }
 }
 
 html[theme=dark] {
-  .block-theme-dark {
-    @apply block;
+  .flex-theme-dark {
+    @apply flex;
   }
 }
 
 html[theme=light] {
-  .block-theme-light {
-    @apply block;
+  .flex-theme-light {
+    @apply flex;
   }
 }
