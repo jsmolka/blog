@@ -1,6 +1,6 @@
 import lozad from 'lozad';
 import { createApp, reactive } from 'petite-vue';
-import AudioPlayer from './audioPlayer';
+import Player from './player';
 
 const lozadOptions = {
   rootMargin: '512px',
@@ -8,6 +8,10 @@ const lozadOptions = {
 
 const observer = lozad('.lozad', lozadOptions);
 observer.observe();
+
+for (const element of document.querySelectorAll('*[v-scope="Player()"')) {
+  createApp({ Player }).mount(element);
+}
 
 const audioObserver = lozad('.lozad-audio', {
   ...lozadOptions,
@@ -25,8 +29,7 @@ const store = reactive({
 
 createApp({
   store,
-  AudioPlayer,
-}).mount();
+}).mount('header');
 
 window.addEventListener('click', () => {
   store.menu = false;

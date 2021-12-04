@@ -37,7 +37,7 @@ const icons = {
 
 const instances = [];
 
-export default function AudioPlayer(props) {
+export default function Player() {
   return {
     $template: /* html */ `
       <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 rounded-sm touch-action-none">
