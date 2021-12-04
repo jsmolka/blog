@@ -2,7 +2,7 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
 }
 
-function bar(element, events) {
+function initBarEvents(element, events) {
   const down = event => {
     if (event.button === 2) {
       return;
@@ -41,28 +41,28 @@ export default function Player() {
   return {
     $template: /* html */ `
       <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 rounded-sm touch-action-none">
-        <button ref="stateButton" class="p-1 select-none cursor-pointer">
+        <button ref="stateButton" class="p-1">
           <svg class="mb-px" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path :d="icon.state"></path>
           </svg>
         </button>
-        <div class="ml-1 pb-0.5 text-sm text-center font-feature-tnum">{{ time }}</div>
+        <div class="ml-1 pb-0.5 text-sm font-feature-tnum">{{ time }}</div>
         <div ref="progressBar" class="flex flex-1 ml-3.5 mr-2 py-2.5 cursor-pointer">
           <div ref="progressBarInner" class="flex flex-1 h-1 bg-backdrop-3">
             <div class="bg-neutral-2" :style="{ width: 100 * progress + '%' }" ></div>
           </div>
         </div>
         <div ref="volumeContainer" class="flex items-center">
-          <div ref="volumeBar" :class="isVolumeHovered || isVolumeGrabbed ? 'w-20' : 'w-0'" class="flex py-2.5 transition-width duration-500 ease-in-out">
+          <div ref="volumeBar" :class="volumeHovered || volumeGrabbed ? 'w-20' : 'w-0'" class="flex py-2.5 transition-width duration-500 ease-in-out cursor-pointer">
             <div ref="volumeBarInner" class="flex flex-1 h-1 ml-2.5 mr-2 bg-backdrop-3">
               <div class="bg-neutral-2" :style="{ width: 100 * volume + '%' }"></div>
             </div>
           </div>
-          <div ref="volumeButton" class="p-1 select-none cursor-pointer">
+          <button ref="volumeButton" class="p-1">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path :d="icon.volume"></path>
             </svg>
-          </div>
+          </button>
         </div>
       </div>
     `,
@@ -70,20 +70,15 @@ export default function Player() {
     time: '0:00 / 0:00',
     progress: 0,
     volume: 0,
-    isVolumeHovered: false,
-    isVolumeGrabbed: false,
+    volumeHovered: false,
+    volumeGrabbed: false,
     icon: {
       state: icons.play,
       volume: icons.volume,
     },
 
     mounted(element) {
-      instances.push(this);
-
-      const container = element.parentNode;
-
-      this.audio = container.getElementsByTagName('audio')[0];
-      this.audio.classList.add('hidden');
+      this.audio = element.parentElement.getElementsByTagName('audio')[0];
       this.audio.addEventListener('loadedmetadata', () => {
         if (this.isMobileDevice) {
           this.setVolume(0.66);
@@ -92,6 +87,8 @@ export default function Player() {
         }
         this.updateTime();
         this.initEvents();
+
+        instances.push(this);
       });
     },
 
@@ -141,7 +138,7 @@ export default function Player() {
       };
 
       let paused = false;
-      bar(this.$refs.progressBar, {
+      initBarEvents(this.$refs.progressBar, {
         down: event => {
           if (!(paused = this.audio.paused)) {
             this.pause()
@@ -165,22 +162,22 @@ export default function Player() {
           this.updateVolumeIcon();
         });
       } else {
-        this.$refs.volumeContainer.addEventListener('mouseenter', () => this.isVolumeHovered = true );
-        this.$refs.volumeContainer.addEventListener('mouseleave', () => this.isVolumeHovered = false );
+        this.$refs.volumeContainer.addEventListener('mouseenter', () => this.volumeHovered = true );
+        this.$refs.volumeContainer.addEventListener('mouseleave', () => this.volumeHovered = false );
 
         const update = event => {
           this.setVolume(relativeOffset(event, this.$refs.volumeBarInner));
         };
 
-        bar(this.$refs.volumeBar, {
+        initBarEvents(this.$refs.volumeBar, {
           down: update,
           move: event => {
             update(event);
-            this.isVolumeGrabbed = true;
+            this.volumeGrabbed = true;
           },
           up: event => {
             update(event);
-            this.isVolumeGrabbed = false;
+            this.volumeGrabbed = false;
           },
         });
       }

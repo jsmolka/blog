@@ -14,7 +14,7 @@ class FileSystem {
 window.Module = {
   fs: new FileSystem(),
   canvas: document.getElementById('canvas'),
-  fetching: false,
+  pending: false,
 
   onRuntimeInitialized() {
     this.updateBackground(theme.isDark);
@@ -50,17 +50,19 @@ window.Module = {
   },
 
   async loadDemo(button) {
-    if (this.fetching) {
+    if (this.pending) {
       return;
     }
 
-    this.fetching = true;
+    this.pending = true;
     button.innerHTML = 'Loading...';
     try {
       const data = await this.readUrl('/data/celeste.gba');
       this.eggvanceLoadGba(this.fs.write(data, 'gba'));
+    } catch (error) {
+      console.error(error);
     } finally {
-      this.fetching = false;
+      this.pending = false;
       button.innerHTML = 'Load demo';
     }
   },
@@ -71,10 +73,9 @@ window.Module = {
   },
 
   updateBackground(dark) {
-    this.eggvanceSetBackground(
-      dark
-        ? 0xff1b1f24
-        : 0xffffffff
+    this.eggvanceSetBackground(dark
+      ? 0xff1b1f24
+      : 0xffffffff
     );
   }
 };
@@ -92,8 +93,8 @@ window.onload = () => {
   style.appendChild(document.createTextNode(`#canvas { width: ${width}px; height: ${height}px }`));
   document.head.appendChild(style);
 
-  window.onresize = () => {
+  window.addEventListener('resize', () => {
     style.remove();
     canvas.height = 2 * canvas.width / 3;
-  }
+  });
 }
