@@ -4,6 +4,16 @@
   @apply px-4;
 }
 
+// https://bugzilla.mozilla.org/show_bug.cgi?id=748518
+.px-4-flex {
+  @apply flex;
+
+  &:before, &:after {
+    content: "";
+    min-width: 1rem;
+  }
+}
+
 .font-feature-tnum {
   font-feature-settings: 'tnum' 1;
 }

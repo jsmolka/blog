@@ -8,18 +8,19 @@ code {
 
 pre[class*="language-"],
 code[class*="language-"] {
-  @apply leading-relaxed;
   @apply whitespace-pre;
   @apply hyphens-none;
 
   .table {
     display: inline !important;
   }
+
+  line-height: 1.625rem;
 }
 
 pre[class*="language-"] {
   @apply -mx-4;
-  @apply px-4;
+  @apply px-4-flex;
   @apply py-2.5;
   @apply bg-backdrop-1;
   @apply overflow-x-auto;
