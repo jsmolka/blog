@@ -11,6 +11,7 @@ drizzle is a dynamic interpreted programming language, and its C++ implementatio
 
 In its current state, drizzle is nothing more than a glorified calculator and supports the following operators:
 
+{{<table>}}
 | Precedence | Operator                                  | Description                                                            |
 |------------|-------------------------------------------|------------------------------------------------------------------------|
 | 1          | `-`&ensp;`~`                              | Unary minus and bitwise complement                                     |
@@ -24,14 +25,16 @@ In its current state, drizzle is nothing more than a glorified calculator and su
 | 9          | `\|`                                      | Bitwise exclusive or                                                   |
 | 10         | `&&`                                      | Logical and                                                            |
 | 11         | `\|\|`                                    | Logical or                                                             |
+{{</table>}}
 
 Arithmetic operations accept the three primitive data types:
-
+{{<table>}}
 | Rank | Type  | Representation    |
 |------|-------|-------------------|
 | 1    | bool  | bool              |
 | 2    | int   | 64-bit signed int |
 | 3    | float | 64-bit float      |
+{{</table>}}
 
 Operands in mixed operations are promoted to the highest ranked operand type to prevent loss of information. That means adding a float to an int results in a float. An exception to this rule is division, where the result will always be a float. Bitwise operations work similar to arithmetic ones but don't accept float values.
 

@@ -20,6 +20,12 @@
   hyphenate-limit-zone: 8%;
 }
 
+.mx-4-scrollbar-track {
+  &::-webkit-scrollbar-track {
+    @apply mx-4;
+  }
+}
+
 .touch-action-none {
   touch-action: none;
 }
