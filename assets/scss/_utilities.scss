@@ -5,13 +5,10 @@
 }
 
 // https://bugzilla.mozilla.org/show_bug.cgi?id=748518
-.px-4-flex {
-  @apply flex;
-
-  &:before, &:after {
-    content: "";
-    min-width: 1rem;
-  }
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1700858
+.px-4-border {
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
 }
 
 .font-feature-tnum {

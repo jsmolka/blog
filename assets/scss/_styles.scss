@@ -25,23 +25,43 @@ body {
   color: $neutral-0;
 }
 
+* {
+  scrollbar-width: thin;
+}
+
 ::-webkit-scrollbar {
   @apply w-2;
   @apply h-2;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+::-webkit-scrollbar-track-piece {
+  background: rgb(240, 240, 240);
 
   .dark & {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(25, 28, 33);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(205, 205, 205);
+
+  .dark & {
+    background: rgb(115, 117, 120);
   }
 
   &:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgb(166, 166, 166);
 
     .dark & {
-      background: rgba(255, 255, 255, 0.3);
+      background: rgb(96, 98, 101);
+    }
+  }
+
+  &:active {
+    background: rgb(97, 97, 97);
+
+    .dark & {
+      background: rgb(62, 64, 68);
     }
   }
 }

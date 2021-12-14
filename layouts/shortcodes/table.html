@@ -1,3 +1,5 @@
-<figure class="-mx-4 mx-4-scrollbar-track px-4-flex overflow-x-auto">
-  {{ .Inner | $.Page.RenderString }}
+<figure class="flex -mx-4 mx-4-scrollbar-track overflow-x-auto">
+  <span class="px-4-border">
+    {{ .Inner | $.Page.RenderString }}
+  </span>
 </figure>

@@ -1,9 +1,15 @@
 @import "nord";
+@import "variables";
 
 code {
   @apply font-mono;
 
   font-size: 0.9rem;
+  color: mix($neutral-0, $neutral-1, 50%);
+
+  .dark & {
+    color: mix($dark-neutral-0, $dark-neutral-1, 50%);
+  }
 }
 
 pre[class*="language-"],
@@ -11,19 +17,25 @@ code[class*="language-"] {
   @apply whitespace-pre;
   @apply hyphens-none;
 
+  line-height: 1.7;
+
   .table {
     display: inline !important;
   }
-
-  line-height: 1.625rem;
 }
 
 pre[class*="language-"] {
   @apply -mx-4;
-  @apply px-4-flex;
   @apply py-2.5;
   @apply bg-backdrop-1;
   @apply overflow-x-auto;
+}
+
+code[class*="language-"] {
+  // https://stackoverflow.com/a/8513330
+  @apply min-w-full;
+  @apply float-left;
+  @apply px-4-border;
 }
 
 :not(pre) > code {
@@ -49,7 +61,6 @@ pre[class*="language-"] {
 
 .token.boolean,
 .token.constant,
-.token.deleted,
 .token.entity,
 .token.keyword,
 .token.operator,
@@ -63,6 +74,14 @@ pre[class*="language-"] {
 
   .dark & {
     color: $frost-2;
+  }
+}
+
+.token.deleted {
+  color: desaturate(darken($aurora-0, 10%), 20%);
+
+  .dark & {
+    color: $aurora-0;
   }
 }
 
@@ -113,6 +132,10 @@ pre > code .token.deleted:not(.prefix), code .token.inserted:not(.prefix) {
 
   & > *:first-child {
     @apply ml-4;
+  }
+
+  & > *:last-child {
+    @apply mr-4;
   }
 }
 
