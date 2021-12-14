@@ -25,8 +25,18 @@ body {
   color: $neutral-0;
 }
 
+$scrollbar-thumb: scale-color($backdrop-0, $lightness: -20%);
+$scrollbar-track: scale-color($backdrop-0, $lightness: -5%);
+$dark-scrollbar-thumb: scale-color($dark-backdrop-0, $lightness: 20%);
+$dark-scrollbar-track: scale-color($dark-backdrop-0, $lightness: 5%);
+
 * {
   scrollbar-width: thin;
+  scrollbar-color: $scrollbar-thumb $scrollbar-track;
+
+  .dark & {
+    scrollbar-color: $dark-scrollbar-thumb $dark-scrollbar-track;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -35,33 +45,33 @@ body {
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: rgb(240, 240, 240);
+  background: $scrollbar-track;
 
   .dark & {
-    background: rgb(25, 28, 33);
+    background: $dark-scrollbar-track;
   }
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(205, 205, 205);
+  background: $scrollbar-thumb;
 
   .dark & {
-    background: rgb(115, 117, 120);
+    background: $dark-scrollbar-thumb;
   }
 
   &:hover {
-    background: rgb(166, 166, 166);
+    background: scale-color($scrollbar-thumb, $lightness: -10%);
 
     .dark & {
-      background: rgb(96, 98, 101);
+      background: scale-color($dark-scrollbar-thumb, $lightness: 10%);
     }
   }
 
   &:active {
-    background: rgb(97, 97, 97);
+    background: scale-color($scrollbar-thumb, $lightness: -20%);
 
     .dark & {
-      background: rgb(62, 64, 68);
+      background: scale-color($dark-scrollbar-thumb, $lightness: 20%);
     }
   }
 }
