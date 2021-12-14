@@ -4,13 +4,6 @@
   @apply px-4;
 }
 
-// https://bugzilla.mozilla.org/show_bug.cgi?id=748518
-// https://bugzilla.mozilla.org/show_bug.cgi?id=1700858
-.px-4-border {
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
-}
-
 .font-feature-tnum {
   font-feature-settings: 'tnum' 1;
 }
