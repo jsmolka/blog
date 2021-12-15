@@ -10,10 +10,11 @@ body {
   @apply p-0;
   @apply bg-backdrop-0;
   @apply text-neutral-1;
-  @apply font-alliance;
+  @apply font-roboto;
   @apply antialiased;
 
-  font-feature-settings: "ss01", "ss02", "ss03", "liga" 0;
+  font-size: 17px;
+  font-feature-settings: "liga" 0;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;

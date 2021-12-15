@@ -2,14 +2,14 @@
   <div class="flex justify-center items-center mt-16 space-x-4">
     {{ if .Paginator.HasPrev }}
       <a class="button" href="{{ .Paginator.Prev.URL }}">
-        <span class="mr-1 -mb-0.5">{{ partial "icon/arrow/left" 16 }}</span>
+        <span class="mr-1">{{ partial "icon/arrow/left" 16 }}</span>
         <span>Go forward in time</span>
       </a>
     {{ end }}
     {{ if .Paginator.HasNext }}
       <a class="button" href="{{ .Paginator.Next.URL }}">
         <span>Go back in time</span>
-        <span class="ml-1 -mb-0.5">{{ partial "icon/arrow/right" 16 }}</span>
+        <span class="ml-1">{{ partial "icon/arrow/right" 16 }}</span>
       </a>
     {{ end }}
   </div>

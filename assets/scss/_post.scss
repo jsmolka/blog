@@ -35,7 +35,7 @@
     @apply w-fit;
     @apply mt-10;
     @apply text-neutral-0;
-    @apply font-extrabold;
+    @apply font-black;
 
     &:after {
       @apply absolute;
@@ -96,7 +96,7 @@
         @apply bg-neutral-1;
 
         content: '';
-        top: 0.65rem;
+        top: 0.575rem;
         left: -1rem;
       }
     }

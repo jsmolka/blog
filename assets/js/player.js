@@ -46,7 +46,7 @@ export default function Player() {
             <path :d="icon.state"></path>
           </svg>
         </button>
-        <div class="ml-1 pb-0.5 text-sm font-feature-tnum">{{ time }}</div>
+        <div class="ml-1 text-sm">{{ time }}</div>
         <div ref="progressBar" class="flex flex-1 ml-3.5 mr-2 py-2.5 cursor-pointer">
           <div ref="progressBarInner" class="flex flex-1 h-1 bg-backdrop-3">
             <div class="bg-neutral-2" :style="{ width: 100 * progress + '%' }" ></div>

@@ -18,13 +18,10 @@
   }
 }
 
-@include font('alliance', 300);
-@include font('alliance', 400);
-@include font('alliance', 500);
-@include font('alliance', 600);
-@include font('alliance', 700);
-@include font('alliance', 800);
-@include font('alliance', 900);
+@include font('roboto', 400);
+@include font('roboto', 500);
+@include font('roboto', 700);
+@include font('roboto', 900);
 @include font('mono', 400);
 @include font('mono', 500);
 @include font('mono', 700);
