@@ -20,9 +20,12 @@ body {
 }
 
 ::selection {
-  @apply bg-accent;
+  color: var(--neutral-0);
+  background: rgba($accent, 0.5);
 
-  color: $neutral-0;
+  .dark & {
+    background: rgba($dark-accent, 0.5);
+  }
 }
 
 $scrollbar-thumb: scale-color($backdrop-0, $lightness: -20%);
