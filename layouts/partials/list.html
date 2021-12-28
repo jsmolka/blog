@@ -11,11 +11,6 @@
         {{ . | $.Page.RenderString }}
       {{ end }}
     </div>
-
-    <a class="inline-flex items-center mt-2 font-bold" href="{{ .RelPermalink }}" style="text-decoration: none">
-      <span>Read more</span>
-      <span class="ml-1">{{ partial "icon/arrow/right" 16 }}</span>
-    </a>
   </div>
 {{ end }}
 {{ partial "pagination" . }}

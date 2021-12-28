@@ -1,6 +1,6 @@
 title = "smolka"
 baseurl = "https://smolka.dev"
-paginate = 5
+paginate = 8
 disableKinds = ["taxonomyTerm"]
 disableHugoGeneratorInject = true
 
