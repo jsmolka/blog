@@ -1,6 +1,6 @@
 ---
 title: "AST"
-summary: "The roots of tree obsession in software development."
+summary: "The root of tree obsession in software development."
 tags: ["drizzle", "language", "programming"]
 date: 2022-01-08
 type: post
