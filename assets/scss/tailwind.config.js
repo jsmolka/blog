@@ -1,4 +1,5 @@
-const root = __dirname + '/../../';
+const path = require('path');
+const root = path.join(__dirname, '../../');
 
 module.exports = {
   corePlugins: {
@@ -36,30 +37,9 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {
-      borderWidth: [
-        'first',
-        'last',
-      ],
-      margin: [
-        'first',
-        'last',
-      ],
-      padding: [
-        'first',
-        'last',
-      ],
-    },
-  },
-  purge: {
-    enabled: process.env.HUGO_ENVIRONMENT === 'production',
-    content: [
-      root + 'assets/**/*.js',
-      root + 'assets/**/*.scss',
-      root + 'content/**/*.md',
-      root + 'content/**/*.html',
-      root + 'layouts/**/*.html',
-    ],
-  },
+  content: [
+    root + 'assets/**/*.{js,scss}',
+    root + 'content/**/*.{html,md}',
+    root + 'layouts/**/*.html',
+  ],
 };
