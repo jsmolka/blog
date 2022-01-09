@@ -38,8 +38,8 @@ module.exports = {
     },
   },
   content: [
-    root + 'assets/**/*.{js,scss}',
-    root + 'content/**/*.{html,md}',
-    root + 'layouts/**/*.html',
+    path.join(root, 'assets/**/*.{js,scss}'),
+    path.join(root, 'content/**/*.{html,md}'),
+    path.join(root, 'layouts/**/*.html'),
   ],
 };
