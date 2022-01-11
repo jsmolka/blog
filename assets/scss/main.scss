@@ -1,14 +1,14 @@
 @tailwind base;
 @tailwind components;
 
-@import "variables";
+@import "base";
 @import "button";
 @import "cursor";
 @import "fonts";
 @import "post";
 @import "prism";
-@import "styles";
 @import "theme";
+@import "variables";
 @import "vue";
 
 @tailwind utilities;
