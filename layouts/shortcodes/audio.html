@@ -1,7 +1,7 @@
 <figure class="w-full {{ with .Get "class" }}{{ . }}{{ end }}">
   {{ $cap := .Get "caption" }}
   {{ $src := add "/audio/" (.Get "src") | safeURL }}
-  <div v-scope="Player()" @mounted="mounted($el)"></div>
+  <div v-scope="Player()" @vue:mounted="mounted($el)"></div>
   <div class="lozad">
     <audio class="hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata"></audio>
     <noscript>
