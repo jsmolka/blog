@@ -25,8 +25,6 @@ public:
       // Binary operations
     };
 
-    Binary(Type type, Expr left, Expr right);
-
     Type type;
     Expr left;
     Expr right;
