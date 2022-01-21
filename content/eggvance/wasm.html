@@ -3,7 +3,7 @@ title: "WebAssembly Port"
 summary: "WebAssembly port of the eggvance GBA emulator."
 tags: ["eggvance", "emulation", "programming"]
 date: 2020-04-12
-type: eggvance
+type: blank
 ---
 <div v-scope="{ controls: false }" class="flex flex-col items-center justify-center w-full m-auto px-4 py-16 max-w-screen-xl">
   <canvas id="canvas" class="w-full bg-var-background pointer-events-none select-none"></canvas>
@@ -34,4 +34,5 @@ type: eggvance
   {{</markdown>}}
   </div>
 </div>
+{{<esbuild-defer src="js/eggvance.js">}}
 <script src="/data/eggvance.js" defer></script>

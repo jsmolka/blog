@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="container my-auto py-16">
-    {{ $types := slice "post" "eggvance" }}
+    {{ $types := slice "post" "blank" }}
     {{ $pages := slice }}
     {{ range $types }}
       {{ $pages = $pages | append (where $.Site.RegularPages "Type" .) }}

@@ -1,5 +1,5 @@
-{{ partial "esbuild" (dict "ctx" . "path" "js/theme.js" "inline" true) }}
-{{ partial "esbuild-defer" (dict "ctx" . "path" "js/main.js") }}
+{{ partial "esbuild" (dict "ctx" . "src" "js/theme.js" "inline" true) }}
+{{ partial "esbuild-defer" (dict "ctx" . "src" "js/main.js") }}
 {{ if .Site.IsServer }}
-  {{ partial "esbuild-defer" (dict "ctx" . "path" "js/prism.js") }}
+  {{ partial "esbuild-defer" (dict "ctx" . "src" "js/prism.js") }}
 {{ end }}
