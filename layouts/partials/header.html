@@ -1,23 +1,23 @@
 <header class="container w-full text-neutral-0">
-  <nav class="flex justify-between h-14 -mx-4">
-    <a class="flex items-center px-4" href="/">
+  <nav class="flex justify-between items-center h-14 -mx-4">
+    <a class="flex items-center mx-3 p-1" href="/">
       <span class="font-black">{{ $.Site.Title }}</span>
       <span class="cursor ml-1.5"></span>
     </a>
     <div class="flex flex-row-reverse sm:flex-row items-center">
       <!-- Desktop -->
-      <div class="hidden sm:flex h-full">
+      <div class="hidden sm:flex">
         {{ range $.Site.Menus.main }}
-          <a class="flex items-center h-full px-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
+          <a class="flex items-center mx-3 p-1" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
         {{ end }}
       </div>
       <!-- Mobile -->
-      <div v-scope class="relative flex sm:hidden h-full">
-        <button @click.stop="store.menu = !store.menu" class="flex items-center h-full px-4">
+      <div v-scope class="relative flex sm:hidden">
+        <button @click.stop="store.menu = !store.menu" class="flex items-center mx-3 p-1">
           {{ partial "icon/menu" 24 }}
         </button>
         <div v-cloak v-show="store.menu">
-          <div class="absolute top-12 right-4 flex flex-col bg-backdrop-1 z-50">
+          <div class="absolute top-10 right-4 flex flex-col bg-backdrop-1 z-50">
             {{ range $.Site.Menus.main }}
               <a class="px-4 py-3" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
             {{ end }}
@@ -25,13 +25,13 @@
         </div>
       </div>
       <!-- Theme -->
-      <button class="flex-theme-system items-center h-full px-4" onclick="theme.setModeDark()" title="Switch to dark mode">
+      <button class="flex-theme-system mx-2.5 p-1.5" onclick="theme.setModeDark()" title="Switch to dark mode">
         {{ partial "icon/theme/system" 20 }}
       </button>
-      <button class="flex-theme-dark items-center h-full px-4" onclick="theme.setModeLight()" title="Switch to light mode">
+      <button class="flex-theme-dark mx-2.5 p-1.5" onclick="theme.setModeLight()" title="Switch to light mode">
         {{ partial "icon/theme/dark" 20 }}
       </button>
-      <button class="flex-theme-light items-center h-full px-4" onclick="theme.setModeSystem()" title="Switch to system theme">
+      <button class="flex-theme-light mx-2.5 p-1.5" onclick="theme.setModeSystem()" title="Switch to system theme">
         {{ partial "icon/theme/light" 20 }}
       </button>
     </div>
