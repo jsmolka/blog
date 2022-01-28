@@ -1,5 +1,12 @@
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS "css/main.css" | postCSS (dict "config" "assets/scss/postcss.config.js") }}
-<link rel="stylesheet" href="{{ if .Site.IsServer }}{{ $style.RelPermalink }}{{ else }}{{ ($style | minify | fingerprint).RelPermalink }}{{ end }}">
+{{ $style := resources.Get "scss/main.scss" }}
+{{ $style = $style | resources.ToCSS "css/main.css" }}
+{{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
+{{ if .Site.IsServer }}
+  {{ $style = $style | resources.ExecuteAsTemplate (printf "css/main.%v.css" (div now.Unix 4)) . }}
+{{ else }}
+  {{ $style = $style | minify | fingerprint }}
+{{ end }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 <noscript>
   <style>
