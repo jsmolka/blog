@@ -1,6 +1,6 @@
 ---
 title: "Signs of Life"
-summary: "It looks and quacks like a programming language."
+description: "It looks and quacks like a programming language."
 tags: ["drizzle", "language", "programming"]
 date: 2021-10-09
 type: post

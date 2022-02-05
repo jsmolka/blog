@@ -1,5 +1,5 @@
 <figure class="w-full {{ with .Get "class" }}{{ . }}{{ end }}">
-  {{ $cap := .Get "caption" }}
+  {{ $caption := .Get "caption" }}
   {{ $src := add "/audio/" (.Get "src") | safeURL }}
   <div v-scope="Player()" @vue:mounted="mounted($el)"></div>
   <div class="lozad">
@@ -8,7 +8,7 @@
       <audio src="{{ $src }}" type="audio/mp3" controls preload="metadata"></audio>
     </noscript>
   </div>
-  {{ with $cap }}
+  {{ with $caption }}
     <figcaption class="mt-1.5 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>

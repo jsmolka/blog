@@ -1,6 +1,6 @@
 ---
 title: "Year Two"
-summary: "Thousands of kilometers later."
+description: "Thousands of kilometers later."
 tags: ["cycling"]
 date: 2021-12-31
 type: post

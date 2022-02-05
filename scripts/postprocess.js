@@ -8,7 +8,7 @@ require('../assets/js/prism');
 function main() {
   const pattern = path.join(__dirname, '..', 'public', '**', '*.html');
 
-  glob(pattern, async (error, files) => {
+  glob(pattern, async (_, files) => {
     for (const file of files) {
       const dom = await jsdom.JSDOM.fromFile(file);
       const doc = dom.window.document;
@@ -18,6 +18,7 @@ function main() {
       // Static syntax highlighting
       if (doc.getElementsByTagName('code').length > 0) {
         Prism.highlightAllUnder(doc);
+        changed = true;
       }
 
       // Remove trailing backslash from links

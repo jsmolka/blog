@@ -3,7 +3,6 @@
     {{ .Date.Format ($.Site.Params.DateFormat | default "2006-01-02") }} &mdash;
   {{ end }}
   {{ .ReadingTime }} min read
-
   {{ if .Params.Tags }}
     <div class="flex flex-wrap">
       {{ range .Params.Tags }}

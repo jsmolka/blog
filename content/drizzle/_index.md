@@ -1,4 +1,4 @@
 ---
 title: "drizzle"
-summary: "Posts about the drizzle programming language."
+description: "Posts about the drizzle programming language."
 ---

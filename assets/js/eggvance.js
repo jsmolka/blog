@@ -1,29 +1,24 @@
-class FileSystem {
-  constructor() {
-    this.id = 0;
-  }
+let id = 0;
 
-  write(data, ext) {
-    const filename = `data${this.id++}.${ext}`;
-    FS.writeFile(filename, data);
-
-    return filename;
-  }
+function write(data, ext) {
+  const filename = `${this.id++}.${ext}`;
+  FS.writeFile(filename, data);
+  return filename;
 }
 
+const canvas = document.getElementById('canvas');
+
 window.Module = {
-  fs: new FileSystem(),
-  canvas: document.getElementById('canvas'),
+  canvas,
   pending: false,
 
   onRuntimeInitialized() {
-    this.updateBackground(theme.isDark);
+    this.updateBackground(window.theme.isDark);
   },
 
   async readUrl(url) {
     return new Promise(resolve => {
       const request = new XMLHttpRequest();
-
       request.open('GET', url);
       request.responseType = 'arraybuffer';
       request.onload = () => {
@@ -46,7 +41,12 @@ window.Module = {
 
   async loadGba(input) {
     const data = await this.readFile(input);
-    this.eggvanceLoadGba(this.fs.write(data, 'gba'));
+    this.eggvanceLoadGba(write(data, 'gba'));
+  },
+
+  async loadSav(input) {
+    const data = await this.readFile(input);
+    this.eggvanceLoadSav(write(data, 'sav'));
   },
 
   async loadDemo(button) {
@@ -58,7 +58,7 @@ window.Module = {
     button.innerHTML = 'Loading...';
     try {
       const data = await this.readUrl('/data/celeste.gba');
-      this.eggvanceLoadGba(this.fs.write(data, 'gba'));
+      this.eggvanceLoadGba(write(data, 'gba'));
     } catch (error) {
       console.error(error);
     } finally {
@@ -67,16 +67,8 @@ window.Module = {
     }
   },
 
-  async loadSav(input) {
-    const data = await this.readFile(input);
-    this.eggvanceLoadSav(this.fs.write(data, 'sav'));
-  },
-
   updateBackground(dark) {
-    this.eggvanceSetBackground(dark
-      ? 0xff1b1f24
-      : 0xffffffff
-    );
+    this.eggvanceSetBackground(dark ? 0xff1b1f24 : 0xffffffff);
   }
 };
 
@@ -85,16 +77,17 @@ window.onload = () => {
     Module.updateBackground(dark);
   });
 
-  const canvas = document.getElementById('canvas');
-  const width = canvas.clientWidth;
-  const height = 2 * width / 3;
-
+  const ratio = 2 / 3;
   const style = document.createElement('style');
-  style.appendChild(document.createTextNode(`#canvas { width: ${width}px; height: ${height}px }`));
+  style.appendChild(
+    document.createTextNode(
+      `#canvas { width: ${canvas.clientWidth}px; height: ${ratio * canvas.clientWidth}px }`
+    )
+  );
   document.head.appendChild(style);
 
   window.addEventListener('resize', () => {
     style.remove();
-    canvas.height = 2 * canvas.width / 3;
+    canvas.height = ratio * canvas.width;
   });
 }

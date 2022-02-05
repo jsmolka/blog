@@ -1,4 +1,4 @@
 ---
 title: "Cycling"
-summary: "Posts about cycling."
+description: "Posts about cycling."
 ---

@@ -1,4 +1,4 @@
 ---
 title: "eggvance"
-summary: "Posts about the eggvance GBA emulator."
+description: "Posts about the eggvance GBA emulator."
 ---

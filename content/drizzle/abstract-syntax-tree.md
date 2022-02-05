@@ -1,6 +1,6 @@
 ---
 title: "Abstract Syntax Tree"
-summary: "The root of tree obsession in programming."
+description: "The root of tree obsession in programming."
 tags: ["drizzle", "language", "programming"]
 date: 2022-01-08
 type: post

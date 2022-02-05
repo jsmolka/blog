@@ -20,10 +20,10 @@ body {
 }
 
 ::selection {
-  background: rgb(212, 235, 255);
+  background: rgba($accent, 0.33);
 
   .dark & {
-    background: rgb(32, 64, 98);
+    background: rgba($dark-accent, 0.33);
   }
 }
 

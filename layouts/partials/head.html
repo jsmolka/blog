@@ -1,7 +1,6 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Summary | plainify }}{{ end }}">
-<meta name="keywords" content="{{ with .Params.Tags }}{{ delimit . ", " }}{{ else }}{{ delimit $.Site.Params.Tags ", " }}{{ end }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Description | plainify }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
 
 <title>

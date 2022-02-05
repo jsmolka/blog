@@ -35,11 +35,12 @@
       @apply bottom-0;
       @apply left-0;
       @apply w-12;
+      @apply h-1;
       @apply max-w-full;
       @apply bg-accent;
 
-      height: 3px;
       content: "";
+      border-radius: 1px;
     }
 
     a {
