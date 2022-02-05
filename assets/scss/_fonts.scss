@@ -1,11 +1,11 @@
-@mixin font($name, $weight) {
+@mixin font($name, $file, $weight) {
   @font-face {
     font-family: $name;
     font-weight: $weight;
     font-style: normal;
     font-display: swap;
-    src: url('/fonts/#{$name}-#{$weight}.woff2') format('woff2'),
-         url('/fonts/#{$name}-#{$weight}.woff') format('woff');
+    src: url('/fonts/#{$file}-#{$weight}.woff2') format('woff2'),
+         url('/fonts/#{$file}-#{$weight}.woff') format('woff');
   }
 
   @font-face {
@@ -13,16 +13,22 @@
     font-weight: $weight;
     font-style: italic;
     font-display: swap;
-    src: url('/fonts/#{$name}-#{$weight}-italic.woff2') format('woff2'),
-         url('/fonts/#{$name}-#{$weight}-italic.woff') format('woff');
+    src: url('/fonts/#{$file}-#{$weight}-italic.woff2') format('woff2'),
+         url('/fonts/#{$file}-#{$weight}-italic.woff') format('woff');
   }
 }
 
-@include font('inter', 900);
-@include font('roboto', 400);
-@include font('roboto', 500);
-@include font('roboto', 700);
-@include font('roboto', 900);
-@include font('mono', 400);
-@include font('mono', 500);
-@include font('mono', 700);
+@include font('Roboto', 'roboto', 400);
+@include font('Roboto', 'roboto', 500);
+@include font('Roboto', 'roboto', 700);
+@include font('Roboto', 'roboto', 900);
+@include font('JetBrains Mono', 'mono', 400);
+@include font('JetBrains Mono', 'mono', 500);
+@include font('JetBrains Mono', 'mono', 700);
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter.var.woff2") format("woff2");
+}

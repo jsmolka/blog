@@ -1,6 +1,9 @@
 const path = require('path');
 const root = path.join(__dirname, '../../');
 
+const sans = (font) => `"${font}", Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif`;
+const mono = (font) => `"${font}", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`;
+
 module.exports = {
   corePlugins: {
     container: false,
@@ -22,9 +25,9 @@ module.exports = {
       accent: 'var(--accent)',
     },
     fontFamily: {
-      inter: 'inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-      roboto: 'roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
-      mono: 'mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+      inter: sans('Inter'),
+      roboto: sans('Roboto'),
+      mono: mono('JetBrains Mono'),
     },
     screens: {
       sm: '40rem',
