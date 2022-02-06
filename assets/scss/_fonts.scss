@@ -18,6 +18,10 @@
   }
 }
 
+@include font('Inter', 'inter', 400);
+@include font('Inter', 'inter', 500);
+@include font('Inter', 'inter', 700);
+@include font('Inter', 'inter', 900);
 @include font('Roboto', 'roboto', 400);
 @include font('Roboto', 'roboto', 500);
 @include font('Roboto', 'roboto', 700);
@@ -25,10 +29,3 @@
 @include font('JetBrains Mono', 'mono', 400);
 @include font('JetBrains Mono', 'mono', 500);
 @include font('JetBrains Mono', 'mono', 700);
-
-@font-face {
-  font-family: 'Inter';
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/fonts/inter.var.woff2") format("woff2");
-}

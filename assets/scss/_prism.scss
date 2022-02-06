@@ -1,10 +1,7 @@
-@import "nord";
-@import "variables";
+@import "palette";
 
 pre[class*="language-"], :not(pre) > code {
   @apply bg-backdrop-1;
-  @apply border;
-  @apply border-backdrop-1.5;
   @apply font-mono;
 
   color: mix($neutral-0, $neutral-1, 50%);
@@ -51,6 +48,17 @@ code[class*="language-"] {
 [class*="language-"] .namespace {
   @apply opacity-75;
 }
+
+$frost-0: #8fbcbb;
+$frost-1: #88c0d0;
+$frost-2: #81a1c1;
+$frost-3: #5e81ac;
+
+$aurora-0: #bf616a;
+$aurora-1: #d08770;
+$aurora-2: #ebcb8b;
+$aurora-3: #a3be8c;
+$aurora-4: #b48ead;
 
 .token.cdata,
 .token.comment,

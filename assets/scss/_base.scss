@@ -1,4 +1,4 @@
-@import "variables";
+@import "palette";
 
 html, body {
   @apply w-full;
@@ -23,7 +23,7 @@ body {
   background: rgba($accent, 0.3);
 
   .dark & {
-    background: rgba($dark-accent, 0.15);
+    background: rgba($dark-accent, 0.2);
   }
 }
 
@@ -76,12 +76,4 @@ $dark-scrollbar-track: scale-color($dark-backdrop-0, $lightness: 5%);
       background: scale-color($dark-scrollbar-thumb, $lightness: 20%);
     }
   }
-}
-
-button:focus {
-  @apply outline-none;
-}
-
-audio:focus {
-  @apply outline-none;
 }
