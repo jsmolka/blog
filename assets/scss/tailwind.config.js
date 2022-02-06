@@ -13,7 +13,9 @@ module.exports = {
       backdrop: {
         0: 'var(--backdrop-0)',
         1: 'var(--backdrop-1)',
+        1.5: 'var(--backdrop-1-5)',
         2: 'var(--backdrop-2)',
+        2.5: 'var(--backdrop-2-5)',
         3: 'var(--backdrop-3)',
       },
       neutral: {

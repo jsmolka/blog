@@ -3,15 +3,15 @@
 
 pre[class*="language-"], :not(pre) > code {
   @apply bg-backdrop-1;
+  @apply border;
+  @apply border-backdrop-1.5;
   @apply font-mono;
 
   color: mix($neutral-0, $neutral-1, 50%);
-  border: 1px solid scale-color($backdrop-1, $lightness: -5%);
   font-size: 0.9rem;
 
   .dark & {
     color: mix($dark-neutral-0, $dark-neutral-1, 50%);
-    border: 1px solid scale-color($dark-backdrop-1, $lightness: 10%);
   }
 }
 
