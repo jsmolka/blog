@@ -6,7 +6,7 @@ date: 2020-04-12
 type: blank
 ---
 <div v-scope="{ controls: false }" class="flex flex-col items-center justify-center w-full m-auto px-4 py-16 max-w-screen-xl">
-  <canvas id="canvas" class="w-full bg-var-background pointer-events-none select-none"></canvas>
+  <canvas id="canvas" class="w-full aspect-[3/2] bg-var-background pointer-events-none select-none"></canvas>
   <input ref="inputGba" class="hidden" type="file" accept=".gba" @change="Module.loadGba($el)">
   <input ref="inputSav" class="hidden" type="file" accept=".sav" @change="Module.loadSav($el)">
   <div class="flex mt-6 space-x-4">

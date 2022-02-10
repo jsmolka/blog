@@ -76,18 +76,4 @@ window.onload = () => {
   window.theme.on('change', dark => {
     Module.updateBackground(dark);
   });
-
-  const ratio = 2 / 3;
-  const style = document.createElement('style');
-  style.appendChild(
-    document.createTextNode(
-      `#canvas { width: ${canvas.clientWidth}px; height: ${ratio * canvas.clientWidth}px }`
-    )
-  );
-  document.head.appendChild(style);
-
-  window.addEventListener('resize', () => {
-    style.remove();
-    canvas.height = ratio * canvas.width;
-  });
 }
