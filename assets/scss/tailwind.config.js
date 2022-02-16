@@ -35,11 +35,6 @@ module.exports = {
       lg: '64rem',
       xl: '80rem',
     },
-    extend: {
-      width: {
-        fit: 'fit-content',
-      },
-    },
   },
   content: [
     path.join(root, 'assets/**/*.{js,scss}'),
