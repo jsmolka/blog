@@ -40,7 +40,7 @@ const instances = [];
 export default function Player() {
   return {
     $template: /* html */ `
-      <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 touch-action-none">
+      <div class="flex items-center p-1 text-neutral-2 bg-backdrop-2 rounded-sm touch-action-none">
         <button ref="stateButton" class="p-1">
           <svg class="mb-px" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path :d="icon.state"></path>

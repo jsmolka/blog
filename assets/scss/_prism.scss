@@ -3,9 +3,9 @@
 pre[class*="language-"], :not(pre) > code {
   @apply bg-backdrop-1;
   @apply font-mono;
+  @apply text-[0.9rem];
 
   color: mix($neutral-0, $neutral-1, 50%);
-  font-size: 0.9rem;
 
   .dark & {
     color: mix($dark-neutral-0, $dark-neutral-1, 50%);
@@ -16,8 +16,7 @@ pre[class*="language-"],
 code[class*="language-"] {
   @apply whitespace-pre;
   @apply hyphens-none;
-
-  line-height: 1.7;
+  @apply leading-[1.7];
 
   .table {
     display: inline !important;
@@ -139,8 +138,7 @@ $aurora-4: #b48ead;
 pre > code .token.deleted:not(.prefix), code .token.inserted:not(.prefix) {
   @apply block;
   @apply -mx-4;
-
-  color: inherit;
+  @apply text-inherit;
 
   & > *:first-child {
     @apply ml-4;

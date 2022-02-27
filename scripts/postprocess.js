@@ -6,7 +6,7 @@ const jsdom = require('jsdom');
 require('../assets/js/prism');
 
 function main() {
-  const pattern = path.join(__dirname, '..', 'public', '**', '*.html');
+  const pattern = path.join(__dirname, '../public/**/*.html');
 
   glob(pattern, async (_, files) => {
     for (const file of files) {

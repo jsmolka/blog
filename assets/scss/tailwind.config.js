@@ -9,21 +9,6 @@ module.exports = {
     container: false,
   },
   theme: {
-    colors: {
-      backdrop: {
-        0: 'var(--backdrop-0)',
-        1: 'var(--backdrop-1)',
-        2: 'var(--backdrop-2)',
-        3: 'var(--backdrop-3)',
-      },
-      neutral: {
-        0: 'var(--neutral-0)',
-        1: 'var(--neutral-1)',
-        2: 'var(--neutral-2)',
-        3: 'var(--neutral-3)',
-      },
-      accent: 'var(--accent)',
-    },
     fontFamily: {
       inter: sans('Inter'),
       roboto: sans('Roboto'),
@@ -34,6 +19,29 @@ module.exports = {
       md: '45rem',
       lg: '64rem',
       xl: '80rem',
+    },
+    extend: {
+      borderRadius: {
+        sm: '0.0625rem',
+      },
+      colors: {
+        backdrop: {
+          0: 'var(--backdrop-0)',
+          1: 'var(--backdrop-1)',
+          2: 'var(--backdrop-2)',
+          3: 'var(--backdrop-3)',
+        },
+        neutral: {
+          0: 'var(--neutral-0)',
+          1: 'var(--neutral-1)',
+          2: 'var(--neutral-2)',
+          3: 'var(--neutral-3)',
+        },
+        accent: 'var(--accent)',
+      },
+      fontSize: {
+        sm: '0.925rem',
+      },
     },
   },
   content: [

@@ -3,6 +3,7 @@
   @apply w-2.5;
   @apply h-4;
   @apply bg-accent;
+  @apply rounded-sm;
 
   @keyframes pulsate {
     0%   { @apply opacity-0;   }
@@ -10,6 +11,5 @@
     100% { @apply opacity-0;   }
   }
 
-  border-radius: 1px;
   animation: pulsate 1s infinite;
 }

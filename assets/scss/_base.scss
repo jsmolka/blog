@@ -13,6 +13,7 @@ body {
   @apply font-roboto;
   @apply antialiased;
 
+  font-size: 17px;
   font-feature-settings: "liga" 0, "tnum" 1, "cv02" 1;
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
@@ -20,25 +21,22 @@ body {
 }
 
 ::selection {
-  background: rgba($accent, 0.3);
-
-  .dark & {
-    background: rgba($dark-accent, 0.2);
-  }
+  @apply text-neutral-0;
+  @apply bg-accent;
 }
 
-$scrollbar-thumb: scale-color($backdrop-0, $lightness: -20%);
-$scrollbar-track: scale-color($backdrop-0, $lightness: -5%);
-$dark-scrollbar-thumb: scale-color($dark-backdrop-0, $lightness: 20%);
-$dark-scrollbar-track: scale-color($dark-backdrop-0, $lightness: 5%);
+$thumb: scale-color($backdrop-0, $lightness: -20%);
+$track: scale-color($backdrop-0, $lightness: -5%);
+$dark-thumb: scale-color($dark-backdrop-0, $lightness: 20%);
+$dark-track: scale-color($dark-backdrop-0, $lightness: 5%);
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: $scrollbar-thumb $scrollbar-track;
+  scrollbar-color: $thumb $track;
 }
 
 .dark, .dark * {
-  scrollbar-color: $dark-scrollbar-thumb $dark-scrollbar-track;
+  scrollbar-color: $dark-thumb $dark-track;
 }
 
 ::-webkit-scrollbar {
@@ -47,33 +45,33 @@ $dark-scrollbar-track: scale-color($dark-backdrop-0, $lightness: 5%);
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: $scrollbar-track;
+  background: $track;
 
   .dark & {
-    background: $dark-scrollbar-track;
+    background: $dark-track;
   }
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $scrollbar-thumb;
+  background: $thumb;
 
   .dark & {
-    background: $dark-scrollbar-thumb;
+    background: $dark-thumb;
   }
 
   &:hover {
-    background: scale-color($scrollbar-thumb, $lightness: -10%);
+    background: scale-color($thumb, $lightness: -10%);
 
     .dark & {
-      background: scale-color($dark-scrollbar-thumb, $lightness: 10%);
+      background: scale-color($dark-thumb, $lightness: 10%);
     }
   }
 
   &:active {
-    background: scale-color($scrollbar-thumb, $lightness: -20%);
+    background: scale-color($thumb, $lightness: -20%);
 
     .dark & {
-      background: scale-color($dark-scrollbar-thumb, $lightness: 20%);
+      background: scale-color($dark-thumb, $lightness: 20%);
     }
   }
 }
