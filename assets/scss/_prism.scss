@@ -30,14 +30,11 @@ pre[class*="language-"] {
 }
 
 code[class*="language-"] {
+  // Workaround for background culling
   // https://stackoverflow.com/a/8513330
   @apply min-w-full;
   @apply float-left;
-
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=748518
-  // https://bugzilla.mozilla.org/show_bug.cgi?id=1700858
-  border-left: 1rem solid transparent;
-  border-right: 1rem solid transparent;
+  @apply mx-4-moz;
 }
 
 :not(pre) > code {

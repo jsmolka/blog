@@ -12,10 +12,12 @@
   hyphens: none;
 }
 
-.mx-4-scrollbar-track {
-  &::-webkit-scrollbar-track {
-    @apply mx-4;
-  }
+// Workaround for overflow padding issue
+// https://bugzilla.mozilla.org/show_bug.cgi?id=748518
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1700858
+.mx-4-moz {
+  @apply border-x-[1rem];
+  @apply border-transparent;
 }
 
 .touch-action-none {
