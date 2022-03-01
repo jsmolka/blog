@@ -68,6 +68,7 @@ $aurora-4: #b48ead;
 }
 
 .token.boolean,
+.token.builtin,
 .token.constant,
 .token.entity,
 .token.keyword,
@@ -102,7 +103,6 @@ $aurora-4: #b48ead;
 }
 
 .token.attr-name,
-.token.builtin,
 .token.char,
 .token.inserted,
 .token.important,

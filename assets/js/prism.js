@@ -41,7 +41,8 @@ Prism.languages.drizzle = {
     pattern: /(\bclass\s+)\w+/i,
     lookbehind: true
   },
-  keyword: /\b(assert|block|break|case|class|continue|def|elif|else|extends|false|for|if|in|noop|null|print|return|super|switch|this|true|var|while|yield)\b/,
+  keyword: /\b(block|break|continue|def|elif|else|false|if|noop|null|return|true|var|while)\b/,
+  builtin: /\b(assert|print|time)\b/,
   boolean: /\b(?:false|null|true)\b/,
   number: /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
   operator: /[-+%=]=?|!=|:=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
