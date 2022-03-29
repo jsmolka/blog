@@ -32,18 +32,25 @@ audio:focus {
   @apply bg-accent;
 }
 
-$thumb: scale-color($backdrop-0, $lightness: -20%);
-$track: scale-color($backdrop-0, $lightness: -5%);
-$dark-thumb: scale-color($dark-backdrop-0, $lightness: 20%);
-$dark-track: scale-color($dark-backdrop-0, $lightness: 5%);
+:root {
+  $thumb: scale-color($backdrop-0, $lightness: -20%);
+  --scroll-thumb: #{$thumb};
+  --scroll-thumb-hover: #{scale-color($thumb, $lightness: -10%)};
+  --scroll-thumb-active: #{scale-color($thumb, $lightness: -20%)};
+  --scroll-track: #{scale-color($backdrop-0, $lightness: -5%)};
+}
+
+.dark {
+  $thumb: scale-color($dark-backdrop-0, $lightness: 20%);
+  --scroll-thumb: #{$thumb};
+  --scroll-thumb-hover: #{scale-color($thumb, $lightness: 10%)};
+  --scroll-thumb-active: #{scale-color($thumb, $lightness: 20%)};
+  --scroll-track: #{scale-color($dark-backdrop-0, $lightness: 5%)};
+}
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: $thumb $track;
-}
-
-.dark, .dark * {
-  scrollbar-color: $dark-thumb $dark-track;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
 }
 
 ::-webkit-scrollbar {
@@ -52,33 +59,17 @@ $dark-track: scale-color($dark-backdrop-0, $lightness: 5%);
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: $track;
-
-  .dark & {
-    background: $dark-track;
-  }
+  background: var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $thumb;
-
-  .dark & {
-    background: $dark-thumb;
-  }
+  background: var(--scroll-thumb);
 
   &:hover {
-    background: scale-color($thumb, $lightness: -10%);
-
-    .dark & {
-      background: scale-color($dark-thumb, $lightness: 10%);
-    }
+    background: var(--scroll-thumb-hover);
   }
 
   &:active {
-    background: scale-color($thumb, $lightness: -20%);
-
-    .dark & {
-      background: scale-color($dark-thumb, $lightness: 20%);
-    }
+    background: var(--scroll-thumb-active);
   }
 }

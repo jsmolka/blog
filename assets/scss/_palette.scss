@@ -1,10 +1,10 @@
 $backdrop-0: rgb(255, 255, 255);  // Background
-$backdrop-1: rgb(246, 248, 251);  // Code
-$backdrop-2: rgb(242, 244, 247);  // Audio
-$backdrop-3: rgb(214, 217, 222);  // Audio bar
+$backdrop-1: rgb(246, 248, 250);  // Code
+$backdrop-2: rgb(243, 244, 246);  // Audio
 $neutral-0:  rgb( 60,  66,  74);  // Headings
-$neutral-1:  rgb(106, 115, 125);  // Text
-$neutral-2:  mix($backdrop-0, $neutral-1, 20%);  // Audio text
+$backdrop-3: mix($backdrop-2, $neutral-0, 85%);  // Audio bar
+$neutral-1:  mix($backdrop-0, $neutral-0, 15%);  // Text
+$neutral-2:  mix($backdrop-0, $neutral-0, 45%);  // Audio text
 $neutral-3:  mix($backdrop-0, $neutral-0, 75%);  // Border/meta
 $accent:     rgb(180, 220, 255);
 
@@ -20,15 +20,15 @@ $accent:     rgb(180, 220, 255);
   --accent:     #{$accent};
 }
 
-$dark-backdrop-0: rgb( 27,  31,  36);  // Background
-$dark-backdrop-1: rgb( 35,  42,  47);  // Code
-$dark-backdrop-2: rgb( 40,  47,  52);  // Audio
-$dark-backdrop-3: rgb( 62,  71,  76);  // Audio bar
+$dark-backdrop-0: rgb( 34,  39,  46);  // Background
+$dark-backdrop-1: rgb( 45,  51,  59);  // Code
+$dark-backdrop-2: rgb( 55,  62,  71);  // Audio
 $dark-neutral-0:  rgb(197, 202, 207);  // Headings
-$dark-neutral-1:  rgb(139, 148, 158);  // Text
-$dark-neutral-2:  mix($dark-backdrop-0, $dark-neutral-1, 15%);  // Audio text
+$dark-backdrop-3: mix($dark-backdrop-2, $dark-neutral-0, 80%);  // Audio bar
+$dark-neutral-1:  mix($dark-backdrop-0, $dark-neutral-0, 15%);  // Text
+$dark-neutral-2:  mix($dark-backdrop-0, $dark-neutral-0, 40%);  // Audio text
 $dark-neutral-3:  mix($dark-backdrop-0, $dark-neutral-0, 75%);  // Border/meta
-$dark-accent:     rgb( 66, 107, 145);
+$dark-accent:     rgb( 80, 133, 181);
 
 .dark {
   --backdrop-0: #{$dark-backdrop-0};

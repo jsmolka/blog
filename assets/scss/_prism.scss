@@ -4,12 +4,6 @@ pre[class*="language-"], :not(pre) > code {
   @apply bg-backdrop-1;
   @apply font-mono;
   @apply text-[0.9rem];
-
-  color: mix($neutral-0, $neutral-1, 50%);
-
-  .dark & {
-    color: mix($dark-neutral-0, $dark-neutral-1, 50%);
-  }
 }
 
 pre[class*="language-"],
@@ -56,15 +50,29 @@ $aurora-2: #ebcb8b;
 $aurora-3: #a3be8c;
 $aurora-4: #b48ead;
 
+:root {
+  --prism-comment: #b8bfcc;
+  --prism-deleted: #{desaturate(darken($aurora-0, 10%), 20%)};
+  --prism-declaration: #{saturate(darken($frost-1, 10%), 10%)};
+  --prism-keyword: #{saturate(darken($frost-2, 10%), 20%)};
+  --prism-number: #{saturate($aurora-4, 10%)};
+  --prism-string: #{saturate(darken($aurora-3, 10%), 10%)};
+}
+
+.dark {
+  --prism-comment: #636f88;
+  --prism-deleted: #{$aurora-0};
+  --prism-declaration: #{$frost-1};
+  --prism-keyword: #{$frost-2};
+  --prism-number: #{$aurora-4};
+  --prism-string: #{$aurora-3};
+}
+
 .token.cdata,
 .token.comment,
 .token.doctype,
 .token.prolog {
-  color: #b8bfcc;
-
-  .dark & {
-    color: #636f88;
-  }
+  color: var(--prism-comment);
 }
 
 .token.boolean,
@@ -79,27 +87,15 @@ $aurora-4: #b48ead;
 .token.tag,
 .token.url,
 .token.variable {
-  color: saturate(darken($frost-2, 10%), 20%);
-
-  .dark & {
-    color: $frost-2;
-  }
+  color: var(--prism-keyword);
 }
 
 .token.deleted {
-  color: desaturate(darken($aurora-0, 10%), 20%);
-
-  .dark & {
-    color: $aurora-0;
-  }
+  color: var(--prism-deleted);
 }
 
 .token.number {
-  color: saturate($aurora-4, 10%);
-
-  .dark & {
-    color: $aurora-4;
-  }
+  color: var(--prism-number);
 }
 
 .token.attr-name,
@@ -109,22 +105,14 @@ $aurora-4: #b48ead;
 .token.regex,
 .token.selector,
 .token.string {
-  color: saturate(darken($aurora-3, 10%), 10%);
-
-  .dark & {
-    color: $aurora-3;
-  }
+  color: var(--prism-string);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  color: saturate(darken($frost-1, 10%), 10%);
-
-  .dark & {
-    color: $frost-1;
-  }
+  color: var(--prism-declaration);
 }
 
 .token.bold,

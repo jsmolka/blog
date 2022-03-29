@@ -68,7 +68,7 @@ window.Module = {
   },
 
   updateBackground(dark) {
-    this.eggvanceSetBackground(dark ? 0xff1b1f24 : 0xffffffff);
+    this.eggvanceSetBackground(dark ? 0xff22272e : 0xffffffff);
   }
 };
 

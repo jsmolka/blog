@@ -24,11 +24,7 @@ class Theme {
   setMode(mode) {
     html.setAttribute('theme', mode);
     localStorage.setItem('theme', mode);
-
-    const dark = html.classList.toggle('dark', this.isDark);
-    const meta = document.querySelector('meta[name=theme-color]');
-    meta?.setAttribute('content', dark ? '#1b1f24' : '#ffffff');
-    this.emit('change', dark);
+    this.emit('change', html.classList.toggle('dark', this.isDark));
   }
 
   setModeSystem() {
