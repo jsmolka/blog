@@ -28,7 +28,7 @@ code[class*="language-"] {
   // https://stackoverflow.com/a/8513330
   @apply min-w-full;
   @apply float-left;
-  @apply mx-4-moz;
+  @apply px-4;
 }
 
 :not(pre) > code {
