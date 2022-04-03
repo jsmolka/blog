@@ -6,46 +6,37 @@ html, body {
 }
 
 body {
-  @apply m-0;
-  @apply p-0;
   @apply bg-backdrop-0;
   @apply text-neutral-1;
   @apply font-roboto;
-  @apply antialiased;
 
-  font-feature-settings: "liga" 0, "tnum" 1, "cv02" 1;
-  scroll-behavior: smooth;
-  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02" 1, "liga" 0, "tnum" 1;
   -webkit-tap-highlight-color: transparent;
 }
 
-button:focus {
-  @apply outline-none;
-}
-
-audio:focus {
-  @apply outline-none;
-}
-
 ::selection {
-  @apply text-neutral-0;
   @apply bg-accent;
+  @apply text-neutral-0;
 }
 
 :root {
+  $track: scale-color($backdrop-0, $lightness: -5%);
   $thumb: scale-color($backdrop-0, $lightness: -20%);
+
+  --scroll-track: #{$track};
   --scroll-thumb: #{$thumb};
   --scroll-thumb-hover: #{scale-color($thumb, $lightness: -10%)};
   --scroll-thumb-active: #{scale-color($thumb, $lightness: -20%)};
-  --scroll-track: #{scale-color($backdrop-0, $lightness: -5%)};
 }
 
 .dark {
+  $track: scale-color($dark-backdrop-0, $lightness: 5%);
   $thumb: scale-color($dark-backdrop-0, $lightness: 20%);
+
+  --scroll-track: #{$track};
   --scroll-thumb: #{$thumb};
   --scroll-thumb-hover: #{scale-color($thumb, $lightness: 10%)};
   --scroll-thumb-active: #{scale-color($thumb, $lightness: 20%)};
-  --scroll-track: #{scale-color($dark-backdrop-0, $lightness: 5%)};
 }
 
 * {

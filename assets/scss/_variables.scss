@@ -1,0 +1,25 @@
+@import "palette";
+
+:root {
+  --backdrop-0: #{$backdrop-0};
+  --backdrop-1: #{$backdrop-1};
+  --backdrop-2: #{$backdrop-2};
+  --backdrop-3: #{$backdrop-3};
+  --neutral-0: #{$neutral-0};
+  --neutral-1: #{$neutral-1};
+  --neutral-2: #{$neutral-2};
+  --neutral-3: #{$neutral-3};
+  --accent: #{$accent};
+}
+
+.dark {
+  --backdrop-0: #{$dark-backdrop-0};
+  --backdrop-1: #{$dark-backdrop-1};
+  --backdrop-2: #{$dark-backdrop-2};
+  --backdrop-3: #{$dark-backdrop-3};
+  --neutral-0: #{$dark-neutral-0};
+  --neutral-1: #{$dark-neutral-1};
+  --neutral-2: #{$dark-neutral-2};
+  --neutral-3: #{$dark-neutral-3};
+  --accent: #{$dark-accent};
+}

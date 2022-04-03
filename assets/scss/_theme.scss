@@ -4,19 +4,19 @@
   @apply hidden;
 }
 
-html[theme=system] {
+html[theme="system"] {
   .flex-theme-system {
     @apply flex;
   }
 }
 
-html[theme=dark] {
+html[theme="dark"] {
   .flex-theme-dark {
     @apply flex;
   }
 }
 
-html[theme=light] {
+html[theme="light"] {
   .flex-theme-light {
     @apply flex;
   }

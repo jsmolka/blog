@@ -1,16 +1,17 @@
 @import "palette";
 
-pre[class*="language-"], :not(pre) > code {
+pre[class*="language-"],
+:not(pre) > code {
   @apply bg-backdrop-1;
+  @apply text-[0.85rem];
   @apply font-mono;
-  @apply text-[0.9rem];
 }
 
 pre[class*="language-"],
 code[class*="language-"] {
+  @apply leading-[1.7];
   @apply whitespace-pre;
   @apply hyphens-none;
-  @apply leading-[1.7];
 
   .table {
     display: inline !important;
@@ -43,7 +44,6 @@ $frost-0: #8fbcbb;
 $frost-1: #88c0d0;
 $frost-2: #81a1c1;
 $frost-3: #5e81ac;
-
 $aurora-0: #bf616a;
 $aurora-1: #d08770;
 $aurora-2: #ebcb8b;
@@ -52,11 +52,11 @@ $aurora-4: #b48ead;
 
 :root {
   --prism-comment: #b8bfcc;
-  --prism-deleted: #{desaturate(darken($aurora-0, 10%), 20%)};
-  --prism-declaration: #{saturate(darken($frost-1, 10%), 10%)};
-  --prism-keyword: #{saturate(darken($frost-2, 10%), 20%)};
-  --prism-number: #{saturate($aurora-4, 10%)};
-  --prism-string: #{saturate(darken($aurora-3, 10%), 10%)};
+  --prism-deleted: #{scale-color($aurora-0, $lightness: -10%, $saturation: 20%)};
+  --prism-declaration: #{scale-color($frost-1, $lightness: -10%, $saturation: 20%)};
+  --prism-keyword: #{scale-color($frost-2, $lightness: -10%, $saturation: 20%)};
+  --prism-number: #{scale-color($aurora-4, $lightness: -10%, $saturation: 20%)};
+  --prism-string: #{scale-color($aurora-3, $lightness: -10%, $saturation: 20%)};
 }
 
 .dark {
@@ -120,7 +120,8 @@ $aurora-4: #b48ead;
   @apply font-bold;
 }
 
-pre > code .token.deleted:not(.prefix), code .token.inserted:not(.prefix) {
+pre > code .token.deleted:not(.prefix),
+code .token.inserted:not(.prefix) {
   @apply block;
   @apply -mx-4;
   @apply text-inherit;
