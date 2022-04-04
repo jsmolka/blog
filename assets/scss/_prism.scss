@@ -19,8 +19,8 @@ code[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  @apply -mx-6;
-  @apply py-5;
+  @apply -mx-4;
+  @apply py-3;
   @apply overflow-x-auto;
 }
 
@@ -29,7 +29,7 @@ code[class*="language-"] {
   // https://stackoverflow.com/a/8513330
   @apply min-w-full;
   @apply float-left;
-  @apply px-6;
+  @apply px-4;
 }
 
 :not(pre) > code {
@@ -123,15 +123,15 @@ $aurora-4: #b48ead;
 pre > code .token.deleted:not(.prefix),
 code .token.inserted:not(.prefix) {
   @apply block;
-  @apply -mx-6;
+  @apply -mx-4;
   @apply text-inherit;
 
   & > *:first-child {
-    @apply ml-6;
+    @apply ml-4;
   }
 
   & > *:last-child {
-    @apply mr-6;
+    @apply mr-4;
   }
 }
 

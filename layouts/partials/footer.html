@@ -1,4 +1,4 @@
-<footer class="flex items-center mx-auto space-x-6 py-6 text-sm">
+<footer class="flex items-center mx-auto space-x-6 py-5 text-sm">
   {{ range $.Site.Menus.footer }}
     <a href="{{ .URL | safeURL }}">{{- .Name | safeHTML -}}</a>
   {{ end }}

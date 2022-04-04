@@ -1,5 +1,5 @@
 <header class="container w-full text-neutral-0">
-  <nav class="flex justify-between items-center h-16 -mx-4">
+  <nav class="flex justify-between items-center h-12 -mx-4">
     <a class="flex items-center mx-3 p-1" href="/">
       <span class="font-inter font-black">{{ $.Site.Title }}</span>
       <span class="cursor ml-1.5"></span>
@@ -17,7 +17,7 @@
           {{ partial "icon/menu" 24 }}
         </button>
         <div v-cloak v-show="store.menu">
-          <div class="absolute top-10 right-4 flex flex-col bg-backdrop-1 z-50">
+          <div class="absolute top-10 right-[1.125rem] flex flex-col bg-backdrop-1 z-50">
             {{ range $.Site.Menus.main }}
               <a class="px-4 py-3" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
             {{ end }}

@@ -1,5 +1,5 @@
 {{ $src := add "/img/" (.Get "src") }}
 {{ $alt := .Get "alt" }}
-<div class="wide-image -mx-6">
+<div class="wide-image -mx-4">
   {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
 </div>
