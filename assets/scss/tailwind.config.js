@@ -17,8 +17,7 @@ module.exports = {
     screens: {
       sm: '40rem',
       md: '45rem',
-      lg: '64rem',
-      xl: '80rem',
+      lg: '60rem',
     },
     extend: {
       borderRadius: {
