@@ -4,9 +4,9 @@ const glob = require('glob');
 const { JSDOM } = require('jsdom');
 require('../assets/js/prism');
 
-const public = path.join(__dirname, '../public/').replace(/\\/g, '/');
+const public = path.join(__dirname, '../public').replace(/\\/g, '/');
 const hrefRel = `href="/`;
-const hrefAbs = `href="file://${public}`;
+const hrefAbs = `href="file://${public}/`;
 
 function load(file) {
   let html = fs.readFileSync(file).toString();
@@ -97,7 +97,7 @@ function preload(window) {
 function trim(window) {
   let changed = false;
   const document = window.document;
-  const isInternalLink = (href) => href.match(/^(https:\/\/smolka\.dev)?\/.*\/$/);
+  const isInternalLink = (href) => href.match(new RegExp(`^(file://${public}|https://smolka.dev)?/.*/$`, 'g'));
   for (const link of document.getElementsByTagName('a')) {
     const href = link.getAttribute('href');
     if (isInternalLink(href)) {
@@ -109,7 +109,7 @@ function trim(window) {
 }
 
 function main() {
-  glob(public + '**/*.html', async (_, files) => {
+  glob(public + '/**/*.html', async (_, files) => {
     for (const file of files) {
       const jsdom = await load(file);
       const window = jsdom.window;
