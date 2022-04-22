@@ -10,7 +10,8 @@
     @apply bg-accent;
     @apply -z-10;
     @apply rounded-sm;
-    @apply content-[''];
+
+    content: '';
   }
 }
 

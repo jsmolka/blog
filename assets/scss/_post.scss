@@ -75,7 +75,8 @@
         @apply w-2;
         @apply h-2;
         @apply bg-neutral-1;
-        @apply content-[''];
+
+        content: '';
       }
     }
   }
@@ -126,8 +127,8 @@
   a[href^="#fn:"] {
     @apply no-underline;
 
-    &:before { @apply content-['[']; }
-    &:after  { @apply content-[']']; }
+    &:before { content: '['; }
+    &:after  { content: ']'; }
   }
 
   sup {
