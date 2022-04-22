@@ -1,11 +1,11 @@
 .post {
-  @apply leading-[1.7];
-  @apply hyphens-auto;
-  @apply text-left;
-
   @screen md {
     @apply text-justify;
   }
+
+  @apply text-left;
+  @apply hyphens-auto;
+  @apply leading-relaxed;
 
   & > * {
     @apply my-5;
@@ -75,7 +75,7 @@
         @apply w-2;
         @apply h-2;
         @apply bg-neutral-1;
-        @apply content-[""];
+        @apply content-[''];
       }
     }
   }
@@ -87,11 +87,11 @@
   table {
     @apply w-full;
     @apply border-collapse;
+    @apply text-left;
 
     th {
       @apply font-bold;
       @apply text-neutral-0;
-      @apply text-left;
       @apply hyphens-none;
     }
 
@@ -126,8 +126,8 @@
   a[href^="#fn:"] {
     @apply no-underline;
 
-    &:before { @apply content-["["]; }
-    &:after  { @apply content-["]"]; }
+    &:before { @apply content-['[']; }
+    &:after  { @apply content-[']']; }
   }
 
   sup {
@@ -156,7 +156,7 @@
       &::marker {
         @apply pr-2;
 
-        content: "[" counter(footnote-count) "]";
+        content: '[' counter(footnote-count) ']';
       }
 
       p {

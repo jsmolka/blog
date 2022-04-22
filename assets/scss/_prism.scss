@@ -4,7 +4,6 @@ pre[class*="language-"],
 :not(pre) > code {
   @apply bg-backdrop-1;
   @apply text-[0.85rem];
-  @apply font-mono;
 }
 
 pre[class*="language-"],

@@ -10,7 +10,7 @@
     @apply bg-accent;
     @apply -z-10;
     @apply rounded-sm;
-    @apply content-[""];
+    @apply content-[''];
   }
 }
 
@@ -28,7 +28,7 @@
   hyphens: none;
 }
 
-.mx-4-scrollbar-track {
+.mx-4-webkit-scroll {
   &::-webkit-scrollbar-track {
     @apply mx-4;
   }
