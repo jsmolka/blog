@@ -97,7 +97,7 @@ function preload(window) {
 function trim(window) {
   let changed = false;
   const document = window.document;
-  const isInternalLink = (href) => href.match(new RegExp(`^(file://${public}|https://smolka.dev)?/.*/$`, 'g'));
+  const isInternalLink = (href) => href.match(new RegExp(`^(file://${public}|https://smolka.dev)?/.*/$`));
   for (const link of document.getElementsByTagName('a')) {
     const href = link.getAttribute('href');
     if (isInternalLink(href)) {
