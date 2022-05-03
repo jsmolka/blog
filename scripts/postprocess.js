@@ -29,7 +29,7 @@ function trim(document) {
 function main() {
   glob(path.join(__dirname, '../public/**/*.html'), async (_, files) => {
     for (const file of files) {
-      const dom = JSDOM.fromFile(file);
+      const dom = await JSDOM.fromFile(file);
       const document = dom.window.document;
 
       let changed = false;
