@@ -9,7 +9,8 @@ body {
   @apply bg-backdrop-0;
   @apply text-neutral-1;
 
-  font-feature-settings: "cv02" 1, "liga" 0, "tnum" 1;
+  font-optical-sizing: none;
+  font-feature-settings: "liga" 0;
   -webkit-tap-highlight-color: transparent;
 }
 
