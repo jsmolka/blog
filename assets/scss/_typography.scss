@@ -16,14 +16,11 @@
   }
 }
 
-@each $style in 'normal', 'italic' {
-  @font-face {
-    font-family: 'Roboto Flex';
-    font-weight: 100 1000;
-    font-style: $style;
-    font-display: block;
-    src: url('/fonts/roboto-flex.woff2') format('woff2');
-  }
+@font-face {
+  font-family: 'Roboto Flex';
+  font-weight: 100 1000;
+  font-display: block;
+  src: url('/fonts/roboto-flex.woff2') format('woff2');
 }
 
 @include font('JetBrains Mono', 'jetbrains-mono', 400);

@@ -1,0 +1,47 @@
+@import "palette";
+
+:root {
+  $track: scale-color($backdrop-0, $lightness: -5%);
+  $thumb: scale-color($backdrop-0, $lightness: -20%);
+
+  --scroll-track: #{$track};
+  --scroll-thumb: #{$thumb};
+  --scroll-thumb-hover: #{scale-color($thumb, $lightness: -10%)};
+  --scroll-thumb-active: #{scale-color($thumb, $lightness: -20%)};
+}
+
+.dark {
+  $track: scale-color($dark-backdrop-0, $lightness: 5%);
+  $thumb: scale-color($dark-backdrop-0, $lightness: 20%);
+
+  --scroll-track: #{$track};
+  --scroll-thumb: #{$thumb};
+  --scroll-thumb-hover: #{scale-color($thumb, $lightness: 10%)};
+  --scroll-thumb-active: #{scale-color($thumb, $lightness: 20%)};
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+  @apply h-2;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+
+  &:hover {
+    background: var(--scroll-thumb-hover);
+  }
+
+  &:active {
+    background: var(--scroll-thumb-active);
+  }
+}

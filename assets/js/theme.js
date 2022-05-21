@@ -5,7 +5,7 @@ const html = document.documentElement;
 class Theme {
   constructor() {
     Object.assign(this, mitt());
-    this.setMode(localStorage.getItem('theme') ?? 'system');
+    this.set(localStorage.getItem('theme') ?? 'system');
   }
 
   get isDark() {
@@ -21,22 +21,10 @@ class Theme {
     }
   }
 
-  setMode(mode) {
-    html.setAttribute('theme', mode);
-    localStorage.setItem('theme', mode);
+  set(theme) {
+    html.setAttribute('theme', theme);
+    localStorage.setItem('theme', theme);
     this.emit('change', html.classList.toggle('dark', this.isDark));
-  }
-
-  setModeSystem() {
-    this.setMode('system');
-  }
-
-  setModeDark() {
-    this.setMode('dark');
-  }
-
-  setModeLight() {
-    this.setMode('light');
   }
 }
 

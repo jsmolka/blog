@@ -8,7 +8,7 @@ window.Module = {
   },
 
   async readUrl(url) {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const request = new XMLHttpRequest();
       request.open('GET', url);
       request.responseType = 'arraybuffer';
@@ -18,7 +18,7 @@ window.Module = {
   },
 
   async readFile(input) {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       const reader = new FileReader();
       reader.onload = () => resolve(new Uint8Array(reader.result));
       reader.readAsArrayBuffer(input.files[0]);
@@ -69,7 +69,7 @@ window.Module = {
 };
 
 window.onload = () => {
-  window.theme.on('change', dark => {
+  window.theme.on('change', (dark) => {
     Module.updateBackground(dark);
   });
 };

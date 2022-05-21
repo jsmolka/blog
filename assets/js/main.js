@@ -23,10 +23,5 @@ const store = reactive({
 
 createApp({ store }).mount();
 
-window.addEventListener('click', () => {
-  store.menu = false;
-});
-
-window.addEventListener('resize', () => {
-  store.menu = false;
-});
+window.addEventListener('click', () => store.menu = false);
+window.addEventListener('resize', () => store.menu = false);

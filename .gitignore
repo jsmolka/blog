@@ -1,10 +1,5 @@
-# Hugo
-public/
-resources/
+/assets/jsconfig.json
+/node_modules/
+/public/
+/resources/
 .hugo_build.lock
-
-# Node
-node_modules/
-
-# VS Code
-jsconfig.json

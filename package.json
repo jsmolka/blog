@@ -1,6 +1,5 @@
 {
-  "name": "website",
-  "author": "Julian Smolka",
+  "private": true,
   "scripts": {
     "postprocess": "node scripts/postprocess.js"
   },
@@ -10,14 +9,11 @@
     "petite-vue": "^0.4.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "glob": "^7.2.0",
-    "har-schema": "^2.0.0",
+    "autoprefixer": "^10.4.7",
+    "glob": "^8.0.3",
     "jsdom": "^19.0.0",
-    "postcss": "^8.4.12",
-    "postcss-cli": "^8.3.1",
-    "postcss-custom-media": "^8.0.0",
-    "postcss-import": "^14.1.0",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0",
     "prismjs": "^1.28.0",
     "tailwindcss": "^3.0.24"
   }
