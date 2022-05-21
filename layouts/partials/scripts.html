@@ -1,5 +1,5 @@
 {{ partial "esbuild" (dict "ctx" . "src" "js/theme.js" "inline" true) }}
 {{ partial "esbuild-defer" (dict "ctx" . "src" "js/main.js") }}
-{{ if .Site.IsServer }}
+{{ if not hugo.IsProduction }}
   {{ partial "esbuild-defer" (dict "ctx" . "src" "js/prism.js") }}
 {{ end }}

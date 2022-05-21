@@ -1,10 +1,10 @@
 {{ $style := resources.Get "scss/main.scss" }}
 {{ $style = $style | resources.ToCSS "css/main.css" }}
 {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
-{{ if .Site.IsServer }}
-  {{ $style = $style | resources.ExecuteAsTemplate (printf "css/main.%v.css" (div now.Unix 4)) . }}
-{{ else }}
+{{ if hugo.IsProduction }}
   {{ $style = $style | minify | fingerprint }}
+{{ else }}
+  {{ $style = $style | resources.ExecuteAsTemplate (printf "css/main.%v.css" (div now.Unix 4)) . }}
 {{ end }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
