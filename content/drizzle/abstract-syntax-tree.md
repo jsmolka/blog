@@ -17,22 +17,16 @@ using Expr = std::unique_ptr<Expression>;
 class Expression {
 public:
   enum class Type {
-    Binary,
+    Group,
   };
 
-  struct Binary {
-    enum class Type {
-      // Binary operations
-    };
-
-    Type type;
-    Expr left;
-    Expr right;
+  struct Group {
+    Expr expression;
   };
 
   Type type;
   union {
-    Binary binary;
+    Group group;
   };
 };
 ```

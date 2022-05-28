@@ -2,8 +2,10 @@
 
 pre[class*="language-"],
 :not(pre) > code {
-  @apply bg-backdrop-1;
   @apply text-[0.85rem];
+  @apply bg-backdrop-1;
+  @apply border;
+  @apply border-backdrop-3;
 }
 
 pre[class*="language-"],
@@ -20,7 +22,13 @@ code[class*="language-"] {
 pre[class*="language-"] {
   @apply -mx-4;
   @apply py-3;
+  @apply border-x-0;
   @apply overflow-x-auto;
+
+  @screen sm {
+    @apply mx-0;
+    @apply border-x;
+  }
 }
 
 code[class*="language-"] {

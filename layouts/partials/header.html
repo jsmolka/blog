@@ -21,7 +21,7 @@
           {{ partial "icon/menu" 24 }}
         </button>
         <div v-cloak v-show="store.menu">
-          <div class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-backdrop-1 z-50">
+          <div class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-backdrop-1 border border-backdrop-3 z-50">
             {{ range $.Site.Menus.header }}
               <a class="px-4 py-3" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
             {{ end }}

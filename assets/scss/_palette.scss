@@ -1,19 +1,43 @@
-$backdrop-0: rgb(255, 255, 255);  // Background
-$backdrop-1: rgb(246, 248, 250);  // Code
-$backdrop-2: rgb(243, 244, 246);  // Audio
-$backdrop-3: scale-color($backdrop-2, $lightness: -10%);  // Audio bar
-$neutral-0: rgb(36, 41, 47);  // Headings
-$neutral-1: scale-color($neutral-0, $lightness: 15%);  // Text
-$neutral-2: scale-color($neutral-0, $lightness: 50%);  // Audio text
-$neutral-3: scale-color($neutral-0, $lightness: 75%);  // Border/meta
 $accent: rgb(180, 220, 255);
+$neutral-0: rgb(36, 41, 47);
+$neutral-1: scale-color($neutral-0, $lightness: 12.5%);
+$neutral-2: scale-color($neutral-0, $lightness: 25%);
+$neutral-3: scale-color($neutral-0, $lightness: 37.5%);
+$neutral-4: scale-color($neutral-0, $lightness: 50%);
+$neutral-5: scale-color($neutral-0, $lightness: 62.5%);
+$neutral-6: scale-color($neutral-0, $lightness: 75%);
+$neutral-7: scale-color($neutral-0, $lightness: 87.5%);
+$neutral-8: scale-color($neutral-0, $lightness: 100%);
+$neutral-9: scale-color($neutral-0, $lightness: 100%);
+$backdrop-0: rgb(255, 255, 255);
+$backdrop-1: rgb(248, 249, 250);
+$backdrop-2: scale-color($backdrop-1, $lightness: -5%);
+$backdrop-3: scale-color($backdrop-1, $lightness: -10%);
+$backdrop-4: scale-color($backdrop-1, $lightness: -15%);
+$backdrop-5: scale-color($backdrop-1, $lightness: -20%);
+$backdrop-6: scale-color($backdrop-1, $lightness: -25%);
+$backdrop-7: scale-color($backdrop-1, $lightness: -30%);
+$backdrop-8: scale-color($backdrop-1, $lightness: -35%);
+$backdrop-9: scale-color($backdrop-1, $lightness: -40%);
 
-$dark-backdrop-0: rgb(34, 39, 46);  // Background
-$dark-backdrop-1: rgb(45, 51, 59);  // Code
-$dark-backdrop-2: rgb(55, 62, 71);  // Audio
-$dark-backdrop-3: scale-color($dark-backdrop-2, $lightness: 15%);  // Audio bar
-$dark-neutral-0: rgb(207, 212, 217);  // Headings
-$dark-neutral-1: scale-color($dark-neutral-0, $lightness: -10%);  // Text
-$dark-neutral-2: scale-color($dark-neutral-0, $lightness: -30%);  // Audio text
-$dark-neutral-3: scale-color($dark-neutral-0, $lightness: -60%);  // Border/meta
 $dark-accent: rgb(80, 133, 181);
+$dark-neutral-0: rgb(207, 212, 217);
+$dark-neutral-1: scale-color($dark-neutral-0, $lightness: -10%);
+$dark-neutral-2: scale-color($dark-neutral-0, $lightness: -20%);
+$dark-neutral-3: scale-color($dark-neutral-0, $lightness: -30%);
+$dark-neutral-4: scale-color($dark-neutral-0, $lightness: -40%);
+$dark-neutral-5: scale-color($dark-neutral-0, $lightness: -50%);
+$dark-neutral-6: scale-color($dark-neutral-0, $lightness: -60%);
+$dark-neutral-7: scale-color($dark-neutral-0, $lightness: -70%);
+$dark-neutral-8: scale-color($dark-neutral-0, $lightness: -80%);
+$dark-neutral-9: scale-color($dark-neutral-0, $lightness: -90%);
+$dark-backdrop-0: rgb(34, 39, 46);
+$dark-backdrop-1: scale-color($dark-backdrop-0, $lightness: 5%);
+$dark-backdrop-2: scale-color($dark-backdrop-0, $lightness: 10%);
+$dark-backdrop-3: scale-color($dark-backdrop-0, $lightness: 15%);
+$dark-backdrop-4: scale-color($dark-backdrop-0, $lightness: 20%);
+$dark-backdrop-5: scale-color($dark-backdrop-0, $lightness: 25%);
+$dark-backdrop-6: scale-color($dark-backdrop-0, $lightness: 30%);
+$dark-backdrop-7: scale-color($dark-backdrop-0, $lightness: 35%);
+$dark-backdrop-8: scale-color($dark-backdrop-0, $lightness: 40%);
+$dark-backdrop-9: scale-color($dark-backdrop-0, $lightness: 45%);
