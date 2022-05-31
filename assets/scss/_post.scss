@@ -5,7 +5,7 @@
 
   @apply text-left;
   @apply hyphens-auto;
-  @apply leading-relaxed;
+  @apply leading-[1.65];
 
   & > * {
     @apply my-5;

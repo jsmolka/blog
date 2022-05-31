@@ -7,7 +7,7 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: ['Roboto Flex', 'Roboto', 'sans-serif'],
+      sans: ['Inter', 'sans-serif'],
       mono: ['JetBrains Mono', 'monospace'],
     },
     screens: {
@@ -49,9 +49,6 @@ module.exports = {
       },
       fontSize: {
         sm: '0.925rem',
-      },
-      fontWeight: {
-        black: 1000,
       },
     },
   },

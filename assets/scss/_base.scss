@@ -7,7 +7,7 @@ body {
   @apply text-neutral-1;
 
   font-optical-sizing: none;
-  font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0, "calt" 0, "case" 1, "tnum" 1, "cv07" 1;
   -webkit-tap-highlight-color: transparent;
 }
 
