@@ -1,13 +1,11 @@
 {{ define "main" }}
-  <div class="post container w-full my-auto py-16">
-    {{ $showTitle := .Params.ShowTitle | default true }}
-    {{ if $showTitle }}
-      {{ $showMeta := .Params.ShowMeta | default true }}
+  <main class="post w-full max-w-screen-md m-auto px-4 py-16">
+    {{ if .Params.ShowTitle | default true }}
       <h1>{{- .Title | safeHTML -}}</h1>
-      {{ if $showMeta }}
-        {{ partial "meta" . }}
-      {{ end}}
+    {{ end }}
+    {{ if .Params.ShowMeta | default true }}
+      {{ partial "meta" . }}
     {{ end }}
     {{ .Content }}
-  </div>
+  </main>
 {{ end }}

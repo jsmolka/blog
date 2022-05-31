@@ -1,33 +1,31 @@
-<header class="container w-full text-neutral-0">
-  <nav class="flex justify-between items-center -mx-4 py-5">
-    <a class="flex items-center mx-4" href="/">
-      <span class="font-black">{{ $.Site.Title }}</span>
-      <span class="cursor ml-1.5"></span>
-    </a>
-    <div class="flex flex-row items-center">
-      <!-- Desktop -->
-      <div class="hidden sm:flex items-center">
-        {{ range $.Site.Menus.header }}
-          <a class="mx-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
-        {{ end }}
-      </div>
-      <!-- Theme -->
-      <button class="mx-4 flex-theme-system" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
-      <button class="mx-4 flex-theme-dark" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
-      <button class="mx-4 flex-theme-light" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
-      <!-- Mobile -->
-      <div v-scope class="relative flex sm:hidden">
-        <button @click.stop="store.menu = !store.menu" class="flex items-center mx-4">
-          {{ partial "icon/menu" 24 }}
-        </button>
-        <div v-cloak v-show="store.menu">
-          <div class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-backdrop-1 border border-backdrop-3 z-50">
-            {{ range $.Site.Menus.header }}
-              <a class="px-4 py-3" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
-            {{ end }}
-          </div>
-        </div>
+<header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-neutral-0">
+  <a class="flex items-center mx-4 space-x-1.5" href="/">
+    <span class="font-black">{{ $.Site.Title }}</span>
+    <span class="cursor"></span>
+  </a>
+  <div class="flex items-center">
+    <!-- Desktop -->
+    <nav class="hidden sm:flex items-center">
+      {{ range $.Site.Menus.header }}
+        <a class="mx-4" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
+      {{ end }}
+    </nav>
+    <!-- Theme -->
+    <button class="flex-theme-system mx-4" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
+    <button class="flex-theme-dark mx-4" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
+    <button class="flex-theme-light mx-4" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
+    <!-- Mobile -->
+    <div v-scope class="relative flex sm:hidden">
+      <button @click.stop="store.menu = !store.menu" class="flex items-center mx-4">
+        {{ partial "icon/menu" 24 }}
+      </button>
+      <div v-cloak v-show="store.menu">
+        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-backdrop-1 border border-backdrop-3 z-50">
+          {{ range $.Site.Menus.header }}
+            <a class="px-3 py-2" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
+          {{ end }}
+        </nav>
       </div>
     </div>
-  </nav>
+  </div>
 </header>

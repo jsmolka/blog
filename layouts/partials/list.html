@@ -4,10 +4,8 @@
       <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
     </h2>
     {{ partial "meta" . }}
-    <div class="mb-0">
-      {{ with .Description }}
-        {{ . | $.Page.RenderString }}
-      {{ end }}
+    <div>
+      {{ .Description | $.Page.RenderString }}
     </div>
   </div>
 {{ end }}

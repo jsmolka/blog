@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <div class="container my-auto py-16">
+  <main class="max-w-screen-md m-auto px-4 py-16">
     {{ $paginator := .Paginate .Pages }}
     {{ partial "list" . }}
-  </div>
+  </main>
 {{ end }}

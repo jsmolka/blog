@@ -2,12 +2,9 @@ const path = require('path');
 const root = path.join(__dirname, '../../');
 
 module.exports = {
-  corePlugins: {
-    container: false,
-  },
   theme: {
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Inter', 'Roboto', 'sans-serif'],
       mono: ['JetBrains Mono', 'monospace'],
     },
     screens: {
