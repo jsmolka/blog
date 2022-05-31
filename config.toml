@@ -6,7 +6,6 @@ disableHugoGeneratorInject = true
 
 [params]
   description = "Posts and other stuff."
-  dateFormat = "2006/01/02"
   birthDate = "1998-05-11"
 
 [menu]
