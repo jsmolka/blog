@@ -5,17 +5,17 @@ tags: ["eggvance", "emulation", "programming"]
 date: 2020-04-12
 type: blank
 ---
-<div v-scope="{ controls: false }" class="flex flex-col items-center justify-center w-full m-auto px-4 py-16 max-w-screen-xl">
-  <canvas id="canvas" class="w-full aspect-[3/2] bg-var-background pointer-events-none select-none"></canvas>
-  <input ref="inputGba" class="hidden" type="file" accept=".gba" @change="Module.loadGba($el)">
-  <input ref="inputSav" class="hidden" type="file" accept=".sav" @change="Module.loadSav($el)">
-  <div class="flex mt-6 space-x-4">
-    <button class="button" @click="$refs.inputGba.click()">Load rom</button>
-    <button class="button" @click="$refs.inputSav.click()">Load save</button>
+<div v-scope="{ controls: false }" class="flex flex-col items-center justify-center w-full max-w-screen-xl m-auto space-y-6 px-4 py-16">
+  <canvas id="canvas" class="w-full aspect-[3/2] bg-backdrop-0 pointer-events-none select-none"></canvas>
+  <input ref="gba" class="hidden" type="file" accept=".gba" @change="Module.loadGba($el)">
+  <input ref="sav" class="hidden" type="file" accept=".sav" @change="Module.loadSav($el)">
+  <div class="flex space-x-4">
+    <button class="button" @click="$refs.gba.click()">Load rom</button>
+    <button class="button" @click="$refs.sav.click()">Load save</button>
     <button class="button" @click="Module.loadDemo($el)">Load demo</button>
     <button class="button" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
   </div>
-  <div v-cloak v-show="controls" class="w-full max-w-screen-md mt-6">
+  <div v-cloak v-show="controls" class="w-full max-w-screen-md">
   {{<markdown>}}
   | Emulator            | Keyboard | Controller |
   |:--------------------|:---------|:-----------|
