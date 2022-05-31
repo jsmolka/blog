@@ -8,8 +8,8 @@ showTitle: false
 eggvance is a fast and accurate Game Boy Advance emulator written in C++. Its processor grew instruction by instruction in conjunction with the [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all edge cases covered.
 
 {{<flex>}}
-  {{<image src="eggvance/emerald-fame.png" caption="Pokémon Emerald hall of fame">}}
-  {{<image src="eggvance/gui-3.png" caption="ImGui user interface">}}
+  {{<image src="eggvance/emerald-mew-lcd.png" caption="Mew on Faraway Island">}}
+  {{<image src="eggvance/m3-ending.png" caption="Mother 3 final moments">}}
 {{</flex>}}
 
 Other components of the system soon followed, and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly]({{<ref "eggvance/wasm">}}). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.

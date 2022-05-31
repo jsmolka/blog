@@ -3,7 +3,7 @@
     font-family: $name;
     font-weight: $weight;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
     src: local($name), url('/fonts/#{$file}-#{$weight}.woff2') format('woff2');
   }
 
@@ -11,7 +11,7 @@
     font-family: $name;
     font-weight: $weight;
     font-style: italic;
-    font-display: block;
+    font-display: swap;
     src: local($name), url('/fonts/#{$file}-#{$weight}-italic.woff2') format('woff2');
   }
 }
@@ -20,7 +20,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
-  font-display: block;
+  font-display: swap;
   src: local('Inter'), url('/fonts/inter.woff2') format('woff2');
 }
 
@@ -28,7 +28,7 @@
   font-family: 'Inter';
   font-style: italic;
   font-weight: 100 900;
-  font-display: block;
+  font-display: swap;
   src: local('Inter'), url('/fonts/inter-italic.woff2') format('woff2');
 }
 
