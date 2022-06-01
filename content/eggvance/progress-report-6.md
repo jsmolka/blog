@@ -8,14 +8,14 @@ type: post
 2020 came to an end and left me with an output of two progress reports and a simple, short release note. That's less than I was hoping for, but most time this year went into improving the codebase and some performance tinkering for personal pleasure. In my defense, the last progress report had a much higher quality than the ones before, and I'd like to keep it this way!
 
 ## Undefined Behavior
-In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4), which has been reported by fleroviux in June last year. He tried to play Pokémon Sapphire, and his game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
+In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4), which has been reported by fleroviux in June last year. She tried to play Pokémon Sapphire, and his game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
 
 {{<flex>}}
   {{<image src="eggvance/sapphire-bad-bios-bug.png" caption="Freezing during intro sequence">}}
   {{<image src="eggvance/sapphire-bad-bios.png" caption="In the moving truck where we belong">}}
 {{</flex>}}
 
-He used the bundled replacement BIOS by Normmatt, where bugs in games are to be expected. I tried it with the original one, and the freezing stopped happening. So I closed the issue and blamed the BIOS for doing some unexpected things, but he quickly reassured me that the bug wasn't happening in his emulator or mGBA when using the same BIOS. I verified that and was left scratching my head about the possible origin of this problem.
+She used the bundled replacement BIOS by Normmatt, where bugs in games are to be expected. I tried it with the original one, and the freezing stopped happening. So I closed the issue and blamed the BIOS for doing some unexpected things, but she quickly reassured me that the bug wasn't happening in his emulator or mGBA when using the same BIOS. I verified that and was left scratching my head about the possible origin of this problem.
 
 I figured it had something to do with the BIOS implementation, but I couldn't find anything wrong with it. Many failed attempts later, GitHub suggested me the [pret](https://github.com/pret) project, which is the decompilation of all GB, GBA, and even some NDS Pokémon games. I can't believe how people do such things, but I'll gladly use their work to fix bugs in my emulator. I skimmed through the intro-sequence related parts of the code and [this function](https://github.com/pret/pokeruby/blob/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L87):
 

@@ -37,7 +37,7 @@ export default function Player() {
             <path :d="paused ? icons.play : icons.pause"></path>
           </svg>
         </button>
-        <div class="text-sm">{{ format(time) }} / {{ format(duration) }}</div>
+        <div class="text-sm font-feature-tnum">{{ format(time) }} / {{ format(duration) }}</div>
         <div ref="progressBar" class="flex flex-1 ml-3 py-2 cursor-pointer">
           <div ref="progressBarInner" class="flex flex-1 h-1 bg-backdrop-3">
             <div class="bg-backdrop-9" :style="{ width: 100 * (time / duration) + '%' }" ></div>

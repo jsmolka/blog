@@ -33,7 +33,7 @@ Here we first call the `outer` and then the returned `inner` function. The parse
  };
 ```
 
-The initial implementation expected an identifier for the callee. That worked for simple cases, but using an expression is the correct to do it. The syntax tree reflects that change and properly displays chained function calls.
+The initial implementation expected an identifier for the callee. That worked for simple cases, but using an expression is the correct way to do it. The syntax tree reflects that change and properly displays chained function calls.
 
 ```code
 program

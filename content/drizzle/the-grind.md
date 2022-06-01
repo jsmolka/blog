@@ -23,4 +23,4 @@ var length = vector.length
 print(length())  # 4.47213595499958
 ```
 
-I bought a new road bike, and guess what &mdash; cycling up to 600 km a week keeps just enough energy in the tank to be somewhat productive at work and fall into bed at night. A few chapters were remaining in [Crafting Interpreters](http://www.craftinginterpreters.com/), but those were long, and every bit of tinkering felt like a grind. I managed to work through them in the days following an unfortunate [crash](https://www.strava.com/activities/7065053419). Rest in peace 700€ in equipment, and shoutout to my helmet!
+I also bought a new road bike, and guess what: cycling up to 600 km a week keeps just enough energy in the tank to be somewhat productive at work and fall into bed at night. A few chapters were remaining in [Crafting Interpreters](http://www.craftinginterpreters.com/), but those were long, and every bit of tinkering felt like a grind. I managed to work through them in the days following an unfortunate [crash](https://www.strava.com/activities/7065053419). Rest in peace 700€ in equipment, and shoutout to my helmet!
