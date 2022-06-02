@@ -1,15 +1,13 @@
-import mitt from 'mitt';
-
 const html = document.documentElement;
 
 class Theme {
   constructor() {
-    Object.assign(this, mitt());
+    this.callbacks = [];
     this.set(localStorage.getItem('theme') ?? 'system');
   }
 
   get isDark() {
-    switch (html.getAttribute('theme') ?? 'system') {
+    switch (html.getAttribute('theme')) {
       case 'system':
         return matchMedia('(prefers-color-scheme: dark)').matches;
       case 'dark':
@@ -24,7 +22,11 @@ class Theme {
   set(theme) {
     html.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
-    this.emit('change', html.classList.toggle('dark', this.isDark));
+
+    const dark = html.classList.toggle('dark', this.isDark);
+    for (const callback of this.callbacks) {
+      callback(dark);
+    }
   }
 }
 

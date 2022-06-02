@@ -69,7 +69,7 @@ window.Module = {
 };
 
 window.onload = () => {
-  window.theme.on('change', (dark) => {
+  window.theme.callbacks.push((dark) => {
     Module.updateBackground(dark);
   });
 };
