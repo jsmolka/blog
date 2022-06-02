@@ -29,6 +29,15 @@ disableHugoGeneratorInject = true
     name = "Strava"
     url = "https://www.strava.com/athletes/juliansmolka"
 
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+  [[module.mounts]]
+    source = "content"
+    target = "assets/content"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]
