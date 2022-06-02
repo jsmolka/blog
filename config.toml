@@ -36,7 +36,7 @@ disableHugoGeneratorInject = true
 
   [[module.mounts]]
     source = "content"
-    target = "assets/content"
+    target = "assets"
 
 [markup]
   [markup.goldmark]
