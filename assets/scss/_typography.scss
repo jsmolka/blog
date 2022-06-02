@@ -4,7 +4,7 @@
     font-weight: $weight;
     font-style: normal;
     font-display: swap;
-    src: local($name), url('/fonts/#{$file}-#{$weight}.woff2') format('woff2');
+    src: url('/fonts/#{$file}-#{$weight}.woff2') format('woff2');
   }
 
   @font-face {
@@ -12,24 +12,16 @@
     font-weight: $weight;
     font-style: italic;
     font-display: swap;
-    src: local($name), url('/fonts/#{$file}-#{$weight}-italic.woff2') format('woff2');
+    src: url('/fonts/#{$file}-#{$weight}-italic.woff2') format('woff2');
   }
 }
 
 @font-face {
   font-family: 'Inter';
-  font-style: normal;
   font-weight: 100 900;
-  font-display: swap;
-  src: local('Inter'), url('/fonts/inter.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: local('Inter'), url('/fonts/inter-italic.woff2') format('woff2');
+  font-display: block;
+  font-style: oblique 0deg 10deg;
+  src: url('/fonts/inter.woff2') format('woff2');
 }
 
 @include font('JetBrains Mono', 'jetbrains-mono', 400);
