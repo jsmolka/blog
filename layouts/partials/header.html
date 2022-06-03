@@ -11,9 +11,9 @@
       {{ end }}
     </nav>
     <!-- Theme -->
-    <button class="flex-theme-system mx-4" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
-    <button class="flex-theme-dark mx-4" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
-    <button class="flex-theme-light mx-4" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
+    <button class="hidden theme-system:flex mx-4" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
+    <button class="hidden theme-dark:flex mx-4" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
+    <button class="hidden theme-light:flex mx-4" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
     <!-- Mobile -->
     <div v-scope class="relative flex sm:hidden">
       <button @click.stop="store.menu = !store.menu" class="flex items-center mx-4">
