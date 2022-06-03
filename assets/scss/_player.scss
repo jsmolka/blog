@@ -1,0 +1,33 @@
+@import "palette";
+
+:root {
+  --audio: #{scale-color($shade-1, $lightness: 50%)};
+}
+
+.dark {
+  --audio: #{scale-color($dark-shade-1, $lightness: -40%)};
+}
+
+.player {
+  @apply flex;
+  @apply items-center;
+  @apply bg-shade-5;
+  @apply text-sm;
+  @apply border;
+  @apply border-shade-4;
+  @apply rounded-sm;
+  @apply touch-action-none;
+  @apply font-feature-tnum;
+  color: var(--audio);
+
+  .bar {
+    @apply flex;
+    @apply flex-1;
+    @apply h-1;
+    @apply bg-shade-4;
+
+    & > div {
+      background: var(--audio);
+    }
+  }
+}

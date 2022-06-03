@@ -31,22 +31,22 @@ const instances = [];
 export default function Player() {
   return {
     $template: /* html */ `
-      <div class="flex items-center bg-backdrop-1 text-neutral-4 border border-backdrop-3 rounded-sm touch-action-none">
+      <div class="player">
         <button ref="stateButton" class="p-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path :d="paused ? icons.play : icons.pause"></path>
           </svg>
         </button>
-        <div class="text-sm font-feature-tnum">{{ format(time) }} / {{ format(duration) }}</div>
-        <div ref="progressBar" class="flex flex-1 ml-3 py-2 cursor-pointer">
-          <div ref="progressBarInner" class="flex flex-1 h-1 bg-backdrop-3">
-            <div class="bg-backdrop-9" :style="{ width: 100 * (time / duration) + '%' }" ></div>
+        <div>{{ format(time) }} / {{ format(duration) }}</div>
+        <div ref="progressBar" class="flex-1 ml-3 py-2 cursor-pointer">
+          <div ref="progressBarInner" class="bar">
+            <div :style="{ width: 100 * (time / duration) + '%' }" ></div>
           </div>
         </div>
         <div ref="volumeContainer" class="flex items-center ml-1">
-          <div ref="volumeBar" :class="volumeHover || volumeActive ? 'w-20' : 'w-0'" class="flex py-2 transition-width duration-500 ease-in-out cursor-pointer">
-            <div ref="volumeBarInner" class="flex flex-1 h-1 ml-3 mr-1 bg-backdrop-3">
-              <div class="bg-backdrop-9" :style="{ width: 100 * volume + '%' }"></div>
+          <div ref="volumeBar" :class="volumeHover || volumeActive ? 'w-20' : 'w-0'" class="py-2 transition-width duration-500 ease-in-out cursor-pointer">
+            <div ref="volumeBarInner" class="bar ml-3 mr-1">
+              <div :style="{ width: 100 * volume + '%' }"></div>
             </div>
           </div>
           <button ref="volumeButton" class="p-2">
