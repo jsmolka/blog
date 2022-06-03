@@ -20,6 +20,13 @@ $backdrop-7: scale-color($backdrop-1, $lightness: -30%);
 $backdrop-8: scale-color($backdrop-1, $lightness: -35%);
 $backdrop-9: scale-color($backdrop-1, $lightness: -40%);
 
+$shade-1: $neutral-0;
+$shade-2: $neutral-1;
+$shade-3: $neutral-5;
+$shade-4: $backdrop-3;
+$shade-5: $backdrop-1;
+$shade-6: $backdrop-0;
+
 $dark-accent: rgb(80, 133, 181);
 $dark-neutral-0: rgb(207, 212, 217);
 $dark-neutral-1: scale-color($dark-neutral-0, $lightness: -10%);
@@ -41,3 +48,10 @@ $dark-backdrop-6: scale-color($dark-backdrop-0, $lightness: 30%);
 $dark-backdrop-7: scale-color($dark-backdrop-0, $lightness: 35%);
 $dark-backdrop-8: scale-color($dark-backdrop-0, $lightness: 40%);
 $dark-backdrop-9: scale-color($dark-backdrop-0, $lightness: 45%);
+
+$dark-shade-1: $dark-neutral-0;
+$dark-shade-2: $dark-neutral-1;
+$dark-shade-3: $dark-neutral-5;
+$dark-shade-4: $dark-backdrop-3;
+$dark-shade-5: $dark-backdrop-1;
+$dark-shade-6: $dark-backdrop-0;
