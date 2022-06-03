@@ -3,13 +3,13 @@ $shade-1: rgb(36, 41, 47);
 $shade-2: scale-color($shade-1, $lightness: 12.5%);
 $shade-3: scale-color($shade-1, $lightness: 62.5%);
 $shade-6: rgb(255, 255, 255);
-$shade-4: scale-color($shade-6, $lightness: -10%);
 $shade-5: rgb(248, 249, 250);
+$shade-4: scale-color($shade-5, $lightness: -10%);
 
 $dark-accent: rgb(80, 133, 181);
 $dark-shade-1: rgb(207, 212, 217);
 $dark-shade-2: scale-color($dark-shade-1, $lightness: -10%);
 $dark-shade-3: scale-color($dark-shade-1, $lightness: -50%);
 $dark-shade-6: rgb(34, 39, 46);
-$dark-shade-4: scale-color($dark-shade-6, $lightness: 20%);
 $dark-shade-5: scale-color($dark-shade-6, $lightness: 5%);
+$dark-shade-4: scale-color($dark-shade-6, $lightness: 20%);
