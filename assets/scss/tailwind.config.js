@@ -1,5 +1,4 @@
 const path = require('path');
-const root = path.join(__dirname, '../../');
 
 module.exports = {
   theme: {
@@ -44,14 +43,11 @@ module.exports = {
           9: 'var(--backdrop-9)',
         },
       },
-      fontSize: {
-        sm: '0.925rem',
-      },
     },
   },
   content: [
-    path.join(root, 'assets/**/*.{js,scss}'),
-    path.join(root, 'content/**/*.{html,md}'),
-    path.join(root, 'layouts/**/*.html'),
+    path.join(__dirname, '../../assets/**/*.{js,scss}'),
+    path.join(__dirname, '../../content/**/*.{html,md,js}'),
+    path.join(__dirname, '../../layouts/**/*.html'),
   ],
 };
