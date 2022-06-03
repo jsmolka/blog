@@ -2,10 +2,11 @@
 
 pre[class*="language-"],
 :not(pre) > code {
-  @apply text-[0.85rem];
-  @apply bg-backdrop-1;
+  @apply bg-shade-5;
+  @apply text-sm;
   @apply border;
-  @apply border-backdrop-3;
+  @apply border-shade-4;
+  @apply rounded-sm;
 }
 
 pre[class*="language-"],

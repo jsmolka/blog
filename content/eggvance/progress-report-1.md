@@ -86,7 +86,6 @@ A precondition for playing through a whole game were working save implementation
 ## Final Words
 All of this progress sounds great. Sadly you can't hear it because there is no audio implementation just yet. That's the last thing I'll do. Before that, I need to improve the accuracy and performance of the emulator. It's not bad, but I could be better. This report will serve as a baseline, and I'll try to make more of those with specific information in the future.
 
-## Notes
 [^1]: What a boring class this was. The lecturer went over the basics of structured programming and the C/C++ memory model. At least I could use the time to work on my side projects.
 [^2]: I'll revisit GB emulation at some point in the future but for now, it just isn't what I want to do.
 [^3]: I regret not starting this earlier. The sensation of getting even the simplest demo to work was amazing, and booting Pokémon Emerald for the first time made me jump across the room in euphoria.

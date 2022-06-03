@@ -24,12 +24,36 @@
     @apply w-fit;
     @apply mt-10;
     @apply text-left;
-    @apply text-neutral-0;
+    @apply text-shade-1;
     @apply font-black;
 
     a {
       @apply no-underline;
     }
+  }
+
+  h1 {
+    @apply text-3xl;
+    letter-spacing: -0.021em;
+  }
+
+  h2 {
+    @apply text-2xl;
+    letter-spacing: -0.019em;
+  }
+
+  h3 {
+    @apply text-xl;
+    letter-spacing: -0.017em;
+  }
+
+  h4 {
+    @apply text-lg;
+    letter-spacing: -0.014em;
+  }
+
+  h5, h6 {
+    @apply text-base;
   }
 
   a {
@@ -67,7 +91,7 @@
         @apply -left-4;
         @apply w-2;
         @apply h-2;
-        @apply bg-neutral-1;
+        @apply bg-shade-2;
 
         content: '';
       }
@@ -85,7 +109,7 @@
 
     th {
       @apply font-bold;
-      @apply text-neutral-0;
+      @apply text-shade-1;
       @apply hyphens-none;
     }
 
@@ -93,24 +117,17 @@
       @apply px-3;
       @apply py-2;
       @apply border;
-      @apply border-backdrop-4;
+      @apply border-shade-4;
     }
   }
 
   blockquote {
+    @apply space-y-2.5;
     @apply pl-5;
     @apply py-3;
     @apply italic;
     @apply border-l-4;
-    @apply border-neutral-1;
-
-    p {
-      @apply my-0;
-
-      &:not(:first-child) {
-        @apply mt-2.5;
-      }
-    }
+    @apply border-shade-2;
   }
 
   audio {
@@ -119,6 +136,7 @@
 
   a[href^="#fn:"] {
     @apply no-underline;
+    @apply font-feature-tnum;
 
     &:before { content: '['; }
     &:after  { content: ']'; }
@@ -137,7 +155,10 @@
     }
 
     hr {
-      @apply hidden;
+      @apply my-10;
+      @apply border-t-2;
+      @apply border-dashed;
+      @apply border-shade-4;
     }
 
     ol {
@@ -149,6 +170,7 @@
 
       &::marker {
         @apply pr-2;
+        @apply font-feature-tnum;
 
         content: '[' counter(footnote-count) ']';
       }

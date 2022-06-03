@@ -1,8 +1,8 @@
 @import "palette";
 
 :root {
-  $track: scale-color($backdrop-0, $lightness: -5%);
-  $thumb: scale-color($backdrop-0, $lightness: -20%);
+  $track: scale-color($shade-6, $lightness: -5%);
+  $thumb: scale-color($shade-6, $lightness: -20%);
 
   --scroll-track: #{$track};
   --scroll-thumb: #{$thumb};
@@ -11,8 +11,8 @@
 }
 
 .dark {
-  $track: scale-color($dark-backdrop-0, $lightness: 5%);
-  $thumb: scale-color($dark-backdrop-0, $lightness: 20%);
+  $track: scale-color($dark-shade-6, $lightness: 5%);
+  $thumb: scale-color($dark-shade-6, $lightness: 20%);
 
   --scroll-track: #{$track};
   --scroll-thumb: #{$thumb};
