@@ -27,12 +27,6 @@
   hyphens: none;
 }
 
-.mx-4-webkit-scroll {
-  &::-webkit-scrollbar-track {
-    @apply mx-4;
-  }
-}
-
 .touch-action-none {
   touch-action: none;
 }

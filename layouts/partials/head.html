@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Description | plainify }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
+<link rel="shortcut icon" href="/favicon.ico">
 
 <title>
   {{- if .IsHome -}}
@@ -11,10 +12,8 @@
   {{- end -}}
 </title>
 
-{{ partial "favicon" . }}
 {{ partial "styles" . }}
 {{ partial "scripts" . }}
 {{ partial "preload" . }}
 
 {{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
