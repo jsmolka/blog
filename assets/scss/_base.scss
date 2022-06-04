@@ -7,6 +7,7 @@ body {
   @apply text-shade-2;
 
   font-size: 15px;
+  font-feature-settings: "calt", "ccmp", "cv07", "kern";
   letter-spacing: -0.004em;
   -webkit-tap-highlight-color: transparent;
 }
