@@ -1,3 +1,15 @@
+@mixin post-margin {
+  @apply my-5;
+
+  &:first-child {
+    @apply mt-0;
+  }
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
 .post {
   @screen md {
     @apply text-justify;
@@ -8,15 +20,7 @@
   @apply leading-[1.65];
 
   & > * {
-    @apply my-5;
-
-    &:first-child {
-      @apply mt-0;
-    }
-
-    &:last-child {
-      @apply mb-0;
-    }
+    @include post-margin;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -175,22 +179,23 @@
       @apply border-shade-4;
     }
 
-    ol {
+    & > ol {
       @apply ml-5;
-    }
 
-    li {
-      counter-increment: footnote-count;
+      & > li {
+        @apply pl-5;
 
-      &::marker {
-        @apply pr-2;
-        @apply font-feature-tnum;
+        counter-increment: footnote-count;
 
-        content: '[' counter(footnote-count) ']';
-      }
+        & > * {
+          @include post-margin;
+        }
 
-      p {
-        @apply pl-3;
+        &::marker {
+          @apply font-feature-tnum;
+
+          content: '[' counter(footnote-count) ']';
+        }
       }
     }
   }
