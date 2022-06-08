@@ -2,10 +2,10 @@
 
 pre[class*="language-"],
 :not(pre) > code {
-  @apply bg-shade-5;
+  @apply bg-shade-4;
   @apply text-sm;
   @apply border;
-  @apply border-shade-4;
+  @apply border-shade-3;
   @apply rounded-sm;
 }
 
@@ -26,7 +26,7 @@ pre[class*="language-"] {
   @apply border-x-0;
   @apply overflow-x-auto;
 
-  @screen sm {
+  @screen md {
     @apply mx-0;
     @apply border-x;
   }

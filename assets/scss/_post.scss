@@ -29,7 +29,7 @@
     @apply w-fit;
     @apply mt-10;
     @apply text-left;
-    @apply text-shade-1;
+    @apply text-shade-0;
     @apply font-black;
 
     &:after {
@@ -109,7 +109,7 @@
         @apply -left-4;
         @apply w-2;
         @apply h-2;
-        @apply bg-shade-2;
+        @apply bg-shade-1;
 
         content: '';
       }
@@ -127,7 +127,7 @@
 
     th {
       @apply font-bold;
-      @apply text-shade-1;
+      @apply text-shade-0;
       @apply hyphens-none;
     }
 
@@ -135,7 +135,7 @@
       @apply px-3;
       @apply py-2;
       @apply border;
-      @apply border-shade-4;
+      @apply border-shade-3;
     }
   }
 
@@ -145,7 +145,7 @@
     @apply py-3;
     @apply italic;
     @apply border-l-4;
-    @apply border-shade-2;
+    @apply border-shade-1;
   }
 
   audio {
@@ -176,7 +176,7 @@
       @apply my-8;
       @apply border-t-2;
       @apply border-dashed;
-      @apply border-shade-4;
+      @apply border-shade-3;
     }
 
     & > ol {

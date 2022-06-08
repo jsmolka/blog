@@ -1,4 +1,4 @@
-<div class="text-shade-3 text-sm space-y-1">
+<div class="text-shade-2 text-sm space-y-1">
   <div>
     {{ if .Date }}
       <time datetime="{{ .Date.Format "2006-01-02" }}">
@@ -10,7 +10,7 @@
   {{ if .Params.Tags }}
     <nav class="flex flex-wrap space-x-2 gap-y-2">
       {{ range .Params.Tags }}
-        <a class="px-1.5 py-0.5 bg-shade-5 border border-shade-4 rounded-sm" href="{{ (printf "tags/%s/" . ) | urlize | absURL }}" style="text-decoration: none">{{ . }}</a>
+        <a class="px-1.5 py-0.5 bg-shade-4 border border-shade-3 rounded-sm" href="{{ (printf "tags/%s/" . ) | urlize | absURL }}" style="text-decoration: none">{{ . }}</a>
       {{ end }}
     </nav>
   {{ end }}

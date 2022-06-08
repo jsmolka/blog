@@ -1,4 +1,4 @@
-<header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-shade-1">
+<header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-shade-0">
   <a href="/" class="flex items-center mx-4 space-x-1.5">
     <span class="font-black">{{ $.Site.Title }}</span>
     <span class="cursor"></span>
@@ -20,7 +20,7 @@
         {{ partial "icon/menu" 24 }}
       </button>
       <div v-cloak v-show="store.menu">
-        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-shade-5 border border-shade-4 z-[9999]">
+        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-shade-4 border border-shade-3 z-[9999]">
           {{ range $.Site.Menus.header }}
             <a class="px-3 py-2" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
           {{ end }}

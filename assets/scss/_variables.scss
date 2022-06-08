@@ -2,20 +2,20 @@
 
 :root {
   --accent: #{$accent};
+  --shade-0: #{$shade-0};
   --shade-1: #{$shade-1};
   --shade-2: #{$shade-2};
   --shade-3: #{$shade-3};
   --shade-4: #{$shade-4};
   --shade-5: #{$shade-5};
-  --shade-6: #{$shade-6};
 }
 
 .dark {
   --accent: #{$dark-accent};
+  --shade-0: #{$dark-shade-0};
   --shade-1: #{$dark-shade-1};
   --shade-2: #{$dark-shade-2};
   --shade-3: #{$dark-shade-3};
   --shade-4: #{$dark-shade-4};
   --shade-5: #{$dark-shade-5};
-  --shade-6: #{$dark-shade-6};
 }
