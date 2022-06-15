@@ -10,7 +10,7 @@ I began my cycling journey around two years ago. I was looking for a new bike, a
 Fast forward two years and almost 20 000 km, I decided it was time for a new frame. The old one still is in great condition, but it can't keep up with my growing demand. It was time for something faster. After extensive research and well over half a year awaiting availability during the COVID supply chain crisis, I finally got the chance to buy a Canyon Aeroad and pulled the trigger.
 
 {{<escape>}}
-  {{<image src="cycling/aeroad.jpg">}}
+  {{<image src="cycling/aeroad.jpg" alt="Canyon Aeroad">}}
 {{</escape>}}
 
 It's everything I wanted from a road bike. It's lightweight, stiff, made of carbon [^1], and comes with great components out of the box. At a price of 3800€, it's no bargain, but still good value for money if that's even possible. I've already put well over 5000 km into it and must say that I love it.
