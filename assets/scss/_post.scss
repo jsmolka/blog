@@ -163,8 +163,9 @@
   sup {
     @apply relative;
     @apply top-0;
-    @apply text-base;
-    @apply align-baseline;
+
+    font-size: inherit;
+    line-height: inherit;
   }
 
   .footnotes {
