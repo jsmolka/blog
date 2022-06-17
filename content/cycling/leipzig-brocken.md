@@ -17,7 +17,7 @@ The Harz was beautiful. Great roads, dense green forests, and cute little villag
   {{<image src="cycling/brocken-ascend.jpg" alt="Brocken ascend">}}
 {{</escape>}}
 
-The final kilometers were killing me. It started drizzling. I had almost nine hours of riding in the legs and was unable to put down any reasonable amount of power for a sustained amount of time. I had to take two short breaks on the steeper gradients in the final meters, but I managed to get up there in the end.
+The final kilometers were killing me. It started drizzling. I had almost nine hours of riding in the legs and was unable to put down any reasonable amount of power for a sustained period of time. I had to take two short breaks on the steeper gradients in the final meters, but I managed to get up there in the end.
 
 {{<escape>}}
   {{<image src="cycling/brocken.jpg" alt="Me on the Brocken">}}
