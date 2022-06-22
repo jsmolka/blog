@@ -41,7 +41,8 @@ code[class*="language-"] {
 }
 
 :not(pre) > code {
-  padding: 0.05rem 0.3rem 0.15rem 0.3rem;
+  @apply px-1;
+  @apply py-0.5;
 }
 
 [class*="language-"] .namespace {
