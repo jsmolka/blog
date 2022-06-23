@@ -5,7 +5,7 @@ showMeta: false
 showTitle: false
 ---
 # drizzle
-drizzle is a dynamic interpreted programming language.
+[drizzle](https://github.com/jsmolka/drizzle) is a dynamic interpreted programming language.
 
 ```drizzle
 class Point:
@@ -28,7 +28,7 @@ assert(area(triangle) == 8.0)
 ```
 
 # eggvance
-eggvance is a fast and accurate Game Boy Advance emulator. Its processor grew instruction by instruction in conjunction with the [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all edge cases covered.
+[eggvance](https://github.com/jsmolka/eggvance) is a fast and accurate Game Boy Advance emulator. Its processor grew instruction by instruction in conjunction with the [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all edge cases covered.
 
 {{<flex>}}
   {{<image src="eggvance/emerald-mew-lcd.png" caption="Mew on Faraway Island">}}
