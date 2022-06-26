@@ -1,7 +1,7 @@
 ---
 title: "Aeroad"
 description: "Imagine buying an aero road bike."
-tags: ["cycling", "canyon", "aeroad"]
+tags: ["aeroad", "canyon", "cycling"]
 date: 2022-06-09
 type: post
 ---
