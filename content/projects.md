@@ -30,8 +30,8 @@ assert(area(triangle) == 8.0)
 It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a Game Boy emulator. It provides simple SDL2 and filesystem interfaces to achieve that.
 
 {{<flex>}}
-  {{<image src="drizzle/drizzle-icon.png" caption="drizzle icon">}}
-  {{<image src="drizzle/eggvance-icon.png" caption="eggvance icon">}}
+  {{<image src="drizzle/drizzle-icon.png" caption="Icon of drizzle rendered with SDL2">}}
+  {{<image src="drizzle/eggvance-icon.png" caption="Icon of eggvance rendered with SDL2">}}
 {{</flex>}}
 
 # eggvance
