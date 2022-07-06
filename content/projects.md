@@ -35,7 +35,7 @@ It started as an exercise for language design and whitespace-aware parsing and g
 {{</flex>}}
 
 # eggvance
-[eggvance](https://github.com/jsmolka/eggvance) is a fast and accurate Game Boy Advance emulator. Its processor grew instruction by instruction in conjunction with the [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all edge cases covered.
+[eggvance](https://github.com/jsmolka/eggvance) is a fast and accurate Game Boy Advance emulator. The processor grew instruction by instruction in conjunction with its [test suite](https://github.com/jsmolka/gba-tests) to ensure a solid implementation with all edge cases covered.
 
 {{<flex>}}
   {{<image src="eggvance/emerald-mew-lcd.png" caption="Mew on Faraway Island">}}

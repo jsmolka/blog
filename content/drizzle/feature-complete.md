@@ -5,7 +5,7 @@ tags: ["drizzle", "language", "programming"]
 date: 2022-07-01
 type: post
 ---
-The latest version of drizzle adds the remaining language features required to implement a basic emulator. That includes a `switch` statement to run the typical emulator main loop:
+The latest version of drizzle adds the remaining language features required to implement a basic emulator. That includes a `switch` statement to run the typical main loop:
 
 ```drizzle
 switch opcode:
