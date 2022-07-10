@@ -5,6 +5,7 @@ html, body {
 body {
   @apply bg-shade-5;
   @apply text-shade-1;
+  @apply antialiased;
 
   font-size: 15px;
   font-feature-settings: "calt", "ccmp", "cv07", "kern";

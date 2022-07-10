@@ -28,6 +28,11 @@ module.exports = {
           5: 'var(--shade-5)',
         },
       },
+      fontSize: {
+        sm: ['0.85rem', {
+          lineHeight: '1.25rem',
+        }],
+      },
     },
   },
   content: [
