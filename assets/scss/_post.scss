@@ -122,8 +122,10 @@
 
   table {
     @apply w-full;
-    @apply border-collapse;
     @apply text-left;
+    @apply border-collapse;
+    @apply font-feature-tnum;
+
 
     th {
       @apply font-bold;

@@ -1,5 +1,5 @@
 ---
-title: "Leipzig -> Brocken"
+title: "Leipzig → Brocken"
 description: "Climbing the highest mountain of Northern Germany."
 tags: ["brocken", "cycling"]
 date: 2022-06-15
