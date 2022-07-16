@@ -21,15 +21,8 @@ code[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  @apply -mx-4;
   @apply py-3;
-  @apply border-x-0;
   @apply overflow-x-auto;
-
-  @screen md {
-    @apply mx-0;
-    @apply border-x;
-  }
 }
 
 code[class*="language-"] {

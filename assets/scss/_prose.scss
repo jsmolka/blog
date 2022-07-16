@@ -1,4 +1,4 @@
-@mixin post-margin {
+@mixin prose-margin {
   @apply my-5;
 
   &:first-child {
@@ -10,7 +10,7 @@
   }
 }
 
-.post {
+.prose {
   @screen md {
     @apply text-justify;
   }
@@ -20,7 +20,7 @@
   @apply leading-[1.65];
 
   & > * {
-    @include post-margin;
+    @include prose-margin;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -170,6 +170,16 @@
     line-height: inherit;
   }
 
+  pre[class*="language-"] {
+    @apply -mx-4;
+    @apply border-x-0;
+
+    @screen md {
+      @apply mx-0;
+      @apply border-x;
+    }
+  }
+
   .footnotes {
     a[href^="#fnref:"] {
       @apply no-underline;
@@ -191,7 +201,7 @@
         counter-increment: footnote-count;
 
         & > * {
-          @include post-margin;
+          @include prose-margin;
         }
 
         &::marker {

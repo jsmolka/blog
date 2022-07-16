@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <main class="post w-full max-w-screen-md m-auto px-4 py-16">
+  <main class="prose w-full max-w-screen-md m-auto px-4 py-16">
     {{ if .Params.ShowTitle | default true }}
       <h1>{{- .Title | safeHTML -}}</h1>
     {{ end }}
