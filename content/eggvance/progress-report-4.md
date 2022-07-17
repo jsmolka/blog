@@ -50,7 +50,7 @@ The Game Boy Advance encodes colors in the BGR555 format and stores them in 16-b
   {{<image src="eggvance/safety-screen.png" caption="Mother 3 with color masking">}}
 {{</flex>}}
 
-Since the drawing process is separated from merging backgrounds and sprites into the final scene, transparent pixels must be marked as such. Luckily the most significant bit in each color doesn't carry information and can be (mis)used for this purpose. This means that transparent pixels are represented by the color 0x8000. This approach worked well until I booted the game Mother 3. Its intro screen uses 0x8000 to display white and messed up my whole system.
+Since the drawing process is separated from merging backgrounds and sprites into the final scene, transparent pixels must be marked as such. Luckily the most significant bit in each color doesn't carry information and can be (mis)used for this purpose. This means that transparent pixels are represented by the color `0x8000`. The approach worked well until I booted the game Mother 3. Its intro screen uses `0x8000` to display white and messed up my whole system.
 
 ```cpp
 u16 Palette::colorBGOpaque(int index, int bank) {
@@ -64,7 +64,7 @@ u16 Palette::colorBG(int index, int bank) {
 }
 ```
 
-The problem can be fixed with a quite simple solution. Every color read from the palette needs to be masked with 0x7FFF to clear the most significant bit. That prevents confusing transparent pixels with malformed white pixels.
+The problem can be fixed with a quite simple solution. Every color read from the palette needs to be masked with `0x7FFF` to clear the most significant bit. That prevents confusing transparent pixels with malformed white pixels.
 
 ## Sprite Tile Restrictions
 This issue is another prime example for the "most games don't use bitmaps, therefore I can't test them" category. If you compare both images down below, you will notice some strange, colorful pixels in the top left corner of the first one. Those are uninitialized sprites that were wrongfully rendered by the emulator.
@@ -80,7 +80,7 @@ The cause of this problem is best described in Martin Korths [GBATEK](https://pr
 >
 > &mdash; Martin Korth, [GBATEK](https://problemkaputt.de/gbatek.htm)
 
-The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 to 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames which occupy the first 0x4000 bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
+The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 to 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames which occupy the first `0x4000` bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
 
 ```cpp
 u32 addr = mmu.vram.mirror(entry.base_tile + size * tile.offset(tiles));

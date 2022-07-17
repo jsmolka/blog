@@ -53,10 +53,10 @@ I never ran into this bug during testing because it has been fixed in [Pokémon 
 
 The BIOS in the Game Boy Advance is read-protected to prevent dumping. Guess how that turned out. That means we can only read from the BIOS if the program counter is inside of it. In plain English: only BIOS functions can read BIOS memory. Otherwise, it will return the last read value, which will be the one located at address:
 
-- 0x0DC+8 after startup
-- 0x188+8 after SWI
-- 0x134+8 during IRQ
-- 0x13C+8 after IRQ
+- `0x0DC+8` after startup
+- `0x188+8` after SWI
+- `0x134+8` during IRQ
+- `0x13C+8` after IRQ
 
 In the case of our dereferenced null pointer, we've just returned from a SWI. The code for this in the original BIOS looks like the following:
 
@@ -66,7 +66,7 @@ mov       r12, 0x4000000  ; addr: 0000018C  data: E3A0C301
 mov       r2, 0x4         ; addr: 00000190  data: E3A02004
 ```
 
-It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs three-staged instruction pipeline, we've already fetched the value at address 0x190, and its value will be returned for future protected BIOS reads like dereferenced null pointers. In this case, the value has its sign bit set, and the loop body is never executed.
+It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs three-staged instruction pipeline, we've already fetched the value at address `0x190`, and its value will be returned for future protected BIOS reads like dereferenced null pointers. In this case, the value has its sign bit set, and the loop body is never executed.
 
 ```armv4t
 movs      pc, lr                ; addr: 000000AC  data: E1B0F00E
@@ -98,9 +98,9 @@ The next thing I want to talk about is an actual new feature of the emulator. If
 
 Until recently, eggvance perfectly emulated old Pokémon cartridges in the sense that both their RTCs don't work. It was a feature, I swear. The RTC is connected to three of the four GamePak GPIO pins as follows:
 
-- Serial Clock (SCK) at address 0x80000C4
-- Serial Input/Output (SIO) at address 0x80000C5
-- Clock Select (CS) at address 0x80000C6
+- Serial Clock (SCK) at address `0x80000C4`
+- Serial Input/Output (SIO) at address `0x80000C5`
+- Clock Select (CS) at address `0x80000C6`
 
 A typical transfer looks like this:
 
