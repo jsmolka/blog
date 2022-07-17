@@ -1,11 +1,13 @@
 {{ define "main" }}
-  <main class="prose w-full max-w-screen-md m-auto px-4 py-16">
+  <main class="flex flex-col max-w-screen-md m-auto space-y-5 px-4 py-16">
     {{ if .Params.ShowTitle | default true }}
       <h1>{{- .Title | safeHTML -}}</h1>
     {{ end }}
     {{ if .Params.ShowMeta | default true }}
       {{ partial "meta" . }}
     {{ end }}
-    {{ .Content }}
+    <span class="prose">
+      {{ .Content }}
+    </span>
   </main>
 {{ end }}

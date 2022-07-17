@@ -19,13 +19,13 @@ module.exports = {
       },
       colors: {
         accent: 'var(--accent)',
-        shade: {
-          0: 'var(--shade-0)',
-          1: 'var(--shade-1)',
-          2: 'var(--shade-2)',
-          3: 'var(--shade-3)',
-          4: 'var(--shade-4)',
-          5: 'var(--shade-5)',
+        neutral: {
+          0: 'var(--neutral-0)',
+          1: 'var(--neutral-1)',
+          2: 'var(--neutral-2)',
+          3: 'var(--neutral-3)',
+          4: 'var(--neutral-4)',
+          5: 'var(--neutral-5)',
         },
       },
       fontSize: {

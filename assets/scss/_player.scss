@@ -1,20 +1,20 @@
 @import "palette";
 
 :root {
-  --audio: #{scale-color($shade-0, $lightness: 50%)};
+  --audio: #{scale-color($neutral-0, $lightness: 50%)};
 }
 
 .dark {
-  --audio: #{scale-color($dark-shade-0, $lightness: -40%)};
+  --audio: #{scale-color($dark-neutral-0, $lightness: -40%)};
 }
 
 .player {
   @apply flex;
   @apply items-center;
-  @apply bg-shade-4;
+  @apply bg-neutral-4;
   @apply text-sm;
   @apply border;
-  @apply border-shade-3;
+  @apply border-neutral-3;
   @apply rounded-sm;
   @apply touch-action-none;
   @apply font-feature-tnum;
@@ -25,7 +25,7 @@
     @apply flex;
     @apply flex-1;
     @apply h-1;
-    @apply bg-shade-3;
+    @apply bg-neutral-3;
 
     & > div {
       background: var(--audio);

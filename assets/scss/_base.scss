@@ -3,18 +3,66 @@ html, body {
 }
 
 body {
-  @apply bg-shade-5;
-  @apply text-shade-1;
+  @apply bg-neutral-5;
+  @apply text-neutral-1;
+  @apply tracking-[-0.004em];
   @apply antialiased;
 
   font-size: 15px;
   font-feature-settings: "calt", "ccmp", "cv07", "kern";
   text-rendering: optimizeLegibility;
-  letter-spacing: -0.004em;
   -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
   @apply bg-accent;
-  @apply text-shade-0;
+  @apply text-neutral-0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply relative;
+  @apply w-fit;
+  @apply text-neutral-0;
+  @apply font-black;
+
+  &:after {
+    @apply absolute;
+    @apply -left-2.5;
+    @apply bottom-0;
+    @apply w-full;
+    @apply h-[35%];
+    @apply bg-accent;
+    @apply rounded-sm;
+    @apply -z-10;
+
+    content: '';
+  }
+}
+
+h1 {
+  @apply text-3xl;
+  @apply tracking-[-0.021em];
+}
+
+h2 {
+  @apply text-2xl;
+  @apply tracking-[-0.019em];
+  @apply leading-[1.8rem];
+}
+
+h3 {
+  @apply text-xl;
+  @apply tracking-[-0.017em];
+  @apply leading-[1.5rem];
+}
+
+h4 {
+  @apply text-lg;
+  @apply tracking-[-0.014em];
+  @apply leading-[1.375rem];
+}
+
+h5, h6 {
+  @apply text-base;
+  @apply leading-[1.2rem];
 }

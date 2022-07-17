@@ -3,15 +3,15 @@
   @apply items-center;
   @apply px-2;
   @apply py-1;
-  @apply bg-shade-5;
-  @apply text-shade-0;
+  @apply bg-neutral-5;
+  @apply text-neutral-0;
   @apply font-medium;
   @apply border;
-  @apply border-shade-0;
+  @apply border-neutral-0;
   @apply rounded-sm;
 
   &:hover {
-    @apply bg-shade-0;
-    @apply text-shade-5;
+    @apply bg-neutral-0;
+    @apply text-neutral-5;
   }
 }

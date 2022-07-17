@@ -2,16 +2,16 @@
 
 pre[class*="language-"],
 :not(pre) > code {
-  @apply bg-shade-4;
+  @apply bg-neutral-4;
   @apply text-sm;
   @apply border;
-  @apply border-shade-3;
+  @apply border-neutral-3;
   @apply rounded-sm;
 }
 
 pre[class*="language-"],
 code[class*="language-"] {
-  @apply leading-[1.7];
+  @apply leading-[1.65];
   @apply whitespace-pre;
   @apply hyphens-none;
 
@@ -42,32 +42,28 @@ code[class*="language-"] {
   @apply opacity-75;
 }
 
-$frost-0: #8fbcbb;
-$frost-1: #88c0d0;
-$frost-2: #81a1c1;
-$frost-3: #5e81ac;
-$aurora-0: #bf616a;
-$aurora-1: #d08770;
-$aurora-2: #ebcb8b;
-$aurora-3: #a3be8c;
-$aurora-4: #b48ead;
+$prism-deleted: #bf616a;
+$prism-declaration: #88c0d0;
+$prism-keyword: #81a1c1;
+$prism-number: #b48ead;
+$prism-string: #a3be8c;
 
 :root {
   --prism-comment: #b8bfcc;
-  --prism-deleted: #{scale-color($aurora-0, $lightness: -10%, $saturation: 20%)};
-  --prism-declaration: #{scale-color($frost-1, $lightness: -10%, $saturation: 20%)};
-  --prism-keyword: #{scale-color($frost-2, $lightness: -10%, $saturation: 20%)};
-  --prism-number: #{scale-color($aurora-4, $lightness: -10%, $saturation: 20%)};
-  --prism-string: #{scale-color($aurora-3, $lightness: -10%, $saturation: 20%)};
+  --prism-deleted: #{scale-color($prism-deleted, $lightness: -10%, $saturation: 20%)};
+  --prism-declaration: #{scale-color($prism-declaration, $lightness: -10%, $saturation: 20%)};
+  --prism-keyword: #{scale-color($prism-keyword, $lightness: -10%, $saturation: 20%)};
+  --prism-number: #{scale-color($prism-number, $lightness: -10%, $saturation: 20%)};
+  --prism-string: #{scale-color($prism-string, $lightness: -10%, $saturation: 20%)};
 }
 
 .dark {
   --prism-comment: #636f88;
-  --prism-deleted: #{$aurora-0};
-  --prism-declaration: #{$frost-1};
-  --prism-keyword: #{$frost-2};
-  --prism-number: #{$aurora-4};
-  --prism-string: #{$aurora-3};
+  --prism-deleted: #{$prism-deleted};
+  --prism-declaration: #{$prism-declaration};
+  --prism-keyword: #{$prism-keyword};
+  --prism-number: #{$prism-number};
+  --prism-string: #{$prism-string};
 }
 
 .token.cdata,

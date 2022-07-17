@@ -2,20 +2,20 @@
 
 :root {
   --accent: #{$accent};
-  --shade-0: #{$shade-0};
-  --shade-1: #{$shade-1};
-  --shade-2: #{$shade-2};
-  --shade-3: #{$shade-3};
-  --shade-4: #{$shade-4};
-  --shade-5: #{$shade-5};
+  --neutral-0: #{$neutral-0};
+  --neutral-1: #{$neutral-1};
+  --neutral-2: #{$neutral-2};
+  --neutral-3: #{$neutral-3};
+  --neutral-4: #{$neutral-4};
+  --neutral-5: #{$neutral-5};
 }
 
 .dark {
   --accent: #{$dark-accent};
-  --shade-0: #{$dark-shade-0};
-  --shade-1: #{$dark-shade-1};
-  --shade-2: #{$dark-shade-2};
-  --shade-3: #{$dark-shade-3};
-  --shade-4: #{$dark-shade-4};
-  --shade-5: #{$dark-shade-5};
+  --neutral-0: #{$dark-neutral-0};
+  --neutral-1: #{$dark-neutral-1};
+  --neutral-2: #{$dark-neutral-2};
+  --neutral-3: #{$dark-neutral-3};
+  --neutral-4: #{$dark-neutral-4};
+  --neutral-5: #{$dark-neutral-5};
 }
