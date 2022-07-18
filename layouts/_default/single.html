@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <main class="flex flex-col max-w-screen-md m-auto space-y-5 px-4 py-16">
+  <main class="flex flex-col w-full max-w-screen-md m-auto space-y-5 px-4 py-16">
     {{ if .Params.ShowTitle | default true }}
       <h1>{{- .Title | safeHTML -}}</h1>
     {{ end }}

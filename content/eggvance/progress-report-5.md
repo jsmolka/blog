@@ -108,7 +108,7 @@ void ARM::run(int cycles) {
 }
 ```
 
-What would a performance post be without comparing numbers? I originally intended this one to be about multiple improvements, but I decided to focus on the most important thing. GPR class removal and instruction template LUTs aren't nearly as interesting and impactful as "state-dependent dispatching". The second one has also been discussed in a previous [progress report]({{<ref "progress-report-3.md#optimizing-instruction-execution">}}). Now take a step back and look at these wonderful results:
+What would a performance post be without comparing numbers? I originally intended this one to be about multiple improvements, but I decided to focus on the most important thing. GPR class removal and instruction template LUTs aren't nearly as interesting and impactful as "state-dependent dispatching". The second one has also been discussed in a previous [progress report]({{<relref "progress-report-3.md#optimizing-instruction-execution">}}). Now take a step back and look at these wonderful results:
 
 {{<table>}}
 | Commit                                                                                          | Improvement                | Pokémon Emerald | Yoshi's Island |
@@ -174,7 +174,7 @@ function loadFile(input) {
 
 All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
 
-The result can be tested [here]({{<ref "wasm.html">}}).
+The result can be tested [here]({{<relref "wasm.html">}}).
 
 ## Improving Tests
 The last part of this progress report is dedicated to my [GBA test suite](https://github.com/jsmolka/gba-suite). I developed most of it simultaneously with the eggvance CPU to ensure correctness. The whole thing is writing is pure assembly to have the maximum control over it. That was especially important during the start when most instructions weren't implemented yet. At some point, I moved the test suite into a separate repository because it became its own project.
