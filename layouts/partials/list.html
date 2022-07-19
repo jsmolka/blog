@@ -1,7 +1,9 @@
 {{ range .Paginator.Pages }}
   <div class="flex flex-col space-y-5 py-8 first:pt-0 border-b-2 border-dashed border-neutral-3">
     <h2>
-      <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
+      <a href="{{ .RelPermalink }}">
+        <mark>{{- .Title | safeHTML -}}</mark>
+      </a>
     </h2>
     {{ partial "meta" . }}
     {{ with .Description }}
