@@ -10,6 +10,53 @@
   hyphens: none;
 }
 
+.text-sm {
+  $fontSize: 0.85rem;
+  font-size: $fontSize;
+  line-height: 1.25rem;
+  --font-size: #{$fontSize};
+}
+
+.text-base {
+  $fontSize: 15px;
+  font-size: $fontSize;
+  line-height: 1.5rem;
+  letter-spacing: -0.004em;
+  --font-size: #{$fontSize};
+}
+
+.text-lg {
+  $fontSize: 1.125rem;
+  font-size: $fontSize;
+  line-height: 1.75rem;
+  letter-spacing: -0.014em;
+  --font-size: #{$fontSize};
+}
+
+.text-xl {
+  $fontSize: 1.25rem;
+  font-size: $fontSize;
+  line-height: 1.75rem;
+  letter-spacing: -0.017em;
+  --font-size: #{$fontSize};
+}
+
+.text-2xl {
+  $fontSize: 1.5rem;
+  font-size: $fontSize;
+  line-height: 2rem;
+  letter-spacing: -0.019em;
+  --font-size: #{$fontSize};
+}
+
+.text-3xl {
+  $fontSize: 1.875rem;
+  font-size: $fontSize;
+  line-height: 2.25rem;
+  letter-spacing: -0.021em;
+  --font-size: #{$fontSize};
+}
+
 .touch-action-none {
   touch-action: none;
 }

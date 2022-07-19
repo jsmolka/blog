@@ -5,10 +5,10 @@ html, body {
 body {
   @apply bg-neutral-5;
   @apply text-neutral-1;
-  @apply tracking-[-0.004em];
+  @apply text-base;
   @apply antialiased;
+  @apply scroll-smooth;
 
-  font-size: 15px;
   font-feature-settings: "calt", "ccmp", "cv07", "kern";
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
@@ -20,7 +20,7 @@ body {
 }
 
 :root {
-  --mark: 1rem;
+  --font-size: 1rem;
 }
 
 mark {
@@ -36,9 +36,9 @@ mark {
     @apply -z-10;
 
     content: '';
-    width: calc(100% + var(--mark) / 2);
-    height: calc(0.4 * var(--mark));
-    transform: skew(-15deg) translateX(calc(-1 * var(--mark) / 4));
+    width: calc(100% + var(--font-size) / 2);
+    height: calc(0.4 * var(--font-size));
+    transform: skew(-15deg) translateX(calc(-1 * var(--font-size) / 4));
   }
 }
 
@@ -47,30 +47,9 @@ h1, h2, h3, h4, h5, h6 {
   @apply font-black;
 }
 
-h1 {
-  @apply text-3xl;
-  @apply tracking-[-0.021em];
-  --mark: 1.875rem;
-}
-
-h2 {
-  @apply text-2xl;
-  @apply tracking-[-0.019em];
-  --mark: 1.500rem;
-}
-
-h3 {
-  @apply text-xl;
-  @apply tracking-[-0.017em];
-  --mark: 1.250rem;
-}
-
-h4 {
-  @apply text-lg;
-  @apply tracking-[-0.014em];
-  --mark: 1.125rem;
-}
-
-h5, h6 {
-  @apply text-base;
-}
+h1 { @apply text-3xl;  }
+h2 { @apply text-2xl;  }
+h3 { @apply text-xl;   }
+h4 { @apply text-lg;   }
+h5 { @apply text-base; }
+h6 { @apply text-base; }
