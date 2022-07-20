@@ -2,9 +2,6 @@ const path = require('path');
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  corePlugins: {
-    fontSize: false,
-  },
   theme: {
     fontFamily: {
       sans: ['Inter', 'Roboto', 'sans-serif'],
@@ -31,6 +28,11 @@ module.exports = {
           5: 'var(--neutral-5)',
         },
       },
+      fontSize: {
+        sm: ['0.85rem', {
+          lineHeight: '1.25rem',
+        }],
+      },
     },
   },
   content: [
@@ -45,4 +47,7 @@ module.exports = {
       }
     }),
   ],
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
 };

@@ -1,3 +1,7 @@
+:root {
+  --font-features: "calt", "ccmp", "cv07", "kern";
+}
+
 html, body {
   @apply h-full;
 }
@@ -9,7 +13,9 @@ body {
   @apply antialiased;
   @apply scroll-smooth;
 
-  font-feature-settings: "calt", "ccmp", "cv07", "kern";
+  font-size: 15px;
+  font-feature-settings: var(--font-features);
+  letter-spacing: -0.004em;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
 }
@@ -19,32 +25,10 @@ body {
   @apply text-neutral-0;
 }
 
-:root {
-  --font-size: 1rem;
-}
-
-mark {
-  @apply relative;
-  @apply bg-inherit;
-  @apply text-inherit;
-
-  &:after {
-    @apply absolute;
-    @apply bottom-0;
-    @apply left-0;
-    @apply bg-accent;
-    @apply -z-10;
-
-    content: '';
-    width: calc(100% + var(--font-size) / 2);
-    height: calc(0.4 * var(--font-size));
-    transform: skew(-15deg) translateX(calc(-1 * var(--font-size) / 4));
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   @apply text-neutral-0;
   @apply font-black;
+  @apply tracking-tight;
 }
 
 h1 { @apply text-3xl;  }
