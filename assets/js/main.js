@@ -5,8 +5,8 @@ import Player from './player';
 const observer = lozad('.lozad', {
   rootMargin: '512px',
   load: function (element) {
-    const container = element.parentElement;
-    for (const element of container.querySelectorAll('*[data-src]')) {
+    const parent = element.parentElement;
+    for (const element of parent.querySelectorAll('*[data-src]')) {
       element.src = element.getAttribute('data-src');
     }
   }

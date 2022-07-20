@@ -1,4 +1,29 @@
-import { clamp } from './utils';
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function offsetRatio(event, element) {
+  return clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1);
+}
+
+function isMobileDevice() {
+  // Seems to "work" up until iOS 13
+  // https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html
+  const isIosAudioQuirk = () => {
+    const audio = new Audio();
+    audio.volume = 0.5;
+    return audio.volume === 1;
+  };
+
+  // Apple specific, works on iPad with iOS 14.6
+  // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
+  const isIosStandalone = () => {
+    return typeof navigator.standalone === 'boolean';
+  };
+
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
+  return /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) || isIosStandalone() || isIosAudioQuirk();
+}
 
 function initEventsBar(element, events) {
   element.addEventListener('pointerdown', (event) => {
@@ -20,10 +45,6 @@ function initEventsBar(element, events) {
     events.update(event);
     events.down(event);
   });
-}
-
-function offsetRatio(event, element) {
-  return clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1);
 }
 
 const instances = [];
@@ -75,7 +96,7 @@ export default function Player() {
     mounted(element) {
       this.audio = element.parentElement.getElementsByTagName('audio')[0];
       this.audio.addEventListener('loadedmetadata', () => {
-        if (this.isMobileDevice) {
+        if (isMobileDevice()) {
           this.setVolume(this.volume);
         } else {
           this.setVolume(parseFloat(localStorage.getItem('volume') ?? this.volume));
@@ -85,25 +106,6 @@ export default function Player() {
 
         instances.push(this);
       });
-    },
-
-    get isMobileDevice() {
-      // Seems to "work" up until iOS 13
-      // https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html
-      const isIosAudioQuirk = () => {
-        const audio = new Audio();
-        audio.volume = 0.5;
-        return audio.volume === 1;
-      };
-
-      // Apple specific, works on iPad with iOS 14.6
-      // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
-      const isIosStandalone = () => {
-        return typeof navigator.standalone === 'boolean';
-      };
-
-      // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
-      return /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) || isIosStandalone() || isIosAudioQuirk();
     },
 
     initEvents() {
@@ -125,32 +127,32 @@ export default function Player() {
         }
       });
 
-      this.initEventsProgress();
-      this.initEventsVolume();
+      this.initEventsProgressBar();
+      this.initEventsVolumeBar();
     },
 
-    initEventsProgress() {
-      let wasPaused = false;
+    initEventsProgressBar() {
+      let paused = false;
       initEventsBar(this.$refs.progressBar, {
         update: (event) => {
           this.audio.currentTime = offsetRatio(event, this.$refs.progressBarInner) * this.audio.duration;
         },
         down: () => {
-          wasPaused = this.audio.paused;
-          if (!wasPaused) {
+          paused = this.audio.paused;
+          if (!paused) {
             this.pause()
           }
         },
         up: () => {
-          if (!wasPaused) {
+          if (!paused) {
             this.play();
           }
         },
       });
     },
 
-    initEventsVolume() {
-      if (this.isMobileDevice) {
+    initEventsVolumeBar() {
+      if (isMobileDevice()) {
         this.$refs.volumeButton.addEventListener('click', () => this.audio.muted = !this.audio.muted);
       } else {
         this.$refs.volumeContainer.addEventListener('pointerenter', () => this.volumeHover = true);

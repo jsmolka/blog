@@ -1,11 +1,11 @@
 @import "palette";
 
 :root {
-  --audio: #{scale-color($neutral-0, $lightness: 50%)};
+  --player: #{scale-color($neutral-0, $lightness: 50%)};
 }
 
 .dark {
-  --audio: #{scale-color($dark-neutral-0, $lightness: -40%)};
+  --player: #{scale-color($dark-neutral-0, $lightness: -40%)};
 }
 
 .player {
@@ -19,7 +19,7 @@
   @apply touch-action-none;
   @apply font-feature-tnum;
 
-  color: var(--audio);
+  color: var(--player);
 
   .bar {
     @apply flex;
@@ -28,7 +28,7 @@
     @apply bg-neutral-3;
 
     & > div {
-      background: var(--audio);
+      background: var(--player);
     }
   }
 }

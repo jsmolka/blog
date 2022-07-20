@@ -1,6 +1,6 @@
 {{ $config := imageConfig (add "/static/" .Destination) }}
 <img
-  class="lozad noscript-hidden w-full"
+  class="lozad noscript:hidden w-full"
   data-src="{{ .Destination | safeURL }}"
   alt="{{- .Text -}}"
   width="{{ $config.Width }}"
