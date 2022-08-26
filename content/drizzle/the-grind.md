@@ -5,7 +5,7 @@ tags: ["drizzle", "language", "programming"]
 date: 2022-05-06
 type: post
 ---
-It has been two months since the last progress report, and the only thing I managed to implement were classes and bound methods. drizzle doesn't even support inheritance. Classes are just empty husks used to store data and methods.
+It has been two months since the last progress report, and the only things I managed to implement were classes and bound methods. drizzle doesn't even support inheritance. Classes are just empty husks used to store data and methods.
 
 ```drizzle
 class Vector:
