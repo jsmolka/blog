@@ -15,4 +15,4 @@ Fast forward two years and almost 20 000 km, I decided it was time for a new fra
 
 It's everything I wanted from a road bike. It's lightweight, stiff, made of carbon [^1], and comes with great components out of the box. At a price of 3800€, it's no bargain, but still good value for money if that's even possible. I've already put well over 5000 km into it and must say that I love it.
 
-[^1]: An annoying thing I noticed regarding carbon is that some traffic lights use induction loops to detect cars standing upon them. I never had problems with these using my aluminum bike, but some of them are poorly calibrated, which results in awkward situations where I either have to take a shortcut or let some cars pass to get a green light.
+[^1]: An annoying thing I noticed regarding carbon is that some traffic lights use induction loops to detect cars standing upon them. I never had problems with these using my aluminium bike, but some of them are poorly calibrated, which results in awkward situations where I either have to take a shortcut or let some cars pass to get a green light.
