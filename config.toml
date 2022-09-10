@@ -5,7 +5,7 @@ disableKinds = ["taxonomyTerm"]
 disableHugoGeneratorInject = true
 
 [params]
-  description = "Posts and other stuff."
+  description = "Living life one obsession at a time."
   birthDate = "1998-05-11"
 
 [menu]
