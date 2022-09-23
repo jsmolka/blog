@@ -17,3 +17,4 @@ draft: true
 - [38.2 km/h average](https://www.strava.com/activities/7726870519)
 - [Pain Train](https://www.strava.com/activities/7675706406)
 - [Longest and fastest solo](https://www.strava.com/activities/7780327512)
+- [Track](https://www.strava.com/activities/7851082063), 45min 360 NP

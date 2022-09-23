@@ -1,6 +1,6 @@
 ---
-title: "Four Shades of Green"
-description: "That's all it took for an awesome childhood."
+title: "Four Shades of Gray"
+description: "The new book is coming out soon."
 tags: ["sprite", "emulation", "programming"]
 date: 2022-09-17
 type: post
@@ -41,16 +41,16 @@ def background():
     this.window.set_pixel(x, y, this.bgp[idxc])
 ```
 
-That was enough to ditch serial port printing of the tests and show them in all their green glory.
+That was enough to ditch serial port printing of the tests and show them in all their gray glory.
 
 {{<flex>}}
-  {{<image src="sprite/bit-ops.png" caption="blargg bit operation tests">}}
   {{<image src="sprite/instr-timing.png" caption="blargg instruction timing tests">}}
+  {{<image src="sprite/interrupts.png" caption="blargg interrupt tests">}}
 {{</flex>}}
 
 Even some games that don't require memory banking are working!
 
 {{<flex>}}
-  {{<image src="sprite/dr-mario.png" caption="Dr. Mario title screen">}}
   {{<image src="sprite/tetris.png" caption="Tetris title screen">}}
+  {{<image src="sprite/dr-mario.png" caption="Dr. Mario title screen">}}
 {{</flex>}}
