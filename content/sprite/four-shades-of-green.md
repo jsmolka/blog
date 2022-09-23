@@ -10,11 +10,6 @@ Progress over the last months has been quite slow. I focused on improving my per
 Then it was time to start working on the screen to bring the whole thing to life. Since the Game Boy is just a dumped-down version of the Game Boy Advance (surprise), I've already done most of the things once before, and the whole process was pretty straightforward.
 
 ```drizzle
-var kPalette = [0xFFC6DE8C, 0xFF84A563, 0xFF396139, 0xFF081810]
-
-def color(palette, index):
-  return kPalette[(palette >> (2 * index)) & 0x3]
-
 def background():
   var map_base = 0x1800
   if this.lcdc & (1 << 3):
@@ -43,7 +38,7 @@ def background():
     var lsbc = this.vram[addr + 0] >> pixel_x
     var msbc = this.vram[addr + 1] >> pixel_x
     var idxc = (lsbc & 0x1) | (msbc & 0x1) << 1
-    this.window.set_pixel(x, y, color(this.bgp, idxc))
+    this.window.set_pixel(x, y, this.bgp[idxc])
 ```
 
 That was enough to ditch serial port printing of the tests and show them in all their green glory.

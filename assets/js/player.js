@@ -109,7 +109,7 @@ export default function Player() {
     },
 
     initEvents() {
-      const query = this.query.bind(this);
+      const query = () => this.query();
       this.audio.addEventListener('play', query);
       this.audio.addEventListener('pause', query);
       this.audio.addEventListener('ended', query);
