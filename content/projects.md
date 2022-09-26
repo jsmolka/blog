@@ -48,4 +48,4 @@ Other components of the system soon followed, and the emulator got to a stage wh
   {{<audio src="eggvance/emerald-frontier.mp3" caption="Pokémon Emerald battle frontier theme">}}
 {{</flex>}}
 
-The final year of development went into performance and accuracy improvements. I released version 1.0 around 2.5 years after the initial commit and wrote a couple of progress reports along the way. If you're interested in that kind of stuff, you can check them out [here]({{<relref "eggvance">}}).
+The final year of development went into performance and accuracy improvements. I released version 1.0 around 2.5 years after the initial commit and wrote a couple of [progress reports]({{<relref "eggvance">}}) along the way.

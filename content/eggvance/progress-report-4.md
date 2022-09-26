@@ -74,11 +74,11 @@ This issue is another prime example for the "most games don't use bitmaps, there
   {{<image src="eggvance/pokemon-series.png" caption="No sprites in the top left corner">}}
 {{</flex>}}
 
-The cause of this problem is best described in Martin Korths [GBATEK](https://problemkaputt.de/gbatek.htm#lcdobjoverview), which is the most comprehensive and complete reference document for the GBA. That even holds up when comparing against Nintendos official programming manual.
+The cause of this problem is best described in Martin Korths [GBATEK](https://problemkaputt.de/gbatek.htm), which is the most comprehensive and complete reference document for the GBA. That even holds up when comparing against Nintendos official programming manual.
 
 > OBJs are always combined of one or more 8x8 pixel Tiles (much like BG Tiles in BG Modes 0-2). However, OBJ Tiles are stored in a separate area in VRAM: 06010000-06017FFF (32 KBytes) in BG Mode 0-2, or 06014000-06017FFF (16 KBytes) in BG Mode 3-5. Depending on the size of the above area (16K or 32K), and on the OBJ color depth (4bit or 8bit), 256-1024 8x8 dots OBJ Tiles can be defined.
 >
-> &mdash; Martin Korth, [GBATEK](https://problemkaputt.de/gbatek.htm)
+> &mdash; Martin Korth, [GBATEK](https://problemkaputt.de/gbatek.htm#lcdobjoverview)
 
 The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 to 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames which occupy the first `0x4000` bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
 
