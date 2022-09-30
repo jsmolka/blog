@@ -28,31 +28,31 @@ switch (mmio.dispcnt.mode) {
 
 The code above shows the parts of the PPU which take part in rendering the Pokémon Emerald title screen. The used backgrounds and their render function are dependent on the selected video mode in the DISPCNT register. You can see the resulting individual layers in the following images.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/emerald-layer-bg0.png" caption="Background layer 0">}}
   {{<image src="eggvance/emerald-layer-bg1.png" caption="Background layer 1">}}
-{{</flex>}}
+{{</wrap>}}
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/emerald-layer-bg2.png" caption="Background layer 2">}}
   {{<image src="eggvance/emerald-layer-obj.png" caption="Object layer">}}
-{{</flex>}}
+{{</wrap>}}
 
 One of the most challenging aspects of emulating the PPU is combining the layers into the final scene. That's what the `collapse` function is doing. The process itself is rather straightforward for simple scenes. Just loop over the layers from highest to lowest priority and use the first opaque pixel you find. It gets much harder when dealing with effects like windows and color blending, which need to look at multiple layers at the same time.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/emerald-layer-blend.png" caption="Blending backgrounds 0 and 1">}}
   {{<image src="eggvance/emerald-title-screen.png" caption="Final scene">}}
-{{</flex>}}
+{{</wrap>}}
 
 The predecessor of the `collapse` function consumed a sizable amount of CPU time and was a prime candidate to be reworked. The new [version](https://github.com/jsmolka/eggvance/blob/d89f078a1ecf74c98837cc26b8f9ee2c6a1980f5/eggvance/src/ppu/collapse.inl) makes heavy use of C++ templates has improved performance by around 35%. It also fixed several bugs that were related to object windows.
 
 ## Forced Blank
 Even though the GBA is using an LCD, its hardware behaves more like a CRT. In those displays, the electron beam has to move to the start of the next line after finishing the previous one. This period is called horizontal blank (H-Blank). Once the whole frame has been drawn, the beam must return to the beginning of the frame. This is called vertical blank (V-Blank). A visualization of this process is shown in the following image with line numbers of the classic Game Boy.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/blanking-intervals.png" caption="Blanking intervals on the classic Game Boy ([source](http://imrannazar.com/GameBoy-Emulation-in-JavaScript:-GPU-Timings))" alt="Blanking intervals on the Game Boy" class="sm:w-1/2">}}
-{{</flex>}}
+{{</wrap>}}
 
 Most of the game logic and graphics processing takes place during the blanking intervals because they don't interfere with scanline drawing. Another reason is the fact that access to video memory outside of the blanking intervals is either restricted or has negative side effects, like reducing the total number of displayable objects. These restrictions can be lifted by setting the "forced blank" bit in the DISPCNT register, which causes a white line to be displayed. There isn't much to do emulation-wise apart from filling the current scanline with white pixels.
 

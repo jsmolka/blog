@@ -3,21 +3,39 @@
     @apply text-justify;
   }
 
-  @apply text-left;
-  @apply hyphens-auto;
-  @apply leading-[1.65];
   @apply space-y-5;
+  @apply text-left;
+  @apply leading-[1.65];
+  @apply hyphens-auto;
 
   h1, h2, h3, h4, h5, h6 {
+    @apply max-w-fit;
+    @apply text-prose-1;
     @apply text-left;
+    @apply tracking-tight;
 
     &:not(:first-child) {
-      margin-top: 2rem !important;
+      @apply mt-8 #{!important};
     }
 
     a {
       @apply no-underline;
     }
+  }
+
+  h1 {
+     @apply text-3xl;
+     @apply font-black;
+  }
+
+  h2 {
+    @apply text-xl;
+    @apply font-extrabold;
+  }
+
+  h3 {
+    @apply text-lg;
+    @apply font-bold;
   }
 
   a {
@@ -55,7 +73,7 @@
         @apply -left-4;
         @apply w-2;
         @apply h-2;
-        @apply bg-neutral-1;
+        @apply bg-prose-2;
 
         content: '';
       }
@@ -72,10 +90,9 @@
     @apply border-collapse;
     @apply font-feature-tnum;
 
-
     th {
       @apply font-bold;
-      @apply text-neutral-0;
+      @apply text-prose-1;
       @apply hyphens-none;
     }
 
@@ -83,7 +100,7 @@
       @apply px-3;
       @apply py-2;
       @apply border;
-      @apply border-neutral-3;
+      @apply border-elevate-3;
     }
   }
 
@@ -93,7 +110,7 @@
     @apply py-3;
     @apply italic;
     @apply border-l-4;
-    @apply border-neutral-1;
+    @apply border-prose-2;
   }
 
   audio {
@@ -135,7 +152,7 @@
       @apply my-8;
       @apply border-t-2;
       @apply border-dashed;
-      @apply border-neutral-3;
+      @apply border-elevate-3;
     }
 
     & > ol {

@@ -50,7 +50,7 @@ while sdl_events():
 
 Which renders the following scenes:
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="drizzle/drizzle-icon.png" caption="Icon of drizzle rendered with SDL2">}}
   {{<image src="drizzle/eggvance-icon.png" caption="Icon of eggvance rendered with SDL2">}}
-{{</flex>}}
+{{</wrap>}}

@@ -1,14 +1,12 @@
-<figure class="flex flex-col w-full">
-  {{ $caption := .Get "caption" }}
-  {{ $src := add "/audio/" (.Get "src") | safeURL }}
+{{ $cap := .Get "caption" }}
+{{ $src := add "/audio/" (.Get "src") | safeURL }}
+<figure class="lozad w-full">
   <div v-scope="Player()" @vue:mounted="mounted($el)"></div>
-  <div class="lozad">
-    <audio class="hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata"></audio>
-    <noscript>
-      <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
-    </noscript>
-  </div>
-  {{ with $caption }}
+  <audio class="hidden" data-src="{{ $src }}" type="audio/mp3" preload="metadata"></audio>
+  <noscript>
+    <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
+  </noscript>
+  {{ with $cap }}
     <figcaption class="mt-2 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>

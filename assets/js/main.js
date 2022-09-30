@@ -5,9 +5,11 @@ import Player from './player';
 const observer = lozad('.lozad', {
   rootMargin: '512px',
   load: function (element) {
-    const parent = element.parentElement;
-    for (const element of parent.querySelectorAll('*[data-src]')) {
-      element.src = element.getAttribute('data-src');
+    const elements = [element, ...element.querySelectorAll('*[data-src]')];
+    for (const element of elements) {
+      if (element.hasAttribute('data-src')) {
+        element.src = element.getAttribute('data-src');
+      }
     }
   }
 });
@@ -23,5 +25,6 @@ const store = reactive({
 
 createApp({ store }).mount();
 
-window.addEventListener('click', () => store.menu = false);
-window.addEventListener('resize', () => store.menu = false);
+for (const type of ['click', 'resize']) {
+  window.addEventListener(type, () => store.menu = false);
+}

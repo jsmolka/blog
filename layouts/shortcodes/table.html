@@ -1,7 +1,7 @@
-<figure class="flex flex-col w-full overflow-x-auto">
-  {{ $caption := .Get "caption" }}
+{{ $cap := .Get "caption" }}
+<figure class="w-full overflow-x-auto">
   {{ .Inner | $.Page.RenderString }}
-  {{ with $caption }}
+  {{ with $cap }}
     <figcaption class="mt-2 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>

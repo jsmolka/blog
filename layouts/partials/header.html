@@ -1,26 +1,28 @@
-<header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-neutral-0">
+<header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-prose-1 font-medium">
   <a href="/" class="flex items-center mx-4 space-x-1.5">
-    <span class="font-black">{{ $.Site.Title }}</span>
-    <span class="cursor"></span>
+    <div class="font-black">{{ $.Site.Title }}</div>
+    <div class="cursor"></div>
   </a>
   <div class="flex items-center">
     <!-- Desktop -->
-    <nav class="hidden sm:flex items-center">
-      {{ range $.Site.Menus.header }}
+    <nav class="hidden sm:block">
+      {{- range $.Site.Menus.header -}}
         <a href="{{ .URL | safeURL }}" class="mx-4">{{ .Name | safeHTML }}</a>
-      {{ end }}
+      {{- end -}}
     </nav>
     <!-- Theme -->
-    <button class="hidden theme-system:block mx-4" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
-    <button class="hidden theme-dark:block mx-4" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
-    <button class="hidden theme-light:block mx-4" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
+    <div class="mx-4">
+      <button class="hidden theme-system:block" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
+      <button class="hidden theme-dark:block" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
+      <button class="hidden theme-light:block" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
+    </div>
     <!-- Mobile -->
     <div v-scope class="relative flex sm:hidden">
       <button @click.stop="store.menu = !store.menu" class="mx-4">
         {{ partial "icon/menu" 24 }}
       </button>
       <div v-cloak v-show="store.menu">
-        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-neutral-4 border border-neutral-3 z-[9999]">
+        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-elevate-2 border border-elevate-3 z-[9999]">
           {{ range $.Site.Menus.header }}
             <a class="px-3 py-2" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
           {{ end }}

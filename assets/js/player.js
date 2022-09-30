@@ -1,50 +1,37 @@
-function clamp(value, min, max) {
-  return Math.max(min, Math.min(max, value));
-}
+import { clamp, isMobileDevice } from './utils';
 
-function offsetRatio(event, element) {
-  return clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1);
-}
-
-function isMobileDevice() {
-  // Seems to "work" up until iOS 13
-  // https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html
-  const isIosAudioQuirk = () => {
-    const audio = new Audio();
-    audio.volume = 0.5;
-    return audio.volume === 1;
+function makeBar(element) {
+  const bar = {
+    onMove: null,
+    onMoveBegin: null,
+    onMoveEnd: null,
   };
 
-  // Apple specific, works on iPad with iOS 14.6
-  // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
-  const isIosStandalone = () => {
-    return typeof navigator.standalone === 'boolean';
-  };
+  const onMove = (event) => bar.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
+  const onMoveBegin = () => bar.onMoveBegin();
+  const onMoveEnd = () => bar.onMoveEnd();
 
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
-  return /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) || isIosStandalone() || isIosAudioQuirk();
-}
-
-function initEventsBar(element, events) {
   element.addEventListener('pointerdown', (event) => {
-    if (event.button === 2) {
+    if (event.button !== 0) {
       return;
     }
 
     const up = (event) => {
-      window.removeEventListener('pointermove', events.update);
+      window.removeEventListener('pointermove', onMove);
       window.removeEventListener('pointerup', up);
       window.document.body.classList.remove('cursor-pointer', 'select-none');
-      events.update(event);
-      events.up(event);
+      onMove(event);
+      onMoveEnd();
     };
 
-    window.addEventListener('pointermove', events.update);
+    window.addEventListener('pointermove', onMove);
     window.addEventListener('pointerup', up);
     window.document.body.classList.add('cursor-pointer', 'select-none');
-    events.update(event);
-    events.down(event);
+    onMoveBegin();
+    onMove(event);
   });
+
+  return bar;
 }
 
 const instances = [];
@@ -52,22 +39,24 @@ const instances = [];
 export default function Player() {
   return {
     $template: /* html */ `
-      <div class="player">
+      <div class="flex items-center bg-elevate-2 text-[#8693a2] dark:text-[#707f8e] text-sm border border-elevate-3 rounded-sm touch-action-none">
         <button ref="stateButton" class="p-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path :d="paused ? icons.play : icons.pause"></path>
           </svg>
         </button>
-        <div>{{ format(time) }} / {{ format(duration) }}</div>
-        <div ref="progressBar" class="flex-1 ml-3 py-2 cursor-pointer">
-          <div ref="progressBarInner" class="bar">
-            <div :style="{ width: 100 * (time / duration) + '%' }" ></div>
+        <div class="font-feature-tnum">{{ format(time) }} / {{ format(duration) }}</div>
+        <div ref="progressBar" class="flex flex-1 ml-3 py-2 cursor-pointer">
+          <div class="flex flex-1 h-1 bg-elevate-3">
+            <div class="bg-[#8693a2] dark:bg-[#707f8e]" :style="{ width: 100 * (time / duration) + '%' }"></div>
           </div>
         </div>
-        <div ref="volumeContainer" class="flex items-center ml-1">
-          <div ref="volumeBar" :class="volumeHover || volumeActive ? 'w-20' : 'w-0'" class="py-2 transition-width duration-500 ease-in-out cursor-pointer">
-            <div ref="volumeBarInner" class="bar ml-3 mr-1">
-              <div :style="{ width: 100 * volume + '%' }"></div>
+        <div ref="volume" class="flex items-center space-x-1">
+          <div :class="volumeHover || volumeActive ? 'w-20' : 'w-0'" class="flex transition-width duration-500 ease-in-out">
+            <div ref="volumeBar" class="flex flex-1 ml-4 py-2 cursor-pointer">
+              <div class="flex flex-1 h-1 bg-elevate-3">
+                <div class="bg-[#8693a2] dark:bg-[#707f8e]" :style="{ width: 100 * (muted ? 0 : volume) + '%' }"></div>
+              </div>
             </div>
           </div>
           <button ref="volumeButton" class="p-2">
@@ -101,23 +90,24 @@ export default function Player() {
         } else {
           this.setVolume(parseFloat(localStorage.getItem('volume') ?? this.volume));
         }
-        this.initEvents();
-        this.query();
+
+        this.init();
+        this.update();
 
         instances.push(this);
       });
     },
 
-    initEvents() {
-      const query = () => this.query();
-      this.audio.addEventListener('play', query);
-      this.audio.addEventListener('pause', query);
-      this.audio.addEventListener('ended', query);
-      this.audio.addEventListener('stalled', query);
-      this.audio.addEventListener('waiting', query);
-      this.audio.addEventListener('timeupdate', query);
-      this.audio.addEventListener('durationchange', query);
-      this.audio.addEventListener('volumechange', query);
+    init() {
+      const update = () => this.update();
+      this.audio.addEventListener('play', update);
+      this.audio.addEventListener('pause', update);
+      this.audio.addEventListener('ended', update);
+      this.audio.addEventListener('stalled', update);
+      this.audio.addEventListener('waiting', update);
+      this.audio.addEventListener('timeupdate', update);
+      this.audio.addEventListener('durationchange', update);
+      this.audio.addEventListener('volumechange', update);
 
       this.$refs.stateButton.addEventListener('click', () => {
         if (this.audio.paused) {
@@ -127,42 +117,41 @@ export default function Player() {
         }
       });
 
-      this.initEventsProgressBar();
-      this.initEventsVolumeBar();
+      this.initProgressBar();
+      this.initVolumeBar();
     },
 
-    initEventsProgressBar() {
+    initProgressBar() {
       let paused = false;
-      initEventsBar(this.$refs.progressBar, {
-        update: (event) => {
-          this.audio.currentTime = offsetRatio(event, this.$refs.progressBarInner) * this.audio.duration;
-        },
-        down: () => {
-          paused = this.audio.paused;
-          if (!paused) {
-            this.pause()
-          }
-        },
-        up: () => {
-          if (!paused) {
-            this.play();
-          }
-        },
-      });
+
+      const bar = makeBar(this.$refs.progressBar);
+      bar.onMove = (percentage) => {
+        this.audio.currentTime = percentage * this.audio.duration;
+      };
+      bar.onMoveBegin = () => {
+        paused = this.audio.paused;
+        if (!paused) {
+          this.pause()
+        }
+      };
+      bar.onMoveEnd = () => {
+        if (!paused) {
+          this.play();
+        }
+      };
     },
 
-    initEventsVolumeBar() {
-      if (isMobileDevice()) {
-        this.$refs.volumeButton.addEventListener('click', () => this.audio.muted = !this.audio.muted);
-      } else {
-        this.$refs.volumeContainer.addEventListener('pointerenter', () => this.volumeHover = true);
-        this.$refs.volumeContainer.addEventListener('pointerleave', () => this.volumeHover = false);
+    initVolumeBar() {
+      this.$refs.volumeButton.addEventListener('click', () => this.audio.muted = !this.audio.muted);
 
-        initEventsBar(this.$refs.volumeBar, {
-          update: (event) => this.setVolume(offsetRatio(event, this.$refs.volumeBarInner)),
-          down: () => this.volumeActive = true,
-          up: () => this.volumeActive = false,
-        });
+      if (!isMobileDevice()) {
+        this.$refs.volume.addEventListener('pointerenter', () => this.volumeHover = true);
+        this.$refs.volume.addEventListener('pointerleave', () => this.volumeHover = false);
+
+        const bar = makeBar(this.$refs.volumeBar);
+        bar.onMove = (percentage) => this.setVolume(percentage);
+        bar.onMoveBegin = () => this.volumeActive = true;
+        bar.onMoveEnd = () => this.volumeActive = false;
       }
     },
 
@@ -179,6 +168,7 @@ export default function Player() {
 
     setVolume(volume) {
       this.volume = clamp(volume, 0, 1);
+      this.audio.muted = false;
       this.audio.volume = Math.pow(this.volume, 3);
       localStorage.setItem('volume', this.volume);
     },
@@ -192,7 +182,7 @@ export default function Player() {
       return `${mins}:${secs.padStart(2, '0')}`;
     },
 
-    query() {
+    update() {
       this.time = this.audio.currentTime;
       this.duration = this.audio.duration;
       this.paused = this.audio.paused;

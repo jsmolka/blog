@@ -1,2 +1,1 @@
-{{ $path := .Get "src" }}
-{{ partial "esbuild" (dict "src" $path) }}
+{{ partial "esbuild" (dict "src" (.Get "src")) }}

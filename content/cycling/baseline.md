@@ -1,7 +1,7 @@
 ---
 title: "Baseline"
 description: "Thousands of kilometers later."
-tags: ["cycling"]
+tags: ["nuroad", "cycling"]
 date: 2021-12-31
 type: post
 ---

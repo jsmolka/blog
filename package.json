@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "dev": "hugo server -D --disableFastRender --poll 250ms",
     "postprocess": "node scripts/postprocess.js"
   },
   "dependencies": {

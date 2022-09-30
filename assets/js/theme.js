@@ -9,7 +9,7 @@ class Theme {
   get isDark() {
     switch (html.getAttribute('theme')) {
       case 'system':
-        return matchMedia('(prefers-color-scheme: dark)').matches;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches;
       case 'dark':
         return true;
       case 'light':

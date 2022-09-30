@@ -12,8 +12,8 @@
   {{- end -}}
 </title>
 
-{{ partial "styles" . }}
-{{ partial "scripts" . }}
+{{ partialCached "styles" . }}
+{{ partialCached "scripts" . }}
 {{ partial "preload" . }}
 
 {{ template "_internal/opengraph.html" . }}

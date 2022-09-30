@@ -48,3 +48,6 @@ disableHugoGeneratorInject = true
 
   [markup.highlight]
     codeFences = false
+
+[build]
+  noJSConfigInAssets = true

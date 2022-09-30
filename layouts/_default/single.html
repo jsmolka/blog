@@ -1,15 +1,23 @@
 {{ define "main" }}
   <main class="flex flex-col w-full max-w-screen-md m-auto space-y-5 px-4 py-16">
-    {{ if .Params.ShowTitle | default true }}
-      <h1>
-        <mark>{{- .Title | safeHTML -}}</mark>
-      </h1>
+    {{ $showMeta := .Params.ShowMeta | default true }}
+    {{ $showTitle := .Params.ShowTitle | default true }}
+    {{ if or $showMeta $showTitle }}
+      <div class="space-y-4">
+        {{ if $showTitle }}
+          <div class="prose">
+            <h1 class="space-x-[0.33em]">
+              <span class="text-accent">#</span><span>{{- .Title | safeHTML -}}</span>
+            </h1>
+          </div>
+        {{ end }}
+        {{ if $showMeta }}
+          {{ partial "meta" . }}
+        {{ end }}
+      </div>
     {{ end }}
-    {{ if .Params.ShowMeta | default true }}
-      {{ partial "meta" . }}
-    {{ end }}
-    <span class="prose">
+    <div class="prose">
       {{ .Content }}
-    </span>
+    </div>
   </main>
 {{ end }}

@@ -69,7 +69,7 @@ assert(map.get(1.0) == 0)
 ```
 
 ## Iterators
-Until now, the `while` statement was the only possibility to loop in drizzle. It was sufficient because all loops can be remodeled into `while` loops. I didn't implement the classic `for` loop with initializer, condition, and expression because it doesn't play nice with whitespace awareness [^1]. After the introduction of collections, it made sense to implement iterators and the `for .. in` loop known from other languages.
+Until now, the `while` statement was the only possibility to loop in drizzle. It was sufficient because all loops can be remodeled into `while` loops. I didn't implement the classic `for` loop with initializer, condition, and expression because it doesn't play nice with whitespace awareness. After the introduction of collections, it made sense to implement iterators and the `for .. in` loop known from other languages.
 
 ```drizzle
 var l = [0, 1, 2]

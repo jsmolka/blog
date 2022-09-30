@@ -10,10 +10,10 @@ type: post
 ## Undefined Behavior
 In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4), which has been reported by fleroviux in June last year. She tried to play Pokémon Sapphire, and his game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/sapphire-bad-bios-bug.png" caption="Freezing during intro sequence">}}
   {{<image src="eggvance/sapphire-bad-bios.png" caption="In the moving truck where we belong">}}
-{{</flex>}}
+{{</wrap>}}
 
 She used the bundled replacement BIOS by Normmatt, where bugs in games are to be expected. I tried it with the original one, and the freezing stopped happening. So I closed the issue and blamed the BIOS for doing some unexpected things, but she quickly reassured me that the bug wasn't happening in his emulator or mGBA when using the same BIOS. I verified that and was left scratching my head about the possible origin of this problem.
 
@@ -81,20 +81,20 @@ I fixed the bug eventually when working on something seemingly unrelated. Reads 
 ## Sprite Render Cycles
 This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fix compared to the previous one. The available amount of sprite render cycles is limited to 1210 if the "H-Blank interval free" bit in the DISPCNT register is set or 954 otherwise. That means the amount of sprites per scanline is limited. If you ignore that limit, you end up with something like the first image, where the sprite on top overlaps with the status bar.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/gunstar-sprite-cycles-bug.png" caption="Gunstar Super Heroes without render cycle limit">}}
   {{<image src="eggvance/gunstar-sprite-cycles.png" caption="Gunstar Super Heroes with render cycle limit">}}
-{{</flex>}}
+{{</wrap>}}
 
 Calculating the number of cycles it takes to render a sprite is quite easy. It takes `width` cycles for normal and `2 * width + 10` cycles for sprites with affine transformations. Enabled sprites with x-coordinates outside of the screen also affect this quota, and programmers should be mindful to explicitly disable them instead of moving them outside the screen.
 
 ## Real-Time Clock
 The next thing I want to talk about is an actual new feature of the emulator. If you own a third-generation Pokémon game and start it, you will notice that it complains about a drained battery. Time-based events will no longer work because its internal real-time clock ran dry.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/emerald-bad-rtc.png" caption="Empty battery warning">}}
   {{<image src="eggvance/emerald-bad-flash.png" caption="Ever saw that back then? (bonus)">}}
-{{</flex>}}
+{{</wrap>}}
 
 Until recently, eggvance perfectly emulated old Pokémon cartridges in the sense that both their RTCs don't work. It was a feature, I swear. The RTC is connected to three of the four GamePak GPIO pins as follows:
 
@@ -118,17 +118,17 @@ Receiving a command byte looks like this:
 
 Combining these two flows allows us to implement a functioning RTC. The documentation in GBATEK can be quite confusing in that regard because it first describes the NDS RTC and then the differences to GBA one. Once everything has been put into place, I was able to grow berries in the Pokémon Emerald.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/emerald-berry-1.png" caption="Saplings planted">}}
   {{<image src="eggvance/emerald-berry-2.png" caption="Time to harvest">}}
-{{</flex>}}
+{{</wrap>}}
 
 I later stumbled across a NanoBoyAdvance [issue](https://github.com/fleroviux/NanoboyAdvance/issues/136) reported by Robert Peip, which mentions that the RTC doesn't work in Sennen Kazoku. The game boots and then shows an error screen mentioning "broken clock equipment". I tested it in my emulator and observed the same behavior.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="eggvance/sennen-rtc-bug.png" caption="Complaints about a bad RTC">}}
   {{<image src="eggvance/sennen-rtc.png" caption="Fixed and ready for the intro">}}
-{{</flex>}}
+{{</wrap>}}
 
 Debugging the game showed that Sennen Kazoku didn't set SCK high in step one of the transfer sequence. I removed the conditions and then everything worked as expected. Other games with RTCs continued to work with that change, so I kept it.
 
@@ -178,9 +178,9 @@ That might not sound like a problem until you realize that we are on the hottest
 ## Sound?
 I love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channels relatively quickly, and decided to merge them. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well-working APU/DSP, but it never was supposed to be a part of this report.
 
-{{<flex>}}
+{{<wrap>}}
   {{<audio src="eggvance/tengoku.mp3" caption="Intro sequence of Rhythm Tengoku with some nice stereo">}}
-{{</flex>}}
+{{</wrap>}}
 
 I'll write another one where I describe the sound basics and also give some examples. Most of the GBAs sound is composed of FIFO samples, so it's hard to show all audio channels in action and how they are combined into a nice result.
 

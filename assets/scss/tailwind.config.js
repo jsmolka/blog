@@ -18,15 +18,17 @@ module.exports = {
         sm: '0.0625rem',
       },
       colors: {
-        accent: 'var(--accent)',
-        neutral: {
-          0: 'var(--neutral-0)',
-          1: 'var(--neutral-1)',
-          2: 'var(--neutral-2)',
-          3: 'var(--neutral-3)',
-          4: 'var(--neutral-4)',
-          5: 'var(--neutral-5)',
+        prose: {
+          1: 'var(--color-prose-1)',
+          2: 'var(--color-prose-2)',
+          3: 'var(--color-prose-3)',
         },
+        elevate: {
+          1: 'var(--color-elevate-1)',
+          2: 'var(--color-elevate-2)',
+          3: 'var(--color-elevate-3)',
+        },
+        accent: 'var(--color-accent)',
       },
       fontSize: {
         sm: ['0.85rem', {
@@ -36,7 +38,7 @@ module.exports = {
     },
   },
   content: [
-    path.join(__dirname, '../../assets/**/*.{js,scss}'),
+    path.join(__dirname, '../../assets/**/*.js'),
     path.join(__dirname, '../../content/**/*.{html,md,js}'),
     path.join(__dirname, '../../layouts/**/*.html'),
   ],

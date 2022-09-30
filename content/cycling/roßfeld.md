@@ -1,7 +1,7 @@
 ---
 title: "Roßfeld"
 description: "Are those real mountains?"
-tags: ["roßfeld", "cycling"]
+tags: ["aeroad", "cycling"]
 date: 2022-06-28
 type: post
 ---

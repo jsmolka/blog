@@ -1,7 +1,7 @@
 ---
 title: "Chasing the Dragon"
 description: ""
-tags: ["cycling"]
+tags: ["aeroad", "cycling"]
 date: 2022-03-13
 type: post
 draft: true

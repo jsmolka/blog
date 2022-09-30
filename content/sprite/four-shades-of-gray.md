@@ -43,14 +43,14 @@ def background():
 
 That was enough to ditch serial port printing of the tests and show them in all their gray glory.
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="sprite/instr-timing.png" caption="blargg instruction timing tests">}}
   {{<image src="sprite/interrupts.png" caption="blargg interrupt tests">}}
-{{</flex>}}
+{{</wrap>}}
 
 Even some games that don't require memory banking are working!
 
-{{<flex>}}
+{{<wrap>}}
   {{<image src="sprite/tetris.png" caption="Tetris title screen">}}
   {{<image src="sprite/dr-mario.png" caption="Dr. Mario title screen">}}
-{{</flex>}}
+{{</wrap>}}

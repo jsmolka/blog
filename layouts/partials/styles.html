@@ -7,11 +7,3 @@
   {{ $style = $style | resources.ExecuteAsTemplate (printf "css/main.%v.css" (div now.Unix 4)) . }}
 {{ end }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-
-<noscript>
-  <style>
-    .noscript\:hidden {
-      display: none;
-    }
-  </style>
-</noscript>

@@ -1,9 +1,9 @@
-<figure class="flex flex-col w-full {{ with .Get "class" }}{{ . }}{{ end }}">
-  {{ $caption := .Get "caption" }}
-  {{ $src := add "/img/" (.Get "src") }}
-  {{ $alt := .Get "alt" | default $caption }}
+{{ $cap := .Get "caption" }}
+{{ $src := add "/img/" (.Get "src") | safeURL }}
+{{ $alt := .Get "alt" | default $cap }}
+<figure class="w-full {{ with .Get "class" }}{{ . }}{{ end }}">
   {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
-  {{ with $caption }}
+  {{ with $cap }}
     <figcaption class="mt-2 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>

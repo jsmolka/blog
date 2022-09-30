@@ -1,18 +1,2 @@
-{{ $config := imageConfig (add "/static/" .Destination) }}
-<img
-  class="lozad noscript:hidden w-full"
-  data-src="{{ .Destination | safeURL }}"
-  alt="{{- .Text -}}"
-  width="{{ $config.Width }}"
-  height="{{ $config.Height }}"
->
-<noscript>
-  <img
-    class="w-full"
-    src="{{ .Destination | safeURL }}"
-    alt="{{- .Text -}}"
-    width="{{ $config.Width }}"
-    height="{{ $config.Height }}"
-    loading="lazy"
-  >
-</noscript>
+{{ $image := imageConfig (add "/static/" .Destination) }}
+<img class="w-full" src="{{ .Destination | safeURL }}" alt="{{- .Text -}}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">

@@ -1,15 +1,15 @@
 .button {
   @apply px-2;
   @apply py-1;
-  @apply bg-neutral-5;
-  @apply text-neutral-0;
+  @apply bg-elevate-1;
+  @apply text-prose-1;
   @apply font-medium;
   @apply border;
-  @apply border-neutral-0;
+  @apply border-prose-1;
   @apply rounded-sm;
 
   &:hover {
-    @apply bg-neutral-0;
-    @apply text-neutral-5;
+    @apply bg-prose-1;
+    @apply text-elevate-1;
   }
 }
