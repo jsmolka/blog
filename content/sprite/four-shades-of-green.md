@@ -1,6 +1,6 @@
 ---
-title: "Four Shades of Gray"
-description: "The new book is coming out soon."
+title: "Four Shades of Green"
+description: "The international bestseller in a different color."
 tags: ["sprite", "emulation", "programming"]
 date: 2022-09-17
 type: post
@@ -41,7 +41,7 @@ def background():
     this.window.set_pixel(x, y, this.bgp[idxc])
 ```
 
-That was enough to ditch serial port printing of the tests and show them in all their gray glory.
+That was enough to ditch serial port printing of the tests and show them in all their green glory.
 
 {{<wrap>}}
   {{<image src="sprite/instr-timing.png" caption="blargg instruction timing tests">}}
