@@ -18,3 +18,19 @@ export function isMobileDevice() {
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
   return /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) || isIosStandalone() || isIosAudioQuirk();
 }
+
+export function onIntersect(element, callback, options = {}) {
+  if (window['IntersectionObserver']) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      for (const entry of entries) {
+        if (entry.intersectionRatio > 0 || entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          callback();
+        }
+      }
+    }, options);
+    observer.observe(element);
+  } else {
+    callback();
+  }
+}

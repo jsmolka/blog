@@ -1,4 +1,4 @@
-import { clamp, isMobileDevice } from './utils';
+import { clamp, isMobileDevice, onIntersect } from './utils';
 
 function makeBar(element) {
   const bar = {
@@ -39,8 +39,8 @@ const instances = [];
 export default function Audio(src) {
   return {
     $template: /* html */ `
-      <div class="lozad flex items-center bg-elevate-2 text-[#8693a2] dark:text-[#707f8e] text-sm border border-elevate-3 rounded-sm touch-action-none">
-        <audio ref="audio" class="hidden" :data-src="src" type="audio/mp3" preload="metadata"></audio>
+      <div class="flex items-center bg-elevate-2 text-[#8693a2] dark:text-[#707f8e] text-sm border border-elevate-3 rounded-sm touch-action-none">
+        <audio ref="audio" class="hidden" type="audio/mp3" preload="metadata"></audio>
         <button ref="stateButton" class="p-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path :d="paused ? icons.play : icons.pause"></path>
@@ -69,7 +69,6 @@ export default function Audio(src) {
       </div>
     `,
 
-    src,
     time: 0,
     duration: 0,
     paused: true,
@@ -84,9 +83,8 @@ export default function Audio(src) {
       speakerMuted: 'M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z',
     },
 
-    mounted() {
-      this.audio = this.$refs.audio;
-      this.audio.addEventListener('loadedmetadata', () => {
+    mounted(element) {
+      this.$refs.audio.addEventListener('loadedmetadata', () => {
         if (isMobileDevice()) {
           this.setVolume(this.volume);
         } else {
@@ -98,21 +96,19 @@ export default function Audio(src) {
 
         instances.push(this);
       });
+
+      onIntersect(element, () => {
+        this.$refs.audio.setAttribute('src', src);
+      }, { rootMargin: '256px' });
     },
 
     init() {
-      const update = () => this.update();
-      this.audio.addEventListener('play', update);
-      this.audio.addEventListener('pause', update);
-      this.audio.addEventListener('ended', update);
-      this.audio.addEventListener('stalled', update);
-      this.audio.addEventListener('waiting', update);
-      this.audio.addEventListener('timeupdate', update);
-      this.audio.addEventListener('durationchange', update);
-      this.audio.addEventListener('volumechange', update);
+      for (const type of ['play', 'pause', 'ended', 'stalled', 'waiting', 'timeupdate', 'durationchange', 'volumechange']) {
+        this.$refs.audio.addEventListener(type, () => this.update());
+      }
 
       this.$refs.stateButton.addEventListener('click', () => {
-        if (this.audio.paused) {
+        if (this.$refs.audio.paused) {
           this.play();
         } else {
           this.pause();
@@ -128,10 +124,10 @@ export default function Audio(src) {
 
       const bar = makeBar(this.$refs.progressBar);
       bar.onMove = (percentage) => {
-        this.audio.currentTime = percentage * this.audio.duration;
+        this.$refs.audio.currentTime = percentage * this.$refs.audio.duration;
       };
       bar.onMoveBegin = () => {
-        paused = this.audio.paused;
+        paused = this.$refs.audio.paused;
         if (!paused) {
           this.pause()
         }
@@ -144,7 +140,7 @@ export default function Audio(src) {
     },
 
     initVolumeBar() {
-      this.$refs.volumeButton.addEventListener('click', () => this.audio.muted = !this.audio.muted);
+      this.$refs.volumeButton.addEventListener('click', () => this.$refs.audio.muted = !this.$refs.audio.muted);
 
       if (!isMobileDevice()) {
         this.$refs.volume.addEventListener('pointerenter', () => this.volumeHover = true);
@@ -161,17 +157,17 @@ export default function Audio(src) {
       for (const instance of instances) {
         instance.pause();
       }
-      this.audio.play();
+      this.$refs.audio.play();
     },
 
     pause() {
-      this.audio.pause();
+      this.$refs.audio.pause();
     },
 
     setVolume(volume) {
       this.volume = clamp(volume, 0, 1);
-      this.audio.muted = false;
-      this.audio.volume = Math.pow(this.volume, 3);
+      this.$refs.audio.muted = false;
+      this.$refs.audio.volume = Math.pow(this.volume, 3);
       localStorage.setItem('volume', this.volume);
     },
 
@@ -185,10 +181,10 @@ export default function Audio(src) {
     },
 
     update() {
-      this.time = this.audio.currentTime;
-      this.duration = this.audio.duration;
-      this.paused = this.audio.paused;
-      this.muted = this.audio.muted;
+      this.time = this.$refs.audio.currentTime;
+      this.duration = this.$refs.audio.duration;
+      this.paused = this.$refs.audio.paused;
+      this.muted = this.$refs.audio.muted;
     },
   };
 }

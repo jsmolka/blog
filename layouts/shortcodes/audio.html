@@ -1,7 +1,7 @@
 {{ $cap := .Get "caption" }}
 {{ $src := add "/audio/" (.Get "src") | safeURL }}
 <figure class="w-full">
-  <div v-scope="Audio('{{ $src }}')" @vue:mounted="mounted"></div>
+  <div v-scope="Audio('{{ $src }}')" @vue:mounted="mounted($el)"></div>
   <noscript>
     <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>

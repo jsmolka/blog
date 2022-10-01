@@ -5,7 +5,6 @@
     "postprocess": "node scripts/postprocess.js"
   },
   "dependencies": {
-    "lozad": "^1.16.0",
     "petite-vue": "^0.4.1"
   },
   "devDependencies": {
