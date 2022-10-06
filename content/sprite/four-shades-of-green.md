@@ -12,11 +12,11 @@ Then it was time to start working on the screen to bring the whole thing to life
 ```drizzle
 def background():
   var map_base = 0x1800
-  if this.lcdc & (1 << 3):
+  if this.lcdc & 0x08:
     map_base = map_base + 0x0400
 
   var tile_base = 0x1000
-  if this.lcdc & (1 << 4):
+  if this.lcdc & 0x10:
     tile_base = tile_base - 0x1000
 
   var y = this.ly
@@ -28,17 +28,14 @@ def background():
     var tile_y = texel_y >> 3
     var tile = this.vram[32 * tile_y + tile_x + map_base]
 
-    if (this.lcdc & (1 << 4)) == 0:
+    if (this.lcdc & 0x10) == 0:
       tile = sign_extend(tile)
 
-    var pixel_x = (texel_x & 0x7) ^ 0x7
-    var pixel_y = (texel_y & 0x7)
+    var pixel_x = texel_x & 0x7
+    var pixel_y = texel_y & 0x7
 
-    var addr = 16 * tile + tile_base + 2 * pixel_y
-    var lsbc = this.vram[addr + 0] >> pixel_x
-    var msbc = this.vram[addr + 1] >> pixel_x
-    var idxc = (lsbc & 0x1) | (msbc & 0x1) << 1
-    this.window.set_pixel(x, y, this.bgp[idxc])
+    var index = this.read_tile(tile_base, tile, pixel_x, pixel_y)
+    this.window.set_pixel(x, y, color(this.bgp, index))
 ```
 
 That was enough to ditch serial port printing of the tests and show them in all their green glory.
