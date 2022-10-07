@@ -4,6 +4,16 @@ description: "A list of notable projects."
 showMeta: false
 showTitle: false
 ---
+# sprite
+[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the language. It implements most components of the system with reasonable accuracy, but there is no sound or saves, and the cartridge types are limited to MBC0, MBC1, and MBC3.
+
+{{<wrap>}}
+  {{<image src="sprite/technology.png" caption="Technology is incredible guy">}}
+  {{<image src="sprite/zelda-intro.png" caption="Zelda intro sequence">}}
+{{</wrap>}}
+
+Performance is quite poor. The emulator runs at around 45% of the console. That could be increased to 65% by using free functions and variables instead of a class.
+
 # drizzle
 [drizzle](https://github.com/jsmolka/drizzle) is a dynamic interpreted programming language with a syntax similar to Python.
 
