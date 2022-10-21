@@ -47,7 +47,7 @@ Prism.languages.drizzle = {
     lookbehind: true,
   },
   keyword: /\b(block|break|class|case|continue|def|default|elif|else|false|for|if|in|noop|null|return|switch|this|true|var|while)\b/,
-  builtin: /\b(assert|print|read_bin|sdl_events|sdl_keystate|sdl_window|time)\b/,
+  builtin: /\b(assert|len|print|read_bin|sdl_events|sdl_keystate|sdl_window|time)\b/,
   boolean: /\b(?:false|null|true)\b/,
   number: /\b0x[\da-f]+\b|(?:\b\d+\.?\d*|\B\.\d+)(?:e[+-]?\d+)?/i,
   operator: /\.\.|[-+%=]=?|!=|:=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
