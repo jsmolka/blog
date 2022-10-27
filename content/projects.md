@@ -5,14 +5,14 @@ showMeta: false
 showTitle: false
 ---
 # sprite
-[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the language. It implements most components of the system with reasonable accuracy, but there is no sound or saves, and the cartridge types are limited to MBC0, MBC1, and MBC3.
+[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the programming language. It implements most components of the system with reasonable accuracy, but there is no sound or saves, and the cartridge types are limited to MBC0, MBC1, and MBC3.
 
 {{<wrap>}}
   {{<image src="sprite/technology.png" caption="Technology is incredible guy">}}
   {{<image src="sprite/zelda-intro.png" caption="Zelda intro sequence">}}
 {{</wrap>}}
 
-Performance is quite poor. The emulator runs at around 45% of the console. That could be increased to 65% by using free functions and variables instead of a class.
+The initial implementation didn't even manage to emulate the console at half speed. Optimizations like using a specializing adaptive interpreter in drizzle and replacing the class with free functions and variables in sprite increased the performance to 125%, which resulted in a stable frame rate at native speed.
 
 # drizzle
 [drizzle](https://github.com/jsmolka/drizzle) is a dynamic interpreted programming language with a syntax similar to Python.
@@ -37,7 +37,7 @@ var triangle = [Point(0, 0), Point(4, 4), Point(0, 4)]
 assert(area(triangle) == 8.0)
 ```
 
-It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a Game Boy emulator. It provides simple SDL2 and filesystem interfaces to achieve that.
+It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a Game Boy emulator. It provides simple SDL2 and filesystem abstractions to achieve that. The latest version also features a specializing adaptive interpreter to squeeze out the last bit of performance.
 
 {{<wrap>}}
   {{<image src="drizzle/drizzle-icon.png" caption="Icon of drizzle rendered with SDL2">}}
