@@ -15,11 +15,13 @@ function highlight(document) {
 
 function trim(document) {
   let changed = false;
-  const isInternalLink = (href) => href.match(/^(https:\/\/smolka\.dev)?\/.*\/$/);
   for (const link of document.getElementsByTagName('a')) {
     const href = link.getAttribute('href');
-    if (isInternalLink(href)) {
-      link.setAttribute('href', href.slice(0, -1));
+    const matches = href.match(/^((?:https:\/\/smolka\.dev)?\/.*\/)(#.*)?$/);
+    if (matches) {
+      matches.splice(0, 1);  // Remove match
+      matches[0] = matches[0].slice(0, -1);  // Remove trailing slash
+      link.setAttribute('href', matches.join(''));
       changed = true;
     }
   }
