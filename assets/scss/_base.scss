@@ -1,5 +1,24 @@
+@import "palette";
+
 :root {
   --font-features: "calt", "ccmp", "cv07", "kern";
+  --color-prose-1: #{$color-prose-1};
+  --color-prose-2: #{$color-prose-2};
+  --color-prose-3: #{$color-prose-3};
+  --color-elevate-1: #{$color-elevate-1};
+  --color-elevate-2: #{$color-elevate-2};
+  --color-elevate-3: #{$color-elevate-3};
+  --color-accent: #{$color-accent};
+}
+
+.dark {
+  --color-prose-1: #{$dark-color-prose-1};
+  --color-prose-2: #{$dark-color-prose-2};
+  --color-prose-3: #{$dark-color-prose-3};
+  --color-elevate-1: #{$dark-color-elevate-1};
+  --color-elevate-2: #{$dark-color-elevate-2};
+  --color-elevate-3: #{$dark-color-elevate-3};
+  --color-accent: #{$dark-color-accent};
 }
 
 html, body {

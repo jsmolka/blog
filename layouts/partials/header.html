@@ -1,6 +1,6 @@
 <header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-prose-1 font-medium">
   <a href="/" class="flex items-center mx-4 space-x-1.5">
-    <div class="font-black">{{ $.Site.Title }}</div>
+    <div class="font-extrabold">{{ $.Site.Title }}</div>
     <div class="cursor"></div>
   </a>
   <div class="flex items-center">
@@ -22,7 +22,7 @@
         {{ partial "icon/menu" 24 }}
       </button>
       <div v-cloak v-show="store.menu">
-        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-elevate-2 border border-elevate-3 z-[9999]">
+        <nav class="absolute top-[2.125rem] right-[1.125rem] flex flex-col bg-elevate-2 z-[9999]">
           {{ range $.Site.Menus.header }}
             <a class="px-3 py-2" href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
           {{ end }}

@@ -2,8 +2,6 @@ pre[class*="language-"],
 :not(pre) > code {
   @apply bg-elevate-2;
   @apply text-sm;
-  @apply border;
-  @apply border-elevate-3;
   @apply rounded-sm;
 }
 

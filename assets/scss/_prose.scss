@@ -25,7 +25,7 @@
 
   h1 {
      @apply text-3xl;
-     @apply font-black;
+     @apply font-extrabold;
   }
 
   h2 {
@@ -135,11 +135,9 @@
 
   pre[class*="language-"] {
     @apply -mx-4;
-    @apply border-x-0;
 
     @screen md {
       @apply mx-0;
-      @apply border-x;
     }
   }
 

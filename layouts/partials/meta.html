@@ -5,7 +5,7 @@
   {{ if .Params.Tags }}
     <nav class="flex flex-wrap space-x-2 gap-y-2">
       {{ range .Params.Tags }}
-        <a class="px-1.5 py-0.5 bg-elevate-2 border border-elevate-3 rounded-sm" href="{{ (printf "tags/%s/" . ) | urlize | absURL }}">{{ . }}</a>
+        <a class="px-1.5 py-0.5 bg-elevate-2 rounded-sm" href="{{ (printf "tags/%s/" . ) | urlize | absURL }}">{{ . }}</a>
       {{ end }}
     </nav>
   {{ end }}

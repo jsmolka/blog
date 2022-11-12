@@ -39,7 +39,7 @@ const instances = [];
 export default function Audio(src) {
   return {
     $template: /* html */ `
-      <div class="flex items-center bg-elevate-2 text-[#8693a2] dark:text-[#707f8e] text-sm border border-elevate-3 rounded-sm touch-action-none">
+      <div class="flex items-center bg-elevate-2 text-[#8693a2] dark:text-[#707f8e] text-sm rounded-sm touch-action-none">
         <audio ref="audio" class="hidden" type="audio/mp3" preload="metadata"></audio>
         <button ref="stateButton" class="p-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
