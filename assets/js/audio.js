@@ -1,37 +1,35 @@
 import { clamp, isMobileDevice, onIntersect } from './utils';
 
-function makeBar(element) {
-  const bar = {
-    onMove: null,
-    onMoveBegin: null,
-    onMoveEnd: null,
-  };
+class Bar {
+  constructor(element) {
+    this.onMove = null;
+    this.onMoveBegin = null;
+    this.onMoveEnd = null;
 
-  const onMove = (event) => bar.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
-  const onMoveBegin = () => bar.onMoveBegin();
-  const onMoveEnd = () => bar.onMoveEnd();
+    const onMove = (event) => this.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
+    const onMoveBegin = () => this.onMoveBegin();
+    const onMoveEnd = () => this.onMoveEnd();
 
-  element.addEventListener('pointerdown', (event) => {
-    if (event.button !== 0) {
-      return;
-    }
+    element.addEventListener('pointerdown', (event) => {
+      if (event.button !== 0) {
+        return;
+      }
 
-    const up = (event) => {
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', up);
-      window.document.body.classList.remove('cursor-pointer', 'select-none');
+      const up = (event) => {
+        window.removeEventListener('pointermove', onMove);
+        window.removeEventListener('pointerup', up);
+        window.document.body.classList.remove('cursor-pointer', 'select-none');
+        onMove(event);
+        onMoveEnd();
+      };
+
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', up);
+      window.document.body.classList.add('cursor-pointer', 'select-none');
+      onMoveBegin();
       onMove(event);
-      onMoveEnd();
-    };
-
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', up);
-    window.document.body.classList.add('cursor-pointer', 'select-none');
-    onMoveBegin();
-    onMove(event);
-  });
-
-  return bar;
+    });
+  }
 }
 
 const instances = [];
@@ -122,7 +120,7 @@ export default function Audio(src) {
     initProgressBar() {
       let paused = false;
 
-      const bar = makeBar(this.$refs.progressBar);
+      const bar = new Bar(this.$refs.progressBar);
       bar.onMove = (percentage) => {
         this.$refs.audio.currentTime = percentage * this.$refs.audio.duration;
       };
@@ -146,7 +144,7 @@ export default function Audio(src) {
         this.$refs.volume.addEventListener('pointerenter', () => this.volumeHover = true);
         this.$refs.volume.addEventListener('pointerleave', () => this.volumeHover = false);
 
-        const bar = makeBar(this.$refs.volumeBar);
+        const bar = new Bar(this.$refs.volumeBar);
         bar.onMove = (percentage) => this.setVolume(percentage);
         bar.onMoveBegin = () => this.volumeActive = true;
         bar.onMoveEnd = () => this.volumeActive = false;
