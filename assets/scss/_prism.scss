@@ -5,32 +5,29 @@ pre[class*="language-"],
   @apply rounded-sm;
 }
 
-pre[class*="language-"],
-code[class*="language-"] {
-  @apply leading-[1.65];
-  @apply whitespace-pre;
-  @apply hyphens-none;
-
-  .table {
-    @apply inline #{!important};
-  }
-}
-
 pre[class*="language-"] {
   @apply py-3;
   @apply overflow-x-auto;
-}
 
-code[class*="language-"] {
-  // Workaround for background culling
-  // https://stackoverflow.com/a/8513330
-  @apply min-w-full;
-  @apply float-left;
-  @apply px-4;
+  code {
+    @apply px-4;
+    @apply leading-[1.65];
+    @apply whitespace-pre;
+    @apply hyphens-none;
+
+    // Workaround for background culling
+    // https://stackoverflow.com/a/8513330
+    @apply min-w-full;
+    @apply float-left;
+
+    .table {
+      display: inline !important;
+    }
+  }
 }
 
 :not(pre) > code {
-  @apply px-1;
+  @apply px-1.5;
   @apply py-0.5;
 }
 
@@ -45,12 +42,16 @@ $prism-number: #b48ead;
 $prism-string: #a3be8c;
 
 :root {
+  @function dark($color) {
+    @return scale-color($color, $lightness: -10%, $saturation: 20%);
+  }
+
   --prism-comment: #b8bfcc;
-  --prism-deleted: #{scale-color($prism-deleted, $lightness: -10%, $saturation: 20%)};
-  --prism-declaration: #{scale-color($prism-declaration, $lightness: -10%, $saturation: 20%)};
-  --prism-keyword: #{scale-color($prism-keyword, $lightness: -10%, $saturation: 20%)};
-  --prism-number: #{scale-color($prism-number, $lightness: -10%, $saturation: 20%)};
-  --prism-string: #{scale-color($prism-string, $lightness: -10%, $saturation: 20%)};
+  --prism-deleted: #{dark($prism-deleted)};
+  --prism-declaration: #{dark($prism-declaration)};
+  --prism-keyword: #{dark($prism-keyword)};
+  --prism-number: #{dark($prism-number)};
+  --prism-string: #{dark($prism-string)};
 }
 
 .dark {
@@ -114,25 +115,27 @@ $prism-string: #a3be8c;
   @apply font-bold;
 }
 
-pre > code .token.deleted:not(.prefix),
-code .token.inserted:not(.prefix) {
-  @apply block;
-  @apply -mx-4;
-  @apply text-inherit;
+code {
+  .token.deleted:not(.prefix),
+  .token.inserted:not(.prefix) {
+    @apply block;
+    @apply -mx-4;
+    @apply text-inherit;
 
-  & > *:first-child {
-    @apply ml-4;
+    & > *:first-child {
+      @apply ml-4;
+    }
+
+    & > *:last-child {
+      @apply mr-4;
+    }
   }
 
-  & > *:last-child {
-    @apply mr-4;
+  .token.deleted:not(.prefix) {
+    background-color: rgba(255, 0, 0, 0.1);
   }
-}
 
-pre > code .token.deleted:not(.prefix) {
-  background-color: rgba(255, 0, 0, 0.1);
-}
-
-pre > code .token.inserted:not(.prefix) {
-  background-color: rgba(0, 255, 128, 0.1);
+  .token.inserted:not(.prefix) {
+    background-color: rgba(0, 255, 128, 0.1);
+  }
 }

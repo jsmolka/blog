@@ -28,13 +28,10 @@ html, body {
 body {
   @apply bg-neutral-6;
   @apply text-neutral-2;
-  @apply antialiased;
-  @apply scroll-smooth;
 
   font-size: 15px;
   font-feature-settings: var(--font-features);
   letter-spacing: -0.004em;
-  text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
 }
 

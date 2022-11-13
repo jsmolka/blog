@@ -15,7 +15,7 @@
     @apply tracking-tight;
 
     &:not(:first-child) {
-      @apply mt-8 #{!important};
+      margin-top: theme('spacing.8') !important;
     }
 
     a {
