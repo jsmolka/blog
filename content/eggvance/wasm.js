@@ -4,7 +4,7 @@ window.Module = {
   pending: false,
 
   onRuntimeInitialized() {
-    this.updateBackground(window.theme.isDark);
+    this.updateBackground(window.theme.dark);
   },
 
   async readUrl(url) {

@@ -12,9 +12,9 @@
     </nav>
     <!-- Theme -->
     <div class="mx-4">
-      <button class="hidden theme-system:block" onclick="theme.set('dark')">{{ partial "icon/theme/system" 20 }}</button>
-      <button class="hidden theme-dark:block" onclick="theme.set('light')">{{ partial "icon/theme/dark" 20 }}</button>
-      <button class="hidden theme-light:block" onclick="theme.set('system')">{{ partial "icon/theme/light" 20 }}</button>
+      <button class="hidden theme-system:block" onclick="theme.value = 'dark'">{{ partial "icon/theme/system" 20 }}</button>
+      <button class="hidden theme-dark:block" onclick="theme.value = 'light'">{{ partial "icon/theme/dark" 20 }}</button>
+      <button class="hidden theme-light:block" onclick="theme.value = 'system'">{{ partial "icon/theme/light" 20 }}</button>
     </div>
     <!-- Mobile -->
     <div v-scope class="relative flex sm:hidden">

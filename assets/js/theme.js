@@ -1,42 +1,42 @@
 const html = document.documentElement;
-const dark = window.matchMedia('(prefers-color-scheme: dark)');
+const pcsd = window.matchMedia('(prefers-color-scheme: dark)');
 
 class Theme {
   constructor() {
     this.callbacks = [];
-    this.set(this.get());
+    this.value = this.value;
 
-    dark.addEventListener('change', ({ matches }) => {
-      if (this.get() === 'system') {
-        this.update(matches);
+    pcsd.addEventListener('change', ({ matches }) => {
+      if (this.value === 'system') {
+        this.dark = matches;
       }
     });
   }
 
-  get isDark() {
-    switch (this.get()) {
-      case 'system':
-        return dark.matches;
-      case 'dark':
-        return true;
-      }
-      return false;
-  }
-
-  get() {
+  get value() {
     return localStorage.getItem('theme') ?? 'system';
   }
 
-  set(theme) {
-    html.setAttribute('theme', theme);
-    localStorage.setItem('theme', theme);
-    this.update(this.isDark);
+  set value(value) {
+    html.setAttribute('theme', value);
+    localStorage.setItem('theme', value);
+    this.dark = this.dark;
   }
 
-  update(dark) {
-    html.classList.toggle('dark', dark);
+  get dark() {
+    switch (this.value) {
+      case 'system':
+        return pcsd.matches;
+      case 'dark':
+        return true;
+    }
+    return false;
+  }
+
+  set dark(value) {
+    html.classList.toggle('dark', value);
     for (const callback of this.callbacks) {
-      callback(dark);
+      callback(value);
     }
   }
 }
