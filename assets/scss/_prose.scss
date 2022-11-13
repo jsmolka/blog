@@ -10,7 +10,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply max-w-fit;
-    @apply text-prose-1;
+    @apply text-neutral-1;
     @apply text-left;
     @apply tracking-tight;
 
@@ -73,7 +73,7 @@
         @apply -left-4;
         @apply w-2;
         @apply h-2;
-        @apply bg-prose-2;
+        @apply bg-neutral-2;
 
         content: '';
       }
@@ -92,7 +92,7 @@
 
     th {
       @apply font-bold;
-      @apply text-prose-1;
+      @apply text-neutral-1;
       @apply hyphens-none;
     }
 
@@ -100,7 +100,7 @@
       @apply px-3;
       @apply py-2;
       @apply border;
-      @apply border-elevate-3;
+      @apply border-neutral-4;
     }
   }
 
@@ -110,7 +110,7 @@
     @apply py-3;
     @apply italic;
     @apply border-l-4;
-    @apply border-prose-2;
+    @apply border-neutral-2;
   }
 
   audio {
@@ -150,7 +150,7 @@
       @apply my-8;
       @apply border-t-2;
       @apply border-dashed;
-      @apply border-elevate-3;
+      @apply border-neutral-4;
     }
 
     & > ol {

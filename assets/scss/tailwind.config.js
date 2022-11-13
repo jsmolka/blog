@@ -18,15 +18,13 @@ module.exports = {
         sm: '0.0625rem',
       },
       colors: {
-        prose: {
-          1: 'var(--color-prose-1)',
-          2: 'var(--color-prose-2)',
-          3: 'var(--color-prose-3)',
-        },
-        elevate: {
-          1: 'var(--color-elevate-1)',
-          2: 'var(--color-elevate-2)',
-          3: 'var(--color-elevate-3)',
+        neutral: {
+          1: 'var(--color-neutral-1)',
+          2: 'var(--color-neutral-2)',
+          3: 'var(--color-neutral-3)',
+          4: 'var(--color-neutral-4)',
+          5: 'var(--color-neutral-5)',
+          6: 'var(--color-neutral-6)',
         },
         accent: 'var(--color-accent)',
       },

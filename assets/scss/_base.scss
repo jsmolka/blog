@@ -2,22 +2,22 @@
 
 :root {
   --font-features: "calt", "ccmp", "cv07", "kern";
-  --color-prose-1: #{$color-prose-1};
-  --color-prose-2: #{$color-prose-2};
-  --color-prose-3: #{$color-prose-3};
-  --color-elevate-1: #{$color-elevate-1};
-  --color-elevate-2: #{$color-elevate-2};
-  --color-elevate-3: #{$color-elevate-3};
+  --color-neutral-1: #{$color-neutral-1};
+  --color-neutral-2: #{$color-neutral-2};
+  --color-neutral-3: #{$color-neutral-3};
+  --color-neutral-4: #{$color-neutral-4};
+  --color-neutral-5: #{$color-neutral-5};
+  --color-neutral-6: #{$color-neutral-6};
   --color-accent: #{$color-accent};
 }
 
 .dark {
-  --color-prose-1: #{$dark-color-prose-1};
-  --color-prose-2: #{$dark-color-prose-2};
-  --color-prose-3: #{$dark-color-prose-3};
-  --color-elevate-1: #{$dark-color-elevate-1};
-  --color-elevate-2: #{$dark-color-elevate-2};
-  --color-elevate-3: #{$dark-color-elevate-3};
+  --color-neutral-1: #{$dark-color-neutral-1};
+  --color-neutral-2: #{$dark-color-neutral-2};
+  --color-neutral-3: #{$dark-color-neutral-3};
+  --color-neutral-4: #{$dark-color-neutral-4};
+  --color-neutral-5: #{$dark-color-neutral-5};
+  --color-neutral-6: #{$dark-color-neutral-6};
   --color-accent: #{$dark-color-accent};
 }
 
@@ -26,8 +26,8 @@ html, body {
 }
 
 body {
-  @apply bg-elevate-1;
-  @apply text-prose-2;
+  @apply bg-neutral-6;
+  @apply text-neutral-2;
   @apply antialiased;
   @apply scroll-smooth;
 
@@ -40,5 +40,5 @@ body {
 
 ::selection {
   @apply bg-accent;
-  @apply text-prose-1;
+  @apply text-neutral-1;
 }
