@@ -1,44 +1,29 @@
 .prose {
-  @screen md {
-    @apply text-justify;
-  }
-
   @apply space-y-5;
   @apply text-left;
   @apply leading-[1.65];
   @apply hyphens-auto;
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply max-w-fit;
+  @screen md {
+    @apply text-justify;
+  }
+
+  h1, h2, h3 {
     @apply text-neutral-1;
     @apply text-left;
+    @apply font-extrabold;
     @apply tracking-tight;
 
     &:not(:first-child) {
       margin-top: theme('spacing.8') !important;
     }
-
-    a {
-      @apply no-underline;
-    }
   }
 
-  h1 {
-     @apply text-3xl;
-     @apply font-extrabold;
-  }
+  h1 { @apply text-3xl; }
+  h2 { @apply text-xl;  }
+  h3 { @apply text-lg;  }
 
-  h2 {
-    @apply text-xl;
-    @apply font-extrabold;
-  }
-
-  h3 {
-    @apply text-lg;
-    @apply font-bold;
-  }
-
-  a {
+  :not(h1, h2, h3) > a {
     @apply underline;
   }
 
@@ -48,10 +33,6 @@
 
     li {
       @apply pl-1;
-
-      &:first-child {
-        @apply mt-0;
-      }
     }
   }
 
@@ -91,8 +72,8 @@
     @apply font-feature-tnum;
 
     th {
-      @apply font-bold;
       @apply text-neutral-1;
+      @apply font-bold;
       @apply hyphens-none;
     }
 
