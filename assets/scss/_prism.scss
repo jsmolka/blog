@@ -46,7 +46,6 @@ $prism-string: #a3be8c;
     @return scale-color($color, $lightness: -10%, $saturation: 20%);
   }
 
-  --prism-comment: #b8bfcc;
   --prism-deleted: #{dark($prism-deleted)};
   --prism-declaration: #{dark($prism-declaration)};
   --prism-keyword: #{dark($prism-keyword)};
@@ -55,7 +54,6 @@ $prism-string: #a3be8c;
 }
 
 .dark {
-  --prism-comment: #636f88;
   --prism-deleted: #{$prism-deleted};
   --prism-declaration: #{$prism-declaration};
   --prism-keyword: #{$prism-keyword};
@@ -67,7 +65,7 @@ $prism-string: #a3be8c;
 .token.comment,
 .token.doctype,
 .token.prolog {
-  color: var(--prism-comment);
+  @apply text-neutral-3;
 }
 
 .token.boolean,
