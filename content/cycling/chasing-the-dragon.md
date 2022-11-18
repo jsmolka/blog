@@ -7,7 +7,7 @@ type: post
 draft: true
 ---
 - 86 kg ->
-- ~~[335](https://www.strava.com/activities/6471509396)~~ ~~[336](https://www.strava.com/activities/6621190498)~~ [352](https://www.strava.com/activities/7599141387) W FTP
+- ~~[335](https://www.strava.com/activities/6471509396)~~ ~~[336](https://www.strava.com/activities/6621190498)~~ ~~[352](https://www.strava.com/activities/7599141387)~~ [362](https://www.strava.com/activities/8126583881) W FTP
 - [Roßfeld HC climb](https://www.strava.com/activities/7297309448#2971080275759606296)
 - [Leipzig -> Brocken](https://www.strava.com/activities/7261245657), [B(rocken)](https://www.strava.com/activities/7403550389), [Absolute Destruction](https://www.strava.com/activities/7560351593)
 - [Porsche Circuit Cycling]({{<relref "cycling/porsche-circuit-cycling">}}), [second time with 340 NP](https://www.strava.com/activities/7765341254)
