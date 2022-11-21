@@ -22,13 +22,12 @@
 }
 
 html, body {
-  @apply h-full;
+  width: 100%;
 }
 
 body {
-  @apply bg-neutral-6;
-  @apply text-neutral-2;
-
+  background: var(--color-neutral-6);
+  color: var(--color-neutral-2);
   font-size: 15px;
   font-feature-settings: var(--font-features);
   letter-spacing: -0.004em;
@@ -36,6 +35,6 @@ body {
 }
 
 ::selection {
-  @apply bg-accent;
-  @apply text-neutral-1;
+  background: var(--color-accent);
+  color: var(--color-neutral-1);
 }

@@ -1,15 +1,15 @@
+@import "utilities";
+
 .button {
-  @apply px-2;
-  @apply py-1;
-  @apply bg-neutral-6;
-  @apply text-neutral-1;
-  @apply font-medium;
-  @apply border;
-  @apply border-neutral-1;
-  @apply rounded-sm;
+  padding: spacing(1) spacing(2);
+  background: var(--color-neutral-6);
+  color: var(--color-neutral-1);
+  font-weight: 500;
+  border: 1px solid var(--color-neutral-1);
+  border-radius: 1px;
 
   &:hover {
-    @apply bg-neutral-1;
-    @apply text-neutral-6;
+    background: var(--color-neutral-1);
+    color: var(--color-neutral-6);
   }
 }
