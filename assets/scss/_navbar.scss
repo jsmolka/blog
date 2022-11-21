@@ -1,48 +1,40 @@
-@import "utils";
+@import "utilities";
 
-.header {
+.navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: spacing(8);
   width: 100%;
   max-width: $md;
   margin: 0 auto;
-  padding: size(5) size(4);
+  padding: spacing(5) spacing(4);
   color: var(--color-neutral-1);
 
-  @include tail {
-    margin-left: size(8);
+  &-menu {
+    display: flex;
+    gap: spacing(8);
   }
-}
 
-.header-menu {
-  display: flex;
-
-  @include tail {
-    margin-left: size(8);
-  }
-}
-
-.header-links {
-  display: flex;
-  font-weight: 500;
-
-  @include tail {
-    margin-left: size(8);
+  &-links {
+    display: flex;
+    gap: spacing(8);
+    font-weight: 500;
   }
 }
 
 .wordmark {
   display: flex;
   align-items: center;
+  gap: spacing(1.5);
   font-weight: 800;
 
   &::after {
     content: '';
-    width: size(2.5);
-    height: size(4);
-    margin-left: size(1.5);
+    width: spacing(2.5);
+    height: spacing(4);
     background: var(--color-accent);
-    border-radius: $px;
+    border-radius: 1px;
 
     @keyframes pulsate {
       0%   { opacity: 0; }

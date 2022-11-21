@@ -1,15 +1,68 @@
-.font-feature-tnum {
-  font-feature-settings: var(--font-features), "tnum";
+@function spacing($value) {
+  @return #{(0.25 * $value)}rem;
 }
 
-.hyphens-auto {
-  hyphens: auto;
+@mixin tail {
+  & > :not([hidden]) ~ :not([hidden]) {
+    @content;
+  }
 }
 
-.hyphens-none {
-  hyphens: none;
+$sm: 40rem;
+$md: 45rem;
+$lg: 60rem;
+$xl: 80rem;
+
+@mixin screen-sm {
+  @media (min-width: $sm) {
+    @content;
+  }
 }
 
-.touch-action-none {
-  touch-action: none;
+@mixin screen-md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin text-sm {
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+}
+
+@mixin text-lg {
+	font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-xl {
+	font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-2xl {
+	font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@mixin text-3xl {
+	font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@mixin text-4xl {
+	font-size: 2.25rem;
+  line-height: 2.5rem;
 }

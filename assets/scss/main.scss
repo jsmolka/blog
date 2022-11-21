@@ -3,7 +3,7 @@
 
 @import "base";
 @import "button";
-@import "header";
+@import "navbar";
 @import "prism";
 @import "prose";
 @import "scroll";
@@ -12,4 +12,4 @@
 
 @tailwind utilities;
 
-@import "utilities";
+@import "utilities_old";

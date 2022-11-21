@@ -1,5 +1,4 @@
 const path = require('path');
-const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   theme: {
@@ -39,13 +38,6 @@ module.exports = {
     path.join(__dirname, '../../assets/**/*.js'),
     path.join(__dirname, '../../content/**/*.{html,md,js}'),
     path.join(__dirname, '../../layouts/**/*.html'),
-  ],
-  plugins: [
-    plugin(function({ addVariant }) {
-      for (const theme of ['system', 'dark', 'light']) {
-        addVariant(`theme-${theme}`, `html[theme="${theme}"] &`)
-      }
-    }),
   ],
   experimental: {
     optimizeUniversalDefaults: true,

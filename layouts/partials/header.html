@@ -1,8 +1,8 @@
-<header class="header">
+<header class="navbar">
   <a href="/" class="wordmark">{{ $.Site.Title }}</a>
-  <div class="header-menu">
+  <div class="navbar-menu">
     <nav>
-      <ul class="header-links">
+      <ul class="navbar-links">
         {{- range $.Site.Menus.header -}}
           <li>
             <a href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
