@@ -1,0 +1,12 @@
+@mixin tail {
+  & > :not([hidden]) ~ :not([hidden]) {
+    @content;
+  }
+}
+
+@function size($value) {
+  @return #{(0.25 * $value)}rem;
+}
+
+$px: 0.0625rem;
+$md: 45rem;

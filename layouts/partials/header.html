@@ -1,14 +1,15 @@
-<header class="flex justify-between items-center w-full max-w-screen-md mx-auto py-5 text-neutral-1">
-  {{/* Todo: put into same flex, align to start? */}}
-  <a href="/" class="flex items-center mx-4 space-x-1.5">
-    <div class="font-extrabold">{{ $.Site.Title }}</div>
-    <div class="cursor"></div>
-  </a>
-  <div class="flex flex-wrap items-center space-x-8 mx-4 font-medium">
-    {{/* Todo: use <nav> here */}}
-    {{- range $.Site.Menus.header -}}
-      <a href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
-    {{- end -}}
+<header class="header">
+  <a href="/" class="wordmark">{{ $.Site.Title }}</a>
+  <div class="header-menu">
+    <nav>
+      <ul class="header-links">
+        {{- range $.Site.Menus.header -}}
+          <li>
+            <a href="{{ .URL | safeURL }}">{{ .Name | safeHTML }}</a>
+          </li>
+        {{- end -}}
+      </ul>
+    </nav>
     <button v-cloak @click="store.theme = {system: 'dark', dark: 'light', light: 'system'}[store.theme]">
       <svg width="20" height="20" viewBox="0 1 24 24" stroke-width="2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
         <path v-show="store.theme === 'system'" fill="currentColor" d="M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20V4Z" />
