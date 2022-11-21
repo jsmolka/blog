@@ -8,6 +8,10 @@
   margin: 0 auto;
   padding: size(5) size(4);
   color: var(--color-neutral-1);
+
+  @include tail {
+    margin-left: size(8);
+  }
 }
 
 .header-menu {
