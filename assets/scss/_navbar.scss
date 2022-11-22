@@ -13,13 +13,51 @@
 
   &-menu {
     display: flex;
+    align-items: center;
     gap: spacing(8);
   }
 
   &-links {
-    display: flex;
-    gap: spacing(8);
-    font-weight: 500;
+    display: none;
+
+    @include screen-sm {
+      display: block;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: spacing(8);
+      font-weight: 500;
+    }
+  }
+}
+
+.mobile-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include screen-sm {
+    display: none;
+  }
+
+  nav {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background: var(--color-neutral-5);
+    z-index: 9999;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      display: block;
+      padding: spacing(2) spacing(3);
+    }
   }
 }
 

@@ -14,25 +14,25 @@ $lg: 60rem;
 $xl: 80rem;
 
 @mixin screen-sm {
-  @media (min-width: $sm) {
+  @media screen and (min-width: $sm) {
     @content;
   }
 }
 
 @mixin screen-md {
-  @media (min-width: $md) {
+  @media screen and (min-width: $md) {
     @content;
   }
 }
 
 @mixin screen-lg {
-  @media (min-width: $lg) {
+  @media screen and (min-width: $lg) {
     @content;
   }
 }
 
 @mixin screen-xl {
-  @media (min-width: $xl) {
+  @media screen and (min-width: $xl) {
     @content;
   }
 }
