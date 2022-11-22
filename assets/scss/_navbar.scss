@@ -19,45 +19,41 @@
 
   &-links {
     display: none;
+    align-items: center;
+    gap: spacing(8);
+    font-weight: 500;
 
     @include screen-sm {
-      display: block;
-    }
-
-    ul {
       display: flex;
-      align-items: center;
-      gap: spacing(8);
-      font-weight: 500;
     }
   }
 }
 
 .mobile-menu {
-  position: relative;
   display: flex;
-  align-items: center;
+  position: relative;
 
   @include screen-sm {
     display: none;
   }
 
-  nav {
+  &-window {
     position: absolute;
-    top: 2.5rem;
+    top: spacing(10);
     right: 0;
     background: var(--color-neutral-5);
     z-index: 9999;
+  }
 
-    ul {
-      display: flex;
-      flex-direction: column;
-    }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+  }
 
-    a {
-      display: block;
-      padding: spacing(2) spacing(3);
-    }
+  &-link {
+    display: flex;
+    padding: spacing(2) spacing(3);
   }
 }
 
