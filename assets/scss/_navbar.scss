@@ -11,6 +11,28 @@
   padding: spacing(5) spacing(4);
   color: var(--color-neutral-1);
 
+  &-brand {
+    display: flex;
+    align-items: center;
+    gap: spacing(1.5);
+    font-weight: 800;
+
+    &::after {
+      content: '';
+      width: spacing(2.5);
+      height: spacing(4);
+      background: var(--color-accent);
+      border-radius: 1px;
+      animation: pulsate 1s infinite;
+
+      @keyframes pulsate {
+        0%   { opacity: 0; }
+        50%  { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    }
+  }
+
   &-menu {
     display: flex;
     align-items: center;
@@ -19,64 +41,44 @@
 
   &-links {
     display: none;
-    align-items: center;
-    gap: spacing(8);
     font-weight: 500;
 
     @include screen-sm {
       display: flex;
     }
-  }
-}
 
-.mobile-menu {
-  display: flex;
-  position: relative;
-
-  @include screen-sm {
-    display: none;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: spacing(8);
+    }
   }
 
-  &-window {
+  &-mobile-menu {
+    display: flex;
+    position: relative;
+
+    @include screen-sm {
+      display: none;
+    }
+  }
+
+  &-mobile-links {
     position: absolute;
     top: spacing(10);
     right: 0;
     background: var(--color-neutral-5);
     z-index: 9999;
-  }
 
-  &-links {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-  }
+    ul {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
 
-  &-link {
-    display: flex;
-    padding: spacing(2) spacing(3);
-  }
-}
-
-.wordmark {
-  display: flex;
-  align-items: center;
-  gap: spacing(1.5);
-  font-weight: 800;
-
-  &::after {
-    content: '';
-    width: spacing(2.5);
-    height: spacing(4);
-    background: var(--color-accent);
-    border-radius: 1px;
-
-    @keyframes pulsate {
-      0%   { opacity: 0; }
-      50%  { opacity: 1; }
-      100% { opacity: 0; }
+      a {
+        display: flex;
+        padding: spacing(2) spacing(3);
+      }
     }
-
-    animation: pulsate 1s infinite;
   }
 }
-
