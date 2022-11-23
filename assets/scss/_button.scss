@@ -2,14 +2,14 @@
 
 .button {
   padding: spacing(1) spacing(2);
-  background: var(--color-neutral-6);
-  color: var(--color-neutral-1);
+  background: $neutral-6;
+  color: $neutral-1;
   font-weight: 500;
-  border: 1px solid var(--color-neutral-1);
+  border: 1px solid $neutral-1;
   border-radius: 1px;
 
   &:hover {
-    background: var(--color-neutral-1);
-    color: var(--color-neutral-6);
+    background: $neutral-1;
+    color: $neutral-6;
   }
 }

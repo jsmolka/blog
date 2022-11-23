@@ -9,7 +9,7 @@
   max-width: $md;
   margin: 0 auto;
   padding: spacing(5) spacing(4);
-  color: var(--color-neutral-1);
+  color: $neutral-1;
 
   &-brand {
     display: flex;
@@ -21,7 +21,7 @@
       content: '';
       width: spacing(2.5);
       height: spacing(4);
-      background: var(--color-accent);
+      background: $accent;
       border-radius: 1px;
       animation: pulsate 1s infinite;
 
@@ -67,7 +67,7 @@
     position: absolute;
     top: spacing(10);
     right: 0;
-    background: var(--color-neutral-5);
+    background: $neutral-5;
     z-index: 9999;
 
     ul {

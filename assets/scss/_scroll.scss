@@ -1,29 +1,28 @@
 @import "palette";
-@import "utilities";
 
 :root {
   $track: scale-color($color-neutral-6, $lightness: -5%);
   $thumb: scale-color($color-neutral-6, $lightness: -20%);
 
-  --scroll-track: #{$track};
-  --scroll-thumb: #{$thumb};
-  --scroll-thumb-hover: #{scale-color($thumb, $lightness: -10%)};
-  --scroll-thumb-active: #{scale-color($thumb, $lightness: -20%)};
+  --color-track: #{$track};
+  --color-thumb: #{$thumb};
+  --color-thumb-hover: #{scale-color($thumb, $lightness: -10%)};
+  --color-thumb-active: #{scale-color($thumb, $lightness: -20%)};
 }
 
 .dark {
   $track: scale-color($dark-color-neutral-6, $lightness: 5%);
   $thumb: scale-color($dark-color-neutral-6, $lightness: 20%);
 
-  --scroll-track: #{$track};
-  --scroll-thumb: #{$thumb};
-  --scroll-thumb-hover: #{scale-color($thumb, $lightness: 10%)};
-  --scroll-thumb-active: #{scale-color($thumb, $lightness: 20%)};
+  --color-track: #{$track};
+  --color-thumb: #{$thumb};
+  --color-thumb-hover: #{scale-color($thumb, $lightness: 10%)};
+  --color-thumb-active: #{scale-color($thumb, $lightness: 20%)};
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+  scrollbar-color: var(--color-thumb) var(--color-track);
 }
 
 ::-webkit-scrollbar {
@@ -32,17 +31,17 @@
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: var(--scroll-track);
+  background: var(--color-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb);
+  background: var(--color-thumb);
 
   &:hover {
-    background: var(--scroll-thumb-hover);
+    background: var(--color-thumb-hover);
   }
 
   &:active {
-    background: var(--scroll-thumb-active);
+    background: var(--color-thumb-active);
   }
 }

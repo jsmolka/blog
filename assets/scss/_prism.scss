@@ -3,7 +3,7 @@
 pre[class*="language-"],
 :not(pre) > code {
   @include text-sm;
-  background: var(--color-neutral-5);
+  background: $neutral-5;
   border-radius: 1px;
 }
 
@@ -36,37 +36,19 @@ pre[class*="language-"] {
   opacity: 0.75;
 }
 
-$prism-deleted: #bf616a;
-$prism-declaration: #88c0d0;
-$prism-keyword: #81a1c1;
-$prism-number: #b48ead;
-$prism-string: #a3be8c;
+@mixin token($color) {
+  color: $color;
 
-:root {
-  @function dark($color) {
-    @return scale-color($color, $lightness: -10%, $saturation: 20%);
+  .dark {
+    color: scale-color($color, $lightness: -10%, $saturation: 20%)
   }
-
-  --prism-deleted: #{dark($prism-deleted)};
-  --prism-declaration: #{dark($prism-declaration)};
-  --prism-keyword: #{dark($prism-keyword)};
-  --prism-number: #{dark($prism-number)};
-  --prism-string: #{dark($prism-string)};
-}
-
-.dark {
-  --prism-deleted: #{$prism-deleted};
-  --prism-declaration: #{$prism-declaration};
-  --prism-keyword: #{$prism-keyword};
-  --prism-number: #{$prism-number};
-  --prism-string: #{$prism-string};
 }
 
 .token.cdata,
 .token.comment,
 .token.doctype,
 .token.prolog {
-  color: var(--color-neutral-3);
+  color: $neutral-3;
 }
 
 .token.boolean,
@@ -81,15 +63,15 @@ $prism-string: #a3be8c;
 .token.tag,
 .token.url,
 .token.variable {
-  color: var(--prism-keyword);
+  @include token(#81a1c1);
 }
 
 .token.deleted {
-  color: var(--prism-deleted);
+  @include token(#bf616a);
 }
 
 .token.number {
-  color: var(--prism-number);
+  @include token(#b48ead);
 }
 
 .token.attr-name,
@@ -99,14 +81,14 @@ $prism-string: #a3be8c;
 .token.regex,
 .token.selector,
 .token.string {
-  color: var(--prism-string);
+  @include token(#a3be8c);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  color: var(--prism-declaration);
+  @include token(#88c0d0);
 }
 
 .token.bold,
@@ -131,10 +113,10 @@ code {
   }
 
   .token.deleted:not(.prefix) {
-    background-color: rgba(255, 0, 0, 0.1);
+    background: rgba(255, 0, 0, 0.1);
   }
 
   .token.inserted:not(.prefix) {
-    background-color: rgba(0, 255, 128, 0.1);
+    background: rgba(0, 255, 128, 0.1);
   }
 }

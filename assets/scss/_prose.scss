@@ -14,7 +14,7 @@
   }
 
   h1, h2, h3 {
-    color: var(--color-neutral-1);
+    color: $neutral-1;
     text-align: left;
     font-weight: 800;
     letter-spacing: -0.025em;
@@ -62,7 +62,7 @@
         left: spacing(-4);
         width: spacing(2);
         height: spacing(2);
-        background: var(--color-neutral-2);
+        background: $neutral-2;
       }
     }
   }
@@ -78,14 +78,14 @@
     font-feature-settings: var(--font-features), "tnum";
 
     th {
-      color: var(--color-neutral-1);
+      color: $neutral-1;
       font-weight: 700;
       hyphens: none;
     }
 
     th, td {
       padding: spacing(2) spacing(3);
-      border: 1px solid var(--color-neutral-4);
+      border: 1px solid $neutral-4;
     }
   }
 
@@ -95,7 +95,7 @@
     gap: spacing(2.5);
     padding: spacing(3) 0 spacing(3) spacing(5);
     font-style: italic;
-    border-left: 4px solid var(--color-neutral-2);
+    border-left: 4px solid $neutral-2;
   }
 
   audio {
@@ -132,7 +132,7 @@
 
     hr {
       margin: spacing(8) 0;
-      border-top: 2px dashed var(--color-neutral-4);
+      border-top: 2px dashed $neutral-4;
     }
 
     & > ol {
