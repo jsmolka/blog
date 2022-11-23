@@ -1,152 +1,154 @@
-.prose {
-  @apply space-y-5;
-  @apply text-left;
-  @apply leading-[1.65];
-  @apply hyphens-auto;
+@import "utilities";
 
-  @screen md {
-    @apply text-justify;
+.prose {
+  text-align: left;
+  line-height: 1.65;
+  hyphens: auto;
+
+  @include tail {
+    margin-top: spacing(5);
+  }
+
+  @include screen-md {
+    text-align: justify;
   }
 
   h1, h2, h3 {
-    @apply text-neutral-1;
-    @apply text-left;
-    @apply font-extrabold;
-    @apply tracking-tight;
+    color: var(--color-neutral-1);
+    text-align: left;
+    font-weight: 800;
+    letter-spacing: -0.025em;
 
     &:not(:first-child) {
-      margin-top: theme('spacing.8') !important;
+      margin-top: spacing(8) !important;
     }
   }
 
-  h1 { @apply text-3xl; }
-  h2 { @apply text-xl;  }
-  h3 { @apply text-lg;  }
+  h1 { @include text-3xl; }
+  h2 { @include text-xl;  }
+  h3 { @include text-lg;  }
 
   :not(h1, h2, h3) > a {
-    @apply underline;
+    text-decoration: underline;
   }
 
   ul, ol {
-    @apply ml-5;
-    @apply space-y-1;
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1);
+    margin-left: spacing(5);
 
     li {
-      @apply pl-1;
+      padding-left: spacing(1);
     }
   }
 
-  @screen sm {
+  @include screen-sm {
     ul, ol {
-      @apply ml-10;
+      margin-left: spacing(10);
     }
   }
 
   ul {
-    @apply list-none;
+    list-style: none;
 
     li {
-      @apply relative;
+      position: relative;
 
-      &:before {
-        @apply absolute;
-        @apply top-2;
-        @apply -left-4;
-        @apply w-2;
-        @apply h-2;
-        @apply bg-neutral-2;
-
+      &::before {
         content: '';
+        position: absolute;
+        top: spacing(2);
+        left: spacing(-4);
+        width: spacing(2);
+        height: spacing(2);
+        background: var(--color-neutral-2);
       }
     }
   }
 
   ol {
-    @apply list-decimal;
+    list-style: decimal;
   }
 
   table {
-    @apply w-full;
-    @apply text-left;
-    @apply border-collapse;
-    @apply font-feature-tnum;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    font-feature-settings: var(--font-features), "tnum";
 
     th {
-      @apply text-neutral-1;
-      @apply font-bold;
-      @apply hyphens-none;
+      color: var(--color-neutral-1);
+      font-weight: 700;
+      hyphens: none;
     }
 
     th, td {
-      @apply px-3;
-      @apply py-2;
-      @apply border;
-      @apply border-neutral-4;
+      padding: spacing(2) spacing(3);
+      border: 1px solid var(--color-neutral-4);
     }
   }
 
   blockquote {
-    @apply space-y-2.5;
-    @apply pl-5;
-    @apply py-3;
-    @apply italic;
-    @apply border-l-4;
-    @apply border-neutral-2;
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2.5);
+    padding: spacing(3) 0 spacing(3) spacing(5);
+    font-style: italic;
+    border-left: 4px solid var(--color-neutral-2);
   }
 
   audio {
-    @apply w-full;
+    width: 100%;
   }
 
   a[href^="#fn:"] {
-    @apply no-underline;
-    @apply font-feature-tnum;
+    text-decoration: none;
+    font-feature-settings: var(--font-features), "tnum";
 
-    &:before { content: '['; }
-    &:after  { content: ']'; }
+    &::before { content: '['; }
+    &::after  { content: ']'; }
   }
 
   sup {
-    @apply relative;
-    @apply top-0;
-
+    position: relative;
+    top: 0;
     font-size: inherit;
     line-height: inherit;
   }
 
   pre[class*="language-"] {
-    @apply -mx-4;
+    margin: 0 spacing(-4);
 
     @screen md {
-      @apply mx-0;
+      margin: 0;
     }
   }
 
   .footnotes {
     a[href^="#fnref:"] {
-      @apply no-underline;
+      text-decoration: none;
     }
 
     hr {
-      @apply my-8;
-      @apply border-t-2;
-      @apply border-dashed;
-      @apply border-neutral-4;
+      margin: spacing(8) 0;
+      border-top: 2px dashed var(--color-neutral-4);
     }
 
     & > ol {
-      @apply ml-5;
+      margin-left: spacing(5);
 
       & > li {
-        @apply space-y-5;
-        @apply pl-5;
-
+        padding-left: spacing(5);
         counter-increment: footnote-count;
 
-        &::marker {
-          @apply font-feature-tnum;
+        @include tail {
+          margin-top: spacing(5);
+        }
 
+        &::marker {
           content: '[' counter(footnote-count) ']';
+          font-feature-settings: var(--font-features), "tnum";
         }
       }
     }

@@ -1,24 +1,26 @@
+@import "utilities";
+
 pre[class*="language-"],
 :not(pre) > code {
-  @apply bg-neutral-5;
-  @apply text-sm;
-  @apply rounded-sm;
+  @include text-sm;
+  background: var(--color-neutral-5);
+  border-radius: 1px;
 }
 
 pre[class*="language-"] {
-  @apply py-3;
-  @apply overflow-x-auto;
+  padding: spacing(3) 0;
+  overflow: auto;
 
   code {
-    @apply px-4;
-    @apply leading-[1.65];
-    @apply whitespace-pre;
-    @apply hyphens-none;
+    padding: 0 spacing(4);
+    line-height: 1.65;
+    white-space: pre;
+    hyphens: none;
 
     // Workaround for background culling
     // https://stackoverflow.com/a/8513330
-    @apply min-w-full;
-    @apply float-left;
+    min-width: 100%;
+    float: left;
 
     .table {
       display: inline !important;
@@ -27,12 +29,11 @@ pre[class*="language-"] {
 }
 
 :not(pre) > code {
-  @apply px-1.5;
-  @apply py-0.5;
+  padding: spacing(0.5) spacing(1.5);
 }
 
 [class*="language-"] .namespace {
-  @apply opacity-75;
+  opacity: 0.75;
 }
 
 $prism-deleted: #bf616a;
@@ -65,7 +66,7 @@ $prism-string: #a3be8c;
 .token.comment,
 .token.doctype,
 .token.prolog {
-  @apply text-neutral-3;
+  color: var(--color-neutral-3);
 }
 
 .token.boolean,
@@ -110,22 +111,22 @@ $prism-string: #a3be8c;
 
 .token.bold,
 .token.important {
-  @apply font-bold;
+  font-weight: 700;
 }
 
 code {
   .token.deleted:not(.prefix),
   .token.inserted:not(.prefix) {
-    @apply block;
-    @apply -mx-4;
-    @apply text-inherit;
+    display: block;
+    margin: 0 spacing(-4);
+    color: inherit;
 
     & > *:first-child {
-      @apply ml-4;
+      margin-left: spacing(4);
     }
 
     & > *:last-child {
-      @apply mr-4;
+      margin-right: spacing(4);
     }
   }
 
