@@ -1,0 +1,29 @@
+@import "utilities";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: spacing(16);
+
+  .items {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: spacing(5);
+      padding: spacing(8) 0;
+      border-bottom: 2px dashed $neutral-4;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      h2 {
+        margin-bottom: spacing(-1.5);
+      }
+    }
+  }
+}

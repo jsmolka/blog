@@ -1,6 +1,6 @@
 {{ with .Paginator }}
   {{ if or .HasPrev .HasNext }}
-    <div class="flex space-x-4">
+    <div class="pagination">
       {{ if .HasPrev }}
         <a class="button" href="{{ .Prev.URL }}">← Go forward in time</a>
       {{ end }}
