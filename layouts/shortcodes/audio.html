@@ -1,11 +1,11 @@
-{{ $cap := .Get "caption" }}
+{{ $caption := .Get "caption" }}
 {{ $src := add "/audio/" (.Get "src") | safeURL }}
-<figure class="w-full">
+<figure>
   <div v-scope="Audio('{{ $src }}')" @vue:mounted="mounted($el)"></div>
   <noscript>
     <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>
-  {{ with $cap }}
-    <figcaption class="mt-2 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
+  {{ with $caption }}
+    <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>

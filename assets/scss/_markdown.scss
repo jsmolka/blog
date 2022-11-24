@@ -79,6 +79,17 @@
     }
   }
 
+  figure {
+    width: 100%;
+    overflow-x: auto;
+
+    figcaption {
+      @include text-sm;
+      margin-top: spacing(2);
+      text-align: center;
+    }
+  }
+
   blockquote {
     display: flex;
     flex-direction: column;

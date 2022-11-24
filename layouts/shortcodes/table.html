@@ -1,7 +1,7 @@
-{{ $cap := .Get "caption" }}
-<figure class="w-full overflow-x-auto">
+{{ $caption := .Get "caption" }}
+<figure>
   {{ .Inner | $.Page.RenderString }}
-  {{ with $cap }}
-    <figcaption class="mt-2 text-sm text-center">{{- . | $.Page.RenderString -}}</figcaption>
+  {{ with $caption }}
+    <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>
