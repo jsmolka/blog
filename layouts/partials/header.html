@@ -1,7 +1,7 @@
-<header class="navbar">
-  <a href="/" class="navbar-brand">{{ $.Site.Title }}</a>
-  <div class="navbar-menu">
-    <nav class="navbar-links">
+<header class="header">
+  <a href="/" class="wordmark">{{ $.Site.Title }}</a>
+  <div class="menu">
+    <nav class="links">
       <ul>
         {{- range $.Site.Menus.header -}}
           <li>
@@ -18,13 +18,13 @@
         <circle class="if-theme-light" stroke="currentColor" fill="none" cx="12" cy="12" r="4" />
       </svg>
     </button>
-    <div class="navbar-mobile-menu">
+    <div class="mobile-menu">
       <button @click.stop="store.menu = !store.menu">
         <svg width="24" height="24" viewBox="0 1 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </button>
-      <nav v-cloak v-show="store.menu" class="navbar-mobile-links">
+      <nav v-cloak v-show="store.menu" class="mobile-links">
         <ul>
           {{ range $.Site.Menus.header }}
             <li>

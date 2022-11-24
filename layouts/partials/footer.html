@@ -1,7 +1,9 @@
-<footer class="mx-auto py-5 text-sm">
-  <nav class="space-x-6">
-    {{- range $.Site.Menus.footer -}}
-      <a href="{{ .URL | safeURL }}">{{- .Name | safeHTML -}}</a>
-    {{- end -}}
+<footer class="footer">
+  <nav>
+    <ul>
+      {{- range $.Site.Menus.footer -}}
+        <a href="{{ .URL | safeURL }}">{{- .Name | safeHTML -}}</a>
+      {{- end -}}
+    </ul>
   </nav>
 </footer>

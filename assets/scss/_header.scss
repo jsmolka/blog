@@ -1,6 +1,6 @@
 @import "utilities";
 
-.navbar {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,7 +11,7 @@
   padding: spacing(5) spacing(4);
   color: $neutral-1;
 
-  &-brand {
+  .wordmark {
     display: flex;
     align-items: center;
     gap: spacing(1.5);
@@ -33,13 +33,13 @@
     }
   }
 
-  &-menu {
+  .menu {
     display: flex;
     align-items: center;
     gap: spacing(8);
   }
 
-  &-links {
+  .links {
     display: none;
     font-weight: 500;
 
@@ -54,7 +54,7 @@
     }
   }
 
-  &-mobile-menu {
+  .mobile-menu {
     display: flex;
     position: relative;
 
@@ -63,7 +63,7 @@
     }
   }
 
-  &-mobile-links {
+  .mobile-links {
     position: absolute;
     top: spacing(10);
     right: 0;
