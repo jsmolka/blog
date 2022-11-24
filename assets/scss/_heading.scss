@@ -1,43 +1,22 @@
 @import "utilities";
 
-.heading {
-  display: flex;
-  gap: 0.33em;
+h1, h2, h3 {
   color: $neutral-1;
   text-align: left;
   font-weight: 800;
   letter-spacing: -0.025em;
+}
 
-  &-hash-1 {
+h1 { @include text-3xl; }
+h2 { @include text-xl;  }
+h3 { @include text-lg;  }
+
+@each $level in 1, 2, 3 {
+  .hash-#{$level} {
     &::before {
-      content: '#';
+      content: repeat('#', $level);
+      margin-right: 0.33em;
       color: $accent;
     }
   }
-
-  &-hash-2 {
-    &::before {
-      content: '##';
-      color: $accent;
-    }
-  }
-
-  &-hash-3 {
-    &::before {
-      content: '###';
-      color: $accent;
-    }
-  }
-}
-
-h1.heading {
-  @include text-3xl;
-}
-
-h2.heading {
-  @include text-xl;
-}
-
-h3.heading {
-  @include text-lg;
 }

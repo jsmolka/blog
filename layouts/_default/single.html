@@ -5,7 +5,7 @@
     {{ if or $showMeta $showTitle }}
       <div class="space-y-4">
         {{ if $showTitle }}
-          <h1 class="heading heading-hash-1">{{- .Title | safeHTML -}}</h1>
+          <h1 class="hash-1">{{- .Title | safeHTML -}}</h1>
         {{ end }}
         {{ if $showMeta }}
           {{ partial "meta" . }}

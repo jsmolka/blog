@@ -2,6 +2,14 @@
   @return #{(0.25 * $value)}rem;
 }
 
+@function repeat($item, $count) {
+  $string: "";
+  @for $i from 1 through $count {
+      $string: $string + $item;
+  }
+  @return "#{$string}";
+}
+
 @mixin tail {
   & > :not([hidden]) ~ :not([hidden]) {
     @content;
