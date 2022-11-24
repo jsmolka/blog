@@ -1,0 +1,43 @@
+@import "utilities";
+
+.heading {
+  display: flex;
+  gap: 0.33em;
+  color: $neutral-1;
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+
+  &-hash-1 {
+    &::before {
+      content: '#';
+      color: $accent;
+    }
+  }
+
+  &-hash-2 {
+    &::before {
+      content: '##';
+      color: $accent;
+    }
+  }
+
+  &-hash-3 {
+    &::before {
+      content: '###';
+      color: $accent;
+    }
+  }
+}
+
+h1.heading {
+  @include text-3xl;
+}
+
+h2.heading {
+  @include text-xl;
+}
+
+h3.heading {
+  @include text-lg;
+}

@@ -5,11 +5,7 @@
     {{ if or $showMeta $showTitle }}
       <div class="space-y-4">
         {{ if $showTitle }}
-          <div class="prose">
-            <h1 class="space-x-[0.33em]">
-              <span class="text-accent">#</span><span>{{- .Title | safeHTML -}}</span>
-            </h1>
-          </div>
+          <h1 class="heading heading-hash-1">{{- .Title | safeHTML -}}</h1>
         {{ end }}
         {{ if $showMeta }}
           {{ partial "meta" . }}

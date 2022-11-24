@@ -14,19 +14,10 @@
   }
 
   h1, h2, h3 {
-    color: $neutral-1;
-    text-align: left;
-    font-weight: 800;
-    letter-spacing: -0.025em;
-
     &:not(:first-child) {
       margin-top: spacing(8) !important;
     }
   }
-
-  h1 { @include text-3xl; }
-  h2 { @include text-xl;  }
-  h3 { @include text-lg;  }
 
   :not(h1, h2, h3) > a {
     text-decoration: underline;

@@ -1,5 +1,3 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL }}">
-  <a class="space-x-[0.33em]" href="#{{ .Anchor | safeURL }}">
-    <span class="text-accent">{{ strings.Repeat .Level "#" }}</span><span>{{- .Text | safeHTML -}}</span>
-  </a>
+<h{{ .Level }} id="{{ .Anchor | safeURL }}" class="heading heading-hash-{{ .Level }}">
+  <a href="#{{ .Anchor | safeURL }}">{{- .Text | safeHTML -}}</a>
 </h{{ .Level }}>
