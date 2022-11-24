@@ -1,0 +1,14 @@
+@import "utilities";
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(5);
+  width: 100%;
+
+  .prelude {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(4);
+  }
+}

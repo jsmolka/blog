@@ -1,9 +1,9 @@
 {{ define "main" }}
-  <main class="flex flex-col w-full max-w-screen-md m-auto space-y-5 px-4 py-16">
+  <main class="container post">
     {{ $showMeta := .Params.ShowMeta | default true }}
     {{ $showTitle := .Params.ShowTitle | default true }}
     {{ if or $showMeta $showTitle }}
-      <div class="space-y-4">
+      <div class="prelude">
         {{ if $showTitle }}
           <h1 class="hash-1">{{- .Title | safeHTML -}}</h1>
         {{ end }}
@@ -12,7 +12,7 @@
         {{ end }}
       </div>
     {{ end }}
-    <div class="prose">
+    <div class="markdown">
       {{ .Content }}
     </div>
   </main>

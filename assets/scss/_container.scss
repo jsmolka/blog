@@ -1,0 +1,7 @@
+@import "utilities";
+
+.container {
+  max-width: $md;
+  margin: auto;
+  padding: spacing(16) spacing(4);
+}

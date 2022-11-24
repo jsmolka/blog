@@ -16,7 +16,7 @@ type: blank
     <button class="button" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
   </div>
   <div v-cloak v-show="controls" class="w-full max-w-screen-md">
-  {{<prose>}}
+  {{<markdown>}}
   | Emulator            | Keyboard | Controller |
   |:--------------------|:---------|:-----------|
   | Up                  | W        | Up         |
@@ -31,7 +31,7 @@ type: blank
   | R                   | I        | R          |
   | Reset               | R        | -          |
   | Change refresh rate | 1 to 6   | -          |
-  {{</prose>}}
+  {{</markdown>}}
   </div>
 </div>
 {{<esbuild-defer src="eggvance/wasm.js">}}

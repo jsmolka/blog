@@ -1,6 +1,6 @@
 @import "utilities";
 
-.prose {
+.markdown {
   text-align: left;
   line-height: 1.65;
   hyphens: auto;
@@ -63,7 +63,6 @@
   }
 
   table {
-    width: 100%;
     text-align: left;
     border-collapse: collapse;
     font-feature-settings: var(--font-features), "tnum";
@@ -87,10 +86,6 @@
     padding: spacing(3) 0 spacing(3) spacing(5);
     font-style: italic;
     border-left: 4px solid $neutral-2;
-  }
-
-  audio {
-    width: 100%;
   }
 
   a[href^="#fn:"] {
