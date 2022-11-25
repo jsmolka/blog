@@ -1,10 +1,9 @@
 <div class="meta">
-  <div class="details">
+  <div>
     <time datetime="{{ .Date.Format "2006-01-02" }}">
       {{- .Date.Format "2006/01/02" -}}
     </time>
-    <span>&mdash;</span>
-    <span>{{ .ReadingTime }} minute read</span>
+    &mdash; {{ .ReadingTime }} minute read
   </div>
   {{ if .Params.Tags }}
     <nav class="tags">

@@ -17,12 +17,13 @@
       padding: spacing(8) 0;
       border-bottom: 2px dashed $neutral-4;
 
-      &:first-child {
-        padding-top: 0;
+      h1 {
+        @include text-xl;
+        margin-bottom: spacing(-1.5);
       }
 
-      h2 {
-        margin-bottom: spacing(-1.5);
+      &:first-child {
+        padding-top: 0;
       }
     }
   }

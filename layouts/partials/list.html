@@ -2,9 +2,9 @@
   <div class="items">
     {{ range .Paginator.Pages }}
       <div class="item">
-        <h2 class="hash-1"><a
+        <h1><a
           href="{{ .RelPermalink }}">{{- .Title | safeHTML -}}</a
-        ></h2>
+        ></h1>
         {{ partial "meta" . }}
         {{ with .Description }}
           <div>{{ . }}</div>
