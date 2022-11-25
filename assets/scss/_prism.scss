@@ -1,5 +1,9 @@
 @import "utilities";
 
+pre, code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
 pre[class*="language-"],
 :not(pre) > code {
   @include text-sm;
