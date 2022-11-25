@@ -107,17 +107,16 @@
     &::after  { content: ']'; }
   }
 
-  sup {
+  sub, sup {
     position: relative;
     top: 0;
-    font-size: inherit;
-    line-height: inherit;
+    font: inherit;
   }
 
   pre[class*="language-"] {
     margin: 0 spacing(-4);
 
-    @screen md {
+    @include screen-md {
       margin: 0;
     }
   }
