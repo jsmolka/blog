@@ -1,5 +1,4 @@
-@tailwind base;
-@tailwind components;
+@import "normalize";
 
 @import "base";
 @import "button";
@@ -17,7 +16,3 @@
 @import "theme";
 @import "typography";
 @import "vue";
-
-@tailwind utilities;
-
-@import "utilities_old";
