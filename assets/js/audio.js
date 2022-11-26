@@ -37,30 +37,30 @@ const instances = [];
 export default function Audio(src) {
   return {
     $template: /* html */ `
-      <div class="flex items-center bg-neutral-5 text-neutral-3 text-sm rounded-sm touch-action-none">
-        <audio ref="audio" class="hidden" type="audio/mp3" preload="metadata"></audio>
-        <button ref="stateButton" class="p-2">
+      <div class="audio">
+        <audio ref="audio" type="audio/mp3" preload="metadata"></audio>
+        <button ref="stateButton">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path :d="paused ? icons.play : icons.pause"></path>
+            <path :d="paused ? icons.play : icons.pause" />
           </svg>
         </button>
-        <div class="font-medium font-feature-tnum">{{ format(time) }} / {{ format(duration) }}</div>
-        <div ref="progressBar" class="flex flex-1 ml-3 py-2 cursor-pointer">
-          <div class="flex flex-1 h-1 bg-neutral-4">
-            <div class="bg-neutral-3" :style="{ width: 100 * (time / duration) + '%' }"></div>
+        <div>{{ format(time) }} / {{ format(duration) }}</div>
+        <div ref="progressBar" class="bar progress-bar">
+          <div class="inner">
+            <div class="progress" :style="{ width: 100 * (time / duration) + '%' }"></div>
           </div>
         </div>
-        <div ref="volume" class="flex items-center space-x-1">
-          <div :class="volumeHover || volumeActive ? 'w-20' : 'w-0'" class="flex transition-width duration-500 ease-in-out">
-            <div ref="volumeBar" class="flex flex-1 ml-4 py-2 cursor-pointer">
-              <div class="flex flex-1 h-1 bg-neutral-4">
-                <div class="bg-neutral-3" :style="{ width: 100 * (muted ? 0 : volume) + '%' }"></div>
+        <div ref="volume" class="volume-menu">
+          <div :class="{ active: volumeHover || volumeActive }" class="volume-menu-inner">
+            <div ref="volumeBar" class="bar volume-bar">
+              <div class="inner">
+                <div class="progress" :style="{ width: 100 * (muted ? 0 : volume) + '%' }"></div>
               </div>
             </div>
           </div>
-          <button ref="volumeButton" class="p-2">
+          <button ref="volumeButton">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker"></path>
+              <path :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker" />
             </svg>
           </button>
         </div>
