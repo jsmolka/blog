@@ -5,21 +5,22 @@ tags: ["eggvance", "emulation", "programming"]
 date: 2020-04-12
 type: blank
 js: ["page/eggvance/wasm.js"]
+scss: ["page/eggvance/wasm.scss"]
 ---
-<div v-scope="{ controls: false }" class="flex flex-col items-center justify-center w-full max-w-screen-xl m-auto space-y-6 px-4 py-16">
-  <canvas id="canvas" class="w-full aspect-[3/2] bg-neutral-6 pointer-events-none select-none"></canvas>
+<div v-scope="{ controls: false }" class="page">
+  <canvas id="canvas"></canvas>
   <input hidden ref="gba" type="file" accept=".gba" @change="Module.loadGba($el)">
   <input hidden ref="sav" type="file" accept=".sav" @change="Module.loadSav($el)">
-  <div class="flex space-x-4">
-    <button class="button" @click="$refs.gba.click()">Load rom</button>
-    <button class="button" @click="$refs.sav.click()">Load save</button>
+  <div class="buttons">
+    <button class="button" @click="$refs.gba.click">Load rom</button>
+    <button class="button" @click="$refs.sav.click">Load save</button>
     <button class="button" @click="Module.loadDemo($el)">Load demo</button>
     <button class="button" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
   </div>
-  <div v-cloak v-show="controls" class="w-full max-w-screen-md">
+  <div v-cloak v-show="controls" class="controls">
   {{<markdown>}}
   | Emulator            | Keyboard | Controller |
-  |:--------------------|:---------|:-----------|
+  |---------------------|----------|------------|
   | Up                  | W        | Up         |
   | Down                | S        | Down       |
   | Left                | A        | Left       |
