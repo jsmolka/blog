@@ -45,17 +45,15 @@ export default function Audio(src) {
           </svg>
         </button>
         <div>{{ format(time) }} / {{ format(duration) }}</div>
-        <div ref="progressBar" class="bar progress-bar">
-          <div class="inner">
-            <div class="progress" :style="{ width: 100 * (time / duration) + '%' }"></div>
+        <div class="progress">
+          <div ref="progressBar" class="bar">
+            <div class="scrubber" :style="{'--value': duration === 0 ? 0 : time / duration}"></div>
           </div>
         </div>
         <div ref="volume" class="volume-menu">
-          <div :class="{ active: volumeHover || volumeActive }" class="volume-menu-inner">
-            <div ref="volumeBar" class="bar volume-bar">
-              <div class="inner">
-                <div class="progress" :style="{ width: 100 * (muted ? 0 : volume) + '%' }"></div>
-              </div>
+          <div class="volume" :style="{ width: volumeHover || volumeActive ? '5rem' : 0}">
+            <div ref="volumeBar" class="bar">
+              <div class="scrubber" :style="{'--value': muted ? 0 : volume}"></div>
             </div>
           </div>
           <button ref="volumeButton">
