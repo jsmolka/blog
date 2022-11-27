@@ -12,17 +12,20 @@
   {{- end -}}
 </title>
 
-{{ partial "scss" "main.scss" }}
-{{ range .Params.scss }}
+{{ $styles := slice "main.scss" }}
+{{ $styles = $styles | append (.Params.scss | default slice) }}
+{{ range $styles | uniq }}
   {{ partial "scss" . }}
 {{ end }}
 
 {{ partial "js-inline" "theme.js" }}
-{{ partial "js" "main.js" }}
+
+{{ $scripts := slice "main.js" }}
+{{ $scripts = $scripts | append (.Params.js | default slice) }}
 {{ if not hugo.IsProduction }}
-  {{ partial "js" "prism.js" }}
+  {{ $scripts = $scripts | append "prism.js" }}
 {{ end }}
-{{ range .Params.js }}
+{{ range $scripts | uniq }}
   {{ partial "js" . }}
 {{ end }}
 
