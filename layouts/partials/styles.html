@@ -1,7 +1,1 @@
-{{ $style := resources.Get "scss/main.scss" }}
-{{ $style = $style | resources.ToCSS "css/main.css" }}
-{{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
-{{ if hugo.IsProduction }}
-  {{ $style = $style | minify | fingerprint }}
-{{ end }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ partial "style" "main.scss" }}
