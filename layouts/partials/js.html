@@ -1,0 +1,5 @@
+{{ $script := resources.Get (printf "js/%s" .) | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+{{ if hugo.IsProduction }}
+  {{ $script = $script | fingerprint }}
+{{ end }}
+<script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>

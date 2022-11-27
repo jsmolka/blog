@@ -1,5 +1,0 @@
-{{ partial "esbuild" (dict "src" "js/theme.js" "inline" true) }}
-{{ partial "esbuild-defer" (dict "src" "js/main.js") }}
-{{ if not hugo.IsProduction }}
-  {{ partial "esbuild-defer" (dict "src" "js/prism.js") }}
-{{ end }}
