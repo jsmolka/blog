@@ -1,5 +1,5 @@
 import { createApp, reactive } from 'petite-vue';
-import Audio from './audio';
+import Audio from './components/audio';
 
 const store = reactive({
   menu: false,
