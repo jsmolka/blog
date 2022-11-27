@@ -75,6 +75,11 @@ $xl: 80rem;
   line-height: 2.5rem;
 }
 
+@mixin text-8xl {
+	font-size: 6rem;
+  line-height: 1;
+}
+
 $neutral-1: var(--color-neutral-1);
 $neutral-2: var(--color-neutral-2);
 $neutral-3: var(--color-neutral-3);
