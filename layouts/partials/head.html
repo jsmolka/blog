@@ -12,8 +12,20 @@
   {{- end -}}
 </title>
 
-{{ partialCached "styles" . }}
-{{ partialCached "scripts" . }}
+{{ partial "scss" "main.scss" }}
+{{ range .Params.scss }}
+  {{ partial "scss" . }}
+{{ end }}
+
+{{ partial "js-inline" "theme.js" }}
+{{ partial "js" "main.js" }}
+{{ if not hugo.IsProduction }}
+  {{ partial "js" "prism.js" }}
+{{ end }}
+{{ range .Params.js }}
+  {{ partial "js" . }}
+{{ end }}
+
 {{ partial "preload" . }}
 
 {{ template "_internal/opengraph.html" . }}
