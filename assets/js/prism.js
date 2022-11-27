@@ -1,11 +1,9 @@
 const Prism = require('prismjs');
-require('prismjs/components/prism-batch');
 require('prismjs/components/prism-clike');
 require('prismjs/components/prism-c');
 require('prismjs/components/prism-cpp');
 require('prismjs/components/prism-diff');
 require('prismjs/components/prism-javascript');
-require('prismjs/components/prism-python');
 require('prismjs/components/prism-toml');
 require('prismjs/plugins/diff-highlight/prism-diff-highlight');
 
