@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "dev": "hugo server -D --poll 100ms",
     "postprocess": "node scripts/postprocess.js"
   },
   "dependencies": {
