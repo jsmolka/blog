@@ -75,25 +75,25 @@ export default function Audio(src) {
       <div class="audio">
         <audio ref="audio" type="audio/mp3" preload="metadata"></audio>
         <button ref="stateButton">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path :d="paused ? icons.play : icons.pause" />
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="currentColor" :d="paused ? icons.play : icons.pause" />
           </svg>
         </button>
         <div>{{ format(time) }} / {{ format(duration) }}</div>
         <div class="progress">
-          <div ref="progressBar" class="bar">
-            <div class="scrubber" :style="{'--value': duration === 0 ? 0 : time / duration}"></div>
+          <div class="bar" ref="progressBar">
+            <div class="scrubber" :style="{ '--value': duration === 0 ? 0 : time / duration }"></div>
           </div>
         </div>
-        <div ref="volume" class="volume-menu">
-          <div class="volume" :style="{ width: volumeHover || volumeActive ? '5rem' : 0}">
-            <div ref="volumeBar" class="bar">
-              <div class="scrubber" :style="{'--value': muted ? 0 : volume}"></div>
+        <div class="volume-menu" ref="volume">
+          <div class="volume" :style="{ width: volumeHover || volumeActive ? '5rem' : 0 }">
+            <div class="bar" ref="volumeBar">
+              <div class="scrubber" :style="{ '--value': muted ? 0 : volume }"></div>
             </div>
           </div>
           <button ref="volumeButton">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker" />
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="currentColor" :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker" />
             </svg>
           </button>
         </div>
