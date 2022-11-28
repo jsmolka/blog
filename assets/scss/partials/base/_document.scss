@@ -11,7 +11,7 @@ body {
   color: $neutral-2;
   font-size: 15px;
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
-  font-feature-settings: var(--font-features);
+  font-feature-settings: "calt", "ccmp", "cv07", "kern";
   line-height: 1.65;
   letter-spacing: -0.004em;
 }

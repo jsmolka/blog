@@ -68,7 +68,7 @@
 
   table {
     text-align: left;
-    font-feature-settings: var(--font-features), "tnum";
+    font-feature-settings: "tnum";
 
     th {
       color: $neutral-1;
@@ -104,7 +104,7 @@
 
   a[href^="#fn:"] {
     text-decoration: none;
-    font-feature-settings: var(--font-features), "tnum";
+    font-feature-settings: "tnum";
 
     &::before { content: '['; }
     &::after  { content: ']'; }
@@ -170,7 +170,7 @@
 
         &::marker {
           content: '[' counter(footnote-count) ']';
-          font-feature-settings: var(--font-features), "tnum";
+          font-feature-settings: "tnum";
         }
       }
     }
