@@ -1,0 +1,42 @@
+@import "../palette";
+
+@mixin colors($background, $direction) {
+  --color-track: #{scale-color($background, $lightness: $direction * 5%)};
+  --color-thumb: #{scale-color($background, $lightness: $direction * 20%)};
+  --color-thumb-hover: #{scale-color($background, $lightness: $direction * 30%)};
+  --color-thumb-active: #{scale-color($background, $lightness: $direction * 40%)};
+}
+
+:root {
+  @include colors($color-neutral-6, -1);
+}
+
+.dark {
+  @include colors($dark-color-neutral-6, 1);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-thumb) var(--color-track);
+}
+
+::-webkit-scrollbar {
+  width: spacing(2);
+  height: spacing(2);
+}
+
+::-webkit-scrollbar-track-piece {
+  background: var(--color-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-thumb);
+
+  &:hover {
+    background: var(--color-thumb-hover);
+  }
+
+  &:active {
+    background: var(--color-thumb-active);
+  }
+}
