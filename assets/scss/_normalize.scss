@@ -1,20 +1,11 @@
-// Based on https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css
-
-*,
-::before,
-::after {
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  border-width: 0;
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  tab-size: 4;
-}
-
-body {
-  margin: 0;
 }
 
 a {
@@ -22,32 +13,37 @@ a {
   text-decoration: inherit;
 }
 
-b,
-strong {
+b, strong {
   font-weight: bolder;
+}
+
+button, input {
+  font: inherit;
+  color: inherit;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
 }
 
 table {
   text-indent: 0;
-  border-color: inherit;
   border-collapse: collapse;
 }
 
-button,
-input {
-  font-family: inherit;
-  font-size: 100%;
-  font-weight: inherit;
-  line-height: inherit;
-  color: inherit;
-  margin: 0;
-  padding: 0;
+ol, ul, menu {
+  list-style: none;
 }
 
-button {
-  text-transform: none;
-  background-color: transparent;
-  background-image: none;
+img, video, audio, canvas, svg {
+  display: block;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
 }
 
 :-moz-focusring {
@@ -56,50 +52,4 @@ button {
 
 :-moz-ui-invalid {
   box-shadow: none;
-}
-
-summary {
-  display: list-item;
-}
-
-blockquote,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-button,
-[role="button"] {
-  cursor: pointer;
-}
-
-img,
-svg,
-video,
-canvas,
-audio {
-  display: block;
-  vertical-align: middle;
-}
-
-img,
-video {
-  height: auto;
-  max-width: 100%;
 }
