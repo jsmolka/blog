@@ -1,0 +1,84 @@
+@function spacing($value) {
+  @return #{(0.25 * $value)}rem;
+}
+
+@function repeat($item, $count) {
+  $string: "";
+  @for $i from 1 through $count {
+      $string: $string + $item;
+  }
+  @return "#{$string}";
+}
+
+@mixin tail {
+  & > :not([hidden]) ~ :not([hidden]) {
+    @content;
+  }
+}
+
+$sm: 40rem;
+$md: 45rem;
+$lg: 60rem;
+$xl: 80rem;
+
+@mixin screen-sm {
+  @media screen and (min-width: $sm) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media screen and (min-width: $md) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media screen and (min-width: $xl) {
+    @content;
+  }
+}
+
+@mixin text-sm {
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+}
+
+@mixin text-lg {
+	font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-xl {
+	font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@mixin text-2xl {
+	font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@mixin text-3xl {
+	font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+@mixin text-4xl {
+	font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+$neutral-1: var(--color-neutral-1);
+$neutral-2: var(--color-neutral-2);
+$neutral-3: var(--color-neutral-3);
+$neutral-4: var(--color-neutral-4);
+$neutral-5: var(--color-neutral-5);
+$neutral-6: var(--color-neutral-6);
+$accent: var(--color-accent);

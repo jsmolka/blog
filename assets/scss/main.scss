@@ -1,6 +1,6 @@
-@import "normalize";
+@import "partials/base/all";
+
 @import "audio";
-@import "base";
 @import "button";
 @import "content";
 @import "list";
@@ -10,7 +10,4 @@
 @import "pagination";
 @import "post";
 @import "prism";
-@import "scroll";
 @import "theme";
-@import "typography";
-@import "vue";

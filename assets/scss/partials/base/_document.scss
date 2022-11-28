@@ -1,0 +1,22 @@
+@import "../utils";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: $neutral-6;
+  color: $neutral-2;
+  font-size: 15px;
+  font-family: Inter, Roboto, ui-sans-serif, sans-serif;
+  font-feature-settings: var(--font-features);
+  line-height: 1.65;
+  letter-spacing: -0.004em;
+}
+
+::selection {
+  background: $accent;
+  color: $neutral-1;
+}

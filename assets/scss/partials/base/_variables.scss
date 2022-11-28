@@ -1,0 +1,22 @@
+@import "../palette";
+
+:root {
+  --font-features: "calt", "ccmp", "cv07", "kern";
+  --color-neutral-1: #{$color-neutral-1};
+  --color-neutral-2: #{$color-neutral-2};
+  --color-neutral-3: #{$color-neutral-3};
+  --color-neutral-4: #{$color-neutral-4};
+  --color-neutral-5: #{$color-neutral-5};
+  --color-neutral-6: #{$color-neutral-6};
+  --color-accent: #{$color-accent};
+}
+
+.dark {
+  --color-neutral-1: #{$dark-color-neutral-1};
+  --color-neutral-2: #{$dark-color-neutral-2};
+  --color-neutral-3: #{$dark-color-neutral-3};
+  --color-neutral-4: #{$dark-color-neutral-4};
+  --color-neutral-5: #{$dark-color-neutral-5};
+  --color-neutral-6: #{$dark-color-neutral-6};
+  --color-accent: #{$dark-color-accent};
+}
