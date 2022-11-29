@@ -1,19 +1,15 @@
 @import "utilities";
 
-pre code .table {
-  display: inline !important;
-}
-
-[class*="language-"] .namespace {
-  opacity: 0.75;
-}
-
-@mixin token($color) {
+@mixin color($color) {
   color: $color;
 
   .dark {
     color: scale-color($color, $lightness: -10%, $saturation: 20%)
   }
+}
+
+[class*="language-"] .namespace {
+  opacity: 0.75;
 }
 
 .token.cdata,
@@ -35,15 +31,15 @@ pre code .table {
 .token.tag,
 .token.url,
 .token.variable {
-  @include token(#81a1c1);
+  @include color(#81a1c1);
 }
 
 .token.deleted {
-  @include token(#bf616a);
+  @include color(#bf616a);
 }
 
 .token.number {
-  @include token(#b48ead);
+  @include color(#b48ead);
 }
 
 .token.attr-name,
@@ -53,14 +49,14 @@ pre code .table {
 .token.regex,
 .token.selector,
 .token.string {
-  @include token(#a3be8c);
+  @include color(#a3be8c);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  @include token(#88c0d0);
+  @include color(#88c0d0);
 }
 
 .token.bold,
@@ -68,27 +64,25 @@ pre code .table {
   font-weight: 700;
 }
 
-code {
-  .token.deleted:not(.prefix),
-  .token.inserted:not(.prefix) {
-    display: block;
-    margin: 0 spacing(-4);
-    color: inherit;
+.token.deleted:not(.prefix),
+.token.inserted:not(.prefix) {
+  display: block;
+  margin: 0 spacing(-4);
+  color: inherit;
 
-    & > *:first-child {
-      margin-left: spacing(4);
-    }
-
-    & > *:last-child {
-      margin-right: spacing(4);
-    }
+  & > *:first-child {
+    margin-left: spacing(4);
   }
 
-  .token.deleted:not(.prefix) {
-    background: rgba(255, 0, 0, 0.1);
+  & > *:last-child {
+    margin-right: spacing(4);
   }
+}
 
-  .token.inserted:not(.prefix) {
-    background: rgba(0, 255, 128, 0.1);
-  }
+.token.deleted:not(.prefix) {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.token.inserted:not(.prefix) {
+  background: rgba(0, 255, 128, 0.1);
 }
