@@ -2,7 +2,6 @@
 
 .markdown {
   text-align: justify;
-  line-height: 1.65;
   hyphens: auto;
 
   @include tail {
@@ -13,13 +12,11 @@
     text-align: left;
   }
 
-  h1, h2, h3 {
-    &:not(:first-child) {
-      margin-top: spacing(8) !important;
-    }
+  :is(h1, h2, h3):not(:first-child) {
+    margin-top: spacing(8) !important;
   }
 
-  audio, img, table {
+  audio, figure, img, table {
     width: 100%;
   }
 
@@ -30,52 +27,35 @@
   ul, ol {
     display: flex;
     flex-direction: column;
-    margin-left: spacing(10);
     gap: spacing(1);
+    margin-left: spacing(10);
 
+    @include screen-sm {
+      margin-left: spacing(5);
+    }
 
     li {
       padding-left: spacing(1);
     }
   }
 
-  @include screen-sm {
-    ul, ol {
-      margin-left: spacing(5);
-    }
-  }
 
-  ul {
-    list-style: none;
+  ul li {
+    position: relative;
 
-    li {
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: spacing(2);
-        left: spacing(-4);
-        width: spacing(2);
-        height: spacing(2);
-        background: $neutral-2;
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      top: spacing(2);
+      left: spacing(-4);
+      width: spacing(2);
+      height: spacing(2);
+      background: $neutral-2;
     }
   }
 
   ol {
     list-style: decimal;
-  }
-
-  figure {
-    width: 100%;
-    overflow-x: auto;
-
-    figcaption {
-      @include text-sm;
-      margin-top: spacing(2);
-      text-align: center;
-    }
   }
 
   blockquote {
@@ -102,15 +82,7 @@
     vertical-align: baseline;
   }
 
-  pre {
-    margin: 0;
-
-    @include screen-md {
-      margin: 0 spacing(-4);
-    }
-  }
-
-  .escape {
+  pre, .escape {
     margin: 0;
 
     @include screen-md {
@@ -123,7 +95,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
     gap: spacing(5);
 
     @include screen-sm {

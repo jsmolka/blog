@@ -43,6 +43,18 @@ button, input {
   border: none;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(2);
+  overflow: auto;
+}
+
+figcaption {
+  @include text-sm;
+  text-align: center;
+}
+
 h1, h2, h3 {
   color: $neutral-1;
   text-align: left;
@@ -108,7 +120,7 @@ pre, code {
 
 pre {
   padding: spacing(3) spacing(4);
-  overflow-x: auto;
+  overflow: auto;
   white-space: pre;
 }
 
