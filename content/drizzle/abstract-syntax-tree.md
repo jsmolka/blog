@@ -43,7 +43,7 @@ while x < 100:
 
 Running `drizzle --ast file.dz` prints the tree:
 
-```code
+```
 program
   var x
     literal 0

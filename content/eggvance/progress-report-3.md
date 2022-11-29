@@ -16,7 +16,7 @@ The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. 
       <th colspan="10">Pattern</th>
       <th>Instruction</th>
     </thead>
-    <tbody class="text-center">
+    <tbody style="text-align: center">
       <tr>
         <td>1</td>
         <td>0</td>
@@ -26,8 +26,8 @@ The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. 
         <td>0</td>
         <td>0</td>
         <td>0</td>
-        <td class="text-left" colspan="2">Offset</td>
-        <td class="text-left">Add offset to stack pointer</td>
+        <td style="text-align: left" colspan="2">Offset</td>
+        <td style="text-align: left">Add offset to stack pointer</td>
       </tr>
       <tr>
         <td>1</td>
@@ -38,8 +38,8 @@ The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. 
         <td>1</td>
         <td>0</td>
         <td>R</td>
-        <td class="text-left" colspan="2">Rlist</td>
-        <td class="text-left">Push/pop registers</td>
+        <td style="text-align: left" colspan="2">Rlist</td>
+        <td style="text-align: left">Push/pop registers</td>
       </tr>
       <tr>
         <td>1</td>
@@ -47,18 +47,18 @@ The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. 
         <td>0</td>
         <td>0</td>
         <td>L</td>
-        <td class="text-left" colspan="3">Rb</td>
-        <td class="text-left" colspan="2">Rlist</td>
-        <td class="text-left">Multiple load/store</td>
+        <td style="text-align: left" colspan="3">Rb</td>
+        <td style="text-align: left" colspan="2">Rlist</td>
+        <td style="text-align: left">Multiple load/store</td>
       </tr>
       <tr>
         <td>1</td>
         <td>1</td>
         <td>0</td>
         <td>1</td>
-        <td class="text-left" colspan="4">Condition</td>
-        <td class="text-left" colspan="2">Offset</td>
-        <td class="text-left">Conditional branch</td>
+        <td style="text-align: left" colspan="4">Condition</td>
+        <td style="text-align: left" colspan="2">Offset</td>
+        <td style="text-align: left">Conditional branch</td>
       </tr>
     </tbody>
   </table>

@@ -101,7 +101,7 @@
     vertical-align: baseline;
   }
 
-  pre[class*="language-"] {
+  pre {
     margin: 0 spacing(-4);
 
     @include screen-md {

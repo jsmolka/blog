@@ -98,6 +98,38 @@ ol, ul, menu {
   list-style: none;
 }
 
+pre, code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+pre,
+:not(pre) > code {
+  @include text-sm;
+  background: $neutral-5;
+  border-radius: 1px;
+}
+
+:not(pre) > code {
+  padding: spacing(0.5) spacing(1.5);
+}
+
+pre {
+  padding: spacing(3) 0;
+  overflow-x: auto;
+
+  code {
+    padding: 0 spacing(4);
+    line-height: 1.65;
+    white-space: pre;
+    hyphens: none;
+
+    // Workaround for background culling
+    // https://stackoverflow.com/a/8513330
+    min-width: 100%;
+    float: left;
+  }
+}
+
 ::selection {
   background: $accent;
   color: $neutral-1;

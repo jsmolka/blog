@@ -1,39 +1,7 @@
 @import "utilities";
 
-pre, code {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-}
-
-pre[class*="language-"],
-:not(pre) > code {
-  @include text-sm;
-  background: $neutral-5;
-  border-radius: 1px;
-}
-
-pre[class*="language-"] {
-  padding: spacing(3) 0;
-  overflow-x: auto;
-
-  code {
-    padding: 0 spacing(4);
-    line-height: 1.65;
-    white-space: pre;
-    hyphens: none;
-
-    // Workaround for background culling
-    // https://stackoverflow.com/a/8513330
-    min-width: 100%;
-    float: left;
-
-    .table {
-      display: inline !important;
-    }
-  }
-}
-
-:not(pre) > code {
-  padding: spacing(0.5) spacing(1.5);
+pre code .table {
+  display: inline !important;
 }
 
 [class*="language-"] .namespace {

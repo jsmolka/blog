@@ -40,7 +40,7 @@ At first glance, there seems to be nothing wrong with it, but this comment doesn
 
 I never ran into this bug during testing because it has been fixed in [Pokémon Emerald](https://github.com/pret/pokeemerald/blob/64460e01aede2bbcaa8d1dd18dd3fab590fa4a6e/src/fieldmap.c#L114), and that's the game I usually use for quick testing (and pure nostalgia). The dereferenced null pointer returns something they call garbage, which is quite offensive to the poor BIOS, in my opinion. Why the BIOS? Because it starts at address zero, and that's where a dereferenced null pointer reads from.
 
-```none
+```
 00000000-00003FFF   BIOS - System ROM
 00004000-01FFFFFF   Not used
 02000000-0203FFFF   WRAM - On-board Work RAM

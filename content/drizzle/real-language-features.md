@@ -19,7 +19,7 @@ def b():
 
 Running it resulted in a syntax error because the compiler was unable to resolve `b`.
 
-```none
+```
 Line 2 |   b()
            ^
 SyntaxError: undefined variable 'b'

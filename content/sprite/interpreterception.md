@@ -41,7 +41,7 @@ class GameBoy:
 
 I tested it with the infamous [blargg test ROMs](https://github.com/retrio/gb-test-roms), and it appears to work! The second test fails because I haven't implemented interrupts, but those are next in line.
 
-```code
+```
 01 - special              Passed
 02 - interrupts EI        Failed #2
 03 - op sp,hl             Passed
