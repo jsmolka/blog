@@ -40,11 +40,11 @@
   }
 
   .links {
-    display: none;
+    display: flex;
     font-weight: 500;
 
     @include screen-sm {
-      display: flex;
+      display: none;
     }
 
     ul {
@@ -55,11 +55,11 @@
   }
 
   .mobile-menu {
-    display: flex;
+    display: none;
     position: relative;
 
     @include screen-sm {
-      display: none;
+      display: flex;
     }
   }
 

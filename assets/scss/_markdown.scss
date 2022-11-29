@@ -1,7 +1,7 @@
 @import "utilities";
 
 .markdown {
-  text-align: left;
+  text-align: justify;
   line-height: 1.65;
   hyphens: auto;
 
@@ -10,7 +10,7 @@
   }
 
   @include screen-md {
-    text-align: justify;
+    text-align: left;
   }
 
   h1, h2, h3 {
@@ -30,8 +30,9 @@
   ul, ol {
     display: flex;
     flex-direction: column;
+    margin-left: spacing(10);
     gap: spacing(1);
-    margin-left: spacing(5);
+
 
     li {
       padding-left: spacing(1);
@@ -40,7 +41,7 @@
 
   @include screen-sm {
     ul, ol {
-      margin-left: spacing(10);
+      margin-left: spacing(5);
     }
   }
 
@@ -102,31 +103,31 @@
   }
 
   pre {
-    margin: 0 spacing(-4);
+    margin: 0;
 
     @include screen-md {
-      margin: 0;
+      margin: 0 spacing(-4);
     }
   }
 
   .escape {
-    margin: 0 spacing(-4);
+    margin: 0;
 
     @include screen-md {
-      margin: 0;
+      margin: 0 spacing(-4);
     }
   }
 
   .wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: spacing(5);
 
     @include screen-sm {
-      flex-direction: row;
+      flex-direction: column;
     }
   }
 

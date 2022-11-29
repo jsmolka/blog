@@ -22,25 +22,25 @@ $lg: 60rem;
 $xl: 80rem;
 
 @mixin screen-sm {
-  @media screen and (min-width: $sm) {
+  @media screen and (max-width: $sm) {
     @content;
   }
 }
 
 @mixin screen-md {
-  @media screen and (min-width: $md) {
+  @media screen and (max-width: $md) {
     @content;
   }
 }
 
 @mixin screen-lg {
-  @media screen and (min-width: $lg) {
+  @media screen and (max-width: $lg) {
     @content;
   }
 }
 
 @mixin screen-xl {
-  @media screen and (min-width: $xl) {
+  @media screen and (max-width: $xl) {
     @content;
   }
 }
