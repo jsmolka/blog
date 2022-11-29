@@ -1,5 +1,11 @@
 @import "utilities";
 
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -14,9 +20,95 @@ body {
   font-feature-settings: "calt", "ccmp", "cv07", "kern";
   line-height: 1.65;
   letter-spacing: -0.004em;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+button, input {
+  font: inherit;
+  color: inherit;
+  border: none;
+}
+
+h1, h2, h3 {
+  color: $neutral-1;
+  text-align: left;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+h1 { @include text-3xl; }
+h2 { @include text-xl;  }
+h3 { @include text-lg;  }
+
+@each $level in 1, 2, 3 {
+  h#{$level} {
+    &::before {
+      content: repeat('#', $level);
+      margin-right: 0.33em;
+      color: $accent;
+    }
+  }
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed $neutral-4;
+}
+
+img, video, audio, canvas, svg {
+  display: block;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+table {
+  text-align: left;
+  text-indent: 0;
+  border-collapse: collapse;
+}
+
+th {
+  color: $neutral-1;
+  font-weight: 700;
+}
+
+th, td {
+  padding: spacing(2) spacing(3);
+  border: 1px solid $neutral-4;
+}
+
+ol, ul, menu {
+  list-style: none;
 }
 
 ::selection {
   background: $accent;
   color: $neutral-1;
+}
+
+.hidden, [hidden], [v-cloak] {
+  display: none;
+}
+
+@each $theme in "system", "dark", "light" {
+  html:not([theme="#{$theme}"]) .if-theme-#{$theme} {
+    display: none;
+  }
 }

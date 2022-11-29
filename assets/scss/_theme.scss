@@ -1,5 +1,0 @@
-@each $theme in "system", "dark", "light" {
-  html:not([theme="#{$theme}"]) .if-theme-#{$theme} {
-    display: none;
-  }
-}

@@ -66,21 +66,6 @@
     list-style: decimal;
   }
 
-  table {
-    text-align: left;
-
-    th {
-      color: $neutral-1;
-      font-weight: 700;
-      hyphens: none;
-    }
-
-    th, td {
-      padding: spacing(2) spacing(3);
-      border: 1px solid $neutral-4;
-    }
-  }
-
   figure {
     width: 100%;
     overflow-x: auto;
@@ -152,7 +137,6 @@
 
     hr {
       margin: spacing(8) 0;
-      border-top: 2px dashed $neutral-4;
     }
 
     & > ol {
