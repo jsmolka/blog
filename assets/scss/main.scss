@@ -1,4 +1,10 @@
-@import "partials/base/all";
+@import "base";
+@import "headings";
+@import "reset";
+@import "scrollbar";
+@import "typography";
+@import "variables";
+@import "vue";
 
 @import "audio";
 @import "button";
