@@ -20,7 +20,7 @@ We run the Pokémon Blue intro sequence until we see the title screen. That's 12
 ## Cache Misses
 drizzle underwent lots of small changes that accumulated over time, but I want to focus on the two most impactful ones. One of them concerns the call stack and how it's stored inside the virtual machine.
 
-```
+```cpp
 class Vm {
   struct Frame {
     u8* pc;  // Program counter

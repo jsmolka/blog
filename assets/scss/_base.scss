@@ -99,35 +99,21 @@ ol, ul, menu {
 }
 
 pre, code {
+  background: $neutral-5;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: $size-sm;
+  border-radius: 1px;
+  hyphens: none;
 }
 
-pre,
-:not(pre) > code {
-  @include text-sm;
-  background: $neutral-5;
-  border-radius: 1px;
+pre {
+  padding: spacing(3) spacing(4);
+  overflow-x: auto;
+  white-space: pre;
 }
 
 :not(pre) > code {
   padding: spacing(0.5) spacing(1.5);
-}
-
-pre {
-  padding: spacing(3) 0;
-  overflow-x: auto;
-
-  code {
-    padding: 0 spacing(4);
-    line-height: 1.65;
-    white-space: pre;
-    hyphens: none;
-
-    // Workaround for background culling
-    // https://stackoverflow.com/a/8513330
-    min-width: 100%;
-    float: left;
-  }
 }
 
 ::selection {
