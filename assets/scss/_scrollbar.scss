@@ -1,4 +1,4 @@
-@import "palette";
+@import "utils";
 
 @mixin colors($background, $direction) {
   --color-track: #{scale-color($background, $lightness: $direction * 5%)};
