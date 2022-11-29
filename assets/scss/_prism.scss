@@ -70,11 +70,11 @@
   margin: 0 spacing(-4);
   color: inherit;
 
-  & > *:first-child {
+  :first-child {
     margin-left: spacing(4);
   }
 
-  & > *:last-child {
+  :last-child {
     margin-right: spacing(4);
   }
 }

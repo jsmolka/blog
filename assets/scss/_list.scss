@@ -9,22 +9,22 @@
   .items {
     display: flex;
     flex-direction: column;
+    gap: spacing(8);
 
     .item {
       display: flex;
       flex-direction: column;
       gap: spacing(5);
-      padding: spacing(8) 0;
-      border-bottom: 2px dashed $neutral-4;
 
       h1 {
         @include text-xl;
         margin-bottom: spacing(-1.5);
       }
-
-      &:first-child {
-        padding-top: 0;
-      }
     }
+  }
+
+  .pagination {
+    display: flex;
+    gap: spacing(4);
   }
 }
