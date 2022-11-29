@@ -68,7 +68,6 @@
 
   table {
     text-align: left;
-    font-feature-settings: "tnum";
 
     th {
       color: $neutral-1;
@@ -145,7 +144,6 @@
       flex-direction: row;
     }
   }
-
 
   .footnotes {
     a[href^="#fnref:"] {

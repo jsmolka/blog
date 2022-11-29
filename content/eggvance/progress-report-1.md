@@ -59,18 +59,18 @@ The last thing I did was clean up the memory interface. I implemented things lik
 A precondition for playing through a whole game were working save implementations for SRAM, EEPROM, and Flash. Finding out which one to use and understanding how each of them works took some time, but I managed to figure it out in the end.
 
 ## Milestones
-- <span class="font-feature-tnum">19/01/30</span> &ndash; Initial commit
-- <span class="font-feature-tnum">19/04/20</span> &ndash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
-- <span class="font-feature-tnum">19/05/02</span> &ndash; Displays Tonc bitmap demos
-- <span class="font-feature-tnum">19/05/29</span> &ndash; Displays Tonc regular sprite and background demos
-- <span class="font-feature-tnum">19/06/08</span> &ndash; Displays Tonc affine sprite and background demos
-- <span class="font-feature-tnum">19/06/27</span> &ndash; Displays Tonc graphic effect demos
-- <span class="font-feature-tnum">19/07/03</span> &ndash; Displays Tonc interrupt and bios call demos
-- <span class="font-feature-tnum">19/07/11</span> &ndash; Displays Tonc mode 7 demos
-- <span class="font-feature-tnum">19/07/14</span> &ndash; Runs Kirby: Nightmare In Dreamland
-- <span class="font-feature-tnum">19/07/16</span> &ndash; Displays the BIOS
-- <span class="font-feature-tnum">19/08/07</span> &ndash; Displays all Tonc demos
-- <span class="font-feature-tnum">19/08/17</span> &ndash; Runs Pokémon Emerald
+- 19/01/30 &ndash; Initial commit
+- 19/04/20 &ndash; Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler)
+- 19/05/02 &ndash; Displays Tonc bitmap demos
+- 19/05/29 &ndash; Displays Tonc regular sprite and background demos
+- 19/06/08 &ndash; Displays Tonc affine sprite and background demos
+- 19/06/27 &ndash; Displays Tonc graphic effect demos
+- 19/07/03 &ndash; Displays Tonc interrupt and bios call demos
+- 19/07/11 &ndash; Displays Tonc mode 7 demos
+- 19/07/14 &ndash; Runs Kirby: Nightmare In Dreamland
+- 19/07/16 &ndash; Displays the BIOS
+- 19/08/07 &ndash; Displays all Tonc demos
+- 19/08/17 &ndash; Runs Pokémon Emerald
 
 ## Some Working Games
 - Advance Wars
