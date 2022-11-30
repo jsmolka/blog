@@ -6,25 +6,25 @@
   align-items: center;
   gap: spacing(16);
 
-  .items {
+  &-items {
     display: flex;
     flex-direction: column;
     gap: spacing(8);
+  }
 
-    .item {
-      display: flex;
-      flex-direction: column;
-      gap: spacing(5);
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(5);
 
-      h1 {
-        @include text-xl;
-        margin-bottom: spacing(-1.5);
-      }
+    h1 {
+      @include text-xl;
+      margin-bottom: spacing(-1.5);
     }
   }
+}
 
-  .pagination {
-    display: flex;
-    gap: spacing(4);
-  }
+.pagination {
+  display: flex;
+  gap: spacing(4);
 }

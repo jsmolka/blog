@@ -6,12 +6,12 @@
     &mdash; {{ .ReadingTime }} minute read
   </div>
   {{ if .Params.Tags }}
-    <nav>
-      <ul>
-        {{ range .Params.Tags }}
-          <a href="{{ (printf "tags/%s/" . ) | urlize | absURL }}">{{ . }}</a>
-        {{ end }}
-      </ul>
-    </nav>
+    <ul class="meta-tags">
+      {{ range .Params.Tags }}
+        <li>
+          <a class="meta-tag" href="{{ printf "tags/%s/" . | urlize | absURL }}">{{- . -}}</a>
+        </li>
+      {{ end }}
+    </ul>
   {{ end }}
 </div>
