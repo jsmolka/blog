@@ -1,11 +1,19 @@
 @import "utils";
 
-@mixin color($color) {
-  color: $color;
+@mixin define($factor) {
+  --prism-del: #{scale-color(#bf616a, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --prism-dec: #{scale-color(#88c0d0, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --prism-key: #{scale-color(#81a1c1, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --prism-num: #{scale-color(#b48ead, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --prism-str: #{scale-color(#a3be8c, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+}
 
-  .dark {
-    color: scale-color($color, $lightness: -10%, $saturation: 20%)
-  }
+:root {
+  @include define(1);
+}
+
+.dark {
+  @include define(0);
 }
 
 [class*="language-"] .namespace {
@@ -31,15 +39,15 @@
 .token.tag,
 .token.url,
 .token.variable {
-  @include color(#81a1c1);
+  color: var(--prism-key);
 }
 
 .token.deleted {
-  @include color(#bf616a);
+  color: var(--prism-del);
 }
 
 .token.number {
-  @include color(#b48ead);
+  color: var(--prism-num);
 }
 
 .token.attr-name,
@@ -49,14 +57,14 @@
 .token.regex,
 .token.selector,
 .token.string {
-  @include color(#a3be8c);
+  color: var(--prism-str);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  @include color(#88c0d0);
+  color: var(--prism-dec);
 }
 
 .token.bold,

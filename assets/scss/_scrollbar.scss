@@ -1,23 +1,23 @@
 @import "utils";
 
-@mixin colors($background, $direction) {
-  --color-track: #{scale-color($background, $lightness: $direction * 5%)};
-  --color-thumb: #{scale-color($background, $lightness: $direction * 20%)};
-  --color-thumb-hover: #{scale-color($background, $lightness: $direction * 30%)};
-  --color-thumb-active: #{scale-color($background, $lightness: $direction * 40%)};
+@mixin define($background, $factor) {
+  --track-1: #{scale-color($background, $lightness: $factor * 5%)};
+  --thumb-1: #{scale-color($background, $lightness: $factor * 20%)};
+  --thumb-2: #{scale-color($background, $lightness: $factor * 30%)};
+  --thumb-3: #{scale-color($background, $lightness: $factor * 40%)};
 }
 
 :root {
-  @include colors($color-neutral-6, -1);
+  @include define($l-neutral-6, -1);
 }
 
 .dark {
-  @include colors($dark-color-neutral-6, 1);
+  @include define($d-neutral-6, 1);
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-thumb) var(--color-track);
+  scrollbar-color: var(--thumb-1) var(--track-1);
 }
 
 ::-webkit-scrollbar {
@@ -26,17 +26,12 @@
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: var(--color-track);
+  background: var(--track-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-thumb);
+  background: var(--thumb-1);
 
-  &:hover {
-    background: var(--color-thumb-hover);
-  }
-
-  &:active {
-    background: var(--color-thumb-active);
-  }
+  &:hover  { background: var(--thumb-2); }
+  &:active { background: var(--thumb-3); }
 }

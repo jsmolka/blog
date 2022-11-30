@@ -86,26 +86,26 @@ $line-4xl: 2.5rem;
   line-height: $line-4xl;
 }
 
-$color-neutral-1: rgb(36, 41, 47);
-$color-neutral-2: rgb(66, 75, 86);
-$color-neutral-3: rgb(170, 178, 194);
-$color-neutral-4: rgb(225, 229, 237);
-$color-neutral-5: rgb(246, 248, 250);
-$color-neutral-6: rgb(255, 255, 255);
-$color-accent: rgb(167, 202, 226);
+$l-neutral-1: rgb(36, 41, 47);
+$l-neutral-2: rgb(66, 75, 86);
+$l-neutral-3: rgb(170, 178, 194);
+$l-neutral-4: rgb(225, 229, 237);
+$l-neutral-5: rgb(246, 248, 250);
+$l-neutral-6: rgb(255, 255, 255);
+$l-accent: rgb(167, 202, 226);
 
-$dark-color-neutral-1: rgb(249, 252, 255);
-$dark-color-neutral-2: rgb(205, 211, 217);
-$dark-color-neutral-3: rgb(110, 122, 134);
-$dark-color-neutral-4: rgb(68, 78, 92);
-$dark-color-neutral-5: rgb(45, 52, 61);
-$dark-color-neutral-6: rgb(34, 39, 46);
-$dark-color-accent: rgb(80, 133, 181);
+$d-neutral-1: rgb(249, 252, 255);
+$d-neutral-2: rgb(205, 211, 217);
+$d-neutral-3: rgb(110, 122, 134);
+$d-neutral-4: rgb(68, 78, 92);
+$d-neutral-5: rgb(45, 52, 61);
+$d-neutral-6: rgb(34, 39, 46);
+$d-accent: rgb(80, 133, 181);
 
-$neutral-1: var(--color-neutral-1);
-$neutral-2: var(--color-neutral-2);
-$neutral-3: var(--color-neutral-3);
-$neutral-4: var(--color-neutral-4);
-$neutral-5: var(--color-neutral-5);
-$neutral-6: var(--color-neutral-6);
-$accent: var(--color-accent);
+$neutral-1: var(--neutral-1);
+$neutral-2: var(--neutral-2);
+$neutral-3: var(--neutral-3);
+$neutral-4: var(--neutral-4);
+$neutral-5: var(--neutral-5);
+$neutral-6: var(--neutral-6);
+$accent: var(--accent);
