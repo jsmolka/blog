@@ -11,28 +11,6 @@
   padding: spacing(5) spacing(4);
   color: $neutral-1;
 
-  .wordmark {
-    display: flex;
-    align-items: center;
-    gap: spacing(1.5);
-    font-weight: 800;
-
-    &::after {
-      content: '';
-      width: spacing(2.5);
-      height: spacing(4);
-      background: $accent;
-      border-radius: 1px;
-      animation: pulsate 1s infinite;
-
-      @keyframes pulsate {
-        0%   { opacity: 0; }
-        50%  { opacity: 1; }
-        100% { opacity: 0; }
-      }
-    }
-  }
-
   .menu {
     display: flex;
     align-items: center;
@@ -79,6 +57,29 @@
         display: flex;
         padding: spacing(2) spacing(3);
       }
+    }
+  }
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: spacing(1.5);
+  color: $neutral-1;
+  font-weight: 800;
+
+  &::after {
+    content: '';
+    width: spacing(2.5);
+    height: spacing(4);
+    background: $accent;
+    border-radius: 1px;
+    animation: pulsate 1s infinite;
+
+    @keyframes pulsate {
+        0% { opacity: 0; }
+       50% { opacity: 1; }
+      100% { opacity: 0; }
     }
   }
 }

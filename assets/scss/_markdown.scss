@@ -4,19 +4,19 @@
   text-align: justify;
   hyphens: auto;
 
-  @include tail {
-    margin-top: spacing(5);
-  }
-
   @include screen-md {
     text-align: left;
+  }
+
+  @include tail {
+    margin-top: spacing(5);
   }
 
   :is(h1, h2, h3):not(:first-child) {
     margin-top: spacing(8) !important;
   }
 
-  audio, figure, img, table {
+  audio, img, figure, table {
     width: 100%;
   }
 
@@ -38,7 +38,6 @@
       padding-left: spacing(1);
     }
   }
-
 
   ul li {
     position: relative;
@@ -62,7 +61,8 @@
     display: flex;
     flex-direction: column;
     gap: spacing(2.5);
-    padding: spacing(3) 0 spacing(3) spacing(5);
+    padding: spacing(3) spacing(5);
+    padding-right: 0;
     font-style: italic;
     border-left: 4px solid $neutral-2;
   }
@@ -76,8 +76,6 @@
   }
 
   sub, sup {
-    position: relative;
-    top: 0;
     font: inherit;
     vertical-align: baseline;
   }
@@ -92,9 +90,6 @@
 
   .wrap {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: spacing(5);
 
     @include screen-sm {

@@ -6,7 +6,7 @@
     &mdash; {{ .ReadingTime }} minute read
   </div>
   {{ if .Params.Tags }}
-    <nav class="tags">
+    <nav>
       <ul>
         {{ range .Params.Tags }}
           <a href="{{ (printf "tags/%s/" . ) | urlize | absURL }}">{{ . }}</a>
