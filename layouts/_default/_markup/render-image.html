@@ -1,7 +1,7 @@
 {{ $alt := .Text | default .Title }}
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ if not $image }}
-  {{ $image = imageConfig (path.Join "static" .Destination) }}
+  {{ $image = imageConfig (path.Join "static/img" .Destination) }}
 {{ end }}
 {{ if .Title }}
   <figure>
