@@ -1,2 +1,20 @@
-{{ $image := imageConfig (add "/static/" .Destination) }}
-<img src="{{ .Destination | safeURL }}" alt="{{- .Text -}}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+{{ $alt := .Text | default .Title }}
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if not $image }}
+  {{ $image = imageConfig (path.Join "static" .Destination) }}
+{{ end }}
+{{ if .Title }}
+  <figure>
+{{ end }}
+    <img
+      src="{{ .Destination | safeURL }}"
+      alt="{{- $alt -}}"
+      {{ with $image }}
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+      {{ end }}
+      loading="lazy">
+{{ if .Title }}
+    <figcaption>{{ .Title | $.Page.RenderString }}</figcaption>
+  </figure>
+{{ end }}

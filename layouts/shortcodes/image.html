@@ -2,7 +2,7 @@
 {{ $src := add "/img/" (.Get "src") | safeURL }}
 {{ $alt := .Get "alt" | default $caption }}
 <figure>
-  {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
+  {{/*  {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}  */}}
   {{ with $caption }}
     <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
