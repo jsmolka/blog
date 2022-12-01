@@ -1,0 +1,13 @@
+@import "assets/scss/utils";
+
+.page {
+  margin: auto;
+  padding: spacing(16) 0;
+  text-align: center;
+
+  .huge {
+    @include text-8xl;
+    color: $neutral-1;
+    font-weight: 900;
+  }
+}

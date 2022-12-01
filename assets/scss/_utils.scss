@@ -86,6 +86,13 @@ $line-4xl: 2.5rem;
   line-height: $line-4xl;
 }
 
+$size-8xl: 6rem;
+$line-8xl: 1;
+@mixin text-8xl {
+  font-size: $size-8xl;
+  line-height: $line-8xl;
+}
+
 $l-neutral-1: rgb(36, 41, 47);
 $l-neutral-2: rgb(66, 75, 86);
 $l-neutral-3: rgb(170, 178, 194);

@@ -40,5 +40,14 @@ disableHugoGeneratorInject = true
   [markup.highlight]
     codeFences = false
 
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+  [[module.mounts]]
+    source = "content"
+    target = "assets"
+
 [build]
   noJSConfigInAssets = true

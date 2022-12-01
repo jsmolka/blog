@@ -18,6 +18,16 @@
   {{ partial "scss" . }}
 {{ end }}
 
+{{ with .Resources.GetMatch "index.scss" }}
+  {{ $style := . }}
+  {{ $style = $style | resources.ToCSS (path.Join $.Page.File.Dir "index.css") }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
+    {{ $style = $style | minify | fingerprint }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+
 {{ partial "js-inline" "theme.js" }}
 
 {{ $scripts := slice "main.js" }}
