@@ -13,18 +13,7 @@
 </title>
 
 {{ partial "styles" . }}
-
-{{ partial "js-inline" "theme.js" }}
-
-{{ $scripts := slice "main.js" }}
-{{ $scripts = $scripts | append (.Params.js | default slice) }}
-{{ if not hugo.IsProduction }}
-  {{ $scripts = $scripts | append "prism.js" }}
-{{ end }}
-{{ range $scripts | uniq }}
-  {{ partial "js" . }}
-{{ end }}
-
+{{ partial "scripts" . }}
 {{ partial "preload" . }}
 
 {{ template "_internal/opengraph.html" . }}

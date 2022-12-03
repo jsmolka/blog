@@ -1,4 +1,0 @@
-{{ $script := resources.Get (printf "js/%s" .) | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
-<script type="text/javascript">
-  {{ $script.Content | safeJS }}
-</script>

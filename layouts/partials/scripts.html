@@ -1,0 +1,28 @@
+{{ with resources.Get "js/theme.js" }}
+  {{ $script := . | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+  <script type="text/javascript">{{ $script.Content | safeJS }}</script>
+{{ end }}
+
+{{ $scripts := slice "js/main.js" }}
+{{ if not hugo.IsProduction }}
+  {{ $scripts = $scripts | append "js/prism.js" }}
+{{ end }}
+{{ range $scripts }}
+  {{ $script := resources.Get . | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+  {{ if hugo.IsProduction }}
+    {{ $script = $script | fingerprint "md5" }}
+  {{ end }}
+  <script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}
+
+{{ $dir := "" }}
+{{ if .Params.URL }}
+  {{ $dir = .Page.File.Dir }}
+{{ end }}
+{{ with .Resources.GetMatch "index.js" }}
+  {{ $script := . | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+  {{ if hugo.IsProduction }}
+    {{ $script = $script | fingerprint "md5" }}
+  {{ end }}
+  <script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
+{{ end }}
