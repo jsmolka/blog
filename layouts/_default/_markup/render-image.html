@@ -7,12 +7,10 @@
   <figure>
 {{ end }}
     <img
-      src="{{ .Destination | safeURL }}"
+      src="{{ $image.RelPermalink }}"
       alt="{{- $alt -}}"
-      {{ with $image }}
-        width="{{ .Width }}"
-        height="{{ .Height }}"
-      {{ end }}
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
       loading="lazy">
 {{ if .Title }}
     <figcaption>{{ .Title | $.Page.RenderString }}</figcaption>
