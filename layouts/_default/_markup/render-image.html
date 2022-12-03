@@ -1,18 +1,17 @@
+{{ $src := "" }}
 {{ $alt := .Text | default .Title }}
-{{ $image := .Page.Resources.GetMatch .Destination }}
-{{ if not $image }}
-  {{ $image = imageConfig (path.Join "static/img" .Destination) }}
+{{ $img := .Page.Resources.GetMatch .Destination }}
+{{ with $img }}
+  {{ $src = .RelPermalink }}
+{{ else }}
+  {{ $src = .Destination | relURL }}
+  {{ $img = imageConfig (path.Join "static" .Destination) }}
 {{ end }}
 {{ if .Title }}
   <figure>
 {{ end }}
-    <img
-      src="{{ $image.RelPermalink }}"
-      alt="{{- $alt -}}"
-      width="{{ $image.Width }}"
-      height="{{ $image.Height }}"
-      loading="lazy">
-{{ if .Title }}
-    <figcaption>{{ .Title | $.Page.RenderString }}</figcaption>
+    <img src="{{ $src }}" alt="{{- $alt -}}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
+{{ with .Title }}
+    <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
   </figure>
 {{ end }}

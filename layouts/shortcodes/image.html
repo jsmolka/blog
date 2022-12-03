@@ -1,9 +1,4 @@
-{{ $caption := .Get "caption" }}
+{{ $cap := .Get "caption" }}
 {{ $src := .Get "src" }}
-{{ $alt := .Get "alt" | default $caption }}
-<figure>
-  {{ printf "![%s](%s)" $alt $src | $.Page.RenderString }}
-  {{ with $caption }}
-    <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
-  {{ end }}
-</figure>
+{{ $alt := .Get "alt" }}
+{{ printf "![%s](%s \"%s\")" $alt $src $cap | $.Page.RenderString }}
