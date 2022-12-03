@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
 
-{{ $dir := "" }}
+{{ $path := "index.css" }}
 {{ if .Params.URL }}
-  {{ $dir = .Page.File.Dir }}
+  {{ $base := path.Dir .Params.URL }}
+  {{ $name := path.BaseName .Params.URL }}
+  {{ $path  = path.Join $base (add $name (path.Ext $path)) }}
 {{ end }}
 {{ with .Resources.GetMatch "index.scss" }}
-  {{ $style := . | resources.ToCSS (path.Join $dir "index.css") }}
+  {{ $style := . | resources.ToCSS $path }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
     {{ $style = $style | minify | fingerprint "md5" }}
