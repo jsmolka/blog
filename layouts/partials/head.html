@@ -12,21 +12,7 @@
   {{- end -}}
 </title>
 
-{{ $styles := slice "main.scss" }}
-{{ $styles = $styles | append (.Params.scss | default slice) }}
-{{ range $styles | uniq }}
-  {{ partial "scss" . }}
-{{ end }}
-
-{{ with .Resources.GetMatch "index.scss" }}
-  {{ $style := . }}
-  {{ $style = $style | resources.ToCSS (path.Join $.Page.File.Dir "index.css") }}
-  {{ if hugo.IsProduction }}
-    {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
-    {{ $style = $style | minify | fingerprint }}
-  {{ end }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-{{ end }}
+{{ partial "styles" . }}
 
 {{ partial "js-inline" "theme.js" }}
 

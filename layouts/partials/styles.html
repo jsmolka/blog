@@ -1,0 +1,22 @@
+{{ with resources.Get "scss/main.scss" }}
+  {{ $style := . | resources.ToCSS "main.css" }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
+    {{ $style = $style | minify | fingerprint "md5" }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
+
+{{ $dir := "" }}
+{{ if .Params.URL }}
+  {{ $dir = .Page.File.Dir }}
+{{ end }}
+{{ print $dir}}
+{{ with .Resources.GetMatch "index.scss" }}
+  {{ $style := . | resources.ToCSS (path.Join $dir "index.css") }}
+  {{ if hugo.IsProduction }}
+    {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
+    {{ $style = $style | minify | fingerprint "md5" }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ end }}
