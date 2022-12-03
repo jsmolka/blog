@@ -1,11 +1,12 @@
-{{ $caption := .Get "caption" }}
-{{ $src := add "/audio/" (.Get "src") | safeURL }}
+{{ $cap := .Get "caption" }}
+{{ $src := path.Join .Page.RelPermalink (.Get "src") | relURL }}
+
 <figure>
   <div v-cloak v-scope="Audio('{{ $src }}')" @vue:mounted="mounted($el)"></div>
   <noscript>
     <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>
-  {{ with $caption }}
+  {{ with $cap }}
     <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
   {{ end }}
 </figure>

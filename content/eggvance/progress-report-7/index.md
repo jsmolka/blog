@@ -13,13 +13,13 @@ Audio has been one of the most challenging things for me to do. I pushed it back
 Sound processing on the Game Boy Advance can be divided into two parts: FIFO and PSG channels. The former are a new addition to the console and account for most of the sound you hear in games. They are quite different from the legacy PSG channels in that they use a stream of precomposed 8-bit samples. The samples are fed to the FIFO using DMA. It can store up to 32 of them at a time and automatically refills itself once half-empty to ensure smooth sound output.
 
 {{<wrap>}}
-  {{<audio src="eggvance/emerald-frontier-fifo.mp3" caption="Pokémon Emerald battle frontier FIFO channels">}}
+  {{<audio src="audio/emerald-frontier-fifo.mp3" caption="Pokémon Emerald battle frontier FIFO channels">}}
 {{</wrap>}}
 
 The four PSG (procedural sound generator) channels are the same as on the original Game Boy. There are two square, a wave, and a noise channel, with additional effects like sweep (frequency change over time), envelope (volume change over time), and sound length. Most GBA games use them for auxiliary sounds or not at all.
 
 {{<wrap>}}
-  {{<audio src="eggvance/emerald-frontier-psg.mp3" caption="Pokémon Emerald battle frontier PSG channels">}}
+  {{<audio src="audio/emerald-frontier-psg.mp3" caption="Pokémon Emerald battle frontier PSG channels">}}
 {{</wrap>}}
 
 The initial implementation of these channels was unoptimized and caused quite a performance drop. Each CPU tick ran all enabled channels and the so-called frame sequencer, which controls the modulation units (sweep, envelope, and length). That means there were more samples generated than necessary because the GBA resamples everything to 32 kHz.
@@ -27,15 +27,15 @@ The initial implementation of these channels was unoptimized and caused quite a 
 The optimized version runs up until the current point in time and provides no more than the exact amount of samples we need. That is possible because all PSG channels apart from the noise channel are linear and easy to predict. The noise channel is supposed to be random and thus not suitable for this sort of optimization.
 
 {{<wrap>}}
-  {{<audio src="eggvance/emerald-frontier.mp3" caption="Pokémon Emerald battle frontier theme all channels">}}
+  {{<audio src="audio/emerald-frontier.mp3" caption="Pokémon Emerald battle frontier theme all channels">}}
 {{</wrap>}}
 
 ## Scheduler
-As time went on, it became more and more apparent that I needed some sort of scheduling in my emulator. There were lots of cycle counters scattered across the codebase, which slowed the emulator down and increased complexity. Not having a scheduler also caused some audio [issues](https://github.com/jsmolka/eggvance/issues/14) if a game made good use of halting. It led to problems with the frame sequencer, which skipped a sample or two and resulted in metallic sounds.
+As time went on, it became more and more apparent that I needed some sort of scheduling in my emulator. There were lots of cycle counters scattered across the codebase, which slowed the emulator down and increased complexity. Not having a scheduler also caused some audio [issues](https://github.com/jsmolka/audio/issues/14) if a game made good use of halting. It led to problems with the frame sequencer, which skipped a sample or two and resulted in metallic sounds.
 
 {{<wrap>}}
-  {{<audio src="eggvance/gba-bios-metallic.mp3" caption="Metallic GBA BIOS">}}
-  {{<audio src="eggvance/gba-bios.mp3" caption="Fixed GBA BIOS">}}
+  {{<audio src="audio/gba-bios-metallic.mp3" caption="Metallic GBA BIOS">}}
+  {{<audio src="audio/gba-bios.mp3" caption="Fixed GBA BIOS">}}
 {{</wrap>}}
 
 I tested different data structures in terms of performance and decided to go with a circular doubly linked list. The list must be doubly linked to allow fast removal of scheduled events. Being circular improves performance because it eliminates null checks in the code. There must be a dummy event at the last position to prevent infinite looping during insertion.
@@ -99,8 +99,8 @@ Towards the end of development, some issues were remaining, and I couldn't quite
 {{</wrap>}}
 
 {{<wrap>}}
-  {{<audio src="eggvance/ff6-intro-bug.mp3" caption="FF6 intro bugged">}}
-  {{<audio src="eggvance/ff6-intro.mp3" caption="FF6 intro fixed">}}
+  {{<audio src="audio/ff6-intro-bug.mp3" caption="FF6 intro bugged">}}
+  {{<audio src="audio/ff6-intro.mp3" caption="FF6 intro fixed">}}
 {{</wrap>}}
 
 Debugging the sound issue made me realize that the DMA was writing to a register it wasn't supposed to. It triggered the square wave and caused the annoying sound. DMA uses internal reference registers to store the source and destination address as well as some other values. My implementation had a few problems in that regard and didn't update the destination properly. [Fixing](https://github.com/jsmolka/eggvance/commit/551edfcaa6ebe162acc18f9dc0d424b498147166) this issue killed three birds with one stone and saved me from many more hours of debugging.
