@@ -1,6 +1,13 @@
 {{ $cap := .Get "caption" }}
-{{ $src := path.Join .Page.RelPermalink (.Get "src") | relURL }}
-
+{{ $src := .Get "src" }}
+{{ with .Page.Resources.GetMatch $src }}
+  {{ $src = .RelPermalink }}
+{{ else }}
+  {{ $src = $src | relURL }}
+  {{ if not (fileExists (path.Join "static" $src)) }}
+    {{ errorf "file not found %s" $src }}
+  {{ end }}
+{{ end }}
 <figure>
   <div v-cloak v-scope="Audio('{{ $src }}')" @vue:mounted="mounted($el)"></div>
   <noscript>
