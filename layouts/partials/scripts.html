@@ -1,14 +1,16 @@
+{{ $opts := dict "target" "es2015" "minify" hugo.IsProduction }}
+
 {{ with resources.Get "js/theme.js" }}
-  {{ $script := . | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+  {{ $script := . | js.Build $opts }}
   <script type="text/javascript">{{ $script.Content | safeJS }}</script>
 {{ end }}
 
-{{ $scripts := slice "js/main.js" }}
+{{ $scripts := slice "main.js" }}
 {{ if not hugo.IsProduction }}
-  {{ $scripts = $scripts | append "js/prism.js" }}
+  {{ $scripts = $scripts | append "prism.js" }}
 {{ end }}
 {{ range $scripts }}
-  {{ $script := resources.Get . | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+  {{ $script := resources.Get (path.Join "js" .) | js.Build (merge $opts (dict "targetPath" .)) }}
   {{ if hugo.IsProduction }}
     {{ $script = $script | fingerprint "md5" }}
   {{ end }}
@@ -20,7 +22,7 @@
   {{ $dir = .Page.File.Dir }}
 {{ end }}
 {{ with .Resources.GetMatch "index.js" }}
-  {{ $script := . | js.Build (dict "target" "es2015" "minify" hugo.IsProduction) }}
+  {{ $script := . | js.Build (merge $opts (dict "targetPath" (path.Join $dir "index.js"))) }}
   {{ if hugo.IsProduction }}
     {{ $script = $script | fingerprint "md5" }}
   {{ end }}
