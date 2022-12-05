@@ -1,8 +1,9 @@
+{{ $opts := dict "config" "assets/scss/postcss.config.js" }}
+
 {{ with resources.Get "scss/main.scss" }}
   {{ $style := . | resources.ToCSS "main.css" }}
   {{ if hugo.IsProduction }}
-    {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
-    {{ $style = $style | minify | fingerprint "md5" }}
+    {{ $style = $style | postCSS $opts | minify | fingerprint "md5" }}
   {{ end }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
@@ -10,8 +11,7 @@
 {{ with .Resources.GetMatch "index.scss" }}
   {{ $style := . | resources.ToCSS "index.css" }}
   {{ if hugo.IsProduction }}
-    {{ $style = $style | postCSS (dict "config" "assets/scss/postcss.config.js") }}
-    {{ $style = $style | minify | fingerprint "md5" }}
+    {{ $style = $style | postCSS $opts | minify | fingerprint "md5" }}
   {{ end }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
