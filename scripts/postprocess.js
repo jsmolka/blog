@@ -28,8 +28,12 @@ function trim(document) {
   return changed;
 }
 
+function slash(path) {
+  return path.replace(/\\/g, '/');
+}
+
 function main() {
-  glob(path.join(__dirname, '../public/**/*.html'), async (_, files) => {
+  glob(slash(path.join(__dirname, '../public/**/*.html')), async (_, files) => {
     for (const file of files) {
       const dom = await JSDOM.fromFile(file);
       const document = dom.window.document;
