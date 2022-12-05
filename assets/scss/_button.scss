@@ -13,3 +13,8 @@
     color: $neutral-6;
   }
 }
+
+.buttons {
+  display: flex;
+  gap: spacing(4);
+}
