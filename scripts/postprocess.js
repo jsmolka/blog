@@ -6,7 +6,7 @@ require('../assets/js/prism');
 
 function highlight(document) {
   let changed = false;
-  if (document.getElementsByTagName('code').length > 0) {
+  if (document.querySelector(':is(code, pre)[class*="language-"]')) {
     Prism.highlightAllUnder(document);
     changed = true;
   }
