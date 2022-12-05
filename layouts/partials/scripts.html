@@ -17,14 +17,8 @@
   <script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
 {{ end }}
 
-{{ $path := "index.js" }}
-{{ if .Params.URL }}
-  {{ $base := path.Dir .Params.URL }}
-  {{ $name := path.BaseName .Params.URL }}
-  {{ $path  = path.Join $base (add $name (path.Ext $path)) }}
-{{ end }}
 {{ with .Resources.GetMatch "index.js" }}
-  {{ $script := . | js.Build (merge $opts (dict "targetPath" $path)) }}
+  {{ $script := . | js.Build (merge $opts (dict "targetPath" "index.js")) }}
   {{ if hugo.IsProduction }}
     {{ $script = $script | fingerprint "md5" }}
   {{ end }}
