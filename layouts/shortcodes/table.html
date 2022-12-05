@@ -1,7 +1,0 @@
-{{ $caption := .Get "caption" }}
-<figure>
-  {{ .Inner | $.Page.RenderString }}
-  {{ with $caption }}
-    <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
-  {{ end }}
-</figure>

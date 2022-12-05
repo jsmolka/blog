@@ -11,30 +11,30 @@ drizzle is a dynamic interpreted programming language, and its C++ implementatio
 
 In its current state, drizzle is nothing more than a glorified calculator and supports the following operators:
 
-{{<table>}}
-| Precedence | Operator                                  | Description                                                            |
-|------------|-------------------------------------------|------------------------------------------------------------------------|
-| 1          | `-`&ensp;`~`                              | Unary minus and bitwise complement                                     |
-| 2          | `*`&ensp;`/`&ensp;`%`&ensp;`//`&ensp;`**` | Multiplication, division, modulo division, integer division, and power |
-| 3          | `+`&ensp;`-`                              | Addition and subtraction                                               |
-| 4          | `<<`&ensp;`>>`&ensp;`>>>`                 | Logical shift left, arithmetic shift right and logical shift right     |
-| 5          | `<`&ensp;`<=`&ensp;`>`&ensp;`>=`          | Relational operators                                                   |
-| 6          | `==`&ensp;`!=`                            | Equality operators                                                     |
-| 7          | `&`                                       | Bitwise and                                                            |
-| 8          | `^`                                       | Bitwise exclusive or                                                   |
-| 9          | `\|`                                      | Bitwise exclusive or                                                   |
-| 10         | `&&`                                      | Logical and                                                            |
-| 11         | `\|\|`                                    | Logical or                                                             |
-{{</table>}}
+{{% wrap %}}
+| Precedence | Operator              | Description                                                            |
+| ---------- | --------------------- | ---------------------------------------------------------------------- |
+| 1          | `-` `~`               | Unary minus and bitwise complement                                     |
+| 2          | `*` `/` `%` `//` `**` | Multiplication, division, modulo division, integer division, and power |
+| 3          | `+` `-`               | Addition and subtraction                                               |
+| 4          | `<<` `>>` `>>>`       | Logical shift left, arithmetic shift right and logical shift right     |
+| 5          | `<` `<=` `>` `>=`     | Relational operators                                                   |
+| 6          | `==` `!=`             | Equality operators                                                     |
+| 7          | `&`                   | Bitwise and                                                            |
+| 8          | `^`                   | Bitwise exclusive or                                                   |
+| 9          | `\|`                  | Bitwise exclusive or                                                   |
+| 10         | `&&`                  | Logical and                                                            |
+| 11         | `\|\|`                | Logical or                                                             |
+{{% /wrap %}}
 
 Arithmetic operations accept the three primitive data types:
-{{<table>}}
+{{% wrap %}}
 | Rank | Type  | Representation    |
-|------|-------|-------------------|
+| ---- | ----- | ----------------- |
 | 1    | bool  | bool              |
 | 2    | int   | 64-bit signed int |
 | 3    | float | 64-bit float      |
-{{</table>}}
+{{% /wrap %}}
 
 Operands in mixed operations are promoted to the highest ranked operand type to prevent loss of information. That means adding a float to an int results in a float. An exception to this rule is division, where the result will always be a float. Bitwise operations work similar to arithmetic ones but don't accept float values.
 

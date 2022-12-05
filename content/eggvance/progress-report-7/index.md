@@ -73,9 +73,9 @@ Until a few months ago, it was quite hard to figure out what the tests do exactl
 
 The last failing tests are extremely timing sensitive and don't even pass in mGBA. Speaking of mGBA, these are the results for its [test suite](https://github.com/mgba-emu/suite) across all eggvance versions:
 
-{{<table>}}
+{{% wrap %}}
 | Test           | eggvance 0.1 | eggvance 0.2 | eggvance 0.3 | eggvance 1.0 | Total |
-|:---------------|:-------------|:-------------|:-------------|:-------------|-------|
+| -------------- | ------------ | ------------ | ------------ | ------------ | ----- |
 | Memory         | 1452         | 1456         | 1552         | 1552         | 1552  |
 | Timing         | 457          | 404          | 1496         | 1496         | 1660  |
 | DMA            | 1048         | 1048         | 1220         | 1256         | 1256  |
@@ -86,7 +86,7 @@ The last failing tests are extremely timing sensitive and don't even pass in mGB
 | Timer IRQ      | 0            | 28           | 65           | 65           | 90    |
 | Multiply long  | 52           | 52           | 52           | 52           | 72    |
 | Edge case      | 1            | 1            | 2            | 6            | 10    |
-{{</table>}}
+{{% /wrap %}}
 
 All that being said, passing tests might not translate well into actual game coverage. But it certainly helps and gives us programmer's some peace of mind.
 
@@ -130,12 +130,14 @@ Now everything can be configured in the UI, and the emulator should be more acce
 ## Performance
 It's time to compare the performance across all release versions. I benchmarked everything for one minute and took the average FPS. I have an i7-4790K and an RTX 2080, so the results should be CPU-bound.
 
+{{% wrap %}}
 | Version      | Pokémon Emerald | Yoshi's Island | Mother 3   |
-|:-------------|:----------------|:---------------|:-----------|
+| ------------ | --------------- | -------------- | ---------- |
 | eggvance 0.1 | 575.7 fps       | 513.1 fps      | 639.4 fps  |
 | eggvance 0.2 | 619.5 fps       | 538.5 fps      | 1033.9 fps |
 | eggvance 0.3 | 589.7 fps       | 508.9 fps      | 813.2 fps  |
 | eggvance 1.0 | 550.4 fps       | 501.6 fps      | 866.6 fps  |
+{{% /wrap %}}
 
 The following things can be observed:
 - 0.2 is the fastest
