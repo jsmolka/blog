@@ -6,10 +6,10 @@
     &mdash; {{ .ReadingTime }} minute read
   </div>
   {{ if .Params.Tags }}
-    <ul class="meta-tags">
+    <ul class="tags">
       {{ range .Params.Tags }}
         <li>
-          <a class="meta-tag" href="{{ printf "tags/%s/" . | urlize | absURL }}">{{- . -}}</a>
+          <a class="tag" href="/tags/{{ . | urlize }}/">{{- . -}}</a>
         </li>
       {{ end }}
     </ul>
