@@ -1,9 +1,9 @@
 <footer class="footer">
-  <nav>
-    <ul>
-      {{- range $.Site.Menus.footer -}}
-        <a href="{{ .URL | safeURL }}">{{- .Name | safeHTML -}}</a>
-      {{- end -}}
-    </ul>
-  </nav>
+  <ul>
+    {{- range $.Site.Menus.footer -}}
+      <li>
+        {{ printf "[%s](%s)" .Name .URL | $.Page.RenderString }}
+      </li>
+    {{- end -}}
+  </ul>
 </footer>
