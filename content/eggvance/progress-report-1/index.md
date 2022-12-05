@@ -50,8 +50,8 @@ Three months after the initial commit I had a more or less reliable CPU implemen
 Understanding how they work just by reading GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and direct memory access (DMA). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
 
 {{<wrap>}}
-  {{<image src="img/tonc-sbb-aff.png" caption="Tonc affine tiled background [demo](https://www.coranac.com/tonc/text/affbg.htm)" alt="Tonc affine tiled background demo">}}
-  {{<image src="img/tonc-obj-aff.png" caption="Tonc affine sprite [demo](https://www.coranac.com/tonc/text/affobj.htm)" alt="Tonc affine sprite demo">}}
+  {{<image src="img/tonc-sbb-aff.png" caption="Tonc affine tiled background [demo](https://www.coranac.com/tonc/text/affbg.htm)">}}
+  {{<image src="img/tonc-obj-aff.png" caption="Tonc affine sprite [demo](https://www.coranac.com/tonc/text/affobj.htm)">}}
 {{</wrap>}}
 
 The last thing I did was clean up the memory interface. I implemented things like bus widths, memory mirroring, and read/write only registers. This fixed some of the bugs I had in Pokémon Emerald and allowed me to play through the game, one of my main milestones.

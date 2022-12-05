@@ -16,7 +16,7 @@ But of what use is potential if you don't act upon it? All the graphics and game
 
 {{<wrap>}}
   {{<image src="img/zelda-intro.png" caption="Zelda intro sequence">}}
-  {{<image src="img/zelda-bow-wow.png" caption="[Madam MeowMeow's](https://zelda.fandom.com/wiki/Madam_MeowMeow) [BowWow](https://zelda.fandom.com/wiki/BowWow)" alt="Madam MeowMeow's BowWow">}}
+  {{<image src="img/zelda-bow-wow.png" caption="[Madam MeowMeow's](https://zelda.fandom.com/wiki/Madam_MeowMeow) [BowWow](https://zelda.fandom.com/wiki/BowWow)">}}
 {{</wrap>}}
 
 {{<wrap>}}
