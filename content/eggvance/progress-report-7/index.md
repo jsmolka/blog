@@ -63,8 +63,8 @@ Using a list might seem counterintuitive, but most events are scheduled on short
 Nintendo developed a test cartridge for the GBA called [AGS Aging](https://tcrf.net/AGS_Aging_Cartridge). It contains a fair amount of demanding hardware tests for various parts of the system. It fails on most emulators and even some GBA hardware clones. There is only one emulator that I know of which passes all tests: [NanoBoyAdvance](https://github.com/fleroviux/NanoBoyAdvance). That is mostly due to the extremely accurate prefetch buffer emulation.
 
 {{<wrap>}}
-  {{<image src="images/ags-0.3.png" caption="eggvance 0.3">}}
-  {{<image src="images/ags-1.0.png" caption="eggvance 1.0">}}
+  {{<image src="img/ags-0.3.png" caption="eggvance 0.3">}}
+  {{<image src="img/ags-1.0.png" caption="eggvance 1.0">}}
 {{</wrap>}}
 
 The amount of red in version 0.3 made me quite sad. I thought it would pass more, but it didn't even run through the whole suite without locking up. Missing SIO emulation and the resulting lack of interrupting caused an infinite loop in a test. Proper multiplayer functionality is out of scope for this project, so a barebones SIO implementation has been added to at least pass the test.
@@ -94,13 +94,13 @@ All that being said, passing tests might not translate well into actual game cov
 Towards the end of development, some issues were remaining, and I couldn't quite figure out their cause. There were randomly occurring black lines in Pokémon Emerald, interfering and flickering backgrounds in The Legend of Zelda, as well as annoying typing sounds on the right ear during the Final Fantasy VI intro sequence.
 
 {{<wrap>}}
-  {{<image src="images/dma-bug-emerald.png" caption="Random black lines at the top">}}
-  {{<image src="images/dma-bug-zelda.png" caption="Background interference">}}
+  {{<image src="img/dma-bug-emerald.png" caption="Random black lines at the top">}}
+  {{<image src="img/dma-bug-zelda.png" caption="Background interference">}}
 {{</wrap>}}
 
 {{<wrap>}}
-  {{<audio src="audio/ff6-intro-bug.mp3" caption="FF6 intro bugged">}}
-  {{<audio src="audio/ff6-intro.mp3" caption="FF6 intro fixed">}}
+  {{<audio src="audio/ff-intro-bug.mp3" caption="FF6 intro bugged">}}
+  {{<audio src="audio/ff-intro.mp3" caption="FF6 intro fixed">}}
 {{</wrap>}}
 
 Debugging the sound issue made me realize that the DMA was writing to a register it wasn't supposed to. It triggered the square wave and caused the annoying sound. DMA uses internal reference registers to store the source and destination address as well as some other values. My implementation had a few problems in that regard and didn't update the destination properly. [Fixing](https://github.com/jsmolka/eggvance/commit/551edfcaa6ebe162acc18f9dc0d424b498147166) this issue killed three birds with one stone and saved me from many more hours of debugging.
@@ -111,8 +111,8 @@ Blending also required some more work. Acrobat Kid uses semi-transparent objects
 I removed them with a slight rework and fixed the issue. That also eliminated problems in Castlevania, which I thought were completely unrelated. It used to display garbage values for one frame when entering the menu.
 
 {{<wrap>}}
-  {{<image src="images/acrobat-kid-bug.png" caption="Acrobat Kid transparency bug">}}
-  {{<image src="images/castlevania-menu-bug.png" caption="Castlevania menu bug">}}
+  {{<image src="img/acrobat-kid-bug.png" caption="Acrobat Kid transparency bug">}}
+  {{<image src="img/castlevania-menu-bug.png" caption="Castlevania menu bug">}}
 {{</wrap>}}
 
 ## User Interface
@@ -123,8 +123,8 @@ So I did the usual Google search for small, cross-platform UI libraries and ende
 Now everything can be configured in the UI, and the emulator should be more accessible to new users.
 
 {{<wrap>}}
-  {{<image src="images/gui-1.png" caption="Video layer selection">}}
-  {{<image src="images/gui-2.png" caption="Controller config">}}
+  {{<image src="img/gui-1.png" caption="Video layer selection">}}
+  {{<image src="img/gui-2.png" caption="Controller config">}}
 {{</wrap>}}
 
 ## Performance
@@ -148,13 +148,13 @@ I invested quite some time in optimizations, and I think it paid off in the end.
 Finishing the emulator also meant finally getting to "test" some games. The one I can't recommend enough is Mother 3. It's the final installment of the Mother series, best known for its second entry EarthBound. Unfortunately, Nintendo never bothered to release the game in the western world, so we have to rely on the excellent [fan translation](http://mother3.fobby.net/). Do yourself a favor and take some time out of your day to play this gem of a game. It has everything you want:
 
 {{<wrap>}}
-  {{<image src="images/m3-shark.png" caption="Weird creatures">}}
-  {{<image src="images/m3-toilet.png" caption="Golden toilets">}}
+  {{<image src="img/mother-shark.png" caption="Weird creatures">}}
+  {{<image src="img/mother-toilet.png" caption="Golden toilets">}}
 {{</wrap>}}
 
 {{<wrap>}}
-  {{<image src="images/m3-shrooms.png" caption="Mushroom trips">}}
-  {{<image src="images/m3-rats.png" caption="Rat corpses">}}
+  {{<image src="img/mother-shrooms.png" caption="Mushroom trips">}}
+  {{<image src="img/mother-rats.png" caption="Rat corpses">}}
 {{</wrap>}}
 
 ## Final Words and the Future

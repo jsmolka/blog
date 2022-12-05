@@ -1,6 +1,6 @@
 @import "assets/scss/utils";
 
-.page {
+.index {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +19,7 @@
     user-select: none;
   }
 
-  .controls {
+  .markdown-wrapper {
     width: 100%;
     max-width: $md;
   }

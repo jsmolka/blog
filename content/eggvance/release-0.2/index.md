@@ -8,8 +8,8 @@ type: post
 I finally reached a point in development where I am not utterly discontent with the code I wrote and decided to release the second version of my emulator. It includes all the changes mentioned in previous progress reports as well as some other features like optional color correction. Binaries can be found on [GitHub](https://github.com/jsmolka/eggvance/releases).
 
 {{<wrap>}}
-  {{<image src="images/emerald-mew.png" caption="Oversaturated colors in memory">}}
-  {{<image src="images/emerald-mew-lcd.png" caption="Corrected colors on the LCD">}}
+  {{<image src="img/emerald-mew.png" caption="Oversaturated colors in memory">}}
+  {{<image src="img/emerald-mew-lcd.png" caption="Corrected colors on the LCD">}}
 {{</wrap>}}
 
 That marks the end of the impossible quest for clean code. Now it's time to pour countless hours into the last important features:

@@ -9,7 +9,7 @@ Porsche Leipzig has its own [road circuit](https://www.porsche-leipzig.com/en/tr
 
 {{<escape>}}
   {{<wrap>}}
-    {{<image src="images/corkscrew.jpg" alt="Porsche corkscrew">}}
-    {{<image src="images/pecle.jpg" alt="Porsche experience center">}}
+    {{<image src="img/corkscrew.jpg" alt="Porsche corkscrew">}}
+    {{<image src="img/pecle.jpg" alt="Porsche experience center">}}
   {{</wrap>}}
 {{</escape>}}

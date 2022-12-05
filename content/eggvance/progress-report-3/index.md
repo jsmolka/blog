@@ -105,8 +105,8 @@ void ARM::executeThumb(u16 instr) {
 At some point in development, the emulator was able to boot every tested game apart from the Sonic Advance series. Resolving issues like this usually involves running my emulator against established ones like No$GBA. After two hours of comparing, I ended up noticing that a different value of the RCNT register, which is used for multiplayer functionality, caused a chain of events that lead to gray bars on the screen instead of the intro and soft-locked the game.
 
 {{<wrap>}}
-  {{<image src="images/rcnt-bug.png" caption="Uninitialized RCNT">}}
-  {{<image src="images/rcnt.png" caption="Initalized RCNT">}}
+  {{<image src="img/sonic-rcnt-bug.png" caption="Uninitialized RCNT">}}
+  {{<image src="img/sonic-rcnt.png" caption="Initalized RCNT">}}
 {{</wrap>}}
 
 This problem was caused by skipping the BIOS and directly jumping inside the ROM. Apart from showing the animated intro sequence, the BIOS also initializes registers like RCNT and DISPCNT to their default value. I knew about this and properly initialized all implemented registers to their post-BIOS state, but RCNT is not, and probably never will be, used in my emulator and was, therefore, left untouched. Doing a test run with the BIOS could've saved me a couple of hours but, that's something I usually don't do during development.
@@ -115,8 +115,8 @@ This problem was caused by skipping the BIOS and directly jumping inside the ROM
 Running mGBA's [test suite](https://github.com/mgba-emu/suite) made me realize flaws in my carry/overflow detection mechanism for arithmetic operations, which caused sprite flickering bugs in games like Mario Kart.
 
 {{<wrap>}}
-  {{<image src="images/flickering-1.png" caption="Mario Kart sprites invisible">}}
-  {{<image src="images/flickering-2.png" caption="Mario Kart sprites visible">}}
+  {{<image src="img/kart-flickering-1.png" caption="Mario Kart sprites invisible">}}
+  {{<image src="img/kart-flickering-2.png" caption="Mario Kart sprites visible">}}
 {{</wrap>}}
 
 The basic add, subtract and reverse subtract operations were doing fine, but their "[operation] with carry" counterparts resulted in a wrong carry and/or overflow flag. I found a nice [website](http://teaching.idallen.com/dat2343/10f/notes/040_overflow.txt) that explains overflow detection for basic addition and subtraction.
@@ -171,8 +171,8 @@ u32 ARM::adc(u32 op1, u32 op2, bool flags) {
 Using a 64-bit integer to store the second operand with added carry was the first improvement over the standard `add` function. Sadly this didn't fix all the problems. Comparing my results to the expected results of the mGBA test suite made me realize that the carry flag is only taken into consideration for carry detection and is completely ignored for overflow detection. The code above shows my final `adc` function. Note the usage of `opc`.
 
 {{<wrap>}}
-  {{<image src="images/carry-fail.png" caption="Carry tests fail">}}
-  {{<image src="images/carry-pass.png" caption="Carry tests pass">}}
+  {{<image src="img/mgba-carry-fail.png" caption="Carry tests fail">}}
+  {{<image src="img/mgba-carry-pass.png" caption="Carry tests pass">}}
 {{</wrap>}}
 
 ## Config
@@ -195,6 +195,6 @@ deadzone = 16000
 That's all for this progress report. A Windows build of the latest version can be found on [GitHub](https://github.com/jsmolka/eggvance/releases). I used profile-guided optimization to squeeze out the last drop of performance. Most games can be played at 10x the normal speed. Of course, the current version is not perfect and bug-free, audio is still missing, and there are crashes and visual bugs in a few games like DOOM II.
 
 {{<wrap>}}
-  {{<image src="images/black-floor.png" caption="DOOM II black floor">}}
-  {{<image src="images/rainbow-floor.png" caption="DOOM II rainbow floor">}}
+  {{<image src="img/doom-black-floor.png" caption="DOOM II black floor">}}
+  {{<image src="img/doom-rainbow-floor.png" caption="DOOM II rainbow floor">}}
 {{</wrap>}}

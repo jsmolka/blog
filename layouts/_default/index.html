@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main class="container">
     {{ $pages := slice }}
-    {{ range slice "post" "blank" }}
+    {{ range slice "post" "framed" }}
       {{ $pages = $pages | append (where $.Site.RegularPages "Type" .) }}
     {{ end }}
     {{ $pages = sort $pages "Date" "desc" }}

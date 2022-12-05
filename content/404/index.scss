@@ -1,11 +1,11 @@
 @import "assets/scss/utils";
 
-.page {
+.index {
   margin: auto;
-  padding: spacing(16) 0;
+  padding: spacing(16) spacing(4);
   text-align: center;
 
-  .huge {
+  .error {
     @include text-8xl;
     color: $neutral-1;
     font-weight: 900;

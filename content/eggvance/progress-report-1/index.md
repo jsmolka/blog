@@ -21,8 +21,8 @@ Getting the Chip-8 to work took a couple of hours. It was neither interesting no
 I then moved on to the GB and hoped for equally fast progress. I soon realized that it would require much more time to get something working (what a surprise /s) and decided to abandon it because it wasn't what I wanted to do [^2]. I wanted to write a GBA emulator, and that's what I did. Now, exactly seven months after the initial commit, I feel like it's in a state that is worth talking about [^3].
 
 {{<wrap>}}
-  {{<image src="images/pokemon-emerald.png" caption="Pokémon Emerald title screen">}}
-  {{<image src="images/yoshis-island.png" caption="Yoshi's Island title screen">}}
+  {{<image src="img/pokemon-emerald.png" caption="Pokémon Emerald title screen">}}
+  {{<image src="img/yoshis-island.png" caption="Yoshi's Island title screen">}}
 {{</wrap>}}
 
 ## Initial Progress
@@ -50,8 +50,8 @@ Three months after the initial commit I had a more or less reliable CPU implemen
 Understanding how they work just by reading GBATEK was near impossible because it lacks visual examples due to its nature of being a reference document. Instead, I went through the [Tonc GBA programming tutorial](https://www.coranac.com/tonc/text/) and reverse-engineered the chapters for graphics, effects, timers, interrupts, and direct memory access (DMA). The figures below show examples of affine backgrounds and sprites. Both use matrix transformations to rotate and/or scale the elements.
 
 {{<wrap>}}
-  {{<image src="images/tonc-sbb-aff.png" caption="Tonc affine tiled background [demo](https://www.coranac.com/tonc/text/affbg.htm)" alt="Tonc affine tiled background demo">}}
-  {{<image src="images/tonc-obj-aff.png" caption="Tonc affine sprite [demo](https://www.coranac.com/tonc/text/affobj.htm)" alt="Tonc affine sprite demo">}}
+  {{<image src="img/tonc-sbb-aff.png" caption="Tonc affine tiled background [demo](https://www.coranac.com/tonc/text/affbg.htm)" alt="Tonc affine tiled background demo">}}
+  {{<image src="img/tonc-obj-aff.png" caption="Tonc affine sprite [demo](https://www.coranac.com/tonc/text/affobj.htm)" alt="Tonc affine sprite demo">}}
 {{</wrap>}}
 
 The last thing I did was clean up the memory interface. I implemented things like bus widths, memory mirroring, and read/write only registers. This fixed some of the bugs I had in Pokémon Emerald and allowed me to play through the game, one of my main milestones.

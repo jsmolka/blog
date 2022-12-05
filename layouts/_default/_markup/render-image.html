@@ -7,11 +7,9 @@
   {{ $src = .Destination | relURL }}
   {{ $img = imageConfig (path.Join "static" .Destination) }}
 {{ end }}
-{{ if .Title }}
-  <figure>
-{{ end }}
-    <img src="{{ $src }}" alt="{{- $alt -}}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
-{{ with .Title }}
+<figure>
+  <img src="{{ $src }}" alt="{{- $alt -}}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
+  {{ with .Title }}
     <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
-  </figure>
-{{ end }}
+  {{ end }}
+</figure>

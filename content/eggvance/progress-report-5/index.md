@@ -220,8 +220,8 @@ text_glyph_data:
 With all text rendering functions in place, I was able to add a simple user interface. It shows whether or not the test suite succeeded and also adds the number of the first failed test if there was one. That should make it much easier for developers to use the test suite. Of course, you still have to refer to the actual source code to understand what the test did, but that shouldn't be a problem for the target audience.
 
 {{<wrap>}}
-  {{<image src="images/suite-passed.png" caption="Test suite passed">}}
-  {{<image src="images/suite-failed.png" caption="Test suite failed">}}
+  {{<image src="img/suite-passed.png" caption="Test suite passed">}}
+  {{<image src="img/suite-failed.png" caption="Test suite failed">}}
 {{</wrap>}}
 
 ## Final Words

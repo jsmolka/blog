@@ -3,9 +3,9 @@ title: "WebAssembly Port"
 description: "WebAssembly port of the eggvance GBA emulator."
 tags: ["eggvance", "emulation", "programming"]
 date: 2020-04-12
-type: blank
+type: framed
 ---
-<div v-scope="{ controls: false }" class="page">
+<div v-scope="{ controls: false }" class="index">
   <canvas id="canvas"></canvas>
   <input hidden ref="gba" type="file" accept=".gba" @change="Module.loadGba($el)">
   <input hidden ref="sav" type="file" accept=".sav" @change="Module.loadSav($el)">
@@ -15,7 +15,7 @@ type: blank
     <button class="button" @click="Module.loadDemo($el)">Load demo</button>
     <button class="button" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
   </div>
-  <div v-cloak v-show="controls" class="controls">
+  <div v-cloak v-show="controls" class="markdown-wrapper">
   {{<markdown>}}
   | Emulator            | Keyboard | Controller |
   |---------------------|----------|------------|

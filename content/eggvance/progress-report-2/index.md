@@ -29,20 +29,20 @@ switch (mmio.dispcnt.mode) {
 The code above shows the parts of the PPU which take part in rendering the Pokémon Emerald title screen. The used backgrounds and their render function are dependent on the selected video mode in the DISPCNT register. You can see the resulting individual layers in the following images.
 
 {{<wrap>}}
-  {{<image src="images/bg0.png" caption="Background layer 0">}}
-  {{<image src="images/bg1.png" caption="Background layer 1">}}
+  {{<image src="img/bg0.png" caption="Background layer 0">}}
+  {{<image src="img/bg1.png" caption="Background layer 1">}}
 {{</wrap>}}
 
 {{<wrap>}}
-  {{<image src="images/bg2.png" caption="Background layer 2">}}
-  {{<image src="images/obj.png" caption="Object layer">}}
+  {{<image src="img/bg2.png" caption="Background layer 2">}}
+  {{<image src="img/obj.png" caption="Object layer">}}
 {{</wrap>}}
 
 One of the most challenging aspects of emulating the PPU is combining the layers into the final scene. That's what the `collapse` function is doing. The process itself is rather straightforward for simple scenes. Just loop over the layers from highest to lowest priority and use the first opaque pixel you find. It gets much harder when dealing with effects like windows and color blending, which need to look at multiple layers at the same time.
 
 {{<wrap>}}
-  {{<image src="images/blend.png" caption="Blending backgrounds 0 and 1">}}
-  {{<image src="images/title-screen.png" caption="Final scene">}}
+  {{<image src="img/blend.png" caption="Blending backgrounds 0 and 1">}}
+  {{<image src="img/scene.png" caption="Final scene">}}
 {{</wrap>}}
 
 The predecessor of the `collapse` function consumed a sizable amount of CPU time and was a prime candidate to be reworked. The new [version](https://github.com/jsmolka/eggvance/blob/d89f078a1ecf74c98837cc26b8f9ee2c6a1980f5/eggvance/src/ppu/collapse.inl) makes heavy use of C++ templates has improved performance by around 35%. It also fixed several bugs that were related to object windows.
