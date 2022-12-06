@@ -1,6 +1,8 @@
 @import "utils";
 
 .container {
-  @include container-width;
-  @include container-padding;
+  width: 100%;
+  max-width: $md;
+  margin: auto;
+  padding: $container-padding;
 }

@@ -2,6 +2,8 @@
   @return #{(0.25 * $value)}rem;
 }
 
+$container-padding: spacing(16) spacing(4);
+
 @mixin tail {
   & > :not([hidden]) ~ :not([hidden]) {
     @content;
@@ -36,16 +38,6 @@ $xl: 80rem;
 @mixin text-xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-@mixin container-width($width: $md) {
-  width: 100%;
-  max-width: $width;
-  margin: auto;
-}
-
-@mixin container-padding {
-  padding: spacing(16) spacing(4);
 }
 
 $l-neutral-1: rgb(36, 41, 47);

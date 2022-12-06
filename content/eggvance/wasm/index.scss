@@ -1,13 +1,15 @@
 @import "assets/scss/utils";
 
 .index {
-  @include container-width($xl);
-  @include container-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: spacing(6);
+  width: 100%;
+  max-width: $xl;
+  margin: auto;
+  padding: $container-padding;
 
   canvas {
     width: 100%;
@@ -18,6 +20,7 @@
   }
 
   .markdown-container {
-    @include container-width;
+    width: 100%;
+    max-width: $md;
   }
 }
