@@ -4,8 +4,9 @@
   text-align: center;
 
   .error {
-    @include text-8xl;
     color: $neutral-1;
+    font-size: 6rem;
     font-weight: 900;
+    line-height: 1;
   }
 }

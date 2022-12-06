@@ -60,21 +60,16 @@ h1, h2, h3 {
   text-align: left;
   font-weight: 800;
   letter-spacing: -0.025em;
-}
 
-h1 { @include text-3xl; }
-h2 { @include text-xl;  }
-h3 { @include text-lg;  }
-
-@each $level in 1, 2, 3 {
-  h#{$level} {
-    &::before {
-      content: repeat('#', $level);
-      margin-right: 0.33em;
-      color: $accent;
-    }
+  &::before {
+    margin-right: 0.33em;
+    color: $accent;
   }
 }
+
+h1 { @include text-xl; &::before { content:   '#' } }
+h2 { @include text-lg; &::before { content:  '##' } }
+h3 { @include text-md; &::before { content: '###' } }
 
 hr {
   border: none;
@@ -112,8 +107,8 @@ ol, ul, menu {
 
 pre, code {
   background: $neutral-5;
+  font-size: 0.85rem;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: $size-sm;
   border-radius: 1px;
   hyphens: none;
 }

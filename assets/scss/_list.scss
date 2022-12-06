@@ -18,7 +18,7 @@
     gap: spacing(5);
 
     h1 {
-      @include text-xl;
+      @include text-lg;
       margin-bottom: spacing(-1.5);
     }
   }

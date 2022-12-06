@@ -2,14 +2,6 @@
   @return #{(0.25 * $value)}rem;
 }
 
-@function repeat($item, $count) {
-  $string: "";
-  @for $i from 1 through $count {
-      $string: $string + $item;
-  }
-  @return "#{$string}";
-}
-
 @mixin tail {
   & > :not([hidden]) ~ :not([hidden]) {
     @content;
@@ -17,80 +9,33 @@
 }
 
 $sm: 40rem;
-@mixin screen-sm {
-  @media screen and (max-width: $sm) {
-    @content;
-  }
-}
-
 $md: 45rem;
-@mixin screen-md {
-  @media screen and (max-width: $md) {
-    @content;
-  }
-}
-
 $lg: 60rem;
-@mixin screen-lg {
-  @media screen and (max-width: $lg) {
-    @content;
-  }
-}
-
 $xl: 80rem;
-@mixin screen-xl {
-  @media screen and (max-width: $xl) {
-    @content;
-  }
-}
 
-$size-sm: 0.85rem;
-$line-sm: 1.25rem;
+@mixin screen-sm { @media screen and (max-width: $sm) { @content } };
+@mixin screen-md { @media screen and (max-width: $md) { @content } };
+@mixin screen-lg { @media screen and (max-width: $lg) { @content } };
+@mixin screen-xl { @media screen and (max-width: $xl) { @content } };
+
 @mixin text-sm {
-  font-size: $size-sm;
-  line-height: $line-sm;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
 }
 
-$size-lg: 1.125rem;
-$line-lg: 1.75rem;
+@mixin text-md {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 @mixin text-lg {
-	font-size: $size-lg;
-  line-height: $line-lg;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
-$size-xl: 1.25rem;
-$line-xl: 1.75rem;
 @mixin text-xl {
-	font-size: $size-xl;
-  line-height: $line-xl;
-}
-
-$size-2xl: 1.5rem;
-$line-2xl: 2rem;
-@mixin text-2xl {
-	font-size: $size-2xl;
-  line-height: $line-2xl;
-}
-
-$size-3xl: 1.875rem;
-$line-3xl: 2.25rem;
-@mixin text-3xl {
-	font-size: $size-3xl;
-  line-height: $line-3xl;
-}
-
-$size-4xl: 2.25rem;
-$line-4xl: 2.5rem;
-@mixin text-4xl {
-	font-size: $size-4xl;
-  line-height: $line-4xl;
-}
-
-$size-8xl: 6rem;
-$line-8xl: 1;
-@mixin text-8xl {
-  font-size: $size-8xl;
-  line-height: $line-8xl;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 @mixin container-width($width: $md) {
