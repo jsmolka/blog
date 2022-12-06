@@ -3,11 +3,11 @@
     {{ range .Paginator.Pages }}
       <div class="item">
         <h1><a
-          href="{{ .RelPermalink }}">{{- .Title -}}</a
+          href="{{ .RelPermalink }}">{{ .Title }}</a
         ></h1>
         {{ partial "meta" . }}
         {{ with .Description }}
-          <div>{{- . -}}</div>
+          <div>{{ . }}</div>
         {{ end }}
       </div>
       <hr>

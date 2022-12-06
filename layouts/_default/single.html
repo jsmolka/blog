@@ -6,7 +6,7 @@
       {{ if or $showMeta $showTitle }}
         <header>
           {{ if $showTitle }}
-            <h1>{{- .Title | safeHTML -}}</h1>
+            <h1>{{ .Title }}</h1>
           {{ end }}
           {{ if $showMeta }}
             {{ partial "meta" . }}

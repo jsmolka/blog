@@ -14,6 +14,6 @@
     <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>
   {{ with $cap }}
-    <figcaption>{{- . | $.Page.RenderString -}}</figcaption>
+    <figcaption>{{ . | $.Page.RenderString }}</figcaption>
   {{ end }}
 </figure>
