@@ -2,7 +2,10 @@
   <ul>
     {{- range $.Site.Menus.footer -}}
       <li>
-        {{ printf "[%s](%s)" .Name .URL | $.Page.RenderString }}
+        <a
+          href="{{ .URL | safeURL }}"
+          {{ if (strings.HasPrefix .URL "http") }} target="_blank" {{ end }}
+        >{{- .Name | safeHTML -}}</a>
       </li>
     {{- end -}}
   </ul>

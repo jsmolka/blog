@@ -1,8 +1,6 @@
 @import "utils";
 
 .not-found {
-  @include container-padding;
-  margin: auto;
   text-align: center;
 
   .error {
