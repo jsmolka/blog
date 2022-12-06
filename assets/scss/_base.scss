@@ -105,24 +105,6 @@ ol, ul, menu {
   list-style: none;
 }
 
-pre, code {
-  background: $neutral-5;
-  font-size: 0.85rem;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  border-radius: 1px;
-  hyphens: none;
-}
-
-pre {
-  padding: spacing(3) spacing(4);
-  overflow: auto;
-  white-space: pre;
-}
-
-:not(pre) > code {
-  padding: spacing(0.5) spacing(1.5);
-}
-
 ::selection {
   background: $accent;
   color: $neutral-1;

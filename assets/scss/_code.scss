@@ -1,11 +1,29 @@
 @import "utils";
 
+pre, code {
+  background: $neutral-5;
+  font-size: 0.85rem;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  border-radius: 1px;
+  hyphens: none;
+}
+
+pre {
+  padding: spacing(3) spacing(4);
+  overflow: auto;
+  white-space: pre;
+}
+
+:not(pre) > code {
+  padding: spacing(0.5) spacing(1.5);
+}
+
 @mixin define($factor) {
-  --prism-del: #{scale-color(#bf616a, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-dec: #{scale-color(#88c0d0, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-key: #{scale-color(#81a1c1, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-num: #{scale-color(#b48ead, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-str: #{scale-color(#a3be8c, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --code-del: #{scale-color(#bf616a, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --code-dec: #{scale-color(#88c0d0, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --code-key: #{scale-color(#81a1c1, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --code-num: #{scale-color(#b48ead, $lightness: $factor * -10%, $saturation: $factor * 20%)};
+  --code-str: #{scale-color(#a3be8c, $lightness: $factor * -10%, $saturation: $factor * 20%)};
 }
 
 :root {
@@ -39,15 +57,15 @@
 .token.tag,
 .token.url,
 .token.variable {
-  color: var(--prism-key);
+  color: var(--code-key);
 }
 
 .token.deleted {
-  color: var(--prism-del);
+  color: var(--code-del);
 }
 
 .token.number {
-  color: var(--prism-num);
+  color: var(--code-num);
 }
 
 .token.attr-name,
@@ -57,14 +75,14 @@
 .token.regex,
 .token.selector,
 .token.string {
-  color: var(--prism-str);
+  color: var(--code-str);
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  color: var(--prism-dec);
+  color: var(--code-dec);
 }
 
 .token.bold,
