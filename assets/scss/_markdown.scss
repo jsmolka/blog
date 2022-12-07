@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  :not(h1, h2, h3) > a {
+  :not(h1, h2, h3) a {
     text-decoration: underline;
   }
 

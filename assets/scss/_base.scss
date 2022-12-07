@@ -108,14 +108,3 @@ ol, ul, menu {
     display: none;
   }
 }
-
-.page-not-found {
-  text-align: center;
-
-  .error-code {
-    color: $neutral-1;
-    font-size: 6rem;
-    font-weight: 900;
-    line-height: 1;
-  }
-}
