@@ -16,7 +16,7 @@
     margin-top: spacing(8) !important;
   }
 
-  :not(h1, h2, h3) a {
+  :not(h1, h2, h3) > a {
     text-decoration: underline;
   }
 
