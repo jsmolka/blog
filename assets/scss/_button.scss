@@ -1,13 +1,5 @@
 @import "utils";
 
-button {
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  border: none;
-  cursor: pointer;
-}
-
 .button {
   padding: spacing(0.5) spacing(1.5);
   background: $neutral-6;

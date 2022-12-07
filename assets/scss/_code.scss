@@ -14,7 +14,7 @@ pre {
   white-space: pre;
 }
 
-:not(pre) > code {
+:not(pre) code {
   padding: spacing(0.5) spacing(1.5);
 }
 

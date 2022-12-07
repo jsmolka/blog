@@ -16,12 +16,22 @@
     margin-top: spacing(8) !important;
   }
 
+  :not(h1, h2, h3) a {
+    text-decoration: underline;
+  }
+
   audio, img, figure, table {
     width: 100%;
   }
 
-  :not(h1, h2, h3) a {
-    text-decoration: underline;
+  blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2.5);
+    padding: spacing(3) spacing(5);
+    padding-right: 0;
+    font-style: italic;
+    border-left: 4px solid $neutral-2;
   }
 
   ul, ol {
@@ -57,27 +67,8 @@
     list-style: decimal;
   }
 
-  blockquote {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(2.5);
-    padding: spacing(3) spacing(5);
-    padding-right: 0;
-    font-style: italic;
-    border-left: 4px solid $neutral-2;
-  }
-
-  a[href^="#fn:"] {
-    text-decoration: none;
-    font-feature-settings: "tnum";
-
-    &::before { content: '['; }
-    &::after  { content: ']'; }
-  }
-
-  sub, sup {
-    font: inherit;
-    vertical-align: baseline;
+  table {
+    text-align: left;
   }
 
   pre, .escape {
@@ -96,6 +87,19 @@
     @include screen-sm {
       flex-direction: column;
     }
+  }
+
+  sub, sup {
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  a[href^="#fn:"] {
+    text-decoration: none;
+    font-feature-settings: "tnum";
+
+    &::before { content: '['; }
+    &::after  { content: ']'; }
   }
 
   .footnotes {
