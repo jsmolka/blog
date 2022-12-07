@@ -29,25 +29,14 @@ a {
 }
 
 b, strong {
-  font-weight: bolder;
-}
-
-button {
-  background: transparent;
-  cursor: pointer;
-}
-
-button, input {
-  font: inherit;
-  color: inherit;
-  border: none;
+  font-weight: 700;
 }
 
 figure {
   display: flex;
   flex-direction: column;
   gap: spacing(2);
-  overflow: auto;
+  overflow-x: auto;
 }
 
 figcaption {
@@ -110,7 +99,7 @@ ol, ul, menu {
   color: $neutral-1;
 }
 
-.hidden, [hidden], [v-cloak] {
+[hidden], [v-cloak] {
   display: none;
 }
 
