@@ -18,14 +18,12 @@ class Bar {
       const up = (event) => {
         window.removeEventListener('pointermove', onMove);
         window.removeEventListener('pointerup', up);
-        window.document.body.classList.remove('cursor-pointer', 'select-none');
         onMove(event);
         onMoveEnd();
       };
 
       window.addEventListener('pointermove', onMove);
       window.addEventListener('pointerup', up);
-      window.document.body.classList.add('cursor-pointer', 'select-none');
       onMoveBegin();
       onMove(event);
     });
@@ -40,7 +38,7 @@ export default function Audio(src) {
       <div class="audio">
         <audio ref="audio" type="audio/mp3" preload="metadata"></audio>
         <button ref="stateButton">
-          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" :d="paused ? icons.play : icons.pause" />
           </svg>
         </button>
@@ -57,7 +55,7 @@ export default function Audio(src) {
             </div>
           </div>
           <button ref="volumeButton">
-            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker" />
             </svg>
           </button>
