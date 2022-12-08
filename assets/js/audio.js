@@ -15,15 +15,22 @@ class Bar {
         return;
       }
 
+      const cursor = window.document.body.style.cursor;
+      const select = window.document.body.style.userSelect;
+
       const up = (event) => {
         window.removeEventListener('pointermove', onMove);
         window.removeEventListener('pointerup', up);
+        window.document.body.style.cursor = cursor;
+        window.document.body.style.userSelect = select;
         onMove(event);
         onMoveEnd();
       };
 
       window.addEventListener('pointermove', onMove);
       window.addEventListener('pointerup', up);
+      window.document.body.style.cursor = 'pointer';
+      window.document.body.style.userSelect = 'none';
       onMoveBegin();
       onMove(event);
     });
@@ -36,25 +43,23 @@ export default function Audio(src) {
   return {
     $template: /* html */ `
       <div class="audio">
-        <audio ref="audio" type="audio/mp3" preload="metadata"></audio>
-        <button ref="stateButton">
+        <audio ref="audio" hidden type="audio/mp3" preload="metadata"></audio>
+        <button class="state-button" ref="stateButton">
           <svg width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" :d="paused ? icons.play : icons.pause" />
           </svg>
         </button>
         <div>{{ format(time) }} / {{ format(duration) }}</div>
-        <div class="progress">
-          <div class="bar" ref="progressBar">
-            <div class="scrubber" :style="{ '--value': duration === 0 ? 0 : time / duration }"></div>
-          </div>
+        <div class="bar" ref="progressBar">
+          <div class="scrubber" :style="{ '--value': duration === 0 ? 0 : time / duration }"></div>
         </div>
-        <div class="volume-menu" ref="volume">
+        <div class="volume-group" ref="volume">
           <div class="volume" :style="{ width: volumeHover || volumeActive ? '5rem' : 0 }">
             <div class="bar" ref="volumeBar">
               <div class="scrubber" :style="{ '--value': muted ? 0 : volume }"></div>
             </div>
           </div>
-          <button ref="volumeButton">
+          <button class="volume-button" ref="volumeButton">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path fill="currentColor" :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker" />
             </svg>
