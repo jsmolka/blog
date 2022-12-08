@@ -1,11 +1,11 @@
-const Prism = require('prismjs');
-require('prismjs/components/prism-clike');
-require('prismjs/components/prism-c');
-require('prismjs/components/prism-cpp');
-require('prismjs/components/prism-diff');
-require('prismjs/components/prism-javascript');
-require('prismjs/components/prism-toml');
-require('prismjs/plugins/diff-highlight/prism-diff-highlight');
+import Prism from 'prismjs';
+import 'prismjs/components/prism-clike.js';
+import 'prismjs/components/prism-c.js';
+import 'prismjs/components/prism-cpp.js';
+import 'prismjs/components/prism-diff.js';
+import 'prismjs/components/prism-javascript.js';
+import 'prismjs/components/prism-toml.js';
+import 'prismjs/plugins/diff-highlight/prism-diff-highlight.js';
 
 Prism.languages.cpp.keyword = [
   Prism.languages.cpp.keyword,
@@ -51,3 +51,5 @@ Prism.languages.drizzle = {
   operator: /\.\.|[-+%=]=?|!=|:=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,
   punctuation: /[{}[\];(),.:]/,
 };
+
+export default Prism;

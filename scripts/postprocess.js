@@ -1,8 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-const { JSDOM } = require('jsdom');
-require('../assets/js/prism');
+import { writeFileSync } from 'fs';
+import { dirname } from 'path';
+import glob from 'glob';
+import { JSDOM } from 'jsdom';
+import { fileURLToPath } from 'url';
+import Prism from '../assets/js/prism.js';
 
 function highlight(document) {
   let changed = false;
@@ -28,25 +29,28 @@ function trim(document) {
   return changed;
 }
 
-function slash(path) {
-  return path.replace(/\\/g, '/');
+async function postprocess(file) {
+  const dom = await JSDOM.fromFile(file);
+  const document = dom.window.document;
+
+  let changed = false;
+  changed |= highlight(document);
+  changed |= trim(document);
+
+  if (changed) {
+    console.log(file);
+    writeFileSync(file, dom.serialize());
+  }
 }
 
 function main() {
-  glob(slash(path.join(__dirname, '../public/**/*.html')), async (_, files) => {
-    for (const file of files) {
-      const dom = await JSDOM.fromFile(file);
-      const document = dom.window.document;
-
-      let changed = false;
-      changed |= highlight(document);
-      changed |= trim(document);
-
-      if (changed) {
-        fs.writeFileSync(file, dom.serialize());
-      }
-    }
-  });
+  const self = fileURLToPath(import.meta.url);
+  const options = {
+    cwd: dirname(dirname(self))
+  };
+  for (const file of glob.sync('public/**/*.html', options)) {
+    postprocess(file);
+  }
 }
 
 main();
