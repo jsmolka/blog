@@ -14,11 +14,11 @@ function highlight(document) {
   return changed;
 }
 
-function trim(document) {
+function removeTrailingSlashes(document) {
   let changed = false;
   for (const link of document.getElementsByTagName('a')) {
     const href = link.getAttribute('href');
-    const matches = href.match(/^((?:https:\/\/smolka\.dev)?\/.*\/)(#.*)?$/);
+    const matches = href.match(/^((?:.*smolka\.dev)?\/.*\/)(#.*)?$/);
     if (matches) {
       matches.splice(0, 1);  // Remove match
       matches[0] = matches[0].slice(0, -1);  // Remove trailing slash
@@ -35,10 +35,9 @@ async function postprocess(file) {
 
   let changed = false;
   changed |= highlight(document);
-  changed |= trim(document);
+  changed |= removeTrailingSlashes(document);
 
   if (changed) {
-    console.log(file);
     writeFileSync(file, dom.serialize());
   }
 }
