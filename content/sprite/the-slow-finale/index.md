@@ -5,7 +5,7 @@ tags: ["sprite", "emulation", "programming"]
 date: 2022-10-08
 type: post
 ---
-Hello ladies and gentlemen! Please take a seat and enjoy the finale of the series nobody asked for: yet another Game Boy emulator. Over the course of the [last few episodes](https://github.com/jsmolka/img/compare/0.3...0.4), we managed to implement a stunning three of eight relevant memory banking controllers. That allowed us to load ROMs with a size of up to two megabytes and increased our catalog of potential commercial games to more than two. Technology is truly incredible!
+Hello ladies and gentlemen! Please take a seat and enjoy the finale of the series nobody asked for: yet another Game Boy emulator. Over the course of the [last few episodes](https://github.com/jsmolka/sprite/compare/0.3...0.4), we managed to implement a stunning three of eight relevant memory banking controllers. That allowed us to load ROMs with a size of up to two megabytes and increased our catalog of potential commercial games to more than two. Technology is truly incredible!
 
 {{<wrap>}}
   {{<image src="img/technology.png" caption="Technology is incredible guy">}}
