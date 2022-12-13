@@ -2,20 +2,20 @@
 
 pre, code {
   background: $neutral-5;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   border-radius: 1px;
   hyphens: none;
 }
 
 pre {
-  padding: spacing(3) spacing(4);
+  padding: spacing(2) spacing(3);
   overflow-x: auto;
   white-space: pre;
 }
 
 :not(pre) > code {
-  padding: spacing(0.5) spacing(1.5);
+  padding: spacing(0.75) spacing(1.5);
 }
 
 @mixin define($factor) {

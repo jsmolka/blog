@@ -9,11 +9,11 @@
   }
 
   @include tail {
-    margin-top: spacing(5);
+    margin-top: spacing(4);
   }
 
   :is(h1, h2, h3):not(:first-child) {
-    margin-top: spacing(8) !important;
+    margin-top: spacing(6) !important;
   }
 
   :not(h1, h2, h3) > a {
@@ -27,8 +27,8 @@
   blockquote {
     display: flex;
     flex-direction: column;
-    gap: spacing(2.5);
-    padding: spacing(3) spacing(5);
+    gap: spacing(4);
+    padding: spacing(2) spacing(4);
     padding-right: 0;
     font-style: italic;
     border-left: 4px solid $neutral-2;
