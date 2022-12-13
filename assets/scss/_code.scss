@@ -93,15 +93,15 @@ pre {
 .token.deleted:not(.prefix),
 .token.inserted:not(.prefix) {
   display: block;
-  margin: 0 spacing(-4);
+  margin: 0 spacing(-3);
   color: inherit;
 
   & > :first-child {
-    margin-left: spacing(4);
+    margin-left: spacing(3);
   }
 
   & > :last-child {
-    margin-right: spacing(4);
+    margin-right: spacing(3);
   }
 }
 
