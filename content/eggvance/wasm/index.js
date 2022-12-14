@@ -63,13 +63,18 @@ window.Module = {
     }
   },
 
-  updateBackground(dark) {
-    this.eggvanceSetBackground(dark ? 0xff22272e : 0xffffffff);
+  updateBackground() {
+    const background = getComputedStyle(this.canvas).getPropertyValue('background-color');
+    const rgb = background.match(/\d+/g);
+    const r = parseInt(rgb[0]);
+    const g = parseInt(rgb[1]);
+    const b = parseInt(rgb[2]);
+    this.eggvanceSetBackground((r << 16) | (g << 8) | b);
   }
 };
 
 window.onload = () => {
-  window.theme.callbacks.push((dark) => {
-    Module.updateBackground(dark);
+  window.theme.callbacks.push(() => {
+    Module.updateBackground();
   });
 };
