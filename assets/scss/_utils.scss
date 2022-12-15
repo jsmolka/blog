@@ -21,23 +21,23 @@ $xl: 80rem;
 @mixin screen-xl { @media screen and (max-width: $xl) { @content } };
 
 @mixin text-sm {
-  font-size: 0.85rem;
-  line-height: 1.25rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
 }
 
 @mixin text-md {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   line-height: 1.75rem;
 }
 
 @mixin text-lg {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1.75rem;
 }
 
 @mixin text-xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 $l-neutral-1: rgb(36, 41, 47);

@@ -15,11 +15,11 @@
   .item {
     display: flex;
     flex-direction: column;
-    gap: spacing(5);
+    gap: spacing(4);
 
     h1 {
       @include text-lg;
-      margin-bottom: spacing(-1.5);
+      margin-bottom: spacing(-1);
     }
   }
 }

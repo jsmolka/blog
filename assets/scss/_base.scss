@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   background: $neutral-6;
   color: $neutral-2;
-  font-size: 15px;
+  font-size: 14px;
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
   font-feature-settings: "calt", "ccmp", "cv07", "kern";
   line-height: 1.65;
@@ -50,7 +50,7 @@ th {
 }
 
 th, td {
-  padding: spacing(2) spacing(3);
+  padding: spacing(1.5) spacing(2.5);
   border: 1px solid $neutral-4;
 }
 
