@@ -194,7 +194,7 @@ u8 glpyh[8] = {
 };
 ```
 
-The most important problem to solve was rendering text in assembly, which turned out to be much easier than expected. First, I extracted a simple font from [tonclib](http://www.coranac.com/tonc/text/toc.htm), where each text glyph is encoded in eight bytes like in the example shown above. Then I wrote an algorithm to render the text itself. It uses the GBAs bitmap background mode and moves each bit in the glyph data into a byte in video memory. That's it. All text rendering functions were done in merely [71 lines of code](https://github.com/jsmolka/gba-suite/blob/b9b17ed487e47c8fbfe30570eb7917b12e606f4e/lib/text.asm). These already include setting up certain registers and colors as well as positioning the text.
+The most important problem to solve was rendering text in assembly, which turned out to be much easier than expected. First, I extracted a simple font from [tonclib](https://www.coranac.com/tonc/text/toc.htm), where each text glyph is encoded in eight bytes like in the example shown above. Then I wrote an algorithm to render the text itself. It uses the GBAs bitmap background mode and moves each bit in the glyph data into a byte in video memory. That's it. All text rendering functions were done in merely [71 lines of code](https://github.com/jsmolka/gba-suite/blob/b9b17ed487e47c8fbfe30570eb7917b12e606f4e/lib/text.asm). These already include setting up certain registers and colors as well as positioning the text.
 
 ```armv4t
 text_glyph_data:

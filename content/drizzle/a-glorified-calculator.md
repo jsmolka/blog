@@ -5,7 +5,7 @@ tags: ["drizzle", "language", "programming"]
 date: 2021-09-20
 type: post
 ---
-Creating a programming language has been on my mind for a while, and the paperback release of [Crafting Interpreters](http://www.craftinginterpreters.com/), as well as the 1.1 release of eggvance, finally gave me the time and motivation to start working on it. I didn't know much about grammar or parsing back then, but I know at least something now.
+Creating a programming language has been on my mind for a while, and the paperback release of [Crafting Interpreters](https://www.craftinginterpreters.com/), as well as the 1.1 release of eggvance, finally gave me the time and motivation to start working on it. I didn't know much about grammar or parsing back then, but I know at least something now.
 
 drizzle is a dynamic interpreted programming language, and its C++ implementation uses a bytecode virtual machine to execute the code as fast as possible. I was surprised to see that this is essentially just another emulator with a custom CISC instruction set. That means I can at least use some of the knowledge acquired from my previous endeavor.
 

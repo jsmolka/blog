@@ -119,7 +119,7 @@ Running mGBA's [test suite](https://github.com/mgba-emu/suite) made me realize f
   {{<image src="img/kart-flickering-2.png" caption="Mario Kart sprites visible">}}
 {{</wrap>}}
 
-The basic add, subtract and reverse subtract operations were doing fine, but their "[operation] with carry" counterparts resulted in a wrong carry and/or overflow flag. I found a nice [website](http://teaching.idallen.com/dat2343/10f/notes/040_overflow.txt) that explains overflow detection for basic addition and subtraction.
+The basic add, subtract and reverse subtract operations were doing fine, but their "[operation] with carry" counterparts resulted in a wrong carry and/or overflow flag. I found a nice [website](https://teaching.idallen.com/dat2343/10f/notes/040_overflow.txt) that explains overflow detection for basic addition and subtraction.
 
 ```cpp
 bool carryAdd(u64 op1, u64 op2) {
