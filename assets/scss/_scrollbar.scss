@@ -8,11 +8,11 @@
 }
 
 :root {
-  @include define($l-neutral-6, -1);
+  @include define($neutral-6-l, -1);
 }
 
 .dark {
-  @include define($d-neutral-6, 1);
+  @include define($neutral-6-d, 1);
 }
 
 * {
