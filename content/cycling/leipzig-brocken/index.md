@@ -1,7 +1,7 @@
 ---
 title: "Leipzig → Brocken"
 description: "Climbing the highest mountain of Northern Germany."
-tags: ["aeroad", "cycling"]
+tags: ["cycling"]
 date: 2022-06-15
 type: post
 ---

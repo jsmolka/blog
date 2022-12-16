@@ -1,7 +1,7 @@
 ---
 title: "Rossfeld Panorama Road"
 description: "Are those real mountains?"
-tags: ["aeroad", "cycling"]
+tags: ["cycling"]
 date: 2022-06-28
 type: post
 ---
