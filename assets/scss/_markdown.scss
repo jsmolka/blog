@@ -81,7 +81,7 @@
 
   .wrap {
     display: flex;
-    gap: spacing(5);
+    gap: spacing(4);
     overflow-x: auto;
 
     @include screen-sm {
@@ -119,7 +119,7 @@
         counter-increment: footnote-count;
 
         @include tail {
-          margin-top: spacing(5);
+          margin-top: spacing(4);
         }
 
         &::marker {
