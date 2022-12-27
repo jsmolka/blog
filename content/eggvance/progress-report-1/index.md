@@ -9,6 +9,8 @@ I finished my introduction project to C++ at the end of last year. Since then, I
 
 Finishing the previous project also meant looking for a new one. The idea of creating a GBA emulator originated in a C++ programming class [^1] where one of my fellow students asked if the emulator I was playing on was the project for the class. I responded with "no", but the idea got stuck in my head.
 
+[^1]: What a boring class this was. The lecturer went over the basics of structured programming and the C/C++ memory model. At least I could use the time to work on my side projects.
+
 ## Black Box
 The inner workings of an emulator were completely alien to me. It was a black box that took input in form of ROMs and produced output in form of childhood nostalgia. Not knowing anything about video console emulation or something alike, I headed out to [/r/EmuDev](https://www.reddit.com/r/EmuDev/) and asked how to get started. The people there proposed the typical order for someone new to emulation:
 
@@ -19,6 +21,9 @@ The inner workings of an emulator were completely alien to me. It was a black bo
 Getting the Chip-8 to work took a couple of hours. It was neither interesting nor challenging, and I can't understand how some people pour weeks into creating visual debuggers or complex frontends for this boring thing. It was a nice exercise to get familiar with basic CPU concepts and graphics libraries but nothing more.
 
 I then moved on to the GB and hoped for equally fast progress. I soon realized that it would require much more time to get something working (what a surprise /s) and decided to abandon it because it wasn't what I wanted to do [^2]. I wanted to write a GBA emulator, and that's what I did. Now, exactly seven months after the initial commit, I feel like it's in a state that is worth talking about [^3].
+
+[^2]: I'll revisit GB emulation at some point in the future but for now, it just isn't what I want to do.
+[^3]: I regret not starting this earlier. The sensation of getting even the simplest demo to work was amazing, and booting Pokémon Emerald for the first time made me jump across the room in euphoria.
 
 {{<wrap>}}
   {{<image src="img/pokemon-emerald.png" caption="Pokémon Emerald title screen">}}
@@ -85,7 +90,3 @@ A precondition for playing through a whole game were working save implementation
 
 ## Final Words
 All of this progress sounds great. Sadly you can't hear it because there is no audio implementation just yet. That's the last thing I'll do. Before that, I need to improve the accuracy and performance of the emulator. It's not bad, but I could be better. This report will serve as a baseline, and I'll try to make more of those with specific information in the future.
-
-[^1]: What a boring class this was. The lecturer went over the basics of structured programming and the C/C++ memory model. At least I could use the time to work on my side projects.
-[^2]: I'll revisit GB emulation at some point in the future but for now, it just isn't what I want to do.
-[^3]: I regret not starting this earlier. The sensation of getting even the simplest demo to work was amazing, and booting Pokémon Emerald for the first time made me jump across the room in euphoria.

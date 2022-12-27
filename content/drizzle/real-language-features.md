@@ -44,6 +44,16 @@ void Vm::loadGlobal() {
 ## Collections
 Lists and maps are vital parts of a programming language, and drizzle wouldn't be complete without them. Parsing the values of a list and the key-value pairs of a map was a little annoying due to drizzle being whitespace aware [^1]. Each indent, dedent, and new line must be taken care of, or the parser throws a syntax error.
 
+[^1]: If I were to design another language, I definitely wouldn't do whitespace awareness again. It makes many things complicated or outright impossible:
+
+    - What counts as an indentation?
+    - Can we mix spaces and tabs? If so, how many spaces are one tab?
+    - How do we define anonymous functions with multiple lines?
+    - How do we define a classic `for` loop with initializer, condition, and expression?
+    - How do we parse list/map expressions with multiple lines?
+
+    Just use braces and ignore whitespace. It makes life much easier.
+
 ```drizzle
 var list = [0, 1, 2]
 list.push(3)
@@ -99,13 +109,3 @@ for c in "slow":
 
 ## Outlook
 Now I will start working on the Game Boy emulator. I will write a prototype in C++ and then translate it to drizzle. Because of the lack of a proper foreign function interface, I will add SDL-related classes to drizzle and make it possible to enable them with a compiler switch. I also have the feeling that there are some hard-to-find bugs left in the code that will make me suffer.
-
-[^1]: If I were to design another language, I definitely wouldn't do whitespace awareness again. It makes many things complicated or outright impossible:
-
-    - What counts as an indentation?
-    - Can we mix spaces and tabs? If so, how many spaces are one tab?
-    - How do we define anonymous functions with multiple lines?
-    - How do we define a classic `for` loop with initializer, condition, and expression?
-    - How do we parse list/map expressions with multiple lines?
-
-    Just use braces and ignore whitespace. It makes life much easier.
