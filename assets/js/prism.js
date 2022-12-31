@@ -4,6 +4,7 @@ import 'prismjs/components/prism-c.js';
 import 'prismjs/components/prism-cpp.js';
 import 'prismjs/components/prism-diff.js';
 import 'prismjs/components/prism-javascript.js';
+import 'prismjs/components/prism-rust.js';
 import 'prismjs/components/prism-toml.js';
 import 'prismjs/plugins/diff-highlight/prism-diff-highlight.js';
 
