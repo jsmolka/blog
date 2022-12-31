@@ -16,7 +16,7 @@ The thing that changed the most was me getting out there and doing more group ri
 
 The standout ones to me were:
 
-- A [ride](https://www.strava.com/activities/7593182003) through the Ore Mountains at the  Czech–German border
+- A [ride](https://www.strava.com/activities/7593182003) through the Ore Mountains at the  Czech-German border
 - A four-day visit of a friend in Munich, which included a stunning ride through the [Bavarian Prealps](https://www.strava.com/activities/7290927694) and an epic climb up the [Rossfeld panorama road]({{<relref "rossfeld-panorama-road">}})
 - A [250 km ride]({{<relref "leipzig-brocken">}}) to the Brocken, [twice](https://www.strava.com/activities/7403550389)
 - A [260 km ride](https://www.strava.com/activities/7560351593) back from the Brocken, the longest I've done so far
