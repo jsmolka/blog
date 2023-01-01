@@ -8,7 +8,16 @@
       "headers" : [
         {
           "key" : "Cache-Control",
-          "value" : "public, max-age=300"
+          "value" : "public, max-age=0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(.*)",
+      "headers" : [
+        {
+          "key" : "Cache-Control",
+          "value" : "public, max-age=86400"
         }
       ]
     },
@@ -22,7 +31,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(css|js|woff2)",
+      "source": "/(.*)\\.(js|css|jpg|png|mp3|woff2)",
       "headers" : [
         {
           "key" : "Cache-Control",
