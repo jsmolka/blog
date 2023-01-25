@@ -4,7 +4,7 @@ pre, code {
   background: $neutral-5;
   font-size: 0.8rem;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  border-radius: 1px;
+  border-radius: $border-radius;
   hyphens: none;
 }
 

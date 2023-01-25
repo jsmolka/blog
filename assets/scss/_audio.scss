@@ -9,7 +9,7 @@
   color: $neutral-3;
   font-weight: 500;
   font-feature-settings: "calt", "tnum";
-  border-radius: 1px;
+  border-radius: $border-radius;
   touch-action: none;
 
   button {
