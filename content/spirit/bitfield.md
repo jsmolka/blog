@@ -72,7 +72,7 @@ The problem one might encounter when using it in an emulator is that the accesso
 bitfield! {
     struct PPUCTRL: u8 {
         nametable: u8 @ 0..2 => |value| -> u16 {
-          0x2000 + (value as u16) * 0x400
+            0x2000 + (value as u16) * 0x400
         },
     }
 }
