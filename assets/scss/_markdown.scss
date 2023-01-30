@@ -76,6 +76,13 @@
 
     @include screen-md {
       margin: 0 spacing(-4);
+    }
+  }
+
+  @include screen-md {
+    pre {
+      padding-left: spacing(4);
+      padding-right: spacing(4);
       border-radius: 0;
     }
   }
