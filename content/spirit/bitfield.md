@@ -7,7 +7,7 @@ type: post
 ---
 A lot of emulation comes down to bit manipulation. Consoles are nothing more than microcontrollers designed to be as efficient as possible without wasting precious memory. Memory-mapped I/O registers are the norm and control everything from the pixels you see on the screen to the samples that come out of the speakers. A typical data structure to deal with that kind of data is a bitfield, which Rust doesn't support [natively](https://github.com/rust-lang/rfcs/pull/3113).
 
-I understand and support the design decision not to add them to the language. Rust is supposed to be memory-safe, and bitfields tend to go hand in hand with [unions](https://doc.rust-lang.org/reference/items/unions.html), which are inherently `unsafe` creatures. Rust's macro system is also flexible enough to implement a fully functional bitfield yourself. Many [crates](https://immunant.com/blog/2020/01/bitfields/) are attempting to fill that gaping hole in the language, but until now, I wasn't able to find anything that checks every one of my requirements:
+I understand and support the design decision not to add them to the language. Rust is supposed to be memory-safe, and bitfields tend to go hand in hand with [unions](https://doc.rust-lang.org/reference/items/unions.html), which are inherently `unsafe` creatures. Rust's macro system is also flexible enough to implement a fully functional bitfield yourself. Many [crates](https://immunant.com/blog/2020/01/bitfields/) have attempted to fill that gaping hole in the language, but until now, I wasn't able to find one that fits my needs:
 
 - An elegant syntax
 - Automatic masking of unused bits
