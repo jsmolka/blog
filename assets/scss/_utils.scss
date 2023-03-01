@@ -3,7 +3,7 @@
 }
 
 $border-radius: spacing(0.5);
-$padding-container: spacing(16) spacing(4);
+$container-padding: spacing(16) spacing(4);
 
 @mixin tail {
   & > :not([hidden]) ~ :not([hidden]) {
