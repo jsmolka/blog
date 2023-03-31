@@ -16,4 +16,4 @@ When I bought my first road bike for commuting, I didn't expect it to turn into 
   {{<image src="img/nebra.jpg" caption="Near the location of Nebra's sky disc">}}
 {{</wrap>}}
 
-Improving your body's ability to handle high stress levels is a skill that develops gradually over time. I increased my average mileage throughout the last years and decided to put it to the test. I had a week of residual leave and kept delaying it, hoping for better weather, which never came. It was a long week with mixed weather in which I rode 1094 km in 34:40 hours. It's a milestone in my cycling career, and I crossed some beautiful places off my bucket list.
+Improving your body's ability to handle high stress levels is a skill that develops gradually over time. I increased my average mileage throughout the last years and decided to put it to the test. I had a week of residual leave and kept delaying it, hoping for better weather, which never came. It was a long week with mixed weather in which I rode 1094 km in 34:40. It's a milestone in my cycling career, and I crossed some beautiful places off my bucket list.
