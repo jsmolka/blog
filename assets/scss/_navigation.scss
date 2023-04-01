@@ -36,49 +36,7 @@
 
   .items {
     display: flex;
-    align-items: center;
     gap: spacing(8);
-  }
-
-  .nav {
-    display: flex;
-
-    @include screen-sm {
-      display: none;
-    }
-
-    ul {
-      display: flex;
-      align-items: center;
-      gap: spacing(8);
-    }
-  }
-
-  .mobile {
-    display: none;
-    position: relative;
-
-    @include screen-sm {
-      display: flex;
-    }
-  }
-
-  .mobile-nav {
-    position: absolute;
-    top: spacing(10);
-    right: 0;
-    background: $neutral-5;
-    z-index: 9999;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-
-      a {
-        display: flex;
-        padding: spacing(1.5) spacing(2.5);
-      }
-    }
   }
 }
 
