@@ -2,10 +2,7 @@
   <ul>
     {{ range $.Site.Menus.footer }}
       <li>
-        <a
-          href="{{ .URL }}"
-          {{ if (strings.HasPrefix .URL "http") }}target="_blank" rel="noopener"{{ end }}
-        >{{ .Name }}</a>
+        {{ partial "link" . }}
       </li>
     {{ end }}
   </ul>

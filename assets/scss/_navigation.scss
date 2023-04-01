@@ -1,5 +1,27 @@
 @import "utils";
 
+.title {
+  display: flex;
+  align-items: center;
+  gap: spacing(1.5);
+  font-weight: 800;
+
+  &::after {
+    content: '';
+    width: spacing(2.5);
+    height: spacing(4);
+    background: $accent;
+    border-radius: 1px;
+    animation: pulsate 1s infinite;
+
+    @keyframes pulsate {
+        0% { opacity: 0; }
+       50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -12,30 +34,9 @@
   color: $neutral-1;
   font-weight: 500;
 
-  .brand {
+  ul, .menu {
     display: flex;
     align-items: center;
-    gap: spacing(1.5);
-    font-weight: 800;
-
-    &::after {
-      content: '';
-      width: spacing(2.5);
-      height: spacing(4);
-      background: $accent;
-      border-radius: 1px;
-      animation: pulsate 1s infinite;
-
-      @keyframes pulsate {
-          0% { opacity: 0; }
-         50% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-    }
-  }
-
-  .items {
-    display: flex;
     gap: spacing(8);
   }
 }
@@ -47,6 +48,7 @@
 
   ul {
     display: flex;
+    align-items: center;
     gap: spacing(6);
   }
 }

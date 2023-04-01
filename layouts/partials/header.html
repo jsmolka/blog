@@ -1,11 +1,11 @@
 <header class="header">
-  <a href="/" class="brand">{{ $.Site.Title }}</a>
-  <div class="items">
+  <a href="/" class="title">{{ $.Site.Title }}</a>
+  <div class="menu">
     <nav>
-      <ul class="items">
+      <ul>
         {{ range $.Site.Menus.header }}
           <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ partial "link" . }}
           </li>
         {{ end }}
       </ul>
