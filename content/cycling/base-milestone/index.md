@@ -5,7 +5,7 @@ tags: ["cycling"]
 date: 2023-03-31
 type: post
 ---
-My mom loves to tell the story about picking me up from kindergarden. Its house and entrance were connected by a small stretch of pavement, and me walking it was an experience &mdash; an endless loop of a child running, falling, and standing back up again. It seemed like I didn't know how to move slowly. I lost this magical urge to move over time, and when I graduated from university, I was an unfit chubby mess of a human being [^1].
+My mom loves to tell the story about picking me up from kindergarden. Its house and entrance were connected by a small stretch of pavement, and me walking it was an experience &mdash; an endless loop of a child running, falling, and standing back up. It seemed like I didn't know how to move slowly. I lost this magical urge to move over time, and when I graduated from university, I was an unfit chubby mess of a human being [^1].
 
 [^1]: A benefit of being almost two meters is that people don't realize that.
 
@@ -16,4 +16,4 @@ When I bought my first road bike for commuting, I didn't expect it to turn into 
   {{<image src="img/nebra.jpg" caption="Near the location of Nebra's sky disc">}}
 {{</wrap>}}
 
-Improving your body's ability to handle high stress levels is a skill that develops gradually over time. I increased my average mileage throughout the last years and decided to put it to the test. I had a week of residual leave and kept delaying it, hoping for better weather, which never came. It was a long week with mixed weather in which I rode 1094 km in 34:40. It's a milestone in my cycling career, and I crossed some beautiful places off my bucket list.
+Improving your body's ability to handle high stress levels is a skill that develops gradually over time. I increased my average mileage throughout the years and decided to put my body to the test. I had a week of residual leave and kept delaying it, hoping for better weather, but the forecast was mixed at best. It turned out to be a cloudy and windy week with scattered showers, in which I rode 1094 km in 34:40, a milestone in my cycling career.
