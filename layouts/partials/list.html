@@ -1,15 +1,17 @@
 <div class="list">
-  <div class="items">
+  <div class="content">
     {{ range .Paginator.Pages }}
-      <div class="item">
-        <h1><a
-          href="{{ .RelPermalink }}">{{ .Title }}</a
-        ></h1>
-        {{ partial "meta" . }}
+      <article>
+        <header>
+          <h1><a
+            href="{{ .RelPermalink }}">{{ .Title }}</a
+          ></h1>
+          {{ partial "meta" . }}
+        </header>
         {{ with .Description }}
           <div>{{ . }}</div>
         {{ end }}
-      </div>
+      </article>
       <hr>
     {{ end }}
   </div>

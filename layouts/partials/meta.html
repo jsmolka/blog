@@ -6,12 +6,14 @@
     &mdash; {{ .ReadingTime }} minute read
   </div>
   {{ if .Params.Tags }}
-    <ul class="tags">
-      {{ range .Params.Tags }}
-        <li>
-          <a href="/tags/{{ . | urlize }}/">{{ . }}</a>
-        </li>
-      {{ end }}
-    </ul>
+    <nav>
+      <ul>
+        {{ range .Params.Tags }}
+          <li>
+            <a href="/tags/{{ . | urlize }}/">{{ . }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
   {{ end }}
 </div>

@@ -4,7 +4,7 @@
   {{ $src = .RelPermalink }}
 {{ else }}
   {{ $src = $src | relURL }}
-  {{ if not (fileExists (path.Join "static" $src)) }}
+  {{ if not fileExists (path.Join "static" $src) }}
     {{ errorf "file not found %s" $src }}
   {{ end }}
 {{ end }}

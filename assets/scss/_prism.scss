@@ -18,7 +18,7 @@ pre {
   padding: spacing(0.5) spacing(1);
 }
 
-@mixin define($factor) {
+@mixin variables($factor) {
   --prism-del: #{scale-color(#bf616a, $lightness: $factor * -10%, $saturation: $factor * 20%)};
   --prism-dec: #{scale-color(#88c0d0, $lightness: $factor * -10%, $saturation: $factor * 20%)};
   --prism-key: #{scale-color(#81a1c1, $lightness: $factor * -10%, $saturation: $factor * 20%)};
@@ -27,11 +27,11 @@ pre {
 }
 
 :root {
-  @include define(1);
+  @include variables(1);
 }
 
 .dark {
-  @include define(0);
+  @include variables(0);
 }
 
 [class*="language-"] .namespace {

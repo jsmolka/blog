@@ -1,6 +1,6 @@
 @import "utils";
 
-@mixin define($background, $factor) {
+@mixin variables($background, $factor) {
   --track-1: #{scale-color($background, $lightness: $factor * 5%)};
   --thumb-1: #{scale-color($background, $lightness: $factor * 20%)};
   --thumb-2: #{scale-color($background, $lightness: $factor * 30%)};
@@ -8,11 +8,11 @@
 }
 
 :root {
-  @include define($neutral-6-l, -1);
+  @include variables($neutral-6-l, -1);
 }
 
 .dark {
-  @include define($neutral-6-d, 1);
+  @include variables($neutral-6-d, 1);
 }
 
 * {

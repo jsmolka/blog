@@ -6,20 +6,20 @@
   align-items: center;
   gap: spacing(16);
 
-  .items {
+  .content {
     display: flex;
     flex-direction: column;
     gap: spacing(8);
   }
 
-  .item {
+  article, header {
     display: flex;
     flex-direction: column;
     gap: spacing(4);
+  }
 
-    h1 {
-      @include text-md;
-      margin-bottom: spacing(-1);
-    }
+  h1 {
+    @include text-md;
+    margin-bottom: spacing(-1);
   }
 }

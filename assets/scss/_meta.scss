@@ -8,15 +8,15 @@
   color: $neutral-3;
   font-weight: 500;
 
-  .tags {
+  ul {
     display: flex;
     gap: spacing(2);
+  }
 
-    a {
-      display: flex;
-      background: $neutral-5;
-      padding: spacing(0.75) spacing(1.5);
-      border-radius: $border-radius;
-    }
+  a {
+    display: block;
+    padding: spacing(0.75) spacing(1.5);
+    background: $neutral-5;
+    border-radius: $border-radius;
   }
 }
