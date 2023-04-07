@@ -24,21 +24,25 @@ $xl: 80rem;
 @mixin text-sm {
   font-size: 0.8rem;
   line-height: 1rem;
+  letter-spacing: 0.005em;
 }
 
 @mixin text-md {
   font-size: 1.1rem;
   line-height: 1.75rem;
+  letter-spacing: -0.011em;
 }
 
 @mixin text-lg {
   font-size: 1.2rem;
   line-height: 1.75rem;
+  letter-spacing: -0.013em;
 }
 
 @mixin text-xl {
   font-size: 1.6rem;
   line-height: 2rem;
+  letter-spacing: -0.019em;
 }
 
 $neutral-1-l: rgb(36, 41, 47);
