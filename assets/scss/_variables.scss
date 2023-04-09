@@ -1,21 +1,21 @@
 @import "utils";
 
 :root {
-  --neutral-1: #{$neutral-1-l};
-  --neutral-2: #{$neutral-2-l};
-  --neutral-3: #{$neutral-3-l};
-  --neutral-4: #{$neutral-4-l};
-  --neutral-5: #{$neutral-5-l};
-  --neutral-6: #{$neutral-6-l};
-  --accent: #{$accent-l};
+  --neutral-1: #{$neutral-1-light};
+  --neutral-2: #{$neutral-2-light};
+  --neutral-3: #{$neutral-3-light};
+  --neutral-4: #{$neutral-4-light};
+  --neutral-5: #{$neutral-5-light};
+  --neutral-6: #{$neutral-6-light};
+  --accent: #{$accent-light};
 }
 
 .dark {
-  --neutral-1: #{$neutral-1-d};
-  --neutral-2: #{$neutral-2-d};
-  --neutral-3: #{$neutral-3-d};
-  --neutral-4: #{$neutral-4-d};
-  --neutral-5: #{$neutral-5-d};
-  --neutral-6: #{$neutral-6-d};
-  --accent: #{$accent-d};
+  --neutral-1: #{$neutral-1-dark};
+  --neutral-2: #{$neutral-2-dark};
+  --neutral-3: #{$neutral-3-dark};
+  --neutral-4: #{$neutral-4-dark};
+  --neutral-5: #{$neutral-5-dark};
+  --neutral-6: #{$neutral-6-dark};
+  --accent: #{$accent-dark};
 }
