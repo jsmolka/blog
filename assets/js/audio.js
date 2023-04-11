@@ -46,22 +46,22 @@ export default function Audio(src) {
         <audio ref="audio" hidden type="audio/mp3" preload="metadata"></audio>
         <button class="state-button" ref="stateButton">
           <svg width="22" height="22" viewBox="0 0 24 24">
-            <path fill="currentColor" :d="paused ? icons.play : icons.pause" />
+            <path fill="currentColor" :d="paused ? icon.play : icon.pause" />
           </svg>
         </button>
-        <div>{{ format(time) }} / {{ format(duration) }}</div>
-        <div class="bar" ref="progressBar">
-          <div class="scrubber" :style="{ '--value': duration === 0 ? 0 : time / duration }"></div>
+        <div class="time">{{ format(time) }} / {{ format(duration) }}</div>
+        <div class="progress-bar" ref="progressBar">
+          <div class="slider" :style="{ '--value': duration === 0 ? 0 : time / duration }"></div>
         </div>
-        <div class="volume-group" ref="volume">
-          <div class="volume" :style="{ width: volumeHover || volumeActive ? '5rem' : 0 }">
-            <div class="bar" ref="volumeBar">
-              <div class="scrubber" :style="{ '--value': muted ? 0 : volume }"></div>
+        <div class="volume" ref="volume">
+          <div class="volume-bar-wrapper" :style="{ width: volumeInteract ? '5rem' : 0 }">
+            <div class="volume-bar" ref="volumeBar">
+              <div class="slider" :style="{ '--value': muted ? 0 : volume }"></div>
             </div>
           </div>
           <button class="volume-button" ref="volumeButton">
             <svg width="22" height="22" viewBox="0 0 24 24">
-              <path fill="currentColor" :d="muted || volume === 0 ? icons.speakerMuted : icons.speaker" />
+              <path fill="currentColor" :d="muted || volume === 0 ? icon.speakerMuted : icon.speaker" />
             </svg>
           </button>
         </div>
@@ -73,9 +73,8 @@ export default function Audio(src) {
     paused: true,
     muted: false,
     volume: 0.66,
-    volumeHover: false,
-    volumeActive: false,
-    icons: {
+    volumeInteract: 0,
+    icon: {
       play: 'M8 5.14v14l11-7l-11-7z',
       pause: 'M14 19h4V5h-4M6 19h4V5H6v14z',
       speaker: 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z',
@@ -96,14 +95,12 @@ export default function Audio(src) {
         instances.push(this);
       });
 
-      onIntersect(element, () => {
-        this.$refs.audio.setAttribute('src', src);
-      }, { rootMargin: '256px' });
+      onIntersect(element, () => this.$refs.audio.setAttribute('src', src), { rootMargin: '256px' });
     },
 
     init() {
-      for (const type of ['play', 'pause', 'ended', 'stalled', 'waiting', 'timeupdate', 'durationchange', 'volumechange']) {
-        this.$refs.audio.addEventListener(type, () => this.update());
+      for (const event of ['play', 'pause', 'ended', 'stalled', 'waiting', 'timeupdate', 'durationchange', 'volumechange']) {
+        this.$refs.audio.addEventListener(event, () => this.update());
       }
 
       this.$refs.stateButton.addEventListener('click', () => {
@@ -114,11 +111,11 @@ export default function Audio(src) {
         }
       });
 
-      this.initProgressBar();
-      this.initVolumeBar();
+      this.initProgress();
+      this.initVolume();
     },
 
-    initProgressBar() {
+    initProgress() {
       let paused = false;
 
       const bar = new Bar(this.$refs.progressBar);
@@ -138,17 +135,17 @@ export default function Audio(src) {
       };
     },
 
-    initVolumeBar() {
+    initVolume() {
       this.$refs.volumeButton.addEventListener('click', () => this.$refs.audio.muted = !this.$refs.audio.muted);
 
       if (!isMobileDevice()) {
-        this.$refs.volume.addEventListener('pointerenter', () => this.volumeHover = true);
-        this.$refs.volume.addEventListener('pointerleave', () => this.volumeHover = false);
+        this.$refs.volume.addEventListener('pointerenter', () => this.volumeInteract++);
+        this.$refs.volume.addEventListener('pointerleave', () => this.volumeInteract--);
 
         const bar = new Bar(this.$refs.volumeBar);
         bar.onMove = (percentage) => this.setVolume(percentage);
-        bar.onMoveBegin = () => this.volumeActive = true;
-        bar.onMoveEnd = () => this.volumeActive = false;
+        bar.onMoveBegin = () => this.volumeInteract++;
+        bar.onMoveEnd = () => this.volumeInteract--;
       }
     },
 
@@ -164,7 +161,7 @@ export default function Audio(src) {
     },
 
     setVolume(volume) {
-      this.volume = clamp(volume, 0, 1);
+      this.volume = volume;
       this.$refs.audio.muted = false;
       this.$refs.audio.volume = Math.pow(this.volume, 3);
       localStorage.setItem('volume', this.volume);
@@ -172,11 +169,9 @@ export default function Audio(src) {
 
     format(time) {
       time = isNaN(time) ? 0 : time;
-
-      const mins = Math.floor(time / 60).toString();
-      const secs = Math.floor(time % 60).toString();
-
-      return `${mins}:${secs.padStart(2, '0')}`;
+      const min = Math.floor(time / 60).toString();
+      const sec = Math.floor(time % 60).toString();
+      return `${min}:${sec.padStart(2, '0')}`;
     },
 
     update() {

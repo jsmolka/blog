@@ -1,14 +1,16 @@
 @import "utils";
 
+@mixin bar {
+  flex: 1;
+  padding: spacing(2) 0;
+  cursor: pointer;
+}
+
 .audio {
-  @include text-sm;
   display: flex;
   align-items: center;
-  gap: spacing(3);
   background: $neutral-5;
   color: $neutral-3;
-  font-weight: 500;
-  font-feature-settings: "calt", "tnum";
   border-radius: $border-radius;
   touch-action: none;
 
@@ -17,20 +19,40 @@
   }
 
   .state-button {
-    margin-right: spacing(-2.5);
+    margin-right: spacing(0.5);
+  }
+
+  .time {
+    @include text-sm;
+    margin-right: spacing(3);
+    font-weight: 500;
+    font-feature-settings: "calt", "tnum";
+  }
+
+  .progress-bar {
+    @include bar;
+    margin-right: spacing(3);
+  }
+
+  .volume {
+    display: flex;
+    align-items: center;
+  }
+
+  .volume-bar-wrapper {
+    transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .volume-bar {
+    @include bar;
+    margin-right: spacing(3);
   }
 
   .volume-button {
     margin-left: spacing(-2);
   }
 
-  .bar {
-    flex: 1;
-    padding: spacing(2) 0;
-    cursor: pointer;
-  }
-
-  .scrubber {
+  .slider {
     display: flex;
     height: spacing(1);
     background: $neutral-4;
@@ -39,20 +61,6 @@
       content: '';
       width: calc(100% * var(--value));
       background: $neutral-3;
-    }
-  }
-
-  .volume-group {
-    display: flex;
-    align-items: center;
-  }
-
-  .volume {
-    flex: 1;
-    transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    .bar {
-      margin-right: spacing(3);
     }
   }
 }
