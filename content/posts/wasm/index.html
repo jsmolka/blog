@@ -1,0 +1,37 @@
+﻿---
+title: "WebAssembly Port"
+description: "WebAssembly port of the eggvance GBA emulator."
+tags: ["eggvance", "emulation"]
+date: 2020-04-12
+type: blank
+---
+<div v-scope="{ controls: false }" class="index">
+  <canvas id="canvas"></canvas>
+  <input hidden ref="gba" type="file" accept=".gba" @change="Module.loadGba($el)">
+  <input hidden ref="sav" type="file" accept=".sav" @change="Module.loadSav($el)">
+  <div class="buttons">
+    <button class="button" @click="$refs.gba.click">Load rom</button>
+    <button class="button" @click="$refs.sav.click">Load save</button>
+    <button class="button" @click="Module.loadDemo($el)">Load demo</button>
+    <button class="button" @click="controls = !controls" v-text="controls ? 'Hide controls' : 'Show controls'">Show controls</button>
+  </div>
+  <div v-cloak v-show="controls" class="controls">
+  {{<markdown>}}
+  | Emulator            | Keyboard | Controller |
+  |---------------------|----------|------------|
+  | Up                  | W        | Up         |
+  | Down                | S        | Down       |
+  | Left                | A        | Left       |
+  | Right               | D        | Right      |
+  | A                   | U        | B          |
+  | B                   | H        | A          |
+  | Start               | G        | Start      |
+  | Select              | F        | Back       |
+  | L                   | Q        | L          |
+  | R                   | I        | R          |
+  | Reset               | R        | -          |
+  | Change refresh rate | 1 to 6   | -          |
+  {{</markdown>}}
+  </div>
+</div>
+<script src="/eggvance/wasm/data/eggvance.js" defer></script>

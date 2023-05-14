@@ -12,7 +12,7 @@ showTitle: false
   {{<image src="img/zelda.png" caption="Zelda intro sequence">}}
 {{</wrap>}}
 
-The initial implementation didn't even manage to emulate the console at half speed. Optimizations like using a [specializing adaptive interpreter]({{<relref "drizzle/a-new-hope/#specializing-adaptive-interpreter">}}) in drizzle and replacing the class with free functions and variables in sprite increased the performance to 125%, which resulted in a stable frame rate at native speed.
+The initial implementation didn't even manage to emulate the console at half speed. Optimizations like using a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) in drizzle and replacing the class with free functions and variables in sprite increased the performance to 125%, which resulted in a stable frame rate at native speed.
 
 # drizzle
 [drizzle](https://github.com/jsmolka/drizzle) is a dynamic interpreted programming language with a syntax similar to Python.
@@ -37,7 +37,7 @@ var triangle = [Point(0, 0), Point(4, 4), Point(0, 4)]
 assert(area(triangle) == 8.0)
 ```
 
-It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a [Game Boy emulator](#sprite). It provides simple SDL2 and filesystem abstractions to achieve that. The latest version also features a [specializing adaptive interpreter]({{<relref "drizzle/a-new-hope/#specializing-adaptive-interpreter">}}) to squeeze out the last bit of performance.
+It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a [Game Boy emulator](#sprite). It provides simple SDL2 and filesystem abstractions to achieve that. The latest version also features a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) to squeeze out the last bit of performance.
 
 {{<wrap>}}
   {{<image src="img/icon-drizzle.png" caption="Icon of drizzle rendered with SDL2">}}
@@ -52,7 +52,7 @@ It started as an exercise for language design and whitespace-aware parsing and g
   {{<image src="img/mother.png" caption="Final moments of Mother 3">}}
 {{</wrap>}}
 
-Other components of the system soon followed, and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly]({{<relref "eggvance/wasm">}}). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.
+Other components of the system soon followed, and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly]({{<relref "posts/wasm">}}). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.
 
 {{<wrap>}}
   {{<audio src="audio/battle-frontier.mp3" caption="Pokémon Emerald battle frontier theme">}}
