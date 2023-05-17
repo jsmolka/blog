@@ -52,7 +52,7 @@ window.Module = {
     this.pending = true;
     button.innerHTML = 'Loading...';
     try {
-      const data = await this.readUrl('data/celeste.gba');
+      const data = await this.readUrl(location.href.replace(/\/?$/, '/') + 'data/celeste.gba');
       const name = this.writeFile(data, 'gba');
       this.eggvanceLoadGba(name);
     } catch (error) {
