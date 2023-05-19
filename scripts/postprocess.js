@@ -1,13 +1,13 @@
 import { writeFileSync } from 'fs';
-import { dirname } from 'path';
-import glob from 'glob';
+import { globSync } from 'glob';
 import { JSDOM } from 'jsdom';
+import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Prism from '../assets/js/prism.js';
 
 function highlight(document) {
   let changed = false;
-  if (document.querySelector(':is(code, pre)[class*="language-"]')) {
+  if (document.querySelector(':is(code, pre)[class^="language-"]')) {
     Prism.highlightAllUnder(document);
     changed = true;
   }
@@ -47,7 +47,7 @@ function main() {
   const options = {
     cwd: dirname(dirname(self))
   };
-  for (const file of glob.sync('public/**/*.html', options)) {
+  for (const file of globSync('public/**/*.html', options)) {
     postprocess(file);
   }
 }
