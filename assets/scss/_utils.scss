@@ -45,21 +45,21 @@ $xl: 80rem;
   letter-spacing: -0.019em;
 }
 
-$neutral-1-light: rgb(36, 41, 47);
-$neutral-2-light: rgb(64, 73, 83);
-$neutral-3-light: rgb(170, 179, 190);
-$neutral-4-light: rgb(228, 228, 240);
-$neutral-5-light: rgb(248, 248, 250);
-$neutral-6-light: rgb(255, 255, 255);
-$accent-light: rgb(167, 202, 226);
+$neutral-1-light: hsl(215, 15%, 15%);
+$neutral-2-light: hsl(215, 15%, 30%);
+$neutral-3-light: hsl(215, 15%, 70%);
+$neutral-4-light: hsl(215, 15%, 90%);
+$neutral-5-light: hsl(215, 15%, 97%);
+$neutral-6-light: hsl(215, 15%, 100%);
+$accent-light: hsl(205, 50%, 75%);
 
-$neutral-1-dark: rgb(249, 252, 255);
-$neutral-2-dark: rgb(205, 211, 217);
-$neutral-3-dark: rgb(110, 122, 134);
-$neutral-4-dark: rgb(68, 78, 92);
-$neutral-5-dark: rgb(45, 52, 61);
-$neutral-6-dark: rgb(34, 39, 46);
-$accent-dark: rgb(80, 133, 181);
+$neutral-1-dark: hsl(215, 15%, 97%);
+$neutral-2-dark: hsl(215, 15%, 80%);
+$neutral-3-dark: hsl(215, 15%, 40%);
+$neutral-4-dark: hsl(215, 15%, 30%);
+$neutral-5-dark: hsl(215, 15%, 20%);
+$neutral-6-dark: hsl(215, 15%, 15%);
+$accent-dark: hsl(205, 40%, 50%);
 
 $neutral-1: var(--neutral-1);
 $neutral-2: var(--neutral-2);
