@@ -34,8 +34,8 @@ async function postprocess(file) {
   const document = dom.window.document;
 
   let changed = false;
-  changed ||= highlight(document);
-  changed ||= removeTrailingSlashes(document);
+  changed |= highlight(document);
+  changed |= removeTrailingSlashes(document);
 
   if (changed) {
     writeFileSync(file, dom.serialize());
