@@ -9,8 +9,8 @@
 .audio {
   display: flex;
   align-items: center;
-  background: $neutral-5;
-  color: $neutral-3;
+  background: $gray-5;
+  color: $gray-3;
   border-radius: $border-radius;
   touch-action: none;
 
@@ -55,12 +55,12 @@
   .slider {
     display: flex;
     height: spacing(1);
-    background: $neutral-4;
+    background: $gray-4;
 
     &::after {
       content: '';
       width: calc(100% * var(--value));
-      background: $neutral-3;
+      background: $gray-3;
     }
   }
 }

@@ -3,8 +3,8 @@
 body {
   display: flex;
   flex-direction: column;
-  background: $neutral-6;
-  color: $neutral-2;
+  background: $gray-6;
+  color: $gray-2;
   font-size: 14px;
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
   font-feature-settings: "cv07";
@@ -25,7 +25,7 @@ figcaption {
 }
 
 h1, h2, h3 {
-  color: $neutral-1;
+  color: $gray-1;
   text-align: left;
   font-weight: 800;
 
@@ -40,22 +40,22 @@ h2 { @include text-lg; &::before { content:  '##' } }
 h3 { @include text-md; &::before { content: '###' } }
 
 hr {
-  border-bottom: 2px dashed $neutral-4;
+  border-bottom: 2px dashed $gray-4;
 }
 
 th {
-  color: $neutral-1;
+  color: $gray-1;
   font-weight: 700;
 }
 
 th, td {
   padding: spacing(1.5) spacing(2.5);
-  border: 1px solid $neutral-4;
+  border: 1px solid $gray-4;
 }
 
 ::selection {
   background: $accent;
-  color: $neutral-1;
+  color: $gray-1;
 }
 
 [hidden], [v-cloak] {

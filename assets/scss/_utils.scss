@@ -1,3 +1,5 @@
+@import "palette";
+
 @function spacing($value) {
   @return #{(0.25 * $value)}rem;
 }
@@ -45,26 +47,10 @@ $xl: 80rem;
   letter-spacing: -0.019em;
 }
 
-$neutral-1-light: hsl(215, 15%, 15%);
-$neutral-2-light: hsl(215, 15%, 30%);
-$neutral-3-light: hsl(215, 15%, 70%);
-$neutral-4-light: hsl(215, 15%, 90%);
-$neutral-5-light: hsl(215, 15%, 97%);
-$neutral-6-light: hsl(215, 15%, 100%);
-$accent-light: hsl(205, 50%, 75%);
-
-$neutral-1-dark: hsl(215, 15%, 97%);
-$neutral-2-dark: hsl(215, 15%, 80%);
-$neutral-3-dark: hsl(215, 15%, 40%);
-$neutral-4-dark: hsl(215, 15%, 30%);
-$neutral-5-dark: hsl(215, 15%, 20%);
-$neutral-6-dark: hsl(215, 15%, 15%);
-$accent-dark: hsl(205, 40%, 50%);
-
-$neutral-1: var(--neutral-1);
-$neutral-2: var(--neutral-2);
-$neutral-3: var(--neutral-3);
-$neutral-4: var(--neutral-4);
-$neutral-5: var(--neutral-5);
-$neutral-6: var(--neutral-6);
+$gray-1: var(--gray-1);
+$gray-2: var(--gray-2);
+$gray-3: var(--gray-3);
+$gray-4: var(--gray-4);
+$gray-5: var(--gray-5);
+$gray-6: var(--gray-6);
 $accent: var(--accent);

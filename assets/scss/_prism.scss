@@ -1,7 +1,7 @@
 @import "utils";
 
 pre, code {
-  background: $neutral-5;
+  background: $gray-5;
   font-size: 0.8rem;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   border-radius: $border-radius;
@@ -42,7 +42,7 @@ pre {
 .token.comment,
 .token.doctype,
 .token.prolog {
-  color: $neutral-3;
+  color: $gray-3;
 }
 
 .token.boolean,

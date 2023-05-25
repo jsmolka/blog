@@ -1,21 +1,21 @@
-@import "utils";
+@import "palette";
 
 :root {
-  --neutral-1: #{$neutral-1-light};
-  --neutral-2: #{$neutral-2-light};
-  --neutral-3: #{$neutral-3-light};
-  --neutral-4: #{$neutral-4-light};
-  --neutral-5: #{$neutral-5-light};
-  --neutral-6: #{$neutral-6-light};
+  --gray-1: #{$gray-1-light};
+  --gray-2: #{$gray-2-light};
+  --gray-3: #{$gray-3-light};
+  --gray-4: #{$gray-4-light};
+  --gray-5: #{$gray-5-light};
+  --gray-6: #{$gray-6-light};
   --accent: #{$accent-light};
 }
 
 .dark {
-  --neutral-1: #{$neutral-1-dark};
-  --neutral-2: #{$neutral-2-dark};
-  --neutral-3: #{$neutral-3-dark};
-  --neutral-4: #{$neutral-4-dark};
-  --neutral-5: #{$neutral-5-dark};
-  --neutral-6: #{$neutral-6-dark};
+  --gray-1: #{$gray-1-dark};
+  --gray-2: #{$gray-2-dark};
+  --gray-3: #{$gray-3-dark};
+  --gray-4: #{$gray-4-dark};
+  --gray-5: #{$gray-5-dark};
+  --gray-6: #{$gray-6-dark};
   --accent: #{$accent-dark};
 }

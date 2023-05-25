@@ -8,11 +8,11 @@
 }
 
 :root {
-  @include variables($neutral-6-light, -1);
+  @include variables($gray-6-light, -1);
 }
 
 .dark {
-  @include variables($neutral-6-dark, 1);
+  @include variables($gray-6-dark, 1);
 }
 
 * {
