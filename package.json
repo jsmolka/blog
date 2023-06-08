@@ -16,8 +16,5 @@
   },
   "dependencies": {
     "petite-vue": "^0.4.1"
-  },
-  "overrides": {
-    "nwsapi": "2.2.2"
   }
 }
