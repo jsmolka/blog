@@ -5,7 +5,7 @@ tags: ["cycling"]
 date: 2023-06-19
 type: post
 ---
-My obsession with cycling continues and this time it has taken me to the province of Trentino. Originally scheduled to coincide with [stage 16](https://www.giroditalia.it/en/tappe/stage-16-of-the-giro-ditalia-2023-sabbio-chiese-monte-bondone/) of this year's Giro d'Italia, the organizers decided to throw a spanner in the works and bring the race forward by a week. So we were left with road painings on the key climbs and pink banners, posters, and signs all over the place.
+My obsession with cycling continues and this time it has taken me to the province of Trentino. Originally scheduled to coincide with [stage 16](https://www.giroditalia.it/en/tappe/stage-16-of-the-giro-ditalia-2023-sabbio-chiese-monte-bondone/) of this year's Giro d'Italia, the organizers decided to throw a spanner in the works and bring the race forward by a week. So we were left with road paintings on the key climbs and pink banners, posters, and signs all over the place.
 
 {{<wrap>}}
   {{<image src="img/san-colombano.jpg" caption="Eremo di San Colombano">}}
