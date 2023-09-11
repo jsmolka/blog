@@ -1,6 +1,6 @@
 ---
-title: "Overobsessed?"
-description: "Overachieving distance goals."
+title: "Overobsessed"
+description: "6348 km ahead of plan."
 tags: ["cycling"]
 date: 2023-09-10
 type: post
