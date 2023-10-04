@@ -3,10 +3,10 @@ import Audio from './audio';
 
 const store = reactive({
   get theme() {
-    return window.theme.value;
+    return window.theme.theme;
   },
-  set theme(value) {
-    window.theme.value = value;
+  set theme(theme) {
+    window.theme.theme = theme;
   },
  });
 

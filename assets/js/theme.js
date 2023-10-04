@@ -4,27 +4,27 @@ const pcsd = window.matchMedia('(prefers-color-scheme: dark)');
 class Theme {
   constructor() {
     this.callbacks = [];
-    this.value = this.value;
+    this.theme = this.theme;
 
     pcsd.addEventListener('change', ({ matches }) => {
-      if (this.value === 'system') {
+      if (this.theme === 'system') {
         this.dark = matches;
       }
     });
   }
 
-  get value() {
+  get theme() {
     return localStorage.getItem('theme') ?? 'system';
   }
 
-  set value(value) {
-    html.setAttribute('theme', value);
-    localStorage.setItem('theme', value);
+  set theme(theme) {
+    html.setAttribute('theme', theme);
+    localStorage.setItem('theme', theme);
     this.dark = this.dark;
   }
 
   get dark() {
-    switch (this.value) {
+    switch (this.theme) {
       case 'system':
         return pcsd.matches;
       case 'dark':
