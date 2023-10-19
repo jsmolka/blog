@@ -9,9 +9,9 @@
 .audio {
   display: flex;
   align-items: center;
-  background: $gray-5;
+  background: $gray-7;
   color: $gray-3;
-  border-radius: $border-radius;
+  border-radius: $radius;
   touch-action: none;
 
   button {
@@ -55,10 +55,10 @@
   .slider {
     display: flex;
     height: spacing(1);
-    background: $gray-4;
+    background: $gray-5;
 
     &::after {
-      content: '';
+      content: "";
       width: calc(100% * var(--value));
       background: $gray-3;
     }

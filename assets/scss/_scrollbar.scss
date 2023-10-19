@@ -1,37 +1,27 @@
 @import "utils";
 
-@mixin variables($background, $factor) {
-  --track-1: #{scale-color($background, $lightness: $factor * 5%)};
-  --thumb-1: #{scale-color($background, $lightness: $factor * 20%)};
-  --thumb-2: #{scale-color($background, $lightness: $factor * 30%)};
-  --thumb-3: #{scale-color($background, $lightness: $factor * 40%)};
-}
-
-:root {
-  @include variables($gray-6-light, -1);
-}
-
-.dark {
-  @include variables($gray-6-dark, 1);
-}
-
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--thumb-1) var(--track-1);
+  scrollbar-color: $gray-6 $gray-7;
 }
 
 ::-webkit-scrollbar {
-  width: spacing(2);
-  height: spacing(2);
+  width: spacing(2.5);
+  height: spacing(2.5);
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: var(--track-1);
+  background: $gray-7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--thumb-1);
+  background: $gray-6;
 
-  &:hover  { background: var(--thumb-2); }
-  &:active { background: var(--thumb-3); }
+  &:hover {
+    background: $gray-5;
+  }
+
+  &:active {
+    background: $gray-4;
+  }
 }

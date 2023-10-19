@@ -7,17 +7,23 @@
   font-weight: 800;
 
   &::after {
-    content: '';
+    content: "";
     width: spacing(2.5);
     height: spacing(4);
-    background: $accent;
+    background: $blue-3;
     border-radius: 1px;
     animation: pulsate 1s infinite;
 
     @keyframes pulsate {
-        0% { opacity: 0; }
-       50% { opacity: 1; }
-      100% { opacity: 0; }
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
     }
   }
 }
@@ -34,7 +40,7 @@
   color: $gray-1;
   font-weight: 500;
 
-  ul, .content {
+  ul {
     display: flex;
     align-items: center;
     gap: spacing(8);

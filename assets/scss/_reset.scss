@@ -1,4 +1,6 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +10,8 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -17,7 +20,8 @@ a {
   text-decoration: inherit;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -33,16 +37,22 @@ hr {
   border: none;
 }
 
-img, video, audio, canvas, svg {
+img,
+video,
+audio,
+canvas,
+svg {
   display: block;
 }
 
-img, video {
+img,
+video {
   height: auto;
   max-width: 100%;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 

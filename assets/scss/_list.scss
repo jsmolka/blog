@@ -12,7 +12,8 @@
     gap: spacing(8);
   }
 
-  article, header {
+  article,
+  header {
     display: flex;
     flex-direction: column;
     gap: spacing(4);

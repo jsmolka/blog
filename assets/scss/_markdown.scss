@@ -20,7 +20,10 @@
     text-decoration: underline;
   }
 
-  audio, img, figure, table {
+  audio,
+  img,
+  figure,
+  table {
     width: 100%;
   }
 
@@ -31,10 +34,11 @@
     padding: spacing(2) spacing(4);
     padding-right: 0;
     font-style: italic;
-    border-left: 4px solid $gray-2;
+    border-left: 4px solid $gray-6;
   }
 
-  ul, ol {
+  ul,
+  ol {
     display: flex;
     flex-direction: column;
     gap: spacing(1);
@@ -53,7 +57,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: spacing(1.7);
       left: spacing(-4);
@@ -71,7 +75,8 @@
     text-align: left;
   }
 
-  pre, .escape {
+  pre,
+  .escape {
     margin: 0;
 
     @include screen-md {
@@ -97,7 +102,8 @@
     }
   }
 
-  sub, sup {
+  sub,
+  sup {
     font: inherit;
     vertical-align: baseline;
   }
@@ -106,8 +112,13 @@
     text-decoration: none;
     font-feature-settings: "tnum";
 
-    &::before { content: '['; }
-    &::after  { content: ']'; }
+    &::before {
+      content: "[";
+    }
+
+    &::after {
+      content: "]";
+    }
   }
 
   .footnotes {
@@ -131,7 +142,7 @@
         }
 
         &::marker {
-          content: '[' counter(footnote-count) ']';
+          content: "[" counter(footnote-count) "]";
           font-feature-settings: "tnum";
         }
       }

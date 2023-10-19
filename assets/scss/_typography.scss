@@ -1,33 +1,33 @@
 @import "hugo:vars";
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 100 900;
   font-display: block;
   font-style: normal;
-  src: url($inter) format('woff2');
+  src: url($inter) format("woff2");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 100 900;
   font-display: block;
   font-style: italic;
-  src: url($inter-italic) format('woff2');
+  src: url($inter-italic) format("woff2");
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   font-weight: 100 800;
   font-display: block;
   font-style: normal;
-  src: url($jetbrains-mono) format('woff2');
+  src: url($jetbrains-mono) format("woff2");
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   font-weight: 100 800;
   font-display: block;
   font-style: italic;
-  src: url($jetbrains-mono-italic) format('woff2');
+  src: url($jetbrains-mono-italic) format("woff2");
 }

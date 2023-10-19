@@ -1,4 +1,4 @@
-import { clamp, isMobileDevice, onIntersect } from './utils';
+import { clamp, isMobileDevice, onIntersect } from "./utils";
 
 class Bar {
   constructor(element) {
@@ -10,7 +10,7 @@ class Bar {
     const onMoveBegin = () => this.onMoveBegin();
     const onMoveEnd = () => this.onMoveEnd();
 
-    element.addEventListener('pointerdown', (event) => {
+    element.addEventListener("pointerdown", (event) => {
       if (event.button !== 0) {
         return;
       }
@@ -19,18 +19,18 @@ class Bar {
       const select = window.document.body.style.userSelect;
 
       const up = (event) => {
-        window.removeEventListener('pointermove', onMove);
-        window.removeEventListener('pointerup', up);
+        window.removeEventListener("pointermove", onMove);
+        window.removeEventListener("pointerup", up);
         window.document.body.style.cursor = cursor;
         window.document.body.style.userSelect = select;
         onMove(event);
         onMoveEnd();
       };
 
-      window.addEventListener('pointermove', onMove);
-      window.addEventListener('pointerup', up);
-      window.document.body.style.cursor = 'pointer';
-      window.document.body.style.userSelect = 'none';
+      window.addEventListener("pointermove", onMove);
+      window.addEventListener("pointerup", up);
+      window.document.body.style.cursor = "pointer";
+      window.document.body.style.userSelect = "none";
       onMoveBegin();
       onMove(event);
     });
@@ -75,18 +75,20 @@ export default function Audio(src) {
     volume: 0.66,
     volumeInteract: 0,
     icon: {
-      play: 'M8 5.14v14l11-7l-11-7z',
-      pause: 'M14 19h4V5h-4M6 19h4V5H6v14z',
-      speaker: 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z',
-      speakerMuted: 'M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z',
+      play: "M8 5.14v14l11-7l-11-7z",
+      pause: "M14 19h4V5h-4M6 19h4V5H6v14z",
+      speaker:
+        "M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z",
+      speakerMuted:
+        "M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z",
     },
 
     mounted(element) {
-      this.$refs.audio.addEventListener('loadedmetadata', () => {
+      this.$refs.audio.addEventListener("loadedmetadata", () => {
         if (isMobileDevice()) {
           this.setVolume(this.volume);
         } else {
-          this.setVolume(parseFloat(localStorage.getItem('volume') ?? this.volume));
+          this.setVolume(parseFloat(localStorage.getItem("volume") ?? this.volume));
         }
 
         this.init();
@@ -95,15 +97,24 @@ export default function Audio(src) {
         instances.push(this);
       });
 
-      onIntersect(element, () => this.$refs.audio.setAttribute('src', src), { rootMargin: '256px' });
+      onIntersect(element, () => this.$refs.audio.setAttribute("src", src), { rootMargin: "256px" });
     },
 
     init() {
-      for (const event of ['play', 'pause', 'ended', 'stalled', 'waiting', 'timeupdate', 'durationchange', 'volumechange']) {
+      for (const event of [
+        "play",
+        "pause",
+        "ended",
+        "stalled",
+        "waiting",
+        "timeupdate",
+        "durationchange",
+        "volumechange",
+      ]) {
         this.$refs.audio.addEventListener(event, () => this.update());
       }
 
-      this.$refs.stateButton.addEventListener('click', () => {
+      this.$refs.stateButton.addEventListener("click", () => {
         if (this.$refs.audio.paused) {
           this.play();
         } else {
@@ -125,7 +136,7 @@ export default function Audio(src) {
       bar.onMoveBegin = () => {
         paused = this.$refs.audio.paused;
         if (!paused) {
-          this.pause()
+          this.pause();
         }
       };
       bar.onMoveEnd = () => {
@@ -136,11 +147,11 @@ export default function Audio(src) {
     },
 
     initVolume() {
-      this.$refs.volumeButton.addEventListener('click', () => this.$refs.audio.muted = !this.$refs.audio.muted);
+      this.$refs.volumeButton.addEventListener("click", () => (this.$refs.audio.muted = !this.$refs.audio.muted));
 
       if (!isMobileDevice()) {
-        this.$refs.volume.addEventListener('pointerenter', () => this.volumeInteract++);
-        this.$refs.volume.addEventListener('pointerleave', () => this.volumeInteract--);
+        this.$refs.volume.addEventListener("pointerenter", () => this.volumeInteract++);
+        this.$refs.volume.addEventListener("pointerleave", () => this.volumeInteract--);
 
         const bar = new Bar(this.$refs.volumeBar);
         bar.onMove = (percentage) => this.setVolume(percentage);
@@ -164,14 +175,14 @@ export default function Audio(src) {
       this.volume = volume;
       this.$refs.audio.muted = false;
       this.$refs.audio.volume = Math.pow(this.volume, 3);
-      localStorage.setItem('volume', this.volume);
+      localStorage.setItem("volume", this.volume);
     },
 
     format(time) {
       time = isNaN(time) ? 0 : time;
       const min = Math.floor(time / 60).toString();
       const sec = Math.floor(time % 60).toString();
-      return `${min}:${sec.padStart(2, '0')}`;
+      return `${min}:${sec.padStart(2, "0")}`;
     },
 
     update() {

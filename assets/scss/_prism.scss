@@ -1,10 +1,11 @@
 @import "utils";
 
-pre, code {
-  background: $gray-5;
+pre,
+code {
+  background: $gray-7;
   font-size: 0.8rem;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  border-radius: $border-radius;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  border-radius: $radius;
   hyphens: none;
 }
 
@@ -16,22 +17,6 @@ pre {
 
 :not(pre) > code {
   padding: spacing(0.5) spacing(1);
-}
-
-@mixin variables($factor) {
-  --prism-del: #{scale-color(#bf616a, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-dec: #{scale-color(#88c0d0, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-key: #{scale-color(#81a1c1, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-num: #{scale-color(#b48ead, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-  --prism-str: #{scale-color(#a3be8c, $lightness: $factor * -10%, $saturation: $factor * 20%)};
-}
-
-:root {
-  @include variables(1);
-}
-
-.dark {
-  @include variables(0);
 }
 
 [class*="language-"] .namespace {
@@ -57,15 +42,15 @@ pre {
 .token.tag,
 .token.url,
 .token.variable {
-  color: var(--prism-key);
+  color: #81a1c1;
 }
 
 .token.deleted {
-  color: var(--prism-del);
+  color: #bf616a;
 }
 
 .token.number {
-  color: var(--prism-num);
+  color: #b48ead;
 }
 
 .token.attr-name,
@@ -75,14 +60,14 @@ pre {
 .token.regex,
 .token.selector,
 .token.string {
-  color: var(--prism-str);
+  color: #a3be8c;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-  color: var(--prism-dec);
+  color: #88c0d0;
 }
 
 .token.bold,

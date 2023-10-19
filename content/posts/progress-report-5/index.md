@@ -174,7 +174,7 @@ function loadFile(input) {
 
 All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
 
-The result can be tested [here]({{<relref "wasm.html">}}).
+The result can be tested [here](https://eggvance.smolka.dev).
 
 ## Improving Tests
 The last part of this progress report is dedicated to my [GBA test suite](https://github.com/jsmolka/gba-suite). I developed most of it simultaneously with the eggvance CPU to ensure correctness. The whole thing is writing is pure assembly to have the maximum control over it. That was especially important during the start when most instructions weren't implemented yet. At some point, I moved the test suite into a separate repository because it became its own project.

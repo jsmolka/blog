@@ -1,19 +1,18 @@
-@import "palette";
 @import "utils";
 
 .button {
-  padding: spacing(0.75) spacing(1.5);
+  padding: spacing(1) spacing(2);
   background: $gray-6;
   color: $gray-1;
-  font-weight: 500;
-  border: 1px solid $gray-4;
-  border-radius: $border-radius;
   cursor: pointer;
   user-select: none;
 
   &:hover {
-    background: $gray-1;
-    color: $gray-6;
+    background: $gray-5;
+  }
+
+  &:active {
+    background: $gray-4;
   }
 }
 
