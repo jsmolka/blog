@@ -1,3 +1,4 @@
+import storage from "./storage";
 import { clamp, isMobileDevice, onIntersect } from "./utils";
 
 class Bar {
@@ -88,7 +89,7 @@ export default function Audio(src) {
         if (isMobileDevice()) {
           this.setVolume(this.volume);
         } else {
-          this.setVolume(parseFloat(localStorage.getItem("volume") ?? this.volume));
+          this.setVolume(storage.get("volume", this.volume));
         }
 
         this.init();
@@ -175,7 +176,7 @@ export default function Audio(src) {
       this.volume = volume;
       this.$refs.audio.muted = false;
       this.$refs.audio.volume = Math.pow(this.volume, 3);
-      localStorage.setItem("volume", this.volume);
+      storage.set("volume", this.volume);
     },
 
     format(time) {

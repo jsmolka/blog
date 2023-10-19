@@ -1,8 +1,8 @@
-@import "utils";
+@import "common";
 
 .container {
   width: 100%;
-  max-width: $md;
+  max-width: $content;
   margin: auto;
-  padding: $container-padding;
+  padding: spacing(16) spacing(4);
 }

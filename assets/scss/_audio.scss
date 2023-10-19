@@ -1,4 +1,4 @@
-@import "utils";
+@import "common";
 
 @mixin bar {
   flex: 1;
@@ -23,10 +23,10 @@
   }
 
   .time {
-    @include text-sm;
-    margin-right: spacing(3);
+    font-size: $font-sm;
     font-weight: 500;
     font-feature-settings: "calt", "tnum";
+    margin-right: spacing(3);
   }
 
   .progress-bar {

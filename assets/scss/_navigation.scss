@@ -1,4 +1,4 @@
-@import "utils";
+@import "common";
 
 .title {
   display: flex;
@@ -34,7 +34,7 @@
   justify-content: space-between;
   gap: spacing(8);
   width: 100%;
-  max-width: $md;
+  max-width: $content;
   margin: 0 auto;
   padding: spacing(5) spacing(4);
   color: $gray-1;
@@ -48,7 +48,7 @@
 }
 
 .footer {
-  @include text-sm;
+  font-size: $font-sm;
   margin: 0 auto;
   padding: spacing(5) spacing(4);
 

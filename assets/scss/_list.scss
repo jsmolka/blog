@@ -1,4 +1,4 @@
-@import "utils";
+@import "common";
 
 .list {
   display: flex;
@@ -20,7 +20,7 @@
   }
 
   h1 {
-    @include text-md;
+    font-size: $font-md;
     margin-bottom: spacing(-1);
   }
 }

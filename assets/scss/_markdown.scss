@@ -1,10 +1,10 @@
-@import "utils";
+@import "common";
 
 .markdown {
   text-align: justify;
   hyphens: auto;
 
-  @include screen-md {
+  @include constricted {
     text-align: left;
   }
 
@@ -34,7 +34,7 @@
     padding: spacing(2) spacing(4);
     padding-right: 0;
     font-style: italic;
-    border-left: 4px solid $gray-6;
+    border-left: 4px solid;
   }
 
   ul,
@@ -44,7 +44,7 @@
     gap: spacing(1);
     margin-left: spacing(10);
 
-    @include screen-sm {
+    @include constricted {
       margin-left: spacing(4.5);
     }
 
@@ -79,12 +79,12 @@
   .escape {
     margin: 0;
 
-    @include screen-md {
+    @include constricted {
       margin: 0 spacing(-4);
     }
   }
 
-  @include screen-md {
+  @include constricted {
     pre {
       padding-left: spacing(4);
       padding-right: spacing(4);
@@ -97,7 +97,7 @@
     gap: spacing(4);
     overflow-x: auto;
 
-    @include screen-sm {
+    @include constricted {
       flex-direction: column;
     }
   }

@@ -1,10 +1,5 @@
 {{ $opts := dict "target" "es2015" "minify" hugo.IsProduction }}
 
-{{ with resources.Get "js/theme.js" }}
-  {{ $script := . | js.Build $opts }}
-  <script type="text/javascript">{{ $script.Content | safeJS }}</script>
-{{ end }}
-
 {{ $scripts := slice "main.js" }}
 {{ if not hugo.IsProduction }}
   {{ $scripts = $scripts | append "prism.js" }}

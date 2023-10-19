@@ -7,10 +7,10 @@
     "postprocess": "node scripts/postprocess.js"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.15",
-    "glob": "^10.3.4",
+    "autoprefixer": "^10.4.16",
+    "glob": "^10.3.10",
     "jsdom": "^22.1.0",
-    "postcss": "^8.4.29",
+    "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "prismjs": "^1.29.0"
   },

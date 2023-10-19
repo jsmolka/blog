@@ -20,7 +20,7 @@ export function isMobileDevice() {
 }
 
 export function onIntersect(element, callback, options = {}) {
-  if (window["IntersectionObserver"]) {
+  if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries, observer) => {
       for (const entry of entries) {
         if (entry.intersectionRatio > 0 || entry.isIntersecting) {

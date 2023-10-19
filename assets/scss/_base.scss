@@ -1,4 +1,4 @@
-@import "utils";
+@import "common";
 
 body {
   display: flex;
@@ -9,7 +9,42 @@ body {
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
   font-feature-settings: "cv07";
   line-height: 1.6;
-  letter-spacing: -0.006em;
+}
+
+::selection {
+  background: $blue-3;
+  color: $gray-2;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-6 $gray-7;
+}
+
+::-webkit-scrollbar {
+  width: spacing(2.5);
+  height: spacing(2.5);
+}
+
+::-webkit-scrollbar-track-piece {
+  background: $gray-7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-6;
+
+  &:hover {
+    background: $gray-5;
+  }
+
+  &:active {
+    background: $gray-4;
+  }
+}
+
+[hidden],
+[v-cloak] {
+  display: none;
 }
 
 figure {
@@ -20,7 +55,7 @@ figure {
 }
 
 figcaption {
-  @include text-sm;
+  font-size: $font-sm;
   text-align: center;
 }
 
@@ -38,21 +73,24 @@ h3 {
 }
 
 h1 {
-  @include text-xl;
+  font-size: $font-xl;
+
   &::before {
     content: "#";
   }
 }
 
 h2 {
-  @include text-lg;
+  font-size: $font-lg;
+
   &::before {
     content: "##";
   }
 }
 
 h3 {
-  @include text-md;
+  font-size: $font-md;
+
   &::before {
     content: "###";
   }
@@ -71,14 +109,4 @@ th,
 td {
   padding: spacing(1.5) spacing(2.5);
   border: 1px solid $gray-6;
-}
-
-::selection {
-  background: $blue-3;
-  color: $gray-2;
-}
-
-[hidden],
-[v-cloak] {
-  display: none;
 }

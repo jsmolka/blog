@@ -1,9 +1,9 @@
-@import "utils";
+@import "common";
 
 pre,
 code {
   background: $gray-7;
-  font-size: 0.8rem;
+  font-size: $font-sm;
   font-family: "JetBrains Mono", ui-monospace, monospace;
   border-radius: $radius;
   hyphens: none;
