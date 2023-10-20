@@ -1,11 +1,5 @@
 @import "common";
 
-@mixin bar {
-  flex: 1;
-  padding: spacing(2) 0;
-  cursor: pointer;
-}
-
 .audio {
   display: flex;
   align-items: center;
@@ -15,23 +9,31 @@
   touch-action: none;
 
   button {
-    padding: spacing(1.5);
-  }
-
-  .state-button {
-    margin-right: spacing(0.5);
+    padding: spacing(3);
   }
 
   .time {
-    font-size: var(--font-sm);
     font-weight: 500;
     font-feature-settings: "calt", "tnum";
-    margin-right: spacing(3);
   }
 
-  .progress-bar {
-    @include bar;
-    margin-right: spacing(3);
+  .bar {
+    flex: 1;
+    margin-left: spacing(3);
+    padding: spacing(3) 0;
+    cursor: pointer;
+  }
+
+  .seeker {
+    display: flex;
+    height: spacing(1.5);
+    background: var(--gray-5);
+
+    &::before {
+      content: "";
+      width: calc(100% * var(--value));
+      background: var(--gray-3);
+    }
   }
 
   .volume {
@@ -41,26 +43,5 @@
 
   .volume-bar-wrapper {
     transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .volume-bar {
-    @include bar;
-    margin-right: spacing(3);
-  }
-
-  .volume-button {
-    margin-left: spacing(-2);
-  }
-
-  .slider {
-    display: flex;
-    height: spacing(1);
-    background: var(--gray-5);
-
-    &::after {
-      content: "";
-      width: calc(100% * var(--value));
-      background: var(--gray-3);
-    }
   }
 }

@@ -8,23 +8,23 @@ export default function Audio(src) {
     $template: /* html */ `
       <div class="audio">
         <audio ref="audio" hidden type="audio/mp3" preload="metadata"></audio>
-        <button class="state-button" ref="stateButton">
-          <svg width="22" height="22" viewBox="0 0 24 24">
+        <button ref="stateButton">
+          <svg width="18" height="18" viewBox="5 5 14 14">
             <path fill="currentColor" :d="paused ? icon.play : icon.pause" />
           </svg>
         </button>
         <div class="time">{{ format(time) }} / {{ format(duration) }}</div>
-        <div class="progress-bar" ref="progressBar">
-          <div class="slider" :style="{ '--value': duration ? time / duration : 0 }"></div>
+        <div class="bar" ref="progressBar">
+          <div class="seeker" :style="{ '--value': duration ? time / duration : 0 }"></div>
         </div>
         <div class="volume" ref="volume">
           <div class="volume-bar-wrapper" :style="{ width: showVolume ? '5rem' : 0 }">
-            <div class="volume-bar" ref="volumeBar">
-              <div class="slider" :style="{ '--value': muted ? 0 : volume }"></div>
+            <div class="bar" ref="volumeBar">
+              <div class="seeker" :style="{ '--value': muted ? 0 : volume }"></div>
             </div>
           </div>
-          <button class="volume-button" ref="volumeButton">
-            <svg width="22" height="22" viewBox="0 0 24 24">
+          <button ref="volumeButton">
+            <svg width="18" height="18" viewBox="3 3 18 18">
               <path fill="currentColor" :d="muted || volume === 0 ? icon.speakerMuted : icon.speaker" />
             </svg>
           </button>
@@ -79,8 +79,8 @@ export default function Audio(src) {
         }
       });
 
-      this.initProgress();
-      this.initVolume();
+      this.initProgressBar();
+      this.initVolumeBar();
       this.update();
 
       instances.push(this);
@@ -117,7 +117,7 @@ export default function Audio(src) {
       });
     },
 
-    initProgress() {
+    initProgressBar() {
       let paused = false;
 
       this.initBar(this.$refs.progressBar, {
@@ -138,7 +138,7 @@ export default function Audio(src) {
       });
     },
 
-    initVolume() {
+    initVolumeBar() {
       this.$refs.volumeButton.addEventListener("click", () => {
         this.audio.muted = !this.audio.muted;
       });
