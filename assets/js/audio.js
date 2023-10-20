@@ -1,43 +1,6 @@
 import storage from "./storage";
 import { clamp, isMobileDevice, onIntersect } from "./utils";
 
-class Bar {
-  constructor(element) {
-    this.onMove = null;
-    this.onMoveBegin = null;
-    this.onMoveEnd = null;
-
-    const onMove = (event) => this.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
-    const onMoveBegin = () => this.onMoveBegin();
-    const onMoveEnd = () => this.onMoveEnd();
-
-    element.addEventListener("pointerdown", (event) => {
-      if (event.button !== 0) {
-        return;
-      }
-
-      const cursor = window.document.body.style.cursor;
-      const select = window.document.body.style.userSelect;
-
-      const up = (event) => {
-        window.removeEventListener("pointermove", onMove);
-        window.removeEventListener("pointerup", up);
-        window.document.body.style.cursor = cursor;
-        window.document.body.style.userSelect = select;
-        onMove(event);
-        onMoveEnd();
-      };
-
-      window.addEventListener("pointermove", onMove);
-      window.addEventListener("pointerup", up);
-      window.document.body.style.cursor = "pointer";
-      window.document.body.style.userSelect = "none";
-      onMoveBegin();
-      onMove(event);
-    });
-  }
-}
-
 const instances = [];
 
 export default function Audio(src) {
@@ -52,10 +15,10 @@ export default function Audio(src) {
         </button>
         <div class="time">{{ format(time) }} / {{ format(duration) }}</div>
         <div class="progress-bar" ref="progressBar">
-          <div class="slider" :style="{ '--value': duration === 0 ? 0 : time / duration }"></div>
+          <div class="slider" :style="{ '--value': duration ? time / duration : 0 }"></div>
         </div>
         <div class="volume" ref="volume">
-          <div class="volume-bar-wrapper" :style="{ width: volumeInteract ? '5rem' : 0 }">
+          <div class="volume-bar-wrapper" :style="{ width: showVolume ? '5rem' : 0 }">
             <div class="volume-bar" ref="volumeBar">
               <div class="slider" :style="{ '--value': muted ? 0 : volume }"></div>
             </div>
@@ -73,8 +36,8 @@ export default function Audio(src) {
     duration: 0,
     paused: true,
     muted: false,
-    volume: 0.66,
-    volumeInteract: 0,
+    showVolume: 0,
+
     icon: {
       play: "M8 5.14v14l11-7l-11-7z",
       pause: "M14 19h4V5h-4M6 19h4V5H6v14z",
@@ -85,38 +48,31 @@ export default function Audio(src) {
     },
 
     mounted(element) {
-      this.$refs.audio.addEventListener("loadedmetadata", () => {
-        if (isMobileDevice()) {
-          this.setVolume(this.volume);
-        } else {
-          this.setVolume(storage.get("volume", this.volume));
-        }
+      this.volume = this.volume;
 
-        this.init();
-        this.update();
+      this.audio.addEventListener("loadedmetadata", this.init);
 
-        instances.push(this);
-      });
-
-      onIntersect(element, () => this.$refs.audio.setAttribute("src", src), { rootMargin: "256px" });
+      onIntersect(element, () => this.audio.setAttribute("src", src), { rootMargin: "256px" });
     },
 
     init() {
       for (const event of [
-        "play",
-        "pause",
-        "ended",
-        "stalled",
-        "waiting",
-        "timeupdate",
         "durationchange",
+        "ended",
+        "pause",
+        "play",
+        "playing",
+        "seeked",
+        "stalled",
+        "timeupdate",
         "volumechange",
+        "waiting",
       ]) {
-        this.$refs.audio.addEventListener(event, () => this.update());
+        this.audio.addEventListener(event, this.update);
       }
 
       this.$refs.stateButton.addEventListener("click", () => {
-        if (this.$refs.audio.paused) {
+        if (this.audio.paused) {
           this.play();
         } else {
           this.pause();
@@ -125,39 +81,79 @@ export default function Audio(src) {
 
       this.initProgress();
       this.initVolume();
+      this.update();
+
+      instances.push(this);
+    },
+
+    initBar(element, opts) {
+      const onMove = (event) => opts.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
+      const onMoveBegin = opts.onMoveBegin;
+      const onMoveEnd = opts.onMoveEnd;
+
+      element.addEventListener("pointerdown", (event) => {
+        if (event.button !== 0) {
+          return;
+        }
+
+        const cursor = window.document.body.style.cursor;
+        const select = window.document.body.style.userSelect;
+
+        const up = (event) => {
+          window.removeEventListener("pointermove", onMove);
+          window.removeEventListener("pointerup", up);
+          window.document.body.style.cursor = cursor;
+          window.document.body.style.userSelect = select;
+          onMove(event);
+          onMoveEnd();
+        };
+
+        window.addEventListener("pointermove", onMove);
+        window.addEventListener("pointerup", up);
+        window.document.body.style.cursor = "pointer";
+        window.document.body.style.userSelect = "none";
+        onMoveBegin();
+        onMove(event);
+      });
     },
 
     initProgress() {
       let paused = false;
 
-      const bar = new Bar(this.$refs.progressBar);
-      bar.onMove = (percentage) => {
-        this.$refs.audio.currentTime = percentage * this.$refs.audio.duration;
-      };
-      bar.onMoveBegin = () => {
-        paused = this.$refs.audio.paused;
-        if (!paused) {
-          this.pause();
-        }
-      };
-      bar.onMoveEnd = () => {
-        if (!paused) {
-          this.play();
-        }
-      };
+      this.initBar(this.$refs.progressBar, {
+        onMove: (position) => {
+          this.audio.currentTime = position * this.audio.duration;
+        },
+        onMoveBegin: () => {
+          paused = this.audio.paused;
+          if (!paused) {
+            this.pause();
+          }
+        },
+        onMoveEnd: () => {
+          if (!paused) {
+            this.play();
+          }
+        },
+      });
     },
 
     initVolume() {
-      this.$refs.volumeButton.addEventListener("click", () => (this.$refs.audio.muted = !this.$refs.audio.muted));
+      this.$refs.volumeButton.addEventListener("click", () => {
+        this.audio.muted = !this.audio.muted;
+      });
 
       if (!isMobileDevice()) {
-        this.$refs.volume.addEventListener("pointerenter", () => this.volumeInteract++);
-        this.$refs.volume.addEventListener("pointerleave", () => this.volumeInteract--);
+        this.$refs.volume.addEventListener("pointerenter", () => this.showVolume++);
+        this.$refs.volume.addEventListener("pointerleave", () => this.showVolume--);
 
-        const bar = new Bar(this.$refs.volumeBar);
-        bar.onMove = (percentage) => this.setVolume(percentage);
-        bar.onMoveBegin = () => this.volumeInteract++;
-        bar.onMoveEnd = () => this.volumeInteract--;
+        this.initBar(this.$refs.volumeBar, {
+          onMove: (volume) => {
+            this.volume = volume;
+          },
+          onMoveBegin: () => this.showVolume++,
+          onMoveEnd: () => this.showVolume--,
+        });
       }
     },
 
@@ -165,32 +161,38 @@ export default function Audio(src) {
       for (const instance of instances) {
         instance.pause();
       }
-      this.$refs.audio.play();
+      this.audio.play();
     },
 
     pause() {
-      this.$refs.audio.pause();
+      this.audio.pause();
     },
 
-    setVolume(volume) {
-      this.volume = volume;
-      this.$refs.audio.muted = false;
-      this.$refs.audio.volume = Math.pow(this.volume, 3);
-      storage.set("volume", this.volume);
+    get audio() {
+      return this.$refs.audio;
+    },
+
+    get volume() {
+      return isMobileDevice() ? 1 : storage.get("volume", 0.5);
+    },
+
+    set volume(value) {
+      this.audio.muted = false;
+      this.audio.volume = Math.pow(value, 3);
+      storage.set("volume", value);
     },
 
     format(time) {
-      time = isNaN(time) ? 0 : time;
-      const min = Math.floor(time / 60).toString();
-      const sec = Math.floor(time % 60).toString();
+      const min = String(Math.floor(time / 60));
+      const sec = String(Math.floor(time % 60));
       return `${min}:${sec.padStart(2, "0")}`;
     },
 
     update() {
-      this.time = this.$refs.audio.currentTime;
-      this.duration = this.$refs.audio.duration;
-      this.paused = this.$refs.audio.paused;
-      this.muted = this.$refs.audio.muted;
+      this.time = this.audio.currentTime;
+      this.duration = this.audio.duration;
+      this.paused = this.audio.paused;
+      this.muted = this.audio.muted;
     },
   };
 }
