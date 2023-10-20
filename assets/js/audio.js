@@ -9,7 +9,7 @@ export default function Audio(src) {
       <div class="audio">
         <audio ref="audio" hidden type="audio/mp3" preload="metadata"></audio>
         <button ref="stateButton">
-          <svg width="18" height="18" viewBox="5 5 14 14">
+          <svg width="16" height="16" viewBox="5 5 14 14">
             <path fill="currentColor" :d="paused ? icon.play : icon.pause" />
           </svg>
         </button>
@@ -24,7 +24,7 @@ export default function Audio(src) {
             </div>
           </div>
           <button ref="volumeButton">
-            <svg width="18" height="18" viewBox="3 3 18 18">
+            <svg width="16" height="16" viewBox="3 3 18 18">
               <path fill="currentColor" :d="muted || volume === 0 ? icon.speakerMuted : icon.speaker" />
             </svg>
           </button>

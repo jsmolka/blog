@@ -9,7 +9,7 @@
   touch-action: none;
 
   button {
-    padding: spacing(3);
+    padding: spacing(2.5);
   }
 
   .time {
@@ -19,14 +19,14 @@
 
   .bar {
     flex: 1;
-    margin-left: spacing(3);
-    padding: spacing(3) 0;
+    margin-left: spacing(2.5);
+    padding: spacing(2.5) 0;
     cursor: pointer;
   }
 
   .seeker {
     display: flex;
-    height: spacing(1.5);
+    height: spacing(1.25);
     background: var(--gray-5);
 
     &::before {
