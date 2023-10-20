@@ -1,6 +1,12 @@
 @import "common";
 
 :root {
+  --font-sm: 0.8rem;
+  --font-md: 1.1rem;
+  --font-lg: 1.2rem;
+  --font-xl: 1.6rem;
+  --rounded: #{spacing(0.5)};
+
   --gray-1: #eceff4; // hsv(218,  3, 96)
   --gray-2: #dadee5; // hsv(218,  5, 90)
   --gray-3: #667188; // hsv(220, 25, 53)
@@ -12,5 +18,4 @@
   --blue-1: #749fd4; // hsv(213, 45, 83)
   --blue-2: #6990bf; // hsv(213, 45, 75)
   --blue-3: #5e81ac; // hsv(213, 45, 67)
-  --radius: spacing(0.5);
 }

@@ -37,6 +37,18 @@
     border-left: 4px solid;
   }
 
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2);
+    overflow-x: auto;
+  }
+
+  figcaption {
+    font-size: var(--font-sm);
+    text-align: center;
+  }
+
   ul,
   ol {
     display: flex;
@@ -63,7 +75,7 @@
       left: spacing(-4);
       width: spacing(2);
       height: spacing(2);
-      background: $gray-2;
+      background: var(--gray-2);
     }
   }
 
@@ -73,6 +85,21 @@
 
   table {
     text-align: left;
+  }
+
+  th {
+    color: var(--gray-1);
+    font-weight: 700;
+  }
+
+  th,
+  td {
+    padding: spacing(1.5) spacing(2.5);
+    border: 1px solid var(--gray-6);
+  }
+
+  hr {
+    border-bottom: 2px dashed var(--gray-6);
   }
 
   pre,

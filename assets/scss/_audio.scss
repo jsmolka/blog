@@ -9,9 +9,9 @@
 .audio {
   display: flex;
   align-items: center;
-  background: $gray-7;
-  color: $gray-3;
-  border-radius: $radius;
+  background: var(--gray-7);
+  color: var(--gray-3);
+  border-radius: var(--rounded);
   touch-action: none;
 
   button {
@@ -23,7 +23,7 @@
   }
 
   .time {
-    font-size: $font-sm;
+    font-size: var(--font-sm);
     font-weight: 500;
     font-feature-settings: "calt", "tnum";
     margin-right: spacing(3);
@@ -55,12 +55,12 @@
   .slider {
     display: flex;
     height: spacing(1);
-    background: $gray-5;
+    background: var(--gray-5);
 
     &::after {
       content: "";
       width: calc(100% * var(--value));
-      background: $gray-3;
+      background: var(--gray-3);
     }
   }
 }

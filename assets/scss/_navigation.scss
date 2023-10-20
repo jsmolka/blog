@@ -1,54 +1,54 @@
 @import "common";
 
-.title {
-  display: flex;
-  align-items: center;
-  gap: spacing(1.5);
-  font-weight: 800;
-
-  &::after {
-    content: "";
-    width: spacing(2.5);
-    height: spacing(4);
-    background: $blue-3;
-    border-radius: 1px;
-    animation: pulsate 1s infinite;
-
-    @keyframes pulsate {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-.header {
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: spacing(8);
   width: 100%;
   max-width: $content;
+  color: var(--gray-1);
   margin: 0 auto;
   padding: spacing(5) spacing(4);
-  color: $gray-1;
-  font-weight: 500;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: spacing(1.5);
+    font-weight: 800;
+
+    &::after {
+      content: "";
+      width: spacing(2.5);
+      height: spacing(4);
+      background: var(--blue-3);
+      border-radius: 1px;
+      animation: pulsate 1s infinite;
+    }
+  }
 
   ul {
     display: flex;
     align-items: center;
     gap: spacing(8);
+    font-weight: 500;
   }
 }
 
-.footer {
-  font-size: $font-sm;
+footer {
+  font-size: var(--font-sm);
   margin: 0 auto;
   padding: spacing(5) spacing(4);
 

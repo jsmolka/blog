@@ -6,21 +6,48 @@
   align-items: center;
   gap: spacing(16);
 
-  .content {
+  ul {
     display: flex;
     flex-direction: column;
     gap: spacing(8);
   }
 
-  article,
-  header {
+  article {
     display: flex;
     flex-direction: column;
     gap: spacing(4);
+    padding-bottom: spacing(8);
+    border-bottom: 2px dashed var(--gray-6);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2);
   }
 
   h1 {
-    font-size: $font-md;
-    margin-bottom: spacing(-1);
+    font-size: var(--font-md);
+  }
+}
+
+.pagination {
+  display: flex;
+  gap: spacing(4);
+
+  a {
+    color: var(--gray-2);
+    background: var(--gray-6);
+    padding: spacing(1) spacing(2);
+    border-radius: var(--rounded);
+    user-select: none;
+
+    &:hover {
+      background: var(--gray-5);
+    }
+
+    &:active {
+      background: var(--gray-4);
+    }
   }
 }

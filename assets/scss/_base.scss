@@ -1,24 +1,41 @@
 @import "common";
+@import "hugo:vars";
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: normal;
+  src: url($inter) format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: block;
+  font-style: italic;
+  src: url($inter-italic) format("woff2");
+}
 
 body {
   display: flex;
   flex-direction: column;
-  background: $gray-8;
-  color: $gray-2;
   font-size: 14px;
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
   font-feature-settings: "cv07";
   line-height: 1.6;
+  color: var(--gray-2);
+  background: var(--gray-8);
 }
 
 ::selection {
-  background: $blue-3;
-  color: $gray-2;
+  color: var(--gray-2);
+  background: var(--blue-3);
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: $gray-6 $gray-7;
+  scrollbar-color: var(--gray-6) var(--gray-7);
 }
 
 ::-webkit-scrollbar {
@@ -27,86 +44,52 @@ body {
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: $gray-7;
+  background: var(--gray-7);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $gray-6;
+  background: var(--gray-6);
 
   &:hover {
-    background: $gray-5;
+    background: var(--gray-5);
   }
 
   &:active {
-    background: $gray-4;
+    background: var(--gray-4);
   }
 }
 
-[hidden],
 [v-cloak] {
   display: none;
 }
 
-figure {
-  display: flex;
-  flex-direction: column;
-  gap: spacing(2);
-  overflow-x: auto;
-}
-
-figcaption {
-  font-size: $font-sm;
-  text-align: center;
-}
-
-h1,
-h2,
-h3 {
-  color: $gray-1;
-  text-align: left;
+@mixin heading($font, $content) {
+  font-size: $font;
   font-weight: 800;
+  color: var(--gray-1);
 
   &::before {
+    content: $content;
+    color: var(--blue-3);
     margin-right: 0.33em;
-    color: $blue-3;
   }
 }
 
 h1 {
-  font-size: $font-xl;
-
-  &::before {
-    content: "#";
-  }
+  @include heading(var(--font-xl), "#");
 }
 
 h2 {
-  font-size: $font-lg;
-
-  &::before {
-    content: "##";
-  }
+  @include heading(var(--font-lg), "##");
 }
 
 h3 {
-  font-size: $font-md;
-
-  &::before {
-    content: "###";
-  }
+  @include heading(var(--font-md), "###");
 }
 
-hr {
-  border-bottom: 2px dashed $gray-6;
-}
-
-th {
-  color: $gray-1;
-  font-weight: 700;
-}
-
-th,
-td {
-  padding: spacing(1.5) spacing(2.5);
-  border: 1px solid $gray-6;
+.container {
+  width: 100%;
+  max-width: $content;
+  margin: auto;
+  padding: spacing(16) spacing(4);
 }

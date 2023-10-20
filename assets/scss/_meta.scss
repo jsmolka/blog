@@ -3,20 +3,20 @@
 .meta {
   display: flex;
   flex-direction: column;
-  gap: spacing(0.5);
-  color: $gray-3;
-  font-size: $font-sm;
+  gap: spacing(1);
+  color: var(--gray-3);
+  font-size: var(--font-sm);
   font-weight: 500;
 
   ul {
     display: flex;
+    flex-direction: row;
     gap: spacing(2);
   }
 
   a {
-    display: block;
-    padding: spacing(0.25) spacing(1.5);
-    background: $gray-7;
-    border-radius: $radius;
+    background: var(--gray-7);
+    padding: spacing(1) spacing(1.5);
+    border-radius: var(--rounded);
   }
 }

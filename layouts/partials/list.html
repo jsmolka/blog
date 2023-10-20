@@ -1,19 +1,29 @@
 <div class="list">
-  <div class="content">
+  <ul>
     {{ range .Paginator.Pages }}
-      <article>
-        <header>
-          <h1><a
-            href="{{ .RelPermalink }}">{{ .Title }}</a
-          ></h1>
-          {{ partial "meta" . }}
-        </header>
-        {{ with .Description }}
-          <div>{{ . }}</div>
-        {{ end }}
-      </article>
-      <hr>
+      <li>
+        <article>
+          <header>
+            <h1><a
+              href="{{ .RelPermalink }}">{{ .Title }}</a
+            ></h1>
+            {{ partial "meta" . }}
+          </header>
+          {{ with .Description }}
+            <div>{{ . }}</div>
+          {{ end }}
+        </article>
+      </li>
     {{ end }}
-  </div>
-  {{ partial "pagination" . }}
+    </ul>
+  {{ if or .Paginator.HasPrev .Paginator.HasNext }}
+    <div class="pagination">
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">← Go forward in time</a>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">Go back in time →</a>
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
