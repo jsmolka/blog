@@ -5,10 +5,10 @@
     </time>
     &mdash; {{ .ReadingTime }} minute read
   </div>
-  {{ if .Params.Tags }}
+  {{ with .Params.Tags }}
     <nav>
       <ul class="tags">
-        {{ range .Params.Tags }}
+        {{ range . }}
           <li>
             <a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>
           </li>

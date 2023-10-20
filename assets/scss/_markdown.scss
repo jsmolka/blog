@@ -32,16 +32,14 @@
     flex-direction: column;
     gap: spacing(4);
     font-style: italic;
-    padding: spacing(2) spacing(4);
-    padding-right: 0;
-    border-left: 4px solid var(--gray-3);
+    padding: spacing(2) 0 spacing(2) spacing(4);
+    border-left: 4px solid var(--gray-2);
   }
 
   figure {
     display: flex;
     flex-direction: column;
     gap: spacing(2);
-    overflow-x: auto;
   }
 
   figcaption {
@@ -104,19 +102,9 @@
     }
   }
 
-  .wrap {
-    display: flex;
-    gap: spacing(4);
-    overflow-x: auto;
-
-    @include constricted {
-      flex-direction: column;
-    }
-  }
-
   sub,
   sup {
-    font: inherit;
+    font-size: inherit;
     vertical-align: baseline;
   }
 
@@ -131,9 +119,19 @@
     border: 1px solid var(--gray-6);
   }
 
+  .wrap {
+    display: flex;
+    gap: spacing(4);
+    overflow-x: auto;
+
+    @include constricted {
+      flex-direction: column;
+    }
+  }
+
   a[href^="#fn:"] {
-    text-decoration: none;
     font-feature-settings: "tnum";
+    text-decoration: none;
 
     &::before {
       content: "[";
