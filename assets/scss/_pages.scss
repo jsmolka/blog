@@ -1,24 +1,24 @@
 @import "common";
 
-.list {
+.pages {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: spacing(16);
+}
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(8);
-  }
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(8);
+}
 
-  article {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(4);
-    padding-bottom: spacing(8);
-    border-bottom: 2px dashed var(--gray-6);
-  }
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(4);
+  padding-bottom: spacing(8);
+  border-bottom: 2px dashed var(--gray-6);
 
   header {
     display: flex;

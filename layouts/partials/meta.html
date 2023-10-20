@@ -7,10 +7,10 @@
   </div>
   {{ if .Params.Tags }}
     <nav>
-      <ul>
+      <ul class="tags">
         {{ range .Params.Tags }}
           <li>
-            <a href="/tags/{{ . | urlize }}/">{{ . }}</a>
+            <a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>
           </li>
         {{ end }}
       </ul>

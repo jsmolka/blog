@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <main class="container">
+  <main class="container pages">
     {{ $paginator := .Paginate .Pages }}
-    {{ partial "list" . }}
+    {{ partial "pages" . }}
   </main>
 {{ end }}

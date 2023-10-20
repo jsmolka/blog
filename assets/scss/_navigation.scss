@@ -12,6 +12,22 @@
   }
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  gap: spacing(1.5);
+  font-weight: 800;
+
+  &::after {
+    content: "";
+    width: spacing(2.5);
+    height: spacing(4);
+    background: var(--blue-3);
+    border-radius: 1px;
+    animation: pulsate 1s infinite;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -22,22 +38,6 @@
   color: var(--gray-1);
   margin: 0 auto;
   padding: spacing(5) spacing(4);
-
-  .title {
-    display: flex;
-    align-items: center;
-    gap: spacing(1.5);
-    font-weight: 800;
-
-    &::after {
-      content: "";
-      width: spacing(2.5);
-      height: spacing(4);
-      background: var(--blue-3);
-      border-radius: 1px;
-      animation: pulsate 1s infinite;
-    }
-  }
 
   ul {
     display: flex;

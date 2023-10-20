@@ -7,16 +7,15 @@
   color: var(--gray-3);
   font-size: var(--font-sm);
   font-weight: 500;
+}
 
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: spacing(2);
-  }
+.tags {
+  display: flex;
+  gap: spacing(2);
+}
 
-  a {
-    background: var(--gray-7);
-    padding: spacing(1) spacing(1.5);
-    border-radius: var(--rounded);
-  }
+.tag {
+  background: var(--gray-7);
+  padding: spacing(1) spacing(1.5);
+  border-radius: var(--rounded);
 }
