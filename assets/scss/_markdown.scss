@@ -100,6 +100,19 @@
       padding-right: spacing(4);
       border-radius: 0;
     }
+
+    .token.deleted:not(.prefix),
+    .token.inserted:not(.prefix) {
+      margin: 0 spacing(-4);
+
+      & > :first-child {
+        margin-left: spacing(4);
+      }
+
+      & > :last-child {
+        margin-right: spacing(4);
+      }
+    }
   }
 
   sub,
