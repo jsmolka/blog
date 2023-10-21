@@ -10,20 +10,26 @@
 .articles {
   display: flex;
   flex-direction: column;
-  gap: spacing(8);
+}
 
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(2);
+.article {
+  padding-bottom: spacing(8);
+  border-bottom: 2px dashed var(--gray-6);
+
+  &:not(:first-child) {
+    padding-top: spacing(8);
   }
 
   article {
     display: flex;
     flex-direction: column;
     gap: spacing(4);
-    padding-bottom: spacing(8);
-    border-bottom: 2px dashed var(--gray-6);
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(2);
   }
 
   h1 {
