@@ -6,7 +6,7 @@
       {{ if or $showMeta $showTitle }}
         <header>
           {{ if $showTitle }}
-            <h1>{{ .Title }}{{ if .Draft }} [draft]{{ end }}</h1>
+            <h1>{{ partial "title" . }}</h1>
           {{ end }}
           {{ if $showMeta }}
             {{ partial "meta" . }}
