@@ -16,14 +16,16 @@ function highlight(document) {
 
 function removeTrailingSlashes(document) {
   let changed = false;
-  for (const link of document.getElementsByTagName("a")) {
-    const href = link.getAttribute("href");
-    const matches = href.match(/^((?:.*smolka\.dev)?\/.*\/)(#.*)?$/);
-    if (matches) {
-      matches.splice(0, 1); // Remove match
-      matches[0] = matches[0].slice(0, -1); // Remove trailing slash
-      link.setAttribute("href", matches.join(""));
-      changed = true;
+  for (const attribute of ["href", "v-href"]) {
+    for (const element of document.querySelectorAll(`[${attribute}]`)) {
+      const href = element.getAttribute(attribute);
+      const matches = href.match(/^((?:.*smolka\.dev)?\/.*\/)(#.*)?$/);
+      if (matches) {
+        matches.splice(0, 1); // Remove match
+        matches[0] = matches[0].slice(0, -1); // Remove trailing slash
+        element.setAttribute(attribute, matches.join(""));
+        changed = true;
+      }
     }
   }
   return changed;
