@@ -4,9 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: spacing(1);
-  color: var(--gray-3);
-  font-size: var(--font-sm);
-  font-weight: 500;
 }
 
 .tags {
@@ -18,4 +15,11 @@
   background: var(--gray-7);
   padding: spacing(1) spacing(1.5);
   border-radius: var(--rounded);
+}
+
+.meta,
+.tag {
+  color: var(--gray-3);
+  font-size: var(--font-sm);
+  font-weight: 500;
 }

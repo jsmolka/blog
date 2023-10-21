@@ -1,0 +1,11 @@
+{{ with .Params.Tags }}
+  <nav>
+    <ul class="tags">
+      {{ range . }}
+        <li>
+          <a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}

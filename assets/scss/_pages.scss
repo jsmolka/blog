@@ -7,33 +7,33 @@
   gap: spacing(16);
 }
 
-.articles {
+.list {
   display: flex;
   flex-direction: column;
-}
 
-.article {
-  padding-bottom: spacing(8);
-  border-bottom: 2px dashed var(--gray-6);
+  &-item {
+    padding-bottom: spacing(8);
+    border-bottom: 2px dashed var(--gray-6);
 
-  &:not(:first-child) {
-    padding-top: spacing(8);
-  }
+    &:not(:first-child) {
+      padding-top: spacing(8);
+    }
 
-  article {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(4);
-  }
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: spacing(4);
+    }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(2);
-  }
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: spacing(2);
+    }
 
-  h1 {
-    font-size: var(--font-md);
+    h1 {
+      font-size: var(--font-md);
+    }
   }
 }
 

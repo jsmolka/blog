@@ -1,0 +1,35 @@
+@import "common";
+
+.archive {
+  @include tail {
+    margin-top: spacing(4);
+  }
+
+  :is(h1, h2, h3):not(:first-child) {
+    margin-top: spacing(6) !important;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    gap: spacing(4);
+    padding: spacing(2) spacing(0);
+    border-bottom: 2px dashed var(--gray-6);
+
+    &-main {
+      display: flex;
+      gap: spacing(4);
+
+      @include constricted {
+        nav {
+          display: none;
+        }
+      }
+    }
+
+    &-date {
+      color: var(--gray-3);
+      font-feature-settings: "tnum";
+    }
+  }
+}

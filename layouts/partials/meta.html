@@ -1,19 +1,6 @@
 <div class="meta">
   <div>
-    <time datetime="{{ .Date.Format "2006-01-02" }}">
-      {{- .Date.Format "2006/01/02" -}}
-    </time>
-    &mdash; {{ .ReadingTime }} minute read
+    {{ partial "date" . }} &mdash; {{ .ReadingTime }} minute read
   </div>
-  {{ with .Params.Tags }}
-    <nav>
-      <ul class="tags">
-        {{ range . }}
-          <li>
-            <a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
-  {{ end }}
+  {{ partial "tags" . }}
 </div>

@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <main class="container">
+    <article class="post">
+      <header>
+        <h1>{{ .Title }}</h1>
+      </header>
+      <div class="archive">
+        {{ $pages := where .Site.RegularPages "Type" "ne" "page" }}
+        {{ range $pages.GroupByPublishDate "2006" }}
+          <h2 id="{{ .Key }}"><a href="#{{ .Key }}">{{ .Key }}</a></h2>
+          <ul>
+            {{ range .Pages }}
+              <li class="archive-item" v-href="{{ .RelPermalink }}">
+                <div class="archive-item-main">
+                  <a href="{{ .RelPermalink }}">{{ partial "title" . }}</a>
+                  {{ partial "tags" . }}
+                </div>
+                <div class="archive-item-date">{{ partial "date" . }}</div>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    </article>
+  </main>
+{{ end }}
