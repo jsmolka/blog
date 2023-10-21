@@ -7,23 +7,23 @@
   gap: spacing(16);
 }
 
-.list {
+.articles {
   display: flex;
   flex-direction: column;
   gap: spacing(8);
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  gap: spacing(4);
-  padding-bottom: spacing(8);
-  border-bottom: 2px dashed var(--gray-6);
 
   header {
     display: flex;
     flex-direction: column;
     gap: spacing(2);
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(4);
+    padding-bottom: spacing(8);
+    border-bottom: 2px dashed var(--gray-6);
   }
 
   h1 {
