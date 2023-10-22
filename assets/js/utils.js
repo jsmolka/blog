@@ -16,7 +16,11 @@ export function isMobileDevice() {
   };
 
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
-  return /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) || isIosStandalone() || isIosAudioQuirk();
+  return (
+    /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent) ||
+    isIosStandalone() ||
+    isIosAudioQuirk()
+  );
 }
 
 export function onIntersect(element, callback, options = {}) {

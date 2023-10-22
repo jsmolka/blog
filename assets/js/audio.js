@@ -87,7 +87,8 @@ export default function Audio(src) {
     },
 
     initBar(element, opts) {
-      const onMove = (event) => opts.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
+      const onMove = (event) =>
+        opts.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
       const onMoveBegin = opts.onMoveBegin;
       const onMoveEnd = opts.onMoveEnd;
 
