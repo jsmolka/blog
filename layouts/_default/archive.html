@@ -10,12 +10,10 @@
           <h2 id="{{ .Key }}"><a href="#{{ .Key }}">{{ .Key }}</a></h2>
           <ul>
             {{ range .Pages }}
-              <li class="archive-item" v-href="{{ .RelPermalink }}">
-                <div class="archive-item-main">
-                  <a href="{{ .RelPermalink }}">{{ partial "title" . }}</a>
-                  {{ partial "tags" . }}
-                </div>
-                <div class="archive-item-date">{{ partial "date" . }}</div>
+              <li class="record" v-href="{{ .RelPermalink }}">
+                <a href="{{ .RelPermalink }}">{{ partial "title" . }}</a>
+                {{ partial "tags" . }}
+                {{ partial "date" . }}
               </li>
             {{ end }}
           </ul>

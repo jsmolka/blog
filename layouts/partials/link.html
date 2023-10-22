@@ -1,4 +1,6 @@
 <a
   href="{{ .URL }}"
-  {{ if (strings.HasPrefix .URL "http") }}target="_blank" rel="noopener"{{ end }}
->{{ .Name }}</a>
+  {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}
+>
+  {{- .Name -}}
+</a>

@@ -1,27 +1,31 @@
-<ul class="list">
+<ul>
   {{ range .Paginator.Pages }}
-    <li class="list-item" v-href="{{ .RelPermalink }}">
+    <li class="preview" v-href="{{ .RelPermalink }}">
       <article>
         <header>
-          <h1><a
-            href="{{ .RelPermalink }}">{{ partial "title" . }}</a
-          ></h1>
+          <h1><a href="{{ .RelPermalink }}">{{ partial "title" . }}</a></h1>
           {{ partial "meta" . }}
         </header>
         {{ with .Description }}
-          <div>{{ . }}</div>
+          <p>{{ . }}</p>
         {{ end }}
       </article>
     </li>
   {{ end }}
   </ul>
 {{ if or .Paginator.HasPrev .Paginator.HasNext }}
-  <div class="pagination">
-    {{ if .Paginator.HasPrev }}
-      <a href="{{ .Paginator.Prev.URL }}">← Forward in time</a>
-    {{ end }}
-    {{ if .Paginator.HasNext }}
-      <a href="{{ .Paginator.Next.URL }}">Back in time →</a>
-    {{ end }}
-  </div>
+  <nav>
+    <ul class="pagination">
+      {{ if .Paginator.HasPrev }}
+        <li>
+          <a href="{{ .Paginator.Prev.URL }}">← Forward in time</a>
+        </li>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+        <li>
+          <a href="{{ .Paginator.Next.URL }}">Back in time →</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
 {{ end }}
