@@ -35,9 +35,10 @@ async function postprocess(file) {
   const dom = await JSDOM.fromFile(file);
   const document = dom.window.document;
 
+  // Bitwise to prevent short-circuit
   let changed = false;
-  changed ||= highlight(document);
-  changed ||= removeTrailingSlashes(document);
+  changed |= highlight(document);
+  changed |= removeTrailingSlashes(document);
 
   if (changed) {
     writeFileSync(file, dom.serialize());
