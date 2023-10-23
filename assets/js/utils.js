@@ -5,7 +5,7 @@ export function clamp(value, min, max) {
 export function isMobileDevice() {
   // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
   const isIosStandalone = () => {
-    return typeof navigator.standalone === "boolean";
+    return typeof navigator.standalone === 'boolean';
   };
 
   // https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html#//apple_ref/doc/uid/TP40009523-CH5-SW11
@@ -24,7 +24,7 @@ export function isMobileDevice() {
 }
 
 export function onIntersect(element, callback, options = {}) {
-  if ("IntersectionObserver" in window) {
+  if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, observer) => {
       for (const entry of entries) {
         if (entry.intersectionRatio > 0 || entry.isIntersecting) {

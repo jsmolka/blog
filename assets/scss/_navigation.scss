@@ -1,4 +1,4 @@
-@import "common";
+@import 'common';
 
 @keyframes pulsate {
   0% {
@@ -19,7 +19,7 @@
   font-weight: 800;
 
   &::after {
-    content: "";
+    content: '';
     width: spacing(2.5);
     height: spacing(4);
     background: var(--blue-3);

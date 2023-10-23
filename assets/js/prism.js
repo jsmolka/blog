@@ -1,12 +1,12 @@
-import Prism from "prismjs";
-import "prismjs/components/prism-clike.js";
-import "prismjs/components/prism-c.js";
-import "prismjs/components/prism-cpp.js";
-import "prismjs/components/prism-diff.js";
-import "prismjs/components/prism-javascript.js";
-import "prismjs/components/prism-rust.js";
-import "prismjs/components/prism-toml.js";
-import "prismjs/plugins/diff-highlight/prism-diff-highlight.js";
+import Prism from 'prismjs';
+import 'prismjs/components/prism-clike.js';
+import 'prismjs/components/prism-c.js';
+import 'prismjs/components/prism-cpp.js';
+import 'prismjs/components/prism-diff.js';
+import 'prismjs/components/prism-javascript.js';
+import 'prismjs/components/prism-rust.js';
+import 'prismjs/components/prism-toml.js';
+import 'prismjs/plugins/diff-highlight/prism-diff-highlight.js';
 
 Prism.languages.cpp.keyword = [
   Prism.languages.cpp.keyword,
@@ -29,10 +29,10 @@ Prism.languages.drizzle = {
     pattern: /(^|[^\\])#.*/,
     lookbehind: true,
   },
-  "triple-quoted-string": {
+  'triple-quoted-string': {
     pattern: /(?:[rub]|br|rb)?(""")[\s\S]*?\1/i,
     greedy: true,
-    alias: "string",
+    alias: 'string',
   },
   string: {
     pattern: /(?:[rub]|br|rb)?(")(?:\\.|(?!\1)[^\\\r\n])*\1/i,
@@ -42,7 +42,7 @@ Prism.languages.drizzle = {
     pattern: /((?:^|\s)def[ \t]+)[a-zA-Z_]\w*(?=\s*\()/g,
     lookbehind: true,
   },
-  "class-name": {
+  'class-name': {
     pattern: /(\bclass\s+)\w+/i,
     lookbehind: true,
   },

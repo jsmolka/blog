@@ -1,4 +1,4 @@
-@import "common";
+@import 'common';
 
 .audio {
   display: flex;
@@ -14,7 +14,7 @@
 
   .time {
     font-weight: 500;
-    font-feature-settings: "calt", "tnum";
+    font-feature-settings: 'calt', 'tnum';
   }
 
   .bar {
@@ -30,7 +30,7 @@
     background: var(--gray-5);
 
     &::before {
-      content: "";
+      content: '';
       width: calc(100% * var(--value));
       background: var(--gray-3);
     }

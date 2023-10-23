@@ -1,20 +1,20 @@
-@import "common";
-@import "hugo:vars";
+@import 'common';
+@import 'hugo:vars';
 
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 100 900;
   font-display: block;
   font-style: normal;
-  src: url($inter) format("woff2");
+  src: url($inter) format('woff2');
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 100 900;
   font-display: block;
   font-style: italic;
-  src: url($inter-italic) format("woff2");
+  src: url($inter-italic) format('woff2');
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   font-size: 14px;
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
-  font-feature-settings: "cv07";
+  font-feature-settings: 'cv07';
   line-height: 1.6;
   color: var(--gray-2);
   background: var(--gray-8);
@@ -76,15 +76,15 @@ body {
 }
 
 h1 {
-  @include heading(var(--font-xl), "#");
+  @include heading(var(--font-xl), '#');
 }
 
 h2 {
-  @include heading(var(--font-lg), "##");
+  @include heading(var(--font-lg), '##');
 }
 
 h3 {
-  @include heading(var(--font-md), "###");
+  @include heading(var(--font-md), '###');
 }
 
 .container {

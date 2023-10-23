@@ -1,26 +1,26 @@
-@import "common";
-@import "hugo:vars";
+@import 'common';
+@import 'hugo:vars';
 
 @font-face {
-  font-family: "JetBrains Mono";
+  font-family: 'JetBrains Mono';
   font-weight: 100 800;
   font-display: block;
   font-style: normal;
-  src: url($jetbrains-mono) format("woff2");
+  src: url($jetbrains-mono) format('woff2');
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
+  font-family: 'JetBrains Mono';
   font-weight: 100 800;
   font-display: block;
   font-style: italic;
-  src: url($jetbrains-mono-italic) format("woff2");
+  src: url($jetbrains-mono-italic) format('woff2');
 }
 
 pre,
 code {
   font-size: var(--font-sm);
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
   background: var(--gray-7);
   border-radius: var(--rounded);
   hyphens: none;
@@ -32,7 +32,7 @@ pre {
   white-space: pre;
 }
 
-code[class*="language-"] {
+code[class*='language-'] {
   // Workaround for background culling
   // https://stackoverflow.com/a/8513330
   min-width: 100%;
@@ -43,7 +43,7 @@ code[class*="language-"] {
   padding: spacing(0.5) spacing(1);
 }
 
-[class*="language-"] .namespace {
+[class*='language-'] .namespace {
   opacity: 0.75;
 }
 
