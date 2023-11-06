@@ -77,7 +77,7 @@ u32 PPU::argb(u16 color) {
 ## High-Resolution Clock
 Timing an emulator can be quite hard. If the frame has been rendered early, there isn't much you can do aside from waiting. The GBA has a refresh rate of 59.737 Hz, 280896 cycles per frame on a 16.78 MHz CPU. The ideal frame time for this scenario is 16.74 ms.
 
-Using components from the C++ STL would result in inaccuracies that accumulate over time. Luckily I found an [answer on stackoverflow](https://stackoverflow.com/a/41862592) which solves this problem with platform-specific code. Using this as a base for the high-resolution clock in my emulator resulted in consistent frame rates which tend to stay in the range of 59.7 to 59.8 frames per second all the time.
+Using components from the C++ STL would result in inaccuracies that accumulate over time. Luckily I found an [answer on Stack Overflow](https://stackoverflow.com/a/41862592) which solves this problem with platform-specific code. Using this as a base for the high-resolution clock in my emulator resulted in consistent frame rates which tend to stay in the range of 59.7 to 59.8 frames per second all the time.
 
 ## Final Words
 Aside from the things talked about in this progress report, there were many minor bug fixes and accuracy improvements. The emulator's overall performance increased by quite a bit. My next goal is to create the first release version with compiled Windows binaries. That also means adding a config file and fixing bugs in several games.

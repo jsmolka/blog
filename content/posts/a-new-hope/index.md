@@ -40,12 +40,12 @@ class Vm {
 };
 ```
 
-That introduced an indirection and possible cache miss because the `frames` object allocates its items on the heap. Moving the frame into the virtual machine eliminated that possiblity and lowered the benchmark time by five seconds.
+That introduced an indirection and possible cache miss because the `frames` object allocates its items on the heap. Moving the frame into the virtual machine eliminated that possibility and lowered the benchmark time by five seconds.
 
 ## Specializing Adaptive Interpreter
 
 At this point, I was down to 25 seconds and couldn't think of anything more to reduce it by yet another five seconds. I decided to go through Python's source code to find some motivation. I know Python isn't known as a fast programming language, but the devs made good progress on that front in the last releases. I saw lots of macros, computed gotos, and the solution to my problem: [PEP 659](https://peps.python.org/pep-0659/), the specializing adaptive interpreter.
-It assumes that opcodes at certains locations in the bytecode will be called with the same operand types and tries to optimize for them. It uses an inline cache and heuristics to achieve that. I implemented a much simpler version.
+It assumes that opcodes at certain locations in the bytecode will be called with the same operand types and tries to optimize for them. It uses an inline cache and heuristics to achieve that. I implemented a much simpler version.
 
 The first time an opcode is called, the VM tries to optimize it.
 

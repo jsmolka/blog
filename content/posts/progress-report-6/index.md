@@ -191,7 +191,7 @@ That's it. I'm done. The roadmap for this year is:
 - Optimize sound
 - Implement a scheduler
 - Improve [AGS](https://tcrf.net/AGS_Aging_Cartridge) coverage
-- Implement more features (better config, savestates, whatever)
+- Implement more features (better config, save states, whatever)
 - Final code cleanup
 
 Then I will put this project to rest and dive into something new. I thought about writing a classic Game Boy emulator, which shouldn't take more than a month because the GBA is a supercharged version of that, and most code could be reused. Another nice thing would be an NES emulator, which was my first console back in the day. I also thought about jumping into NDS emulation, but I'm not sure if I'm good enough for that, we'll see...

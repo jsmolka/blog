@@ -72,6 +72,4 @@ Line 4 |     i = i + 1
 SyntaxError: cannot capture local variable
 ```
 
-<!-- Hard in a stack-like languages because captured variables don't have stack behavior -->
-
 Closures add quite some complexity to the code that I am not willing to introduce, and to be honest: I do not need them. I tried some magic tricks to achieve a minimalistic version, but all of them fell apart when it came to recursion. The best I could do were absolute stack offsets to access global variables.
