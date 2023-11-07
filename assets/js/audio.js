@@ -1,9 +1,9 @@
-import storage from './storage';
+import { get, set } from './storage';
 import { clamp, isMobileDevice, onIntersect } from './utils';
 
 const instances = [];
 
-export default function Audio(src) {
+export function Audio(src) {
   return {
     $template: /* html */ `
       <div class="audio">
@@ -174,13 +174,13 @@ export default function Audio(src) {
     },
 
     get volume() {
-      return isMobileDevice() ? 1 : storage.get('volume', 0.5);
+      return isMobileDevice() ? 1 : get('volume', 0.5);
     },
 
     set volume(value) {
       this.audio.muted = false;
       this.audio.volume = Math.pow(value, 3);
-      storage.set('volume', value);
+      set('volume', value);
     },
 
     format(time) {

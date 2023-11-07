@@ -1,5 +1,5 @@
 import { createApp } from 'petite-vue';
-import Audio from './audio';
+import { Audio } from './audio';
 
 const href = ({ el, exp }) => {
   el.style.cursor = 'pointer';
