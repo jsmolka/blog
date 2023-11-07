@@ -52,3 +52,6 @@ disableHugoGeneratorInject = true
   [[module.mounts]]
     source = "content"
     target = "assets"
+
+[build]
+noJSConfigInAssets = true
