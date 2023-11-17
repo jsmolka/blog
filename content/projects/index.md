@@ -4,6 +4,14 @@ description: "A list of notable projects."
 showMeta: false
 showTitle: false
 ---
+# workin
+[workin](https://github.com/jsmolka/workin) is an app for running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts, and allows easy creation of custom workouts.
+
+{{<wrap>}}
+  {{<image src="img/workout.png" caption="Workout view">}}
+  {{<image src="img/activity.png" caption="Activity view">}}
+{{</wrap>}}
+
 # sprite
 [sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the programming language. It implements most components of the system with reasonable accuracy, but there is no sound or saves, and the cartridge types are limited to MBC0, MBC1, and MBC3.
 
