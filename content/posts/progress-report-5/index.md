@@ -5,7 +5,7 @@ tags: ["eggvance", "emulation"]
 date: 2020-06-06
 type: post
 ---
-Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance, and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
+Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
 
 ## State-Dependent Dispatching
 The first thing I want to talk about is something I call "state-dependent dispatching", even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
@@ -16,7 +16,7 @@ The first thing I want to talk about is something I call "state-dependent dispat
 - Are timers running?
 - Is DMA active?
 
-That amounts to five invariants that need to be checked before, while, or after every executed instruction. The old CPU implementation used a nested if-else chain to evaluate each state and act accordingly. That sounds quite reasonable until you realize that this is the hot path we are talking about. Now it is time for me to present you the innermost CPU loop, the pit of hell and profilers worst nightmare:
+That amounts to five invariants that need to be checked before, while or after every executed instruction. The old CPU implementation used a nested if-else chain to evaluate each state and act accordingly. That sounds quite reasonable until you realize that this is the hot path we are talking about. Now it is time for me to present you the innermost CPU loop, the pit of hell and profilers worst nightmare:
 
 ```cpp
 void ARM::execute() {
@@ -144,7 +144,7 @@ for (; rlist != 0; rlist &= rlist - 1) {
 }
 ```
 
-The optimized version might be confusing to people without a deeper understanding of bit operations. It starts with the same `rlist` as the naive variant and then uses `ctz` to count the trailing zeros (the ones on the right side), which happen to be equal to the index of the lowest set bit. `ctz` can be represented by a single processor instruction on most architectures, like [BSF](https://www.felixcloutier.com/x86/bsf) on x86, and is very efficient. The loop expression `rlist &= rlist - 1` clears the lowest set bit after each iteration.
+The optimized version might be confusing to people without a deeper understanding of bit operations. It starts with the same `rlist` as the naive variant and then uses `ctz` to count the trailing zeros (the ones on the right side), which happen to be equal to the index of the lowest set bit. `ctz` can be represented by a single processor instruction on most architectures, like [BSF](https://www.felixcloutier.com/x86/bsf) on x86 and is very efficient. The loop expression `rlist &= rlist - 1` clears the lowest set bit after each iteration.
 
 This combination allows efficient and branchless bit iteration, at least if you ignore the loop itself. The whole thing can also be wrapped into C++ language constructs like a [custom iterator](https://github.com/jsmolka/eggvance/blob/9cae4676ed9927064c43a68cd178d265baf7e28b/eggvance/src/base/bits.h#L168) and a range-based for loop to make it look more appealing.
 
@@ -154,10 +154,10 @@ for (uint x : bits::iter(rlist)) {
 }
 ```
 
-In the end, this whole section could also be titled "premature optimization". Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions, and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
+In the end, this whole section could also be titled "premature optimization". Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
 
 ## Emscripten
-At some point during the last months, porting the emulator to WebAssembly crossed my mind and hooked me for some days. Reading through the [emscripten](https://emscripten.org/index.html) documentation made me realize that there wasn't much left to do to port an SDL2-based application to WebAssembly. I had to remove some platform-specific code, which is always a good thing, and add a modified `main` function. Compiling isn't much different compared to Linux and macOS, which were working fine already.
+At some point during the last months, porting the emulator to WebAssembly crossed my mind and hooked me for some days. Reading through the [emscripten](https://emscripten.org/index.html) documentation made me realize that there wasn't much left to do to port an SDL2-based application to WebAssembly. I had to remove some platform-specific code, which is always a good thing and add a modified `main` function. Compiling isn't much different compared to Linux and macOS, which were working fine already.
 
 The included filesystem API is a nice abstraction around the fact that browsers don't have access to the filesystem without special permission by the user. It allows placing data in a buffer and then accessing it like a normal file from within the C++ code.
 
@@ -172,7 +172,7 @@ function loadFile(input) {
 }
 ```
 
-All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
+All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
 
 The result can be tested [here](https://eggvance.smolka.dev).
 
@@ -225,6 +225,6 @@ With all text rendering functions in place, I was able to add a simple user inte
 {{</wrap>}}
 
 ## Final Words
-This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February, and am now finishing the article in early June. Formulating text and walking other people through ideas has never been a strength of mine.
+This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February and am now finishing the article in early June. Formulating text and walking other people through ideas has never been a strength of mine.
 
 Anyway, I hope to finish most of the cleanup sometime soon and then write another progress report once I'm ready to release version 0.2. I want it to be as stable and accurate as possible before I devote time to implement more advanced things like audio emulation and CPU prefetching.

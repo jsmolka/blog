@@ -5,7 +5,7 @@ tags: ["drizzle"]
 date: 2021-10-09
 type: post
 ---
-I made some good progress with drizzle. It's now smart enough to understand expressions, statements, and control flow. It's barebones but functional. The lack of shorthand operators results in more typing than necessary, but that's something I'll fix in the future.
+I made some good progress with drizzle. It's now smart enough to understand expressions, statements and control flow. It's barebones but functional. The lack of shorthand operators results in more typing than necessary, but that's something I'll fix in the future.
 
 ```drizzle
 # Print even numbers
@@ -38,7 +38,7 @@ block label:
       break label
 ```
 
-Implementing the many binary operations in a clean, efficient, and extensible way was quite the challenge. Internally, the `binary` function pops the right operand off the stack and takes a reference to the left operand, which will also be used as the destination. It then "hashes" the value types and uses a jump table to call an optimized handler.
+Implementing the many binary operations in a clean, efficient and extensible way was quite the challenge. Internally, the `binary` function pops the right operand off the stack and takes a reference to the left operand, which will also be used as the destination. It then "hashes" the value types and uses a jump table to call an optimized handler.
 
 ```cpp
 void Vm::power() {
@@ -55,7 +55,7 @@ void Vm::power() {
 }
 ```
 
-The `binary` function also takes care of implicit type promotions. Inside the handler, we need to check which type the operands have and act accordingly. If the handler returns `false`, the operation doesn't support the operand types, and the VM throws a type error.
+The `binary` function also takes care of implicit type promotions. Inside the handler, we need to check which type the operands have and act accordingly. If the handler returns `false`, the operation doesn't support the operand types and the VM throws a type error.
 
 ```
 Line 1 | "test" ** 2
@@ -63,4 +63,4 @@ Line 1 | "test" ** 2
 TypeError: bad operand types for '**': 'string' and 'int'
 ```
 
-Nothing more to see here. Next up are functions, classes, garbage collection, and some proper tests/documentation of the current state.
+Nothing more to see here. Next up are functions, classes, garbage collection and some proper tests/documentation of the current state.

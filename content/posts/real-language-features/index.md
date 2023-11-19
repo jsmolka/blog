@@ -1,6 +1,6 @@
 ---
 title: "Real Language Features"
-description: "Late binding, collections, and iterators."
+description: "Late binding, collections and iterators."
 tags: ["drizzle"]
 date: 2022-06-04
 type: post
@@ -42,14 +42,14 @@ void Vm::loadGlobal() {
 ```
 
 ## Collections
-Lists and maps are vital parts of a programming language, and drizzle wouldn't be complete without them. Parsing the values of a list and the key-value pairs of a map was a little annoying due to drizzle being whitespace aware [^1]. Each indent, dedent, and new line must be taken care of, or the parser throws a syntax error.
+Lists and maps are vital parts of a programming language and drizzle wouldn't be complete without them. Parsing the values of a list and the key-value pairs of a map was a little annoying due to drizzle being whitespace aware [^1]. Each indent, dedent and new line must be taken care of or the parser throws a syntax error.
 
 [^1]: If I were to design another language, I definitely wouldn't do whitespace awareness again. It makes many things complicated or outright impossible:
 
     - What counts as an indentation?
     - Can we mix spaces and tabs? If so, how many spaces are one tab?
     - How do we define anonymous functions with multiple lines?
-    - How do we define a classic `for` loop with initializer, condition, and expression?
+    - How do we define a classic `for` loop with initializer, condition and expression?
     - How do we parse list/map expressions with multiple lines?
 
     Just use braces and ignore whitespace. It makes life much easier.
@@ -79,7 +79,7 @@ assert(map.get(1.0) == 0)
 ```
 
 ## Iterators
-Until now, the `while` statement was the only possibility to loop in drizzle. It was sufficient because all loops can be remodeled into `while` loops. I didn't implement the classic `for` loop with initializer, condition, and expression because it doesn't play nice with whitespace awareness. After the introduction of collections, it made sense to implement iterators and the `for .. in` loop known from other languages.
+Until now, the `while` statement was the only possibility to loop in drizzle. It was sufficient because all loops can be remodeled into `while` loops. I didn't implement the classic `for` loop with initializer, condition and expression because it doesn't play nice with whitespace awareness. After the introduction of collections, it made sense to implement iterators and the `for .. in` loop known from other languages.
 
 ```drizzle
 var l = [0, 1, 2]

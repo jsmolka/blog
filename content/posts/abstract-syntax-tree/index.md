@@ -5,9 +5,9 @@ tags: ["drizzle"]
 date: 2022-01-08
 type: post
 ---
-drizzle started with a single-pass compiler. It took a stream of tokens and converted them into bytecode. There was no intermediate representation, and to be honest: there was no need for it. A single-pass compiler is sufficient for a programming language. Just take a look at [Lua](https://www.lua.org/): it's small, simple, and has fast startup times.
+drizzle started with a single-pass compiler. It took a stream of tokens and converted them into bytecode. There was no intermediate representation and to be honest: there was no need for it. A single-pass compiler is sufficient for a programming language. Just take a look at [Lua](https://www.lua.org/): it's small, simple and has fast startup times.
 
-But this is a hobby project, and I wanted to explore the mystical abstract syntax tree. I was a little surprised to find no code examples. I get the idea behind it, but there seems to be no universal way of doing it. The design I ended up with uses a tagged union:
+But this is a hobby project and I wanted to explore the mystical abstract syntax tree. I was a little surprised to find no code examples. I get the idea behind it, but there seems to be no universal way of doing it. The design I ended up with uses a tagged union:
 
 ```cpp
 class Expression;
@@ -31,7 +31,7 @@ public:
 };
 ```
 
-I did the same for statements. The `program` statement is the root of the tree. It contains other statements, which might be expressions, loops, or control flow constructs. With the IR in place, I was also able to split the parser and compiler into two entities. The parser spits out an AST, and the compiler uses it to produce bytecode. Take the following program as an example:
+I did the same for statements. The `program` statement is the root of the tree. It contains other statements, which might be expressions, loops or control flow constructs. With the IR in place, I was also able to split the parser and compiler into two entities. The parser spits out an AST and the compiler uses it to produce bytecode. Take the following program as an example:
 
 ```drizzle
 var x = 0

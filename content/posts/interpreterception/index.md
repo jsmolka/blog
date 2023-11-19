@@ -39,7 +39,7 @@ class GameBoy:
         this.xor(this.b)
 ```
 
-I tested it with the infamous [blargg test ROMs](https://github.com/retrio/gb-test-roms), and it appears to work! The second test fails because I haven't implemented interrupts, but those are next in line.
+I tested it with the infamous [blargg test ROMs](https://github.com/retrio/gb-test-roms) and it appears to work! The second test fails because I haven't implemented interrupts, but those are next in line.
 
 ```
 01 - special              Passed

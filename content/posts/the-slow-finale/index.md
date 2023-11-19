@@ -12,7 +12,7 @@ Hello ladies and gentlemen! Please take a seat and enjoy the finale of the serie
   {{<image src="img/super-mario-land.png" caption="Super Mario Land stage three boss">}}
 {{</wrap>}}
 
-But of what use is potential if you don't act upon it? All the graphics and game logic stored in the additional memory, and we just draw boring background tiles with some scrolling sprinkled in. But then two more actors enter the stage: sprites and windows. Suddenly, the whole thing becomes more lively and resembles something you saw in your childhood.
+But of what use is potential if you don't act upon it? All the graphics and game logic stored in the additional memory and we just draw boring background tiles with some scrolling sprinkled in. But then two more actors enter the stage: sprites and windows. Suddenly, the whole thing becomes more lively and resembles something you saw in your childhood.
 
 {{<wrap>}}
   {{<image src="img/zelda-intro.png" caption="Zelda intro sequence">}}
@@ -24,4 +24,4 @@ But of what use is potential if you don't act upon it? All the graphics and game
   {{<image src="img/zelda-sword.png" caption="Not the Master Sword">}}
 {{</wrap>}}
 
-Seeing this gets you all hyped up. You jump right into the game, and then the slow slideshow starts. What? The emulator doesn't even manage to run a 30-year-old game at full speed? Sorry to disappoint you. It reaches about 45% speed of the console. I could increase that to 65% by using free functions and variables instead of a class, but that doesn't seem worth it at this point. I may put more time into the language and the emulator to achieve the magic 100%, but for now, this is the finale. Stay tuned for the sequel.
+Seeing this gets you all hyped up. You jump right into the game and then the slow slideshow starts. What? The emulator doesn't even manage to run a 30-year-old game at full speed? Sorry to disappoint you. It reaches about 45% speed of the console. I could increase that to 65% by using free functions and variables instead of a class, but that doesn't seem worth it at this point. I may put more time into the language and the emulator to achieve the magic 100%, but for now, this is the finale. Stay tuned for the sequel.

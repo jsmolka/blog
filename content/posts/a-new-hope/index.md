@@ -5,7 +5,7 @@ tags: ["drizzle", "sprite"]
 date: 2022-10-29
 type: post
 ---
-The [previous post]({{<relref "posts/the-slow-finale">}}) was meant to mark the end of sprite and drizzle development. I achieved everything I ever wanted: a working programming language and a program large enough to prove its maturity to handle medium-scale problems. But some part of me just couldn't let it go. I love efficient programs, and the fact that sprite could not run games at native speed bothered me, so I decided to make one final push toward performance.
+The [previous post]({{<relref "posts/the-slow-finale">}}) was meant to mark the end of sprite and drizzle development. I achieved everything I ever wanted: a working programming language and a program large enough to prove its maturity to handle medium-scale problems. But some part of me just couldn't let it go. I love efficient programs and the fact that sprite could not run games at native speed bothered me, so I decided to make one final push toward performance.
 
 ## Benchmark
 I didn't want to change much of sprite's code. I think it turned out quite readable for a single file, 1586 lines emulator. But the one thing I knew I had to remove was the overarching `class`. Each use of `this` went through the hash maps of the instance and its class, which is **slow**. How slow? Let's define a simple benchmark.
@@ -31,7 +31,7 @@ class Vm {
 };
 ```
 
-The `Frame` object stores the called function, the stack pointer, and the program counter, which points to the current position in the function's bytecode. Each opcode or argument read accesses the PC and increments it by a certain amount. Due to this nature, it's one of the most, if not the most accessed variable of the virtual machine. I used a stack to store call frames and accessed the current one with `frames.top()`.
+The `Frame` object stores the called function, the stack pointer and the program counter, which points to the current position in the function's bytecode. Each opcode or argument read accesses the PC and increments it by a certain amount. Due to this nature, it's one of the most, if not the most accessed variable of the virtual machine. I used a stack to store call frames and accessed the current one with `frames.top()`.
 
 ```cpp
 class Vm {
@@ -44,7 +44,7 @@ That introduced an indirection and possible cache miss because the `frames` obje
 
 ## Specializing Adaptive Interpreter
 
-At this point, I was down to 25 seconds and couldn't think of anything more to reduce it by yet another five seconds. I decided to go through Python's source code to find some motivation. I know Python isn't known as a fast programming language, but the devs made good progress on that front in the last releases. I saw lots of macros, computed gotos, and the solution to my problem: [PEP 659](https://peps.python.org/pep-0659/), the specializing adaptive interpreter.
+At this point, I was down to 25 seconds and couldn't think of anything more to reduce it by yet another five seconds. I decided to go through Python's source code to find some motivation. I know Python isn't known as a fast programming language, but the devs made good progress on that front in the last releases. I saw lots of macros, computed gotos and the solution to my problem: [PEP 659](https://peps.python.org/pep-0659/), the specializing adaptive interpreter.
 It assumes that opcodes at certain locations in the bytecode will be called with the same operand types and tries to optimize for them. It uses an inline cache and heuristics to achieve that. I implemented a much simpler version.
 
 The first time an opcode is called, the VM tries to optimize it.
@@ -101,4 +101,4 @@ The specializing adaptive interpreter worked wonders with sprite. Almost all opc
 {{% /wrap %}}
 
 ## Final Words
-That's it. I increased the performance of drizzle by about 200% and cleaned up the code in the meantime. Both projects are now well-written and can the shelved without worries. Next, I want to do a project in something other than C++. The cryptic error messages, steep learning curve, and memory safety issues can be a pain in the ass. I think it's time to try out Rust.
+That's it. I increased the performance of drizzle by about 200% and cleaned up the code in the meantime. Both projects are now well-written and can the shelved without worries. Next, I want to do a project in something other than C++. The cryptic error messages, steep learning curve and memory safety issues can be a pain in the ass. I think it's time to try out Rust.

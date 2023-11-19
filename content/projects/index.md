@@ -5,7 +5,7 @@ showMeta: false
 showTitle: false
 ---
 # workin
-[workin](https://github.com/jsmolka/workin) is an app for running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts, and allows easy creation of custom workouts.
+[workin](https://github.com/jsmolka/workin) is an app for running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts and allows easy creation of custom workouts.
 
 {{<wrap>}}
   {{<image src="img/workout.png" caption="Workout view">}}
@@ -13,7 +13,7 @@ showTitle: false
 {{</wrap>}}
 
 # sprite
-[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the programming language. It implements most components of the system with reasonable accuracy, but there is no sound or saves, and the cartridge types are limited to MBC0, MBC1, and MBC3.
+[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the programming language. It implements most components of the system with reasonable accuracy, but there is no sound or saves and the cartridge types are limited to MBC0, MBC1 and MBC3.
 
 {{<wrap>}}
   {{<image src="img/technology.png" caption="Technology is incredible guy">}}
@@ -60,7 +60,7 @@ It started as an exercise for language design and whitespace-aware parsing and g
   {{<image src="img/mother.png" caption="Final moments of Mother 3">}}
 {{</wrap>}}
 
-Other components of the system soon followed, and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly](https://eggvance.smolka.dev). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.
+Other components of the system soon followed and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly](https://eggvance.smolka.dev). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.
 
 {{<wrap>}}
   {{<audio src="audio/battle-frontier.mp3" caption="Pokémon Emerald battle frontier theme">}}

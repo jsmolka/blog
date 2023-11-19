@@ -5,7 +5,7 @@ tags: ["eggvance", "emulation"]
 date: 2019-09-30
 type: post
 ---
-One month has passed since the last progress report, and I'm back with another one. Most of this month's effort went into accuracy and performance improvements of the pixel processing unit (PPU). Its main purpose is converting data stored in memory like VRAM and object attribute memory (OAM) into pixels on the screen.
+One month has passed since the last progress report and I'm back with another one. Most of this month's effort went into accuracy and performance improvements of the pixel processing unit (PPU). Its main purpose is converting data stored in memory like VRAM and object attribute memory (OAM) into pixels on the screen.
 
 ## Rendering Engine
 Let's begin with the most interesting thing I've done during the last month: a rewrite of the rendering engine. The Game Boy Advance can use up to four different backgrounds and an object layer. Each background and object has its own priority which determines the drawing order. Backgrounds with high priority are drawn in front of backgrounds with low priority. Transparent areas inside backgrounds are used to display the background with the next highest priority.
@@ -63,7 +63,7 @@ if (mmio.dispcnt.force_blank) {
 ## Color Encoding
 The Game Boy Advance uses one 16-bit halfword to encode colors in the BGR555 format. That effectively wastes one bit, but that doesn't seem to be a problem. Modern 16-bit color formats like RGB565 tend to use that extra bit for more green values because the human eye can distinguish shades of green the easiest.
 
-I'm using [SDL2](https://www.libsdl.org/) for video, audio, and user input. It allows the creation of textures in the desired BGR555 format, which are then used for hardware-accelerated rendering. The only problem with this approach is the fact that modern hardware tends to use ARGB8888, which causes SDL to convert the whole frame from one format to the other. Removing this implicit conversion by converting the colors myself resulted in a 10 to 15% performance increase.
+I'm using [SDL2](https://www.libsdl.org/) for video, audio and user input. It allows the creation of textures in the desired BGR555 format, which are then used for hardware-accelerated rendering. The only problem with this approach is the fact that modern hardware tends to use ARGB8888, which causes SDL to convert the whole frame from one format to the other. Removing this implicit conversion by converting the colors myself resulted in a 10 to 15% performance increase.
 
 ```cpp
 u32 PPU::argb(u16 color) {
