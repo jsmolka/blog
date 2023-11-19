@@ -64,6 +64,14 @@
 
     li {
       padding-left: spacing(1);
+
+      @include tail {
+        margin-top: spacing(4);
+      }
+
+      pre {
+        margin: 0;
+      }
     }
   }
 
