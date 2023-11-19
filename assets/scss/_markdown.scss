@@ -179,10 +179,6 @@
         padding-left: spacing(5);
         counter-increment: footnote-count;
 
-        @include tail {
-          margin-top: spacing(4);
-        }
-
         &::marker {
           content: '[' counter(footnote-count) ']';
           font-feature-settings: 'tnum';
