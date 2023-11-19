@@ -8,8 +8,11 @@
     text-align: left;
   }
 
-  @include tail {
-    margin-top: spacing(4);
+  &,
+  li {
+    @include tail {
+      margin-top: spacing(4);
+    }
   }
 
   :is(h1, h2, h3):not(:first-child) {
@@ -65,17 +68,13 @@
     li {
       padding-left: spacing(1);
 
-      @include tail {
-        margin-top: spacing(4);
-      }
-
       pre {
         margin: 0;
       }
     }
   }
 
-  ul li {
+  ul > li {
     position: relative;
 
     &::before {
