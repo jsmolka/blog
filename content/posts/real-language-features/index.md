@@ -25,9 +25,9 @@ Line 2 |   b()
 SyntaxError: undefined variable 'b'
 ```
 
-Local variables are resolved at compile-time and are therefore fast at runtime. The compiler emits `Opcode::Load` and `Opcode::Store` instructions with an index, which then manipulate the stack directly. If a variable cannot be resolved, the compiler must throw an error to prevent undefined behavior.
+Local variables are resolved at compile-time and are therefore fast at runtime. The compiler emits `Opcode::Load` and `Opcode::Store` instructions with an index, which then manipulates the stack directly. If a variable cannot be resolved, the compiler must throw an error to prevent undefined behavior.
 
-Now, instead of throwing, each unresolved variable is assumed to be a global one and gets its own slot in the VMs `globals` vector. Globals with the same name refer to the same slot. That way, they are almost as fast as local variables. We just need to make sure that we don't allow accessing variables that are still in an undefined state.
+Now, instead of throwing, each unresolved variable is assumed to be a global one and gets its own slot in the VM's `globals` vector. Globals with the same name refer to the same slot. That way, they are almost as fast as local variables. We just need to make sure that we don't allow accessing variables that are still in an undefined state.
 
 ```cpp
 template<typename Integral>
@@ -42,14 +42,14 @@ void Vm::loadGlobal() {
 ```
 
 ## Collections
-Lists and maps are vital parts of a programming language and drizzle wouldn't be complete without them. Parsing the values of a list and the key-value pairs of a map was a little annoying due to drizzle being whitespace aware [^1]. Each indent, dedent and new line must be taken care of or the parser throws a syntax error.
+Lists and maps are vital parts of a programming language, and drizzle wouldn't be complete without them. Parsing the values of a list and the key-value pairs of a map was a little annoying due to drizzle being whitespace aware [^1]. Each indent, dedent and new line must be taken care of or the parser throws a syntax error.
 
 [^1]: If I were to design another language, I definitely wouldn't do whitespace awareness again. It makes many things complicated or outright impossible:
 
     - What counts as an indentation?
-    - Can we mix spaces and tabs? If so, how many spaces are one tab?
+    - Can we mix spaces and tabs? If so, how many spaces are in one tab?
     - How do we define anonymous functions with multiple lines?
-    - How do we define a classic `for` loop with initializer, condition and expression?
+    - How do we define a classic `for` loop with an initializer, condition and expression?
     - How do we parse list/map expressions with multiple lines?
 
     Just use braces and ignore whitespace. It makes life much easier.
@@ -64,7 +64,7 @@ map.set("key", "value")
 map.get("key")
 ```
 
-Apart from the usual things you'd expect, drizzle also offers some quality of life features:
+Apart from the usual things you'd expect, drizzle also offers some quality-of-life features:
 
 ```drizzle
 # Negative subscript
@@ -91,7 +91,7 @@ for x in l:
   print(x)
 ```
 
-Other features related to iterators are Pythons `range` function and Rusts `..` expression.
+Other features related to iterators are Python's `range` function and Rust's `..` expression.
 
 ```drizzle
 for i in 0 .. 10:
@@ -100,7 +100,7 @@ for i in 0 .. 10:
 assert(range(0, 10, 1) == (0 .. 10))
 ```
 
-Unfortunately, iterators in drizzle are not zero cost like in compiled languages. Using the `..` expression first allocates a `Range` and then a `RangeIterator` object. The worst-case in that regard is iterating a string. There are no single characters in drizzle which means that every character is represented as an immutable string which is allocated in each iteration.
+Unfortunately, iterators in drizzle are not zero-cost like in compiled languages. Using the `..` expression first allocates a `Range` and then a `RangeIterator` object. The worst case in that regard is iterating a string. There are no single characters in drizzle which means that every character is represented as an immutable string that is allocated in each iteration.
 
 ```drizzle
 for c in "slow":

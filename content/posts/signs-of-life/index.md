@@ -16,7 +16,7 @@ while x <= 10:
   x = x + 1
 ```
 
-Each level of indentation increases the scope depth. Variables with different depths can shadow each other. In addition to the commonly known control flow constructs, drizzle also supports `block` statements, which "just" increase the scope depth.
+Each level of indentation increases the scope depth. Variables with different depths can shadow each other. In addition to the commonly known control flow constructs, drizzle also supports `block` statements, which "just" increases the scope depth.
 
 ```drizzle
 # Shadowing
@@ -55,7 +55,7 @@ void Vm::power() {
 }
 ```
 
-The `binary` function also takes care of implicit type promotions. Inside the handler, we need to check which type the operands have and act accordingly. If the handler returns `false`, the operation doesn't support the operand types and the VM throws a type error.
+The `binary` function also takes care of implicit type promotions. Inside the handler, we need to check which type the operands have and act accordingly. If the handler returns `false`, the operation doesn't support the operand types, and the VM throws a type error.
 
 ```
 Line 1 | "test" ** 2

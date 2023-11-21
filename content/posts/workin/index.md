@@ -10,7 +10,7 @@ Despite their name, smart trainers are pretty dumb out of the box. To get the mo
 [^1]: I am team blue bars. Place the phone in the background and watch a good show.
 
 ## Workouts
-The most important aspect for me is high quality workouts. Intervals should be simple &mdash; spend a certain amount of time at a certain intensity to elicit a training response. Unfortunately, most third-party apps use complicated workouts with ramps and frequently changing interval intensities to keep the user's attention. Even the science-based TrainerRoad falls victim to this.
+The most important aspect for me is high-quality workouts. Intervals should be simple &mdash; spend a certain amount of time at a certain intensity to elicit a training response. Unfortunately, most third-party apps use complicated workouts with ramps and frequently changing interval intensities to keep the user's attention. Even the science-based TrainerRoad falls victim to this.
 
 Since nothing on the market met my needs at a reasonable price, I decided to write my own app. It had to run on a smartphone because that's the setup I use. I could have tried to develop a native app, which would have had some advantages regarding the Bluetooth API, but I took the path of least resistance and went with a simple web app. Getting used to Vue 3's new composition API was enough new information for one project.
 
@@ -40,7 +40,7 @@ class Activity {
 }
 ```
 
-I have consumed a fair amount of training related content this year and decided to focus on workouts used in polarized training. Many of these intervals have been tested in studies by Stephen Seiler and Bent Rønnestad. I ended up with [13 unique workouts and a few variations of each](https://github.com/jsmolka/workin/blob/master/src/stores/data/workouts.js):
+I have consumed a fair amount of training-related content this year and decided to focus on workouts used in polarized training. Many of these intervals have been tested in studies by Stephen Seiler and Bent Rønnestad. I ended up with [13 unique workouts and a few variations of each](https://github.com/jsmolka/workin/blob/master/src/stores/data/workouts.js):
 
 ```js
 workout('4 x 8', [
@@ -73,11 +73,11 @@ The UI to select and view workouts looks like this:
 {{</wrap>}}
 
 ## Web Bluetooth API
-Communication between app and smart trainer occurs via the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API). [Support](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility) in browsers other than Chromium is non-existent, and even Chromium doesn't support all features without experimental feature flags. That's a shame because I can't use nice-to-have features like automatic device reconnection on page reload. However, it does support enough of the standard to develop a fully functional app.
+Communication between the app and smart trainer occurs via the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API). [Support](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility) in browsers other than Chromium is non-existent, and even Chromium doesn't support all features without experimental feature flags. That's a shame because I can't use nice-to-have features like automatic device reconnection on page reload. However, it does support enough of the standard to develop a fully functional app.
 
-The [Web Bluetooth Communication Group's GitHub account](https://github.com/WebBluetoothCG) has several demos describing how to use the API, including one for a [heart rate monitor](https://github.com/WebBluetoothCG/demos/blob/gh-pages/heart-rate-sensor/heartRateSensor.js). That's one of the two devices I need to support done. Unfortunately, it's the easier one, and the smart trainer is a bit more complicated. It uses the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/) and defines several characteristics to interact with it:
+The [Web Bluetooth Communication Group's GitHub account](https://github.com/WebBluetoothCG) has several demos describing how to use the API, including one for a [heart rate monitor](https://github.com/WebBluetoothCG/demos/blob/gh-pages/heart-rate-sensor/heartRateSensor.js). That's one of the two devices I need to support. Unfortunately, it's the easier one, and the smart trainer is a bit more complicated. It uses the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/) and defines several characteristics to interact with it:
 
-- **Fitness Machine Feature**: this characteristic provides information about the type of device and it's features. Device types include treadmills, cross trainers, step and stair climbers, rowers and indoor bikes. We are interested in the latter. Each device supports features, properties that can be read, and target features, properties that can be set. Smart trainers tend to provide power and cadence and support target power setting.
+- **Fitness Machine Feature**: this characteristic provides information about the type of device and its features. Device types include treadmills, cross trainers, step and stair climbers, rowers and indoor bikes. We are interested in the latter. Each device supports features, properties that can be read, and target features, properties that can be set. Smart trainers tend to provide power and cadence and support target power setting.
 - **Supported Power Range**: this characteristic provides information about the supported power range. It includes minimum wattage, maximum wattage and step resolution.
 - **Indoor Bike Data**: this characteristic provides training-related data and periodically sends notifications to the client.
 
@@ -113,7 +113,7 @@ The [Web Bluetooth Communication Group's GitHub account](https://github.com/WebB
   }
   ```
 
-  Each notification consists of a 16-bit flags field and its associated data. The flags field defines which parameters are present in the data stream. The size and resolution of each parameter is defined in the specification.
+  Each notification consists of a 16-bit flags field and its associated data. The flags field defines which parameters are present in the data stream. The size and resolution of each parameter are defined in the specification.
 
   ```js
   const parameters = {
@@ -137,7 +137,7 @@ The [Web Bluetooth Communication Group's GitHub account](https://github.com/WebB
     cadence: ['u16'], // 0.5 rpm
   };
   ```
-  At one point I wondered why the reported cadence was twice the actual value, until I realized that cadence is transmitted in 0.5 rpm increments.
+  At one point I wondered why the reported cadence was twice the actual value until I realized that cadence is transmitted in 0.5 rpm increments.
 - **Fitness Machine Control Point**: this characteristic handles all communication with the trainer.
 
     ```js
@@ -180,7 +180,7 @@ this.device.addEventListener('gattserverdisconnected', async () => {
 });
 ```
 
-I hope the disconnects don't happen during workouts. Maybe the low heart rate during programming caused the heart rate monitor to go into some sort of power saving mode, but that would be odd behavior to say the least.
+I hope the disconnects don't happen during workouts. Maybe the low heart rate during programming caused the heart rate monitor to go into some sort of power-saving mode, but that would be odd behavior, to say the least.
 
 ## Train
 The last thing on the list was the train view. I had to make the numbers big enough to be readable with a racing heart and muscles full of lactate. It contains the six most important metrics, a live graphic of the workout and the upcoming intervals. I don't think I'll be able to read the interval intensities and durations while I'm training, but I had to fill the screen with something and it looked good.
@@ -190,7 +190,7 @@ The last thing on the list was the train view. I had to make the numbers big eno
   {{<image src="img/activity.png" caption="Activity view">}}
 {{</wrap>}}
 
-I also implemented automatic start and pause based on pedalling. Two very useful features when taking a nature break.
+I also implemented automatic start and pause based on pedaling. Two very useful features when taking a nature break.
 
 ## Final Words
 The whole thing turned out better than expected. A month of concentrated work, some new technologies and an interesting project to obsess about. So far I have done one test run and everything has worked fine. I hope it stays that way and I don't lose any training data in the future. That would be **really** annoying. The code is available on [GitHub](https://github.com/jsmolka/workin) and the app is hosted on [Vercel](https://workin.smolka.dev/).

@@ -23,7 +23,7 @@ def outer():
 outer()()
 ```
 
-Here we first call the `outer` and then the returned `inner` function. The parser produces a `Call` expression and the compiler then turns it into opcodes that push callee and arguments onto the stack.
+Here we first call the `outer` and then the returned `inner` function. The parser produces a `Call` expression, and the compiler then turns it into opcodes that push callee and arguments onto the stack.
 
 ```diff-cpp
  struct Call {
@@ -72,4 +72,4 @@ Line 4 |     i = i + 1
 SyntaxError: cannot capture local variable
 ```
 
-Closures add quite some complexity to the code that I am not willing to introduce and to be honest: I do not need them. I tried some magic tricks to achieve a minimalistic version, but all of them fell apart when it came to recursion. The best I could do were absolute stack offsets to access global variables.
+Closures add quite some complexity to the code that I am not willing to introduce and to be honest: I do not need them. I tried some magic tricks to achieve a minimalistic version, but all of them fell apart when it came to recursion. The best I could do was absolute stack offsets to access global variables.

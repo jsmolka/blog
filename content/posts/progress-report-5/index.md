@@ -5,10 +5,10 @@ tags: ["eggvance", "emulation"]
 date: 2020-06-06
 type: post
 ---
-Over four months have passed since the last progress report. During that period, I've invested a lot of time into cleaning up the current codebase, improving performance and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
+Over four months have passed since the last progress report. During that period, I invested a lot of time into cleaning up the current codebase, improving performance and adding some nice features. Unfortunately, there were no notable fixes to broken games so please don't expect nice screenshots with before/after comparisons.
 
 ## State-Dependent Dispatching
-The first thing I want to talk about is something I call "state-dependent dispatching", even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples for such states in the GBA are:
+The first thing I want to talk about is something I call "state-dependent dispatching", even though "dispatching" is probably the wrong technical term to use in this situation. Emulators must handle lots of hardware states simultaneously to function correctly. Most of them can be changed by writing to an I/O register or even during the execution of a single instruction. Examples of such states in the GBA are:
 
 - Which mode is the processor in?
 - Is the CPU halted until the next interrupt?
@@ -16,7 +16,7 @@ The first thing I want to talk about is something I call "state-dependent dispat
 - Are timers running?
 - Is DMA active?
 
-That amounts to five invariants that need to be checked before, while or after every executed instruction. The old CPU implementation used a nested if-else chain to evaluate each state and act accordingly. That sounds quite reasonable until you realize that this is the hot path we are talking about. Now it is time for me to present you the innermost CPU loop, the pit of hell and profilers worst nightmare:
+That amounts to five invariants that need to be checked before, while or after every executed instruction. The old CPU implementation used a nested if-else chain to evaluate each state and act accordingly. That sounds quite reasonable until you realize that this is the hot path we are talking about. Now it is time for me to present to you the innermost CPU loop, the pit of hell and profilers' worst nightmare:
 
 ```cpp
 void ARM::execute() {
@@ -50,7 +50,7 @@ void ARM::execute() {
 
 It looks much worse than it actually is, but you get the idea. Lots of different states require lots of if-else statements. The result is code with many branches, something a modern CPU doesn't like. Emulators are known for their bad branch prediction because the branches don't tend to follow a predictable pattern. Adding more branches to each instruction just aggravates this problem.
 
-So how can we get around this massive if-else chain and transform it into something faster? Well, most of these states change rather infrequently and don't require constant re-evaluation. Therefore the easiest thing to do is storing the current emulator state in a variable and then calling a dispatch function made for that specific state until it changes. That reduces the number of branches to almost zero and their runtime overhead to a minimum.
+So how can we get around this massive if-else chain and transform it into something faster? Well, most of these states change rather infrequently and don't require constant re-evaluation. Therefore the easiest thing to do is to store the current emulator state in a variable and then call a dispatch function made for that specific state until it changes. That reduces the number of branches to almost zero and their runtime overhead to a minimum.
 
 ```cpp
 class ARM {
@@ -76,7 +76,7 @@ if (cpsr.t = addr & 0x1) {
 }
 ```
 
-Actions similar to this need to be done at all places which relate to states defined in the `State` enum. Once we have a functional `state` variable in place, we can start thinking about writing a `dispatch` function that considers the state. The five different states require 32 unique dispatch functions to be defined (the number of plausible combinations is lower). Here we can use C++'s templates to create an optimized dispatch function for each state case without writing more than one function. The current implementation looks like [this](https://github.com/jsmolka/eggvance/blob/5d36e1067d15bb0d611719d8d7022de567a0488b/eggvance/src/arm/arm.cpp#L69).
+Actions similar to this need to be done at all places that relate to states defined in the `State` enum. Once we have a functional `state` variable in place, we can start thinking about writing a `dispatch` function that considers the state. The five different states require 32 unique dispatch functions to be defined (the number of plausible combinations is lower). Here we can use C++'s templates to create an optimized dispatch function for each state case without writing more than one function. The current implementation looks like [this](https://github.com/jsmolka/eggvance/blob/5d36e1067d15bb0d611719d8d7022de567a0488b/eggvance/src/arm/arm.cpp#L69).
 
 ```cpp
 template<uint state>
@@ -91,7 +91,7 @@ void ARM::dispatch() {
 }
 ```
 
-The `state & kStateThumb` part of the function will be evaluated at compile-time and has no runtime cost. All that's left to do is calling the correct dispatch function for the current `state`. Each `dispatch` function runs as long as the `state` remains the same and there are processor cycles to go through.
+The `state & kStateThumb` part of the function will be evaluated at compile-time and has no runtime cost. All that's left to do is call the correct dispatch function for the current `state`. Each `dispatch` function runs as long as the `state` remains the same and there are processor cycles to go through.
 
 ```cpp
 void ARM::run(int cycles) {
@@ -134,7 +134,7 @@ for (uint x = 0; rlist != 0; ++x, rlist >>= 1) {
 }
 ```
 
-While this version is more than enough for its use case, it doesn't feel like the end-all and be-all of efficient bit iteration. It lacks in two important areas, which are branch prediction and iteration count. The if-statement will cause the host CPUs branch predictor to fail half of the time on average because emulation is inherently random. The high iteration count is caused by the fact that we iterate all bits instead of only the set ones that we need.
+While this version is more than enough for its use case, it doesn't feel like the end-all and be-all of efficient bit iteration. It lacks in two important areas, which are branch prediction and iteration count. The if-statement will cause the host CPU's branch predictor to fail half of the time on average because emulation is inherently random. The high iteration count is caused by the fact that we iterate all bits instead of only the set ones that we need.
 
 ```cpp
 uint rlist = 0b1010'0110'1110'1010;
@@ -144,7 +144,7 @@ for (; rlist != 0; rlist &= rlist - 1) {
 }
 ```
 
-The optimized version might be confusing to people without a deeper understanding of bit operations. It starts with the same `rlist` as the naive variant and then uses `ctz` to count the trailing zeros (the ones on the right side), which happen to be equal to the index of the lowest set bit. `ctz` can be represented by a single processor instruction on most architectures, like [BSF](https://www.felixcloutier.com/x86/bsf) on x86 and is very efficient. The loop expression `rlist &= rlist - 1` clears the lowest set bit after each iteration.
+The optimized version might be confusing to people without a deeper understanding of bit operations. It starts with the same `rlist` as the naive variant and then uses `ctz` to count the trailing zeros (the ones on the right side), which happen to be equal to the index of the lowest set bit. `ctz` can be represented by a single processor instruction on most architectures, like [BSF](https://www.felixcloutier.com/x86/bsf) on x86, and is very efficient. The loop expression `rlist &= rlist - 1` clears the lowest set bit after each iteration.
 
 This combination allows efficient and branchless bit iteration, at least if you ignore the loop itself. The whole thing can also be wrapped into C++ language constructs like a [custom iterator](https://github.com/jsmolka/eggvance/blob/9cae4676ed9927064c43a68cd178d265baf7e28b/eggvance/src/base/bits.h#L168) and a range-based for loop to make it look more appealing.
 
@@ -154,12 +154,12 @@ for (uint x : bits::iter(rlist)) {
 }
 ```
 
-In the end, this whole section could also be titled "premature optimization". Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
+In the end, this whole section could also be titled "premature optimization". Implementing efficient bit iteration had a minuscule performance impact on two of many processor instructions, and the overall performance impact was barely, if at all, noticeable. However, it was fun to think about.
 
 ## Emscripten
-At some point during the last months, porting the emulator to WebAssembly crossed my mind and hooked me for some days. Reading through the [emscripten](https://emscripten.org/index.html) documentation made me realize that there wasn't much left to do to port an SDL2-based application to WebAssembly. I had to remove some platform-specific code, which is always a good thing and add a modified `main` function. Compiling isn't much different compared to Linux and macOS, which were working fine already.
+At some point during the last months, porting the emulator to WebAssembly crossed my mind and hooked me for some days. Reading through the [emscripten](https://emscripten.org/index.html) documentation made me realize that there wasn't much left to do to port an SDL2-based application to WebAssembly. I had to remove some platform-specific code, which is always a good thing, and add a modified `main` function. Compiling isn't much different compared to Linux and macOS, which were working fine already.
 
-The included filesystem API is a nice abstraction around the fact that browsers don't have access to the filesystem without special permission by the user. It allows placing data in a buffer and then accessing it like a normal file from within the C++ code.
+The included filesystem API is a nice abstraction around the fact that browsers don't have access to the filesystem without special permission from the user. It allows placing data in a buffer and then accessing it like a normal file from within the C++ code.
 
 ```js
 function loadFile(input) {
@@ -172,7 +172,7 @@ function loadFile(input) {
 }
 ```
 
-All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
+All of this sounds nice great to have to figure out errors. The whole thing can be quite infuriating because debugging isn't an option, and `emscripten` tends to throw cryptic error messages at you. I had to go through all commits to find the one that broke the emulator. It turned out to be the filesystem's `canonical` function, which requires a file to exist. Otherwise, it throws an error.
 
 The result can be tested [here](https://eggvance.smolka.dev).
 
@@ -194,7 +194,7 @@ u8 glpyh[8] = {
 };
 ```
 
-The most important problem to solve was rendering text in assembly, which turned out to be much easier than expected. First, I extracted a simple font from [tonclib](https://www.coranac.com/tonc/text/toc.htm), where each text glyph is encoded in eight bytes like in the example shown above. Then I wrote an algorithm to render the text itself. It uses the GBAs bitmap background mode and moves each bit in the glyph data into a byte in video memory. That's it. All text rendering functions were done in merely [71 lines of code](https://github.com/jsmolka/gba-suite/blob/b9b17ed487e47c8fbfe30570eb7917b12e606f4e/lib/text.asm). These already include setting up certain registers and colors as well as positioning the text.
+The most important problem to solve was rendering text in assembly, which turned out to be much easier than expected. First, I extracted a simple font from [tonclib](https://www.coranac.com/tonc/text/toc.htm), where each text glyph is encoded in eight bytes like in the example shown above. Then I wrote an algorithm to render the text itself. It uses the GBA's bitmap background mode and moves each bit in the glyph data into a byte in video memory. That's it. All text rendering functions were done in merely [71 lines of code](https://github.com/jsmolka/gba-suite/blob/b9b17ed487e47c8fbfe30570eb7917b12e606f4e/lib/text.asm). These already include setting up certain registers and colors as well as positioning the text.
 
 ```armv4t
 text_glyph_data:
@@ -227,4 +227,4 @@ With all text rendering functions in place, I was able to add a simple user inte
 ## Final Words
 This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February and am now finishing the article in early June. Formulating text and walking other people through ideas has never been a strength of mine.
 
-Anyway, I hope to finish most of the cleanup sometime soon and then write another progress report once I'm ready to release version 0.2. I want it to be as stable and accurate as possible before I devote time to implement more advanced things like audio emulation and CPU prefetching.
+Anyway, I hope to finish most of the cleanup sometime soon and then write another progress report once I'm ready to release version 0.2. I want it to be as stable and accurate as possible before I devote time to implementing more advanced things like audio emulation and CPU prefetching.

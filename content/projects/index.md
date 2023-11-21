@@ -13,7 +13,7 @@ showTitle: false
 {{</wrap>}}
 
 # sprite
-[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the programming language. It implements most components of the system with reasonable accuracy, but there is no sound or saves and the cartridge types are limited to MBC0, MBC1 and MBC3.
+[sprite](https://github.com/jsmolka/sprite) is a Game Boy emulator written in [drizzle](#drizzle) and serves as the ultimate stress test for the programming language. It implements most components of the system with reasonable accuracy, but there is no sound or saves, and the cartridge types are limited to MBC0, MBC1 and MBC3.
 
 {{<wrap>}}
   {{<image src="img/technology.png" caption="Technology is incredible guy">}}
@@ -23,7 +23,7 @@ showTitle: false
 The initial implementation didn't even manage to emulate the console at half speed. Optimizations like using a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) in drizzle and replacing the class with free functions and variables in sprite increased the performance to 125%, which resulted in a stable frame rate at native speed.
 
 # drizzle
-[drizzle](https://github.com/jsmolka/drizzle) is a dynamic interpreted programming language with a syntax similar to Python.
+[drizzle](https://github.com/jsmolka/drizzle) is a dynamically interpreted programming language with a syntax similar to Python.
 
 ```drizzle
 class Point:
@@ -60,7 +60,7 @@ It started as an exercise for language design and whitespace-aware parsing and g
   {{<image src="img/mother.png" caption="Final moments of Mother 3">}}
 {{</wrap>}}
 
-Other components of the system soon followed and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly](https://eggvance.smolka.dev). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.
+Other components of the system soon followed, and the emulator got to a stage where it was able to run most games and demos you threw at it. Around that time, I spent a weekend porting it to [WebAssembly](https://eggvance.smolka.dev). Audio emulation was something I had been putting off until the end due to my lack of experience, but I managed to do it eventually.
 
 {{<wrap>}}
   {{<audio src="audio/battle-frontier.mp3" caption="Pokémon Emerald battle frontier theme">}}

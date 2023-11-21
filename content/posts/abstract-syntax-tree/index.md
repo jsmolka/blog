@@ -66,4 +66,4 @@ program
           literal 1
 ```
 
-I think it turned out pretty readable. Having this was a lifesaver for testing. I could throw anything at the parser and check if the produced AST matched my expectation. It will also be useful for compile-time optimizations. If we encounter a `binary` expression with two `literal` expressions as operands, we can fold them and emit a simplified `literal` expression.
+I think it turned out pretty readable. Having this was a lifesaver for testing. I could throw anything at the parser and check if the produced AST matched my expectations. It will also be useful for compile-time optimizations. If we encounter a `binary` expression with two `literal` expressions as operands, we can fold them and emit a simplified `literal` expression.

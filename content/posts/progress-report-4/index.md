@@ -5,7 +5,7 @@ tags: ["eggvance", "emulation"]
 date: 2020-01-07
 type: post
 ---
-Hello there! It has been quite a while since the last progress report, two months to be exact. Development of the emulator has slowed down a little during that time because I started working full-time. Apart from cleaning up the codebase, I also fixed and implemented some things which might be of interest to some people.
+Hello there! It has been quite a while since the last progress report, two months to be exact. Development of the emulator has slowed down a little during that time because I started working full-time. Apart from cleaning up the codebase, I also fixed and implemented some things that might be of interest to some people.
 
 ## Bitmap Modes
 The GBA has six different background modes that are evenly split into three tile-based and three bitmap modes. One would assume that games utilize bitmaps as much as tiles, but that's not the case in reality. Tiles tend to be faster and easier to understand and are therefore used in most games. One rare example of a game using bitmap modes is DOOM II, which uses them to display the scene created by its internal software renderer. Due to this kind of game being so rare, I didn't notice bugs in the bitmap implementation until very recently, when I was going through some of the demos on [gbadev.org](https://www.gbadev.org/).
@@ -43,7 +43,7 @@ void PPU::renderBgMode5(int bg) {
 The fixed version of the renderer applies the `transform` function to the current pixel, which returns the coordinates inside the bitmap. Those are then used to determine the pixel's color. The matrix used in the Yeti demo scales the bitmap by two and thus fills the entire screen. The black pixels on the right are part of the game and not by the emulator.
 
 ## Color Masking
-The Game Boy Advance encodes colors in the BGR555 format and stores them in 16-bit halfwords. They are stored in a dedicated area in memory called palette RAM (PRAM). It consists of two 512 byte blocks for background and sprite colors. The first color of each block can be used to draw transparent pixels. An obvious use case for this are sprites, which aren't always perfect squares. If a pixel has been marked as transparent, the next pixel in the drawing order will be displayed.
+The Game Boy Advance encodes colors in the BGR555 format and stores them in 16-bit halfwords. They are stored in a dedicated area in memory called palette RAM (PRAM). It consists of two 512-byte blocks for background and sprite colors. The first color of each block can be used to draw transparent pixels. An obvious use case for this is sprites, which aren't always perfect squares. If a pixel has been marked as transparent, the next pixel in the drawing order will be displayed.
 
 {{<wrap>}}
   {{<image src="img/safety-screen-bug.png" caption="Mother 3 without color masking">}}
@@ -67,20 +67,20 @@ u16 Palette::colorBG(int index, int bank) {
 The problem can be fixed with a quite simple solution. Every color read from the palette needs to be masked with `0x7FFF` to clear the most significant bit. That prevents confusing transparent pixels with malformed white pixels.
 
 ## Sprite Tile Restrictions
-This issue is another prime example for the "most games don't use bitmaps, therefore I can't test them" category. If you compare both images down below, you will notice some strange, colorful pixels in the top left corner of the first one. Those are uninitialized sprites that were wrongfully rendered by the emulator.
+This issue is another prime example of the "most games don't use bitmaps, therefore I can't test them" category. If you compare both images down below, you will notice some strange, colorful pixels in the top left corner of the first one. Those are uninitialized sprites that were wrongfully rendered by the emulator.
 
 {{<wrap>}}
   {{<image src="img/pokemon-series-bug.png" caption="Uninitialized sprites in the top left corner">}}
   {{<image src="img/pokemon-series.png" caption="No sprites in the top left corner">}}
 {{</wrap>}}
 
-The cause of this problem is best described in Martin Korths [GBATEK](https://problemkaputt.de/gbatek.htm), which is the most comprehensive and complete reference document for the GBA. That even holds up when comparing against Nintendo's official programming manual.
+The cause of this problem is best described in Martin Korths [GBATEK](https://problemkaputt.de/gbatek.htm), which is the most comprehensive and complete reference document for the GBA. That even holds up when compared to Nintendo's official programming manual.
 
-> OBJs are always combined of one or more 8x8 pixel Tiles (much like BG Tiles in BG Modes 0-2). However, OBJ Tiles are stored in a separate area in VRAM: 06010000-06017FFF (32 KBytes) in BG Mode 0-2 or 06014000-06017FFF (16 KBytes) in BG Mode 3-5. Depending on the size of the above area (16K or 32K) and on the OBJ color depth (4bit or 8bit), 256-1024 8x8 dots OBJ Tiles can be defined.
+> OBJs are always combined of one or more 8x8 pixel Tiles (much like BG Tiles in BG Modes 0-2). However, OBJ Tiles are stored in a separate area in VRAM: 06010000-06017FFF (32 KBytes) in BG Mode 0-2, or 06014000-06017FFF (16 KBytes) in BG Mode 3-5. Depending on the size of the above area (16K or 32K) and on the OBJ color depth (4bit or 8bit), 256-1024 8x8 dots OBJ Tiles can be defined.
 >
 > &mdash; Martin Korth, [GBATEK](https://problemkaputt.de/gbatek.htm#lcdobjoverview)
 
-The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 to 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames which occupy the first `0x4000` bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
+The important part here is the one talking about tile address restrictions for different background modes. Bitmap modes (background modes 3 to 5) can't use as many sprite tiles as tiled backgrounds. That is because some bitmap modes use multiple frames that occupy the first `0x4000` bytes of sprite tile memory. The code below shows the calculation of a tile address followed by the necessary check.
 
 ```cpp
 u32 addr = mmu.vram.mirror(entry.base_tile + size * tile.offset(tiles));
@@ -89,7 +89,7 @@ if (addr < 0x1'4000 && io.dispcnt.isBitmap())
 ```
 
 ## Final Words
-That's it with the changes worth writing about and even those were pretty meh. Most of the things I did during the last months were minor accuracy improvements and cleanups in the codebase. Even the DOOM II color problems have been fixed with a rather simple [commit](https://github.com/jsmolka/eggvance/commit/36e2cdd38e795d09a39594353e256b5b83fe9c47). Another important thing is the addition of Linux and macOS support. Removing Windows-dependent code and writing a simple CMake file took more time than I'd like to admit.
+That's it with the changes worth writing about, and even those were pretty meh. Most of the things I did during the last months were minor accuracy improvements and cleanups in the codebase. Even the DOOM II color problems have been fixed with a rather simple [commit](https://github.com/jsmolka/eggvance/commit/36e2cdd38e795d09a39594353e256b5b83fe9c47). Another important thing is the addition of Linux and macOS support. Removing Windows-dependent code and writing a simple CMake file took more time than I'd like to admit.
 
 {{<wrap>}}
   {{<image src="img/doom-rainbow-floor.png" caption="DOOM II rainbow floor">}}

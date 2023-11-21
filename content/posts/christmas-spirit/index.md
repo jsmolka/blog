@@ -10,7 +10,7 @@ The transition time between two side projects is something I like a lot. There i
 ## Into the Unknown
 I wanted to try out Rust and needed something simple to ease into the language and its idioms. I've already emulated the [Game Boy]({{<relref "sprite">}}), so that thing was out of the picture. The next closest console in terms of difficulty was the NES [^1], which happens to be the first console I've ever owned!
 
-[^1]: I didn't know it was called "NES" back then. Our village got flooded and it was part of donations we received. The most vivid memory I have of that thing is playing a tank game, which turned out to be [Battle City](https://en.wikipedia.org/wiki/Battle_City). I didn't know what I was playing on until I saw that game a few years ago.
+[^1]: I didn't know it was called "NES" back then. Our village got flooded, and it was part of the donations we received. The most vivid memory I have of that thing is playing a tank game, which turned out to be [Battle City](https://en.wikipedia.org/wiki/Battle_City). I didn't know what I was playing on until I saw that game a few years ago.
 
 So I went to work. I read through the [Rust book](https://doc.rust-lang.org/book/title-page.html), [Rustonomicon](https://doc.rust-lang.org/nomicon/intro.html) and other resources about the language. I thought about the high-level code structure of the emulator. [eggvance]({{<relref "eggvance">}}) used a global variable for each component of the system, which is bad. Rust favors a data-oriented approach, where the required components need to be passed as parameters. But I also don't want to add additional arguments to every function just because someone down the call stack needs it. I decided to have an overarching `NES` class and then pass a pointer to it to the components that require additional access.
 
@@ -30,7 +30,7 @@ impl Nes {
 }
 ```
 
-I required something for `this.mos.nes` that is optional during initial construction and can contain mutable data. The thing that could work in safe Rust is `Option<RefCell<Box<Nes>>>`, which is quite a mouth full for the thing I need: a pointer. There won't be multithreading for Rust to protect me from and I will never access a null pointer because it's set during construction. I created a simple struct to help with  dereferencing and safety assertions:
+I required something for `this.mos.nes` that is optional during initial construction and can contain mutable data. The thing that could work in safe Rust is `Option<RefCell<Box<Nes>>>`, which is quite a mouth full for the thing I need: a pointer. There won't be multithreading for Rust to protect me from, and I will never access a null pointer because it's set during construction. I created a simple struct to help with  dereferencing and safety assertions:
 
 ```rust
 struct Pointer<T> {
@@ -88,7 +88,7 @@ fn logical_shift_right(&mut self, addr: Option<u16>) {
 }
 ```
 
-## Snek
+## Snake
 [Snake 6502](https://skilldrick.github.io/easy6502/#snake) is a snake implementation for the 6502 &mdash; shocking. It has nothing to do with the NES and relies on custom memory mappings, which can be implemented rather easily. It's nice to see that the basics of the CPU are working before moving on to the PPU and proper hardware tests.
 
 {{<wrap>}}

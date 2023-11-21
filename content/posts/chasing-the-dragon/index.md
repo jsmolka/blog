@@ -12,7 +12,7 @@ type: post
 Another year is coming to an end, but this time the review will be a little more [detailed]({{<relref "baseline">}}). It began with me getting a new [road bike]({{<relref "aeroad">}}) and all the motivation that comes with it. I thought riding 12000 km last year was a lot, but this year's 23000 km and over 700 hours just dwarf that. If somebody told me a few years ago, I'd call them crazy.
 
 ## Finding Friends
-The thing that changed the most was me getting out there and doing more group rides. I was nervous during the [first one](https://www.strava.com/activities/7065053419) and crashed in a corner I've ridden hundreds of times before on the way back home. After recovering from that costly mistake, I started to show up at weekly rides around Leipzig's lakes and made some new friends. Without them, the most memorable rides this year wouldn't have been possible.
+The thing that changed the most was my getting out there and doing more group rides. I was nervous during the [first one](https://www.strava.com/activities/7065053419) and crashed in a corner I've ridden hundreds of times before on the way back home. After recovering from that costly mistake, I started to show up at weekly rides around Leipzig's lakes and made some new friends. Without them, the most memorable rides this year wouldn't have been possible.
 
 The standout ones to me were:
 

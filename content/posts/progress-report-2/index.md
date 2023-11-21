@@ -5,7 +5,7 @@ tags: ["eggvance", "emulation"]
 date: 2019-09-30
 type: post
 ---
-One month has passed since the last progress report and I'm back with another one. Most of this month's effort went into accuracy and performance improvements of the pixel processing unit (PPU). Its main purpose is converting data stored in memory like VRAM and object attribute memory (OAM) into pixels on the screen.
+One month has passed since the last progress report, and I'm back with another one. Most of this month's effort went into accuracy and performance improvements of the pixel processing unit (PPU). Its main purpose is converting data stored in memory like VRAM and object attribute memory (OAM) into pixels on the screen.
 
 ## Rendering Engine
 Let's begin with the most interesting thing I've done during the last month: a rewrite of the rendering engine. The Game Boy Advance can use up to four different backgrounds and an object layer. Each background and object has its own priority which determines the drawing order. Backgrounds with high priority are drawn in front of backgrounds with low priority. Transparent areas inside backgrounds are used to display the background with the next highest priority.
@@ -26,7 +26,7 @@ switch (mmio.dispcnt.mode) {
 }
 ```
 
-The code above shows the parts of the PPU which take part in rendering the Pokémon Emerald title screen. The used backgrounds and their render function are dependent on the selected video mode in the DISPCNT register. You can see the resulting individual layers in the following images.
+The code above shows the parts of the PPU that take part in rendering the Pokémon Emerald title screen. The used backgrounds and their render function are dependent on the selected video mode in the DISPCNT register. You can see the resulting individual layers in the following images.
 
 {{<wrap>}}
   {{<image src="img/bg0.png" caption="Background layer 0">}}
@@ -45,10 +45,10 @@ One of the most challenging aspects of emulating the PPU is combining the layers
   {{<image src="img/scene.png" caption="Final scene">}}
 {{</wrap>}}
 
-The predecessor of the `collapse` function consumed a sizable amount of CPU time and was a prime candidate to be reworked. The new [version](https://github.com/jsmolka/eggvance/blob/d89f078a1ecf74c98837cc26b8f9ee2c6a1980f5/eggvance/src/ppu/collapse.inl) makes heavy use of C++ templates has improved performance by around 35%. It also fixed several bugs that were related to object windows.
+The predecessor of the `collapse` function consumed a sizable amount of CPU time and was a prime candidate to be reworked. The new [version](https://github.com/jsmolka/eggvance/blob/d89f078a1ecf74c98837cc26b8f9ee2c6a1980f5/eggvance/src/ppu/collapse.inl) makes heavy use of C++ templates and has improved performance by around 35%. It also fixed several bugs that were related to object windows.
 
 ## Forced Blank
-Even though the GBA is using an LCD, its hardware behaves more like a CRT. In those displays, the electron beam has to move to the start of the next line after finishing the previous one. This period is called horizontal blank (H-Blank). Once the whole frame has been drawn, the beam must return to the beginning of the frame. This is called vertical blank (V-Blank).
+Even though the GBA uses an LCD, its hardware behaves more like a CRT. In those displays, the electron beam has to move to the start of the next line after finishing the previous one. This period is called horizontal blank (H-Blank). Once the whole frame has been drawn, the beam must return to the beginning of the frame. This is called vertical blank (V-Blank).
 
 Most of the game logic and graphics processing takes place during the blanking intervals because they don't interfere with scanline drawing. Another reason is the fact that access to video memory outside of the blanking intervals is either restricted or has negative side effects, like reducing the total number of displayable objects. These restrictions can be lifted by setting the "forced blank" bit in the DISPCNT register, which causes a white line to be displayed. There isn't much to do emulation-wise apart from filling the current scanline with white pixels.
 

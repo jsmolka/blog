@@ -5,19 +5,19 @@ tags: ["eggvance", "emulation"]
 date: 2021-02-03
 type: post
 ---
-2020 came to an end and left me with an output of two progress reports and a simple, short release note. That's less than I was hoping for, but most time this year went into improving the codebase and some performance tinkering for personal pleasure. In my defense, the last progress report had a much higher quality than the ones before and I'd like to keep it this way!
+2020 came to an end and left me with an output of two progress reports and a simple, short release note. That's less than I was hoping for, but most time this year went into improving the codebase and some performance tinkering for personal pleasure. In my defense, the last progress report had a much higher quality than the ones before, and I'd like to keep it this way!
 
 ## Undefined Behavior
-In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4), which has been reported by fleroviux in June last year. She tried to play Pokémon Sapphire and her game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
+In that spirit, let's start with an [issue](https://github.com/jsmolka/eggvance/issues/4), which was reported by fleroviux in June last year. She tried to play Pokémon Sapphire, and her game froze right after the intro sequence when the character shrinks in size and then enters the world in a moving truck. The same also happens in Ruby because they are essentially the same game.
 
 {{<wrap>}}
   {{<image src="img/sapphire-bad-bios-bug.png" caption="Freezing during intro sequence">}}
   {{<image src="img/sapphire-bad-bios.png" caption="In the moving truck where we belong">}}
 {{</wrap>}}
 
-She used the bundled replacement BIOS by Normmatt, where bugs in games are to be expected. I tried it with the original one and the freezing stopped happening. So I closed the issue and blamed the BIOS for doing some unexpected things, but she quickly reassured me that the bug wasn't happening in her emulator or mGBA when using the same BIOS. I verified that and was left scratching my head about the possible origin of this problem.
+She used the bundled replacement BIOS by Normmatt, where bugs in games are to be expected. I tried it with the original one, and the freezing stopped happening. So I closed the issue and blamed the BIOS for doing some unexpected things, but she quickly reassured me that the bug wasn't happening in her emulator or mGBA when using the same BIOS. I verified that and was left scratching my head about the possible origin of this problem.
 
-I figured it had something to do with the BIOS implementation, but I couldn't find anything wrong with it. Many failed attempts later, GitHub suggested me the [pret](https://github.com/pret) project, which is the decompilation of all GB, GBA and even some NDS Pokémon games. I can't believe how people do such things, but I'll gladly use their work to fix bugs in my emulator. I skimmed through the intro-sequence related parts of the code and found [this function](https://github.com/pret/pokeruby/blob/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L87):
+I figured it had something to do with the BIOS implementation, but I couldn't find anything wrong with it. Many failed attempts later, GitHub suggested the [pret](https://github.com/pret) project to me, which is the decompilation of all GB, GBA and even some NDS Pokémon games. I can't believe how people do such things, but I'll gladly use their work to fix bugs in my emulator. I skimmed through the intro-sequence related parts of the code and found [this function](https://github.com/pret/pokeruby/blob/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L87):
 
 ```c
 static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader) {
@@ -38,7 +38,7 @@ At first glance, there seems to be nothing wrong with it, but this comment doesn
 >
 > &mdash; [camthesaxman](https://github.com/pret/pokeruby/blame/c7bbd485c3103c6a51d15f6e0081922d3c14d42d/src/fieldmap.c#L89)
 
-I never ran into this bug during testing because it has been fixed in [Pokémon Emerald](https://github.com/pret/pokeemerald/blob/64460e01aede2bbcaa8d1dd18dd3fab590fa4a6e/src/fieldmap.c#L114) and that's the game I usually use for quick testing (and pure nostalgia). The dereferenced null pointer returns something they call garbage, which is quite offensive to the poor BIOS, in my opinion. Why the BIOS? Because it starts at address zero and that's where a dereferenced null pointer reads from.
+I never ran into this bug during testing because it has been fixed in [Pokémon Emerald](https://github.com/pret/pokeemerald/blob/64460e01aede2bbcaa8d1dd18dd3fab590fa4a6e/src/fieldmap.c#L114), and that's the game I usually use for quick testing (and pure nostalgia). The dereferenced null pointer returns something they call garbage, which is quite offensive to the poor BIOS, in my opinion. Why the BIOS? Because it starts at address zero, and that's where a dereferenced null pointer reads from.
 
 ```
 00000000-00003FFF   BIOS - System ROM
@@ -51,7 +51,7 @@ I never ran into this bug during testing because it has been fixed in [Pokémon 
 04000400-04FFFFFF   Not used
 ```
 
-The BIOS in the Game Boy Advance is read-protected to prevent dumping. Guess how that turned out. That means we can only read from the BIOS if the program counter is inside of it. In plain English: only BIOS functions can read BIOS memory. Otherwise, it will return the last read value, which will be the one located at address:
+The BIOS in the Game Boy Advance is read-protected to prevent dumping. Guess how that turned out. That means we can only read from the BIOS if the program counter is inside of it. In plain English: only BIOS functions can read BIOS memory. Otherwise, it will return the last read value, which will be the one located at the address:
 
 - `0x0DC+8` after startup
 - `0x188+8` after SWI
@@ -66,7 +66,7 @@ mov       r12, 0x4000000  ; addr: 0000018C  data: E3A0C301
 mov       r2, 0x4         ; addr: 00000190  data: E3A02004
 ```
 
-It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBAs three-staged instruction pipeline, we've already fetched the value at address `0x190` and its value will be returned for future protected BIOS reads like dereferenced null pointers. In this case, the value has its sign bit set and the loop body is never executed.
+It uses the instruction `movs pc, lr` to move the link register into the program counter. The link register contains the next instruction after a function call, so it pretty much acts like your typical `return`. Because of the GBA's three-staged instruction pipeline, we've already fetched the value at address `0x190` and its value will be returned for future protected BIOS reads like dereferenced null pointers. In this case, the value has its sign bit set and the loop body is never executed.
 
 ```armv4t
 movs      pc, lr                ; addr: 000000AC  data: E1B0F00E
@@ -76,7 +76,7 @@ andeq     r1, r0, r4, lsr 0xA   ; addr: 000000B4  data: 00001524
 
 Unfortunately, the replacement BIOS doesn't reproduce this behavior. Here we return with the same instruction, but the prefetched value is now positive and we run the loop 1524 times. I thought this was the source of the problem, but it wasn't. Until this point, the emulator did everything correctly and the bug hunt ended with an anticlimactic result.
 
-I fixed the bug eventually when working on something seemingly unrelated. Reads from unused memory regions return values based on prefetched values in the CPUs pipeline. There were some small issues in that code that were fixed with [this commit](https://github.com/jsmolka/eggvance/commit/213c7ab0a18502125b725536c433da3bf90d0b84). It seems that the game tries to access unused memory regions at some point when running the loop with the corrupted loop counter and returning the "proper bad value" fixes the freezing behavior.
+I fixed the bug eventually when working on something seemingly unrelated. Reads from unused memory regions return values based on prefetched values in the CPU's pipeline. Some small issues in that code were fixed with [this commit](https://github.com/jsmolka/eggvance/commit/213c7ab0a18502125b725536c433da3bf90d0b84). It seems that the game tries to access unused memory regions at some point when running the loop with the corrupted loop counter, and returning the "proper bad value" fixes the freezing behavior.
 
 ## Sprite Render Cycles
 This [issue](https://github.com/jsmolka/eggvance/issues/2) was quite a simple fix compared to the previous one. The available amount of sprite render cycles is limited to 1210 if the "H-Blank interval free" bit in the DISPCNT register is set or 954 otherwise. That means the amount of sprites per scanline is limited. If you ignore that limit, you end up with something like the first image, where the sprite on top overlaps with the status bar.
@@ -116,7 +116,7 @@ Receiving a command byte looks like this:
 2. Read SIO bit
 3. Repeat until a byte has been transferred
 
-Combining these two flows allows us to implement a functioning RTC. The documentation in GBATEK can be quite confusing in that regard because it first describes the NDS RTC and then the differences to GBA one. Once everything has been put into place, I was able to grow berries in the Pokémon Emerald.
+Combining these two flows allows us to implement a functioning RTC. The documentation in GBATEK can be quite confusing in that regard because it first describes the NDS RTC and then the differences from the GBA one. Once everything had been put into place, I was able to grow berries in the Pokémon Emerald.
 
 {{<wrap>}}
   {{<image src="img/emerald-berry-1.png" caption="Saplings planted">}}
@@ -171,18 +171,18 @@ And the resulting [mGBA suite](https://github.com/mgba-emu/suite) coverage compa
 | Edge case      | 1            | 2            | 6          | 1          | 10    |
 {{% /wrap %}}
 
-I was happy to finally have something you could call relatively cycle-accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald hometown down to mere 485 fps. I was shocked, but the issue turned out to be easier to fix than expected. The MSVC optimizer just didn't inline the prefetch code.
+I was happy to finally have something you could call relatively cycle-accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald hometown down to a mere 485 fps. I was shocked, but the issue turned out to be easier to fix than expected. The MSVC optimizer just didn't inline the prefetch code.
 
-That might not sound like a problem until you realize that we are on the hottest of paths out there. It gets called millions of times per second, so eliminating the function call overhead is very important. After force inlining it, I was back at 575 fps which is a good value. My goal is to finish the emulator at something around the 500 fps mark for demanding games. The ones that don't utilize the CPUs halt functionality. I am looking at you GameFreak devs.
+That might not sound like a problem until you realize that we are on the hottest of paths out there. It gets called millions of times per second, so eliminating the function call overhead is very important. After force-inlining it, I was back at 575 fps which is a good value. My goal is to finish the emulator at something around the 500 fps mark for demanding games. The ones that don't utilize the CPUs halt functionality. I am looking at you GameFreak devs.
 
 ## Sound?
-I love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channels relatively quickly and decided to merge them. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well-working APU/DSP, but it never was supposed to be a part of this report.
+I love my writing efficiency. I began this progress report at the start of January, with all the previous topics lined out as bullet points. Then I continued working on my emulator, implemented the FIFO channels relatively quickly, and decided to merge them. And then the squares channels. And then the wave channel. And then the noise channel. And now I'm here with a well-working APU/DSP, but it never was supposed to be a part of this report.
 
 {{<wrap>}}
   {{<audio src="audio/tengoku.mp3" caption="Intro sequence of Rhythm Tengoku with some nice stereo">}}
 {{</wrap>}}
 
-I'll write another one where I describe the sound basics and also give some examples. Most of the GBAs sound is composed of FIFO samples, so it's hard to show all audio channels in action and how they are combined into a nice result.
+I'll write another one where I describe the sound basics and also give some examples. Most of the GBA's sound is composed of FIFO samples, so it's hard to show all audio channels in action and how they are combined into a nice result.
 
 ## Final Words
 That's it. I'm done. The roadmap for this year is:
@@ -194,4 +194,4 @@ That's it. I'm done. The roadmap for this year is:
 - Implement more features (better config, save states, whatever)
 - Final code cleanup
 
-Then I will put this project to rest and dive into something new. I thought about writing a classic Game Boy emulator, which shouldn't take more than a month because the GBA is a supercharged version of that and most code could be reused. Another nice thing would be an NES emulator, which was my first console back in the day. I also thought about jumping into NDS emulation, but I'm not sure if I'm good enough for that, we'll see...
+Then I will put this project to rest and dive into something new. I thought about writing a classic Game Boy emulator, which shouldn't take more than a month because the GBA is a supercharged version of that, and most code could be reused. Another nice thing would be an NES emulator, which was my first console back in the day. I also thought about jumping into NDS emulation, but I'm not sure if I'm good enough for that, we'll see...

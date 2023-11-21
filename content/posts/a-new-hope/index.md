@@ -5,7 +5,7 @@ tags: ["drizzle", "sprite"]
 date: 2022-10-29
 type: post
 ---
-The [previous post]({{<relref "posts/the-slow-finale">}}) was meant to mark the end of sprite and drizzle development. I achieved everything I ever wanted: a working programming language and a program large enough to prove its maturity to handle medium-scale problems. But some part of me just couldn't let it go. I love efficient programs and the fact that sprite could not run games at native speed bothered me, so I decided to make one final push toward performance.
+The [previous post]({{<relref "posts/the-slow-finale">}}) was meant to mark the end of sprite and drizzle development. I achieved everything I ever wanted: a working programming language and a program large enough to prove its maturity to handle medium-scale problems. But some part of me just couldn't let it go. I love efficient programs, and the fact that sprite could not run games at native speed bothered me, so I decided to make one final push toward performance.
 
 ## Benchmark
 I didn't want to change much of sprite's code. I think it turned out quite readable for a single file, 1586 lines emulator. But the one thing I knew I had to remove was the overarching `class`. Each use of `this` went through the hash maps of the instance and its class, which is **slow**. How slow? Let's define a simple benchmark.
@@ -15,7 +15,7 @@ I didn't want to change much of sprite's code. I think it turned out quite reada
   {{<image src="img/title-screen.png" caption="Pokémon Blue title screen">}}
 {{</wrap>}}
 
-We run the Pokémon Blue intro sequence until we see the title screen. That's 1200 frames and requires around 20 seconds on hardware. The version of sprite with the class takes 46 seconds to complete, while the version with free functions and variables takes just 34 seconds. That's 12 seconds less and brings us closer to the magical 20 seconds mark.
+We run the Pokémon Blue intro sequence until we see the title screen. That's 1200 frames and requires around 20 seconds on hardware. The version of sprite with the class takes 46 seconds to complete, while the version with free functions and variables takes just 34 seconds. That's 12 seconds less and brings us closer to the magical 20-second mark.
 
 ## Cache Misses
 drizzle underwent lots of small changes that accumulated over time, but I want to focus on the two most impactful ones. One of them concerns the call stack and how it's stored inside the virtual machine.

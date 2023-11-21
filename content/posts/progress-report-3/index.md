@@ -64,7 +64,7 @@ The GBA's processor can execute either 16-bit Thumb or 32-bit ARM instructions. 
   </table>
 {{</wrap>}}
 
-The table above shows a small subset of the 19 possible Thumb instructions. When looking at them as a whole, you will notice that they can be decoded by using the most significant eight bits. In the previous version of the emulator, decoding and executing an instruction were two separate steps. First, a static array of enumerations was used to identify the instruction format and then a switch-case executed the matching instruction handler.
+The table above shows a small subset of the 19 possible Thumb instructions. When looking at them as a whole, you will notice that they can be decoded by using the most significant eight bits. In the previous version of the emulator, decoding and executing an instruction were two separate steps. First, a static array of enumerations was used to identify the instruction format, and then a switch case executed the matching instruction handler.
 
 ```cpp
 enum class ThumbFormat {
@@ -86,7 +86,7 @@ void ARM::executeThumb(u16 instr) {
 }
 ```
 
-This approach can be optimized by storing template function pointers inside the array. Flags, registers and immediate values which occur inside the ten, extended from eight, most significant bits can be passed as template parameters and are therefore optimized by the compiler. Doing this also eliminates the necessity to extract these values later in the instruction handler.
+This approach can be optimized by storing template function pointers inside the array. Flags, registers and immediate values that occur inside the ten, extended from eight, most significant bits can be passed as template parameters and are therefore optimized by the compiler. Doing this also eliminates the necessity to extract these values later in the instruction handler.
 
 ```cpp
 std::array<void(ARM::*)(u16), 1024> ARM::instr_thumb = {
@@ -102,14 +102,14 @@ void ARM::executeThumb(u16 instr) {
 ```
 
 ## Initializing Unused Registers
-At some point in development, the emulator was able to boot every tested game apart from the Sonic Advance series. Resolving issues like this usually involves running my emulator against established ones like No$GBA. After two hours of comparing, I ended up noticing that a different value of the RCNT register, which is used for multiplayer functionality, caused a chain of events that lead to gray bars on the screen instead of the intro and soft-locked the game.
+At some point in development, the emulator was able to boot every tested game apart from the Sonic Advance series. Resolving issues like this usually involves running my emulator against established ones like No$GBA. After two hours of comparing, I ended up noticing that a different value of the RCNT register, which is used for multiplayer functionality, caused a chain of events that led to gray bars on the screen instead of the intro and soft-locked the game.
 
 {{<wrap>}}
   {{<image src="img/sonic-rcnt-bug.png" caption="Uninitialized RCNT">}}
   {{<image src="img/sonic-rcnt.png" caption="Initalized RCNT">}}
 {{</wrap>}}
 
-This problem was caused by skipping the BIOS and directly jumping inside the ROM. Apart from showing the animated intro sequence, the BIOS also initializes registers like RCNT and DISPCNT to their default value. I knew about this and properly initialized all implemented registers to their post-BIOS state, but RCNT is not and probably never will be, used in my emulator and was, therefore, left untouched. Doing a test run with the BIOS could've saved me a couple of hours but, that's something I usually don't do during development.
+This problem was caused by skipping the BIOS and directly jumping inside the ROM. Apart from showing the animated intro sequence, the BIOS also initializes registers like RCNT and DISPCNT to their default value. I knew about this and properly initialized all implemented registers to their post-BIOS state, but RCNT is not, and probably never will be, used in my emulator and was, therefore, left untouched. Doing a test run with the BIOS could've saved me a couple of hours but, that's something I usually don't do during development.
 
 ## Fixing Arithmetic Operations
 Running mGBA's [test suite](https://github.com/mgba-emu/suite) made me realize flaws in my carry/overflow detection mechanism for arithmetic operations, which caused sprite flickering bugs in games like Mario Kart.
@@ -176,7 +176,7 @@ Using a 64-bit integer to store the second operand with added carry was the firs
 {{</wrap>}}
 
 ## Config
-One thing I wanted to have in the first release version was a customizable config. In terms of format, I decided to go with [TOML](https://github.com/toml-lang/toml) because I like its general structure and clarity. The config allows the user to freely configure keyboard and controller mappings for general input and shortcuts like fullscreen and different emulation speeds. A snippet of the general options is shown below and the full version can be found on [GitHub](https://github.com/jsmolka/eggvance/blob/f2a1e0311e5467b3b91fa69b6ab4a7ddc292f525/eggvance/eggvance.toml).
+One thing I wanted to have in the first release version was a customizable config. In terms of format, I decided to go with [TOML](https://github.com/toml-lang/toml) because I like its general structure and clarity. The config allows the user to freely configure keyboard and controller mappings for general input and shortcuts like fullscreen and different emulation speeds. A snippet of the general options is shown below, and the full version can be found on [GitHub](https://github.com/jsmolka/eggvance/blob/f2a1e0311e5467b3b91fa69b6ab4a7ddc292f525/eggvance/eggvance.toml).
 
 ```toml
 [general]
@@ -192,7 +192,7 @@ deadzone = 16000
 ```
 
 ## Final Words
-That's all for this progress report. A Windows build of the latest version can be found on [GitHub](https://github.com/jsmolka/eggvance/releases). I used profile-guided optimization to squeeze out the last drop of performance. Most games can be played at 10x the normal speed. Of course, the current version is not perfect and bug-free, audio is still missing and there are crashes and visual bugs in a few games like DOOM II.
+That's all for this progress report. A Windows build of the latest version can be found on [GitHub](https://github.com/jsmolka/eggvance/releases). I used profile-guided optimization to squeeze out the last drop of performance. Most games can be played at 10x the normal speed. Of course, the current version is not perfect and bug-free, audio is still missing, and there are crashes and visual bugs in a few games like DOOM II.
 
 {{<wrap>}}
   {{<image src="img/doom-black-floor.png" caption="DOOM II black floor">}}
