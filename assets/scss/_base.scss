@@ -13,8 +13,8 @@
   font-family: 'Inter';
   font-weight: 100 900;
   font-display: block;
-  font-style: italic;
-  src: url($inter-italic) format('woff2');
+  font-style: oblique 14deg;
+  src: url($inter) format('woff2');
 }
 
 body {

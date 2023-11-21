@@ -2,7 +2,7 @@
 
 {{ with resources.Get "scss/main.scss" }}
   {{ $vars := dict }}
-  {{ range slice "inter" "inter-italic" "jetbrains-mono" "jetbrains-mono-italic" }}
+  {{ range slice "inter" "jetbrains-mono" "jetbrains-mono-italic" }}
     {{ $font := resources.Get (path.Join "fonts" (add . ".woff2")) }}
     {{ $vars = $vars | merge (dict . (printf "%s?v=%s" $font.RelPermalink ($font.Content | md5))) }}
   {{ end }}
