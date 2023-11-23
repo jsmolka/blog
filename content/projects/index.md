@@ -20,7 +20,7 @@ showTitle: false
   {{<image src="img/zelda.png" caption="Zelda intro sequence">}}
 {{</wrap>}}
 
-The initial implementation didn't even manage to emulate the console at half speed. Optimizations like using a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) in drizzle and replacing the class with free functions and variables in sprite increased the performance to 125%, which resulted in a stable frame rate at native speed.
+The initial implementation didn't even manage to emulate the console at half speed. Optimizations, like using a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) in drizzle and replacing the class with free functions and variables in sprite, increased the performance to 125%, which resulted in a stable frame rate at native speed.
 
 # drizzle
 [drizzle](https://github.com/jsmolka/drizzle) is a dynamically interpreted programming language with a syntax similar to Python.
