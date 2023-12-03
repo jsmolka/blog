@@ -1,8 +1,7 @@
 {{ define "main" }}
   <main class="container list">
     <ul class="groups">
-      {{ $pages := where .Site.RegularPages "Type" "ne" "page" }}
-      {{ range $pages.GroupByPublishDate "2006" }}
+      {{ range .Pages.GroupByPublishDate "2006" }}
         <li class="group">
           <h1>{{ .Key }}</h1>
           <ul class="items">
