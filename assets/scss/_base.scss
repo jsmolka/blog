@@ -68,3 +68,16 @@ body {
   margin: auto;
   padding: spacing(16) spacing(4);
 }
+
+.link {
+  padding: spacing(1.5) spacing(2);
+  border-radius: var(--rounded);
+
+  &:hover {
+    background-color: var(--gray-7);
+  }
+
+  &:active {
+    background-color: var(--gray-6);
+  }
+}

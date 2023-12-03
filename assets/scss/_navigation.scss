@@ -1,48 +1,19 @@
 @import 'common';
 
-@keyframes pulsate {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.title {
-  display: flex;
-  align-items: center;
-  gap: spacing(1.5);
-  font-weight: 800;
-
-  &::after {
-    content: '';
-    width: spacing(2.5);
-    height: spacing(4);
-    background: var(--blue-3);
-    border-radius: 1px;
-    animation: pulsate 1s infinite;
-  }
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: spacing(8);
+  gap: spacing(6);
   width: 100%;
   max-width: $content;
-  color: var(--gray-1);
   margin: 0 auto;
-  padding: spacing(5) spacing(4);
+  padding: spacing(3.5) spacing(4);
 
   ul {
     display: flex;
     align-items: center;
-    gap: spacing(8);
+    gap: spacing(4);
     font-weight: 500;
   }
 }
@@ -55,6 +26,6 @@ footer {
   ul {
     display: flex;
     align-items: center;
-    gap: spacing(6);
+    gap: spacing(2);
   }
 }
