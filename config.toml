@@ -14,10 +14,6 @@ disableHugoGeneratorInject = true
     url = "/about/"
 
   [[menu.header]]
-    name = "Archive"
-    url = "/archive/"
-
-  [[menu.header]]
     name = "Projects"
     url = "/projects/"
 

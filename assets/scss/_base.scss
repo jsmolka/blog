@@ -62,30 +62,6 @@ body {
   display: none;
 }
 
-@mixin heading($font, $content) {
-  font-size: $font;
-  font-weight: 800;
-  color: var(--gray-1);
-
-  &::before {
-    content: $content;
-    color: var(--blue-3);
-    margin-right: 0.33em;
-  }
-}
-
-h1 {
-  @include heading(var(--font-xl), '#');
-}
-
-h2 {
-  @include heading(var(--font-lg), '##');
-}
-
-h3 {
-  @include heading(var(--font-md), '###');
-}
-
 .container {
   width: 100%;
   max-width: $content;
