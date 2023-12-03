@@ -1,6 +1,22 @@
 {{ define "main" }}
-  <main class="container pages">
-    {{ $paginator := .Paginate .Pages }}
-    {{ partial "pages" . }}
+  <main class="container list">
+    <ul class="groups">
+      {{ $pages := where .Site.RegularPages "Type" "ne" "page" }}
+      {{ range $pages.GroupByPublishDate "2006" }}
+        <li class="group">
+          <h1>{{ .Key }}</h1>
+          <ul class="items">
+            {{ range .Pages }}
+              <li>
+                <a class="item" href="{{ .RelPermalink }}">
+                  {{- partial "title" . -}}
+                  {{- partial "date" . -}}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    </ul>
   </main>
 {{ end }}

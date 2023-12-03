@@ -4,29 +4,39 @@
   align-items: center;
 }
 
-.year {
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(16);
+}
+
+.group {
   position: relative;
-  height: 3rem;
 
   h1 {
-    z-index: -1;
-    user-select: none;
-    top: 25%;
-    left: -2rem;
     position: absolute;
-    font-size: 6rem;
-    line-height: 1;
+    top: -3rem;
+    left: -2rem;
     color: transparent;
-    font-weight: bold;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--gray-7);
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    -webkit-text-stroke: 2px var(--gray-7);
+    user-select: none;
+    z-index: -1;
   }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(1);
 }
 
 .item {
   display: flex;
   gap: spacing(2);
-  padding: spacing(2) spacing(2.5); // Todo: padding too large? add some margin between items instead?
+  padding: spacing(1.5) spacing(2);
   max-width: fit-content;
   border-radius: var(--rounded);
 
