@@ -1,6 +1,10 @@
 @import 'common';
 
 .navbar {
+  svg {
+    border: 1px solid var(--gray-2);
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +16,6 @@
 
   ul {
     display: flex;
-    align-items: center;
     gap: spacing(4);
     font-weight: 500;
   }
@@ -25,7 +28,6 @@ footer {
 
   ul {
     display: flex;
-    align-items: center;
     gap: spacing(2);
   }
 }
