@@ -72,6 +72,7 @@ body {
 .link {
   padding: spacing(1.5) spacing(2);
   border-radius: var(--rounded);
+  transition: background-color 100ms ease-in-out;
 
   &:hover {
     background-color: var(--gray-7);
