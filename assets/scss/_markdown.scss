@@ -22,7 +22,6 @@
   :not(h1, h2, h3) > a {
     font-weight: 700;
     border-bottom: 1px solid var(--gray-5);
-    transition: border-color 100ms ease-in-out;
 
     &:hover {
       border-color: currentColor;

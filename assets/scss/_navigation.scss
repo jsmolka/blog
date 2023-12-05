@@ -1,6 +1,32 @@
 @import 'common';
 
+@keyframes draw {
+  0% {
+    opacity: 1;
+    stroke-dasharray: 0 1024px;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 1024px 0;
+  }
+}
+
 .navbar {
+  svg {
+    path {
+      opacity: 0;
+      animation: draw 2s ease forwards;
+    }
+
+    #icon5 {
+      animation-delay: 550ms;
+    }
+
+    #icon6 {
+      animation-delay: 850ms;
+    }
+  }
+
   display: flex;
   justify-content: space-between;
   align-items: center;

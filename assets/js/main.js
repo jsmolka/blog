@@ -1,6 +1,5 @@
 import { createApp } from 'petite-vue';
 import { Audio } from './audio';
-import './pulsar';
 
 const href = ({ el, exp }) => {
   el.style.cursor = 'pointer';
