@@ -1,0 +1,3 @@
+{{ define "main" }}
+  {{ partial "list" (dict "pages" (where .Site.Pages "Type" "eq" "post")) }}
+{{ end }}

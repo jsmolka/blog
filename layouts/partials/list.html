@@ -1,0 +1,19 @@
+<main class="container list">
+  <ul class="groups">
+    {{ range .pages.GroupByPublishDate "2006" }}
+      <li class="group">
+        <h1>{{ .Key }}</h1>
+        <ul class="items">
+          {{ range .Pages }}
+            <li>
+              <a class="item link" href="{{ .RelPermalink }}">
+                {{- partial "title" . -}}
+                {{- partial "date" . -}}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
+</main>
