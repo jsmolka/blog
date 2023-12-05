@@ -11,28 +11,22 @@
     gap: spacing(2.5);
   }
 
-  // Todo: move H1 into markdown
-  @mixin heading($font, $content) {
-    font-size: $font;
+  h1,
+  h2,
+  h3 {
     font-weight: 800;
     color: var(--gray-1);
-
-    &::before {
-      content: $content;
-      color: var(--blue-3);
-      margin-right: 0.33em;
-    }
   }
 
   h1 {
-    @include heading(var(--font-xl), '#');
+    font-size: var(--font-xl);
   }
 
   h2 {
-    @include heading(var(--font-lg), '##');
+    font-size: var(--font-lg);
   }
 
   h3 {
-    @include heading(var(--font-md), '###');
+    font-size: var(--font-md);
   }
 }

@@ -1,12 +1,12 @@
 @import 'common';
 
 .markdown {
-  text-align: justify;
+  // text-align: justify;
   hyphens: auto;
 
-  @include constricted {
-    text-align: left;
-  }
+  // @include constricted {
+  //   text-align: left;
+  // }
 
   &,
   li {
@@ -22,10 +22,6 @@
   :not(h1, h2, h3) > a {
     font-weight: 700;
     border-bottom: 1px solid var(--gray-5);
-
-    &:hover {
-      border-color: currentColor;
-    }
   }
 
   img,
@@ -36,12 +32,32 @@
   }
 
   blockquote {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: spacing(4);
+    padding: spacing(2) 0 spacing(2) spacing(12);
     font-style: italic;
-    padding: spacing(2) 0 spacing(2) spacing(4);
-    border-left: 4px solid var(--gray-2);
+
+    &::before {
+      content: '“';
+      position: absolute;
+      top: spacing(-3);
+      left: spacing(-2);
+      color: transparent;
+      font-size: 8rem;
+      font-weight: 700;
+      font-style: normal;
+      line-height: 1;
+      -webkit-text-stroke: 2px var(--gray-7);
+      z-index: -1;
+    }
+
+    cite {
+      &::before {
+        content: '\2014\00a0';
+      }
+    }
   }
 
   figure {
@@ -56,7 +72,9 @@
   }
 
   hr {
-    border-bottom: 2px dashed var(--gray-6);
+    width: spacing(16);
+    margin: spacing(8) auto !important;
+    border-bottom: 2px dashed var(--gray-5);
   }
 
   ul,
@@ -170,10 +188,6 @@
   .footnotes {
     a[href^='#fnref:'] {
       text-decoration: none;
-    }
-
-    hr {
-      margin: spacing(8) 0;
     }
 
     & > ol {
