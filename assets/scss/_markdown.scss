@@ -44,22 +44,23 @@
     &::after {
       position: absolute;
       color: transparent;
-      font-size: 8rem;
+      font-size: spacing(32);
       font-weight: 700;
       font-style: normal;
+      line-height: 1;
       -webkit-text-stroke: 2px var(--gray-7);
       z-index: -1;
     }
 
     &::before {
       content: open-quote;
-      top: spacing(-13);
+      top: spacing(-3);
       left: spacing(-2);
     }
 
     &::after {
       content: close-quote;
-      bottom: spacing(-29);
+      bottom: spacing(-19);
       right: spacing(-2);
     }
 

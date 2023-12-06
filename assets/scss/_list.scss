@@ -15,10 +15,10 @@
 
   h1 {
     position: absolute;
-    top: -3rem;
-    left: -2rem;
+    top: spacing(-12);
+    left: spacing(-8);
     color: transparent;
-    font-size: 6rem;
+    font-size: spacing(24);
     font-weight: 700;
     line-height: 1;
     -webkit-text-stroke: 2px var(--gray-7);
