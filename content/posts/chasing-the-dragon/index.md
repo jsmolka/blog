@@ -7,7 +7,7 @@ type: post
 ---
 > Another use of the term "chasing the dragon" refers to the elusive pursuit of a high equal to the user’s first in the use of a drug, which after acclimation is no longer achievable. Used in this way, “chasing the dragon” can refer to any recreational drug administered by any means.
 >
-> &mdash; [Wikipedia](https://en.wikipedia.org/wiki/Chasing_the_dragon)
+> <cite>[Wikipedia](https://en.wikipedia.org/wiki/Chasing_the_dragon)</cite>
 
 Another year is coming to an end, but this time the review will be a little more [detailed]({{<relref "baseline">}}). It began with me getting a new [road bike]({{<relref "aeroad">}}) and all the motivation that comes with it. I thought riding 12000 km last year was a lot, but this year's 23000 km and over 700 hours just dwarf that. If somebody told me a few years ago, I'd call them crazy.
 
