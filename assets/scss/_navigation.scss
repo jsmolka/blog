@@ -1,17 +1,33 @@
 @import 'common';
 
-@keyframes draw {
-  0% {
-    opacity: 1;
-    stroke-dasharray: 0 1024px;
-  }
-  100% {
-    opacity: 1;
-    stroke-dasharray: 1024px 0;
-  }
-}
-
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: spacing(8);
+  width: 100%;
+  max-width: $content;
+  margin: 0 auto;
+  padding: spacing(4);
+  color: var(--gray-1);
+
+  ul {
+    display: flex;
+    gap: spacing(8);
+    font-weight: 500;
+  }
+
+  @keyframes draw {
+    0% {
+      opacity: 1;
+      stroke-dasharray: 0 1024px;
+    }
+    100% {
+      opacity: 1;
+      stroke-dasharray: 1024px 0;
+    }
+  }
+
   svg {
     path {
       opacity: 0;
@@ -23,33 +39,18 @@
     }
 
     #icon6 {
-      animation-delay: 850ms;
+      animation-delay: 900ms;
     }
-  }
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: spacing(6);
-  width: 100%;
-  max-width: $content;
-  margin: 0 auto;
-  padding: spacing(3.5) spacing(4);
-
-  ul {
-    display: flex;
-    gap: spacing(4);
-    font-weight: 500;
   }
 }
 
 footer {
-  font-size: var(--font-sm);
   margin: 0 auto;
-  padding: spacing(5) spacing(4);
+  padding: spacing(8) spacing(4);
+  font-size: var(--font-sm);
 
   ul {
     display: flex;
-    gap: spacing(2);
+    gap: spacing(6);
   }
 }

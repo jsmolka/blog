@@ -15,8 +15,8 @@
 
   h1 {
     position: absolute;
-    top: spacing(-12);
-    left: spacing(-8);
+    top: spacing(-14);
+    left: spacing(-10);
     color: transparent;
     font-size: spacing(24);
     font-weight: 700;
@@ -30,7 +30,7 @@
 .items {
   display: flex;
   flex-direction: column;
-  gap: spacing(1);
+  gap: spacing(4);
 }
 
 .item {
