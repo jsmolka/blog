@@ -19,29 +19,29 @@
 
 pre,
 code {
-  font-size: var(--text-sm);
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  background: var(--gray-7);
+  font-size: var(--text-sm);
   border-radius: var(--rounded);
   hyphens: none;
 }
 
 pre {
   padding: spacing(2) spacing(3);
+  background-color: var(--gray-7);
   overflow-x: auto;
   white-space: pre;
 }
 
-code[class*='language-'] {
-  // Workaround for background culling
-  // https://stackoverflow.com/a/8513330
-  min-width: 100%;
-  float: left;
+:not(pre) > code {
+  padding: spacing(0.5) spacing(1);
+  background-color: var(--gray-6);
 }
 
-:not(pre) > code {
-  background-color: var(--gray-6);
-  padding: spacing(0.5) spacing(1);
+// Workaround for background culling
+// https://stackoverflow.com/a/8513330
+code[class*='language-'] {
+  min-width: 100%;
+  float: left;
 }
 
 [class*='language-'] .namespace {
@@ -103,8 +103,8 @@ code[class*='language-'] {
 .token.deleted:not(.prefix),
 .token.inserted:not(.prefix) {
   display: block;
-  color: inherit;
   margin: 0 spacing(-3);
+  color: inherit;
 
   & > :first-child {
     margin-left: spacing(3);
@@ -116,9 +116,9 @@ code[class*='language-'] {
 }
 
 .token.deleted:not(.prefix) {
-  background: rgba(255, 0, 0, 0.1);
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
 .token.inserted:not(.prefix) {
-  background: rgba(0, 255, 128, 0.1);
+  background-color: rgba(0, 255, 128, 0.1);
 }

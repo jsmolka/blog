@@ -44,12 +44,12 @@ I have consumed a fair amount of training-related content this year and decided 
 
 ```js
 workout('4 x 8', [
-  ...warmup,
+  warmup,
   repeat(4, [
     interval('8:00', 1.05),
     interval('4:00', 0.5),
   ]),
-  ...cooldown
+  cooldown,
 ]),
 
 workout(`3 x 10 x 40/20`, [
@@ -61,7 +61,7 @@ workout(`3 x 10 x 40/20`, [
     ]),
     interval('5:00', 0.5),
   ]),
-  ...cooldown,
+  cooldown,
 ]),
 ```
 

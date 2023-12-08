@@ -9,9 +9,3 @@ $content: 45rem;
     @content;
   }
 }
-
-@mixin tail {
-  & > :not([hidden]) ~ :not([hidden]) {
-    @content;
-  }
-}
