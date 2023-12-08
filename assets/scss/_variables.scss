@@ -1,10 +1,10 @@
 @import 'common';
 
 :root {
-  --font-sm: 0.8rem;
-  --font-md: 1.1rem;
-  --font-lg: 1.2rem;
-  --font-xl: 1.6rem;
+  --text-sm: 0.8rem;
+  --text-md: 1.2rem;
+  --text-lg: 1.4rem;
+  --text-xl: 1.6rem;
   --rounded: #{spacing(0.5)};
 
   --gray-1: #eceff4; // hsv(218,  3, 96)

@@ -9,7 +9,20 @@
             <h1>{{ partial "title" . }}</h1>
           {{ end }}
           {{ if $showMeta }}
-            {{ partial "meta" . }}
+            <div class="meta">
+              <p>{{ partial "date" . }} · {{ .ReadingTime }} min</p>
+              {{ with .Params.Tags }}
+                <nav>
+                  <ul class="tags">
+                    {{ range . }}
+                      <li>
+                        <a class="tag" href="/tags/{{ . | urlize }}/">{{ . }}</a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                </nav>
+              {{ end }}
+            </div>
           {{ end }}
         </header>
       {{ end }}

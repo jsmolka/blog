@@ -1,27 +1,26 @@
 @import 'common';
 
 .markdown {
-  // text-align: justify;
   hyphens: auto;
-
-  // @include constricted {
-  //   text-align: left;
-  // }
 
   &,
   li {
-    @include tail {
+    & > *:not(:first-child) {
       margin-top: spacing(4);
+    }
+
+    & > :is(h1, h2, h3):not(:first-child) {
+      margin-top: spacing(6);
     }
   }
 
-  :is(h1, h2, h3):not(:first-child) {
-    margin-top: spacing(6) !important;
-  }
-
-  :not(h1, h2, h3) > a {
+  :not(h1, h2, h3) a {
     font-weight: 700;
-    border-bottom: 1px solid var(--gray-5);
+    text-decoration: underline;
+    text-decoration-color: var(--gray-5);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 2px;
+    text-underline-offset: spacing(0.5);
   }
 
   img,
@@ -82,7 +81,7 @@
   }
 
   figcaption {
-    font-size: var(--font-sm);
+    font-size: var(--text-sm);
     text-align: center;
   }
 
@@ -102,13 +101,13 @@
     @include constricted {
       margin-left: spacing(4.5);
     }
+  }
 
-    li {
-      padding-left: spacing(1);
+  li {
+    padding-left: spacing(1);
 
-      pre {
-        margin: 0;
-      }
+    pre {
+      margin: 0;
     }
   }
 
@@ -169,6 +168,7 @@
   th {
     color: var(--gray-1);
     font-weight: 700;
+    text-align: left;
   }
 
   th,
@@ -189,7 +189,6 @@
 
   a[href^='#fn:'] {
     font-feature-settings: 'tnum';
-    text-decoration: none;
 
     &::before {
       content: '[';
@@ -201,10 +200,6 @@
   }
 
   .footnotes {
-    a[href^='#fnref:'] {
-      text-decoration: none;
-    }
-
     & > ol {
       margin-left: spacing(4.5);
 

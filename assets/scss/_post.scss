@@ -10,23 +10,28 @@
     flex-direction: column;
     gap: spacing(2.5);
   }
+}
 
-  h1,
-  h2,
-  h3 {
-    font-weight: 800;
-    color: var(--gray-1);
-  }
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: spacing(1);
+  color: var(--gray-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
 
-  h1 {
-    font-size: var(--font-xl);
-  }
+.tags {
+  display: flex;
+  gap: spacing(2);
+}
 
-  h2 {
-    font-size: var(--font-lg);
-  }
+.tag {
+  background-color: var(--gray-7);
+  padding: spacing(1) spacing(1.5);
+  border-radius: var(--rounded);
 
-  h3 {
-    font-size: var(--font-md);
+  &:hover {
+    background-color: var(--gray-6);
   }
 }

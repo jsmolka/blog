@@ -19,7 +19,7 @@
 
 pre,
 code {
-  font-size: var(--font-sm);
+  font-size: var(--text-sm);
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   background: var(--gray-7);
   border-radius: var(--rounded);
@@ -40,6 +40,7 @@ code[class*='language-'] {
 }
 
 :not(pre) > code {
+  background-color: var(--gray-6);
   padding: spacing(0.5) spacing(1);
 }
 

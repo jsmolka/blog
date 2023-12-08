@@ -25,11 +25,6 @@ a {
   text-decoration: inherit;
 }
 
-b,
-strong {
-  font-weight: 700;
-}
-
 button {
   color: inherit;
   font-family: inherit;
@@ -39,30 +34,14 @@ button {
   font-weight: inherit;
   line-height: inherit;
   border: none;
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
   appearance: button;
-  background: transparent;
+  background-color: transparent;
   background-image: none;
 }
 
-button,
-[role='button'] {
-  cursor: pointer;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
+b,
+strong {
+  font-weight: 700;
 }
 
 hr {
