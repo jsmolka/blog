@@ -131,7 +131,7 @@ The [Web Bluetooth Communication Group's GitHub account](https://github.com/WebB
     timeIn2HeartRateZones: ['u16', 'u16'], // 1 s
     timeIn3HeartRateZones: ['u16', 'u16', 'u16'], // 1 s
     timeIn5HeartRateZones: ['u16', 'u16', 'u16', 'u16', 'u16'], // 1 s
-    indoorBikeSimulation: ['s16', 's16', 'u8', 'u8'], // Wind speed 0.001 m/s, grade 0.01 %, rolling resistance 0.0001, wind resistance 0.01 kg/m
+    indoorBikeSimulation: ['s16', 's16', 'u8', 'u8'],
     wheelCircumference: ['u16'], // 0.1 mm
     spinDown: ['u8'], // Opcode
     cadence: ['u16'], // 0.5 rpm
