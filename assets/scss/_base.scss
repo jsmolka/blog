@@ -20,16 +20,16 @@
 body {
   display: flex;
   flex-direction: column;
+  color: var(--gray-2);
   font-family: Inter, Roboto, ui-sans-serif, sans-serif;
   font-size: 14px;
   line-height: 1.7;
-  color: var(--gray-2);
-  background: var(--gray-8);
+  background-color: var(--gray-8);
 }
 
 ::selection {
   color: var(--gray-2);
-  background: var(--blue-3);
+  background-color: var(--blue-3);
 }
 
 * {
@@ -38,23 +38,23 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: spacing(2.5);
-  height: spacing(2.5);
+  width: spacing(2);
+  height: spacing(2);
 }
 
 ::-webkit-scrollbar-track-piece {
-  background: var(--gray-7);
+  background-color: var(--gray-7);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-6);
+  background-color: var(--gray-6);
 
   &:hover {
-    background: var(--gray-5);
+    background-color: var(--gray-5);
   }
 
   &:active {
-    background: var(--gray-4);
+    background-color: var(--gray-4);
   }
 }
 
