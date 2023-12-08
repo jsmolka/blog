@@ -24,17 +24,13 @@ export function isMobileDevice() {
 }
 
 export function onIntersect(element, callback, options = {}) {
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries, observer) => {
-      for (const entry of entries) {
-        if (entry.intersectionRatio > 0 || entry.isIntersecting) {
-          observer.unobserve(entry.target);
-          callback();
-        }
+  const observer = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (entry.intersectionRatio > 0 || entry.isIntersecting) {
+        observer.unobserve(entry.target);
+        callback();
       }
-    }, options);
-    observer.observe(element);
-  } else {
-    callback();
-  }
+    }
+  }, options);
+  observer.observe(element);
 }
