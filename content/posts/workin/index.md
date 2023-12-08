@@ -52,7 +52,7 @@ workout('4 x 8', [
 ]),
 
 workout(`3 x 10 x 40/20`, [
-  ...warmup,
+  warmup,
   repeat(3, [
     repeat(10, [
       interval('0:40', 1.25),
