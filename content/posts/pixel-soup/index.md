@@ -1,7 +1,6 @@
 ---
 title: "Pixel Soup"
-description: "It's so cute when they start rendering."
-tags: ["spirit", "emulation"]
+tags: ["spirit", "emulation", "programming"]
 date: 2023-04-02
 type: post
 draft: true

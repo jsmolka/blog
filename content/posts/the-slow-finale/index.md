@@ -1,7 +1,6 @@
 ---
 title: "The Slow Finale"
-description: "Can't even match the performance of 1989."
-tags: ["sprite", "emulation"]
+tags: ["sprite", "emulation", "programming"]
 date: 2022-10-08
 type: post
 ---

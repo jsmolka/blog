@@ -1,6 +1,5 @@
 ---
 title: "Base Milestone"
-description: "Building a solid foundation."
 tags: ["cycling"]
 date: 2023-03-31
 type: post

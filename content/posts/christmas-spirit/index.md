@@ -1,7 +1,6 @@
 ---
 title: "Christmas Spirit"
-description: "A timely pun for a new project."
-tags: ["spirit", "emulation"]
+tags: ["spirit", "emulation", "programming"]
 date: 2022-12-28
 type: post
 ---

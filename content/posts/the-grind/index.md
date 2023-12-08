@@ -1,7 +1,6 @@
 ---
 title: "The Grind"
-description: "Creating a programming language is fun."
-tags: ["drizzle"]
+tags: ["drizzle", "programming"]
 date: 2022-05-06
 type: post
 ---

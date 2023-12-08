@@ -1,7 +1,6 @@
 ---
 title: "Feature Complete"
-description: "Is that even possible?"
-tags: ["drizzle"]
+tags: ["drizzle", "programming"]
 date: 2022-07-01
 type: post
 ---

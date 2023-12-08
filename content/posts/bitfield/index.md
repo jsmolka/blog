@@ -1,7 +1,6 @@
 ---
 title: "Bitfield"
-description: "A bitfield macro made for emulation."
-tags: ["spirit", "emulation"]
+tags: ["spirit", "emulation", "programming"]
 date: 2023-01-29
 type: post
 ---

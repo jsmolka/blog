@@ -1,6 +1,5 @@
 ---
 title: "Aeroad"
-description: "Imagine buying an aero road bike."
 tags: ["cycling"]
 date: 2022-06-09
 type: post

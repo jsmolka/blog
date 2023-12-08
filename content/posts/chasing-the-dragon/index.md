@@ -1,6 +1,5 @@
 ---
 title: "Chasing the Dragon"
-description: "The endless pursuit of dopamine."
 tags: ["cycling"]
 date: 2022-12-31
 type: post

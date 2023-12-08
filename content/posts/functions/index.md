@@ -1,7 +1,6 @@
 ---
 title: "Functions"
-description: "Maximum recursion depth exceeded."
-tags: ["drizzle"]
+tags: ["drizzle", "programming"]
 date: 2022-03-01
 type: post
 ---

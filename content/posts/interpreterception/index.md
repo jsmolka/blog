@@ -1,7 +1,6 @@
 ---
 title: "Interpreterception"
-description: "Feels like I have done this before."
-tags: ["sprite", "emulation"]
+tags: ["sprite", "emulation", "programming"]
 date: 2022-07-09
 type: post
 ---

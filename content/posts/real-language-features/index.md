@@ -1,7 +1,6 @@
 ---
 title: "Real Language Features"
-description: "Late binding, collections and iterators."
-tags: ["drizzle"]
+tags: ["drizzle", "programming"]
 date: 2022-06-04
 type: post
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Progress Report #3"
-description: "Third progress report of the eggvance GBA emulator."
-tags: ["eggvance", "emulation"]
+tags: ["eggvance", "emulation", "programming"]
 date: 2019-11-03
 type: post
 ---

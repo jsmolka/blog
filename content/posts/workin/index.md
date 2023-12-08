@@ -1,7 +1,6 @@
 ---
 title: "workin"
-description: "A combination of two passions."
-tags: ["workin", "cycling"]
+tags: ["workin", "cycling", "programming"]
 date: 2023-11-20
 type: post
 ---

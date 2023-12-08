@@ -1,6 +1,5 @@
 ---
 title: "Porsche Circuit Cycling"
-description: "Turning myself inside out on a race track."
 tags: ["cycling"]
 date: 2022-07-18
 type: post

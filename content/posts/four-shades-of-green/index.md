@@ -1,7 +1,6 @@
 ---
 title: "Four Shades of Green"
-description: "The international bestseller in a different color."
-tags: ["sprite", "emulation"]
+tags: ["sprite", "emulation", "programming"]
 date: 2022-09-17
 type: post
 ---

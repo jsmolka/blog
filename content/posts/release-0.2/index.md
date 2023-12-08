@@ -1,7 +1,6 @@
 ---
 title: "Release 0.2"
-description: "Second release of the eggvance GBA emulator."
-tags: ["eggvance", "emulation"]
+tags: ["eggvance", "emulation", "programming"]
 date: 2020-11-02
 type: post
 ---

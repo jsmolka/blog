@@ -1,7 +1,6 @@
 ---
 title: "A Glorified Calculator"
-description: "The world's most complicated calculator."
-tags: ["drizzle"]
+tags: ["drizzle", "programming"]
 date: 2021-09-20
 type: post
 ---

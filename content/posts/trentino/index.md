@@ -1,6 +1,5 @@
 ---
 title: "Trentino"
-description: "Ascending the climbs of a grand tour."
 tags: ["cycling"]
 date: 2023-06-19
 type: post

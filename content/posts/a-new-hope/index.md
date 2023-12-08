@@ -1,7 +1,6 @@
 ---
 title: "A New Hope"
-description: "The sequel we have all been waiting for."
-tags: ["drizzle", "sprite"]
+tags: ["drizzle", "sprite", "programming"]
 date: 2022-10-29
 type: post
 ---
