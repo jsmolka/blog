@@ -63,10 +63,8 @@
       right: spacing(-2);
     }
 
-    cite {
-      &::before {
-        content: '\2014\00a0';
-      }
+    cite::before {
+      content: '\2014\00a0';
     }
 
     p:has(cite) {

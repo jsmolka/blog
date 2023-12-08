@@ -1,6 +1,5 @@
 ---
 title: "Projects"
-description: "A list of notable projects."
 showMeta: false
 showTitle: false
 ---

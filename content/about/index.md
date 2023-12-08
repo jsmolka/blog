@@ -1,6 +1,5 @@
 ---
 title: "About"
-description: "A few words about me."
 showMeta: false
 ---
 > Living life one obsession at a time.
