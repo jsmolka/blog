@@ -9,7 +9,7 @@
   {{ end }}
 {{ end }}
 <figure>
-  <div v-cloak v-scope="Audio('{{ $src }}')" @vue:mounted="mounted($el)"></div>
+  <div data-audio data-src="{{ $src }}"></div>
   <noscript>
     <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>

@@ -16,8 +16,5 @@
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "prismjs": "^1.29.0"
-  },
-  "dependencies": {
-    "petite-vue": "^0.4.1"
   }
 }

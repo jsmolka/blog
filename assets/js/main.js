@@ -1,5 +1,5 @@
-import { createApp } from 'petite-vue';
-import { Audio } from './audio';
+import { mount } from './audio';
 
-const app = createApp({ Audio });
-app.mount();
+for (const element of document.querySelectorAll('[data-audio]')) {
+  mount(element, element.getAttribute('data-src'));
+}
