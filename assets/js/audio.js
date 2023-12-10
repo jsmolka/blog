@@ -1,6 +1,7 @@
 import { env } from './utils/env';
 import { slider } from './utils/slider';
 import { storage } from './utils/storage';
+import { formatSeconds } from './utils/time';
 
 const $template = document.createElement('template');
 $template.innerHTML = /* html */ `
@@ -29,12 +30,6 @@ $template.innerHTML = /* html */ `
   </div>
 `;
 
-function formatTime(time) {
-  const min = String(Math.floor(time / 60));
-  const sec = String(Math.floor(time % 60));
-  return `${min}:${sec.padStart(2, '0')}`;
-}
-
 export function mount(root, src) {
   const template = $template.content.cloneNode(true);
 
@@ -46,7 +41,7 @@ export function mount(root, src) {
   root.replaceWith(template);
 
   const update = () => {
-    refs.time.innerHTML = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    refs.time.innerHTML = `${formatSeconds(audio.currentTime)} / ${formatSeconds(audio.duration)}`;
     refs.stateButtonPath.setAttribute(
       'd',
       audio.paused ? 'M8 5.14v14l11-7l-11-7z' : 'M14 19h4V5h-4M6 19h4V5H6v14z'
