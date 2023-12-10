@@ -3,8 +3,7 @@ import { slider } from './utils/slider';
 import { storage } from './utils/storage';
 import { formatSeconds } from './utils/time';
 
-const $template = document.createElement('template');
-$template.innerHTML = /* html */ `
+const template = /* html */ `
   <div class="audio">
     <button data-ref="stateButton">
       <svg width="16" height="16" viewBox="5 5 14 14">
@@ -30,18 +29,42 @@ $template.innerHTML = /* html */ `
   </div>
 `;
 
+const audios = [];
+
 export function mount(root, src) {
-  const template = $template.content.cloneNode(true);
+  root.innerHTML = template;
 
   const refs = {};
-  for (const element of template.querySelectorAll('[data-ref]')) {
+  for (const element of root.querySelectorAll('[data-ref]')) {
     refs[element.getAttribute('data-ref')] = element;
   }
 
-  root.replaceWith(template);
+  const play = () => {
+    for (const audio of audios) {
+      audio.pause();
+    }
+    audio.play();
+  };
+
+  const pause = () => {
+    audio.pause();
+  };
+
+  const getVolume = () => {
+    return env.isMobile ? 1 : storage.get('volume', 0.5);
+  };
+
+  const setVolume = (value) => {
+    audio.muted = false;
+    audio.volume = value ** 3;
+    storage.set('volume', value);
+
+    refs.volumeBarSeeker.style.setProperty('--value', value);
+  };
 
   const update = () => {
     refs.time.innerHTML = `${formatSeconds(audio.currentTime)} / ${formatSeconds(audio.duration)}`;
+
     refs.stateButtonPath.setAttribute(
       'd',
       audio.paused ? 'M8 5.14v14l11-7l-11-7z' : 'M14 19h4V5h-4M6 19h4V5H6v14z'
@@ -53,62 +76,46 @@ export function mount(root, src) {
         : 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z'
     );
 
-    const progress = audio.duration > 0 ? audio.currentTime / audio.duration : 0;
-    refs.progressBarSeeker.style.cssText = `--value: ${progress}`;
-  };
-
-  const play = () => {
-    audio.play();
-  };
-
-  const pause = () => {
-    audio.pause();
-  };
-
-  const getVolume = () => {
-    return env.isMobileDevice() ? 1 : storage.get('volume', 0.5);
-  };
-
-  const setVolume = (value) => {
-    audio.muted = false;
-    audio.volume = Math.pow(value, 3);
-    storage.set('volume', value);
-
-    refs.volumeBarSeeker.style.cssText = `--value: ${value}`;
+    const value = audio.duration > 0 ? audio.currentTime / audio.duration : 0;
+    refs.progressBarSeeker.style.setProperty('--value', value);
   };
 
   const initProgress = () => {
     let paused = false;
 
-    slider(refs.progressBar);
-    refs.progressBar.addEventListener('slider:down', () => {
+    const down = () => {
       paused = audio.paused;
       if (!paused) {
         pause();
       }
-    });
-    refs.progressBar.addEventListener('slider:move', ({ detail }) => {
-      audio.currentTime = detail * audio.duration;
-    });
-    refs.progressBar.addEventListener('slider:up', () => {
+    };
+    const move = ({ detail: progress }) => {
+      audio.currentTime = progress * audio.duration;
+    };
+    const up = () => {
       if (!paused) {
         play();
       }
-    });
+    };
+
+    slider(refs.progressBar);
+    refs.progressBar.addEventListener('slider:down', down);
+    refs.progressBar.addEventListener('slider:move', move);
+    refs.progressBar.addEventListener('slider:up', up);
   };
 
   const initVolume = () => {
     refs.volumeButton.addEventListener('click', () => (audio.muted = !audio.muted));
 
-    if (env.isMobileDevice()) {
+    if (env.isMobile) {
       return;
     }
 
     const show = new Proxy(
       { value: 0 },
       {
-        set(object, prop, value) {
-          object[prop] = value;
+        set(object, property, value) {
+          Reflect.set(...arguments);
           refs.volumeBarWrapper.classList.toggle('show', value > 0);
         },
       }
@@ -119,7 +126,7 @@ export function mount(root, src) {
 
     slider(refs.volumeBar);
     refs.volumeBar.addEventListener('slider:down', () => show.value++);
-    refs.volumeBar.addEventListener('slider:move', ({ detail }) => setVolume(detail));
+    refs.volumeBar.addEventListener('slider:move', ({ detail: volume }) => setVolume(volume));
     refs.volumeBar.addEventListener('slider:up', () => show.value--);
   };
 
@@ -158,4 +165,6 @@ export function mount(root, src) {
   audio.addEventListener('loadedmetadata', init);
   audio.preload = 'metadata';
   audio.src = src;
+
+  audios.push(audio);
 }

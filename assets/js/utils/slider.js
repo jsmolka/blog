@@ -1,14 +1,19 @@
 import { math } from './math';
 
 export function slider(element) {
-  const down = () => element.dispatchEvent(new Event('slider:down'));
-  const move = (event) =>
+  const down = () => {
+    element.dispatchEvent(new Event('slider:down'));
+  };
+  const move = (event) => {
     element.dispatchEvent(
       new CustomEvent('slider:move', {
         detail: math.clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1),
       })
     );
-  const up = () => element.dispatchEvent(new Event('slider:up'));
+  };
+  const up = () => {
+    element.dispatchEvent(new Event('slider:up'));
+  };
 
   element.addEventListener('pointerdown', (event) => {
     if (event.button !== 0) {
