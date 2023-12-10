@@ -18,12 +18,11 @@ export function slider(element) {
     const cursor = window.document.body.style.cursor;
     const select = window.document.body.style.userSelect;
 
-    const pointerUp = (event) => {
+    const pointerUp = () => {
       window.removeEventListener('pointermove', move);
       window.removeEventListener('pointerup', pointerUp);
       window.document.body.style.cursor = cursor;
       window.document.body.style.userSelect = select;
-      move(event);
       up();
     };
 
