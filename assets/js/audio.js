@@ -2,8 +2,8 @@ import { env } from './utils/env';
 import { math } from './utils/math';
 import { storage } from './utils/storage';
 
-const template = document.createElement('template');
-template.innerHTML = /* html */ `
+const $template = document.createElement('template');
+$template.innerHTML = /* html */ `
   <div class="audio">
     <button data-ref="stateButton">
       <svg width="16" height="16" viewBox="5 5 14 14">
@@ -68,12 +68,14 @@ function initBar(element, opts) {
 }
 
 export function mount(root, src) {
-  root.appendChild(template.content.cloneNode(true));
+  const template = $template.content.cloneNode(true);
 
   const refs = {};
-  for (const element of root.querySelectorAll('[data-ref]')) {
+  for (const element of template.querySelectorAll('[data-ref]')) {
     refs[element.getAttribute('data-ref')] = element;
   }
+
+  root.replaceWith(template);
 
   const update = () => {
     refs.time.innerHTML = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
