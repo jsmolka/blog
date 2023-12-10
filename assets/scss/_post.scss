@@ -34,4 +34,8 @@
   &:hover {
     background-color: var(--gray-6);
   }
+
+  &:active {
+    background-color: var(--gray-5);
+  }
 }
