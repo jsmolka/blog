@@ -4,6 +4,7 @@
   hyphens: auto;
 
   &,
+  blockquote,
   li {
     & > *:not(:first-child) {
       margin-top: spacing(4);
@@ -14,7 +15,7 @@
     }
   }
 
-  :not(h1, h2, h3) a {
+  :not(h1, h2, h3) > a {
     font-weight: 700;
     text-decoration: underline;
     text-decoration-color: var(--gray-5);
@@ -33,9 +34,6 @@
   blockquote {
     position: relative;
     width: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: spacing(4);
     padding: spacing(4) spacing(12);
     font-style: italic;
 
@@ -87,6 +85,7 @@
     width: spacing(16);
     margin: spacing(8) auto !important;
     border-bottom: 2px solid var(--gray-6);
+    border-radius: var(--rounded);
   }
 
   ul,
@@ -194,7 +193,7 @@
     }
   }
 
-  .footnotes ol {
+  .footnotes > ol {
     margin-left: spacing(4.5);
 
     & > li {

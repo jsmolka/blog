@@ -47,13 +47,11 @@ hr {
 audio,
 canvas,
 img,
-svg,
-video {
+svg {
   display: block;
 }
 
-img,
-video {
+img {
   height: auto;
   max-width: 100%;
 }

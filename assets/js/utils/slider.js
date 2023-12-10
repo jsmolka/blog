@@ -31,11 +31,11 @@ export function slider(element) {
       up();
     };
 
-    down();
-    move(event);
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', pointerUp);
     window.document.body.style.cursor = element.style.cursor;
     window.document.body.style.userSelect = 'none';
+    down();
+    move(event);
   });
 }

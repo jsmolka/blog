@@ -9,8 +9,9 @@
   touch-action: none;
 
   button {
-    padding: spacing(1);
     margin: spacing(1.5);
+    padding: spacing(1);
+    border-radius: var(--rounded);
 
     &:hover {
       background-color: var(--gray-6);
@@ -19,7 +20,7 @@
 
   .time {
     font-weight: 500;
-    font-feature-settings: 'calt', 'tnum';
+    font-feature-settings: 'tnum';
   }
 
   .bar {
@@ -33,6 +34,8 @@
     display: flex;
     height: spacing(1);
     background-color: var(--gray-5);
+    border-radius: var(--rounded);
+    overflow: hidden;
 
     &::before {
       content: '';
@@ -50,7 +53,7 @@
     width: 0;
     transition: width 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &.show {
+    &.active {
       width: spacing(20);
     }
   }

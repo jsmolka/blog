@@ -1,6 +1,6 @@
 import Prism from 'prismjs';
-import 'prismjs/components/prism-clike.js';
 import 'prismjs/components/prism-c.js';
+import 'prismjs/components/prism-clike.js';
 import 'prismjs/components/prism-cpp.js';
 import 'prismjs/components/prism-diff.js';
 import 'prismjs/components/prism-javascript.js';
