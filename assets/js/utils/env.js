@@ -1,8 +1,4 @@
-export function clamp(value, min, max) {
-  return Math.max(min, Math.min(max, value));
-}
-
-export function isMobileDevice() {
+function isMobileDevice() {
   // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
   const isIosStandalone = () => {
     return typeof navigator.standalone === 'boolean';
@@ -23,14 +19,4 @@ export function isMobileDevice() {
   );
 }
 
-export function onIntersect(element, callback, options = {}) {
-  const observer = new IntersectionObserver((entries, observer) => {
-    for (const entry of entries) {
-      if (entry.intersectionRatio > 0 || entry.isIntersecting) {
-        observer.unobserve(entry.target);
-        callback();
-      }
-    }
-  }, options);
-  observer.observe(element);
-}
+export const env = { isMobileDevice };

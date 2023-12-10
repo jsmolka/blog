@@ -1,5 +1,6 @@
-import { get, set } from './storage';
-import { clamp, isMobileDevice } from './utils';
+import { env } from './utils/env';
+import { math } from './utils/math';
+import { storage } from './utils/storage';
 
 const $template = document.createElement('template');
 $template.innerHTML = /* html */ `
@@ -9,7 +10,7 @@ $template.innerHTML = /* html */ `
         <path ref="stateButtonPath" fill="currentColor" />
       </svg>
     </button>
-    <div ref="time" class="time"></div>
+    <div ref="time" class="time">0:00 / 0:00</div>
     <div ref="progressBar" class="bar">
       <div ref="progressBarSeeker" class="seeker"></div>
     </div>
@@ -36,7 +37,7 @@ function formatTime(time) {
 
 function initBar(element, opts) {
   const onMove = (event) =>
-    opts.onMove(clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
+    opts.onMove(math.clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
   const onMoveBegin = opts.onMoveBegin;
   const onMoveEnd = opts.onMoveEnd;
 
@@ -103,13 +104,13 @@ export function mount(root, src) {
   };
 
   const getVolume = () => {
-    return isMobileDevice() ? 1 : get('volume', 0.5);
+    return env.isMobileDevice() ? 1 : storage.get('volume', 0.5);
   };
 
   const setVolume = (value) => {
     audio.muted = false;
     audio.volume = Math.pow(value, 3);
-    set('volume', value);
+    storage.set('volume', value);
 
     refs.volumeBarSeeker.style.cssText = `--value: ${value}`;
   };
@@ -140,7 +141,7 @@ export function mount(root, src) {
       audio.muted = !audio.muted;
     });
 
-    if (!isMobileDevice()) {
+    if (!env.isMobileDevice()) {
       const showVolume = new Proxy(
         { value: 0 },
         {
