@@ -1,5 +1,5 @@
 import { env } from './utils/env';
-import { math } from './utils/math';
+import { slider } from './utils/slider';
 import { storage } from './utils/storage';
 
 const $template = document.createElement('template');
@@ -35,38 +35,6 @@ function formatTime(time) {
   return `${min}:${sec.padStart(2, '0')}`;
 }
 
-function initBar(element, opts) {
-  const onMove = (event) =>
-    opts.onMove(math.clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1));
-  const onMoveBegin = opts.onMoveBegin;
-  const onMoveEnd = opts.onMoveEnd;
-
-  element.addEventListener('pointerdown', (event) => {
-    if (event.button !== 0) {
-      return;
-    }
-
-    const cursor = window.document.body.style.cursor;
-    const select = window.document.body.style.userSelect;
-
-    const up = (event) => {
-      window.removeEventListener('pointermove', onMove);
-      window.removeEventListener('pointerup', up);
-      window.document.body.style.cursor = cursor;
-      window.document.body.style.userSelect = select;
-      onMove(event);
-      onMoveEnd();
-    };
-
-    window.addEventListener('pointermove', onMove);
-    window.addEventListener('pointerup', up);
-    window.document.body.style.cursor = 'pointer';
-    window.document.body.style.userSelect = 'none';
-    onMoveBegin();
-    onMove(event);
-  });
-}
-
 export function mount(root, src) {
   const template = $template.content.cloneNode(true);
 
@@ -85,7 +53,7 @@ export function mount(root, src) {
     );
     refs.volumeButtonPath.setAttribute(
       'd',
-      audio.volume === 0
+      audio.muted || audio.volume === 0
         ? 'M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z'
         : 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z'
     );
@@ -107,65 +75,60 @@ export function mount(root, src) {
   };
 
   const setVolume = (value) => {
+    audio.muted = false;
     audio.volume = Math.pow(value, 3);
     storage.set('volume', value);
 
     refs.volumeBarSeeker.style.cssText = `--value: ${value}`;
   };
 
-  const initProgressBar = () => {
+  const initProgress = () => {
     let paused = false;
 
-    initBar(refs.progressBar, {
-      onMove: (position) => {
-        audio.currentTime = position * audio.duration;
-      },
-      onMoveBegin: () => {
-        paused = audio.paused;
-        if (!paused) {
-          pause();
-        }
-      },
-      onMoveEnd: () => {
-        if (!paused) {
-          play();
-        }
-      },
+    slider(refs.progressBar);
+    refs.progressBar.addEventListener('slider:down', () => {
+      paused = audio.paused;
+      if (!paused) {
+        pause();
+      }
+    });
+    refs.progressBar.addEventListener('slider:move', ({ detail }) => {
+      audio.currentTime = detail * audio.duration;
+    });
+    refs.progressBar.addEventListener('slider:up', () => {
+      if (!paused) {
+        play();
+      }
     });
   };
 
-  const initVolumeBar = () => {
-    refs.volumeButton.addEventListener('click', () => {
-      audio.muted = !audio.muted;
-    });
+  const initVolume = () => {
+    refs.volumeButton.addEventListener('click', () => (audio.muted = !audio.muted));
 
-    if (!env.isMobileDevice()) {
-      const showVolume = new Proxy(
-        { value: 0 },
-        {
-          set(object, prop, value) {
-            object[prop] = value;
-            refs.volumeBarWrapper.classList.toggle('active', value > 0);
-          },
-        }
-      );
-
-      refs.volume.addEventListener('pointerenter', () => showVolume.value++);
-      refs.volume.addEventListener('pointerleave', () => showVolume.value--);
-
-      initBar(refs.volumeBar, {
-        onMove: (volume) => {
-          setVolume(volume);
-        },
-        onMoveBegin: () => showVolume.value++,
-        onMoveEnd: () => showVolume.value--,
-      });
+    if (env.isMobileDevice()) {
+      return;
     }
+
+    const show = new Proxy(
+      { value: 0 },
+      {
+        set(object, prop, value) {
+          object[prop] = value;
+          refs.volumeBarWrapper.classList.toggle('show', value > 0);
+        },
+      }
+    );
+
+    refs.volume.addEventListener('pointerenter', () => show.value++);
+    refs.volume.addEventListener('pointerleave', () => show.value--);
+
+    slider(refs.volumeBar);
+    refs.volumeBar.addEventListener('slider:down', () => show.value++);
+    refs.volumeBar.addEventListener('slider:move', ({ detail }) => setVolume(detail));
+    refs.volumeBar.addEventListener('slider:up', () => show.value--);
   };
 
   const init = () => {
-    update();
-
     setVolume(getVolume());
 
     for (const event of [
@@ -182,6 +145,7 @@ export function mount(root, src) {
     ]) {
       audio.addEventListener(event, update);
     }
+    update();
 
     refs.stateButton.addEventListener('click', () => {
       if (audio.paused) {
@@ -191,8 +155,8 @@ export function mount(root, src) {
       }
     });
 
-    initProgressBar();
-    initVolumeBar();
+    initProgress();
+    initVolume();
   };
 
   const audio = new Audio();
