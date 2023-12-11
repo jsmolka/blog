@@ -9,7 +9,7 @@ Despite their name, smart trainers are pretty dumb out of the box. To get the mo
 [^1]: I am team blue bars. Place the phone in the background and watch a good show.
 
 ## Workouts
-The most important aspect for me is high-quality workouts. Intervals should be simple &mdash; spend a certain amount of time at a certain intensity to elicit a training response. Unfortunately, most third-party apps use complicated workouts with ramps and frequently changing interval intensities to keep the user's attention. Even the science-based TrainerRoad falls victim to this.
+The most important aspect for me is high-quality workouts. Intervals should be simple --- spend a certain amount of time at a certain intensity to elicit a training response. Unfortunately, most third-party apps use complicated workouts with ramps and frequently changing interval intensities to keep the user's attention. Even the science-based TrainerRoad falls victim to this.
 
 Since nothing on the market met my needs at a reasonable price, I decided to write my own app. It had to run on a smartphone because that's the setup I use. I could have tried to develop a native app, which would have had some advantages regarding the Bluetooth API, but I took the path of least resistance and went with a simple web app. Getting used to Vue 3's new composition API was enough new information for one project.
 

@@ -13,7 +13,7 @@ Finishing the previous project also meant looking for a new one. The idea of cre
 ## Black Box
 The inner workings of an emulator were completely alien to me. It was a black box that took input in the form of ROMs and produced output in the form of childhood nostalgia. Not knowing anything about video console emulation or something alike, I headed out to [/r/EmuDev](https://www.reddit.com/r/EmuDev/) and asked how to get started. The people there proposed the typical order for someone new to emulation:
 
-1. Write a [Chip-8](https://en.wikipedia.org/wiki/CHIP-8) emulator &mdash; the "Hello World" of emulation
+1. Write a [Chip-8](https://en.wikipedia.org/wiki/CHIP-8) emulator --- the "Hello World" of emulation
 2. Write an emulator for a simpler console like the GB or the NES
 3. Do the thing you actually want to do
 

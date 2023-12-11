@@ -4,7 +4,7 @@ tags: ["spirit", "emulation", "programming"]
 date: 2022-12-28
 type: post
 ---
-The transition time between two side projects is something I like a lot. There is no place for the mind to wander to during downtime, no sudden ideas in the bed that prevent you from sleeping and no frustration because something doesn't work even though it should &mdash; I don't make mistakes. All of that sounds horrible for something you'd do in your free time, but the dopamine hits when you pass the first test, see the first pixel and get utterly blasted by the first audio sample, make more than up for it. Nostalgia, especially in emulation, is one hell of a drug.
+The transition time between two side projects is something I like a lot. There is no place for the mind to wander to during downtime, no sudden ideas in the bed that prevent you from sleeping and no frustration because something doesn't work even though it should --- I don't make mistakes. All of that sounds horrible for something you'd do in your free time, but the dopamine hits when you pass the first test, see the first pixel and get utterly blasted by the first audio sample, make more than up for it. Nostalgia, especially in emulation, is one hell of a drug.
 
 ## Into the Unknown
 I wanted to try out Rust and needed something simple to ease into the language and its idioms. I've already emulated the [Game Boy]({{<relref "sprite">}}), so that thing was out of the picture. The next closest console in terms of difficulty was the NES [^1], which happens to be the first console I've ever owned!
@@ -88,7 +88,7 @@ fn logical_shift_right(&mut self, addr: Option<u16>) {
 ```
 
 ## Snake
-[Snake 6502](https://skilldrick.github.io/easy6502/#snake) is a snake implementation for the 6502 &mdash; shocking. It has nothing to do with the NES and relies on custom memory mappings, which can be implemented rather easily. It's nice to see that the basics of the CPU are working before moving on to the PPU and proper hardware tests.
+[Snake 6502](https://skilldrick.github.io/easy6502/#snake) is a snake implementation for the 6502 --- shocking. It has nothing to do with the NES and relies on custom memory mappings, which can be implemented rather easily. It's nice to see that the basics of the CPU are working before moving on to the PPU and proper hardware tests.
 
 {{<wrap>}}
   {{<image src="img/snake-1.png" caption="Snake">}}

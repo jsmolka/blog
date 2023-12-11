@@ -31,8 +31,12 @@ disableHugoGeneratorInject = true
 
 [markup]
   [markup.goldmark]
-    [markup.goldmark.extensions]
-      typographer = false
+    [markup.goldmark.extensions.typographer]
+      apostrophe = "'"
+      leftDoubleQuote = '"'
+      leftSingleQuote = "'"
+      rightDoubleQuote = '"'
+      rightSingleQuote = "'"
 
     [markup.goldmark.renderer]
       unsafe = true

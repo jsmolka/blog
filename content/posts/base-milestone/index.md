@@ -4,7 +4,7 @@ tags: ["cycling"]
 date: 2023-03-31
 type: post
 ---
-My mom loves to tell the story about picking me up from kindergarten. Its house and entrance were connected by a small stretch of pavement, and me walking it was an experience &mdash; an endless loop of a child running, falling and standing back up. It seemed like I didn't know how to move slowly. I lost this magical urge to move over time and when I graduated from university, I was an unfit chubby mess of a human being [^1].
+My mom loves to tell the story about picking me up from kindergarten. Its house and entrance were connected by a small stretch of pavement, and me walking it was an experience --- an endless loop of a child running, falling and standing back up. It seemed like I didn't know how to move slowly. I lost this magical urge to move over time and when I graduated from university, I was an unfit chubby mess of a human being [^1].
 
 [^1]: A benefit of being almost two meters is that people don't realize that.
 

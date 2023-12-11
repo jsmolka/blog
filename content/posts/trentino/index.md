@@ -20,7 +20,7 @@ A solo [prologue](https://www.strava.com/activities/9152209086) with almost 1000
 - [Monte Bondone and Monte Velo](https://www.strava.com/activities/9182493042)
 - [Passo Coe](https://www.strava.com/activities/9189176957)
 
-These rides added up to almost 18000 m of vertical ascent &mdash; 10% of my all-time in just seven days.
+These rides added up to almost 18000 m of vertical ascent --- 10% of my all-time in just seven days.
 
 {{<wrap>}}
   {{<image src="img/lake-garda.jpg" caption="View onto Lake Garda from Monte Baldo">}}
