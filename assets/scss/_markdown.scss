@@ -157,6 +157,11 @@
     vertical-align: baseline;
   }
 
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
   th {
     color: var(--gray-1);
     font-weight: 700;
@@ -172,7 +177,6 @@
   .wrap {
     display: flex;
     gap: spacing(4);
-    overflow-x: auto;
 
     @include constricted {
       flex-direction: column;

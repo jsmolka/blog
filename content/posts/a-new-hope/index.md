@@ -88,7 +88,6 @@ void Vm::addGeneric() {
 
 The specializing adaptive interpreter worked wonders with sprite. Almost all opcodes use integers and can be optimized, which resulted in a ten-second performance boost in the benchmark. And just like that, sprite can now emulate games at their native frame rate!
 
-{{% wrap %}}
 | Build                                                                                        | Changes                           | sprite (class) | sprite (no class) |
 | -------------------------------------------------------------------------------------------- | --------------------------------- | -------------- | ----------------- |
 | [92522aa9](https://github.com/jsmolka/drizzle/tree/92522aa9d085394d8797f555e97b8db82ae65a59) | Baseline                          | 46570 ms       | 34441 ms          |
@@ -97,7 +96,6 @@ The specializing adaptive interpreter worked wonders with sprite. Almost all opc
 | [35e5116e](https://github.com/jsmolka/drizzle/tree/35e5116e8743c23bdb70c7453cb41a3df7757e1b) | Optimized switch opcode           | 36798 ms       | 26105 ms          |
 | [d2c1f656](https://github.com/jsmolka/drizzle/tree/d2c1f656718c407264a833260d140664c4385038) | Improved inlining and branching   | 36254 ms       | 25422 ms          |
 | [f2aee4fe](https://github.com/jsmolka/drizzle/tree/f2aee4fe38a619252e19675d4b03a13eb26d6add) | Specializing adaptive interpreter | 26009 ms       | 15837 ms          |
-{{% /wrap %}}
 
 ## Final Words
 That's it. I increased the performance of drizzle by about 200% and cleaned up the code in the meantime. Both projects are now well-written and can the shelved without worries. Next, I want to do a project in something other than C++. The cryptic error messages, steep learning curve and memory safety issues can be a pain in the ass. I think it's time to try out Rust.
