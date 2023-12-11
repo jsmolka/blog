@@ -38,8 +38,6 @@
     display: flex;
     height: spacing(1);
     background-color: var(--gray-5);
-    border-radius: var(--rounded);
-    overflow: hidden;
 
     &::before {
       content: '';
