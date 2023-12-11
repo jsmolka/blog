@@ -87,8 +87,8 @@
     border-bottom: 2px solid var(--gray-6);
   }
 
-  ul,
-  ol {
+  ul:not([class]),
+  ol:not([class]) {
     display: flex;
     flex-direction: column;
     gap: spacing(1);
@@ -97,13 +97,13 @@
     @include constricted {
       margin-left: spacing(4);
     }
+
+    & > li {
+      padding-left: spacing(1);
+    }
   }
 
-  li {
-    padding-left: spacing(1);
-  }
-
-  ul > li {
+  ul:not([class]) > li {
     position: relative;
 
     &::before {
@@ -117,7 +117,7 @@
     }
   }
 
-  ol {
+  ol:not([class]) {
     list-style: decimal;
   }
 
