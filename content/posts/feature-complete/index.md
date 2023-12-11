@@ -49,7 +49,6 @@ while sdl_events():
 
 Which renders the following scenes:
 
-{{<wrap>}}
-  {{<image src="img/icon-drizzle.png" caption="Icon of drizzle rendered with SDL2">}}
-  {{<image src="img/icon-eggvance.png" caption="Icon of eggvance rendered with SDL2">}}
-{{</wrap>}}
+- ![](img/icon-drizzle.png "Icon of drizzle rendered with SDL2")
+- ![](img/icon-eggvance.png "Icon of eggvance rendered with SDL2")
+{.fluent}

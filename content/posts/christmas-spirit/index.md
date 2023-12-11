@@ -90,7 +90,6 @@ fn logical_shift_right(&mut self, addr: Option<u16>) {
 ## Snake
 [Snake 6502](https://skilldrick.github.io/easy6502/#snake) is a snake implementation for the 6502 --- shocking. It has nothing to do with the NES and relies on custom memory mappings, which can be implemented rather easily. It's nice to see that the basics of the CPU are working before moving on to the PPU and proper hardware tests.
 
-{{<wrap>}}
-  {{<image src="img/snake-1.png" caption="Snake">}}
-  {{<image src="img/snake-2.png" caption="Even longer snake">}}
-{{</wrap>}}
+- ![](img/snake-1.png "Snake")
+- ![](img/snake-2.png "Even longer snake")
+{.fluent}

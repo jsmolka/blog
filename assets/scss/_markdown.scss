@@ -81,6 +81,19 @@
     text-align: center;
   }
 
+  .fluent {
+    display: flex;
+    gap: spacing(4);
+
+    @include constricted {
+      flex-direction: column;
+    }
+
+    & > * {
+      flex: 1;
+    }
+  }
+
   hr {
     width: spacing(16);
     margin: spacing(8) auto !important;
@@ -171,15 +184,6 @@
   td {
     padding: spacing(1.5) spacing(2.5);
     border: 1px solid var(--gray-6);
-  }
-
-  .wrap {
-    display: flex;
-    gap: spacing(4);
-
-    @include constricted {
-      flex-direction: column;
-    }
   }
 
   a[href^='#fn:'] {

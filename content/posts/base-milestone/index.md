@@ -10,9 +10,8 @@ My mom loves to tell the story about picking me up from kindergarten. Its house 
 
 When I bought my first road bike for commuting, I didn't expect it to turn into the obsession it is today. Beginner gains kept me motivated to ride further and to ride faster. I quickly learned that muscle soreness isn't the thing to be afraid of in an endurance sport. It rarely happened to begin with, and today it isn't even a factor anymore. No, the thing that grinds you down is the systemic fatigue that comes from long consecutive days in the saddle.
 
-{{<wrap>}}
-  {{<image src="img/meerane.jpg" caption="The steep wall of Meerane">}}
-  {{<image src="img/nebra.jpg" caption="Near the location of Nebra's sky disc">}}
-{{</wrap>}}
+- ![](img/meerane.jpg "The steep wall of Meerane")
+- ![](img/nebra.jpg "Near the location of Nebra's sky disc")
+{.fluent .escape}
 
 Improving your body's ability to handle high-stress levels is a skill that develops gradually over time. I increased my average mileage throughout the years and decided to put my body to the test. I had a week of residual leave and kept delaying it, hoping for better weather, but the forecast was mixed at best. It turned out to be a cloudy and windy week with scattered showers, in which I rode 1094 km in 34:40, a milestone in my cycling career.

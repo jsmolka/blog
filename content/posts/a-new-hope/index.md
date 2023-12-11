@@ -9,10 +9,9 @@ The [previous post]({{<relref "posts/the-slow-finale">}}) was meant to mark the 
 ## Benchmark
 I didn't want to change much of sprite's code. I think it turned out quite readable for a single file, 1586 lines emulator. But the one thing I knew I had to remove was the overarching `class`. Each use of `this` went through the hash maps of the instance and its class, which is **slow**. How slow? Let's define a simple benchmark.
 
-{{<wrap>}}
-  {{<image src="img/fight-scene.png" caption="Pokémon Blue intro sequence">}}
-  {{<image src="img/title-screen.png" caption="Pokémon Blue title screen">}}
-{{</wrap>}}
+- ![](img/fight-scene.png "Pokémon Blue intro sequence")
+- ![](img/title-screen.png "Pokémon Blue title screen")
+{.fluent}
 
 We run the Pokémon Blue intro sequence until we see the title screen. That's 1200 frames and requires around 20 seconds on hardware. The version of sprite with the class takes 46 seconds to complete, while the version with free functions and variables takes just 34 seconds. That's 12 seconds less and brings us closer to the magical 20-second mark.
 

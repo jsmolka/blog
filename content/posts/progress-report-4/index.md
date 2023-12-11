@@ -9,10 +9,9 @@ Hello there! It has been quite a while since the last progress report, two month
 ## Bitmap Modes
 The GBA has six different background modes that are evenly split into three tile-based and three bitmap modes. One would assume that games utilize bitmaps as much as tiles, but that's not the case in reality. Tiles tend to be faster and easier to understand and are therefore used in most games. One rare example of a game using bitmap modes is DOOM II, which uses them to display the scene created by its internal software renderer. Due to this kind of game being so rare, I didn't notice bugs in the bitmap implementation until very recently, when I was going through some of the demos on [gbadev.org](https://www.gbadev.org/).
 
-{{<wrap>}}
-  {{<image src="img/yeti-bitmap-bug.png" caption="Yeti demo without matrix transformation">}}
-  {{<image src="img/yeti-bitmap.png" caption="Yeti demo with matrix transformation">}}
-{{</wrap>}}
+- ![](img/yeti-bitmap-bug.png "Yeti demo without matrix transformation")
+- ![](img/yeti-bitmap.png "Yeti demo with matrix transformation")
+{.fluent}
 
 The images above show the technically impressive [Yeti demo](https://www.gbadev.org/demos.php?showinfo=568). It's a first-person shooter with a custom 3D engine and uses background mode 5 to display the scene. The resolution of the bitmap in this mode is 160x128 pixels. The left image shows an old version of the emulator, which directly copied the bitmap to the 240x160 pixel screen without further processing. That was incorrect because bitmaps can make use of the rotation/scaling matrix.
 
@@ -44,10 +43,9 @@ The fixed version of the renderer applies the `transform` function to the curren
 ## Color Masking
 The Game Boy Advance encodes colors in the BGR555 format and stores them in 16-bit halfwords. They are stored in a dedicated area in memory called palette RAM (PRAM). It consists of two 512-byte blocks for background and sprite colors. The first color of each block can be used to draw transparent pixels. An obvious use case for this is sprites, which aren't always perfect squares. If a pixel has been marked as transparent, the next pixel in the drawing order will be displayed.
 
-{{<wrap>}}
-  {{<image src="img/safety-screen-bug.png" caption="Mother 3 without color masking">}}
-  {{<image src="img/safety-screen.png" caption="Mother 3 with color masking">}}
-{{</wrap>}}
+- ![](img/safety-screen-bug.png "Mother 3 without color masking")
+- ![](img/safety-screen.png "Mother 3 with color masking")
+{.fluent}
 
 Since the drawing process is separated from merging backgrounds and sprites into the final scene, transparent pixels must be marked as such. Luckily the most significant bit in each color doesn't carry information and can be (mis)used for this purpose. This means that transparent pixels are represented by the color `0x8000`. The approach worked well until I booted the game Mother 3. Its intro screen uses `0x8000` to display white and messed up my whole system.
 
@@ -68,10 +66,9 @@ The problem can be fixed with a quite simple solution. Every color read from the
 ## Sprite Tile Restrictions
 This issue is another prime example of the "most games don't use bitmaps, therefore I can't test them" category. If you compare both images down below, you will notice some strange, colorful pixels in the top left corner of the first one. Those are uninitialized sprites that were wrongfully rendered by the emulator.
 
-{{<wrap>}}
-  {{<image src="img/pokemon-series-bug.png" caption="Uninitialized sprites in the top left corner">}}
-  {{<image src="img/pokemon-series.png" caption="No sprites in the top left corner">}}
-{{</wrap>}}
+- ![](img/pokemon-series-bug.png "Uninitialized sprites in the top left corner")
+- ![](img/pokemon-series.png "No sprites in the top left corner")
+{.fluent}
 
 The cause of this problem is best described in Martin Korths [GBATEK](https://problemkaputt.de/gbatek.htm), which is the most comprehensive and complete reference document for the GBA. That even holds up when compared to Nintendo's official programming manual.
 
@@ -90,7 +87,6 @@ if (addr < 0x1'4000 && io.dispcnt.isBitmap())
 ## Final Words
 That's it with the changes worth writing about, and even those were pretty meh. Most of the things I did during the last months were minor accuracy improvements and cleanups in the codebase. Even the DOOM II color problems have been fixed with a rather simple [commit](https://github.com/jsmolka/eggvance/commit/36e2cdd38e795d09a39594353e256b5b83fe9c47). Another important thing is the addition of Linux and macOS support. Removing Windows-dependent code and writing a simple CMake file took more time than I'd like to admit.
 
-{{<wrap>}}
-  {{<image src="img/doom-rainbow-floor.png" caption="DOOM II rainbow floor">}}
-  {{<image src="img/doom.png" caption="DOOM II fixed">}}
-{{</wrap>}}
+- ![](img/doom-rainbow-floor.png "DOOM II rainbow floor")
+- ![](img/doom.png "DOOM II fixed")
+{.fluent}

@@ -216,10 +216,9 @@ text_glyph_data:
 
 With all text rendering functions in place, I was able to add a simple user interface. It shows whether or not the test suite succeeded and also adds the number of the first failed test if there was one. That should make it much easier for developers to use the test suite. Of course, you still have to refer to the actual source code to understand what the test did, but that shouldn't be a problem for the target audience.
 
-{{<wrap>}}
-  {{<image src="img/suite-passed.png" caption="Test suite passed">}}
-  {{<image src="img/suite-failed.png" caption="Test suite failed">}}
-{{</wrap>}}
+- ![](img/suite-passed.png "Test suite passed")
+- ![](img/suite-failed.png "Test suite failed")
+{.fluent}
 
 ## Final Words
 This whole thing took me much longer than expected. I committed the first draft of the performance table in mid-February and am now finishing the article in early June. Formulating text and walking other people through ideas has never been a strength of mine.

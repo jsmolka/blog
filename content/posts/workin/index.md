@@ -66,10 +66,9 @@ workout(`3 x 10 x 40/20`, [
 
 The UI to select and view workouts looks like this:
 
-{{<wrap>}}
-  {{<image src="img/workouts.png" caption="Workouts view">}}
-  {{<image src="img/workout.png" caption="Workout view">}}
-{{</wrap>}}
+- ![](img/workouts.png "Workouts view")
+- ![](img/workout.png "Workout view")
+{.fluent}
 
 ## Web Bluetooth API
 Communication between the app and smart trainer occurs via the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API). [Support](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API#browser_compatibility) in browsers other than Chromium is non-existent, and even Chromium doesn't support all features without experimental feature flags. That's a shame because I can't use nice-to-have features like automatic device reconnection on page reload. However, it does support enough of the standard to develop a fully functional app.
@@ -184,10 +183,9 @@ I hope the disconnects don't happen during workouts. Maybe the low heart rate du
 ## Train
 The last thing on the list was the train view. I had to make the numbers big enough to be readable with a racing heart and muscles full of lactate. It contains the six most important metrics, a live graphic of the workout and the upcoming intervals. I don't think I'll be able to read the interval intensities and durations while I'm training, but I had to fill the screen with something and it looked good.
 
-{{<wrap>}}
-  {{<image src="img/train.png" caption="Train view">}}
-  {{<image src="img/activity.png" caption="Activity view">}}
-{{</wrap>}}
+- ![](img/train.png "Train view")
+- ![](img/activity.png "Activity view")
+{.fluent}
 
 I also implemented automatic start and pause based on pedaling. Two very useful features when taking a nature break.
 

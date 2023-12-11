@@ -1,4 +1,0 @@
-{{ $cap := .Get "caption" }}
-{{ $src := .Get "src" }}
-{{ $alt := .Get "alt" }}
-{{ printf "![%s](%s \"%s\")" $alt $src $cap | $.Page.RenderString }}

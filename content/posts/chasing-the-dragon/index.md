@@ -20,9 +20,10 @@ The standout ones to me were:
 - A [250 km ride]({{<relref "leipzig-brocken">}}) to the Brocken, [twice](https://www.strava.com/activities/7403550389)
 - A [260 km ride](https://www.strava.com/activities/7560351593) back from the Brocken, the longest I've done so far
 
-{{<escape>}}
-  {{<image src="img/lake-walchen.jpg" caption="Lake Walchen, one of the deepest and largest alpine lakes in Germany">}}
-{{</escape>}}
+<!-- -->
+
+- ![](img/lake-walchen.jpg "Lake Walchen, one of the deepest and largest alpine lakes in Germany")
+{.escape}
 
 ## Performance
 Performance is essential in an endurance sport like cycling. I followed a training plan during winter and carried most of my fitness into this year. Losing everything and starting from scratch is something I didn't want to do again. But when it came to outdoor riding, I tried to keep it fun. I attacked Strava segments when an opportunity arose and went on hard long rides with a tailwind all the way. Could I achieve more with structured training? Probably. Do I want to? Meh.

@@ -11,31 +11,24 @@ Audio has been one of the most challenging things for me to do. I pushed it back
 
 Sound processing on the Game Boy Advance can be divided into two parts: FIFO and PSG channels. The former is a new addition to the console and accounts for most of the sound you hear in games. They are quite different from the legacy PSG channels in that they use a stream of precomposed 8-bit samples. The samples are fed to the FIFO using DMA. It can store up to 32 of them at a time and automatically refills itself once half-empty to ensure smooth sound output.
 
-{{<wrap>}}
-  {{<audio src="audio/emerald-frontier-fifo.mp3" caption="Pokémon Emerald battle frontier FIFO channels">}}
-{{</wrap>}}
+{{<audio src="audio/emerald-frontier-fifo.mp3" caption="Pokémon Emerald battle frontier FIFO channels">}}
 
 The four PSG (procedural sound generator) channels are the same as on the original Game Boy. There are two square, a wave and a noise channel, with additional effects like sweep (frequency change over time), envelope (volume change over time) and sound length. Most GBA games use them for auxiliary sounds or not at all.
 
-{{<wrap>}}
-  {{<audio src="audio/emerald-frontier-psg.mp3" caption="Pokémon Emerald battle frontier PSG channels">}}
-{{</wrap>}}
+{{<audio src="audio/emerald-frontier-psg.mp3" caption="Pokémon Emerald battle frontier PSG channels">}}
 
 The initial implementation of these channels was unoptimized and caused quite a performance drop. Each CPU tick ran all enabled channels and the so-called frame sequencer, which controls the modulation units (sweep, envelope and length). That means there were more samples generated than necessary because the GBA resamples everything to 32 kHz.
 
 The optimized version runs up until the current point in time and provides no more than the exact amount of samples we need. That is possible because all PSG channels apart from the noise channel are linear and easy to predict. The noise channel is supposed to be random and thus not suitable for this sort of optimization.
 
-{{<wrap>}}
-  {{<audio src="audio/emerald-frontier.mp3" caption="Pokémon Emerald battle frontier theme all channels">}}
-{{</wrap>}}
+{{<audio src="audio/emerald-frontier.mp3" caption="Pokémon Emerald battle frontier theme all channels">}}
 
 ## Scheduler
 As time went on, it became more and more apparent that I needed some sort of scheduling in my emulator. There were lots of cycle counters scattered across the codebase, which slowed the emulator down and increased complexity. Not having a scheduler also caused some audio [issues](https://github.com/jsmolka/audio/issues/14) if a game made good use of halting. It led to problems with the frame sequencer, which skipped a sample or two and resulted in metallic sounds.
 
-{{<wrap>}}
-  {{<audio src="audio/gba-bios-metallic.mp3" caption="Metallic GBA BIOS">}}
-  {{<audio src="audio/gba-bios.mp3" caption="Fixed GBA BIOS">}}
-{{</wrap>}}
+- {{<audio src="audio/gba-bios-metallic.mp3" caption="Metallic GBA BIOS">}}
+- {{<audio src="audio/gba-bios.mp3" caption="Fixed GBA BIOS">}}
+{.fluent}
 
 I tested different data structures in terms of performance and decided to go with a circular doubly linked list. The list must be doubly linked to allow fast removal of scheduled events. Being circular improves performance because it eliminates null checks in the code. There must be a dummy event at the last position to prevent infinite looping during insertion.
 
@@ -61,10 +54,9 @@ Using a list might seem counterintuitive, but most events are scheduled on short
 ## Edging Closer to Perfection
 Nintendo developed a test cartridge for the GBA called [AGS Aging](https://tcrf.net/AGS_Aging_Cartridge). It contains a fair amount of demanding hardware tests for various parts of the system. It fails on most emulators and even some GBA hardware clones. There is only one emulator that I know of which passes all tests: [NanoBoyAdvance](https://github.com/fleroviux/NanoBoyAdvance). That is mostly due to the extremely accurate prefetch buffer emulation.
 
-{{<wrap>}}
-  {{<image src="img/ags-0.3.png" caption="eggvance 0.3">}}
-  {{<image src="img/ags-1.0.png" caption="eggvance 1.0">}}
-{{</wrap>}}
+- ![](img/ags-0.3.png "eggvance 0.3")
+- ![](img/ags-1.0.png "eggvance 1.0")
+{.fluent}
 
 The amount of red in version 0.3 made me quite sad. I thought it would pass more, but it didn't even run through the whole suite without locking up. Missing SIO emulation and the resulting lack of interrupting caused an infinite loop in a test. Proper multiplayer functionality is out of scope for this project, so a barebones SIO implementation has been added to at least pass the test.
 
@@ -90,15 +82,13 @@ All that being said, passing tests might not translate well into actual game cov
 ## DMA Latches
 Towards the end of development, some issues remained, and I couldn't quite figure out their cause. There were randomly occurring black lines in Pokémon Emerald, interfering and flickering backgrounds in The Legend of Zelda, as well as annoying typing sounds on the right ear during the Final Fantasy VI intro sequence.
 
-{{<wrap>}}
-  {{<image src="img/dma-bug-emerald.png" caption="Random black lines at the top">}}
-  {{<image src="img/dma-bug-zelda.png" caption="Background interference">}}
-{{</wrap>}}
+- ![](img/dma-bug-emerald.png "Random black lines at the top")
+- ![](img/dma-bug-zelda.png "Background interference")
+{.fluent}
 
-{{<wrap>}}
-  {{<audio src="audio/ff-intro-bug.mp3" caption="FF6 intro bugged">}}
-  {{<audio src="audio/ff-intro.mp3" caption="FF6 intro fixed">}}
-{{</wrap>}}
+- {{<audio src="audio/ff-intro-bug.mp3" caption="FF6 intro bugged">}}
+- {{<audio src="audio/ff-intro.mp3" caption="FF6 intro fixed">}}
+{.fluent}
 
 Debugging the sound issue made me realize that the DMA was writing to a register it wasn't supposed to. It triggered the square wave and caused the annoying sound. DMA uses internal reference registers to store the source and destination address as well as some other values. My implementation had a few problems in that regard and didn't update the destination properly. [Fixing](https://github.com/jsmolka/eggvance/commit/551edfcaa6ebe162acc18f9dc0d424b498147166) this issue killed three birds with one stone and saved me from many more hours of debugging.
 
@@ -107,10 +97,9 @@ Blending also required some more work. Acrobat Kid uses semi-transparent objects
 
 I removed them with a slight rework and fixed the issue. That also eliminated problems in Castlevania, which I thought were completely unrelated. It used to display garbage values for one frame when entering the menu.
 
-{{<wrap>}}
-  {{<image src="img/acrobat-kid-bug.png" caption="Acrobat Kid transparency bug">}}
-  {{<image src="img/castlevania-menu-bug.png" caption="Castlevania menu bug">}}
-{{</wrap>}}
+- ![](img/acrobat-kid-bug.png "Acrobat Kid transparency bug")
+- ![](img/castlevania-menu-bug.png "Castlevania menu bug")
+{.fluent}
 
 ## User Interface
 The missing user interface was one of the things that blocked the release of version 1.0. Because what would a final version be without some convenience? I didn't want to use Qt because it's such a huge dependency to pull into such a small project. Apart from that, I like small binaries, and using Qt makes that pretty much impossible.
@@ -119,10 +108,9 @@ So I did the usual Google search for small, cross-platform UI libraries and ende
 
 Now everything can be configured in the UI, and the emulator should be more accessible to new users.
 
-{{<wrap>}}
-  {{<image src="img/gui-1.png" caption="Video layer selection">}}
-  {{<image src="img/gui-2.png" caption="Controller config">}}
-{{</wrap>}}
+- ![](img/gui-1.png "Video layer selection")
+- ![](img/gui-2.png "Controller config")
+{.fluent}
 
 ## Performance
 It's time to compare the performance across all release versions. I benchmarked everything for one minute and took the average FPS. I have an i7-4790K and an RTX 2080, so the results should be CPU-bound.
@@ -144,15 +132,13 @@ I invested quite some time in optimizations, and I think it paid off in the end.
 ## Mother 3
 Finishing the emulator also meant finally getting to "test" some games. The one I can't recommend enough is Mother 3. It's the final installment of the Mother series, best known for its second entry EarthBound. Unfortunately, Nintendo never bothered to release the game in the Western world, so we have to rely on the excellent [fan translation](http://mother3.fobby.net/). Do yourself a favor and take some time out of your day to play this gem of a game. It has everything you want:
 
-{{<wrap>}}
-  {{<image src="img/mother-shark.png" caption="Weird creatures">}}
-  {{<image src="img/mother-toilet.png" caption="Golden toilets">}}
-{{</wrap>}}
+- ![](img/mother-shark.png "Weird creatures")
+- ![](img/mother-toilet.png "Golden toilets")
+{.fluent}
 
-{{<wrap>}}
-  {{<image src="img/mother-shrooms.png" caption="Mushroom trips">}}
-  {{<image src="img/mother-rats.png" caption="Rat corpses">}}
-{{</wrap>}}
+- ![](img/mother-shrooms.png "Mushroom trips")
+- ![](img/mother-rats.png "Rat corpses")
+{.fluent}
 
 ## Final Words and the Future
 That's it. I am done here. Version 1.0 is out, and it's more than I ever wanted it to be. It took almost two and a half years to get from zero to this point. Two and a half years of long nights, frustrating debugging and obsessive behavior. Next, I want to downgrade eggvance into a GB emulator and improve the architecture. I want to get rid of the global state and better separate the frontend and backend. Then I want to apply the learned things to another system like the NES and finally move on to NDS emulation.
