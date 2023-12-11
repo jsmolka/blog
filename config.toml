@@ -38,8 +38,11 @@ disableHugoGeneratorInject = true
       rightDoubleQuote = '"'
       rightSingleQuote = "'"
 
-    [markup.goldmark.parser.attribute]
-      block = true
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+
+      [markup.goldmark.parser.attribute]
+        block = true
 
     [markup.goldmark.renderer]
       unsafe = true
