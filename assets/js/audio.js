@@ -10,7 +10,7 @@ const template = /* html */ `
         <path data-ref="stateButtonPath" fill="currentColor" />
       </svg>
     </button>
-    <div data-ref="time" class="time">0:00 / 0:00</div>
+    <div data-ref="time" class="time"></div>
     <div data-ref="progressBar" class="bar">
       <div data-ref="progressBarSeeker" class="seeker"></div>
     </div>
