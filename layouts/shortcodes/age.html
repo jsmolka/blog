@@ -1,2 +1,2 @@
 {{ $timespan := now.Sub (time .Site.Params.birthDate) }}
-{{- math.Floor (div (div $timespan.Hours 24) 365.2422) -}}
+{{- math.Floor (div (div $timespan.Hours 24) 365.242196) -}}
