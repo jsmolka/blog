@@ -7,7 +7,7 @@ const template = /* html */ `
   <div class="audio">
     <button data-ref="stateButton">
       <svg width="16" height="16" viewBox="5 5 14 14">
-        <path data-ref="stateButtonPath" fill="currentColor" />
+        <path data-ref="stateButtonPath" fill="currentColor" d="M8 5.14v14l11-7l-11-7z" />
       </svg>
     </button>
     <div data-ref="time" class="time">0:00 / 0:00</div>
@@ -22,7 +22,7 @@ const template = /* html */ `
       </div>
       <button data-ref="volumeButton">
         <svg width="16" height="16" viewBox="3 3 18 18">
-          <path data-ref="volumeButtonPath" fill="currentColor" />
+          <path data-ref="volumeButtonPath" fill="currentColor" d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z" />
         </svg>
       </button>
     </div>
