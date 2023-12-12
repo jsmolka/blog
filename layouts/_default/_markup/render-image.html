@@ -1,19 +1,14 @@
-{{ $src := "" }}
 {{ $cap := .Title | $.Page.RenderString }}
 {{ $alt := .Text | default $cap | plainify }}
 {{ $img := .Page.Resources.GetMatch .Destination }}
-{{ with $img }}
-  {{ $src = .RelPermalink }}
-{{ else }}
-  {{ $src = .Destination | relURL }}
-  {{ $img = imageConfig (path.Join "static" .Destination) }}
+{{ if not $img }}
+  {{ errorf "file not found %s" .Destination }}
 {{ end }}
 <figure>
-  {{ $hash := "" }}
   {{ if hugo.IsProduction }}
-    {{ $hash = printf "?v=%s" ($img.Content | md5) }}
+    {{ $img = $img | fingerprint "md5" }}
   {{ end }}
-  <img src="{{ $src }}{{ $hash }}" alt="{{ $alt }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
+  <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
   {{ with $cap }}
     <figcaption>{{ . }}</figcaption>
   {{ end }}
