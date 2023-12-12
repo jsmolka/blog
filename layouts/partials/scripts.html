@@ -6,16 +6,12 @@
 {{ end }}
 {{ range $scripts }}
   {{ $script := resources.Get (path.Join "js" .) | js.Build (merge $opts (dict "targetPath" .)) }}
-  {{ if hugo.IsProduction }}
-    {{ $script = $script | fingerprint "md5" }}
-  {{ end }}
-  <script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
+  {{ $link := partial "resource" $script }}
+  <script src="{{ $link }}" type="text/javascript" defer></script>
 {{ end }}
 
 {{ with .Resources.GetMatch "index.js" }}
   {{ $script := . | js.Build (merge $opts (dict "targetPath" "index.js")) }}
-  {{ if hugo.IsProduction }}
-    {{ $script = $script | fingerprint "md5" }}
-  {{ end }}
-  <script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
+  {{ $link := partial "resource" $script }}
+  <script src="{{ $link }}" type="text/javascript" defer></script>
 {{ end }}

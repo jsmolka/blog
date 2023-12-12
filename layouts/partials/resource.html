@@ -1,0 +1,5 @@
+{{ $link := .RelPermalink }}
+{{ if hugo.IsProduction }}
+  {{ $link = printf "%s?v=%s" $link (.Content | md5) }}
+{{ end }}
+{{ return $link }}

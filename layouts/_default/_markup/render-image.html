@@ -4,9 +4,9 @@
 {{ if not $image }}
   {{ errorf "file not found %s" .Destination }}
 {{ end }}
-{{ $version := partial "version" $image }}
+{{ $link := partial "resource" $image }}
 <figure>
-  <img src="{{ $image.RelPermalink }}{{ $version }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+  <img src="{{ $link }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
   {{ with $caption }}
     <figcaption>{{ . }}</figcaption>
   {{ end }}

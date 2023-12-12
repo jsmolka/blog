@@ -1,23 +1,24 @@
-{{ $opts := dict "config" "assets/scss/postcss.config.js" }}
+{{ $vars := dict }}
+{{ range slice "inter" "jetbrains-mono" "jetbrains-mono-italic" }}
+  {{ $font := resources.Get (path.Join "fonts" (add . ".woff2")) }}
+  {{ $link := partial "resource" $font }}
+  {{ $vars = $vars | merge (dict . $link) }}
+{{ end }}
 
 {{ with resources.Get "scss/main.scss" }}
-  {{ $vars := dict }}
-  {{ range slice "inter" "jetbrains-mono" "jetbrains-mono-italic" }}
-    {{ $font := resources.Get (path.Join "fonts" (add . ".woff2")) }}
-    {{ $version := partial "version" $font }}
-    {{ $vars = $vars | merge (dict . (printf "%s%s" $font.RelPermalink $version)) }}
-  {{ end }}
   {{ $style := . | resources.ToCSS (dict "targetPath" "main.css" "vars" $vars) }}
   {{ if hugo.IsProduction }}
-    {{ $style = $style | postCSS $opts | minify | fingerprint "md5" }}
+    {{ $style = $style | minify }}
   {{ end }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ $link := partial "resource" $style }}
+  <link rel="stylesheet" href="{{ $link }}">
 {{ end }}
 
 {{ with .Resources.GetMatch "index.scss" }}
   {{ $style := . | resources.ToCSS "index.css" }}
   {{ if hugo.IsProduction }}
-    {{ $style = $style | postCSS $opts | minify | fingerprint "md5" }}
+    {{ $style = $style | minify }}
   {{ end }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ $link := partial "resource" $style }}
+  <link rel="stylesheet" href="{{ $link }}">
 {{ end }}
