@@ -1,4 +1,5 @@
 {{ range slice "inter.woff2" "jetbrains-mono.woff2" "jetbrains-mono-italic.woff2" }}
   {{ $font := resources.Get (path.Join "fonts" .) }}
-  <link href="{{ $font.RelPermalink }}?v={{ $font.Content | md5 }}" rel="preload" as="font" type="font/woff2" crossorigin="">
+  {{ $version := partial "version" $font }}
+  <link href="{{ $font.RelPermalink }}{{ $version }}" rel="preload" as="font" type="font/woff2" crossorigin="">
 {{ end }}
