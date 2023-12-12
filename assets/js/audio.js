@@ -1,4 +1,5 @@
 import { env } from './utils/env';
+import { intersect } from './utils/intersect';
 import { slider } from './utils/slider';
 import { storage } from './utils/storage';
 import { formatSeconds } from './utils/time';
@@ -165,10 +166,20 @@ export function mount(root, src) {
   };
 
   const audio = new Audio();
-  audio.addEventListener('loadedmetadata', init);
   audio.preload = 'metadata';
-  audio.src = src;
   audios.push(audio);
 
   update();
+
+  intersect(
+    root,
+    (visible) => {
+      if (visible) {
+        audio.addEventListener('loadedmetadata', init);
+        audio.src = src;
+        return false;
+      }
+    },
+    { rootMargin: '256px' }
+  );
 }
