@@ -1,19 +1,18 @@
-{{ $cap := .Get "caption" }}
+{{ $caption := .Get "caption" | $.Page.RenderString }}
 {{ $src := .Get "src" }}
-{{ with .Page.Resources.GetMatch $src }}
-  {{ $src = .RelPermalink }}
-{{ else }}
-  {{ $src = $src | relURL }}
-  {{ if not fileExists (path.Join "static" $src) }}
-    {{ errorf "file not found %s" $src }}
-  {{ end }}
+{{ $audio := .Page.Resources.GetMatch $src }}
+{{ if not $audio }}
+  {{ errorf "file not found %s" $src }}
+{{ end }}
+{{ if hugo.IsProduction }}
+  {{ $audio = $audio | fingerprint "md5" }}
 {{ end }}
 <figure>
-  <div data-audio data-src="{{ $src }}"></div>
+  <div data-audio data-src="{{ $audio.RelPermalink }}"></div>
   <noscript>
-    <audio src="{{ $src }}" type="audio/mp3" preload="metadata" controls></audio>
+    <audio src="{{ $audio.RelPermalink }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>
-  {{ with $cap }}
-    <figcaption>{{ . | $.Page.RenderString }}</figcaption>
+  {{ with $caption }}
+    <figcaption>{{ . }}</figcaption>
   {{ end }}
 </figure>

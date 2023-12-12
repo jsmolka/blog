@@ -1,15 +1,15 @@
-{{ $cap := .Title | $.Page.RenderString }}
-{{ $alt := .Text | default $cap | plainify }}
-{{ $img := .Page.Resources.GetMatch .Destination }}
-{{ if not $img }}
+{{ $caption := .Title | $.Page.RenderString }}
+{{ $alt := .Text | default $caption | plainify }}
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if not $image }}
   {{ errorf "file not found %s" .Destination }}
 {{ end }}
+{{ if hugo.IsProduction }}
+  {{ $image = $image | fingerprint "md5" }}
+{{ end }}
 <figure>
-  {{ if hugo.IsProduction }}
-    {{ $img = $img | fingerprint "md5" }}
-  {{ end }}
-  <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
-  {{ with $cap }}
+  <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+  {{ with $caption }}
     <figcaption>{{ . }}</figcaption>
   {{ end }}
 </figure>
