@@ -4,13 +4,11 @@
 {{ if not $audio }}
   {{ errorf "file not found %s" $src }}
 {{ end }}
-{{ if hugo.IsProduction }}
-  {{ $audio = $audio | fingerprint "md5" }}
-{{ end }}
+{{ $version := partial "version" $audio }}
 <figure>
-  <div data-audio data-src="{{ $audio.RelPermalink }}"></div>
+  <div data-audio data-src="{{ $audio.RelPermalink }}{{ $version }}"></div>
   <noscript>
-    <audio src="{{ $audio.RelPermalink }}" type="audio/mp3" preload="metadata" controls></audio>
+    <audio src="{{ $audio.RelPermalink }}{{ $version }}" type="audio/mp3" preload="metadata" controls></audio>
   </noscript>
   {{ with $caption }}
     <figcaption>{{ . }}</figcaption>
