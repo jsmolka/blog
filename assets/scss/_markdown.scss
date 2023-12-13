@@ -18,7 +18,7 @@
   :not(h1, h2, h3) > a {
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: var(--gray-6);
+    text-decoration-color: var(--gray-5);
     text-decoration-skip-ink: none;
     text-decoration-thickness: 2px;
     text-underline-offset: spacing(0.5);
@@ -97,7 +97,7 @@
   hr {
     width: spacing(16);
     margin: spacing(8) auto !important;
-    border-bottom: 2px solid var(--gray-6);
+    border-bottom: 2px solid var(--gray-5);
   }
 
   ul:not([class]),
@@ -126,7 +126,7 @@
       left: spacing(-4);
       width: spacing(2);
       height: spacing(2);
-      background-color: var(--gray-6);
+      background-color: var(--gray-5);
     }
   }
 
