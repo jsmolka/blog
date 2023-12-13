@@ -1,5 +1,0 @@
-{{ $version := "" }}
-{{ if hugo.IsProduction }}
-  {{ $version = printf "?v=%s" (.Content | md5) }}
-{{ end }}
-{{ return $version }}
