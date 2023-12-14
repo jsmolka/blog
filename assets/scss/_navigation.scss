@@ -19,19 +19,17 @@
 
   @keyframes draw {
     0% {
-      opacity: 1;
+      visibility: hidden;
       stroke-dasharray: 0 1024px;
     }
     100% {
-      opacity: 1;
       stroke-dasharray: 1024px 0;
     }
   }
 
   svg {
     path {
-      opacity: 0;
-      animation: draw 2s ease forwards;
+      animation: draw 2s ease both;
     }
 
     #logoUpperMedium {
