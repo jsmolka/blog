@@ -33,11 +33,13 @@
     }
 
     #logoUpperMedium {
+      animation-timing-function: ease-out;
       animation-delay: 625ms;
     }
 
     #logoLowerShort {
-      animation-delay: 950ms;
+      animation-timing-function: ease-out;
+      animation-delay: 825ms;
     }
   }
 }
