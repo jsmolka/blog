@@ -1,31 +1,5 @@
 @import 'common';
 
-@keyframes draw {
-  0% {
-    visibility: hidden;
-    stroke-dasharray: 0 1024px;
-  }
-  100% {
-    stroke-dasharray: 1024px 0;
-  }
-}
-
-#logo {
-  path {
-    animation: draw 2s ease both;
-  }
-
-  #logoUpperMedium {
-    animation-timing-function: ease-out;
-    animation-delay: 625ms;
-  }
-
-  #logoLowerShort {
-    animation-timing-function: ease-out;
-    animation-delay: 825ms;
-  }
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
