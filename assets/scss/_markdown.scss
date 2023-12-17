@@ -31,6 +31,13 @@
     width: 100%;
   }
 
+  b,
+  th,
+  strong {
+    color: var(--gray-1);
+    font-weight: 700;
+  }
+
   blockquote {
     position: relative;
     width: fit-content;
@@ -175,8 +182,6 @@
   }
 
   th {
-    color: var(--gray-1);
-    font-weight: 700;
     text-align: left;
   }
 
