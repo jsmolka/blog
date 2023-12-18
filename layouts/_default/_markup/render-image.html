@@ -6,7 +6,11 @@
 {{ end }}
 {{ $link := partial "resource" $image }}
 <figure>
-  <img src="{{ $link }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+  {{ if eq $image.MediaType.SubType "svg" }}
+    {{ $image.Content | safeHTML }}
+  {{ else }}
+    <img src="{{ $link }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+  {{ end }}
   {{ with $caption }}
     <figcaption>{{ . }}</figcaption>
   {{ end }}
