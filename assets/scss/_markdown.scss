@@ -90,14 +90,20 @@
 
   .fluent {
     display: flex;
+    justify-content: center;
     gap: spacing(4);
 
     @include constricted {
       flex-direction: column;
     }
 
-    & > * {
+    & > li {
       flex: 1;
+      max-width: 50%;
+
+      @include constricted {
+        max-width: 100%;
+      }
     }
   }
 
