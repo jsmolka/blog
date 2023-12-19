@@ -57,13 +57,13 @@
     }
 
     &::before {
-      content: open-quote;
+      content: '“';
       top: spacing(-3);
       left: spacing(-2);
     }
 
     &::after {
-      content: close-quote;
+      content: '”';
       bottom: spacing(-19);
       right: spacing(-2);
     }
