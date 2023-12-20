@@ -51,7 +51,7 @@ workout('4 x 8', [
   cooldown,
 ]),
 
-workout(`3 x 10 x 40/20`, [
+workout('3 x 10 x 40/20', [
   warmup,
   repeat(3, [
     repeat(10, [

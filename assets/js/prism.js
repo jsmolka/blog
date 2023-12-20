@@ -6,7 +6,10 @@ import 'prismjs/components/prism-diff.js';
 import 'prismjs/components/prism-javascript.js';
 import 'prismjs/components/prism-rust.js';
 import 'prismjs/components/prism-toml.js';
+import 'prismjs/plugins/custom-class/prism-custom-class.js';
 import 'prismjs/plugins/diff-highlight/prism-diff-highlight.js';
+
+Prism.plugins.customClass.prefix('prism-');
 
 Prism.languages.cpp.keyword = [
   Prism.languages.cpp.keyword,

@@ -162,8 +162,8 @@
       padding: spacing(2) spacing(4);
       border-radius: 0;
 
-      .token.deleted:not(.prefix),
-      .token.inserted:not(.prefix) {
+      .prism-deleted:not(.prism-prefix),
+      .prism-inserted:not(.prism-prefix) {
         margin: 0 spacing(-4);
 
         & > :first-child {
