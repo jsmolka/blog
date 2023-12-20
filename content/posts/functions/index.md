@@ -65,7 +65,7 @@ counter()  # Returns 2
 
 The example would work if closures were implemented, but drizzle throws an error:
 
-```code
+```
 Line 4 |     i = i + 1
                  ^
 SyntaxError: cannot capture local variable

@@ -68,7 +68,7 @@ This section contains quality of life improvements for me, the writer. For you, 
 >
 > But wait, there is more. Citing someone is now easier than ever. Just wrap the citee into the `<cite>` tag, and formatting will be handled for you.
 >
-> ```
+> ```markdown
 > > Living life one obsession at a time.
 > >
 > > <cite>Me</cite>
