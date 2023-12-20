@@ -40,7 +40,7 @@
 
   blockquote {
     position: relative;
-    width: fit-content;
+    max-width: fit-content;
     padding: spacing(4) spacing(12);
     font-style: italic;
 
