@@ -3,6 +3,7 @@ import 'prismjs/components/prism-c';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-cpp';
 import 'prismjs/components/prism-diff';
+import 'prismjs/components/prism-go';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-markdown';
 import 'prismjs/components/prism-rust';

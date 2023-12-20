@@ -95,7 +95,7 @@ I also added support for SVG images and made it easier to display multiple image
 
 Another thing I added is a wrapper around tables, which allows scrolling once the table gets too large for the screen. It seems like a trivial problem, but I had to resort to a regex replacement hack to make it work.
 
-```
+```go
 {{ $table := `(<table>(?:.|\n)*?</table>)` }}
 {{ $tableWrapper := `<div class="table-wrapper">${1}</div>` }}
 {{ .Content | replaceRE $table $tableWrapper | safeHTML }}
