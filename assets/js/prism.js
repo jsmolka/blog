@@ -1,13 +1,14 @@
 import Prism from 'prismjs';
-import 'prismjs/components/prism-c.js';
-import 'prismjs/components/prism-clike.js';
-import 'prismjs/components/prism-cpp.js';
-import 'prismjs/components/prism-diff.js';
-import 'prismjs/components/prism-javascript.js';
-import 'prismjs/components/prism-rust.js';
-import 'prismjs/components/prism-toml.js';
-import 'prismjs/plugins/custom-class/prism-custom-class.js';
-import 'prismjs/plugins/diff-highlight/prism-diff-highlight.js';
+import 'prismjs/components/prism-c';
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-cpp';
+import 'prismjs/components/prism-diff';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-markdown';
+import 'prismjs/components/prism-rust';
+import 'prismjs/components/prism-toml';
+import 'prismjs/plugins/custom-class/prism-custom-class';
+import 'prismjs/plugins/diff-highlight/prism-diff-highlight';
 
 Prism.plugins.customClass.prefix('prism-');
 

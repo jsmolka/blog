@@ -81,7 +81,7 @@ I also added support for SVG images and made it easier to display multiple image
 
 [^fluent]: Fluent refers to the way the layout shifts to a column-based one on mobile devices.
 
-```
+```markdown
 - ![](img/logo.svg)
 - ![](img/logo.svg)
 - ![](img/logo.svg)
