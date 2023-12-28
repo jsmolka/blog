@@ -49,10 +49,10 @@ The requirements for a good logo are just like the requirements for a good [flag
 4. Symbols, colors and designs should mean something
 5. Words on a ~~flag~~ logo: ideally zero
 
-I ended up with something simple, distinct and perfectly symmetric. The last part is a much bigger deal for me and my brain than you can possibly imagine.
+I ended up with something nice and simple.
 
-- ![](img/logo.svg)
-{.fluent}
+![](img/logo.svg)
+{.max-w-1-2}
 
 ## Quality of Write
 This section contains quality of life improvements for me, the writer. For you, the reader [^reader], nothing has changed.
