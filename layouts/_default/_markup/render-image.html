@@ -5,7 +5,7 @@
   {{ errorf "file not found %s" .Destination }}
 {{ end }}
 {{ $link := partial "resource" $image }}
-<figure>
+<figure {{ with .Attributes.class }}class="{{ . }}"{{ end }}>
   {{ if eq $image.MediaType.SubType "svg" }}
     {{ $image.Content | safeHTML }}
   {{ else }}
