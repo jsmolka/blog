@@ -1,6 +1,6 @@
 ---
 title: "Procrastination Project"
-tags: ["blog", "programming"]
+tags: ["blog", "logo", "programming"]
 date: 2023-12-19
 type: post
 ---
@@ -49,9 +49,17 @@ The requirements for a good logo are just like the requirements for a good [flag
 4. Symbols, colors and designs should mean something
 5. Words on a ~~flag~~ logo: ideally zero
 
-I ended up with something nice and simple.
+The initial attempt was based on an AI-generated image by Midjourney.
 
-![](img/logo.svg)
+- ![](img/logo-wavy.jpg "Midjourney version")
+- ![](img/logo-wavy.svg "SVG version")
+{.fluent}
+
+I even took the time to [animate it](https://antfu.me/posts/animated-svg-logo). Refresh the page to see it. I thought I liked the logo, but it was way too busy --- not the elegant and simplistic style I was going for. It also looked **horrible** at small sizes due to the lines.
+
+The second attempt was much better. I reduced the S to two bold strokes, angled them and rounded some corners for a clean, modern look. One could argue that it's reduced too much and impossible to figure out the letter it's representing, but I think abstract symbols are better than clear letters.
+
+![](img/logo.svg "Pure artistic perfection")
 {.w-50}
 
 ## Quality of Write

@@ -1,0 +1,25 @@
+@keyframes draw {
+  0% {
+    visibility: hidden;
+    stroke-dasharray: 0 1024px;
+  }
+  100% {
+    stroke-dasharray: 1024px 0;
+  }
+}
+
+#logoWavy {
+  path {
+    animation: draw 2s ease both;
+  }
+
+  #logoWavyUpperMedium {
+    animation-timing-function: ease-out;
+    animation-delay: 625ms;
+  }
+
+  #logoWavyLowerShort {
+    animation-timing-function: ease-out;
+    animation-delay: 825ms;
+  }
+}
