@@ -82,6 +82,7 @@
     flex-direction: column;
     gap: spacing(2);
     margin: 0 auto;
+    touch-action: none;
   }
 
   figcaption {
