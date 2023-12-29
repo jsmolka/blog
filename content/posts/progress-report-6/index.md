@@ -138,7 +138,7 @@ Debugging the game showed that Sennen Kazoku didn't set SCK high in step one of 
 ```
 
 ## Accuracy Improvements
-I mentioned three remaining things in the last [release post]({{<relref "release-0.2.md">}}): RTC emulation, improved accuracy and audio. With RTC off the list, there was only one thing left before I could start implementing audio. Even though eggvance was quite accurate, it had some problems in the timing section because it didn't emulate the [prefetch buffer](https://mgba.io/2015/06/27/cycle-counting-prefetch/).
+I mentioned three remaining things in the last [release post](/posts/release-0.2/): RTC emulation, improved accuracy and audio. With RTC off the list, there was only one thing left before I could start implementing audio. Even though eggvance was quite accurate, it had some problems in the timing section because it didn't emulate the [prefetch buffer](https://mgba.io/2015/06/27/cycle-counting-prefetch/).
 
 Here are some of the things I implemented/changed:
 

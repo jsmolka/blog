@@ -107,7 +107,7 @@ void ARM::run(int cycles) {
 }
 ```
 
-What would a performance post be without comparing numbers? I originally intended this one to be about multiple improvements, but I decided to focus on the most important thing. GPR class removal and instruction template LUTs aren't nearly as interesting and impactful as "state-dependent dispatching". The second one has also been discussed in a previous [progress report]({{<relref "progress-report-3.md#optimizing-instruction-execution">}}). Now take a step back and look at these wonderful results:
+What would a performance post be without comparing numbers? I originally intended this one to be about multiple improvements, but I decided to focus on the most important thing. GPR class removal and instruction template LUTs aren't nearly as interesting and impactful as "state-dependent dispatching". The second one has also been discussed in a previous [progress report](/posts/progress-report-3/#optimizing-instruction-execution). Now take a step back and look at these wonderful results:
 
 | Commit                                                                                          | Improvement                | Pokémon Emerald | Yoshi's Island |
 | ----------------------------------------------------------------------------------------------- | -------------------------- | --------------- | -------------- |

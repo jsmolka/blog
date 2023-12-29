@@ -17,7 +17,7 @@ showTitle: false
 - ![](img/zelda.png "Zelda intro sequence")
 {.fluent}
 
-The initial implementation didn't even manage to emulate the console at half speed. Optimizations, like using a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) in drizzle and replacing the class with free functions and variables in sprite, increased the performance to 125%, which resulted in a stable frame rate at native speed.
+The initial implementation didn't even manage to emulate the console at half speed. Optimizations, like using a [specializing adaptive interpreter](/posts/a-new-hope/#specializing-adaptive-interpreter) in drizzle and replacing the class with free functions and variables in sprite, increased the performance to 125%, which resulted in a stable frame rate at native speed.
 
 # drizzle
 [drizzle](https://github.com/jsmolka/drizzle) is a dynamically interpreted programming language with a syntax similar to Python.
@@ -42,7 +42,7 @@ var triangle = [Point(0, 0), Point(4, 4), Point(0, 4)]
 assert(area(triangle) == 8.0)
 ```
 
-It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a [Game Boy emulator](#sprite). It provides simple SDL2 and filesystem abstractions to achieve that. The latest version also features a [specializing adaptive interpreter]({{<relref "posts/a-new-hope/#specializing-adaptive-interpreter">}}) to squeeze out the last bit of performance.
+It started as an exercise for language design and whitespace-aware parsing and grew into something powerful enough to run a [Game Boy emulator](#sprite). It provides simple SDL2 and filesystem abstractions to achieve that. The latest version also features a [specializing adaptive interpreter](/posts/a-new-hope/#specializing-adaptive-interpreter) to squeeze out the last bit of performance.
 
 - ![](img/icon-drizzle.png "Icon of drizzle rendered with SDL2")
 - ![](img/icon-eggvance.png "Icon of eggvance rendered with SDL2")
@@ -59,4 +59,4 @@ Other components of the system soon followed, and the emulator got to a stage wh
 
 {{<audio src="audio/battle-frontier.mp3" caption="Pokémon Emerald battle frontier theme">}}
 
-The final year of development went into performance and accuracy improvements. I released version 1.0 around 2.5 years after the initial commit and wrote a couple of [progress reports]({{<relref "eggvance">}}) along the way.
+The final year of development went into performance and accuracy improvements. I released version 1.0 around 2.5 years after the initial commit and wrote a couple of [progress reports](/tags/eggvance/) along the way.
