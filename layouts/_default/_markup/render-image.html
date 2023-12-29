@@ -9,7 +9,7 @@
   {{ if eq $image.MediaType.SubType "svg" }}
     {{ $image.Content | safeHTML }}
   {{ else }}
-    <img src="{{ $link }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+    <img src="{{ $link }}" {{ with $alt }}alt="{{ . }}"{{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
   {{ end }}
   {{ with $caption }}
     <figcaption>{{ . }}</figcaption>
