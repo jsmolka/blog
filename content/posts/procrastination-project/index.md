@@ -52,7 +52,7 @@ The requirements for a good logo are just like the requirements for a good [flag
 I ended up with something nice and simple.
 
 ![](img/logo.svg)
-{.max-w-1-2}
+{.w-50}
 
 ## Quality of Write
 This section contains quality of life improvements for me, the writer. For you, the reader [^reader], nothing has changed.
