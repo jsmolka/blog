@@ -1,7 +1,8 @@
+{{ $url := urls.Parse .URL }}
 <a
   class="link"
   href="{{ .URL }}"
-  {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}
+  {{ if $url.IsAbs }}target="_blank" rel="noopener"{{ end }}
 >
   {{- .Name -}}
 </a>

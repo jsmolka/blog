@@ -2,7 +2,7 @@
 {{ $src := .Get "src" }}
 {{ $audio := .Page.Resources.GetMatch $src }}
 {{ if not $audio }}
-  {{ errorf "file not found %s" $src }}
+  {{ errorf "File not found %s" $src }}
 {{ end }}
 {{ $link := partial "resource" $audio }}
 <figure>

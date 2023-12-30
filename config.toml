@@ -1,5 +1,5 @@
 title = "smolka"
-baseurl = "https://smolka.dev"
+baseURL = "https://smolka.dev"
 summaryLength = 25
 disableKinds = ["taxonomy"]
 disableHugoGeneratorInject = true

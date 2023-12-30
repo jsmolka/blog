@@ -2,7 +2,7 @@
 {{ $alt := .Text | default $caption | plainify }}
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ if not $image }}
-  {{ errorf "file not found %s" .Destination }}
+  {{ errorf "File not found %s" .Destination }}
 {{ end }}
 {{ $link := partial "resource" $image }}
 <figure {{ with .Attributes.class }}class="{{ . }}"{{ end }}>
