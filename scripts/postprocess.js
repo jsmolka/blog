@@ -16,13 +16,23 @@ function highlight(document) {
 
 function removeTrailingSlashes(document) {
   let changed = false;
-  for (const link of document.querySelectorAll('a')) {
-    const href = link.getAttribute('href');
-    const matches = href.match(/^((?:.*smolka\.dev)?\/.*\/)(#.*)?$/);
-    if (matches) {
+  for (const { selector, attribute } of [
+    { selector: 'a', attribute: 'href' },
+    { selector: 'link', attribute: 'href' },
+    { selector: 'meta', attribute: 'content' },
+  ]) {
+    for (const element of document.querySelectorAll(selector)) {
+      const value = element.getAttribute(attribute);
+      if (value == null) {
+        continue;
+      }
+      const matches = value.match(/^((?:.*smolka\.dev)?\/.*\/)(#.*)?$/);
+      if (matches == null) {
+        continue;
+      }
       matches.splice(0, 1); // Remove match
       matches[0] = matches[0].slice(0, -1); // Remove trailing slash
-      link.setAttribute('href', matches.join(''));
+      element.setAttribute(attribute, matches.join(''));
       changed = true;
     }
   }
