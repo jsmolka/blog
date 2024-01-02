@@ -1,13 +1,3 @@
-@import 'hugo:vars';
-
-@font-face {
-  font-family: 'Inter Bold Numeric';
-  font-weight: 700;
-  font-display: block;
-  font-style: normal;
-  src: url($inter-bold-numeric) format('woff2');
-}
-
 .list {
   display: flex;
   flex-direction: column;
@@ -28,8 +18,8 @@
     top: spacing(-12);
     left: spacing(-8);
     color: transparent;
-    font-family: 'Inter Bold Numeric', Roboto, ui-sans-serif, sans-serif;
     font-size: spacing(24);
+    font-weight: 700;
     line-height: 1;
     -webkit-text-stroke: 2px var(--gray-7);
     user-select: none;
