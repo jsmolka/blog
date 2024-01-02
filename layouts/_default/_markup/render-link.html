@@ -1,11 +1,11 @@
-{{ $url := urls.Parse .Destination }}
-{{ if not $url.IsAbs }}
-  {{ with $url.Path }}
-    {{ if not (or ($.Page.GetPage .) ($.Page.GetPage (path.Join . "index.md"))) }}
-      {{ errorf "Page not found %s" . }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{- $url := urls.Parse .Destination -}}
+{{- if not $url.IsAbs -}}
+  {{- with $url.Path -}}
+    {{- if not (or ($.Page.GetPage .) ($.Page.GetPage (path.Join . "index.md"))) -}}
+      {{- errorf "Page not found %s" . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 <a
   href="{{ .Destination | safeURL }}"
   {{ with .Title }}title="{{ . }}"{{ end }}
