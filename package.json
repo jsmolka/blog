@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "glob": "^10.3.10",
-    "jsdom": "^22.1.0",
+    "happy-dom": "^12.10.3",
     "prismjs": "^1.29.0"
   }
 }

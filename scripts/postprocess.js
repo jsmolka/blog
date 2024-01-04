@@ -1,6 +1,6 @@
-import { writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { globSync } from 'glob';
-import { JSDOM } from 'jsdom';
+import { Window } from 'happy-dom';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import Prism from '../assets/js/prism.js';
@@ -40,8 +40,9 @@ function removeTrailingSlashes(document) {
 }
 
 async function postprocess(file) {
-  const dom = await JSDOM.fromFile(file);
-  const document = dom.window.document;
+  const window = new Window();
+  const document = window.document;
+  document.write(readFileSync(file));
 
   // Bitwise to prevent short-circuit
   let changed = false;
@@ -49,7 +50,8 @@ async function postprocess(file) {
   changed |= removeTrailingSlashes(document);
 
   if (changed) {
-    writeFileSync(file, dom.serialize());
+    const serializer = new window.XMLSerializer();
+    writeFileSync(file, serializer.serializeToString(document));
   }
 }
 
