@@ -3,8 +3,8 @@
 .audio {
   display: flex;
   align-items: center;
-  color: var(--gray-3);
-  background-color: var(--gray-7);
+  color: var(--shade-3);
+  background-color: var(--shade-7);
   border-radius: var(--rounded);
   touch-action: none;
 
@@ -14,11 +14,11 @@
     border-radius: var(--rounded);
 
     &:hover {
-      background-color: var(--gray-6);
+      background-color: var(--shade-6);
     }
 
     &:active {
-      background-color: var(--gray-5);
+      background-color: var(--shade-5);
     }
   }
 
@@ -37,12 +37,12 @@
   .seeker {
     display: flex;
     height: spacing(1);
-    background-color: var(--gray-5);
+    background-color: var(--shade-5);
 
     &::before {
       content: '';
       width: calc(100% * var(--value));
-      background-color: var(--gray-3);
+      background-color: var(--shade-3);
     }
   }
 

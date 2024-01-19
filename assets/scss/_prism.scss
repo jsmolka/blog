@@ -27,14 +27,14 @@ code {
 
 pre {
   padding: spacing(2) spacing(3);
-  background-color: var(--gray-7);
+  background-color: var(--shade-7);
   overflow-x: auto;
   white-space: pre;
 }
 
 :not(pre) > code {
   padding: spacing(0.5) spacing(1.5);
-  background-color: var(--gray-6);
+  background-color: var(--shade-6);
 }
 
 // Workaround for background culling
@@ -48,7 +48,7 @@ code[class*='language-'] {
 .prism-comment,
 .prism-doctype,
 .prism-prolog {
-  color: var(--gray-3);
+  color: var(--shade-3);
 }
 
 .prism-boolean,

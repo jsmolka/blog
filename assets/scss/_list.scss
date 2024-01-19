@@ -21,7 +21,7 @@
     font-size: spacing(24);
     font-weight: 700;
     line-height: 1;
-    -webkit-text-stroke: 2px var(--gray-7);
+    -webkit-text-stroke: 2px var(--shade-7);
     user-select: none;
     z-index: -1;
   }
@@ -40,7 +40,7 @@
   max-width: fit-content;
 
   time {
-    color: var(--gray-3);
+    color: var(--shade-3);
     font-size: var(--text-sm);
   }
 }

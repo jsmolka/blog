@@ -14,20 +14,20 @@ I strive towards an elegant, minimalistic design, and nothing is more elegant th
 [^nord]: It's inspired by its blog background color, to be precise. None of the actual colors are used.
 
 <figure>
-  <div style="display: flex; height: 4rem; border: 1px solid var(--gray-6)">
-    <div style="flex: 1; background-color: var(--gray-8)"></div>
-    <div style="flex: 1; background-color: var(--gray-7)"></div>
-    <div style="flex: 1; background-color: var(--gray-6)"></div>
-    <div style="flex: 1; background-color: var(--gray-5)"></div>
-    <div style="flex: 1; background-color: var(--gray-4)"></div>
-    <div style="flex: 1; background-color: var(--gray-3)"></div>
-    <div style="flex: 1; background-color: var(--gray-2)"></div>
-    <div style="flex: 1; background-color: var(--gray-1)"></div>
-    <div style="flex: 1; background-color: var(--blue-3)"></div>
-    <div style="flex: 1; background-color: var(--blue-2)"></div>
-    <div style="flex: 1; background-color: var(--blue-1)"></div>
+  <div style="display: flex; height: 4rem; border: 1px solid var(--shade-6)">
+    <div style="flex: 1; background-color: var(--shade-8)"></div>
+    <div style="flex: 1; background-color: var(--shade-7)"></div>
+    <div style="flex: 1; background-color: var(--shade-6)"></div>
+    <div style="flex: 1; background-color: var(--shade-5)"></div>
+    <div style="flex: 1; background-color: var(--shade-4)"></div>
+    <div style="flex: 1; background-color: var(--shade-3)"></div>
+    <div style="flex: 1; background-color: var(--shade-2)"></div>
+    <div style="flex: 1; background-color: var(--shade-1)"></div>
+    <div style="flex: 1; background-color: var(--brand-3)"></div>
+    <div style="flex: 1; background-color: var(--brand-2)"></div>
+    <div style="flex: 1; background-color: var(--brand-1)"></div>
   </div>
-  <figcaption>8 shades of hue 220 and 3 shades of hue 213</figcaption>
+  <figcaption>8 shades of hue 220 and 3 shades of hue 206</figcaption>
 </figure>
 
 The minimalization [^minimalization] process also included:
