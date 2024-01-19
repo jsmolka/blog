@@ -4,7 +4,7 @@ showMeta: false
 showTitle: false
 ---
 # workin
-[workin](https://github.com/jsmolka/workin) is an app for running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts and allows easy creation of custom workouts.
+[workin](https://github.com/jsmolka/workin) is a web app for creating and running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts and allows easy creation of custom workouts.
 
 - ![](img/workout.png "Workout view")
 - ![](img/activity.png "Activity view")
