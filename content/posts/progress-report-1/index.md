@@ -61,18 +61,18 @@ The last thing I did was clean up the memory interface. I implemented things lik
 A precondition for playing through a whole game was working save implementations for SRAM, EEPROM and Flash. Finding out which one to use and understanding how each of them works took some time, but I managed to figure it out in the end.
 
 ## Milestones
-- Initial commit (19/01/30)
-- Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler) (19/04/20)
-- Displays Tonc bitmap demos (19/05/02)
-- Displays Tonc regular sprite and background demos (19/05/29)
-- Displays Tonc affine sprite and background demos (19/06/08)
-- Displays Tonc graphic effect demos (19/06/27)
-- Displays Tonc interrupt and bios call demos (19/07/03)
-- Displays Tonc mode 7 demos (19/07/11)
-- Runs Kirby: Nightmare In Dreamland (19/07/14)
-- Displays the BIOS (19/07/16)
-- Displays all Tonc demos (19/08/07)
-- Runs Pokémon Emerald (19/08/17)
+- Initial commit (Jan 30)
+- Passes [armwrestler tests](https://github.com/Emu-Docs/Emu-Docs/tree/master/Game%20Boy%20Advance/test_roms/arm_wrestler) (Apr 20)
+- Displays Tonc bitmap demos (May 2)
+- Displays Tonc regular sprite and background demos (May 29)
+- Displays Tonc affine sprite and background demos (Jun 8)
+- Displays Tonc graphic effect demos (Jun 27)
+- Displays Tonc interrupt and bios call demos (Jul 3)
+- Displays Tonc mode 7 demos (Jul 11)
+- Runs Kirby: Nightmare In Dreamland (Jul 14)
+- Displays the BIOS (Jul 16)
+- Displays all Tonc demos (Aug 7)
+- Runs Pokémon Emerald (Aug 17)
 
 ## Some Working Games
 - Advance Wars
