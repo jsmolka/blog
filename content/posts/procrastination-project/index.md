@@ -51,8 +51,8 @@ The requirements for a good logo are just like the requirements for a good [flag
 
 The initial attempt was based on an AI-generated image by Midjourney.
 
-- ![](img/logo-wavy.jpg "Midjourney version")
-- ![](img/logo-wavy.svg "SVG version")
+- ![](img/logo-midjourney.jpg "Midjourney version")
+- ![](img/logo-midjourney.svg "SVG version")
 {.fluent}
 
 I even took the time to [animate it](https://antfu.me/posts/animated-svg-logo). Refresh the page to see it. I thought I liked the logo, but it was way too busy --- not the elegant and simplistic style I was going for. It also looked **horrible** at small sizes due to the lines.
