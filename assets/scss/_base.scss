@@ -37,27 +37,6 @@ body {
   scrollbar-color: var(--shade-6) var(--shade-7);
 }
 
-::-webkit-scrollbar {
-  width: spacing(2);
-  height: spacing(2);
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: var(--shade-7);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--shade-6);
-
-  &:hover {
-    background-color: var(--shade-5);
-  }
-
-  &:active {
-    background-color: var(--shade-4);
-  }
-}
-
 h1,
 h2,
 h3 {
