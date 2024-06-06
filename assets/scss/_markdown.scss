@@ -179,7 +179,17 @@
   }
 
   .table-wrapper {
+    border: 1px solid var(--shade-5);
+    border-radius: var(--rounded);
     overflow-x: auto;
+  }
+
+  tbody tr {
+    border-top: 1px solid var(--shade-5);
+
+    &:nth-child(odd) {
+      background: var(--shade-7);
+    }
   }
 
   th {
@@ -189,7 +199,6 @@
   th,
   td {
     padding: spacing(1.5) spacing(2.5);
-    border: 1px solid var(--shade-5);
   }
 
   a[href^='#fn:'] {
