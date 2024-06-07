@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "hugo server -D -F --disableFastRender",
     "build": "hugo --minify && npm run postprocess",
+    "update": "npm i -g npm-check-updates && ncu -u && npm i",
     "postprocess": "node scripts/postprocess.js"
   },
   "prettier": {
