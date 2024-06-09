@@ -179,23 +179,13 @@
   }
 
   .table-wrapper {
-    border: 1px solid var(--shade-5);
+    border: 1px solid var(--shade-6);
     border-radius: var(--rounded);
     overflow-x: auto;
   }
 
-  tr {
-    border-bottom: 1px solid var(--shade-5);
-  }
-
-  tbody tr {
-    &:nth-child(odd) {
-      background: var(--shade-7);
-    }
-
-    &:last-child {
-      border-bottom: none;
-    }
+  tbody tr:nth-child(odd) {
+    background: var(--shade-7);
   }
 
   th {
