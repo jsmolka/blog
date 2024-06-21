@@ -60,3 +60,10 @@ Other components of the system soon followed, and the emulator got to a stage wh
 {{<audio src="audio/battle-frontier.mp3" caption="Pokémon Emerald battle frontier theme">}}
 
 The final year of development went into performance and accuracy improvements. I released version 1.0 around 2.5 years after the initial commit and wrote a couple of [progress reports](/tags/eggvance/) along the way.
+
+# maze
+[maze](https://github.com/jsmolka/maze) was my introductory project to programming and the thing I tinkered with during boring lectures. It creates and solves perfect mazes using different algorithms, each with its own recognizable style. I also implemented the recursive backtracking algorithm in C, which sparked my interest in high-performance code.
+
+- ![](img/maze.png "Maze created using recursive backtracking")
+- ![](img/maze-solution.png "Maze solved using depth-first search")
+{.fluent .pixelated}
