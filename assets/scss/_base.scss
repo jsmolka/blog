@@ -38,6 +38,10 @@ body {
   border-width: 0;
   scrollbar-width: thin;
   scrollbar-color: var(--shade-5) transparent;
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-3);
+  }
 }
 
 h1,
