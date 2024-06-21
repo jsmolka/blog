@@ -33,9 +33,7 @@ body {
 }
 
 * {
-  border-color: var(--shade-6);
-  border-style: solid;
-  border-width: 0;
+  border: 0 solid var(--shade-6);
   scrollbar-width: thin;
   scrollbar-color: var(--shade-5) transparent;
 
