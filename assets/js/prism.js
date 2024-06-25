@@ -60,4 +60,8 @@ Prism.languages.drizzle = {
   punctuation: /[{}[\];(),.:]/,
 };
 
+Prism.hooks.add('complete', ({ element }) => {
+  element.parentNode.removeAttribute('tabindex');
+});
+
 export default Prism;
