@@ -9,6 +9,9 @@ function highlight(document) {
   let changed = false;
   if (document.querySelector(':is(code, pre)[class^="language-"]')) {
     Prism.highlightAllUnder(document);
+    for (const element of document.querySelectorAll('pre[class^="language-"][tabindex]')) {
+      element.removeAttribute('tabindex');
+    }
     changed = true;
   }
   return changed;
