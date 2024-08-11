@@ -68,9 +68,9 @@ The final year of development went into performance and accuracy improvements. I
 - ![](img/maze-solution.png "Maze solved using depth-first search")
 {.fluent .pixelated}
 
-I revisited the project a couple of years later and expanded it into the third dimension. [hypermaze](https://github.com/jsmolka/hypermaze) runs in the [browser](https://hypermaze.smolka.dev) and visualizes the recursive backtracking algorithm.
+I revisited the topic a couple of years later and expanded it into the third dimension. [hypermaze](https://github.com/jsmolka/hypermaze) runs in the [browser](https://hypermaze.smolka.dev) and supports multiple algorithms featured in the original.
 
-- ![](img/hypermaze.png "Maze created using recursive backtracking")
-- ![](img/hypermaze-animation.png "Maze during animation")
+- ![](img/hypermaze.png "Maze created using [Prim's algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm)")
+- ![](img/hypermaze-creation.png "Animated maze creation")
 {.fluent}
 
