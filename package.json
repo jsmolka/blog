@@ -11,8 +11,8 @@
     "singleQuote": true
   },
   "devDependencies": {
-    "glob": "^10.4.1",
-    "jsdom": "^24.1.0",
+    "glob": "^11.0.0",
+    "jsdom": "^25.0.0",
     "prismjs": "^1.29.0"
   }
 }

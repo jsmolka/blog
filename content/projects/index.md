@@ -3,8 +3,14 @@ title: "Projects"
 showMeta: false
 showTitle: false
 ---
+
+# poi
+[poi](https://github.com/jsmolka/poi) is a [web app](https://poi.smolka.dev) that visualizes cycling-related points of interest on a map. The data is sourced using [OpenStreetMap's Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) and includes locations of supermarkets, confectioneries, gas stations and even cemeteries for emergency water refills. It can also display GPX files for planning.
+
+![](img/poi.png "Route from Leipzig to Cottbus")
+
 # workin
-[workin](https://github.com/jsmolka/workin) is a web app for creating and running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts and allows easy creation of custom workouts.
+[workin](https://github.com/jsmolka/workin) is a [web app](https://workin.smolka.dev) for creating and running smart trainer workouts. It uses the [Web Bluetooth API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API) to communicate with heart rate monitors and smart trainers that implement the [Fitness Machine Service protocol](https://www.bluetooth.com/specifications/specs/fitness-machine-service-1-0/). It offers the main features of paid alternatives, has a wide range of standard workouts and allows easy creation of custom workouts.
 
 - ![](img/workout.png "Workout view")
 - ![](img/activity.png "Activity view")
