@@ -5,7 +5,7 @@ showTitle: false
 ---
 
 # poi
-[poi](https://github.com/jsmolka/poi) is a [web app](https://poi.smolka.dev) that visualizes cycling-related points of interest on a map. The data is sourced using [OpenStreetMap's Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) and includes locations of supermarkets, confectioneries, gas stations and even cemeteries for emergency water refills. It can also display GPX files to assist with planning.
+[poi](https://github.com/jsmolka/poi) is a [web app](https://poi.smolka.dev) that visualizes cycling-related points of interest on a map. The data is sourced using [OpenStreetMap's Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) and includes locations of gas stations, supermarkets, cafes and even cemeteries for emergency water refills. It can also display GPX files to assist with planning.
 
 ![](img/poi.png "Route from Leipzig to Cottbus")
 
