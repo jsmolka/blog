@@ -6,7 +6,7 @@
 {{ end }}
 
 {{ with resources.Get "scss/main.scss" }}
-  {{ $style := . | resources.ToCSS (dict "targetPath" "main.css" "vars" $vars) }}
+  {{ $style := . | css.Sass (dict "targetPath" "main.css" "vars" $vars) }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
   {{ end }}
@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ with .Resources.GetMatch "index.scss" }}
-  {{ $style := . | resources.ToCSS "index.css" }}
+  {{ $style := . | css.Sass "index.css" }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
   {{ end }}
