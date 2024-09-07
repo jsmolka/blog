@@ -1,4 +1,4 @@
-import { math } from './math';
+import { clamp } from './math';
 
 export function slider(element) {
   const down = () => {
@@ -7,7 +7,7 @@ export function slider(element) {
   const move = (event) => {
     element.dispatchEvent(
       new CustomEvent('slider:move', {
-        detail: math.clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1),
+        detail: clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1),
       })
     );
   };

@@ -1,7 +1,7 @@
-import { env } from './utils/env';
+import { isMobile } from './utils/env';
 import { intersect } from './utils/intersect';
 import { slider } from './utils/slider';
-import { storage } from './utils/storage';
+import { get, set } from './utils/storage';
 import { formatSeconds } from './utils/time';
 
 const template = /* html */ `
@@ -52,13 +52,13 @@ export function mount(root, src) {
   };
 
   const getVolume = () => {
-    return env.isMobile ? 1 : storage.get('volume', 0.5);
+    return isMobile ? 1 : get('volume', 0.5);
   };
 
   const setVolume = (value) => {
     audio.muted = false;
     audio.volume = value ** 3;
-    storage.set('volume', value);
+    set('volume', value);
 
     refs.volumeBarSeeker.style.setProperty('--value', value);
   };
@@ -112,7 +112,7 @@ export function mount(root, src) {
       audio.muted = !audio.muted;
     });
 
-    if (env.isMobile) {
+    if (isMobile) {
       return;
     }
 

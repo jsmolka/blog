@@ -1,4 +1,4 @@
-function isMobile() {
+export const isMobile = (() => {
   // https://developer.mozilla.org/en-US/docs/Web/API/Navigator#non-standard_properties
   const isIosStandalone = () => {
     return typeof navigator.standalone === 'boolean';
@@ -17,6 +17,4 @@ function isMobile() {
     isIosStandalone() ||
     isIosAudioQuirk()
   );
-}
-
-export const env = { isMobile: isMobile() };
+})();
