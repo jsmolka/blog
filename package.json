@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "hugo server -D -F --disableFastRender",
+    "dev": "hugo server -D -F",
     "build": "hugo --minify && npm run postprocess",
     "update": "npm i -g npm-check-updates && ncu -u && npm i",
     "postprocess": "node scripts/postprocess.js"
