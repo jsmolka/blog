@@ -209,8 +209,24 @@
     }
   }
 
+  .w-25 {
+    width: 25%;
+
+    @include constricted {
+      width: 100%;
+    }
+  }
+
   .w-50 {
     width: 50%;
+
+    @include constricted {
+      width: 100%;
+    }
+  }
+
+  .w-75 {
+    width: 75%;
 
     @include constricted {
       width: 100%;
