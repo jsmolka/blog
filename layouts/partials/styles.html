@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ with .Resources.GetMatch "index.scss" }}
-  {{ $style := . | css.Sass "index.css" }}
+  {{ $style := . | css.Sass (dict "targetPath" "index.css" "vars" $vars "includePaths" (slice "assets/scss")) }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
   {{ end }}
