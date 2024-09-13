@@ -1,10 +1,13 @@
 {
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Posts and other stuff.",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "hugo server -D -F",
     "build": "hugo --minify && npm run postprocess",
-    "update": "npm i -g npm-check-updates && ncu -u && npm i",
+    "update": "npx npm-check-updates -u && npm i && npm audit fix",
     "postprocess": "node scripts/postprocess.js"
   },
   "prettier": {
