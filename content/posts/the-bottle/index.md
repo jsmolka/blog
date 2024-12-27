@@ -5,7 +5,7 @@ date: 2024-12-27T12:01:10+01:00
 type: post
 draft: true
 ---
-The humble water bottle, sometimes referred to as bidon, plays a vital role in cycling. It comes in a more or less standardized shape [^shape] and can contain anything from 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates (CHO) and flavoring agents. Riders new to the sport might disregard the importance of the latter two,  [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) after a few hours of cycling and crawl to the next cafe, supermarket or gas station to take in sweet sustenance --- the so called **bonk** [^bonk].
+The humble water bottle, sometimes referred to as bidon, plays a vital role in cycling. It comes in a more or less standardized shape [^shape] and can hold anything from 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates (CHO), electrolytes and flavoring. Athletes new to the sport might disregard the importance of the latter ones and go on a ride with just plain water. If they are unlucky, they will [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** [^bonk] --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
 
 [^shape]: Some modern aero bikes come with integrated bottles.
 
