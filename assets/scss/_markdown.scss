@@ -175,6 +175,10 @@
   sub,
   sup {
     font-size: inherit;
+  }
+
+  sub[id^='fnref'],
+  sup[id^='fnref'] {
     vertical-align: baseline;
   }
 
