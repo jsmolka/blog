@@ -62,7 +62,7 @@ The popular nutrition brand Science in Sport launched their Beta Fuel drink mix 
 
 ![](img/ratio.png "Integrated model for the mean oxidation rate and the mean efficiency of the oxidation of  fructose, exogenous glucose, and the composite (combined) total exogenous CHO ingested in the three experimental ratio drinks during endurance exercise")
 
-This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) [^threads] to believe, that sucrose, also known as table sugar, might be the best option in teams of scientific literature and cost. With an even ratio of glucose to fructose it is on the other end of the recommended spectrum, but it appears to be closer to the maximum of 0.95.
+This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) [^threads] to the conclusion that sucrose, also known as sugar, might be the best option in teams of scientific literature and cost. With an even ratio of glucose to fructose it is on the other end of the recommended spectrum, but it appears to be closer to the maximum of 0.95.
 
 [^threads]: Other good forum threads with him include:
     - [At-Home Hydration/Nutrition for an idiot](https://forum.slowtwitch.com/t/at-home-hydration-nutrition-for-an-idiot/803231)
@@ -70,6 +70,10 @@ This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=v
     - [Make SIS BETA fuel yourself just a few pence per bottle](https://www.trainerroad.com/forum/t/make-sis-beta-fuel-yourself-just-a-few-pence-per-bottle/16117)
 
 ![](img/sucrose.svg "Sucrose: one glucose molecule on the left and one fructose molecule on the right")
+
+I doubt one option is better than the other at this point. Get the one that works for you, but make sure it is in the 2:1/1:0.8 range.
+
+<!-- But the reduction in cost certainly justifies its usage -->
 
 ## Electrolytes
 The next piece to the puzzle are electrolytes. If you have ever mismanaged your electrolyte balance on a hot day, you never want to do it again. Drinking just water and replenashing electrolytes lost with in sweat. Will not end well.
@@ -85,7 +89,56 @@ This is a hard one for individuals compared to companies. Flavoring are best bou
 
 <!-- Talk about dehydrated fruit powder -->
 
-## Osmolarity
+## Osmolality
+> Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
+>
+> <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
+
+<!-- Todo: link -->
+<!-- Todo: CHO must pass gut to get to intestines, where they are utilized -->
+
+A 1995 study by Vist and Maughan explored the effect of osmolality and CHO content on the rate of gastric emptying of liquids. They created four solutions:
+
+1. LG: 40 g/l glucose -> 40 g/l * 180.2 g/mol = 222 mOsm/l
+2. LP: 40 g/l glucose polymer -> 40 g/l * 828.68 g/mol [^maltodextrin] = 48 mOsm/l
+3. HG: 188 g/l glucose -> 188 g/l * 180.2 g/mol = 1043 mOsm/l
+4. HP: 188 g/l glucose polymer -> 188 g/l * 828.68 g/mol = 227 mOsm/l
+
+[^maltodextrin]: The chemical formula of [maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. It defines the number of chained D-glucose units. Based on that we can calculate the molecular weight of differently sized molecules:
+    | n   | Formula                                       | Molecular weight g/mol |
+    | --- | --------------------------------------------- | ---------------------- |
+    | 2   | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>    | 342.28                 |
+    | 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>    | 828.68                 |
+    | 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>   | 1639.35                |
+    | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>   | 2450.02                |
+    | 20  | C<sub>120</sub>H<sub>202</sub>O<sub>101</sub> | 3260.68                |
+
+    The "glucose polymer" used in the study had an average length of 5.
+
+
+Let's take a look at how blood plasma osmolality is calculated.
+
+290 mOsm/l
+
+- Blood plasma
+  - Sodium
+  - Glucose (100 mg/dl (5.6 mmol/L) / 18 adds 5.55 mOsm/L)
+    - Glucose (x mg/dl / (180 (molar mass) / 10) = y mOsm/L)
+  - Blood urea molecular (BUN)
+
+Homeostatis
+
+https://pubmed.ncbi.nlm.nih.gov/36943977/
+
+- Osmolality: mmol/kg. Refers to the number of particles of solute per kilogram of solvent.
+- Osmolarity: mmol/kg. refers to the number of particles of solute per liter of solution, whereas the term osmolality.
+
+- Glucose: 5.5 mOsm/kg = 5.5 mmol/kg
+  - Reversed: 180.156 g/mol -> 1000g / 180.156 = 5.55 mmol/kg
+
+A solute dissolved into a solvent creates a solution. The unit for osmolar concentration or osmolality is milliosmole (abbreviated mOsm or mOsmol). For nonelectrolytes, 1 mmol equals 1 mOsm, whereas for electrolytes, the number of particles in a solution depends on the electrolyte's dissociation.
+
+Maltodextrin is a 100% glucose-based energy that can be fast digested in the small intestine, so it is well tolerated as there is no colonic fermentation. To have good hydration, the osmotic pressure of these products should not be more than 320 mOsm/kg as intracellular osmolality is 280-320 mOsm/kg (see serum osmolality).
 
 ## Comparison
 - Cost breakdown
@@ -94,6 +147,8 @@ This is a hard one for individuals compared to companies. Flavoring are best bou
   - Ministry of Nutrition
   - Powerbar
   - Tailwind
+  - HSN
+- Mention caffeine somewhere
 
 | Drink mix                                                                                              | Day (160 g) | Month (20 * 160 g) | Year (240 * 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
@@ -102,4 +157,4 @@ This is a hard one for individuals compared to companies. Flavoring are best bou
 | [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) | 6€          | 120€               | 1440€             |
 | [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             | 6.71€       | 134.11€            | 1609.37€          |
 
-## Appendix: Squeeze Bottles
+## Appendix: The Squeeze Bottle
