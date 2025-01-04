@@ -1,7 +1,7 @@
 ---
 title: "The Bottle"
 tags: ["cycling"]
-date: 2024-12-27T12:01:10+01:00
+date: 2025-01-04T12:01:10+01:00
 type: post
 draft: true
 ---
@@ -83,15 +83,25 @@ The next piece to the puzzle are electrolytes. If you have ever mismanaged your 
 - Salt balances bitterness and sweetness
 - Mixing JIT is better than pre-mixed.
 
+LMNT
+- 1000 g salt (393 g sodium, 39.3%)
+- 150 g potassium chloride (79 g potassium, 52.4%)
+- 155 g magnesium malate (24 g magnesium, 15.5%)
+
 ## Flavorings
 This is a hard one for individuals compared to companies. Flavoring are best bought in bulk to save a pretty penny and get the best result. I have though about this a lot and am in the fortunate position where I prefer sour over sweet. I love lemon/lime juice, but make fresh lemon/lime juice each time you want to go on a ride is neither cost-effective nor fun. I took a while for me to find [dehydrated lime juice](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg), which is more or less affordable at 30€/kg.
 
 <!-- Talk about dehydrated fruit powder -->
 
 ## Osmolality/Osmolarity
-<!-- mOsm/l = Concentration in g/l * (1 / molecular weight in g/mol) * 1000 -->
+<!-- Osmolarity in mOsm/l = Concentration in g/l × (1 / molar mass in g/mol) × Osm/mol × 1000 -->
+<!-- Sucrose: 29 mOsm/l = 10 g/l × (1 / 342 g/mol) × 1 Osm/mol × 1000 -->
+<!-- Salt: 345 mOsm/l = 10 g/l × (1 / 58 g/mol) × 2 Osm/mol × 1000 -->
+<!-- Todo: laxative effect of high osmolality solutions -->
 
-Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passing through the stomach results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity.
+### Carbohydrates
+
+Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passage results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity.
 
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
@@ -105,18 +115,18 @@ A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of os
 4. 188 g/l maltodextrin (n = 5), 227 mOsm/l (filled triangle)
 
 [^maltodextrin]:
-    The chemical formula of maltodextrin is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. Based on that we can calculate the molecular mass and the [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) DE = 100 x (M<sub>glucose</sub> / M<sub>polymer</sub>):
+    The chemical formula of maltodextrin is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. Based on that we can calculate the molar mass and the [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) DE = 100 × (M<sub>glucose</sub> / M<sub>polymer</sub>):
 
-    | n   | Chemical formula                             | Molecular mass in g/mol | DE in % |
-    | --- | -------------------------------------------- | ----------------------- | ------- |
-    | 3   | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>   | 504.44                  | 36      |
-    | 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>   | 828.68                  | 22      |
-    | 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  | 1639.35                 | 11      |
-    | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  | 2450.02                 | 7       |
-    | 19  | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69                 | 6       |
+    | n   | Chemical formula                             | Molar mass in g/mol | DE in % |
+    | --- | -------------------------------------------- | ------------------- | ------- |
+    | 3   | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>   | 504.44              | 36      |
+    | 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>   | 828.68              | 22      |
+    | 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  | 1639.35             | 11      |
+    | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  | 2450.02             | 7       |
+    | 19  | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69             | 6       |
 
 - ![](img/emptying-fluid.png "Total volume remaining in the stomach after ingesting 600 ml of test drink")
-- ![](img/emptying-cho.png "The total amount of carbohydrate (mmol glucosyl units) delivered to the small intestine after ingesting 600 ml of test drink")
+- ![](img/emptying-cho.png "Total amount of CHO delivered to the small intestine after ingesting 600 ml of test drink")
 {.fluent}
 
 The key takeaways from the study are the following:
@@ -124,11 +134,39 @@ The key takeaways from the study are the following:
 1. Dilute solutions are emptied faster than concentrated solutions.
 2. If two solutions have the same concentration, the one with less osmolarity is emptied faster.
 
+The first one can be applied universally. Dilute the CHO and electrolytes in your bottle as much as possible/practical. The second one informs the source of CHO in the bottle. Lets say we go for a concentration of 80 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
+
 | Solution                                       | Osmolarity in mOsm/l |
 | ---------------------------------------------- | -------------------- |
 | 40 g/l maltodextrin (n = 5) + 40 g/l fructose  | 48 + 222 = 270       |
 | 40 g/l maltodextrin (n = 19) + 40 g/l fructose | 13 + 222 = 235       |
 | 80 g/l sucrose                                 | 233                  |
+
+Sucrose comes out on top again. If you prefer a 2:1 ratio it might make sense to use a maltodextrin fructose mixture due to its reduced osmolarity:
+
+| Solution                                       | Osmolarity in mOsm/l |
+| ---------------------------------------------- | -------------------- |
+| 60 g/l maltodextrin (n = 5) + 30 g/l fructose  | 72 + 167 = 239       |
+| 60 g/l maltodextrin (n = 19) + 30 g/l fructose | 19 + 167 = 186       |
+| 90 g/l sucrose                                 | 263                  |
+
+### Electrolytes
+Salts are a little harder to calculate, because they dissociate into their ios in solution.
+
+| Name               | Chemical formula                                      | Molar mass in g/mol | Osm/mol |
+| ------------------ | ----------------------------------------------------- | ------------------- | ------- |
+| Sodium chloride    | NaCl                                                  | 58.44               | 2       |
+| Potassium chloride | KCl                                                   | 74.55               | 2       |
+| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38              | 2       |
+| Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07              | 4       |
+
+Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodium.
+
+| Solution                                                          | Osmolarity in mOsm/l |
+| ----------------------------------------------------------------- | -------------------- |
+| 3.82 g/l sodium chloride                                          | 130                  |
+| 5.00 g/l LMNT (3.82 g/l NaCl + 0.57 g/l KCl + 0.59 g/l Mg malate) | 130 + 15 + 8 = 153   |
+| 5.55 g/l trisodium citrate                                        | 86                   |
 
 <!-- Homeostatis
 
@@ -145,6 +183,8 @@ A solute dissolved into a solvent creates a solution. The unit for osmolar conce
 Maltodextrin is a 100% glucose-based energy that can be fast digested in the small intestine, so it is well tolerated as there is no colonic fermentation. To have good hydration, the osmotic pressure of these products should not be more than 320 mOsm/kg as intracellular osmolality is 280-320 mOsm/kg (see serum osmolality). -->
 
 ## Comparison
+That is. The big bottle breakdown is done.
+
 - Cost breakdown
 - Brands
   - Maurten
@@ -154,7 +194,7 @@ Maltodextrin is a 100% glucose-based energy that can be fast digested in the sma
   - HSN
 - Mention caffeine somewhere
 
-| Drink mix                                                                                              | Day (160 g) | Month (20 * 160 g) | Year (240 * 160g) |
+| Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
 | [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 | 3.27€       | 65.43€             | 785.16€           |
 | [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     | 5.42€       | 108.48€            | 1301.76€          |
