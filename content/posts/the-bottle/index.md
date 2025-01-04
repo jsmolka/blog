@@ -62,7 +62,8 @@ The popular nutrition brand Science in Sport launched their Beta Fuel drink mix 
 
 This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) [^threads] to the conclusion that sucrose, also known as sugar, might be the best option in teams of scientific literature and cost. With an even ratio of glucose to fructose it is on the other end of the recommended spectrum, but it appears to be closer to the maximum of 0.95.
 
-[^threads]: Other good forum threads with him include:
+[^threads]:
+    Other good forum threads with him include:
     - [At-Home Hydration/Nutrition for an idiot](https://forum.slowtwitch.com/t/at-home-hydration-nutrition-for-an-idiot/803231)
     - [Help me calculate an at home "Maurten" drink (im bad at math)](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656)
     - [Make SIS BETA fuel yourself just a few pence per bottle](https://www.trainerroad.com/forum/t/make-sis-beta-fuel-yourself-just-a-few-pence-per-bottle/16117)
@@ -88,29 +89,31 @@ This is a hard one for individuals compared to companies. Flavoring are best bou
 <!-- Talk about dehydrated fruit powder -->
 
 ## Osmolality/Osmolarity
+<!-- mOsm/l = Concentration in g/l * (1 / molecular weight in g/mol) * 1000 -->
+
 Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passing through the stomach results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity.
 
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
 
-A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of osmolality and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
+A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
 
 1. 40 g/l glucose, 222 mOsm/l (empty rectangle)
-2. 40 g/l maltodextrin [^maltodextrin], 48 mOsm/l (filled rectangle)
+2. 40 g/l maltodextrin (n = 5) [^maltodextrin], 48 mOsm/l (filled rectangle)
 3. 188 g/l glucose, 1043 mOsm/l (empty circle)
-4. 188 g/l maltodextrin, 227 mOsm/l (filled triangle)
+4. 188 g/l maltodextrin (n = 5), 227 mOsm/l (filled triangle)
 
-[^maltodextrin]: The chemical formula of [maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. It defines the number of chained D-glucose units. Based on that we can calculate the molecular weight:
-    | n   | Formula                                       | Molecular weight g/mol |
-    | --- | --------------------------------------------- | ---------------------- |
-    | 2   | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>    | 342.28                 |
-    | 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>    | 828.68                 |
-    | 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>   | 1639.35                |
-    | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>   | 2450.02                |
-    | 20  | C<sub>120</sub>H<sub>202</sub>O<sub>101</sub> | 3260.68                |
+[^maltodextrin]:
+    The chemical formula of maltodextrin is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. Based on that we can calculate the molecular mass and the [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) DE = 100 x (M<sub>glucose</sub> / M<sub>polymer</sub>):
 
-    The maltodextrin used in the study had an average length of five D-glucose units.
+    | n   | Chemical formula                             | Molecular mass in g/mol | DE in % |
+    | --- | -------------------------------------------- | ----------------------- | ------- |
+    | 3   | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>   | 504.44                  | 36      |
+    | 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>   | 828.68                  | 22      |
+    | 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  | 1639.35                 | 11      |
+    | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  | 2450.02                 | 7       |
+    | 19  | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69                 | 6       |
 
 - ![](img/emptying-fluid.png "Total volume remaining in the stomach after ingesting 600 ml of test drink")
 - ![](img/emptying-cho.png "The total amount of carbohydrate (mmol glucosyl units) delivered to the small intestine after ingesting 600 ml of test drink")
@@ -119,7 +122,13 @@ A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of os
 The key takeaways from the study are the following:
 
 1. Dilute solutions are emptied faster than concentrated solutions.
-2. If two solutions have the same concentration, the one with less osmolality is emptied faster.
+2. If two solutions have the same concentration, the one with less osmolarity is emptied faster.
+
+| Solution                                       | Osmolarity in mOsm/l |
+| ---------------------------------------------- | -------------------- |
+| 40 g/l maltodextrin (n = 5) + 40 g/l fructose  | 48 + 222 = 270       |
+| 40 g/l maltodextrin (n = 19) + 40 g/l fructose | 13 + 222 = 235       |
+| 80 g/l sucrose                                 | 233                  |
 
 <!-- Homeostatis
 
