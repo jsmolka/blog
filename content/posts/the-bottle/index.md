@@ -50,9 +50,7 @@ The recommended CHO intake also changes based on exercise duration and intensity
   </figcaption>
 </figure>
 
-
-
-High absorption rates are achieved by a mix of glucose and fructose, which are metabolized by different pathways in the body and can thus be stacked on top of each other. In 2013, a [study by O'Brien et al.](pdf/OBrienetal.2013-MSSE.pdf) explored the optimal ratio of glucose and fructose and arrived at the following conclusion:
+High absorption rates are achieved by a mix of glucose and fructose, which are metabolized by different pathways in the body and can thus be stacked on top of each other. In 2013, a [study by O'Brien et al.](pdf/ratio.pdf) explored the optimal ratio of glucose and fructose and arrived at the following conclusion:
 
 > Modeling suggested fructose–maltodextrin–glucose ratios of between 0.8 to unity are oxidized with highest efficiency relative to the ingestion rate. The CHO metabolic responses were associated with a very likely moderate enhancement of mean sprint power with total- and endogenous-CHO oxidation rate, abdominal cramps, and drink sweetness presenting as candidate explanatory mechanisms. Therefore, oral CHO-hydration formulations containing fructose–maltodextrin–glucose at a ratio of around 0.8–1.0 may provide the most practical benefit for endurance athletes.
 >
@@ -89,22 +87,21 @@ This is a hard one for individuals compared to companies. Flavoring are best bou
 
 <!-- Talk about dehydrated fruit powder -->
 
-## Osmolality
+## Osmolality/Osmolarity
+Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passing through the stomach results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity.
+
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
 
-<!-- Todo: link -->
-<!-- Todo: CHO must pass gut to get to intestines, where they are utilized -->
+A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of osmolality and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
 
-A 1995 study by Vist and Maughan explored the effect of osmolality and CHO content on the rate of gastric emptying of liquids. They created four solutions:
+1. 40 g/l glucose, 222 mOsm/l (empty rectangle)
+2. 40 g/l maltodextrin [^maltodextrin], 48 mOsm/l (filled rectangle)
+3. 188 g/l glucose, 1043 mOsm/l (empty circle)
+4. 188 g/l maltodextrin, 227 mOsm/l (filled triangle)
 
-1. LG: 40 g/l glucose -> 40 g/l * 180.2 g/mol = 222 mOsm/l
-2. LP: 40 g/l glucose polymer -> 40 g/l * 828.68 g/mol [^maltodextrin] = 48 mOsm/l
-3. HG: 188 g/l glucose -> 188 g/l * 180.2 g/mol = 1043 mOsm/l
-4. HP: 188 g/l glucose polymer -> 188 g/l * 828.68 g/mol = 227 mOsm/l
-
-[^maltodextrin]: The chemical formula of [maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. It defines the number of chained D-glucose units. Based on that we can calculate the molecular weight of differently sized molecules:
+[^maltodextrin]: The chemical formula of [maltodextrin](https://en.wikipedia.org/wiki/Maltodextrin) is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. It defines the number of chained D-glucose units. Based on that we can calculate the molecular weight:
     | n   | Formula                                       | Molecular weight g/mol |
     | --- | --------------------------------------------- | ---------------------- |
     | 2   | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>    | 342.28                 |
@@ -113,20 +110,18 @@ A 1995 study by Vist and Maughan explored the effect of osmolality and CHO conte
     | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>   | 2450.02                |
     | 20  | C<sub>120</sub>H<sub>202</sub>O<sub>101</sub> | 3260.68                |
 
-    The "glucose polymer" used in the study had an average length of 5.
+    The maltodextrin used in the study had an average length of five D-glucose units.
 
+- ![](img/emptying-fluid.png "Total volume remaining in the stomach after ingesting 600 ml of test drink")
+- ![](img/emptying-cho.png "The total amount of carbohydrate (mmol glucosyl units) delivered to the small intestine after ingesting 600 ml of test drink")
+{.fluent}
 
-Let's take a look at how blood plasma osmolality is calculated.
+The key takeaways from the study are the following:
 
-290 mOsm/l
+1. Dilute solutions are emptied faster than concentrated solutions.
+2. If two solutions have the same concentration, the one with less osmolality is emptied faster.
 
-- Blood plasma
-  - Sodium
-  - Glucose (100 mg/dl (5.6 mmol/L) / 18 adds 5.55 mOsm/L)
-    - Glucose (x mg/dl / (180 (molar mass) / 10) = y mOsm/L)
-  - Blood urea molecular (BUN)
-
-Homeostatis
+<!-- Homeostatis
 
 https://pubmed.ncbi.nlm.nih.gov/36943977/
 
@@ -138,7 +133,7 @@ https://pubmed.ncbi.nlm.nih.gov/36943977/
 
 A solute dissolved into a solvent creates a solution. The unit for osmolar concentration or osmolality is milliosmole (abbreviated mOsm or mOsmol). For nonelectrolytes, 1 mmol equals 1 mOsm, whereas for electrolytes, the number of particles in a solution depends on the electrolyte's dissociation.
 
-Maltodextrin is a 100% glucose-based energy that can be fast digested in the small intestine, so it is well tolerated as there is no colonic fermentation. To have good hydration, the osmotic pressure of these products should not be more than 320 mOsm/kg as intracellular osmolality is 280-320 mOsm/kg (see serum osmolality).
+Maltodextrin is a 100% glucose-based energy that can be fast digested in the small intestine, so it is well tolerated as there is no colonic fermentation. To have good hydration, the osmotic pressure of these products should not be more than 320 mOsm/kg as intracellular osmolality is 280-320 mOsm/kg (see serum osmolality). -->
 
 ## Comparison
 - Cost breakdown
