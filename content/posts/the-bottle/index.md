@@ -119,14 +119,12 @@ Flavorings are personal. I prefer sour over sweet. The acidity provided by the f
 It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
 
 ## Osmolality/Osmolarity
-<!-- Osmolarity in mOsm/l = Concentration in g/l × (1 / molar mass in g/mol) × Osm/mol × 1000 -->
-<!-- Sucrose: 29 mOsm/l = 10 g/l × (1 / 342 g/mol) × 1 Osm/mol × 1000 -->
-<!-- Salt: 345 mOsm/l = 10 g/l × (1 / 58 g/mol) × 2 Osm/mol × 1000 -->
-<!-- Todo: laxative effect of high osmolality solutions -->
 
 ### Carbohydrates
 
-Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passage results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity.
+Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passage results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity [^osmolarity].
+
+[^osmolarity]: Osmolarity in mOsm/l = Concentration in g/l × (1 / molar mass in g/mol) × Osm/mol × 1000
 
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
@@ -187,25 +185,15 @@ Salts are a little harder to calculate, because they dissociate into their ios i
 
 Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodium.
 
-| Solution                                                          | Osmolarity in mOsm/l |
-| ----------------------------------------------------------------- | -------------------- |
-| 3.82 g/l sodium chloride                                          | 130                  |
-| 5.00 g/l LMNT (3.82 g/l NaCl + 0.57 g/l KCl + 0.59 g/l Mg malate) | 130 + 15 + 8 = 153   |
-| 5.55 g/l trisodium citrate                                        | 86                   |
+| Solution                                               | Osmolarity in mOsm/l |
+| ------------------------------------------------------ | -------------------- |
+| 3.82 g/l sodium chloride                               | 130                  |
+| 5.00 g/l LMNT (3.82 g/l Na + 0.57 g/l K + 0.59 g/l Mg) | 130 + 15 + 8 = 153   |
+| 5.55 g/l trisodium citrate                             | 86                   |
 
-<!-- Homeostatis
+### GI Distress
 
-https://pubmed.ncbi.nlm.nih.gov/36943977/
-
-- Osmolality: mmol/kg. Refers to the number of particles of solute per kilogram of solvent.
-- Osmolarity: mmol/kg. refers to the number of particles of solute per liter of solution, whereas the term osmolality.
-
-- Glucose: 5.5 mOsm/kg = 5.5 mmol/kg
-  - Reversed: 180.156 g/mol -> 1000g / 180.156 = 5.55 mmol/kg
-
-A solute dissolved into a solvent creates a solution. The unit for osmolar concentration or osmolality is milliosmole (abbreviated mOsm or mOsmol). For nonelectrolytes, 1 mmol equals 1 mOsm, whereas for electrolytes, the number of particles in a solution depends on the electrolyte's dissociation.
-
-Maltodextrin is a 100% glucose-based energy that can be fast digested in the small intestine, so it is well tolerated as there is no colonic fermentation. To have good hydration, the osmotic pressure of these products should not be more than 320 mOsm/kg as intracellular osmolality is 280-320 mOsm/kg (see serum osmolality). -->
+- https://pubmed.ncbi.nlm.nih.gov/1338583/
 
 ## Comparison
 That is. The big bottle breakdown is done.
