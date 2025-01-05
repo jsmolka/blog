@@ -5,13 +5,13 @@ date: 2025-01-04T12:01:10+01:00
 type: post
 draft: true
 ---
-The humble water bottle, sometimes referred to as bidon, plays a vital role in cycling. It comes in a more or less standardized shape [^shape] and can hold anything from 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates (CHO), electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go on a ride with just plain water. If they are unlucky, they will [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
-
-[^shape]: Some modern aero bikes come with integrated bottles.
+The humble water bottle, sometimes referred to as bidon, plays a vital role in cycling. It comes in a more or less standardized shape and can hold anything between 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates (CHO), electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go on a ride with just plain water. If they are unlucky, they will [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
 
 On the other hand, professional teams and riders have this more or less figured out. The EF pro cycling team churns through [34,000 bottles annually](https://efprocycling.com/culture/no-more-plastic-bottles/) and estimates the whole professional peloton be somewhere in the 630,000 bottles range. Numbers like that are caused by the way bottles are used during one-day and stage races. On hot days, bottles with cold water are handed out to the riders, which then pour them over their heads to reduce their body's core temperature and thus allow for better performance on the bike. Emptied bottles, with or without CHO, are then cast to the side of the road or handed to spectators as souvenirs [^littering].
 
-[^littering]: In 2021, the UCI cracked down on littering.
+[^littering]:
+    In 2021, the UCI cracked down on littering.
+
     > Riders may not jettison food, bonk-bags, feeding bottles, clothes, etc. outside of the litter zones provided by the organiser. The rider must safely and exclusively deposit their waste on the sides of the road in the litter zones provided by the organiser.
     >
     > <cite>UCI regulation 2.2.025</cite>
@@ -60,13 +60,7 @@ The popular nutrition brand Science in Sport launched their Beta Fuel drink mix 
 
 ![](img/ratio.png "Integrated model for the mean oxidation rate and the mean efficiency of the oxidation of  fructose, exogenous glucose, and the composite (combined) total exogenous CHO ingested in the three experimental ratio drinks during endurance exercise")
 
-This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) [^threads] to the conclusion that sucrose, also known as sugar, might be the best option in teams of scientific literature and cost. With an even ratio of glucose to fructose it is on the other end of the recommended spectrum, but it appears to be closer to the maximum of 0.95.
-
-[^threads]:
-    Other good forum threads with him include:
-    - [At-Home Hydration/Nutrition for an idiot](https://forum.slowtwitch.com/t/at-home-hydration-nutrition-for-an-idiot/803231)
-    - [Help me calculate an at home "Maurten" drink (im bad at math)](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656)
-    - [Make SIS BETA fuel yourself just a few pence per bottle](https://www.trainerroad.com/forum/t/make-sis-beta-fuel-yourself-just-a-few-pence-per-bottle/16117)
+This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) to the conclusion that sucrose, also known as sugar, might be the best option in teams of scientific literature and cost. With an even ratio of glucose to fructose it is on the other end of the recommended spectrum, but it appears to be closer to the maximum of 0.95.
 
 ![](img/sucrose.svg "Sucrose: one glucose molecule on the left and one fructose molecule on the right")
 
@@ -75,23 +69,54 @@ I doubt one option is better than the other at this point. Get the one that work
 <!-- But the reduction in cost certainly justifies its usage -->
 
 ## Electrolytes
-The next piece to the puzzle are electrolytes. If you have ever mismanaged your electrolyte balance on a hot day, you never want to do it again. Drinking just water and replenashing electrolytes lost with in sweat. Will not end well.
+The other integral part of a bottle is electrolytes. Athletes sweat around [0.5-2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you never want to do it again. Drinking just water and not replenishing electrolytes will end in cramps and misery.
 
-- Sweat studies
-- LMNT + cost rant
-- Dr Alex Harrison
-- Salt balances bitterness and sweetness
-- Mixing JIT is better than pre-mixed.
+The [composition of sweat](pdf/sweat-composition.pdf) looks like this:
 
-LMNT
-- 1000 g salt (393 g sodium, 39.3%)
+| Element   | Concentration in mmol/l | Atomic mass in u | Concentration in mg/l |
+| --------- | ----------------------- | ---------------- | --------------------- |
+| Sodium    | 10-90                   | 22.99            | 230-2070              |
+| Chlorine  | 10-90                   | 35.45            | 355-3191              |
+| Potassium | 2-8                     | 39.1             | 78-313                |
+| Calcium   | 0.2-2                   | 40.08            | 8-80                  |
+| Magnesium | 0.02-0.4                | 24.31            | 1-10                  |
+
+The most important mineral to replenish is sodium. This can be done with salt, which is around 39% sodium, or more exotic options like trisodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [osmolarity chapter](#osmolalityosmolarity).
+
+Sweat rate and sweat sodium concentration vary from person to person. Unless you get them measured there is no way to know for sure. You can ask yourself the following questions to estimate your liquid and sodium requirement:
+
+1. **Am I a heavy sweater?** Heavy sweaters need to drink more.
+2. **Am I a salty sweater?** Salty sweaters need to consume more sodium.
+
+I am a heavy, salty sweater and aim for around 1500 mg/l of sodium.
+
+### LMNT
+But sweat contains more than just sodium. It also consists of other minerals like potassium and magnesium. If you are a podcast listener, you have probably heard of LMNT, the science-based electrolyte drink mix. Each pack contains 1000 mg sodium, 200 mg potassium and 60 mg magnesium [^lmnt].
+
+[^lmnt]: The unflavored version of LMNT costs 1.5€ per 3.5 g pack (429 €/kg). My version, which uses the same components in the same ratio, comes in at around 10 €/kg.
+
+You can make your own LMNT at home:
+
+- 1000 g sodium chloride (393 g sodium, 39.3%)
 - 150 g potassium chloride (79 g potassium, 52.4%)
 - 155 g magnesium malate (24 g magnesium, 15.5%)
 
-## Flavorings
-This is a hard one for individuals compared to companies. Flavoring are best bought in bulk to save a pretty penny and get the best result. I have though about this a lot and am in the fortunate position where I prefer sour over sweet. I love lemon/lime juice, but make fresh lemon/lime juice each time you want to go on a ride is neither cost-effective nor fun. I took a while for me to find [dehydrated lime juice](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg), which is more or less affordable at 30€/kg.
+One gram contains:
 
-<!-- Talk about dehydrated fruit powder -->
+- 300 mg sodium
+- 60 mg potassium
+- 18 mg magnesium
+
+I have been using this as the basis for my electrolytes during the last year. It worked great. Retrospectively I could reduce the amount of magnesium, because it seems to be a little too much.
+
+## Flavorings
+Flavorings are personal. I prefer sour over sweet. The acidity provided by the flavorings and the saltiness provided by the electrolytes balance the sweet sucrose solution. I found dehydrated fruit powders to work the best. I used [lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg) for a long time and love the taste.  Unfortunately it is quite pricey, so I did some research and came up with a [replacement](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
+
+- 8 parts citric acid
+- 4 parts malic acid
+- 1 part tartaric acid
+
+It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
 
 ## Osmolality/Osmolarity
 <!-- Osmolarity in mOsm/l = Concentration in g/l × (1 / molar mass in g/mol) × Osm/mol × 1000 -->
@@ -185,14 +210,19 @@ Maltodextrin is a 100% glucose-based energy that can be fast digested in the sma
 ## Comparison
 That is. The big bottle breakdown is done.
 
-- Cost breakdown
+- 1000 ml water
+- 80 g sucrose
+- 1 tsp electrolytes
+- 1 tsp acid
+
+<!-- - Cost breakdown
 - Brands
   - Maurten
   - Ministry of Nutrition
   - Powerbar
   - Tailwind
   - HSN
-- Mention caffeine somewhere
+- Mention caffeine somewhere -->
 
 | Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
@@ -201,4 +231,10 @@ That is. The big bottle breakdown is done.
 | [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) | 6€          | 120€               | 1440€             |
 | [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             | 6.71€       | 134.11€            | 1609.37€          |
 
+<!-- 1kg = 1€ -->
+
 ## Appendix: The Squeeze Bottle
+- 150 g sugar
+- 75 ml water
+- 1 tsp electrolytes
+- 1 tsp acid
