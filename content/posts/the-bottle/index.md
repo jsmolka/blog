@@ -124,7 +124,7 @@ It tastes good and provides the much needed acidity. That way I can use the lime
 
 Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passage results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity [^osmolarity].
 
-[^osmolarity]: Osmolarity in mOsm/l = Concentration in g/l × (1 / molar mass in g/mol) × Osm/mol × 1000
+[^osmolarity]: Osmolarity in mOsm/l = Concentration in g/l / molar mass in g/mol × Osm/mol × 1000
 
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
@@ -194,6 +194,7 @@ Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodiu
 ### GI Distress
 
 - https://pubmed.ncbi.nlm.nih.gov/1338583/
+- Affects of tonicity on gut
 
 ## Comparison
 That is. The big bottle breakdown is done.
