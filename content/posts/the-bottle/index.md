@@ -191,10 +191,20 @@ Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodiu
 | 5.00 g/l LMNT (3.82 g/l Na + 0.57 g/l K + 0.59 g/l Mg) | 130 + 15 + 8 = 153   |
 | 5.55 g/l trisodium citrate                             | 86                   |
 
-### GI Distress
+### Tonicity
+The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at 306 mOsm/l:
 
-- https://pubmed.ncbi.nlm.nih.gov/1338583/
-- Affects of tonicity on gut
+- **Hypotonic**: lower osmolarity than plasma.
+- **Isotonic**: same osmolarity as plasma.
+- **Hypertonic**: higher osmolarity than plasma.
+
+A well prepared bottle is unlikely to be hypo- or isotonic, but preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration and prevents you from feeling hydrated even though you are drinking fluid.
+
+A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relation between GI complaints and dietary intake in triathletes and came to the conclusion, that ingesting highly hypertonic beverages correlated with more GI distress. Unfortunately, the authors did not came up with a limit, even though the study is often quoted with a warning to exceed 500 mOsm/l. I think this is highly personal, but increasing the tonicity too much is asking bloating, cramping and diarrhea.
+
+- Explain correlation between too much water in gut and watery diarrhea?
+  - https://oley.org/page/SBS_QuenchingThirst/Nutrition-and-You-Short-Bowel-Syndrome-.htm#:~:text=Hyperosmolar%20solutions%20contain%20many%20particles,drink%3B%20this%20causes%20watery%20diarrhea
+  - Hyperosmolar solutions contain many particles of glucose and little to no sodium. They are very concentrated and cause fluid to be pulled into the intestinal tract to dilute the concentration of the drink; this causes watery diarrhea. Examples of hyperosmolar beverages include: fruit juices, regular soda pop, lemonade, and fruit smoothies.
 
 ## Comparison
 That is. The big bottle breakdown is done.
@@ -222,7 +232,9 @@ That is. The big bottle breakdown is done.
 
 <!-- 1kg = 1€ -->
 
-## Appendix: The Squeeze Bottle
+## Appendix
+
+### The Squeeze Bottle
 - 150 g sugar
 - 75 ml water
 - 1 tsp electrolytes
