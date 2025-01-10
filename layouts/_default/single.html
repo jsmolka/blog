@@ -10,7 +10,7 @@
           {{ end }}
           {{ if $showMeta }}
             <div class="meta">
-              <p>{{ partial "date" . }} · {{ .ReadingTime }} min</p>
+              <div>{{ partial "date" . }} · <span title="{{ .WordCount }} words">{{ .ReadingTime }} min</span></div>
               {{ with .Params.Tags }}
                 <nav>
                   <ul class="tags">
