@@ -120,15 +120,50 @@ It tastes good and provides the much needed acidity. That way I can use the lime
 
 ## Osmolality/Osmolarity
 
+> Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
+>
+> <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
+
+Osmolality and osmolarity are calculated using `O = c / M * n` [^n], where:
+
+[^n]: The formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterises the deviation of a solvent from ideal behaviour
+
+- `c` is the solutes [mass fraction](https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)) in g/kg (osmolality) or [mass concentration](https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)) in g/l (osmolarity). Higher concentrations result in higher osmolalities and osmolarities.
+- `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol. Molecules with lower molar masses result in higher osmolalities and osmolarities.
+- `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate in solution into their ions and therefore contribute multiple particles per molecule. More particles result in higher osmolalities and osmolarities.
+
+| Name            | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
+| --------------- | ----------------------------------------------------- | ------------------ | --------------------------------------------------------------------------- |
+| Glucose         | C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>              | 180.16             | 1                                                                           |
+| Sucrose         | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>            | 342.3              | 1                                                                           |
+| Sodium chloride | NaCl                                                  | 58.44              | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
+| Sodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
+
+It is possible to convert between osmolality and osmolarity using `R = L * D`, where:
+
+- `R` is the osmola**R**ity in Osm/l.
+- `L` is the osmola**L**ity in Osm/kg.
+- `D` is the density in kg/l.
+
+There are some examples for popular soft and sports drinks:
+
+xxx
+
+- Measured or calculated (show formula for both)
+- Mention relation with density
+  - Show conversion formula
+  - If something is solved in water, the density of the solution get higher
+    - Show some density values
+  - Therefore the density is always greater than zero, therefore osmolarity is always greater than osmolality
+- Show reference table
+
+I decided to use osmolarity instead of osmolality for this chapter, because in the cycling terms you usually have a bottle with a certain volume. You then add carbohydrates, electrolytes and flavorings and fill it to the top with water. The resulting concentrations are measured in g/l, which itself then results in mOsm/l, which is osmolarity.
+
 ### Carbohydrates
 
 Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passage results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity [^osmolarity].
 
 [^osmolarity]: Osmolarity in mOsm/l = Concentration in g/l / molar mass in g/mol × Osm/mol × 1000
-
-> Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
->
-> <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
 
 A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
 
@@ -187,8 +222,8 @@ Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodiu
 
 | Solution                                               | Osmolarity in mOsm/l |
 | ------------------------------------------------------ | -------------------- |
-| 3.82 g/l sodium chloride                               | 130                  |
-| 5.00 g/l LMNT (3.82 g/l Na + 0.57 g/l K + 0.59 g/l Mg) | 130 + 15 + 8 = 153   |
+| 3.82 g/l sodium chloride                               | 132                  |
+| 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) | 132 + 15 + 7 = 154   |
 | 5.55 g/l trisodium citrate                             | 86                   |
 
 ### Tonicity
@@ -198,9 +233,15 @@ The last reason to care about the osmolarity of your bottle is tonicity. It is d
 - **Isotonic**: same osmolarity as plasma.
 - **Hypertonic**: higher osmolarity than plasma.
 
-A well prepared bottle is unlikely to be hypo- or isotonic, but preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration and prevents you from feeling hydrated even though you are drinking fluid.
+![](img/tonicity.svg "Tonicity [mOsm/l]")
+
+A well prepared bottle is unlikely to be hypo- or isotonic, but preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration (hypernatremia) and prevents you from feeling hydrated even though you are drinking fluid.
 
 A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relation between GI complaints and dietary intake in triathletes and came to the conclusion, that ingesting highly hypertonic beverages correlated with more GI distress. Unfortunately, the authors did not came up with a limit, even though the study is often quoted with a warning to exceed 500 mOsm/l. I think this is highly personal, but increasing the tonicity too much is asking bloating, cramping and diarrhea.
+
+At one point it was 23:00 on a Monday. I opened a website and was greeted by a perfect `rgb(0, 0, 255)` background with the title: "Evaluation of Diarrhea", a 129 page presentation and I though to myself: What the fuck am I doing. I went to bed that night with no clear value but a warning: don't go too hypertonic.
+
+In a [recent episode of the Drive](https://www.youtube.com/watch?v=QpK3jXLwz_Y), Peter Attia interviewed Olav Aleksander Bu, the coach of Blumenfeld. There he mentions 120 g/l of pure glucose/fructose.
 
 - Explain correlation between too much water in gut and watery diarrhea?
   - https://oley.org/page/SBS_QuenchingThirst/Nutrition-and-You-Short-Bowel-Syndrome-.htm#:~:text=Hyperosmolar%20solutions%20contain%20many%20particles,drink%3B%20this%20causes%20watery%20diarrhea
@@ -235,7 +276,11 @@ That is. The big bottle breakdown is done.
 ## Appendix
 
 ### The Squeeze Bottle
+The much smaller brother of the bottle.
+
 - 150 g sugar
 - 75 ml water
 - 1 tsp electrolytes
 - 1 tsp acid
+
+### Companion App
