@@ -174,7 +174,7 @@
 
   sub,
   sup {
-    font-size: inherit;
+    font-size: var(--text-sm);
   }
 
   sub[id^='fnref'],
