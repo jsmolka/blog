@@ -119,18 +119,17 @@ Flavorings are personal. I prefer sour over sweet. The acidity provided by the f
 It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
 
 ## Osmolality/Osmolarity
-
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
 
 Osmolality and osmolarity are calculated using `O = c / M * n` [^n], where:
 
-[^n]: The formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterises the deviation of a solvent from ideal behaviour
+[^n]: The complete formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterises the deviation of a solvent from ideal behavior. But that is taking it too far for this post.
 
 - `c` is the solutes [mass fraction](https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)) in g/kg (osmolality) or [mass concentration](https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)) in g/l (osmolarity). Higher concentrations result in higher osmolalities and osmolarities.
 - `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol. Molecules with lower molar masses result in higher osmolalities and osmolarities.
-- `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate in solution into their ions and therefore contribute multiple particles per molecule. More particles result in higher osmolalities and osmolarities.
+- `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate into their ions in solution and therefore contribute multiple particles per molecule. More particles result in higher osmolalities and osmolarities.
 
 | Name            | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
 | --------------- | ----------------------------------------------------- | ------------------ | --------------------------------------------------------------------------- |
@@ -145,27 +144,32 @@ It is possible to convert between osmolality and osmolarity using `R = L * D`, w
 - `L` is the osmola**L**ity in Osm/kg.
 - `D` is the density in kg/l.
 
-There are some examples for popular soft and sports drinks:
+Here are some examples for popular soft and sports drinks:
 
-xxx
+<figure>
 
-- Measured or calculated (show formula for both)
-- Mention relation with density
-  - Show conversion formula
-  - If something is solved in water, the density of the solution get higher
-    - Show some density values
-  - Therefore the density is always greater than zero, therefore osmolarity is always greater than osmolality
-- Show reference table
+| Name        | Osmolality [mOsm/kg] | Density [kg/l] | Osmolarity [mOsm/l] |
+| ----------- | -------------------- | -------------- | ------------------- |
+| Coke        | 493                  | 1.04           | 513                 |
+| Fanta       | 415                  | 1.04           | 432                 |
+| Fruit juice | 724                  | 1.06           | 767                 |
+| Gatorade    | 353                  | 1.03           | 363                 |
+| Isostar     | 312                  | 1.03           | 320                 |
+| Powerade    | 368                  | 1.03           | 378                 |
+| Red Bull    | 601                  | 1.04           | 625                 |
+| Sprite      | 479                  | 1.04           | 498                 |
+  <figcaption>
 
-I decided to use osmolarity instead of osmolality for this chapter, because in the cycling terms you usually have a bottle with a certain volume. You then add carbohydrates, electrolytes and flavorings and fill it to the top with water. The resulting concentrations are measured in g/l, which itself then results in mOsm/l, which is osmolarity.
+  Based on a [study by Mettler et al.](pdf/drink-osmolarities.pdf) and [densities](https://kg-m3.com/)
+  </figcaption>
+</figure>
+
+To prevent confusion, I will only use osmolarity from now on. That is because in cycling you usually have a bottle with a certain volume. You then add CHO, electrolytes and flavorings and fill it up with water. The solvent concentrations are measured in g/l, which itself then results in Osm/l, which is osmolarity.
 
 ### Carbohydrates
+With the theory out of the way, let's continue with something practical. Glucose and fructose are the main sources of CHO. The former is digested in the small intestine while the latter is digested in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
 
-Glucose is digested in the small intestine and fructose is digested in the liver. Both must pass through the stomach to reach their destination. Therefore faster passage results in a more immediate and higher energy availability during exercise. A key factor in that is osmolality/osmolarity [^osmolarity].
-
-[^osmolarity]: Osmolarity in mOsm/l = Concentration in g/l / molar mass in g/mol × Osm/mol × 1000
-
-A 1995 [study by Vist and Maughan](pdf/osmolality.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
+A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
 
 1. 40 g/l glucose, 222 mOsm/l (empty rectangle)
 2. 40 g/l maltodextrin (n = 5) [^maltodextrin], 48 mOsm/l (filled rectangle)
@@ -244,11 +248,11 @@ At one point it was 23:00 on a Monday. I opened a website and was greeted by a p
 In a [recent episode of the Drive](https://www.youtube.com/watch?v=QpK3jXLwz_Y), Peter Attia interviewed Olav Aleksander Bu, the coach of Blumenfeld. There he mentions 120 g/l of pure glucose/fructose.
 
 - Explain correlation between too much water in gut and watery diarrhea?
-  - https://oley.org/page/SBS_QuenchingThirst/Nutrition-and-You-Short-Bowel-Syndrome-.htm#:~:text=Hyperosmolar%20solutions%20contain%20many%20particles,drink%3B%20this%20causes%20watery%20diarrhea
+  - https://oley.org/page/SBS_QuenchingThirst/Nutrition-and-You-Short-Bowel-Syndrome-.htm
   - Hyperosmolar solutions contain many particles of glucose and little to no sodium. They are very concentrated and cause fluid to be pulled into the intestinal tract to dilute the concentration of the drink; this causes watery diarrhea. Examples of hyperosmolar beverages include: fruit juices, regular soda pop, lemonade, and fruit smoothies.
 
-## Comparison
-That is. The big bottle breakdown is done.
+## Conclusion
+That is, more than you probably ever wanted to know about carbohydrates, electrolytes and osmolality. The big bottle breakdown is done.
 
 - 1000 ml water
 - 80 g sucrose
