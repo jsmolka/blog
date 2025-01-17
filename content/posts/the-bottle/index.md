@@ -128,7 +128,7 @@ Osmolality and osmolarity are calculated using `O = c / M * n` [^n], where:
 [^n]: The complete formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterises the deviation of a solvent from ideal behavior. But that is taking it too far for this post.
 
 - `c` is the solutes [mass fraction](https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)) in g/kg (osmolality) or [mass concentration](https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)) in g/l (osmolarity). Higher concentrations result in higher osmolalities and osmolarities.
-- `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol. Molecules with lower molar masses result in higher osmolalities and osmolarities.
+- `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol. Molecules with fewer and/or lighter atoms result in higher osmolalities and osmolarities.
 - `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate into their ions in solution and therefore contribute multiple particles per molecule. More particles result in higher osmolalities and osmolarities.
 
 | Name            | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
@@ -144,48 +144,47 @@ It is possible to convert between osmolality and osmolarity using `R = L * D`, w
 - `L` is the osmola**L**ity in Osm/kg.
 - `D` is the density in kg/l.
 
-Here are some examples for popular soft and sports drinks:
-
-<figure>
-
-| Name        | Osmolality [mOsm/kg] | Density [kg/l] | Osmolarity [mOsm/l] |
-| ----------- | -------------------- | -------------- | ------------------- |
-| Coke        | 493                  | 1.04           | 513                 |
-| Fanta       | 415                  | 1.04           | 432                 |
-| Fruit juice | 724                  | 1.06           | 767                 |
-| Gatorade    | 353                  | 1.03           | 363                 |
-| Isostar     | 312                  | 1.03           | 320                 |
-| Powerade    | 368                  | 1.03           | 378                 |
-| Red Bull    | 601                  | 1.04           | 625                 |
-| Sprite      | 479                  | 1.04           | 498                 |
-  <figcaption>
-
-  Based on a [study by Mettler et al.](pdf/drink-osmolarities.pdf) and [densities](https://kg-m3.com/)
-  </figcaption>
-</figure>
-
-To prevent confusion, I will only use osmolarity from now on. That is because in cycling you usually have a bottle with a certain volume. You then add CHO, electrolytes and flavorings and fill it up with water. The solvent concentrations are measured in g/l, which itself then results in Osm/l, which is osmolarity.
+To prevent confusion, I will only use osmolarity from now on. That is because in cycling you usually have a bottle with a certain volume. You then add carbohydrates, electrolytes and flavorings and fill it up with water. The solvent concentrations are measured in g/l, which itself then results in Osm/l, which is osmolarity.
 
 ### Carbohydrates
+Before we start with the actual chapter, let's quickly talk about maltodextrin. It's the main source of glucose in cycling and unique, because it is the only carbohydrate we will be talking about that can have different chain lengths. Its chemical formula is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where `n` defines the number of glucose units is 2 < `n` < 20.
+
+`DE = 100 * (M_glucose / M_polymer)`
+
+If you buy maltodextrin in a commercial setting, you will often
+
+
+The chemical formula of maltodextrin is. Based on that we can calculate the molar mass and the [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) DE = 100 × (M<sub>glucose</sub> / M<sub>polymer</sub>):
+
+| n   | Chemical formula                              | Molar mass [g/mol] | DE [%] |
+| --- | --------------------------------------------- | ------------------ | ------ |
+| 3 | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub> | 504.44 | 35.7 |
+| 5 | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub> | 828.72 | 21.73 |
+| 10 | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub> | 1639.43 | 10.99 |
+| 15 | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub> | 2450.13 | 7.35 |
+| 19 | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69 | 5.81 |
+| 20 | C<sub>120</sub>H<sub>202</sub>O<sub>101</sub> | 3260.84 | 5.52 |
+| 25 | C<sub>150</sub>H<sub>252</sub>O<sub>126</sub> | 4071.54 | 4.42 |
+
+- Main sources are glucose and fructose
+  - "Pure" glucose comes as dextrose or maltodextrin
+    - Metabolized in the small intestine
+    - Dextrose is just pure glucose with a different name
+    - Maltodextrin is a little more complicated
+      - Commercially available at DE 5-25, officially DE 3-20
+      - Consumer products are usually not labeled (try to find average)
+      - Show table with formula, molar mass, DE, and osmolarity at 100 g/l for some n
+  - "Pure" fructose comes as that
+    - Metabolized in the liver
+
 With the theory out of the way, let's continue with something practical. Glucose and fructose are the main sources of CHO. The former is digested in the small intestine while the latter is digested in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
 
 A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
 
 1. 40 g/l glucose, 222 mOsm/l (empty rectangle)
-2. 40 g/l maltodextrin (n = 5) [^maltodextrin], 48 mOsm/l (filled rectangle)
+2. 40 g/l maltodextrin (n = 5), 48 mOsm/l (filled rectangle)
 3. 188 g/l glucose, 1043 mOsm/l (empty circle)
 4. 188 g/l maltodextrin (n = 5), 227 mOsm/l (filled triangle)
-
-[^maltodextrin]:
-    The chemical formula of maltodextrin is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where 2 < n < 20. Based on that we can calculate the molar mass and the [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) DE = 100 × (M<sub>glucose</sub> / M<sub>polymer</sub>):
-
-    | n   | Chemical formula                             | Molar mass in g/mol | DE in % |
-    | --- | -------------------------------------------- | ------------------- | ------- |
-    | 3   | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>   | 504.44              | 36      |
-    | 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>   | 828.68              | 22      |
-    | 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  | 1639.35             | 11      |
-    | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  | 2450.02             | 7       |
-    | 19  | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69             | 6       |
 
 - ![](img/emptying-fluid.png "Total volume remaining in the stomach after ingesting 600 ml of test drink")
 - ![](img/emptying-cho.png "Total amount of CHO delivered to the small intestine after ingesting 600 ml of test drink")
@@ -231,13 +230,34 @@ Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodiu
 | 5.55 g/l trisodium citrate                             | 86                   |
 
 ### Tonicity
+<!-- Recalc value -->
 The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at 306 mOsm/l:
 
 - **Hypotonic**: lower osmolarity than plasma.
 - **Isotonic**: same osmolarity as plasma.
 - **Hypertonic**: higher osmolarity than plasma.
 
-![](img/tonicity.svg "Tonicity [mOsm/l]")
+![](img/tonicity.svg "Osmolarity [mOsm/l]")
+
+Here are some examples for popular soft and sports drinks:
+
+<figure>
+
+| Name        | Osmolality [mOsm/kg] | Density [kg/l] | Osmolarity [mOsm/l] |
+| ----------- | -------------------- | -------------- | ------------------- |
+| Coke        | 493                  | 1.04           | 513                 |
+| Fanta       | 415                  | 1.04           | 432                 |
+| Fruit juice | 724                  | 1.06           | 767                 |
+| Gatorade    | 353                  | 1.03           | 363                 |
+| Isostar     | 312                  | 1.03           | 320                 |
+| Powerade    | 368                  | 1.03           | 378                 |
+| Red Bull    | 601                  | 1.04           | 625                 |
+| Sprite      | 479                  | 1.04           | 498                 |
+  <figcaption>
+
+  Based on a [study by Mettler et al.](pdf/drink-osmolarities.pdf) and [densities](https://kg-m3.com/)
+  </figcaption>
+</figure>
 
 A well prepared bottle is unlikely to be hypo- or isotonic, but preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration (hypernatremia) and prevents you from feeling hydrated even though you are drinking fluid.
 
