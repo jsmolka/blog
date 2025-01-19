@@ -166,9 +166,9 @@ Here is a table that shows the correlation between the chain length `n` and the 
 If we assume smaller osmolarities to be superior (foreshadowing), then we would want to go for a maltodextrin with a long chain length/low DE. Unfortunately it can be quite tricky to find as consumer grade products, because they don't need to be labeled and usually aren't. The typical rage of commercial maltodextrin I've seen online lies between 5% and 20%.
 
 ### Carbohydrates
-With the theory out of the way, let's continue with something practical. Glucose and fructose are the main sources of CHO. The former is digested in the small intestine while the latter is digested in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
+With the theory out of the way, let's continue with something practical. Glucose and fructose are the main sources of carbohydrates. The former is digested in the small intestine while the latter is digested in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
 
-A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
+A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and carbohydrate content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing carbohydrate sources and concentrations:
 
 1. 40 g/l glucose, 222 mOsm/l (empty rectangle)
 2. 40 g/l maltodextrin (n = 5), 48 mOsm/l (filled rectangle)
@@ -176,29 +176,38 @@ A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of o
 4. 188 g/l maltodextrin (n = 5), 227 mOsm/l (filled triangle)
 
 - ![](img/emptying-fluid.png "Total volume remaining in the stomach after ingesting 600 ml of test drink")
-- ![](img/emptying-cho.png "Total amount of CHO delivered to the small intestine after ingesting 600 ml of test drink")
+- ![](img/emptying-cho.png "Total amount of carbohydrates delivered to the small intestine after ingesting 600 ml of test drink")
 {.fluent}
 
 The key takeaways from the study are the following:
 
 1. Dilute solutions are emptied faster than concentrated solutions.
 2. If two solutions have the same concentration, the one with less osmolarity is emptied faster.
+3. Concentrated solutions deliver more carbohydrates to the small intestine in the same time frame.
 
-The first one can be applied universally. Dilute the CHO and electrolytes in your bottle as much as possible/practical. The second one informs the source of CHO in the bottle. Lets say we go for a concentration of 80 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
+The first one can be applied universally. Dilute the carbohydrates and electrolytes in your bottle as much as possible/practical. The second one informs the source of carbohydrates in the bottle. Lets say we go for a concentration of 100 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
 
-| Solution                                       | Osmolarity in mOsm/l |
+| Solution                                       | Osmolarity [mOsm/l] |
 | ---------------------------------------------- | -------------------- |
-| 40 g/l maltodextrin (n = 5) + 40 g/l fructose  | 48 + 222 = 270       |
-| 40 g/l maltodextrin (n = 19) + 40 g/l fructose | 13 + 222 = 235       |
-| 80 g/l sucrose                                 | 233                  |
+| 50 g/l maltodextrin (n = 10) + 50 g/l fructose | 30 + 278 = 308       |
+| 50 g/l maltodextrin (n = 15) + 50 g/l fructose | 20 + 278 = 298       |
+| 50 g/l maltodextrin (n = 19) + 50 g/l fructose | 16 + 278 = 294       |
+| 100 g/l sucrose                                | 292                  |
 
-Sucrose comes out on top again. If you prefer a 2:1 ratio it might make sense to use a maltodextrin fructose mixture due to its reduced osmolarity:
+All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long chain version.
 
-| Solution                                       | Osmolarity in mOsm/l |
-| ---------------------------------------------- | -------------------- |
-| 60 g/l maltodextrin (n = 5) + 30 g/l fructose  | 72 + 167 = 239       |
-| 60 g/l maltodextrin (n = 19) + 30 g/l fructose | 19 + 167 = 186       |
-| 90 g/l sucrose                                 | 263                  |
+The same thing applies when going for a more traditional 2:1 ratio:
+
+| Solution                                       | Osmolarity [mOsm/l] |
+| ---------------------------------------------- | ------------------- |
+| 66 g/l maltodextrin (n = 10) + 33 g/l fructose | 40 + 183 = 214      |
+| 66 g/l maltodextrin (n = 15) + 33 g/l fructose | 27 + 183 = 210      |
+| 66 g/l maltodextrin (n = 19) + 33 g/l fructose | 21 + 183 = 204      |
+| 33 g/l maltodextrin (n = 10) + 66 g/l sucrose  | 20 + 193 = 213      |
+| 33 g/l maltodextrin (n = 15) + 66 g/l sucrose  | 13 + 193 = 206      |
+| 33 g/l maltodextrin (n = 19) + 66 g/l sucrose  | 11 + 193 = 203      |
+
+Again, all solutions perform roughly the same. The fructose containing carbohydrate drives most the osmolarity while maltodextrin adds next to nothing. Substituting fructose with sucrose seems to be a good choice. The fructose containing solution might be less sweet compared to pure sucrose, but that can be offset with salt and flavoring.
 
 ### Electrolytes
 Salts are a little harder to calculate, because they dissociate into their ios in solution.
@@ -275,7 +284,10 @@ That is, more than you probably ever wanted to know about carbohydrates, electro
   - Powerbar
   - Tailwind
   - HSN
-- Mention caffeine somewhere -->
+- Mention caffeine somewhere
+- Key takeaways
+  - Drink for fuel instead of hydration
+-->
 
 | Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
@@ -297,3 +309,4 @@ The much smaller brother of the bottle.
 - 1 tsp acid
 
 ### Companion App
+If you happened to read until the end, I have a little present for you.
