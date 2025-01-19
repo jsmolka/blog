@@ -146,37 +146,26 @@ It is possible to convert between osmolality and osmolarity using `R = L * D`, w
 
 To prevent confusion, I will only use osmolarity from now on. That is because in cycling you usually have a bottle with a certain volume. You then add carbohydrates, electrolytes and flavorings and fill it up with water. The solvent concentrations are measured in g/l, which itself then results in Osm/l, which is osmolarity.
 
-### Carbohydrates
-Before we start with the actual chapter, let's quickly talk about maltodextrin. It's the main source of glucose in cycling and unique, because it is the only carbohydrate we will be talking about that can have different chain lengths. Its chemical formula is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where `n` defines the number of glucose units is 2 < `n` < 20.
+### Maltodextrin
+Before we continue with the influence of osmolarity on carbohydrate absorption, let's quickly go over the most important source of glucose in cycling: maltodextrin. It's a glucose polymer produced by partial hydrolysis of starch and unique amongst all other discussed carbohydrates, because comes in different chain lengths. Its chemical formula is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where `n` defines the number of glucose units is 2 < `n` < 20 [^maltodextrin-glucose-units].
 
-`DE = 100 * (M_glucose / M_polymer)`
+[^maltodextrin-glucose-units]: I was unable to find the original source of this claim, but can be found everywhere in the literature. I am sceptical because it doesn't work out when looking at the dextrose equivalent.
 
-If you buy maltodextrin in a commercial setting, you will often
+Glucose polymers are classified by a [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) (DE). The European Union's CN code defines maltodextrin to be between 3% and 20%. Below that it is considered a starch, and above it is considered a glucose syrup. It can be calculated using `DE = 100 * (Mg / Mp)`, where `Mg` and `Mp` are the molar masses of glucose and the glucose polymer, respectively.
 
-
-The chemical formula of maltodextrin is. Based on that we can calculate the molar mass and the [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) DE = 100 × (M<sub>glucose</sub> / M<sub>polymer</sub>):
+Here is a table that shows the correlation between the chain length `n` and the DE:
 
 | n   | Chemical formula                              | Molar mass [g/mol] | DE [%] |
 | --- | --------------------------------------------- | ------------------ | ------ |
-| 3 | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub> | 504.44 | 35.7 |
-| 5 | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub> | 828.72 | 21.73 |
-| 10 | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub> | 1639.43 | 10.99 |
-| 15 | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub> | 2450.13 | 7.35 |
-| 19 | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69 | 5.81 |
-| 20 | C<sub>120</sub>H<sub>202</sub>O<sub>101</sub> | 3260.84 | 5.52 |
-| 25 | C<sub>150</sub>H<sub>252</sub>O<sub>126</sub> | 4071.54 | 4.42 |
+| 3   | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>    | 504.44             | 35.7   |
+| 5   | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>    | 828.72             | 21.73  |
+| 10  | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>   | 1639.43            | 10.99  |
+| 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>   | 2450.13            | 7.35   |
+| 19  | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub>  | 3098.69            | 5.81   |
 
-- Main sources are glucose and fructose
-  - "Pure" glucose comes as dextrose or maltodextrin
-    - Metabolized in the small intestine
-    - Dextrose is just pure glucose with a different name
-    - Maltodextrin is a little more complicated
-      - Commercially available at DE 5-25, officially DE 3-20
-      - Consumer products are usually not labeled (try to find average)
-      - Show table with formula, molar mass, DE, and osmolarity at 100 g/l for some n
-  - "Pure" fructose comes as that
-    - Metabolized in the liver
+If we assume smaller osmolarities to be superior (foreshadowing), then we would want to go for a maltodextrin with a long chain length/low DE. Unfortunately it can be quite tricky to find as consumer grade products, because they don't need to be labeled and usually aren't. The typical rage of commercial maltodextrin I've seen online lies between 5% and 20%.
 
+### Carbohydrates
 With the theory out of the way, let's continue with something practical. Glucose and fructose are the main sources of CHO. The former is digested in the small intestine while the latter is digested in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
 
 A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and CHO content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing CHO sources and concentrations:
