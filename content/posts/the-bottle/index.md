@@ -5,7 +5,7 @@ date: 2025-01-04T12:01:10+01:00
 type: post
 draft: true
 ---
-The humble water bottle, sometimes referred to as bidon, plays a vital role in cycling. It comes in a more or less standardized shape and can hold anything between 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates (CHO), electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go on a ride with just plain water. If they are unlucky, they will [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
+The water bottle is an essential cycling accessory. It comes in a more or less standardized shape and can hold anything between 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates, electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go on a ride with just plain water. If they are unlucky, they will [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
 
 On the other hand, professional teams and riders have this more or less figured out. The EF pro cycling team churns through [34,000 bottles annually](https://efprocycling.com/culture/no-more-plastic-bottles/) and estimates the whole professional peloton be somewhere in the 630,000 bottles range. Numbers like that are caused by the way bottles are used during one-day and stage races. On hot days, bottles with cold water are handed out to the riders, which then pour them over their heads to reduce their body's core temperature and thus allow for better performance on the bike. Emptied bottles, with or without CHO, are then cast to the side of the road or handed to spectators as souvenirs [^littering].
 
@@ -97,9 +97,9 @@ But sweat contains more than just sodium. It also consists of other minerals lik
 
 You can make your own LMNT at home:
 
-- 1000 g sodium chloride (393 g sodium, 39.3%)
-- 150 g potassium chloride (79 g potassium, 52.4%)
-- 150 g magnesium malate (23 g magnesium, 15.5%)
+- 1000 g sodium chloride (393 g sodium, 39.3%) <!-- 2 €/kg -->
+- 150 g potassium chloride (79 g potassium, 52.4%) <!-- 10 €/kg -->
+- 150 g magnesium malate (23 g magnesium, 15.5%) <!-- 45 €/kg -->
 
 One gram contains:
 
@@ -112,9 +112,9 @@ I have been using this as the basis for my electrolytes during the last year. It
 ## Flavorings
 Flavorings are personal. I prefer sour over sweet. The acidity provided by the flavorings and the saltiness provided by the electrolytes balance the sweet sucrose solution. I found dehydrated fruit powders to work the best. I used [lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg) for a long time and love the taste.  Unfortunately it is quite pricey, so I did some research and came up with a [replacement](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
 
-- 8 parts citric acid
-- 4 parts malic acid
-- 1 part tartaric acid
+- 8 parts citric acid <!-- 3 €/kg -->
+- 4 parts malic acid <!-- 18 €/kg -->
+- 1 part tartaric acid <!-- 15 €/kg -->
 
 It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
 
@@ -258,53 +258,49 @@ Here are some examples for popular soft and sports drinks:
 
 A well prepared bottle is unlikely to be hypo- or isotonic, because its purpose in cycling is fueling instead of hydration. But preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relation between GI complaints and dietary intake in triathletes and came to the conclusion, that ingesting highly hypertonic beverages correlated with more GI distress
 
-- Explain correlation between too much water in gut and watery diarrhea?
-  - https://oley.org/page/SBS_QuenchingThirst/Nutrition-and-You-Short-Bowel-Syndrome-.htm
-  - Hyperosmolar solutions contain many particles of glucose and little to no sodium. They are very concentrated and cause fluid to be pulled into the intestinal tract to dilute the concentration of the drink; this causes watery diarrhea. Examples of hyperosmolar beverages include: fruit juices, regular soda pop, lemonade, and fruit smoothies.
+Ingesting hypertonic solutions causes your body to draw water from the tissue and blood into the intestinal tract to dilute the concentration. This is called hypertonic dehydration or hypernatremia and prevents you from feeling hydrated even though you are drinking fluid. The diluted solution enters the bowel and if it is not fully absorbed there, water remains in the bowel which leads to a fun thing called  [osmotic diarrhea](https://en.wikipedia.org/wiki/Diarrhea#Osmotic).
 
-Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration or hypernatremia and prevents you from feeling hydrated even though you are drinking fluid. The diluted solution then enters the bowel. If the it is unable to fully absorb the solute, the remaining water wil lead to a fun thing called [osmotic diarrhea](https://en.wikipedia.org/wiki/Diarrhea#Osmotic).
-
-Understand the link between ingesting too hypertonic and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday evening (or night?). I opened a website and was greeted by a calming dark blue background titled "Evaluation of Diarrhea", a 129 page presentation and I though to myself: what the fuck am I doing here. Time to go to bed.
+Understand the link between ingesting too hypertonic solutions and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday evening (or night?). I opened a website and was greeted by a calming dark blue background titled "Evaluation of Diarrhea", a 129 page presentation and I though to myself: what the fuck am I doing here. Time to go to bed.
 
 ![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
 
-But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Most things in the body are extremely trainable and that also includes nutrient absorption. His athletes consume up to 240 g carbohydrates per hour diluted in a minimum of 1.4 to 2 liters of water.
+But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Carbohydrate absorption, like most things in the body, is extremely trainable. His athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even ration of glucose to fructose, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone.
 
+## Cost
 
-In a [recent episode of the Drive](), Peter Attia interviewed , the coach of Blumenfeld. There he mentions 120 g/l of pure glucose/fructose.
-
-## Conclusion
-That is, more than you probably ever wanted to know about carbohydrates, electrolytes and osmolality. The big bottle breakdown is done.
+Here is my bottle:
 
 - 1000 ml water
-- 80 g sucrose
-- 5 g electrolytes
-- 5 g flavorings
+- 80 g sucrose (€0.08, €1/kg)
+- 5 g electrolytes (€0.04, €8/kg)
+- 5 g flavorings (€0.05, €9/kg)
 
-<!-- - Cost breakdown
-- Brands
-  - Maurten
-  - Ministry of Nutrition
-  - Powerbar
-  - Tailwind
-  - HSN
-- Mention caffeine somewhere
-- Key takeaways
-  - Drink for fuel instead of hydration
--->
+Is much better or much worse than commercial products? Probably not. Are the minor differences? Probably. But if these minor differences are worth the major price differences is up to you to decide:
 
 | Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
-| [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 | 3.27€       | 65.43€             | 785.16€           |
-| [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     | 5.42€       | 108.48€            | 1301.76€          |
-| [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) | 6€          | 120€               | 1440€             |
-| [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             | 6.71€       | 134.11€            | 1609.37€          |
+| Mine                                                                                                   | €0.34       | €6.80              | €81.6             |
+| [HSN Evocarbs 2.0](https://www.hsnstore.eu/brands/sport-series/evocarbs-2-0)                           | €0.93       | €18.6              | €223.2            |
+| [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 | €3.51       | €70.2              | €842.4            |
+| [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     | €5.42       | €108.48            | €1301.76          |
+| [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) | €6          | €120               | €1440             |
+| [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             | €6.71       | €134.11            | €1609.37          |
 
-<!-- 1kg = 1€ -->
+## Conclusion
+That's it, more than you probably ever wanted to know about carbohydrates, electrolytes and especially osmolarity. I think the key takeaways of this post are:
+
+1. The main purpose of a bottle should be fueling and not hydration.
+2. Fuel your training accordingly.
+3. Train your body to tolerate as much carbohydrates as possible.
+4. Consume sodium based on your sweat rate and sweat sodium content. Other electrolytes are nice to have, but I don't think they are essential.
+5. Dilute the solution as much as possible/practical.
+
+Now you could go into additional things to improve performance like caffeine, but that's a topic for a different post.
 
 ## Appendix
 
 ### The (Squeeze) Bottle
+Another twist on the topic is the squeeze bottle. Usually reserved for running, where half-full (or empty depending on your view on life) bottle splash around and are annoying.
 The much smaller brother of the bottle.
 
 - 150 g sugar
