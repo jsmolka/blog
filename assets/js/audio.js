@@ -1,5 +1,5 @@
-import { isMobile } from './utils/env';
 import { intersect } from './utils/intersect';
+import { isMobile } from './utils/platform';
 import { slider } from './utils/slider';
 import { get, set } from './utils/storage';
 import { formatSeconds } from './utils/time';

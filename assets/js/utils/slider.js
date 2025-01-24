@@ -1,4 +1,4 @@
-import { clamp } from './math';
+import { clamp } from './numeric';
 
 export function slider(element) {
   const down = () => {
