@@ -34,16 +34,16 @@ The recommended CHO intake also changes based on exercise duration and intensity
 
 <figure>
 
-| Workout duration | Minimum g/h | Recommended g/h | Maximum g/h |
-| ---------------- | ----------- | --------------- | ----------- |
-| <0.5 h           | 0           | 10              | 30          |
-| 0.5-1 h          | 0           | 20              | 50          |
-| 1-1.5 h          | 20          | 30              | 70          |
-| 1.5-2 h          | 40          | 60              | 90          |
-| 2-2.5 h          | 50          | 80              | 120         |
-| 2.5-3 h          | 60          | 90              | 120-150     |
-| 3-6 h            | 75          | 100             | 120-150     |
-| >6 h             | 75          | 90              | 90          |
+| Workout duration | Minimum [g/h] | Recommended [g/h] | Maximum [g/h] |
+| ---------------- | ------------- | ----------------- | ------------- |
+| <0.5 h           | 0             | 10                | 30            |
+| 0.5-1 h          | 0             | 20                | 50            |
+| 1-1.5 h          | 20            | 30                | 70            |
+| 1.5-2 h          | 40            | 60                | 90            |
+| 2-2.5 h          | 50            | 80                | 120           |
+| 2.5-3 h          | 60            | 90                | 120-150       |
+| 3-6 h            | 75            | 100               | 120-150       |
+| >6 h             | 75            | 90                | 90            |
   <figcaption>
 
   Recommended CHO intake ([Dr. Alex Harrison](https://www.trainerroad.com/forum/t/140g-carbs-per-hour/51650/19))
@@ -73,13 +73,13 @@ The other integral part of a bottle is electrolytes. Athletes sweat around [0.5-
 
 The [composition of sweat](pdf/sweat-composition.pdf) looks like this:
 
-| Element   | Concentration in mmol/l | Atomic mass in u | Concentration in mg/l |
-| --------- | ----------------------- | ---------------- | --------------------- |
-| Sodium    | 10-90                   | 22.99            | 230-2070              |
-| Chlorine  | 10-90                   | 35.45            | 355-3191              |
-| Potassium | 2-8                     | 39.1             | 78-313                |
-| Calcium   | 0.2-2                   | 40.08            | 8-80                  |
-| Magnesium | 0.02-0.4                | 24.31            | 1-10                  |
+| Element   | Concentration [mmol/l] | Atomic mass [u] | Concentration [mg/l] |
+| --------- | ---------------------- | --------------- | -------------------- |
+| Sodium    | 10-90                  | 22.99           | 230-2070             |
+| Chlorine  | 10-90                  | 35.45           | 355-3191             |
+| Potassium | 2-8                    | 39.1            | 78-313               |
+| Calcium   | 0.2-2                  | 40.08           | 8-80                 |
+| Magnesium | 0.02-0.4               | 24.31           | 1-10                 |
 
 The most important mineral to replenish is sodium. This can be done with salt, which is around 39% sodium, or more exotic options like trisodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [osmolarity chapter](#osmolalityosmolarity).
 
@@ -99,12 +99,12 @@ You can make your own LMNT at home:
 
 - 1000 g sodium chloride (393 g sodium, 39.3%)
 - 150 g potassium chloride (79 g potassium, 52.4%)
-- 155 g magnesium malate (24 g magnesium, 15.5%)
+- 150 g magnesium malate (23 g magnesium, 15.5%)
 
 One gram contains:
 
-- 300 mg sodium
-- 60 mg potassium
+- 303 mg sodium
+- 61 mg potassium
 - 18 mg magnesium
 
 I have been using this as the basis for my electrolytes during the last year. It worked great. Retrospectively I could reduce the amount of magnesium, because it seems to be a little too much.
@@ -212,24 +212,23 @@ Again, all solutions perform roughly the same. The fructose containing carbohydr
 ### Electrolytes
 Salts are a little harder to calculate, because they dissociate into their ios in solution.
 
-| Name               | Chemical formula                                      | Molar mass in g/mol | Osm/mol |
-| ------------------ | ----------------------------------------------------- | ------------------- | ------- |
-| Sodium chloride    | NaCl                                                  | 58.44               | 2       |
-| Potassium chloride | KCl                                                   | 74.55               | 2       |
-| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38              | 2       |
-| Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07              | 4       |
+| Name               | Chemical formula                                      | Molar mass [g/mol] | Particles |
+| ------------------ | ----------------------------------------------------- | ------------------ | --------- |
+| Sodium chloride    | NaCl                                                  | 58.44              | 2         |
+| Potassium chloride | KCl                                                   | 74.55              | 2         |
+| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38             | 2         |
+| Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4         |
 
 Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodium.
 
-| Solution                                               | Osmolarity in mOsm/l |
-| ------------------------------------------------------ | -------------------- |
-| 3.82 g/l sodium chloride                               | 132                  |
-| 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) | 132 + 15 + 7 = 154   |
-| 5.55 g/l trisodium citrate                             | 86                   |
+| Solution                                               | Osmolarity [mOsm/l] |
+| ------------------------------------------------------ | ------------------- |
+| 3.82 g/l sodium chloride                               | 132                 |
+| 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) | 132 + 15 + 7 = 154  |
+| 5.55 g/l trisodium citrate                             | 86                  |
 
 ### Tonicity
-<!-- Recalc value -->
-The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at 306 mOsm/l:
+The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at ~300 mOsm/l:
 
 - **Hypotonic**: lower osmolarity than plasma.
 - **Isotonic**: same osmolarity as plasma.
@@ -257,25 +256,30 @@ Here are some examples for popular soft and sports drinks:
   </figcaption>
 </figure>
 
-A well prepared bottle is unlikely to be hypo- or isotonic, but preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration (hypernatremia) and prevents you from feeling hydrated even though you are drinking fluid.
-
-A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relation between GI complaints and dietary intake in triathletes and came to the conclusion, that ingesting highly hypertonic beverages correlated with more GI distress. Unfortunately, the authors did not came up with a limit, even though the study is often quoted with a warning to exceed 500 mOsm/l. I think this is highly personal, but increasing the tonicity too much is asking bloating, cramping and diarrhea.
-
-At one point it was 23:00 on a Monday. I opened a website and was greeted by a perfect `rgb(0, 0, 255)` background with the title: "Evaluation of Diarrhea", a 129 page presentation and I though to myself: What the fuck am I doing. I went to bed that night with no clear value but a warning: don't go too hypertonic.
-
-In a [recent episode of the Drive](https://www.youtube.com/watch?v=QpK3jXLwz_Y), Peter Attia interviewed Olav Aleksander Bu, the coach of Blumenfeld. There he mentions 120 g/l of pure glucose/fructose.
+A well prepared bottle is unlikely to be hypo- or isotonic, because its purpose in cycling is fueling instead of hydration. But preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relation between GI complaints and dietary intake in triathletes and came to the conclusion, that ingesting highly hypertonic beverages correlated with more GI distress
 
 - Explain correlation between too much water in gut and watery diarrhea?
   - https://oley.org/page/SBS_QuenchingThirst/Nutrition-and-You-Short-Bowel-Syndrome-.htm
   - Hyperosmolar solutions contain many particles of glucose and little to no sodium. They are very concentrated and cause fluid to be pulled into the intestinal tract to dilute the concentration of the drink; this causes watery diarrhea. Examples of hyperosmolar beverages include: fruit juices, regular soda pop, lemonade, and fruit smoothies.
+
+Ingesting a hypertonic solution causes your body to move water from the blood stream into the gut. It dilutes the solution to levels that allow absorption of nutrients. This is called hypertonic dehydration or hypernatremia and prevents you from feeling hydrated even though you are drinking fluid. The diluted solution then enters the bowel. If the it is unable to fully absorb the solute, the remaining water wil lead to a fun thing called [osmotic diarrhea](https://en.wikipedia.org/wiki/Diarrhea#Osmotic).
+
+Understand the link between ingesting too hypertonic and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday evening (or night?). I opened a website and was greeted by a calming dark blue background titled "Evaluation of Diarrhea", a 129 page presentation and I though to myself: what the fuck am I doing here. Time to go to bed.
+
+![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
+
+But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Most things in the body are extremely trainable and that also includes nutrient absorption. His athletes consume up to 240 g carbohydrates per hour diluted in a minimum of 1.4 to 2 liters of water.
+
+
+In a [recent episode of the Drive](), Peter Attia interviewed , the coach of Blumenfeld. There he mentions 120 g/l of pure glucose/fructose.
 
 ## Conclusion
 That is, more than you probably ever wanted to know about carbohydrates, electrolytes and osmolality. The big bottle breakdown is done.
 
 - 1000 ml water
 - 80 g sucrose
-- 1 tsp electrolytes
-- 1 tsp acid
+- 5 g electrolytes
+- 5 g flavorings
 
 <!-- - Cost breakdown
 - Brands
@@ -300,7 +304,7 @@ That is, more than you probably ever wanted to know about carbohydrates, electro
 
 ## Appendix
 
-### The Squeeze Bottle
+### The (Squeeze) Bottle
 The much smaller brother of the bottle.
 
 - 150 g sugar
