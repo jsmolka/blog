@@ -93,13 +93,13 @@ I am a heavy, salty sweater and aim for around 1500 mg/l of sodium.
 ### LMNT
 But sweat contains more than just sodium. It also consists of other minerals like potassium and magnesium. If you are a podcast listener, you have probably heard of LMNT, the science-based electrolyte drink mix. Each pack contains 1000 mg sodium, 200 mg potassium and 60 mg magnesium [^lmnt].
 
-[^lmnt]: The unflavored version of LMNT costs 1.5€ per 3.5 g pack (429 €/kg). My version, which uses the same components in the same ratio, comes in at around 10 €/kg.
+[^lmnt]: The unflavored version of LMNT costs €1.5 per 3.5 g pack (€429/kg). My version, which uses the same components in the same ratio, comes in at around €8/kg. The price some people are willing to pay for this stuff is insane.
 
 You can make your own LMNT at home:
 
-- 1000 g sodium chloride (393 g sodium, 39.3%) <!-- 2 €/kg -->
-- 150 g potassium chloride (79 g potassium, 52.4%) <!-- 10 €/kg -->
-- 150 g magnesium malate (23 g magnesium, 15.5%) <!-- 45 €/kg -->
+- 1000 g sodium chloride (393 g sodium, 39.3%) <!-- €2/kg -->
+- 150 g potassium chloride (79 g potassium, 52.4%) <!-- €10/kg -->
+- 150 g magnesium malate (23 g magnesium, 15.5%) <!-- €45/kg -->
 
 One gram contains:
 
@@ -112,9 +112,9 @@ I have been using this as the basis for my electrolytes during the last year. It
 ## Flavorings
 Flavorings are personal. I prefer sour over sweet. The acidity provided by the flavorings and the saltiness provided by the electrolytes balance the sweet sucrose solution. I found dehydrated fruit powders to work the best. I used [lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg) for a long time and love the taste.  Unfortunately it is quite pricey, so I did some research and came up with a [replacement](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
 
-- 8 parts citric acid <!-- 3 €/kg -->
-- 4 parts malic acid <!-- 18 €/kg -->
-- 1 part tartaric acid <!-- 15 €/kg -->
+- 8 parts citric acid <!-- €3/kg -->
+- 4 parts malic acid <!-- €18/kg -->
+- 1 part tartaric acid <!-- €15/kg -->
 
 It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
 
@@ -209,15 +209,17 @@ The same thing applies when going for a more traditional 2:1 ratio:
 
 Again, all solutions perform roughly the same. The fructose containing carbohydrate drives most the osmolarity while maltodextrin adds next to nothing. Substituting fructose with sucrose seems to be a good choice. The fructose containing solution might be less sweet compared to pure sucrose, but that can be offset with salt and flavoring.
 
-### Electrolytes
-Salts are a little harder to calculate, because they dissociate into their ios in solution.
+This chapter turned out to be a little different than I expected. I thought I could come up with a simple answer to prefer solution A over solution B, but as demonstrated, if you want a certain glucose to fructose ratio, you will have to put up with a certain osmolarity. You can dilute the solution to reduce it.
 
-| Name               | Chemical formula                                      | Molar mass [g/mol] | Particles |
-| ------------------ | ----------------------------------------------------- | ------------------ | --------- |
-| Sodium chloride    | NaCl                                                  | 58.44              | 2         |
-| Potassium chloride | KCl                                                   | 74.55              | 2         |
-| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38             | 2         |
-| Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4         |
+### Electrolytes
+Salts are a little harder to calculate, because they dissociate into their ions in solution.
+
+| Name               | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
+| ------------------ | ----------------------------------------------------- | ------------------ | --------------------------------------------------------------------------- |
+| Sodium chloride    | NaCl                                                  | 58.44              | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
+| Potassium chloride | KCl                                                   | 74.55              | 2 (K<sup>+</sup> + Cl<sup>-</sup>)                                          |
+| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38             | 2 (Mg<sup>2+</sup> + C<sub>4</sub>H<sub>4</sub>O<sub>5</sub><sup>2-</sup>)  |
+| Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
 
 Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodium.
 
@@ -226,6 +228,8 @@ Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodiu
 | 3.82 g/l sodium chloride                               | 132                 |
 | 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) | 132 + 15 + 7 = 154  |
 | 5.55 g/l trisodium citrate                             | 86                  |
+
+The resulting osmolarities are insane. 4 g of sodium chloride (137 mOsm/l) contribute almost as much as 50 g of sucrose (146 mOsm/l), so you really have to be careful not to add too much salt to your solution.
 
 ### Tonicity
 The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at ~300 mOsm/l:
