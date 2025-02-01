@@ -5,18 +5,18 @@ date: 2025-01-04T12:01:10+01:00
 type: post
 draft: true
 ---
-The water bottle is an essential cycling accessory. It comes in a more or less standardized shape and can hold anything between 500 to 1000 ml of fluid, which tends to be a mixture of water, carbohydrates, electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go on a ride with just plain water. If they are unlucky, they will [hit a wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
+The water bottle is an essential cycling accessory. It comes in a more or less standardized shape and can hold anything from 500 to 1000 ml of liquid, usually a mixture of water, carbohydrates, electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go for a ride with just plain water. If they are unlucky, they will [hit the wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
 
-On the other hand, professional teams and riders have this more or less figured out. The EF pro cycling team churns through [34,000 bottles annually](https://efprocycling.com/culture/no-more-plastic-bottles/) and estimates the whole professional peloton be somewhere in the 630,000 bottles range. Numbers like that are caused by the way bottles are used during one-day and stage races. On hot days, bottles with cold water are handed out to the riders, which then pour them over their heads to reduce their body's core temperature and thus allow for better performance on the bike. Emptied bottles, with or without CHO, are then cast to the side of the road or handed to spectators as souvenirs [^littering].
+Professional teams, on the other hand, have this more or less figured out. The EF pro cycling team churns through [34,000 bottles annually](https://efprocycling.com/culture/no-more-plastic-bottles/) and estimates the whole professional peloton be somewhere around 630,000 bottles. Numbers like that are caused by the way bottles are used during one-day and stage races. On hot days, bottles with cold water are handed out to the riders, which then pour them over their heads to reduce their body's core temperature and thus allow for better performance on the bike. Emptied bottles, with or without carbohydrates, are then cast to the side of the road or handed out to spectators as souvenirs [^littering].
 
 [^littering]:
-    In 2021, the UCI cracked down on littering.
+    In 2021, the UCI cracked down on littering:
 
     > Riders may not jettison food, bonk-bags, feeding bottles, clothes, etc. outside of the litter zones provided by the organiser. The rider must safely and exclusively deposit their waste on the sides of the road in the litter zones provided by the organiser.
     >
     > <cite>UCI regulation 2.2.025</cite>
 
-    The rule explicitly prohibited riders from handing bottles to spectators. After a few fines and outrage from the public, the UCI added a special provision.
+    The rule prohibited riders from handing out bottles to spectators. After a few fines and outrage from the public, the UCI added a special provision:
 
     > Riders are only permitted to give their water bottles to spectators on climbs in the last 50 kilometres of the event or stages. Riders must ensure that the throwing of their water bottles to the public does not present any danger [...].
     >
@@ -25,12 +25,12 @@ On the other hand, professional teams and riders have this more or less figured 
 
 ![](img/mvdp.jpg "Mathieu van der Poel handing out a bottle to a spectator (© Josse Wester)")
 
-Most teams have a nutrition sponsor that provides bars, gels and drink mixes for bottles. This post is supposed to be a breakdown of popular brands and a reflection on the mix and method I ended up with.
+Most professional teams have a nutrition sponsor that provides bars, gels and drink mixes for bottles. This article will be a breakdown of what and how much should go into a bottle. At the end, I will suggest a cheaper alternative to the, in my opinion overpriced, popular nutrition brands and compare the cost over the course of a year.
 
 ## Carbohydrates
-Gone are the days of training with just water. Todays professional athletes push the limit of their gut as much as the limit of their legs. Absorption rates of [150 grams per hour](https://www.trainerroad.com/blog/how-to-use-carbs-for-maximum-performance/) are not unheard of and require nutritional training. Gradually increasing CHO intake between training sessions accustoms the gut to a more intense fueling strategy. Experimenting with a higher than usual intake during a race might end it prematurely on the toilet instead of the finish line. The upper limit without gastrointestinal distress appears to be unknown and most likely varies from person to person.
+Gone are the days of training with just water. Today's professional athletes push the limit of their gut as much as the limit of their legs. Absorption rates of [150 grams per hour](https://www.trainerroad.com/blog/how-to-use-carbs-for-maximum-performance/) are not uncommon and require nutritional training. Gradually increasing carbohydrate intake between training sessions accustoms the gut to a more intense fueling strategy. Experimenting with a higher than usual intake on race day might end it prematurely on the toilet instead of the finish line.
 
-The recommended CHO intake also changes based on exercise duration and intensity.
+The recommended carbohydrate intake varies based on exercise duration and intensity:
 
 <figure>
 
@@ -46,21 +46,21 @@ The recommended CHO intake also changes based on exercise duration and intensity
 | >6 h             | 75            | 90                | 90            |
   <figcaption>
 
-  Recommended CHO intake ([Dr. Alex Harrison](https://www.trainerroad.com/forum/t/140g-carbs-per-hour/51650/19))
+  Recommended carbohydrate intake by [Dr. Alex Harrison](https://www.trainerroad.com/forum/t/140g-carbs-per-hour/51650/19)
   </figcaption>
 </figure>
 
-High absorption rates are achieved by a mix of glucose and fructose, which are metabolized by different pathways in the body and can thus be stacked on top of each other. In 2013, a [study by O'Brien et al.](pdf/ratio.pdf) explored the optimal ratio of glucose and fructose and arrived at the following conclusion:
+High absorption rates are achieved by mixing glucose and fructose, which are metabolized by different pathways in the body and can thus be stacked on top of each other. In 2013, a [study by O'Brien et al.](pdf/glucose-fructose-ratio.pdf) investigated the optimal glucose/fructose ratio and arrived at the following conclusion:
 
 > Modeling suggested fructose–maltodextrin–glucose ratios of between 0.8 to unity are oxidized with highest efficiency relative to the ingestion rate. The CHO metabolic responses were associated with a very likely moderate enhancement of mean sprint power with total- and endogenous-CHO oxidation rate, abdominal cramps, and drink sweetness presenting as candidate explanatory mechanisms. Therefore, oral CHO-hydration formulations containing fructose–maltodextrin–glucose at a ratio of around 0.8–1.0 may provide the most practical benefit for endurance athletes.
 >
 > <cite>O'Brien et al.</cite>
 
-The popular nutrition brand Science in Sport launched their Beta Fuel drink mix in 2018 with a 2:1 ratio of glucose to fructose and reformulated in 2021 to a 1:0.8 ratio, [citing](https://www.scienceinsport.com/sports-nutrition/the-science-behind-beta-fuel/) the, at this point eight year old, O'Brien et al. study. Other brands like [Maurten](https://www.maurten.com/de/products/drink-mix-320) and [MNSTRY](https://mnstry.com/en/products/power-carb-heat-1-0-8) offer their own formulations based on a 1:0.8 ratio. 0.8 appears the magic number everybody is going for, even though figure 4 in the study seems to max out absorption around the 0.9-0.95 mark.
+The popular nutrition brand Science in Sport launched its Beta Fuel drink mix in 2018 with a 2:1 glucose/fructose ratio and reformulated in 2021 to a 1:0.8 ratio, [citing](https://www.scienceinsport.com/sports-nutrition/the-science-behind-beta-fuel/) the, at this point eight year old, O'Brien et al. study. Other known brands like [Maurten](https://www.maurten.com/de/products/drink-mix-320) and [MNSTRY](https://mnstry.com/en/products/power-carb-heat-1-0-8) offer their own formulations based on a 1:0.8 ratio. It appears to be the magic number everybody is aiming for, even though figure 4 in the study seems to max out absorption around the 0.9-0.95 mark.
 
 ![](img/ratio.png "Integrated model for the mean oxidation rate and the mean efficiency of the oxidation of  fructose, exogenous glucose, and the composite (combined) total exogenous CHO ingested in the three experimental ratio drinks during endurance exercise")
 
-This led me and many others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) to the conclusion that sucrose, also known as sugar, might be the best option in teams of scientific literature and cost. With an even ratio of glucose to fructose it is on the other end of the recommended spectrum, but it appears to be closer to the maximum of 0.95.
+This led me and others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) to believe that sucrose, also known as table sugar, might be the best option in terms of scientific literature and cost. With an even ratio of glucose to fructose, it is on the other end of the recommended spectrum, but closer to the apparent maximum of 0.95.
 
 ![](img/sucrose.svg "Sucrose: one glucose molecule on the left and one fructose molecule on the right")
 
@@ -270,16 +270,15 @@ Understand the link between ingesting too hypertonic solutions and osmotic diarr
 
 But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Carbohydrate absorption, like most things in the body, is extremely trainable. His athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even ration of glucose to fructose, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone.
 
-## Cost
+## The Alternative
+I am not a professional athlete or an influencer with a nutrition sponsor. I have to buy everything myself. And even though I earn well, I don't like spending money on unnecessary things, expensive drink mix being one of them. I leave my house with two bottle of the following composition:
 
-Here is my bottle:
-
-- 1000 ml water
+- 900 ml water
 - 80 g sucrose (€0.08, €1/kg)
 - 5 g electrolytes (€0.04, €8/kg)
 - 5 g flavorings (€0.05, €9/kg)
 
-Is much better or much worse than commercial products? Probably not. Are the minor differences? Probably. But if these minor differences are worth the major price differences is up to you to decide:
+It has served me well over the last year. No bonks or cramps caused by electrolyte loss. Is it significantly better or worse than commercial products? Probably not. Are the minor differences? Probably. But if these minor differences are worth the uptick in price is up for you to decide:
 
 | Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
