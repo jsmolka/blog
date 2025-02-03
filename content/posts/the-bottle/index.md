@@ -63,13 +63,12 @@ The popular nutrition brand Science in Sport launched its Beta Fuel drink mix in
 This led me and others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) to believe that sucrose, also known as table sugar, might be the best option in terms of scientific literature and cost. With an even ratio of glucose to fructose, it is on the other end of the recommended spectrum, but closer to the apparent maximum of 0.95.
 
 ![](img/sucrose.svg "Sucrose: one glucose molecule on the left and one fructose molecule on the right")
+{.w-75}
 
-I doubt one option is better than the other at this point. Get the one that works for you, but make sure it is in the 2:1/1:0.8 range.
-
-<!-- But the reduction in cost certainly justifies its usage -->
+Unfortunately, there are no studies comparing the absorption rates of sucrose and an equivalent glucose/fructose mixture. If I had to guess, the former would perform slightly worse because the body has to expend a small amount of energy to break up the disaccharide's bond. But this difference is negligible and any mixture in the 0.8 to 1 range will serve you well.
 
 ## Electrolytes
-The other integral part of a bottle is electrolytes. Athletes sweat around [0.5-2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you never want to do it again. Drinking just water and not replenishing electrolytes will end in cramps and misery.
+The other essential part of a bottle is electrolytes. Athletes sweat somewhere [between 0.5 and 2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you will never want to do that again. Drinking just water and not replenishing electrolytes will end in cramps and misery. I experienced this once and had cramps so bad that stopping at a red light caused both my legs to seize up, unable to start when the light turned green. Fun times.
 
 The [composition of sweat](pdf/sweat-composition.pdf) looks like this:
 
@@ -81,7 +80,12 @@ The [composition of sweat](pdf/sweat-composition.pdf) looks like this:
 | Calcium   | 0.2-2                  | 40.08           | 8-80                 |
 | Magnesium | 0.02-0.4               | 24.31           | 1-10                 |
 
-The most important mineral to replenish is sodium. This can be done with salt, which is around 39% sodium, or more exotic options like trisodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [osmolarity chapter](#osmolalityosmolarity).
+The most important mineral to replenish is sodium. This can be done with salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [chapter on osmolarity](#electrolytes-1).
+
+<!-- TODO: CONTINUE HERE -->
+
+<!-- https://pmc.ncbi.nlm.nih.gov/articles/PMC10819496/ -->
+<!-- https://www.researchgate.net/publication/300001271_Sweat_Rate_and_Electrolyte_Composition_in_Young_Women_of_Varying_Body_Mass_Indices_during_Moderate_Exercise -->
 
 Sweat rate and sweat sodium concentration vary from person to person. Unless you get them measured there is no way to know for sure. You can ask yourself the following questions to estimate your liquid and sodium requirement:
 
@@ -90,8 +94,12 @@ Sweat rate and sweat sodium concentration vary from person to person. Unless you
 
 I am a heavy, salty sweater and aim for around 1500 mg/l of sodium.
 
+<!-- Benefit of having your own drink mix: salt to taste -->
+
 ### LMNT
 But sweat contains more than just sodium. It also consists of other minerals like potassium and magnesium. If you are a podcast listener, you have probably heard of LMNT, the science-based electrolyte drink mix. Each pack contains 1000 mg sodium, 200 mg potassium and 60 mg magnesium [^lmnt].
+
+<!-- https://science.drinklmnt.com/electrolytes/lmnts-electrolyte-ratios-explained/ -->
 
 [^lmnt]: The unflavored version of LMNT costs €1.5 per 3.5 g pack (€429/kg). My version, which uses the same components in the same ratio, comes in at around €8/kg. The price some people are willing to pay for this stuff is insane.
 
@@ -270,8 +278,10 @@ Understand the link between ingesting too hypertonic solutions and osmotic diarr
 
 But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Carbohydrate absorption, like most things in the body, is extremely trainable. His athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even ration of glucose to fructose, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone.
 
+<!-- Mention that Bu says they use pure glucose/fructose -->
+
 ## The Alternative
-I am not a professional athlete or an influencer with a nutrition sponsor. I have to buy everything myself. And even though I earn well, I don't like spending money on unnecessary things, expensive drink mix being one of them. I leave my house with two bottle of the following composition:
+I am not a professional athlete or an influencer with a nutrition sponsor. I have to buy everything myself. And even though I earn well, I don't like spending money on unnecessary things, expensive drink mix being one of them. I leave my house with two bottles of the following composition:
 
 - 900 ml water
 - 80 g sucrose (€0.08, €1/kg)
