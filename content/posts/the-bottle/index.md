@@ -68,9 +68,11 @@ This led me and others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBs
 Unfortunately, there are no studies comparing the absorption rates of sucrose and an equivalent glucose/fructose mixture. If I had to guess, the former would perform slightly worse because the body has to expend a small amount of energy to break up the disaccharide's bond. But this difference is negligible and any mixture in the 0.8 to 1 range will serve you well.
 
 ## Electrolytes
-The other essential part of a bottle is electrolytes. Athletes sweat somewhere [between 0.5 and 2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you will never want to do that again. Drinking just water and not replenishing electrolytes will end in cramps and misery. I experienced this once and had cramps so bad that stopping at a red light caused both my legs to seize up, unable to start when the light turned green. Fun times.
+The other essential part of a bottle is electrolytes. Athletes sweat somewhere [between 0.5 and 2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you will never want to do that again. Drinking just water and not replenishing electrolytes will end in cramps and misery.
 
-The [composition of sweat](pdf/sweat-composition.pdf) looks like this:
+I experienced this [once](https://www.strava.com/activities/9412522570). The mere act of interrupting the pedaling motion and stopping at a red light caused both my legs to seize up, unable to start when the light turned back green. I had to pause multiple times over 15 km because of random cramps. When I finally got home, I laid down in bed and ate salt straight from the package to put an end to the endless cramping. Fun times.
+
+Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have helped me:
 
 | Element   | Concentration [mmol/l] | Atomic mass [u] | Concentration [mg/l] |
 | --------- | ---------------------- | --------------- | -------------------- |
@@ -80,34 +82,25 @@ The [composition of sweat](pdf/sweat-composition.pdf) looks like this:
 | Calcium   | 0.2-2                  | 40.08           | 8-80                 |
 | Magnesium | 0.02-0.4               | 24.31           | 1-10                 |
 
-The most important mineral to replenish is sodium. This can be done with salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [chapter on osmolarity](#electrolytes-1).
+The most important mineral to replenish is sodium. This can be done with table salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [chapter on osmolarity](#electrolytes-1).
 
-<!-- TODO: CONTINUE HERE -->
-
-<!-- https://pmc.ncbi.nlm.nih.gov/articles/PMC10819496/ -->
-<!-- https://www.researchgate.net/publication/300001271_Sweat_Rate_and_Electrolyte_Composition_in_Young_Women_of_Varying_Body_Mass_Indices_during_Moderate_Exercise -->
-
-Sweat rate and sweat sodium concentration vary from person to person. Unless you get them measured there is no way to know for sure. You can ask yourself the following questions to estimate your liquid and sodium requirement:
+The amount of sodium lost is determined by sweat rate and sweat sodium concentration. Unless you get them measured, there is no way to know for sure. You can ask yourself the following questions to estimate your fluid and sodium needs:
 
 1. **Am I a heavy sweater?** Heavy sweaters need to drink more.
 2. **Am I a salty sweater?** Salty sweaters need to consume more sodium.
 
-I am a heavy, salty sweater and aim for around 1500 mg/l of sodium.
-
-<!-- Benefit of having your own drink mix: salt to taste -->
+I happen to be a heavy, salty sweater --- always fun during summer --- and aim for around 1500 mg/l. One advantage of mixing your own bottle is that you can add sodium independently of carbohydrates. Salt your bottle to taste like you would your food.
 
 ### LMNT
-But sweat contains more than just sodium. It also consists of other minerals like potassium and magnesium. If you are a podcast listener, you have probably heard of LMNT, the science-based electrolyte drink mix. Each pack contains 1000 mg sodium, 200 mg potassium and 60 mg magnesium [^lmnt].
+But sweat contains more than just sodium. It also consists of other minerals like potassium and magnesium. If you listen to science podcasts, you have probably been bombarded with ads for LMNT, the science-based electrolyte drink mix. Each pack contains 1000 mg sodium, 200 mg potassium and 60 mg magnesium. The reasoning behind this formulation is [explained on their website](https://science.drinklmnt.com/electrolytes/lmnts-electrolyte-ratios-explained/), so I will not repeat it here.
 
-<!-- https://science.drinklmnt.com/electrolytes/lmnts-electrolyte-ratios-explained/ -->
+You can make your own LMNT at home for a fraction of the price [^lmnt]:
 
-[^lmnt]: The unflavored version of LMNT costs €1.5 per 3.5 g pack (€429/kg). My version, which uses the same components in the same ratio, comes in at around €8/kg. The price some people are willing to pay for this stuff is insane.
+[^lmnt]: The unflavored version of LMNT costs €1.5 per 3.5 g pack (€429/kg). My version, which uses the same components in the same ratio, comes in at around €8/kg. The price some people are willing to pay is **insane**.
 
-You can make your own LMNT at home:
-
-- 1000 g sodium chloride (393 g sodium, 39.3%) <!-- €2/kg -->
-- 150 g potassium chloride (79 g potassium, 52.4%) <!-- €10/kg -->
-- 150 g magnesium malate (23 g magnesium, 15.5%) <!-- €45/kg -->
+- 1000 g sodium chloride (39.3% sodium) <!-- €2/kg -->
+- 150 g potassium chloride (52.4% potassium) <!-- €10/kg -->
+- 150 g magnesium malate (15.5% magnesium) <!-- €45/kg -->
 
 One gram contains:
 
@@ -115,10 +108,15 @@ One gram contains:
 - 61 mg potassium
 - 18 mg magnesium
 
-I have been using this as the basis for my electrolytes during the last year. It worked great. Retrospectively I could reduce the amount of magnesium, because it seems to be a little too much.
+I used this mixture over the last year, paid more attention to fluid intake and had no cramping issues. The taste is better compared to sodium citrate, but I doubt that the added potassium and magnesium have a big impact. Fortunately electrolytes play a minor role in performance, so I will just stick to what works for now.
+
+<!-- CONTINUE -->
 
 ## Flavorings
 Flavorings are personal. I prefer sour over sweet. The acidity provided by the flavorings and the saltiness provided by the electrolytes balance the sweet sucrose solution. I found dehydrated fruit powders to work the best. I used [lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg) for a long time and love the taste.  Unfortunately it is quite pricey, so I did some research and came up with a [replacement](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
+
+<!-- No flavor fatigue -->
+<!-- Ist zu schade in Englisch -->
 
 - 8 parts citric acid <!-- €3/kg -->
 - 4 parts malic acid <!-- €18/kg -->
@@ -157,7 +155,7 @@ To prevent confusion, I will only use osmolarity from now on. That is because in
 ### Maltodextrin
 Before we continue with the influence of osmolarity on carbohydrate absorption, let's quickly go over the most important source of glucose in cycling: maltodextrin. It's a glucose polymer produced by partial hydrolysis of starch and unique amongst all other discussed carbohydrates, because comes in different chain lengths. Its chemical formula is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where `n` defines the number of glucose units is 2 < `n` < 20 [^maltodextrin-glucose-units].
 
-[^maltodextrin-glucose-units]: I was unable to find the original source of this claim, but can be found everywhere in the literature. I am sceptical because it doesn't work out when looking at the dextrose equivalent.
+[^maltodextrin-glucose-units]: I was unable to find the original source of this claim, but it can be found everywhere in the literature. I am sceptical because it doesn't work out when looking at the dextrose equivalent.
 
 Glucose polymers are classified by a [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) (DE). The European Union's CN code defines maltodextrin to be between 3% and 20%. Below that it is considered a starch, and above it is considered a glucose syrup. It can be calculated using `DE = 100 * (Mg / Mp)`, where `Mg` and `Mp` are the molar masses of glucose and the glucose polymer, respectively.
 
@@ -272,7 +270,7 @@ A well prepared bottle is unlikely to be hypo- or isotonic, because its purpose 
 
 Ingesting hypertonic solutions causes your body to draw water from the tissue and blood into the intestinal tract to dilute the concentration. This is called hypertonic dehydration or hypernatremia and prevents you from feeling hydrated even though you are drinking fluid. The diluted solution enters the bowel and if it is not fully absorbed there, water remains in the bowel which leads to a fun thing called  [osmotic diarrhea](https://en.wikipedia.org/wiki/Diarrhea#Osmotic).
 
-Understand the link between ingesting too hypertonic solutions and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday evening (or night?). I opened a website and was greeted by a calming dark blue background titled "Evaluation of Diarrhea", a 129 page presentation and I though to myself: what the fuck am I doing here. Time to go to bed.
+Understanding the link between ingesting too hypertonic solutions and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday evening (or night?). I opened a website and was greeted by a calming dark blue background titled "Evaluation of Diarrhea", a 129 page presentation and I though to myself: what the fuck am I doing here. Time to go to bed.
 
 ![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
 
