@@ -113,14 +113,15 @@ I used this mixture over the last year, paid more attention to fluid intake and 
 <!-- CONTINUE -->
 
 ## Flavorings
-Flavorings are personal. I prefer sour over sweet. The acidity provided by the flavorings and the saltiness provided by the electrolytes balance the sweet sucrose solution. I found dehydrated fruit powders to work the best. I used [lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg) for a long time and love the taste.  Unfortunately it is quite pricey, so I did some research and came up with a [replacement](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
+Flavorings are personal. I prefer sour over sweet and always loved the taste of lime. Its acidity and the electrolytes' saltiness balance the sweet sucrose solution. Unfortunately fresh limes are impractical for frequent bottle preparation or pre-mixed drink mix carried on longer rides. That can be solved by using [dehydrated lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg). The power of a thousand limes packed into one kilogram of powder.
+
+The problem with that is the limited supply here in Germany. There is one distributor that I know of, and I do not want to reformulate my bottle if they go out of business. The lime powder is also too good to be wasted on a bottle filled to the brim with sugar. So I searched the internet for a lime replacement and [found one made out of different acids](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
+
+- 8 parts citric acid (lemon) <!-- €3/kg -->
+- 4 parts malic acid (apple) <!-- €18/kg -->
+- 1 part tartaric acid (grape) <!-- €15/kg -->
 
 <!-- No flavor fatigue -->
-<!-- Ist zu schade in Englisch -->
-
-- 8 parts citric acid <!-- €3/kg -->
-- 4 parts malic acid <!-- €18/kg -->
-- 1 part tartaric acid <!-- €15/kg -->
 
 It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
 
@@ -133,9 +134,9 @@ Osmolality and osmolarity are calculated using `O = c / M * n` [^n], where:
 
 [^n]: The complete formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterises the deviation of a solvent from ideal behavior. But that is taking it too far for this post.
 
-- `c` is the solutes [mass fraction](https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)) in g/kg (osmolality) or [mass concentration](https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)) in g/l (osmolarity). Higher concentrations result in higher osmolalities and osmolarities.
-- `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol. Molecules with fewer and/or lighter atoms result in higher osmolalities and osmolarities.
-- `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate into their ions in solution and therefore contribute multiple particles per molecule. More particles result in higher osmolalities and osmolarities.
+- `c` is the solutes [mass fraction](https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)) in g/kg (osmolality) or [mass concentration](https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)) in g/l (osmolarity).
+- `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol.
+- `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate into their ions in solution and therefore contribute multiple particles per molecule.
 
 | Name            | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
 | --------------- | ----------------------------------------------------- | ------------------ | --------------------------------------------------------------------------- |
