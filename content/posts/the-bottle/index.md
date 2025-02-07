@@ -110,29 +110,25 @@ One gram contains:
 
 I used this mixture over the last year, paid more attention to fluid intake and had no cramping issues. The taste is better compared to sodium citrate, but I doubt that the added potassium and magnesium have a big impact. Fortunately electrolytes play a minor role in performance, so I will just stick to what works for now.
 
-<!-- CONTINUE -->
-
 ## Flavorings
-Flavorings are personal. I prefer sour over sweet and always loved the taste of lime. Its acidity and the electrolytes' saltiness balance the sweet sucrose solution. Unfortunately fresh limes are impractical for frequent bottle preparation or pre-mixed drink mix carried on longer rides. That can be solved by using [dehydrated lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg). The power of a thousand limes packed into one kilogram of powder.
+Flavorings are personal. I prefer sour over sweet and have always loved the taste of lime. Its acidity and the electrolytes' saltiness balance the sweet sucrose solution. Unfortunately, fresh limes are impractical for frequent bottle preparation or pre-mixed drink mix carried on longer rides. That can be solved by using [dehydrated lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg). The power of a thousand limes condensed into one kilogram.
 
-The problem with that is the limited supply here in Germany. There is one distributor that I know of, and I do not want to reformulate my bottle if they go out of business. The lime powder is also too good to be wasted on a bottle filled to the brim with sugar. So I searched the internet for a lime replacement and [found one made out of different acids](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
+The problem with that is the limited supply here in Germany. There is one distributor that I know of, and I do not want to reformulate my bottle if they go out of business. The lime powder is also too good to be wasted on a bottle filled to the brim with sugar. So I searched the internet for a replacement and found one made from [different acids](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
 
 - 8 parts citric acid (lemon) <!-- €3/kg -->
 - 4 parts malic acid (apple) <!-- €18/kg -->
 - 1 part tartaric acid (grape) <!-- €15/kg -->
 
-<!-- No flavor fatigue -->
-
-It tastes good and provides the much needed acidity. That way I can use the lime powder throughout the day where taste matters so much more.
+These are widely available and relatively cheap ingredients. Of course, it doesn't taste exactly like the real deal, but it's good enough for training rides. I probably drank well over a thousand liters of it and still like it. Luckily, I don't suffer from flavor fatigue.
 
 ## Osmolality/Osmolarity
 > Osmolality and osmolarity are measures that are technically different, but functionally the same for normal use. Whereas osmolality (with an "l") is defined as the number of osmoles (Osm) of solute per kilogram of solvent (osmol/kg or Osm/kg), osmolarity (with an "r") is defined as the number of osmoles of solute per liter (L) of solution (osmol/L or Osm/L). As such, larger numbers indicate a greater concentration of solutes [...].
 >
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Plasma_osmolality)</cite>
 
-Osmolality and osmolarity are calculated using `O = c / M * n` [^n], where:
+Osmolality and osmolarity are calculated using `O = c / M * n` [^osmotic-coefficient], where:
 
-[^n]: The complete formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterises the deviation of a solvent from ideal behavior. But that is taking it too far for this post.
+[^osmotic-coefficient]: The complete formula also takes the [osmotic coefficient](https://en.wikipedia.org/wiki/Osmotic_coefficient) into consideration, which characterizes the deviation of a solvent from ideal behavior. But that is taking it too far for this post.
 
 - `c` is the solutes [mass fraction](https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)) in g/kg (osmolality) or [mass concentration](https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)) in g/l (osmolarity).
 - `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol.
@@ -151,14 +147,14 @@ It is possible to convert between osmolality and osmolarity using `R = L * D`, w
 - `L` is the osmola**L**ity in Osm/kg.
 - `D` is the density in kg/l.
 
-To prevent confusion, I will only use osmolarity from now on. That is because in cycling you usually have a bottle with a certain volume. You then add carbohydrates, electrolytes and flavorings and fill it up with water. The solvent concentrations are measured in g/l, which itself then results in Osm/l, which is osmolarity.
+To prevent confusion, I will use osmolarity from now on. It makes more sense in a cycling environment, where you work with a limited volume: the bottle. You add carbohydrates, electrolytes and flavorings to it and then fill it with water. The solvent concentrations are measured in g/l, which results in osmolarity.
 
 ### Maltodextrin
-Before we continue with the influence of osmolarity on carbohydrate absorption, let's quickly go over the most important source of glucose in cycling: maltodextrin. It's a glucose polymer produced by partial hydrolysis of starch and unique amongst all other discussed carbohydrates, because comes in different chain lengths. Its chemical formula is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub> where `n` defines the number of glucose units is 2 < `n` < 20 [^maltodextrin-glucose-units].
+Before we continue with the influence of osmolarity on carbohydrate absorption, let's quickly go over the most important source of glucose in cycling: maltodextrin. It's a glucose polymer produced by partial hydrolysis of starch and unique amongst all other discussed carbohydrates because it comes in different chain lengths. Its chemical formula is C<sub>6n</sub>H<sub>(10n+2)</sub>O<sub>(5n+1)</sub>, where `n` defines the number of glucose units and is 2 < `n` < 20 [^maltodextrin-glucose-units].
 
-[^maltodextrin-glucose-units]: I was unable to find the original source of this claim, but it can be found everywhere in the literature. I am sceptical because it doesn't work out when looking at the dextrose equivalent.
+[^maltodextrin-glucose-units]: I was unable to find the original source of this claim, but it can be found everywhere in the literature. I am skeptical  because it doesn't work out when looking at the dextrose equivalent.
 
-Glucose polymers are classified by a [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) (DE). The European Union's CN code defines maltodextrin to be between 3% and 20%. Below that it is considered a starch, and above it is considered a glucose syrup. It can be calculated using `DE = 100 * (Mg / Mp)`, where `Mg` and `Mp` are the molar masses of glucose and the glucose polymer, respectively.
+Glucose polymers are classified by a [dextrose equivalent](https://en.wikipedia.org/wiki/Dextrose_equivalent) (DE). The European Union defines maltodextrin to be between 3% and 20%. Polymers below 3% are considered starches, while polymers above 20% are called glucose syrups. The dextrose equivalent can be calculated using `DE = 100 * (Mg / Mp)`, where `Mg` and `Mp` are the molar masses of glucose and the glucose polymer, respectively.
 
 Here is a table that shows the correlation between the chain length `n` and the DE:
 
@@ -170,12 +166,12 @@ Here is a table that shows the correlation between the chain length `n` and the 
 | 15  | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>   | 2450.13            | 7.35   |
 | 19  | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub>  | 3098.69            | 5.81   |
 
-If we assume smaller osmolarities to be superior (foreshadowing), then we would want to go for a maltodextrin with a long chain length/low DE. Unfortunately it can be quite tricky to find as consumer grade products, because they don't need to be labeled and usually aren't. The typical rage of commercial maltodextrin I've seen online lies between 5% and 20%.
+If we assume smaller osmolarities to be superior (foreshadowing), then we would want to go for a maltodextrin with a long chain length/low DE. Unfortunately, it can be quite tricky to find out for consumer-grade products, because they don't need to be labeled and usually aren't. The typical range of commercial maltodextrin I've seen online lies between 5% and 20%.
 
 ### Carbohydrates
-With the theory out of the way, let's continue with something practical. Glucose and fructose are the main sources of carbohydrates. The former is digested in the small intestine while the latter is digested in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
+With the theory out of the way, let's continue with something practical. Glucose and fructose are the primary sources of carbohydrates. The former is digested in the small intestine and the latter in the liver. Both must pass through the stomach to reach their destination. Faster passage of the stomach results in better energy availability during exercise. A key factor in that is osmolarity.
 
-A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and carbohydrate content on the rate of gastric emptying of liquids in man. They created four 600 ml test drinks with differing carbohydrate sources and concentrations:
+A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of osmolarity and carbohydrate content on the rate of gastric emptying of liquids in men. They created four 600 ml test drinks with differing carbohydrate sources and concentrations:
 
 1. 40 g/l glucose, 222 mOsm/l (empty rectangle)
 2. 40 g/l maltodextrin (n = 5), 48 mOsm/l (filled rectangle)
@@ -188,11 +184,11 @@ A [study by Vist and Maughan](pdf/gastric-emptying.pdf) explored the effect of o
 
 The key takeaways from the study are the following:
 
-1. Dilute solutions are emptied faster than concentrated solutions.
-2. If two solutions have the same concentration, the one with less osmolarity is emptied faster.
+1. Dilute solutions empty faster than concentrated ones.
+2. If two solutions have the same concentration, the one with less osmolarity empties faster.
 3. Concentrated solutions deliver more carbohydrates to the small intestine in the same time frame.
 
-The first one can be applied universally. Dilute the carbohydrates and electrolytes in your bottle as much as possible/practical. The second one informs the source of carbohydrates in the bottle. Lets say we go for a concentration of 100 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
+The first one can be applied universally. Dilute the carbohydrates and electrolytes in your bottle as much as possible/practical. The second one informs the source of carbohydrates in the bottle. Let's say we go for a concentration of 100 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
 
 | Solution                                       | Osmolarity [mOsm/l] |
 | ---------------------------------------------- | -------------------- |
@@ -201,7 +197,7 @@ The first one can be applied universally. Dilute the carbohydrates and electroly
 | 50 g/l maltodextrin (n = 19) + 50 g/l fructose | 16 + 278 = 294       |
 | 100 g/l sucrose                                | 292                  |
 
-All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long chain version.
+All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long-chain version.
 
 The same thing applies when going for a more traditional 2:1 ratio:
 
@@ -214,12 +210,12 @@ The same thing applies when going for a more traditional 2:1 ratio:
 | 33 g/l maltodextrin (n = 15) + 66 g/l sucrose  | 13 + 193 = 206      |
 | 33 g/l maltodextrin (n = 19) + 66 g/l sucrose  | 11 + 193 = 203      |
 
-Again, all solutions perform roughly the same. The fructose containing carbohydrate drives most the osmolarity while maltodextrin adds next to nothing. Substituting fructose with sucrose seems to be a good choice. The fructose containing solution might be less sweet compared to pure sucrose, but that can be offset with salt and flavoring.
+Again, all solutions perform roughly the same. The fructose-containing carbohydrate drives most of the osmolarity, while maltodextrin adds next to nothing. Substituting fructose with sucrose seems like a reasonable choice when factoring in cost. The solution's sweetness might differ, but that can be offset with salt and flavorings.
 
-This chapter turned out to be a little different than I expected. I thought I could come up with a simple answer to prefer solution A over solution B, but as demonstrated, if you want a certain glucose to fructose ratio, you will have to put up with a certain osmolarity. You can dilute the solution to reduce it.
+The ratio part of this chapter turned out a little different than expected. I thought I could come up with a simple answer to prefer solution A over solution B, but as demonstrated, if you want a specific glucose to fructose ratio, your stomach will have to tolerate a certain osmolarity. You can always dilute the solution to reduce it.
 
 ### Electrolytes
-Salts are a little harder to calculate, because they dissociate into their ions in solution.
+Salts are a little harder to calculate because they dissociate into their ions in solution:
 
 | Name               | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
 | ------------------ | ----------------------------------------------------- | ------------------ | --------------------------------------------------------------------------- |
@@ -228,15 +224,17 @@ Salts are a little harder to calculate, because they dissociate into their ions 
 | Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38             | 2 (Mg<sup>2+</sup> + C<sub>4</sub>H<sub>4</sub>O<sub>5</sub><sup>2-</sup>)  |
 | Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
 
-Lets now calculate the osmolarity for a realistic requirement of 1500 mg/l sodium.
+Let's calculate the osmolarity for a realistic sodium requirement of 1500 mg/l:
 
 | Solution                                               | Osmolarity [mOsm/l] |
 | ------------------------------------------------------ | ------------------- |
 | 3.82 g/l sodium chloride                               | 132                 |
 | 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) | 132 + 15 + 7 = 154  |
-| 5.55 g/l trisodium citrate                             | 86                  |
+| 5.55 g/l sodium citrate                                | 86                  |
 
-The resulting osmolarities are insane. 4 g of sodium chloride (137 mOsm/l) contribute almost as much as 50 g of sucrose (146 mOsm/l), so you really have to be careful not to add too much salt to your solution.
+I think the osmolarities are insane. 4 g of sodium chloride (137 mOsm/l) contributes almost as much as 50 g of sucrose (146 mOsm/l). That's because the sodium chloride molecule is small to begin with, and it even has the audacity to dissociate into two ions. Rude. Here the alternative of sodium citrate is clearly superior if you can stand the taste.
+
+<!-- CONTINUE -->
 
 ### Tonicity
 The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at ~300 mOsm/l:
