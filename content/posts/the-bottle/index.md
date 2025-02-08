@@ -70,7 +70,7 @@ Unfortunately, there are no studies comparing the absorption rates of sucrose an
 ## Electrolytes
 The other essential part of a bottle is electrolytes. Athletes sweat somewhere [between 0.5 and 2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you will never want to do that again. Drinking just water and not replenishing electrolytes will end in cramps and misery.
 
-I experienced this [once](https://www.strava.com/activities/9412522570). The mere act of interrupting the pedaling motion and stopping at a red light caused both my legs to seize up, unable to start when the light turned back green. I had to pause multiple times over 15 km because of random cramps. When I finally got home, I laid down in bed and ate salt straight from the package to put an end to the endless cramping. Fun times.
+I experienced this [once](https://www.strava.com/activities/9412522570). The mere act of interrupting the pedaling motion and stopping at a red light caused both my legs to seize up, unable to start when the light turned back green. I had to pause multiple times over 15 km because of random cramps. When I finally got home, I laid down in bed and ate salt straight from the package to stop the endless cramping. Fun times.
 
 Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have helped me:
 
@@ -234,8 +234,6 @@ Let's calculate the osmolarity for a realistic sodium requirement of 1500 mg/l:
 
 I think the osmolarities are insane. 4 g of sodium chloride (137 mOsm/l) contributes almost as much as 50 g of sucrose (146 mOsm/l). That's because the sodium chloride molecule is small to begin with, and it even has the audacity to dissociate into two ions. Rude. Here the alternative of sodium citrate is clearly superior if you can stand the taste.
 
-<!-- CONTINUE -->
-
 ### Tonicity
 The last reason to care about the osmolarity of your bottle is tonicity. It is defined relative to the one of blood plasma at ~300 mOsm/l:
 
@@ -245,7 +243,7 @@ The last reason to care about the osmolarity of your bottle is tonicity. It is d
 
 ![](img/tonicity.svg "Osmolarity [mOsm/l]")
 
-Here are some examples for popular soft and sports drinks:
+Here are some examples of popular soft and sports drinks:
 
 <figure>
 
@@ -265,13 +263,15 @@ Here are some examples for popular soft and sports drinks:
   </figcaption>
 </figure>
 
-A well prepared bottle is unlikely to be hypo- or isotonic, because its purpose in cycling is fueling instead of hydration. But preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relation between GI complaints and dietary intake in triathletes and came to the conclusion, that ingesting highly hypertonic beverages correlated with more GI distress
+A well-prepared bottle is unlikely to be hypo- or isotonic because its purpose in cycling is fueling instead of hydration. However, preventing it from becoming too hypertonic will save you a whole lot of gastrointestinal (GI) discomfort. A [study by Rehrer et al.](pdf/gi-distress.pdf) investigated the relationship between GI complaints and dietary intake in triathletes and came to the conclusion that ingesting highly hypertonic beverages correlated with more GI distress
 
-Ingesting hypertonic solutions causes your body to draw water from the tissue and blood into the intestinal tract to dilute the concentration. This is called hypertonic dehydration or hypernatremia and prevents you from feeling hydrated even though you are drinking fluid. The diluted solution enters the bowel and if it is not fully absorbed there, water remains in the bowel which leads to a fun thing called  [osmotic diarrhea](https://en.wikipedia.org/wiki/Diarrhea#Osmotic).
+Ingesting hypertonic solutions causes your body to draw water from the tissue and blood into the intestinal tract to dilute the concentration. This is called hypertonic dehydration, or hypernatremia, and it prevents you from feeling hydrated even though you are drinking fluid. The diluted solution then enters the bowel, and if it is not fully absorbed there, water remains in the bowel, which leads to a fun thing called  [osmotic diarrhea](https://en.wikipedia.org/wiki/Diarrhea#Osmotic).
 
-Understanding the link between ingesting too hypertonic solutions and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday evening (or night?). I opened a website and was greeted by a calming dark blue background titled "Evaluation of Diarrhea", a 129 page presentation and I though to myself: what the fuck am I doing here. Time to go to bed.
+Understanding the link between ingesting too hypertonic solutions and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday night. I opened a website and was greeted by a calming, dark blue background titled "Evaluation of Diarrhea", a 129-page presentation, and thought to myself: "What the fuck am I doing here. Time to go to bed."
 
 ![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
+
+<!-- CONTINUE -->
 
 But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Carbohydrate absorption, like most things in the body, is extremely trainable. His athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even ration of glucose to fructose, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone.
 
