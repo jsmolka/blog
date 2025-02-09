@@ -1,13 +1,12 @@
 ---
 title: "The Bottle"
 tags: ["cycling"]
-date: 2025-01-04T12:01:10+01:00
+date: 2025-02-20T17:12:00+01:00
 type: post
-draft: true
 ---
-The water bottle is an essential cycling accessory. It comes in a more or less standardized shape and can hold anything from 500 to 1000 ml of liquid, usually a mixture of water, carbohydrates, electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter ones and go for a ride with just plain water. If they are unlucky, they will [hit the wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
+The water bottle is an essential cycling accessory. It comes in a more or less standardized shape and can hold anything from 500 to 1000 ml of liquid, usually a mixture of water, carbohydrates, electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter and go for a ride with just plain water. If they are unlucky, they will [hit the wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so-called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
 
-Professional teams, on the other hand, have this more or less figured out. The EF pro cycling team churns through [34,000 bottles annually](https://efprocycling.com/culture/no-more-plastic-bottles/) and estimates the whole professional peloton be somewhere around 630,000 bottles. Numbers like that are caused by the way bottles are used during one-day and stage races. On hot days, bottles with cold water are handed out to the riders, which then pour them over their heads to reduce their body's core temperature and thus allow for better performance on the bike. Emptied bottles, with or without carbohydrates, are then cast to the side of the road or handed out to spectators as souvenirs [^littering].
+Professional teams, on the other hand, have this more or less figured out. The EF pro cycling team churns through [34,000 bottles annually](https://efprocycling.com/culture/no-more-plastic-bottles/) and estimates the whole professional peloton to be somewhere around 630,000 bottles. Numbers like that are caused by the way bottles are used during one-day and stage races. On hot days, bottles with cold water are handed out to the riders, who then pour them over their heads to reduce their body's core temperature and thus allow for better performance on the bike. Emptied bottles, with or without carbohydrates, are then cast to the side of the road or handed out to spectators as souvenirs [^littering].
 
 [^littering]:
     In 2021, the UCI cracked down on littering:
@@ -25,10 +24,10 @@ Professional teams, on the other hand, have this more or less figured out. The E
 
 ![](img/mvdp.jpg "Mathieu van der Poel handing out a bottle to a spectator (© Josse Wester)")
 
-Most professional teams have a nutrition sponsor that provides bars, gels and drink mixes for bottles. This article will be a breakdown of what and how much should go into a bottle. At the end, I will suggest a cheaper alternative to the, in my opinion overpriced, popular nutrition brands and compare the cost over the course of a year.
+Most professional teams have a nutrition sponsor that provides bars, gels and drink mixes for bottles. This post will be a breakdown of what and how much should go into a bottle. At the end, I will suggest a cheaper alternative to the, in my opinion overpriced, popular nutrition brands and compare the cost over the course of a year.
 
 ## Carbohydrates
-Gone are the days of training with just water. Today's professional athletes push the limit of their gut as much as the limit of their legs. Absorption rates of [150 grams per hour](https://www.trainerroad.com/blog/how-to-use-carbs-for-maximum-performance/) are not uncommon and require nutritional training. Gradually increasing carbohydrate intake between training sessions accustoms the gut to a more intense fueling strategy. Experimenting with a higher than usual intake on race day might end it prematurely on the toilet instead of the finish line.
+Gone are the days of training with just water. Today's professional athletes push the limit of their gut as much as the limit of their legs. Absorption rates of [150 grams per hour](https://www.trainerroad.com/blog/how-to-use-carbs-for-maximum-performance/) are not uncommon and require nutritional training. Gradually increasing carbohydrate intake between training sessions accustoms the gut to a more intense fueling strategy. Experimenting with a higher-than-usual intake on race day might end it prematurely on the toilet instead of the finish line.
 
 The recommended carbohydrate intake varies based on exercise duration and intensity:
 
@@ -56,16 +55,16 @@ High absorption rates are achieved by mixing glucose and fructose, which are met
 >
 > <cite>O'Brien et al.</cite>
 
-The popular nutrition brand Science in Sport launched its Beta Fuel drink mix in 2018 with a 2:1 glucose/fructose ratio and reformulated in 2021 to a 1:0.8 ratio, [citing](https://www.scienceinsport.com/sports-nutrition/the-science-behind-beta-fuel/) the, at this point eight year old, O'Brien et al. study. Other known brands like [Maurten](https://www.maurten.com/de/products/drink-mix-320) and [MNSTRY](https://mnstry.com/en/products/power-carb-heat-1-0-8) offer their own formulations based on a 1:0.8 ratio. It appears to be the magic number everybody is aiming for, even though figure 4 in the study seems to max out absorption around the 0.9-0.95 mark.
+The popular nutrition brand Science in Sport launched its Beta Fuel drink mix in 2018 with a 2:1 glucose/fructose ratio and reformulated in 2021 to a 1:0.8 ratio, [citing](https://www.scienceinsport.com/sports-nutrition/the-science-behind-beta-fuel/) the, at this point eight-year-old, O'Brien et al. study. Other known brands like [Maurten](https://www.maurten.com/de/products/drink-mix-320) and [MNSTRY](https://mnstry.com/en/products/power-carb-heat-1-0-8) offer their own formulations based on a 1:0.8 ratio. It appears to be the magic number everybody is aiming for, even though Figure 4 in the study seems to max out absorption around the 0.9-0.95 mark.
 
-![](img/ratio.png "Integrated model for the mean oxidation rate and the mean efficiency of the oxidation of  fructose, exogenous glucose, and the composite (combined) total exogenous CHO ingested in the three experimental ratio drinks during endurance exercise")
+![](img/oxydation.png "Integrated model for the mean oxidation rate and the mean efficiency of the oxidation of  fructose, exogenous glucose, and the composite (combined) total exogenous CHO ingested in the three experimental ratio drinks during endurance exercise")
 
 This led me and others like [Jesse Coyle](https://www.youtube.com/watch?v=vT-PBsSLX3U) and [Dr. Alex Harrison](https://forum.slowtwitch.com/t/help-me-calculate-an-at-home-maurten-drink-im-bad-at-math/801656/10) to believe that sucrose, also known as table sugar, might be the best option in terms of scientific literature and cost. With an even ratio of glucose to fructose, it is on the other end of the recommended spectrum, but closer to the apparent maximum of 0.95.
 
 ![](img/sucrose.svg "Sucrose: one glucose molecule on the left and one fructose molecule on the right")
 {.w-75}
 
-Unfortunately, there are no studies comparing the absorption rates of sucrose and an equivalent glucose/fructose mixture. If I had to guess, the former would perform slightly worse because the body has to expend a small amount of energy to break up the disaccharide's bond. But this difference is negligible and any mixture in the 0.8 to 1 range will serve you well.
+Unfortunately, no studies that I am aware of are comparing the absorption rates of sucrose and an equivalent glucose/fructose mixture. If I had to guess, the former would perform slightly worse because the body has to expend a small amount of energy to break up the disaccharide's bond. But this difference is negligible and any mixture in the 0.8 to 1 range will serve you well.
 
 ## Electrolytes
 The other essential part of a bottle is electrolytes. Athletes sweat somewhere [between 0.5 and 2 liters](pdf/sweat-rate.pdf) per hour. If you have ever mismanaged your electrolyte balance on a hot day, you will never want to do that again. Drinking just water and not replenishing electrolytes will end in cramps and misery.
@@ -82,7 +81,7 @@ Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have
 | Calcium   | 0.2-2                  | 40.08           | 8-80                 |
 | Magnesium | 0.02-0.4               | 24.31           | 1-10                 |
 
-The most important mineral to replenish is sodium. This can be done with table salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred other the other will be explained in the [chapter on osmolarity](#electrolytes-1).
+The most important mineral to replenish is sodium. This can be done with table salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred over the other will be explained in the [chapter on osmolarity](#electrolytes-1).
 
 The amount of sodium lost is determined by sweat rate and sweat sodium concentration. Unless you get them measured, there is no way to know for sure. You can ask yourself the following questions to estimate your fluid and sodium needs:
 
@@ -108,12 +107,12 @@ One gram contains:
 - 61 mg potassium
 - 18 mg magnesium
 
-I used this mixture over the last year, paid more attention to fluid intake and had no cramping issues. The taste is better compared to sodium citrate, but I doubt that the added potassium and magnesium have a big impact. Fortunately electrolytes play a minor role in performance, so I will just stick to what works for now.
+I used this mixture over the last year, paid more attention to fluid intake and had no cramping issues. The taste is better compared to sodium citrate, but I doubt that the added potassium and magnesium have a big impact. Fortunately, electrolytes play a minor role in performance, so I will just stick to what works for now.
 
 ## Flavorings
 Flavorings are personal. I prefer sour over sweet and have always loved the taste of lime. Its acidity and the electrolytes' saltiness balance the sweet sucrose solution. Unfortunately, fresh limes are impractical for frequent bottle preparation or pre-mixed drink mix carried on longer rides. That can be solved by using [dehydrated lime powder](https://www.mexhaus.de/getraenke/spirituosen/reines-limettenpulver-aus-michoacan-apatzin-1-kg). The power of a thousand limes condensed into one kilogram.
 
-The problem with that is the limited supply here in Germany. There is one distributor that I know of, and I do not want to reformulate my bottle if they go out of business. The lime powder is also too good to be wasted on a bottle filled to the brim with sugar. So I searched the internet for a replacement and found one made from [different acids](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
+The problem with that is the limited supply here in Germany. There is one distributor that I know of, and I do not want to reformulate my bottle if they go out of business. The lime powder is also too good to be wasted on a bottle filled to the brim with sucrose. So I searched the internet for a replacement and found one made from [different acids](https://www.corpserevived.com/post/maximizing-citrus-part-2-artificial-juice):
 
 - 8 parts citric acid (lemon) <!-- €3/kg -->
 - 4 parts malic acid (apple) <!-- €18/kg -->
@@ -186,7 +185,7 @@ The key takeaways from the study are the following:
 
 1. Dilute solutions empty faster than concentrated ones.
 2. If two solutions have the same concentration, the one with less osmolarity empties faster.
-3. Concentrated solutions deliver more carbohydrates to the small intestine in the same time frame.
+3. Concentrated solutions deliver more carbohydrates to the small intestine in the same time.
 
 The first one can be applied universally. Dilute the carbohydrates and electrolytes in your bottle as much as possible/practical. The second one informs the source of carbohydrates in the bottle. Let's say we go for a concentration of 100 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
 
@@ -197,7 +196,7 @@ The first one can be applied universally. Dilute the carbohydrates and electroly
 | 50 g/l maltodextrin (n = 19) + 50 g/l fructose | 16 + 278 = 294       |
 | 100 g/l sucrose                                | 292                  |
 
-All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long-chain version.
+All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long-chained version.
 
 The same thing applies when going for a more traditional 2:1 ratio:
 
@@ -271,21 +270,17 @@ Understanding the link between ingesting too hypertonic solutions and osmotic di
 
 ![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
 
-<!-- CONTINUE -->
-
-But I think the most important insights into this topic came from a [recent podcast episode of Peter Attia's Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707). He interviewed Olav Aleksander Bu, the coach of the world famous triathletes Gustav Iden and Kristian Blummenfelt. Carbohydrate absorption, like most things in the body, is extremely trainable. His athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even ration of glucose to fructose, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone.
-
-<!-- Mention that Bu says they use pure glucose/fructose -->
+But some of the best insights into this topic came from a [recent podcast episode of Peter Attias Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707), where he interviewed Olav Aleksander Bu, the coach of the world-famous triathletes Gustav Iden and Kristian Blummenfelt. He mentioned that his athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even glucose/fructose ratio, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone. Tolerating such amounts requires serious nutritional training, and even with that, they are known to [vomit during competition](https://www.youtube.com/shorts/hTQooMGcX8c).
 
 ## The Alternative
-I am not a professional athlete or an influencer with a nutrition sponsor. I have to buy everything myself. And even though I earn well, I don't like spending money on unnecessary things, expensive drink mix being one of them. I leave my house with two bottles of the following composition:
+I am neither a professional athlete nor an influencer with a nutrition sponsor. I have to buy everything myself. And even though I earn well, I don't like spending money on unnecessary things, an expensive drink mix being one of them. I leave my house with two bottles of the following composition:
 
 - 900 ml water
 - 80 g sucrose (€0.08, €1/kg)
-- 5 g electrolytes (€0.04, €8/kg)
+- 5 g LMNT (€0.04, €8/kg)
 - 5 g flavorings (€0.05, €9/kg)
 
-It has served me well over the last year. No bonks or cramps caused by electrolyte loss. Is it significantly better or worse than commercial products? Probably not. Are the minor differences? Probably. But if these minor differences are worth the uptick in price is up for you to decide:
+It has served me well over the last year. No bonks caused by underfueling or cramps caused by electrolyte loss. Is it significantly better or worse than commercial products? Probably not. Are there minor differences? Probably. But if these minor differences are worth the uptick in price is up for you to decide:
 
 | Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
 | ------------------------------------------------------------------------------------------------------ | ----------- | ------------------ | ----------------- |
@@ -297,26 +292,38 @@ It has served me well over the last year. No bonks or cramps caused by electroly
 | [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             | €6.71       | €134.11            | €1609.37          |
 
 ## Conclusion
-That's it, more than you probably ever wanted to know about carbohydrates, electrolytes and especially osmolarity. I think the key takeaways of this post are:
+That's it. More than you ever wanted to know about carbohydrates, electrolytes and osmolarity. The key takeaways of this post are:
 
-1. The main purpose of a bottle should be fueling and not hydration.
-2. Fuel your training accordingly.
-3. Train your body to tolerate as much carbohydrates as possible.
-4. Consume sodium based on your sweat rate and sweat sodium content. Other electrolytes are nice to have, but I don't think they are essential.
+1. The purpose of a bottle is fueling and not hydration.
+2. Train your body to tolerate as much carbohydrates as possible.
+3. Use a glucose/fructose ratio between 0.8 and 1.
+4. Consume sodium based on your sweat rate and sweat sodium concentration.
 5. Dilute the solution as much as possible/practical.
 
-Now you could go into additional things to improve performance like caffeine, but that's a topic for a different post.
+Of course, there are other things to consider if you want to improve your performance. Supplements like caffeine, beta alanine and bicarbonate have shown measurable and consistent results. But that's a topic for another day.
 
 ## Appendix
 
-### The (Squeeze) Bottle
-Another twist on the topic is the squeeze bottle. Usually reserved for running, where half-full (or empty depending on your view on life) bottle splash around and are annoying.
-The much smaller brother of the bottle.
+### The Gel Alternative
+Another interesting spin on the "affordable nutrition" topic is the soft flask. It's usually used for running, where half-empty bottles splash around and are annoying. I use one of those:
 
-- 150 g sugar
+![](img/soft-flask.png "[Fitly soft flask](https://eu.fitlyrun.com/products/flasks?variant=46495350260059)")
+{.w-50}
+
+It's surprising how much energy you can pack into a volume of 150 ml:
+
+- 150 g sucrose
 - 75 ml water
-- 1 tsp electrolytes
-- 1 tsp acid
+- 5 g LMNT
+- 5 g flavorings
+
+The water/sucrose ratio is right on the edge of solubility. You need to heat the solution to fully dissolve it. If you add a little more, it won't dissolve. The resulting syrup contains more carbohydrates than three large energy gels.
+
+The soft flask format also offers a much better user experience:
+
+1. Reusable with no plastic waste.
+2. No need to open it with your teeth. It's open all the time. Just take a sip.
+5. Drink as much as you need. Ever put a half-empty gel back into your jersey pocket and went back for a sweet surprise?
 
 ### Companion App
-If you happened to read until the end, I have a little present for you.
+The last and probably most useful thing to come out of this post is the [companion app](https://bottle.smolka.dev/). There, you can recreate your bottle and see the glucose/fructose ratio, electrolyte contents and the resulting osmolarity with comparison values. You can experiment and find the best possible bottle composition for your needs.
