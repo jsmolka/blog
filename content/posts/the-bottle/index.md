@@ -1,7 +1,7 @@
 ---
 title: "The Bottle"
 tags: ["cycling"]
-date: 2025-02-20T16:12:00+01:00
+date: 2025-02-09T17:12:00+01:00
 type: post
 ---
 The water bottle is an essential cycling accessory. It comes in a more or less standardized shape and can hold anything from 500 to 1000 ml of liquid, usually a mixture of water, carbohydrates, electrolytes and flavorings. Athletes new to the sport might disregard the importance of the latter and go for a ride with just plain water. If they are unlucky, they will [hit the wall](https://en.wikipedia.org/wiki/Hitting_the_wall) a few hours in --- the so-called **bonk** --- and crawl to the next cafe, supermarket or gas station to consume sweet sustenance.
