@@ -4,7 +4,7 @@ showMeta: false
 showTitle: false
 ---
 # bottle
-[bottle](https://github.com/jsmolka/bottle) is a companion [web app](https://bottle.smolka.dev/) for the [similarly titled post](/posts/the-bottle). It calculates the glucose/fructose ratio, electrolyte contents and osmolarity of a cycling bottle. It also provides reference values to aid evaluation and tries to shed some light on an often overlooked and hard-to-understand nutrition topic.
+[bottle](https://github.com/jsmolka/bottle) is a companion [web app](https://bottle.smolka.dev/) for the [similarly titled post](/posts/the-bottle). It calculates the glucose/fructose ratio, electrolyte contents and osmolarity of a cycling bottle. It also provides reference values to aid evaluation and tries to shed some light on an often overlooked nutrition topic.
 
 ![](img/tonicity.svg "Osmolarity [mOsm/l]")
 
