@@ -221,7 +221,7 @@ Salts are a little harder to calculate because they dissociate into their ions i
 | Sodium chloride    | NaCl                                                  | 58.44              | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
 | Potassium chloride | KCl                                                   | 74.55              | 2 (K<sup>+</sup> + Cl<sup>-</sup>)                                          |
 | Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38             | 2 (Mg<sup>2+</sup> + C<sub>4</sub>H<sub>4</sub>O<sub>5</sub><sup>2-</sup>)  |
-| Trisodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
+| Sodium citrate     | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07             | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
 
 Let's calculate the osmolarity for a realistic sodium requirement of 1500 mg/l:
 
