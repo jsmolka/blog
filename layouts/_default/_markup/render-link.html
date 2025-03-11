@@ -1,18 +1,25 @@
-{{- $url := urls.Parse .Destination -}}
+{{- $destination := .Destination -}}
+{{- $blank := true }}
+{{- $url := urls.Parse $destination -}}
 {{- if not $url.IsAbs -}}
-  {{- with $url.Path -}}
-    {{- $ext := path.Ext . -}}
-    {{- if or (eq $ext "") (eq $ext "md") }}
-      {{- if not (or ($.Page.GetPage .) ($.Page.GetPage (path.Join . "index.md"))) -}}
-        {{- errorf "Page not found %s" . -}}
-      {{- end -}}
+  {{- /* Convert to root relative destination */ -}}
+  {{- if not (hasPrefix $destination "/") -}}
+    {{- $destination = path.Join .Page.RelPermalink $destination -}}
+  {{- end -}}
+  {{- $extension := path.Ext $url.Path -}}
+  {{- /* Check if destination is a page */ -}}
+  {{- if or (eq $extension "") (eq $extension "md") (eq $extension "html") -}}
+    {{- /* Check if destination page exists */ -}}
+    {{- if not (or (.Page.GetPage $url.Path) (.Page.GetPage (path.Join $url.Path "index.md"))) -}}
+      {{- errorf "Page not found %s" $url.Path -}}
     {{- end -}}
+    {{- $blank = false -}}
   {{- end -}}
 {{- end -}}
 <a
-  href="{{ (path.Join .Page.RelPermalink .Destination) | safeURL }}"
+  href="{{ $destination | safeURL }}"
   {{ with .Title }}title="{{ . }}"{{ end }}
-  {{ if $url.IsAbs }}target="_blank" rel="noopener"{{ end }}
+  {{ if $blank }}target="_blank" rel="noopener"{{ end }}
 >
   {{- .Text | safeHTML -}}
 </a>
