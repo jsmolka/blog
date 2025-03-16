@@ -1,4 +1,4 @@
-@keyframes draw {
+@keyframes draw-logo-midjourney {
   0% {
     visibility: hidden;
     stroke-dasharray: 0 1024px;
@@ -10,7 +10,7 @@
 
 #logo-midjourney {
   path {
-    animation: draw 2s ease both;
+    animation: draw-logo-midjourney 2s ease both;
   }
 
   #logo-midjourney-upper-medium {
