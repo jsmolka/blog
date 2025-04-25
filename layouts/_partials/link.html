@@ -2,7 +2,7 @@
 <a
   class="link"
   href="{{ .URL }}"
-  {{ if $url.IsAbs }}target="_blank" rel="noopener"{{ end }}
+  target="{{ if $url.IsAbs }}_blank{{ else }}_self{{ end }}"
 >
   {{- .Name -}}
 </a>
