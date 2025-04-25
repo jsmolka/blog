@@ -12,11 +12,11 @@
     {{ else }}
       <img src="{{ $link }}" {{ with $alt }}alt="{{ . }}"{{ end }} width="{{ $resource.Width }}" height="{{ $resource.Height }}" loading="lazy">
     {{ end }}
-    {{ else if eq $resource.MediaType.MainType "audio" }}
-      <div data-audio data-src="{{ $link }}"></div>
-      <noscript>
-        <audio src="{{ $link }}" type="audio/mp3" preload="metadata" controls></audio>
-      </noscript>
+  {{ else if eq $resource.MediaType.MainType "audio" }}
+    <div data-audio data-src="{{ $link }}"></div>
+    <noscript>
+      <audio src="{{ $link }}" type="audio/mp3" preload="metadata" controls></audio>
+    </noscript>
   {{ else }}
     {{ errorf "Unsupported media type %s" $resource.MediaType.MainType }}
   {{ end }}
