@@ -1,5 +1,5 @@
 {{- $destination := .Destination -}}
-{{- $target := "_blank" }}
+{{- $blank := true }}
 {{- $url := urls.Parse $destination -}}
 {{- if not $url.IsAbs -}}
   {{- /* Convert to root relative destination */ -}}
@@ -13,12 +13,12 @@
     {{- if not (or (.Page.GetPage $url.Path) (.Page.GetPage (path.Join $url.Path "index.md"))) -}}
       {{- errorf "Page not found %s" $url.Path -}}
     {{- end -}}
-    {{- $target = "_self" -}}
+    {{- $blank = false -}}
   {{- end -}}
 {{- end -}}
 <a
   href="{{ $destination | safeURL }}"
-  target="{{ $target }}"
+  {{ if $blank }}target="_blank"{{ end }}
   {{ with .Title }}title="{{ . }}"{{ end }}
 >
   {{- .Text | safeHTML -}}
