@@ -1,15 +1,24 @@
 {{ $caption := .Title | $.Page.RenderString }}
 {{ $alt := .Text | default $caption | plainify }}
-{{ $image := .Page.Resources.GetMatch .Destination }}
-{{ if not $image }}
+{{ $resource := .Page.Resources.GetMatch .Destination }}
+{{ if not $resource }}
   {{ errorf "File not found %s" .Destination }}
 {{ end }}
-{{ $link := partial "resource" $image }}
+{{ $link := partial "resource" $resource }}
 <figure {{ with .Attributes.class }}class="{{ . }}"{{ end }}>
-  {{ if eq $image.MediaType.SubType "svg" }}
-    {{ $image.Content | safeHTML }}
+  {{ if eq $resource.MediaType.MainType "image" }}
+    {{ if eq $resource.MediaType.SubType "svg" }}
+      {{ $resource.Content | safeHTML }}
+    {{ else }}
+      <img src="{{ $link }}" {{ with $alt }}alt="{{ . }}"{{ end }} width="{{ $resource.Width }}" height="{{ $resource.Height }}" loading="lazy">
+    {{ end }}
+    {{ else if eq $resource.MediaType.MainType "audio" }}
+      <div data-audio data-src="{{ $link }}"></div>
+      <noscript>
+        <audio src="{{ $link }}" type="audio/mp3" preload="metadata" controls></audio>
+      </noscript>
   {{ else }}
-    <img src="{{ $link }}" {{ with $alt }}alt="{{ . }}"{{ end }} width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy">
+    {{ errorf "Unsupported media type %s" $resource.MediaType.MainType }}
   {{ end }}
   {{ with $caption }}
     <figcaption>{{ . }}</figcaption>
