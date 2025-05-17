@@ -11,7 +11,7 @@
 {{ end }}
 
 {{ with .Resources.GetMatch "index.js" }}
-  {{ $script := . | js.Build (merge $opts (dict "targetPath" "index.js")) }}
+  {{ $script := . | js.Build (merge $opts (dict "targetPath" (path.Join (path.Dir .RelPermalink) "index.js"))) }}
   {{ $link := partial "resource" $script }}
   <script src="{{ $link }}" type="text/javascript" defer></script>
 {{ end }}
