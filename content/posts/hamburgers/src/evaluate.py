@@ -73,10 +73,10 @@ def analyse_general(activities):
         distance += activity["distance"]
         moving_time += activity["moving_time"]
         elapsed_time += activity["elapsed_time"]
-        if activity["average_watts"] is not None:  # Todo: use different key
+        if activity["device_watts"]:
             average_watts += activity["average_watts"] * activity["moving_time"]
             average_watts_time += activity["moving_time"]
-        if activity["average_heartrate"] is not None:
+        if activity["has_heartrate"]:
             average_heartrate += activity["average_heartrate"] * activity["moving_time"]
             average_heartrate_time += activity["moving_time"]
 
@@ -92,7 +92,7 @@ def analyse_power_calories(activities):
     power_time = 0
     power_calories = 0
     for activity in activities:
-        if activity["average_watts"] is not None:  # Todo: use different key
+        if activity["device_watts"]:
             power_distance += activity["distance"]
             power_time += activity["moving_time"]
             power_calories += activity["average_watts"] * 3.6 * activity["moving_time"]
@@ -161,7 +161,7 @@ def analyse_average_watts(grouped_activities):
     for i, activities in enumerate(grouped_activities.values()):
         average_watts_time = 0
         for activity in activities:
-            if activity["average_watts"] is not None:  # Todo: use different key
+            if activity["device_watts"]:
                 values[i] += activity["average_watts"] * activity["moving_time"]
                 average_watts_time += activity["moving_time"]
         if average_watts_time > 0:
@@ -182,7 +182,7 @@ def analyse_average_heartrate(grouped_activities):
     for i, activities in enumerate(grouped_activities.values()):
         average_heartrate_time = 0
         for activity in activities:
-            if activity["average_heartrate"] is not None:
+            if activity["has_heartrate"]:
                 values[i] += activity["average_heartrate"] * activity["moving_time"]
                 average_heartrate_time += activity["moving_time"]
         if average_heartrate_time > 0:
