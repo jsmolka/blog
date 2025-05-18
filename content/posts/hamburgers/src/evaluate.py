@@ -21,7 +21,9 @@ def main(args):
     grouped_activities = group_activities(activities)
     analyse_distance(grouped_activities)
     analyse_average_watts(grouped_activities)
+    analyse_weighted_average_watts(grouped_activities)
     analyse_average_heartrate(grouped_activities)
+    analyse_efficiency_factor(grouped_activities)
 
 
 def parse_activities(path):
@@ -67,6 +69,8 @@ def analyse_general(activities):
     elapsed_time = 0
     average_watts = 0
     average_watts_time = 0
+    weighted_average_watts = 0
+    weighted_average_watts_time = 0
     average_heartrate = 0
     average_heartrate_time = 0
     for activity in activities:
@@ -76,6 +80,10 @@ def analyse_general(activities):
         if activity["device_watts"]:
             average_watts += activity["average_watts"] * activity["moving_time"]
             average_watts_time += activity["moving_time"]
+            weighted_average_watts += (
+                activity["weighted_average_watts"] * activity["moving_time"]
+            )
+            weighted_average_watts_time += activity["moving_time"]
         if activity["has_heartrate"]:
             average_heartrate += activity["average_heartrate"] * activity["moving_time"]
             average_heartrate_time += activity["moving_time"]
@@ -84,6 +92,9 @@ def analyse_general(activities):
     print(f"Moving time: {moving_time} h")
     print(f"Elapsed time: {elapsed_time} h")
     print(f"Average watts: {average_watts / average_watts_time} W")
+    print(
+        f"Weighted average watts: {weighted_average_watts / weighted_average_watts_time} W"
+    )
     print(f"Average heartrate: {average_heartrate / average_heartrate_time} bpm")
 
 
@@ -172,6 +183,7 @@ def analyse_average_watts(grouped_activities):
         axes.bar(label, values[i], 0.5, bottom=0, color=color_brand_3)
 
     set_axes_style(axes)
+    axes.set_ylim(bottom=100)
 
     plt.tight_layout()
     plt.savefig("../img/watts.png", dpi=plot_dpi, transparent=True)
@@ -193,9 +205,58 @@ def analyse_average_heartrate(grouped_activities):
         axes.bar(label, values[i], 0.5, bottom=0, color=color_brand_3)
 
     set_axes_style(axes)
+    axes.set_ylim(bottom=100)
 
     plt.tight_layout()
     plt.savefig("../img/heartrate.png", dpi=plot_dpi, transparent=True)
+
+
+def analyse_weighted_average_watts(grouped_activities):
+    values = np.zeros(len(grouped_activities))
+    for i, activities in enumerate(grouped_activities.values()):
+        weighted_average_watts_time = 0
+        for activity in activities:
+            if activity["device_watts"]:
+                values[i] += (
+                    activity["weighted_average_watts"] * activity["moving_time"]
+                )
+                weighted_average_watts_time += activity["moving_time"]
+        if weighted_average_watts_time > 0:
+            values[i] /= weighted_average_watts_time
+
+    _, axes = plt.subplots(figsize=plot_size)
+    for i, label in enumerate(grouped_activities.keys()):
+        axes.bar(label, values[i], 0.5, bottom=0, color=color_brand_3)
+
+    set_axes_style(axes)
+    axes.set_ylim(bottom=100)
+
+    plt.tight_layout()
+    plt.savefig("../img/weighted-watts.png", dpi=plot_dpi, transparent=True)
+
+
+def analyse_efficiency_factor(grouped_activities):
+    values = np.zeros(len(grouped_activities))
+    for i, activities in enumerate(grouped_activities.values()):
+        efficiency_factor_time = 0
+        for activity in activities:
+            if activity["device_watts"] and activity["has_heartrate"]:
+                values[i] += (
+                    activity["weighted_average_watts"] / activity["average_heartrate"]
+                ) * activity["moving_time"]
+                efficiency_factor_time += activity["moving_time"]
+        if efficiency_factor_time > 0:
+            values[i] /= efficiency_factor_time
+
+    _, axes = plt.subplots(figsize=plot_size)
+    for i, label in enumerate(grouped_activities.keys()):
+        axes.bar(label, values[i], 0.5, bottom=0, color=color_brand_3)
+
+    set_axes_style(axes)
+    axes.set_ylim(bottom=1)
+
+    plt.tight_layout()
+    plt.savefig("../img/efficiency-factor.png", dpi=plot_dpi, transparent=True)
 
 
 if __name__ == "__main__":
