@@ -21,7 +21,6 @@ def main(args):
     grouped_activities = group_activities(activities)
     analyse_distance(grouped_activities)
     analyse_average_watts(grouped_activities)
-    analyse_weighted_average_watts(grouped_activities)
     analyse_average_heartrate(grouped_activities)
     analyse_efficiency_factor(grouped_activities)
 
@@ -211,30 +210,6 @@ def analyse_average_heartrate(grouped_activities):
     plt.savefig("../img/heartrate.png", dpi=plot_dpi, transparent=True)
 
 
-def analyse_weighted_average_watts(grouped_activities):
-    values = np.zeros(len(grouped_activities))
-    for i, activities in enumerate(grouped_activities.values()):
-        weighted_average_watts_time = 0
-        for activity in activities:
-            if activity["device_watts"]:
-                values[i] += (
-                    activity["weighted_average_watts"] * activity["moving_time"]
-                )
-                weighted_average_watts_time += activity["moving_time"]
-        if weighted_average_watts_time > 0:
-            values[i] /= weighted_average_watts_time
-
-    _, axes = plt.subplots(figsize=plot_size)
-    for i, label in enumerate(grouped_activities.keys()):
-        axes.bar(label, values[i], 0.5, bottom=0, color=color_brand_3)
-
-    set_axes_style(axes)
-    axes.set_ylim(bottom=100)
-
-    plt.tight_layout()
-    plt.savefig("../img/weighted-watts.png", dpi=plot_dpi, transparent=True)
-
-
 def analyse_efficiency_factor(grouped_activities):
     values = np.zeros(len(grouped_activities))
     for i, activities in enumerate(grouped_activities.values()):
@@ -242,7 +217,7 @@ def analyse_efficiency_factor(grouped_activities):
         for activity in activities:
             if activity["device_watts"] and activity["has_heartrate"]:
                 values[i] += (
-                    activity["weighted_average_watts"] / activity["average_heartrate"]
+                    activity["average_watts"] / activity["average_heartrate"]
                 ) * activity["moving_time"]
                 efficiency_factor_time += activity["moving_time"]
         if efficiency_factor_time > 0:
