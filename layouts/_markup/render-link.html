@@ -10,7 +10,7 @@
   {{- /* Check if destination is a page */ -}}
   {{- if or (eq $extension "") (eq $extension "md") (eq $extension "html") -}}
     {{- /* Check if destination page exists */ -}}
-    {{- if not (or (.Page.GetPage $url.Path) (.Page.GetPage (path.Join $url.Path "index.md"))) -}}
+    {{- if not (.Page.GetPage $url.Path) -}}
       {{- errorf "Page not found %s" $url.Path -}}
     {{- end -}}
     {{- $blank = false -}}
