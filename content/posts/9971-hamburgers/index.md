@@ -16,11 +16,11 @@ The distance steadily increased year over year, almost hitting 30,000 km in 2024
 
 ![](img/heartrate.png "Average heart rate [bpm]")
 
-After one year, I got myself a heart rate monitor and a power meter. The continuous decrease in heart rate is a good representation of my fitness increase. It averages to 133 bpm, with a measured maximum of 190 bpm. The peak in February 2025 coincides with my comeback from the knee injury, a vacation in Spain where I pushed myself quite hard.
+After one year, I got myself a heart rate monitor and a power meter. The continuous decrease in heart rate is a good representation of my fitness increase. It averages to 133 bpm, with a measured maximum of 190 bpm. The peak in February 2025 coincided with my comeback from the knee injury, a vacation in Spain where I pushed quite hard in a detrained state.
 
 ![](img/watts.png "Average power [W]")
 
-The more important stat, however, is power output. It averages to 223 W and was a little higher during the early years, where, in retrospect, I pushed myself more than necessary. With increased volume and knowledge in training theory came a more relaxed riding style focused on polarized training with high quality sessions.
+The more important stat, however, is power output. It averages to 223 W and was a little higher during the early years, where I rode harder than necessary. With increased volume and knowledge in training theory came a more relaxed riding style focused on polarized training with high quality sessions.
 
 ![](img/weighted-watts.png "Weighted average power [W]")
 
