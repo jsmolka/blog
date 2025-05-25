@@ -8,5 +8,3 @@ It may not sound like much, but one of my [GitHub repositories](https://github.c
 
 ![](img/stars.png "Time to celebrate!")
 {.w-50}
-
-
