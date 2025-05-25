@@ -93,7 +93,7 @@
     display: flex;
     gap: spacing(4);
 
-    @include constricted {
+    @include narrow {
       flex-direction: column;
     }
 
@@ -115,7 +115,7 @@
     gap: spacing(1);
     margin-left: spacing(12);
 
-    @include constricted {
+    @include narrow {
       margin-left: spacing(4);
     }
 
@@ -146,13 +146,13 @@
     margin-left: 0;
     margin-right: 0;
 
-    @include constricted {
+    @include narrow {
       margin-left: spacing(-4);
       margin-right: spacing(-4);
     }
   }
 
-  @include constricted {
+  @include narrow {
     & > pre {
       padding: spacing(2) spacing(4);
       border-radius: 0;
@@ -216,7 +216,7 @@
   .w-25 {
     width: 25%;
 
-    @include constricted {
+    @include narrow {
       width: 100%;
     }
   }
@@ -224,7 +224,7 @@
   .w-50 {
     width: 50%;
 
-    @include constricted {
+    @include narrow {
       width: 100%;
     }
   }
@@ -232,7 +232,7 @@
   .w-75 {
     width: 75%;
 
-    @include constricted {
+    @include narrow {
       width: 100%;
     }
   }
