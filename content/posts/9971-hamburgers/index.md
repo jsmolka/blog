@@ -32,7 +32,7 @@ If we divide weighted power by heart rate, we get the efficiency factor [^ef]. I
 
 [^ef]: Normally, the efficiency factor is calculated using normalized power.
 
-But the funniest stat to think about is the amount of calories burned. It's easy to calculate if power data is available. 2631 hours with power data burned 2,111,322 kcal. The remaining 530 hours add, assuming an output of 200 W, another 381,600 kcal, which brings the total up to 2,492,922 kcal. That's equivalent to:
+But the funniest stat to think about is the amount of calories burned. It's easy to calculate if power data is available. 2631 hours with power data burned 2,111,322 kcal. The remaining 530 hours add, assuming an output of 200 W, another 381,600 kcal, bringing the total up to 2,492,922 kcal. That's equivalent to:
 
 - 9971 [hamburgers](https://www.mcdonalds.com/us/en-us/product/hamburger.html) (250 kcal)
 - 4298 [Big Macs](https://www.mcdonalds.com/us/en-us/product/big-mac.html) (580 kcal)
