@@ -12,6 +12,6 @@ When I bought my first road bike for commuting, I didn't expect it to turn into 
 
 - ![](img/meerane.jpg "The steep wall of Meerane")
 - ![](img/nebra.jpg "Near the location of Nebra's sky disc")
-{.fluent .escape}
+{.fluent .overflow}
 
 Improving your body's ability to handle high-stress levels is a skill that develops gradually over time. I increased my average mileage throughout the years and decided to put my body to the test. I had a week of residual leave and kept delaying it, hoping for better weather, but the forecast was mixed at best. It turned out to be a cloudy and windy week with scattered showers, in which I rode 1094 km in 34:40, a milestone in my cycling career.

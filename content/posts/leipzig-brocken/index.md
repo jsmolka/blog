@@ -13,11 +13,11 @@ We took one of many breaks with 80 km to go. The others were fatigued, the weath
 The Harz was beautiful. Great roads, dense green forests and cute little villages. I still felt surprisingly fresh at that point and even rode a top ten time up a [300 m climb](https://www.strava.com/activities/7261245657/segments/2968618033179841742). When I reached the town of Elend, which is German for "misery," I knew it was only uphill from there. The more I ascended, the more the trees started to die. The whole forest is plagued by the bark beetle. It looked like something out of this world.
 
 - ![](img/ascend.jpg "Brocken ascend")
-{.escape}
+{.overflow}
 
 The final kilometers were killing me. It started drizzling. I had almost nine hours of riding in the legs and was unable to put down any reasonable amount of power for a sustained period. I had to take two short breaks on the steeper gradients in the final meters, but I managed to get up there in the end.
 
 - ![](img/peak.jpg "Brocken peak")
-{.escape}
+{.overflow}
 
 I didn't have much energy left to celebrate once I reached the summit. It was cloudy, and the drizzle slowly turned into proper rain. I put on some more clothes, started descending into the next town and then sat there shivering, waiting for the train to pick me up. I was absolutely spent, but it was well worth [effort](https://www.strava.com/activities/7261245657) and something that gave me dopamine hits in the days to come.

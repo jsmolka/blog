@@ -9,17 +9,17 @@ During the process of designing a new logo, I also stumbled across the idea of c
 [^favorite]: I think nobody knows this fact about me.
 
 - ![](img/newt.jpg "[Ichthyosaura alpestris](https://en.wikipedia.org/wiki/Alpine_newt)")
-{.escape}
+{.overflow}
 
 The logo didn't turn out to be the winner, but it would be a waste of creativity to not even mention it. I sketched some initial drafts with pen and paper like a true artist. They all depict a newt curled up into a ball, with the tail fin almost touching its head. The design was inspired by the Firefox logo, but I lacked the artistic skill to combine the two concepts and express them on paper.
 
 - ![Sketch 1](img/sketch-1.jpg)
 - ![Sketch 2](img/sketch-2.jpg)
-{.fluent}
+{.fluent .overflow}
 
 - ![Sketch 3](img/sketch-3.jpg)
 - ![Sketch 4](img/sketch-4.jpg)
-{.fluent}
+{.fluent .overflow}
 
 Turning these rough sketches into something usable was even more difficult. My Inkscape skills are limited to say the least, but learning is an ever present part of life, and the harder something is to learn, the better it is for your brain. I also thought about commissioning an artist, but not making the logo myself kind of defeated the purpose. It just wouldn't feel right.
 

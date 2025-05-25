@@ -22,7 +22,8 @@ Professional teams, on the other hand, have this more or less figured out. The E
     > <cite>UCI special provision for littering no. 2</cite>
 
 
-![](img/mvdp.jpg "Mathieu van der Poel handing out a bottle to a spectator (© Josse Wester)")
+- ![](img/mvdp.jpg "Mathieu van der Poel handing out a bottle to a spectator (© Josse Wester)")
+{.overflow}
 
 Most professional teams have a nutrition sponsor that provides bars, gels and drink mixes for bottles. This post will be a breakdown of what and how much should go into a bottle. At the end, I will suggest a cheaper alternative to the, in my opinion overpriced, popular nutrition brands and compare the cost over the course of a year.
 

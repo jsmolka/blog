@@ -8,7 +8,7 @@ My obsession with cycling continues and this time it has taken me to the provinc
 
 - ![](img/san-colombano.jpg "Eremo di San Colombano")
 - ![](img/pasubio.jpg "Ossario del Pasubio")
-{.fluent .escape}
+{.fluent .overflow}
 
 A solo [prologue](https://www.strava.com/activities/9152209086) with almost 1000 m of climbing was a sign of things to come:
 
@@ -23,4 +23,4 @@ These rides added up to almost 18000 m of vertical ascent --- 10% of my all-time
 
 - ![](img/lake-garda.jpg "View onto Lake Garda from Monte Baldo")
 - ![](img/maria.jpg "A statue of Mary")
-{.fluent .escape}
+{.fluent .overflow}

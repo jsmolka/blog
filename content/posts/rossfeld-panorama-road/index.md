@@ -11,4 +11,4 @@ The ride starting from Salzburg was front-loaded with a [1075 m climb](https://w
 It was an amazing experience and produced the best picture of me on a bike.
 
 - ![Me on the climb](img/watzmann.jpg)
-{.escape}
+{.overflow}
