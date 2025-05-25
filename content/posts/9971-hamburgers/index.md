@@ -28,7 +28,7 @@ That can be observed using weighted power. Unfortunately, Strava doesn't provide
 
 ![](img/efficiency-factor.png "Efficiency factor")
 
-If we divide weighted power by heart rate, we get the efficiency factor [^ef]. It specifies the watts produced per heartbeat. While it might not make sense to compare it between days or weeks, it's a useful tool to track fitness over long periods of time.
+If we divide weighted power by heart rate, we get the efficiency factor [^ef]. It specifies the watts produced per heartbeat. While it might not make sense to compare it between days or weeks, it's a useful tool to track fitness over long periods of time. Here we can see a clear upward trend.
 
 [^ef]: Normally, the efficiency factor is calculated using normalized power.
 
