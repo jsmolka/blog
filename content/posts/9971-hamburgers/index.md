@@ -16,7 +16,7 @@ The distance steadily increased year over year, almost hitting 30,000 km in 2024
 
 ![](img/heartrate.png "Average heart rate [bpm]")
 
-After one year, I got myself a heart rate monitor and a power meter. The continuous decrease in heart rate is a good representation of my fitness increase. It averages to 133 bpm, with a measured maximum of 190 bpm. The peak in February 2025 coincided with my comeback from the knee injury, a vacation in Spain where I pushed quite hard in a detrained state.
+After one year, I got myself a heart rate monitor and a power meter. The continuous decrease in heart rate is a good representation of my fitness increase. It averages to 133 bpm, with a measured maximum of 190 bpm. The peak in February 2025 coincided with the comeback from my knee injury, a vacation in Spain where I pushed quite hard despite being in a detrained state.
 
 ![](img/watts.png "Average power [W]")
 
@@ -32,7 +32,7 @@ If we divide weighted power by heart rate, we get the efficiency factor [^ef]. I
 
 [^ef]: Normally, the efficiency factor is calculated using normalized power.
 
-But the funniest stat to think about is the amount of calories burned. It's easy to calculate if power data is available. 2631 hours with power data burned 2,111,322 kcal. The remaining 530 hours without power data burned, assuming an output of 200 W, another 381,600 kcal, bringing the total up to 2,492,922 kcal. 2.492 gigacalories. That's an equivalent of:
+But the funniest stat to think about is the amount of calories burned. It's easy to calculate if power data is available. 2631 hours with power data burned 2,111,322 kcal. The remaining 530 hours add, assuming an output of 200 W, another 381,600 kcal, which brings the total up to 2,492,922 kcal. That's equivalent to:
 
 - 9971 [hamburgers](https://www.mcdonalds.com/us/en-us/product/hamburger.html) (250 kcal)
 - 4298 [Big Macs](https://www.mcdonalds.com/us/en-us/product/big-mac.html) (580 kcal)
