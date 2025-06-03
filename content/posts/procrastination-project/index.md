@@ -15,17 +15,17 @@ I strive towards an elegant, minimalistic design, and nothing is more elegant th
 
 <figure>
   <div style="display: flex; height: 4rem; border-width: 1px">
-    <div style="flex: 1; background-color: #242933"></div>
-    <div style="flex: 1; background-color: #2d3340"></div>
-    <div style="flex: 1; background-color: #363e4d"></div>
-    <div style="flex: 1; background-color: #3f4859"></div>
-    <div style="flex: 1; background-color: #485266"></div>
-    <div style="flex: 1; background-color: #5b6780"></div>
-    <div style="flex: 1; background-color: #dfe1e6"></div>
-    <div style="flex: 1; background-color: #ebedf2"></div>
-    <div style="flex: 1; background-color: #608fb3"></div>
-    <div style="flex: 1; background-color: #6799bf"></div>
-    <div style="flex: 1; background-color: #6ea3cc"></div>
+    <div style="flex: 1; background-color: var(--shade-8)"></div>
+    <div style="flex: 1; background-color: var(--shade-7)"></div>
+    <div style="flex: 1; background-color: var(--shade-6)"></div>
+    <div style="flex: 1; background-color: var(--shade-5)"></div>
+    <div style="flex: 1; background-color: var(--shade-4)"></div>
+    <div style="flex: 1; background-color: var(--shade-3)"></div>
+    <div style="flex: 1; background-color: var(--shade-2)"></div>
+    <div style="flex: 1; background-color: var(--shade-1)"></div>
+    <div style="flex: 1; background-color: var(--brand-3)"></div>
+    <div style="flex: 1; background-color: var(--brand-2)"></div>
+    <div style="flex: 1; background-color: var(--brand-1)"></div>
   </div>
   <figcaption>8 shades of hue 220 and 3 shades of hue 206</figcaption>
 </figure>
