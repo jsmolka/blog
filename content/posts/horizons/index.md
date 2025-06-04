@@ -1,6 +1,6 @@
 ---
 title: "Horizons"
-tags: ["music"]
+tags: ["starset", "music"]
 date: 2025-06-03T20:24:09+02:00
 type: post
 draft: true

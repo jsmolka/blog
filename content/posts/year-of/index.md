@@ -1,6 +1,6 @@
 ---
 title: "Year of ...?"
-tags: ["personal"]
+tags: ["productivity", "personal"]
 date: 2024-01-12
 type: post
 ---
