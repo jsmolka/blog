@@ -6,7 +6,7 @@
   &,
   blockquote,
   li {
-    & > *:not(:first-child) {
+    & > *:not(:first-child, hr) {
       margin-top: spacing(4);
     }
 
