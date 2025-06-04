@@ -1,4 +1,3 @@
-import { intersect } from './utils/intersect';
 import { isMobile } from './utils/platform';
 import { slider } from './utils/slider';
 import { get, set } from './utils/storage';
@@ -11,32 +10,32 @@ customElements.define(
   class extends HTMLElement {
     connectedCallback() {
       this.innerHTML = /* html */ `
-        <button data-ref="stateButton">
-        <svg width="16" height="16" viewBox="5 5 14 14">
-        <path data-ref="stateButtonPath" fill="currentColor" />
-      </svg>
-    </button>
-    <div data-ref="time" class="time"></div>
-    <div data-ref="progressBar" class="bar">
-      <div data-ref="progressBarSeeker" class="seeker"></div>
-    </div>
-    <div data-ref="volume" class="volume">
-      <div data-ref="volumeBarWrapper" class="volume-bar-wrapper">
-        <div data-ref="volumeBar" class="bar">
-          <div data-ref="volumeBarSeeker" class="seeker"></div>
+        <button ref="stateButton">
+          <svg width="16" height="16" viewBox="5 5 14 14">
+            <path ref="stateButtonPath" fill="currentColor" />
+          </svg>
+        </button>
+        <div ref="time" class="time"></div>
+        <div ref="progressBar" class="bar">
+          <div ref="progressBarSeeker" class="seeker"></div>
         </div>
-      </div>
-      <button data-ref="volumeButton">
-        <svg width="16" height="16" viewBox="3 3 18 18">
-          <path data-ref="volumeButtonPath" fill="currentColor" />
-        </svg>
-      </button>
-    </div>
+        <div ref="volume" class="volume">
+          <div ref="volumeBarWrapper" class="volume-bar-wrapper">
+            <div ref="volumeBar" class="bar">
+              <div ref="volumeBarSeeker" class="seeker"></div>
+            </div>
+          </div>
+          <button ref="volumeButton">
+            <svg width="16" height="16" viewBox="3 3 18 18">
+              <path ref="volumeButtonPath" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
       `;
 
       const refs = {};
-      for (const element of this.querySelectorAll('[data-ref]')) {
-        refs[element.getAttribute('data-ref')] = element;
+      for (const element of this.querySelectorAll('[ref]')) {
+        refs[element.getAttribute('ref')] = element;
       }
 
       const play = () => {
@@ -170,17 +169,17 @@ customElements.define(
 
       update();
 
-      intersect(
-        this,
-        (visible) => {
-          if (visible) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.intersectionRatio > 0 || entry.isIntersecting) {
             audio.addEventListener('loadedmetadata', init);
             audio.src = this.getAttribute('src');
-            return false;
+            observer.unobserve(entry.target);
           }
         },
         { rootMargin: '256px' }
       );
+      observer.observe(this);
     }
   }
 );
