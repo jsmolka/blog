@@ -11,6 +11,8 @@ draft: true
 >
 > <cite>[Where The Skies End intro](https://www.youtube.com/watch?v=1DHY4cgQwE8), quote from [To New Horizons](https://www.youtube.com/watch?v=tAz4R6F0aaY&t=55s)</cite>
 
+## Artwork
+
 ![](img/cover.jpg "Horizons cover")
 
 <figure>
@@ -27,6 +29,8 @@ draft: true
   <figcaption>Horizons cover color palette</figcaption>
 </figure>
 
+## Music
+
 > In a search that has continued for centuries<br>
 > Some far distant view<br>
 > With this promise of the unseen<br>
@@ -36,3 +40,7 @@ draft: true
 > New horizons<br>
 >
 > <cite>[Where The Skies End outro](https://www.youtube.com/watch?v=1DHY4cgQwE8&t=277s), quote from [To New Horizons](https://www.youtube.com/watch?v=tAz4R6F0aaY&t=108s)</cite>
+
+---
+
+## Albums, Please
