@@ -31,6 +31,29 @@ draft: true
 
 ## Music
 
+1. **Unveiling the Architecture**:
+2. **The Breach**:
+3. **Otherworldly**:
+4. **Icarus**: This song begins with the outro of Otherworldly
+    > And he told him<br>
+    > "Beware, do not fly too close to the sun<br>
+    > The blaze will surely melt those wings."<br>
+    > But alas, he fell<br>
+    > His cries, swallowed by the sea<br>
+5. **Earthrise**:
+    ![](img/earthrise.jpg "Earthrise, taken on December 24, 1968, by Apollo 8 astronaut William Anders")
+6. **Leaving This World Behind**:
+7. **Devolution**:
+8. **Annihilated Love**:
+9.  **Alchemy**:
+10. **Disappear**:
+11. **This Endless Endeavor**:
+12. **Symbiotic**:
+13. **Dreamcatcher**:
+14. **Tunnelvision**:
+15. **Infected**:
+16. **Something Wicked**:
+
 > In a search that has continued for centuries<br>
 > Some far distant view<br>
 > With this promise of the unseen<br>
