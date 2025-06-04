@@ -13,7 +13,7 @@
       <img src="{{ $link }}" {{ with $alt }}alt="{{ . }}"{{ end }} width="{{ $resource.Width }}" height="{{ $resource.Height }}" loading="lazy">
     {{ end }}
   {{ else if eq $resource.MediaType.MainType "audio" }}
-    <div data-audio data-src="{{ $link }}"></div>
+    <x-audio src="{{ $link }}"></x-audio>
     <noscript>
       <audio src="{{ $link }}" type="audio/mp3" preload="metadata" controls></audio>
     </noscript>
