@@ -125,7 +125,7 @@ class XAudio extends HTMLElement {
       this[element.getAttribute('ref')] = element;
     }
 
-    this.render();
+    this.update();
 
     new IntersectionObserver(
       ([entry], observer) => {
@@ -137,6 +137,101 @@ class XAudio extends HTMLElement {
       },
       { rootMargin: '256px' }
     ).observe(this);
+  }
+
+  update() {
+    const position = this.audio.currentTime;
+    const duration = this.audio.duration || 0;
+
+    this.time.innerHTML = `${formatSeconds(position)} / ${formatSeconds(duration)}`;
+    this.stateButtonPath.setAttribute(
+      'd',
+      this.audio.paused
+        ? 'M8 5.14v14l11-7l-11-7z'
+        : 'M14 19h4V5h-4M6 19h4V5H6v14z' // prettier-ignore
+    );
+    this.volumeButtonPath.setAttribute(
+      'd',
+      this.audio.muted || this.audio.volume === 0
+        ? 'M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z'
+        : 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z'
+    );
+    this.progressBarSeeker.style.setProperty('--value', duration > 0 ? position / duration : 0);
+  }
+
+  init() {
+    this.update();
+
+    for (const event of [
+      'durationchange',
+      'ended',
+      'pause',
+      'play',
+      'playing',
+      'seeked',
+      'stalled',
+      'timeupdate',
+      'volumechange',
+      'waiting',
+    ]) {
+      this.audio.addEventListener(event, () => this.update());
+    }
+
+    this.stateButton.addEventListener('click', () => {
+      if (this.audio.paused) {
+        this.play();
+      } else {
+        this.pause();
+      }
+    });
+
+    this.initProgress();
+    this.initVolume();
+  }
+
+  initProgress() {
+    initBarEvents(this.progressBar);
+
+    let wasPaused = false;
+    this.progressBar.addEventListener('bardown', () => {
+      wasPaused = this.audio.paused;
+      if (!wasPaused) {
+        this.pause();
+      }
+    });
+
+    this.progressBar.addEventListener('barmove', ({ detail: percentage }) => {
+      this.audio.currentTime = percentage * this.audio.duration;
+    });
+
+    this.progressBar.addEventListener('barup', () => {
+      if (!wasPaused) {
+        this.play();
+      }
+    });
+  }
+
+  initVolume() {
+    this.volume = this.volume;
+    this.volumeButton.addEventListener('click', () => {
+      this.audio.muted = !this.audio.muted;
+    });
+
+    if (isMobile) {
+      return;
+    }
+
+    let active = 0;
+    const enter = () => this.volumeBarWrapper.classList.toggle('active', ++active > 0);
+    const leave = () => this.volumeBarWrapper.classList.toggle('active', --active > 0);
+
+    this.volumeArea.addEventListener('pointerenter', enter);
+    this.volumeArea.addEventListener('pointerleave', leave);
+
+    initBarEvents(this.volumeBar);
+    this.volumeBar.addEventListener('bardown', enter);
+    this.volumeBar.addEventListener('barmove', ({ detail: volume }) => (this.volume = volume));
+    this.volumeBar.addEventListener('barup', leave);
   }
 
   play() {
@@ -160,110 +255,6 @@ class XAudio extends HTMLElement {
     localStorage.setItem('volume', value);
 
     this.volumeBarSeeker.style.setProperty('--value', value);
-  }
-
-  render() {
-    const progress = this.audio.currentTime || 0;
-    const duration = this.audio.duration || 0;
-
-    this.time.innerHTML = `${formatSeconds(progress)} / ${formatSeconds(duration)}`;
-    this.stateButtonPath.setAttribute(
-      'd',
-      this.audio.paused
-        ? 'M8 5.14v14l11-7l-11-7z'
-        : 'M14 19h4V5h-4M6 19h4V5H6v14z' // prettier-ignore
-    );
-    this.volumeButtonPath.setAttribute(
-      'd',
-      this.audio.muted || this.audio.volume === 0
-        ? 'M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z'
-        : 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z'
-    );
-    this.progressBarSeeker.style.setProperty('--value', duration > 0 ? progress / duration : 0);
-  }
-
-  initProgress() {
-    let paused = false;
-
-    const down = () => {
-      paused = this.audio.paused;
-      if (!paused) {
-        this.pause();
-      }
-    };
-    const move = ({ detail: progress }) => {
-      this.audio.currentTime = progress * this.audio.duration;
-    };
-    const up = () => {
-      if (!paused) {
-        this.play();
-      }
-    };
-
-    initBarEvents(this.progressBar);
-    this.progressBar.addEventListener('bardown', down);
-    this.progressBar.addEventListener('barmove', move);
-    this.progressBar.addEventListener('barup', up);
-  }
-
-  initVolume() {
-    this.volume = this.volume;
-
-    this.volumeButton.addEventListener('click', () => {
-      this.audio.muted = !this.audio.muted;
-    });
-
-    if (isMobile) {
-      return;
-    }
-
-    const active = new Proxy(
-      { value: 0 },
-      {
-        set: (target, key, value) => {
-          this.volumeBarWrapper.classList.toggle('active', value > 0);
-          return Reflect.set(target, key, value);
-        },
-      }
-    );
-
-    this.volumeArea.addEventListener('pointerenter', () => active.value++);
-    this.volumeArea.addEventListener('pointerleave', () => active.value--);
-
-    initBarEvents(this.volumeBar);
-    this.volumeBar.addEventListener('bardown', () => active.value++);
-    this.volumeBar.addEventListener('barmove', ({ detail: volume }) => (this.volume = volume));
-    this.volumeBar.addEventListener('barup', () => active.value--);
-  }
-
-  init() {
-    this.render();
-
-    for (const event of [
-      'durationchange',
-      'ended',
-      'pause',
-      'play',
-      'playing',
-      'seeked',
-      'stalled',
-      'timeupdate',
-      'volumechange',
-      'waiting',
-    ]) {
-      this.audio.addEventListener(event, () => this.render());
-    }
-
-    this.stateButton.addEventListener('click', () => {
-      if (this.audio.paused) {
-        this.play();
-      } else {
-        this.pause();
-      }
-    });
-
-    this.initProgress();
-    this.initVolume();
   }
 }
 
