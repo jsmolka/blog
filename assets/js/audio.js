@@ -1,46 +1,42 @@
-// https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
 const isMobile = /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent);
 
-function formatDate(date, template = null) {
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+function formatTime(date, template = null) {
+  const h = date.getHours();
+  const m = date.getMinutes();
+  const s = date.getSeconds();
 
   if (template == null) {
-    if (hours >= 10) {
+    if (h >= 10) {
       template = 'hh:mm:ss';
-    } else if (hours >= 1) {
+    } else if (h >= 1) {
       template = 'h:mm:ss';
-    } else if (minutes >= 10) {
+    } else if (m >= 10) {
       template = 'mm:ss';
     } else {
       template = 'm:ss';
     }
   }
 
-  const matches = (match) => {
+  return template.replace(/h{1,2}|m{1,2}|s{1,2}/g, (match) => {
     switch (match) {
       case 'h':
-        return String(hours);
+        return String(h);
       case 'hh':
-        return String(hours).padStart(2, '0');
+        return String(h).padStart(2, '0');
       case 'm':
-        return String(minutes);
+        return String(m);
       case 'mm':
-        return String(minutes).padStart(2, '0');
+        return String(m).padStart(2, '0');
       case 's':
-        return String(seconds);
+        return String(s);
       case 'ss':
-        return String(seconds).padStart(2, '0');
-      default:
-        return null;
+        return String(s).padStart(2, '0');
     }
-  };
-  return template.replace(/h{1,2}|m{1,2}|s{1,2}/g, matches);
+  });
 }
 
 function formatSeconds(seconds, template = null) {
-  return formatDate(new Date(0, 0, 0, 0, 0, seconds), template);
+  return formatTime(new Date(0, 0, 0, 0, 0, seconds), template);
 }
 
 function slider(element) {
