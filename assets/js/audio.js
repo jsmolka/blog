@@ -141,7 +141,7 @@ class XAudio extends HTMLElement {
 
   play() {
     for (const instance of XAudio.instances) {
-      instance.audio.pause();
+      instance.pause();
     }
     this.audio.play();
   }
@@ -169,7 +169,9 @@ class XAudio extends HTMLElement {
     this.time.innerHTML = `${formatSeconds(progress)} / ${formatSeconds(duration)}`;
     this.stateButtonPath.setAttribute(
       'd',
-      this.audio.paused ? 'M8 5.14v14l11-7l-11-7z' : 'M14 19h4V5h-4M6 19h4V5H6v14z'
+      this.audio.paused
+        ? 'M8 5.14v14l11-7l-11-7z'
+        : 'M14 19h4V5h-4M6 19h4V5H6v14z' // prettier-ignore
     );
     this.volumeButtonPath.setAttribute(
       'd',
