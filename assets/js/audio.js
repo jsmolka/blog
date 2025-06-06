@@ -39,21 +39,24 @@ function formatSeconds(seconds, template = null) {
   return formatTime(new Date(0, 0, 0, 0, 0, seconds), template);
 }
 
-function slider(element) {
-  const down = () => {
-    element.dispatchEvent(new Event('slider:down'));
+function clamp(value, min, max) {
+  return Math.min(Math.max(min, value), max);
+}
+
+function initBarEvents(element) {
+  const createBarEvent = (name) => {
+    return (event) => {
+      element.dispatchEvent(
+        new CustomEvent(name, {
+          detail: clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1),
+        })
+      );
+    };
   };
-  const move = (event) => {
-    const value = (event.pageX - element.offsetLeft) / element.offsetWidth;
-    element.dispatchEvent(
-      new CustomEvent('slider:move', {
-        detail: Math.min(Math.max(0, value), 1),
-      })
-    );
-  };
-  const up = () => {
-    element.dispatchEvent(new Event('slider:up'));
-  };
+
+  const down = createBarEvent('bardown');
+  const move = createBarEvent('barmove');
+  const up = createBarEvent('barup');
 
   element.addEventListener('pointerdown', (event) => {
     if (event.button !== 0) {
@@ -68,14 +71,14 @@ function slider(element) {
       window.removeEventListener('pointerup', pointerUp);
       window.document.body.style.cursor = cursor;
       window.document.body.style.userSelect = select;
-      up();
+      up(event);
     };
 
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', pointerUp);
-    window.document.body.style.cursor = element.style.cursor;
+    window.document.body.style.cursor = 'pointer';
     window.document.body.style.userSelect = 'none';
-    down();
+    down(event);
     move(event);
   });
 }
@@ -195,10 +198,10 @@ class XAudio extends HTMLElement {
       }
     };
 
-    slider(this.progressBar);
-    this.progressBar.addEventListener('slider:down', down);
-    this.progressBar.addEventListener('slider:move', move);
-    this.progressBar.addEventListener('slider:up', up);
+    initBarEvents(this.progressBar);
+    this.progressBar.addEventListener('bardown', down);
+    this.progressBar.addEventListener('barmove', move);
+    this.progressBar.addEventListener('barup', up);
   }
 
   initVolume() {
@@ -225,10 +228,10 @@ class XAudio extends HTMLElement {
     this.volumeArea.addEventListener('pointerenter', () => active.value++);
     this.volumeArea.addEventListener('pointerleave', () => active.value--);
 
-    slider(this.volumeBar);
-    this.volumeBar.addEventListener('slider:down', () => active.value++);
-    this.volumeBar.addEventListener('slider:move', ({ detail: volume }) => (this.volume = volume));
-    this.volumeBar.addEventListener('slider:up', () => active.value--);
+    initBarEvents(this.volumeBar);
+    this.volumeBar.addEventListener('bardown', () => active.value++);
+    this.volumeBar.addEventListener('barmove', ({ detail: volume }) => (this.volume = volume));
+    this.volumeBar.addEventListener('barup', () => active.value--);
   }
 
   init() {
