@@ -1,6 +1,88 @@
-import { isMobile } from './utils/platform';
-import { slider } from './utils/slider';
-import { formatSeconds } from './utils/time';
+// https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent#mobile_tablet_or_desktop
+const isMobile = /Mobi|Android|iPad|iPhone|iPod/i.test(navigator.userAgent);
+
+function formatDate(date, template = null) {
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  if (template == null) {
+    if (hours >= 10) {
+      template = 'hh:mm:ss';
+    } else if (hours >= 1) {
+      template = 'h:mm:ss';
+    } else if (minutes >= 10) {
+      template = 'mm:ss';
+    } else {
+      template = 'm:ss';
+    }
+  }
+
+  const matches = (match) => {
+    switch (match) {
+      case 'h':
+        return String(hours);
+      case 'hh':
+        return String(hours).padStart(2, '0');
+      case 'm':
+        return String(minutes);
+      case 'mm':
+        return String(minutes).padStart(2, '0');
+      case 's':
+        return String(seconds);
+      case 'ss':
+        return String(seconds).padStart(2, '0');
+      default:
+        return null;
+    }
+  };
+  return template.replace(/h{1,2}|m{1,2}|s{1,2}/g, matches);
+}
+
+function formatSeconds(seconds, template = null) {
+  return formatDate(new Date(0, 0, 0, 0, 0, seconds), template);
+}
+
+function slider(element) {
+  const down = () => {
+    element.dispatchEvent(new Event('slider:down'));
+  };
+  const move = (event) => {
+    const value = (event.pageX - element.offsetLeft) / element.offsetWidth;
+    element.dispatchEvent(
+      new CustomEvent('slider:move', {
+        detail: Math.min(Math.max(0, value), 1),
+      })
+    );
+  };
+  const up = () => {
+    element.dispatchEvent(new Event('slider:up'));
+  };
+
+  element.addEventListener('pointerdown', (event) => {
+    if (event.button !== 0) {
+      return;
+    }
+
+    const cursor = window.document.body.style.cursor;
+    const select = window.document.body.style.userSelect;
+
+    const pointerUp = () => {
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', pointerUp);
+      window.document.body.style.cursor = cursor;
+      window.document.body.style.userSelect = select;
+      up();
+    };
+
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', pointerUp);
+    window.document.body.style.cursor = element.style.cursor;
+    window.document.body.style.userSelect = 'none';
+    down();
+    move(event);
+  });
+}
 
 const template = /* html */ `
   <button ref="stateButton">
@@ -12,7 +94,7 @@ const template = /* html */ `
   <div ref="progressBar" class="bar">
     <div ref="progressBarSeeker" class="seeker"></div>
   </div>
-  <div ref="volumeArea" class="volume">
+  <div ref="volumeArea" class="volume-area">
     <div ref="volumeBarWrapper" class="volume-bar-wrapper">
       <div ref="volumeBar" class="bar">
         <div ref="volumeBarSeeker" class="seeker"></div>
@@ -46,17 +128,16 @@ class XAudio extends HTMLElement {
 
     this.render();
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.intersectionRatio > 0 || entry.isIntersecting) {
-          this.audio.addEventListener('loadedmetadata', this.init.bind(this));
+    new IntersectionObserver(
+      ([entry], observer) => {
+        if (entry.isIntersecting && entry.intersectionRatio > 0) {
+          this.audio.addEventListener('loadedmetadata', () => this.init());
           this.audio.src = this.getAttribute('src');
           observer.unobserve(entry.target);
         }
       },
       { rootMargin: '256px' }
-    );
-    observer.observe(this);
+    ).observe(this);
   }
 
   play() {
@@ -169,7 +250,7 @@ class XAudio extends HTMLElement {
       'volumechange',
       'waiting',
     ]) {
-      this.audio.addEventListener(event, this.render.bind(this));
+      this.audio.addEventListener(event, () => this.render());
     }
 
     this.stateButton.addEventListener('click', () => {
