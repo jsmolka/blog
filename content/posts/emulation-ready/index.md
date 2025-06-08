@@ -1,5 +1,5 @@
 ---
-title: "Feature Complete"
+title: "Emulation Ready"
 tags: ["drizzle", "programming"]
 date: 2022-07-01
 type: post
