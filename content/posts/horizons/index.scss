@@ -37,3 +37,15 @@ h3 {
   background: linear-gradient(to right, var(--horizons-5), var(--horizons-4));
   background-clip: text;
 }
+
+@font-face {
+  font-family: 'Axion RND';
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+  src: url('fonts/axion-rnd.woff') format('woff2');
+}
+
+.font-axion-rnd {
+  font-family: 'Axion RND', Inter, Roboto, ui-sans-serif, sans-serif;
+}
