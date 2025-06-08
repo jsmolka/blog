@@ -12,4 +12,4 @@ I use it for almost everything:
 - **Calendar**: Life isn't too complicated right now, and a full-blown calendar would be overkill. The calendar view in Todoist is great, but sometimes a list of tasks sorted by due date is superior for showing what's next in the pipeline.
 - **Notes**: Todoist's biggest drawback is its note taking capability. Prepending an asterisk to the task title prevents it from being completed, and the description supports markdown. This unfortunately excludes images and tables. You can attach images to comments, but that's not the same. Nevertheless, I have a project with simple and frequently accessed notes.
 
-I've completed 5268 tasks in the past year. That's 14 tasks per day and there is not end in sight.
+I've completed 5268 tasks in the past year. That's 14 tasks per day and there is no end in sight.

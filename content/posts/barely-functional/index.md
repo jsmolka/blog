@@ -1,5 +1,5 @@
 ---
-title: "Functions"
+title: "Barely Functional"
 tags: ["drizzle", "programming"]
 date: 2022-03-01
 type: post
