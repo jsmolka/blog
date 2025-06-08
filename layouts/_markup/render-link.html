@@ -11,7 +11,7 @@
   {{- if or (eq $extension "") (eq $extension "md") (eq $extension "html") -}}
     {{- /* Check if destination page exists */ -}}
     {{- if not (.Page.GetPage $url.Path) -}}
-      {{- errorf "Page not found %s" $url.Path -}}
+      {{- errorf "Error rendering %s: page not found %s" $.Page.RelPermalink $url.Path -}}
     {{- end -}}
     {{- $blank = false -}}
   {{- end -}}
