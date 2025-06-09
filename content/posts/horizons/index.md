@@ -15,21 +15,42 @@ draft: true
 
 Around eleven years ago, I watched a [gaming montage](https://www.youtube.com/watch?v=fli0N0RVmXw) featuring the song [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) by a newly formed band called Starset. I didn't know it back then, but they would one day become my favorite. Its frontman, Dustin Bates, a PhD in electrical engineering and former U.S. Air Force researcher, created the band to combine his interests in [science and music](https://x.com/starsetonline/status/346082788879003648).
 
-Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in the form of through-composed outros with adventurous melodies. Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love and space to the dystopian use of technology in authoritarian civilizations. Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
+Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love and space to the dystopian use of technology in authoritarian civilizations. Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
 
 ## Creative Direction
-- https://www.instagram.com/brandonrike
-- Tension Division, https://tensiondivision.com/project/starsethorizons
+Something Starset has nailed since its inception is the creative direction. They publish supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest: I don't really care about that kind of stuff. I'm here for the music.
 
-Discuss the used font
+<!-- At that point nobody knew that there was an album in the works. It became more apparent with the following singles. For them and the whole album, Starset teamed up with...
+Funny title for a song released during COVID
+-->
+
+Speaking of which: the first single to be released was Infected. At that point, the album hasn't been announced yet, which explains the different cover style. For the remaining singles and album, Starset teamed up with [Brandon Rike](https://brandonrike.com/) of [Tension Division](https://tensiondivision.com/project/starsethorizons).
+
+- ![](img/cover-infected.jpg "Infected cover")
+- ![](img/cover-leaving-this-world-behind.jpg "Leaving This World Behind cover")
+{.fluent}
+
+The change in style is immediately apparent and very recognizable. Dark starry backgrounds with beams of energy shooting through it.
+
+- ![](img/cover-the-breach.jpg "The Breach cover")
+- ![](img/cover-earthrise.jpg "Earthrise cover")
+{.fluent}
+
+The font used on covers, LPs and other media is called Axion RND. It has very distinct, round and futuristic looking characters. The height difference between lower- and uppercase ones is small, which probably influenced the decision to capitalize all text.
 {.font-axion-rnd}
 
 ## Artwork
 While artwork and creative direction might appear supplemental to the musical experience, they are of great importance to me. Good covers stand out and draw you in. If you find one that resonates with you, it is almost impossible to not listen to the album. That's the feeling I had, and still have, with the cover of Horizons. The LP sits proudly between my speakers as a decorative piece and catches the eye every so often.
 
-![](img/cover.jpg "Horizons cover")
+![](img/cover-horizons.jpg "Horizons cover")
 
 It features the side profile of a female head. The back fades into the nothingness of space, while the front is enlightened by a mystery that unravels in front of her. The eyes look up towards the stars and the fading colors make it seems like she is connected to the universe itself. The three white dots near her temple most likely represent the brain machine interface, a part of the wider Starset lore, but something I am not really interested in.
+
+<!--
+- BMI
+  - Horizons video https://www.youtube.com/watch?v=-u4AwQGLEsE
+  - Symbiotic video https://www.youtube.com/watch?v=xI5l3QRc-p8
+-->
 
 <figure>
   <div style="display: flex; height: 4rem; border-width: 1px">
@@ -47,13 +68,13 @@ It features the side profile of a female head. The back fades into the nothingne
 
 The colors perfectly capture space for me. The black and dark blue represent the nothingness, while the electric blue and pink and calming orange and red represent the immense forces acting throughout the universe. Similar colors are used in the singles preceding the album.
 
-- ![](img/cover-the-breach.jpg "The Breach cover")
-- ![](img/cover-leaving-this-world-behind.jpg "Leaving This World Behind cover")
-- ![](img/cover-earthrise.jpg "Earthrise cover")
-{.fluent}
+## Symbolism
 
 ## Songs
+
 I wrote this post primarily to talk about how the design and creative direction resonate with me, but I can't end it without talking about the songs themselves. When listening to music, I tend to not focus on the lyrics too much. That is due to my German ears not understanding some English words acoustically and me not placing much importance on the lyrics in the first place. I listen to music for the feeling I get. Melody, flow and a good chorus make or break a song for me. Of course, I am not ignorant to the lyrics, but they play a minor role.
+
+<!-- Just go other favorites -->
 
 1. **Unveiling the Architecture**: Instrumental introduction to the album. Same as in all their previous albums.
 2. **The Breach**:
@@ -87,7 +108,3 @@ I wrote this post primarily to talk about how the design and creative direction 
 > New horizons<br>
 >
 > <cite>[Where The Skies End outro](https://www.youtube.com/watch?v=1DHY4cgQwE8&t=277s), quote from [To New Horizons](https://www.youtube.com/watch?v=tAz4R6F0aaY&t=108s)</cite>
-
----
-
-## Albums, Please
