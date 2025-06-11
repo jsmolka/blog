@@ -49,3 +49,14 @@ h3 {
 .font-axion-rnd {
   font-family: 'Axion RND', Inter, Roboto, ui-sans-serif, sans-serif;
 }
+
+.markdown .symbols {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: spacing(2);
+
+  figcaption {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
