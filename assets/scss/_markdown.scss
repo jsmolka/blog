@@ -90,15 +90,13 @@
   }
 
   .fluent {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
     gap: spacing(4);
 
     @include narrow {
-      flex-direction: column;
-    }
-
-    & > li {
-      flex: 1;
+      grid-auto-flow: row;
     }
   }
 
