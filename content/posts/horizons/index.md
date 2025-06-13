@@ -18,19 +18,15 @@ Around eleven years ago, I watched a [gaming montage](https://www.youtube.com/wa
 Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love and space to the dystopian use of technology. Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
 
 ## Creative Direction
-Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest: I don't really care about that kind of stuff. I'm here for the music.
+Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest, I don't really care about that kind of stuff. I'm here for the music.
 
 Speaking of which, the first single of Horizons to be released was Infected. At that point, nobody knew there was an album in the works, which explains the difference in artwork style. It became more coherent with the following singles. For them and the whole album, Starset teamed up with [Brandon Rike](https://brandonrike.com/) of [Tension Division](https://tensiondivision.com/project/starsethorizons), who served as creative director and lead designer for popular bands like Twenty One Pilots, Korn and Weezer.
 
 - ![](img/cover-infected.jpg "Infected cover")
-- ![](img/cover-leaving-this-world-behind.jpg "Leaving This World Behind cover")
+- ![](img/cover-the-breach.jpg "The Breach cover")
 {.fluent}
 
-At least that's what I think. The covers of the singles following Infected have a very recognizable style.
-
-The change in style is immediately apparent and very recognizable. Dark starry backgrounds with beams of energy shooting through it.
-
-- ![](img/cover-the-breach.jpg "The Breach cover")
+- ![](img/cover-leaving-this-world-behind.jpg "Leaving This World Behind cover")
 - ![](img/cover-earthrise.jpg "Earthrise cover")
 {.fluent}
 
@@ -39,6 +35,10 @@ The font used on covers, LPs and other media is called Axion RND. It has very di
 {.font-axion-rnd}
 
 ![](img/band.jpg)
+
+<!--
+It looks good on the cover, but in Spotify or files having full caps titles is weird
+ -->
 
 ## Artwork
 While artwork and creative direction might appear supplemental to the musical experience, they are of great importance to me. Good covers stand out and draw you in. If you find one that resonates with you, it is almost impossible to not listen to the album. That's the feeling I had, and still have, with the cover of Horizons. The LP sits proudly between my speakers as a decorative piece and catches the eye every so often.
@@ -73,12 +73,12 @@ The colors perfectly capture space for me. The black and dark blue represent the
 
 ## Symbolism
 
-- ![](img/symbol-unveiling-the-architecture.png "Unveiling the Architecture")
+- ![](img/symbol-unveiling-the-architecture.png "Unveiling The Architecture")
 - ![](img/symbol-the-breach.png "The Breach")
 - ![](img/symbol-otherworldly.png "Otherworldly")
 - ![](img/symbol-icarus.png "Icarus")
 - ![](img/symbol-earthrise.png "Earthrise")
-- ![](img/symbol-leaving-this-world-behind.png "Leaving this World Behind")
+- ![](img/symbol-leaving-this-world-behind.png "Leaving This World Behind")
 - ![](img/symbol-devolution.png "Devolution")
 - ![](img/symbol-annihilated-love.png "Annihilated Love")
 - ![](img/symbol-alchemy.png "Alchemy")
