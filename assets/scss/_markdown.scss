@@ -241,6 +241,15 @@
         content: '[' counter(footnote-count) ']';
         font-feature-settings: 'tnum';
       }
+
+      & > a[href^='#fnref:'] {
+        display: block;
+        margin-top: spacing(2);
+      }
+
+      & > p > a[href^='#fnref:'] {
+        margin-left: 0.5ch;
+      }
     }
   }
 }

@@ -27,9 +27,12 @@
         </header>
       {{ end }}
       <div class="markdown">
-        {{ $table := `(<table>(?:.|\n)*?</table>)` }}
-        {{ $tableWrapper := `<div class="table-wrapper">${1}</div>` }}
-        {{ .Content | replaceRE $table $tableWrapper | safeHTML }}
+        {{
+          .Content
+            | replaceRE `(<table>(?:.|\n)*?</table>)` `<div class="table-wrapper">${1}</div>`
+            | replaceRE `&#160;` ``
+            | safeHTML
+        }}
       </div>
     </article>
   </main>
