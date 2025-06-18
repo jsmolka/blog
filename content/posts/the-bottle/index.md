@@ -21,7 +21,6 @@ Professional teams, on the other hand, have this more or less figured out. The E
     >
     > <cite>UCI special provision for littering no. 2</cite>
 
-
 - ![](img/mvdp.jpg "Mathieu van der Poel handing out a bottle to a spectator (© Josse Wester)")
 {.overflow}
 
