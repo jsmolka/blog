@@ -33,16 +33,16 @@ The recommended carbohydrate intake varies based on exercise duration and intens
 
 <figure>
 
-| Workout duration | Minimum [g/h] | Recommended [g/h] | Maximum [g/h] |
-| ---------------- | ------------- | ----------------- | ------------- |
-| <0.5 h           | 0             | 10                | 30            |
-| 0.5-1 h          | 0             | 20                | 50            |
-| 1-1.5 h          | 20            | 30                | 70            |
-| 1.5-2 h          | 40            | 60                | 90            |
-| 2-2.5 h          | 50            | 80                | 120           |
-| 2.5-3 h          | 60            | 90                | 120-150       |
-| 3-6 h            | 75            | 100               | 120-150       |
-| >6 h             | 75            | 90                | 90            |
+| Workout duration [h] | Minimum [g/h] | Recommended [g/h] | Maximum [g/h] |
+| -------------------- | ------------- | ----------------- | ------------- |
+| <0.5                 | 0             | 10                | 30            |
+| 0.5--1               | 0             | 20                | 50            |
+| 1--1.5               | 20            | 30                | 70            |
+| 1.5--2               | 40            | 60                | 90            |
+| 2--2.5               | 50            | 80                | 120           |
+| 2.5--3               | 60            | 90                | 120--150      |
+| 3--6                 | 75            | 100               | 120--150      |
+| >6                   | 75            | 90                | 90            |
   <figcaption>
 
   Recommended carbohydrate intake by [Dr. Alex Harrison](https://www.trainerroad.com/forum/t/140g-carbs-per-hour/51650/19)
@@ -55,7 +55,7 @@ High absorption rates are achieved by mixing glucose and fructose, which are met
 >
 > <cite>O'Brien et al.</cite>
 
-The popular nutrition brand Science in Sport launched its Beta Fuel drink mix in 2018 with a 2:1 glucose/fructose ratio and reformulated in 2021 to a 1:0.8 ratio, [citing](https://www.scienceinsport.com/sports-nutrition/the-science-behind-beta-fuel/) the, at this point eight-year-old, O'Brien et al. study. Other known brands like [Maurten](https://www.maurten.com/de/products/drink-mix-320) and [MNSTRY](https://mnstry.com/en/products/power-carb-heat-1-0-8) offer their own formulations based on a 1:0.8 ratio. It appears to be the magic number everybody is aiming for, even though Figure 4 in the study seems to max out absorption around the 0.9-0.95 mark.
+The popular nutrition brand Science in Sport launched its Beta Fuel drink mix in 2018 with a 2:1 glucose/fructose ratio and reformulated in 2021 to a 1:0.8 ratio, [citing](https://www.scienceinsport.com/sports-nutrition/the-science-behind-beta-fuel/) the, at this point eight-year-old, O'Brien et al. study. Other known brands like [Maurten](https://www.maurten.com/de/products/drink-mix-320) and [MNSTRY](https://mnstry.com/en/products/power-carb-heat-1-0-8) offer their own formulations based on a 1:0.8 ratio. It appears to be the magic number everybody is aiming for, even though Figure 4 in the study seems to max out absorption around the 0.9--0.95 mark.
 
 ![](img/oxydation.png "Integrated model for the mean oxidation rate and the mean efficiency of the oxidation of  fructose, exogenous glucose, and the composite (combined) total exogenous CHO ingested in the three experimental ratio drinks during endurance exercise")
 
@@ -75,11 +75,11 @@ Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have
 
 | Element   | Concentration [mmol/l] | Atomic mass [u] | Concentration [mg/l] |
 | --------- | ---------------------- | --------------- | -------------------- |
-| Sodium    | 10-90                  | 22.99           | 230-2070             |
-| Chlorine  | 10-90                  | 35.45           | 355-3191             |
-| Potassium | 2-8                    | 39.1            | 78-313               |
-| Calcium   | 0.2-2                  | 40.08           | 8-80                 |
-| Magnesium | 0.02-0.4               | 24.31           | 1-10                 |
+| Sodium    | 10--90                 | 22.99           | 230--2070            |
+| Chlorine  | 10--90                 | 35.45           | 355--3191            |
+| Potassium | 2--8                   | 39.1            | 78--313              |
+| Calcium   | 0.2--2                 | 40.08           | 8--80                |
+| Magnesium | 0.02--0.4              | 24.31           | 1--10                |
 
 The most important mineral to replenish is sodium. This can be done with table salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred over the other will be explained in the [chapter on osmolarity](#electrolytes-1).
 
