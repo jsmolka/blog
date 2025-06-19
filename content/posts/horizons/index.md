@@ -20,25 +20,23 @@ Bates self-describes their music as cinematic rock, [blending symphonics with el
 ## Creative Direction
 Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest, I don't really care about that kind of stuff. I'm here for the music.
 
-Speaking of which, the first single of Horizons to be released was Infected. At that point, nobody knew there was an album in the works, which explains the difference in artwork style. It became more coherent with the following singles. For them and the whole album, Starset teamed up with [Brandon Rike](https://brandonrike.com/) of [Tension Division](https://tensiondivision.com/project/starsethorizons), who served as creative director and lead designer for popular bands like Twenty One Pilots, Korn and Weezer.
+Speaking of which, the first single of Horizons to be released was Infected. At that point, nobody knew there was a new album in the works. The cover artwork features a different visual style compared to the following singles. It has a scanned-paper-like appearance, doesn't use the outlined Starset wordmark, uses less kerning for the title and doesn't fit the color scheme in general.
 
 - ![](img/cover-infected.jpg "Infected cover")
 - ![](img/cover-the-breach.jpg "The Breach cover")
 {.fluent}
+
+The album promotion began five months later with The Breach, continued with Leaving This World Behind and ended with Earthrise. The singles have a very coherent cover artwork style, despite being very visually distinct. For them and the whole album, Starset teamed up with [Brandon Rike](https://brandonrike.com/) of [Tension Division](https://tensiondivision.com/project/starsethorizons), who served as creative director and lead designer for popular bands like Twenty One Pilots, Korn and Weezer.
 
 - ![](img/cover-leaving-this-world-behind.jpg "Leaving This World Behind cover")
 - ![](img/cover-earthrise.jpg "Earthrise cover")
 {.fluent}
 
 ## Font
-The font used on covers, LPs and other media is called Axion RND. It has very distinct, round and futuristic looking characters. The height difference between lower- and uppercase ones is small, which probably influenced the decision to capitalize all text. That's something I'm usually opposed to, but they made it work.
+The font used on covers and other media is called Axion RND. It features rounded and futuristic looking characters with a small height difference between uppercase and lowercase ones. That probably influenced the decision to capitalize all text, something I'm usually opposed to. I dislike song titles screaming at me in filenames or apps, but they do look good on covers.
 {.font-axion-rnd}
 
-![](img/band.jpg)
-
-<!--
-It looks good on the cover, but in Spotify or files having full caps titles is weird
- -->
+![](img/band.jpg "Band banner")
 
 ## Artwork
 While artwork and creative direction might appear supplemental to the musical experience, they are of great importance to me. Good covers stand out and draw you in. If you find one that resonates with you, it is almost impossible to not listen to the album. That's the feeling I had, and still have, with the cover of Horizons. The LP sits proudly between my speakers as a decorative piece and catches the eye every so often.
