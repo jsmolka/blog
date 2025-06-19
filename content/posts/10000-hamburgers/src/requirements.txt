@@ -1,3 +1,4 @@
+fitparse
 matplotlib
 numpy
 python-dateutil

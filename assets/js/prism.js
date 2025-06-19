@@ -6,6 +6,7 @@ import 'prismjs/components/prism-diff.js';
 import 'prismjs/components/prism-go.js';
 import 'prismjs/components/prism-javascript.js';
 import 'prismjs/components/prism-markdown.js';
+import 'prismjs/components/prism-python.js';
 import 'prismjs/components/prism-rust.js';
 import 'prismjs/components/prism-toml.js';
 import 'prismjs/plugins/custom-class/prism-custom-class.js';
