@@ -4,7 +4,7 @@ tags: ["cycling"]
 date: 2025-05-23T19:30:00+02:00
 type: post
 ---
-I started cycling back in mid-2020. It wasn't due to COVID-19, like for the many others. I finished my bachelor's degree in October the year before and got myself a job. I had the income of a junior software developer and the lifestyle of a student. For the first time in my life, I could afford nice things: a larger apartment closer to work and a shiny new bike worth riding.
+I started cycling back in mid-2020. It wasn't due to COVID-19, like for many others. I finished my bachelor's degree in October the year before and got myself a job. I had the income of a junior software developer and the lifestyle of a student. For the first time in my life, I could afford nice things: a larger apartment closer to work and a shiny new bike worth riding.
 
 Commuting turned into exercise and then, [as always](/about/), obsession. Recently, I crossed the 100,000 km mark --- 100,895 km to be precise. It took 1166 rides with an average distance of 87 km and 3156 hours to do so. An additional 400 hours were spent resting, in a café or socializing afterward. I've gathered more than enough data about myself to warrant a small review in this post.
 
