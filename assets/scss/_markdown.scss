@@ -173,8 +173,7 @@
     font-size: var(--text-sm);
   }
 
-  sub[id^='fnref'],
-  sup[id^='fnref'] {
+  :is(sub, sup)[id^='fnref'] {
     vertical-align: baseline;
   }
 

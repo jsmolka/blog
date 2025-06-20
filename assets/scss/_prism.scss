@@ -96,8 +96,7 @@ code[class*='language-'] {
   font-weight: 700;
 }
 
-.prism-deleted:not(.prism-prefix),
-.prism-inserted:not(.prism-prefix) {
+:is(.prism-deleted, .prism-inserted):not(.prism-prefix) {
   display: block;
   margin: 0 spacing(-3);
   color: inherit;
