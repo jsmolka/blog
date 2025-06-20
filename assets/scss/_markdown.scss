@@ -105,7 +105,7 @@
     border-bottom: 2px solid var(--shade-5);
   }
 
-  :is(ul, ol):not(.fluent) {
+  :is(ul, ol):not([class]) {
     display: flex;
     flex-direction: column;
     gap: spacing(1);
@@ -120,7 +120,7 @@
     }
   }
 
-  ul:not(.fluent) > li {
+  ul:not([class]) > li {
     position: relative;
 
     &::before {
@@ -134,7 +134,7 @@
     }
   }
 
-  ol:not(.fluent) {
+  ol:not([class]) {
     list-style: decimal;
   }
 
