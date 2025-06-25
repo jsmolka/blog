@@ -6,12 +6,8 @@
   &,
   blockquote,
   li {
-    & > *:not(:first-child, hr) {
+    & > *:not(:first-child) {
       margin-top: spacing(4);
-    }
-
-    & > :is(h1, h2, h3):not(:first-child) {
-      margin-top: spacing(6);
     }
   }
 
@@ -77,13 +73,11 @@
   }
 
   figure {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(2);
     margin: 0 auto;
   }
 
   figcaption {
+    margin-top: spacing(2);
     font-size: var(--text-sm);
     text-align: center;
   }
@@ -99,23 +93,25 @@
     }
   }
 
+  :is(h1, h2, h3):not(:first-child) {
+    margin-top: spacing(6);
+  }
+
   hr {
     width: spacing(16);
-    margin: spacing(8) auto;
+    margin: spacing(8) auto !important;
     border-bottom: 2px solid var(--shade-5);
   }
 
   :is(ul, ol):not([class]) {
-    display: flex;
-    flex-direction: column;
-    gap: spacing(1);
     margin-left: spacing(12);
 
     @include narrow {
       margin-left: spacing(4);
     }
 
-    & > li {
+    li {
+      margin-top: spacing(1);
       padding-left: spacing(1);
     }
   }
