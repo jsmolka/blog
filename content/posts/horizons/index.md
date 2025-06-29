@@ -17,7 +17,7 @@ draft: true
 
 Around eleven years ago, I watched a [gaming montage](https://www.youtube.com/watch?v=fli0N0RVmXw) featuring the song [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) by a newly formed band called Starset. I didn't know it back then, but they would one day become my favorite. Its frontman, Dustin Bates, a PhD in electrical engineering and former U.S. Air Force researcher, created the band to combine his interests in [science and music](https://x.com/starsetonline/status/346082788879003648).
 
-Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love and space to the dystopian use of technology. Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
+Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love, space and science fiction to the dystopian use of technology in authoritarian societies. Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
 
 ## Creative Direction
 Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest, I don't really care about that kind of stuff. I'm here for the music.
@@ -28,7 +28,7 @@ Speaking of which, the first single of Horizons to be released was Infected. At 
 - ![](img/cover-the-breach.jpg "The Breach cover (Sep 10)")
 {.fluent}
 
-The album promotion began five months later with The Breach, continued with Leaving This World Behind and ended with Earthrise. The singles have a very coherent cover artwork style, despite being very visually distinct. For them and the whole album, Starset teamed up with [Brandon Rike](https://brandonrike.com/) of [Tension Division](https://tensiondivision.com/project/starsethorizons), who served as creative director and lead designer for popular bands like Twenty One Pilots, Korn and Weezer.
+The album promotion began five months later with The Breach, continued with Leaving This World Behind and ended with Earthrise. The singles have a very coherent cover artwork style, despite being visually distinct. For them and the whole album, Starset teamed up with [Brandon Rike](https://brandonrike.com/), co-founder of [Tension Division](https://tensiondivision.com/project/starsethorizons), who served as creative director and lead designer for popular bands like Twenty One Pilots, Korn and Weezer.
 
 - ![](img/cover-leaving-this-world-behind.jpg "Leaving This World Behind cover (Sep 24)")
 - ![](img/cover-earthrise.jpg "Earthrise cover (Oct 8)")
@@ -61,170 +61,181 @@ It features the side profile of a female head. Its back fades into the nothingne
   <figcaption>Horizons cover color palette</figcaption>
 </figure>
 
-The colors wonderfully capture space for me. Black and dark blue represent the emptiness, nothingness and mystery of space. Electric blue, pink and purple represent the immense energy of the forces acting throughout it. Orange and red add some sense of warmth, while the dark red adds an element of danger and the unknown. The grainy and noisy texture used in all Horizons media helps with the raw, powerful and imperfect aesthetic.
+The colors wonderfully express the feeling of space for me. Black and dark blue represent the emptiness, nothingness and mystery of space. Electric blue, pink and purple represent the immense energy of the forces acting throughout it. Orange and red add some sense of warmth, while the dark red adds an element of danger and the unknown. The grainy and noisy texture used in all Horizons media helps with the raw, powerful and imperfect aesthetic.
 
 ![](img/cd.jpg "VIP Edition CD")
 
 ## Music
-This post exists because of my admiration for the artwork surrounding the album. It's great in isolation, but the quality of music elevates it to another level. Horizons consists of 16 songs and is unusually long for a modern album, with a runtime of 71 minutes. I won't go over every song, because both my vocabulary and music theory knowledge aren't equipped to handle the task. But I will mention some of my favorites:
+I am writing this post because of my admiration for the creative direction. It's great in isolation, but the quality of music elevates it to another level and makes it much more memorable. Horizons is quite long for a modern album and consists of 16 songs, including one short instrumental intro. In it, Starset continue to experiment with their sound, something they have done ever since their debut album:
+
+1. **Transmissions** established the classic Starset formula: cinematic rock exploring love, space and other science-fiction-related themes. Some of the through-composed and long-winded outros turn songs into experiences. Tracks like [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) and [It Has Begin](https://www.youtube.com/watch?v=XZp3Mtn-YsI) continue to be among their most well known work.
+2. **Vessels** refines the sound of Transmissions. It improves everything great from its predecessor and smooths out some of the rough edges. They released a deluxe version a year later, which included some of the [best instrumental versions](https://www.youtube.com/watch?v=j7l7ekbR-9c) I've every heard.
+3. **Divisions** deviated from the classic Starset formula. It has a much more industrial feeling sound design and darker, dystopian lyrics. It contains my favorite song [Perfect Machine](https://www.youtube.com/watch?v=keMBtyjYUPQ), the meaning of which I'm still unsure about.
+4. **Horizons** on the other hand is much more emotional and softer, interspersed with a few heavy tracks. The production feels clean with a radio-friendly finish.
+
+<!-- Talk about the lyrics being overlooked. Saw a fan comparing him to a living thesaurus -->
+
+I won't go over every song (this post is already getting out of hand and far exceeds what I set out to do), because both my vocabulary and music theory knowledge aren't equipped to handle the task. But I will mention some of my favorites:
+
+
+
 
 <!--
 Use narrator instead of protagonist
  -->
 
-- [Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU):
-    A classic love song with an amazing bridge and climax:
+### Otherworldly
+<!-- https://www.youtube.com/watch?v=l_MtK_kPtNU -->
+To me, a key characteristic of Starset are the long and powerful bridges. A classic love song with an amazing bridge:
 
-    > I wanna become lucid<br>
-    > Clear, just like a window<br>
-    > I tried so hard to open up<br>
-    > And show you what's behind it<br>
-    > But you didn't need to hear me<br>
-    > 'Cause you were supraliminal<br>
-    > Knew me without an uttered word<br>
-    > You always seemed to know me<br>
-    > An ethereal feeling<br>
-    > That I cannot describe<br>
-    > The way that I feel you<br>
-    > Something that I cannot hide<br>
-    > How you illuminate<br>
-    > In a profound way, I feel your space<br>
-    > I can't explain this place you're taking me<br>
+> I wanna become lucid<br>
+> Clear, just like a window<br>
+> I tried so hard to open up<br>
+> And show you what's behind it<br>
+> But you didn't need to hear me<br>
+> 'Cause you were supraliminal<br>
+> Knew me without an uttered word<br>
+> You always seemed to know me<br>
+> An ethereal feeling<br>
+> That I cannot describe<br>
+> The way that I feel you<br>
+> Something that I cannot hide<br>
+> How you illuminate<br>
+> In a profound way, I feel your space<br>
+> I can't explain this place you're taking me<br>
 
-    Its spoken outro foreshadows the next song:
+Its spoken outro foreshadows the next song:
 
-    > And he told him<br>
-    > "Beware, do not fly too close to the sun<br>
-    > The blaze will surely melt those wings."<br>
-    > But alas, he fell<br>
-    > His cries, swallowed by the sea<br>
+> And he told him<br>
+> "Beware, do not fly too close to the sun<br>
+> The blaze will surely melt those wings."<br>
+> But alas, he fell<br>
+> His cries, swallowed by the sea<br>
 
-- [Icarus](https://www.youtube.com/watch?v=ZfiSaBxGB9E):
-    A very energetic song about a figure in Greek mythology. Icarus and his father, master craftsman Daedalus, were imprisoned by Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the self-destructiveness and pride of Icarus, which eventually led to his downfall --- pun intended.
+### Icarus
+<!-- https://www.youtube.com/watch?v=ZfiSaBxGB9E -->
+An energetic song about a figure in Greek mythology. Icarus and his father, master craftsman Daedalus, were imprisoned by Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the self-destructiveness and pride of Icarus, which eventually led to his downfall --- pun intended.
 
-    > Fall back down, back down again<br>
-    > You've got your head in the clouds, on the ground again<br>
-    > Oh, looking for a scapegoat to hold your feet<br>
-    > Pounding on your chest so you don't feel weak<br>
-    > You fall back down, back down again    <br>
+> Fall back down, back down again<br>
+> You've got your head in the clouds, on the ground again<br>
+> Oh, looking for a scapegoat to hold your feet<br>
+> Pounding on your chest so you don't feel weak<br>
+> You fall back down, back down again    <br>
 
-- [Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w):
-    The song is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. It was captured from lunar orbit, but the angle makes it seems like he was standing on the moon's surface, watching the earth rise like the sun on our planet.
+### Earthrise
+<!-- https://www.youtube.com/watch?v=ggCkN3Sve9w -->
+The song is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees clockwise to better convey the sense of the Earth rising over the moonscape.
 
-    ![](img/earthrise.jpg "[Earthrise](https://en.wikipedia.org/wiki/Earthrise)")
+![](img/earthrise.jpg "[Earthrise](https://en.wikipedia.org/wiki/Earthrise)")
 
-    > And I waited for the sky to change but, oh, it never did<br>
-    > And I almost dropped my head and lost my faith<br>
-    > Then I saw you from a distance, you were worlds away<br>
-    > Oh, but you had me from the vision, I never looked away again<br>
+> And I waited for the sky to change but, oh, it never did<br>
+> And I almost dropped my head and lost my faith<br>
+> Then I saw you from a distance, you were worlds away<br>
+> Oh, but you had me from the vision, I never looked away again<br>
 
-    > I still fall for you like suns do for skies<br>
-    > Cerulean pouring in from your eyes<br>
-    > Just a hollow moon that you colorize<br>
-    > So powerful, I feel so small but so alive<br>
-    > Like watching the Earth rise<br>
+The lyrics describe a lonely person falling in love.
 
-    The lyrics describe a lonely person falling in love. The chorus's first line is a wordplay on falling in love and the sun setting, which is a falling sun from earth's perspective. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses theory about the moon's interior being inhabited by aliens, first mentioned by the English science fiction writer H. H. Wells. It might be a metaphor for the protagonist feeling hollow and empty, until his significant other fills him with cerulean, a sky blue color.
+> I still fall for you like suns do for skies<br>
+> Cerulean pouring in from your eyes<br>
+> Just a hollow moon that you colorize<br>
+> So powerful, I feel so small but so alive<br>
+> Like watching the Earth rise<br>
 
-- [Leaving This World Behind](https://www.youtube.com/watch?v=6Od_dO3ENJo):
-    The narrative continues the protagonist and other person are now together. The lyrics explore their feelings.
+The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by science fiction writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
 
-    > Beautiful, new frontier<br>
-    > High above the rain in the atmosphere<br>
-    > What wonders I have discovered<br>
-    > My soul is everclear<br>
-    > Never felt the way I do with you here<br>
-    > I hope there's never another    <br>
+### Leaving This World Behind
+<!-- https://www.youtube.com/watch?v=6Od_dO3ENJo -->
+The arc continues. The narrator and other person are now in a relationship. The lyrics explore their feelings.
 
-- [Disappear](https://www.youtube.com/watch?v=m-8n9YyfBB8):
-    The relationship formed in previous songs came to an end. The narrator struggles to move on and mourns a person that's still alive.
+> Beautiful, new frontier<br>
+> High above the rain in the atmosphere<br>
+> What wonders I have discovered<br>
+> My soul is everclear<br>
+> Never felt the way I do with you here<br>
+> I hope there's never another    <br>
 
-    > There's a whole world that used to be us<br>
-    > Now there's an echo calling me<br>
-    > Just a shred of memory<br>
+### Disappear
+<!-- https://www.youtube.com/watch?v=m-8n9YyfBB8 -->
+The relationship formed in previous songs came to an end. The narrator struggles to move on and mourns a person that's still alive.
 
-    > It's hard to come to grips<br>
-    > That you still exist<br>
-    > When it feels just like you died<br>
+> There's a whole world that used to be us<br>
+> Now there's an echo calling me<br>
+> Just a shred of memory<br>
 
-    He thinks about disappearing, as in isolating himself, or, given the context of a song not discussed here, taking his life.
+> It's hard to come to grips<br>
+> That you still exist<br>
+> When it feels just like you died<br>
 
-    > I'll evaporate<br>
-    > Gone without a trace<br>
-    > Off the radar, out of sight<br>
+He thinks about disappearing, as in isolating himself, or, given the context of a song not discussed here, taking his life.
 
-    The song ends with the only through-composed outro of the album and leads seamlessly into the next one.
+> I'll evaporate<br>
+> Gone without a trace<br>
+> Off the radar, out of sight<br>
 
-- [This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI):
-    The song starts with a heavy guitar riff and then continues to be surprisingly calm outside of the chorus. The lyrics describe the narrator mourning either the end of a relationship or the death of a loved person.
+The song ends with the only through-composed outro of the album and leads seamlessly into the next one.
 
-    > Lonely wade<br>
-    > Out to the depths of an ocean<br>
-    > A castaway<br>
-    > I suffer the death of emotion<br>
-    > Between the waves of woe<br>
+### This Endless Endeavor
+<!-- https://www.youtube.com/watch?v=mcL8i_895QI -->
+The song starts with a heavy guitar riff and then continues to be surprisingly calm outside of the chorus. The lyrics describe the narrator mourning either the end of a relationship or the death of a loved person.
 
-    He feels overwhelmed and isolated, lost at sea, a castaway. The event caused him to so much pain that he's gone emotionally numb and only feel pain.
+> Lonely wade<br>
+> Out to the depths of an ocean<br>
+> A castaway<br>
+> I suffer the death of emotion<br>
+> Between the waves of woe<br>
 
-    > I get lost in the world sometimes<br>
-    > Star-crossed, looking out for a light but it won't shine<br>
-    > So, North Star come, North Star come<br>
-    > In the wake of my own confines<br>
-    > I will wait for the day you call through the skylines<br>
-    > And I'll be waiting, I'll be waiting<br>
+He feels overwhelmed and isolated, lost at sea, a castaway. The event caused him to so much pain that he's gone emotionally numb and only feel pain.
 
-- [Something Wicked](https://www.youtube.com/watch?v=CDq5TO05NcQ):
-    The last song of the album. Outros in previous albums tended to be on quieter side, and this one is no exception until its finale. The song is unusual, as it doesn't follow the familiar ABABCB structure, and instead feels like a carefully crafted, through-composed narrative.
+> I get lost in the world sometimes<br>
+> Star-crossed, looking out for a light but it won't shine<br>
+> So, North Star come, North Star come<br>
+> In the wake of my own confines<br>
+> I will wait for the day you call through the skylines<br>
+> And I'll be waiting, I'll be waiting<br>
 
-    The lyrics are littered with biblical references (_pray_, _crucifix_, _god_, _serpent tongue_) and tell the story of a protagonist being consumed/overtaken by _Something Wicked_. The song starts calm with just a piano and then layers in strings and other instruments over the following verses. It climaxes during the bridge, when it turns from calm to violent:
+### Something Wicked
+<!-- https://www.youtube.com/watch?v=CDq5TO05NcQ -->
+The last song of the album. Outros in previous albums tended to be on quieter side, and this one is no exception until its finale. The song is unusual, as it doesn't follow the familiar ABABCB structure, and instead feels like a carefully crafted, through-composed narrative.
 
-    > Out of myself, I can feel it crawling<br>
-    > How can I tell if this is the ending?<br>
-    > Out of myself, it began evolving<br>
-    > I am not well, repent, I'm guilty<br>
-    > How can I tell if the sky is falling?<br>
-    > How can I fix what there is no mending?<br>
-    > How can I tell if I am not well?<br>
-    > I've lost myself, I have come undone<br>
-    > And all of the horses<br>
-    > And all of the men<br>
-    > Won't put it back in place<br>
-    > Or bury it where it had been<br>
-    > When all of the forces<br>
-    > Have been overrun<br>
-    > You'll whisper, serpent tongue<br>
-    > What you fear you have become<br>
+The lyrics are littered with biblical references (_pray_, _crucifix_, _god_, _serpent tongue_) and tell the story of a protagonist being consumed/overtaken by _Something Wicked_. The song starts calm with just a piano and then layers in strings and other instruments over the following verses. It climaxes during the bridge, when it turns from calm to violent:
 
-    After that, the silence and piano return. The protagonist has lost the fight with his inner darkness. The album concludes with the whispered words:
+> Out of myself, I can feel it crawling<br>
+> How can I tell if this is the ending?<br>
+> Out of myself, it began evolving<br>
+> I am not well, repent, I'm guilty<br>
+> How can I tell if the sky is falling?<br>
+> How can I fix what there is no mending?<br>
+> How can I tell if I am not well?<br>
+> I've lost myself, I have come undone<br>
+> And all of the horses<br>
+> And all of the men<br>
+> Won't put it back in place<br>
+> Or bury it where it had been<br>
+> When all of the forces<br>
+> Have been overrun<br>
+> You'll whisper, serpent tongue<br>
+> What you fear you have become<br>
 
-    > Something wicked this way comes<br>
-    > Something wicked this way comes<br>
+After that, the silence and piano return. The protagonist has lost the fight with his inner darkness. The album concludes with the whispered words:
 
-    A theme that has been referenced in newer releases like [Dystopia](https://www.youtube.com/watch?v=E2uwT_SctB0):
+> Something wicked this way comes<br>
+> Something wicked this way comes<br>
 
-    > Lock your windows, close your doors and hide<br>
-    > Something wicked has got inside<br>
-    > Post-dramatic trauma addict high<br>
-    > We're the victims of our device<br>
-    > Lock your windows, close your doors and hide<br>
-    > Something wicked has got inside<br>
+A theme that has been referenced in newer releases like [Dystopia](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
-    And [Dark Things](https://www.youtube.com/watch?v=2AB3_l0iqSk):
+> Lock your windows, close your doors and hide<br>
+> Something wicked has got inside<br>
+> Post-dramatic trauma addict high<br>
+> We're the victims of our device<br>
+> Lock your windows, close your doors and hide<br>
+> Something wicked has got inside<br>
 
-    > You came in on a whisper, drip by drip<br>
-    > And leaked in 'til my heart was filled with this<br>
-    > The middle of your ocean, here I sit<br>
-    > In my emptiness, in my own wickedness<br>
+And [Dark Things](https://www.youtube.com/watch?v=2AB3_l0iqSk):
 
-A longshot in interpreting this album could be
-
-1. The narrator getting into a relationship (Earthrise)
-2. The narrator experiencing the love (Leaving This World Behind)
-3. The relationship ending and the narrator considering suicide (Disappear)
-4. The narrator accepting the end of the relationship and moving on (This Endless Endeavor)
-5. The narrator being consumed by darkness (Something Wicked)
-
-But I don't think the songs are interconnected. They don't happen in sequence and have other songs between them.
+> You came in on a whisper, drip by drip<br>
+> And leaked in 'til my heart was filled with this<br>
+> The middle of your ocean, here I sit<br>
+> In my emptiness, in my own wickedness<br>
 
 ## Symbolism
 With knowledge about some songs I want to end this post by talking about the symbols, which were created for every Starset song since Divisions.
@@ -247,26 +258,24 @@ With knowledge about some songs I want to end this post by talking about the sym
 - ![](img/symbol-something-wicked.png "Something Wicked")
 {.symbols}
 
+The lyrics and symbol of a song go hand in hand. Some of them are obvious, while other leave some room for interpretation. Here are some of my thoughts and ideas:
+
 - **The Breach** is a planet surrounded by shields, about to the breached
 - **Otherworldly** is a planet surrounded by three Saturn-like rings
 - **Icarus** is a person with wings
-- **Earthrise** is the earth rising on the moon's horizon
+- **Earthrise** is the earth rising on the moon's horizon. It looks like the sun rising over the sea and reflecting on the waves.
 - **Annihilated Love** is a broken heart
-- **Alchemy** is similar to [alchemical symbols](https://en.wikipedia.org/wiki/Alchemical_symbol)
+- **Alchemy** is an homage to [alchemical symbols](https://en.wikipedia.org/wiki/Alchemical_symbol). It's composed of circle and an inwardly rounded triangle. Both of them don't correlate to anything in our world.
 - **This Endless Endeavor** is an endless corridor
 - **Symbiotic** is a flower made of leaves
-- **Dreamcatcher** is [dreamcatcher](https://en.wikipedia.org/wiki/Dreamcatcher)
+- **Dreamcatcher** is a [dreamcatcher](https://en.wikipedia.org/wiki/Dreamcatcher)
 - **Tunnelvision** is a tunnel
+- **Infected** is the top of three Starset symbols arranged like a biohazard warning sign.
 - **Something Wicked** is an upside down Starset logo
 
 ## [End]
 Ok, that's it. I didn't expect this post to be that long. All I wanted to do is talk about the cover.
 
-- Different sound in all their albums
-- First one had some rough edges
-- Second one had a nice space sound
-- Third one harder, industrial
-- Horizons very emotional, softer
 ---
 
 > In a search that has continued for centuries<br>
