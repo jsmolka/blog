@@ -17,7 +17,9 @@ draft: true
 
 Around eleven years ago, I watched a [gaming montage](https://www.youtube.com/watch?v=fli0N0RVmXw) featuring the song [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) by a newly formed band called Starset. I didn't know it back then, but they would one day become my favorite. Its frontman, Dustin Bates, a PhD in electrical engineering and former U.S. Air Force researcher, created the band to combine his interests in [science and music](https://x.com/starsetonline/status/346082788879003648).
 
-Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love, space and science fiction to the dystopian use of technology in authoritarian societies. Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
+Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love, space and science fiction to the dystopian use of technology in authoritarian societies.
+
+Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
 
 ## Creative Direction
 Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest, I don't really care about that kind of stuff. I'm here for the music.
@@ -68,25 +70,15 @@ The colors wonderfully express the feeling of space for me. Black and dark blue 
 ## Music
 I am writing this post because of my admiration for the creative direction. It's great in isolation, but the quality of music elevates it to another level and makes it much more memorable. Horizons is quite long for a modern album and consists of 16 songs, including one short instrumental intro. In it, Starset continue to experiment with their sound, something they have done ever since their debut album:
 
-1. **Transmissions** established the classic Starset formula: cinematic rock exploring love, space and other science-fiction-related themes. Some of the through-composed and long-winded outros turn songs into experiences. Tracks like [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) and [It Has Begin](https://www.youtube.com/watch?v=XZp3Mtn-YsI) continue to be among their most well known work.
-2. **Vessels** refines the sound of Transmissions. It improves everything great from its predecessor and smooths out some of the rough edges. They released a deluxe version a year later, which included some of the [best instrumental versions](https://www.youtube.com/watch?v=j7l7ekbR-9c) I've every heard.
-3. **Divisions** deviated from the classic Starset formula. It has a much more industrial feeling sound design and darker, dystopian lyrics. It contains my favorite song [Perfect Machine](https://www.youtube.com/watch?v=keMBtyjYUPQ), the meaning of which I'm still unsure about.
-4. **Horizons** on the other hand is much more emotional and softer, interspersed with a few heavy tracks. The production feels clean with a radio-friendly finish.
+1. **Transmissions** established the classic Starset formula: cinematic rock with orchestral elements and sci-fi-inspired themes. Some of the through-composed and long-winded outros turn songs into experiences. Tracks like [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) and [It Has Begin](https://www.youtube.com/watch?v=XZp3Mtn-YsI) continue to be among their most well known work.
+2. **Vessels** refines the sound of Transmissions. It improves everything great from its predecessor and smooths out some of the rough edges, especially in terms of productions. They released a deluxe version a year later, which included some of the [best instrumental versions](https://www.youtube.com/watch?v=j7l7ekbR-9c) I've every heard.
+3. **Divisions** deviates from the classic Starset formula by having a much more futuristic sound design with heavy industrial influences. The narrative takes a leap forward in terms of storytelling and discusses dystopian themes like surveillance, human-machine integration and oppressive systems.
+4. **Horizons** on the other hand is much more introspective and emotionally driven. It's polished, melodic, calm and has a pop-style production, making it more accessible to newer audiences while still retaining the cinematic rock identity.
 
-<!-- Talk about the lyrics being overlooked. Saw a fan comparing him to a living thesaurus -->
-
-I won't go over every song (this post is already getting out of hand and far exceeds what I set out to do), because both my vocabulary and music theory knowledge aren't equipped to handle the task. But I will mention some of my favorites:
-
-
-
-
-<!--
-Use narrator instead of protagonist
- -->
+When listening to music, I tend to focus on the sound and the emotion it conveys. To me, a melodic, powerful chorus makes a good song. Lyrics tend to play a background role, which is shame, because I've seen comments comparing Starset's singer Dustin Bates to a human thesaurus. So I took this post as an opportunity to analyze some of my favorite songs.
 
 ### Otherworldly
-<!-- https://www.youtube.com/watch?v=l_MtK_kPtNU -->
-To me, a key characteristic of Starset are the long and powerful bridges. A classic love song with an amazing bridge:
+[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the classic ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a typical love song in which the narrator describes his feelings. The song culminates in probably the best bridge of the album:
 
 > I wanna become lucid<br>
 > Clear, just like a window<br>
@@ -114,17 +106,34 @@ Its spoken outro foreshadows the next song:
 
 ### Icarus
 <!-- https://www.youtube.com/watch?v=ZfiSaBxGB9E -->
-An energetic song about a figure in Greek mythology. Icarus and his father, master craftsman Daedalus, were imprisoned by Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the self-destructiveness and pride of Icarus, which eventually led to his downfall --- pun intended.
+An energetic song about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
 
-> Fall back down, back down again<br>
-> You've got your head in the clouds, on the ground again<br>
-> Oh, looking for a scapegoat to hold your feet<br>
-> Pounding on your chest so you don't feel weak<br>
-> You fall back down, back down again    <br>
+> And you climb right up to the highest peaks<br>
+> And reach out to the edge of the world you seek<br>
+> Afraid of heights so you don't believe<br>
+> You could ever be good enough<br>
+
+He is compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
+
+> Go on then, Icarus, take your turn<br>
+> You always fly right up until it burns<br>
+> Your wings you never could change<br>
+> Always the victim, into the flames again<br>
+> Go on then, Icarus, take your turn<br>
+> You'll never go through thеm<br>
+
+He is described a person refusing to change. He repeats the same mistakes over and over again, but blames the world around him for his failure, seeing himself as the victim.
+
+> But you've got your chin held high<br>
+> And your chest pumped up<br>
+> The replica of a runner-up<br>
+> You were made for skies but you called your bluff<br>
+> Now you'll never be good enough<br>
+
+He acts tough and confident, but doesn't even believe it himself. He will always be the _replica of a runner-up_, destined to be second, _never be good enough_.
 
 ### Earthrise
-<!-- https://www.youtube.com/watch?v=ggCkN3Sve9w -->
-The song is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees clockwise to better convey the sense of the Earth rising over the moonscape.
+[Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w) is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees clockwise to better convey the sense of the Earth rising over the moonscape.
 
 ![](img/earthrise.jpg "[Earthrise](https://en.wikipedia.org/wiki/Earthrise)")
 
@@ -274,6 +283,7 @@ The lyrics and symbol of a song go hand in hand. Some of them are obvious, while
 - **Something Wicked** is an upside down Starset logo
 
 ## [End]
+<!-- Hard post, struggled to explain my feelings because of lacking vocabulary in music theory and general analysis -->
 Ok, that's it. I didn't expect this post to be that long. All I wanted to do is talk about the cover.
 
 ---
