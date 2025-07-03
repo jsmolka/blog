@@ -71,14 +71,14 @@ The colors wonderfully express the feeling of space for me. Black and dark blue 
 I am writing this post because of my admiration for the creative direction. It's great in isolation, but the quality of music elevates it to another level and makes it much more memorable. Horizons is quite long for a modern album and consists of 16 songs, including one short instrumental intro. In it, Starset continue to experiment with their sound, something they have done ever since their debut album:
 
 1. **Transmissions** established the classic Starset formula: cinematic rock with orchestral elements and sci-fi-inspired themes. Some of the through-composed and long-winded outros turn songs into experiences. Tracks like [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) and [It Has Begin](https://www.youtube.com/watch?v=XZp3Mtn-YsI) continue to be among their most well known work.
-2. **Vessels** refines the sound of Transmissions. It improves everything great from its predecessor and smooths out some of the rough edges, especially in terms of productions. They released a deluxe version a year later, which included some of the [best instrumental versions](https://www.youtube.com/watch?v=j7l7ekbR-9c) I've every heard.
+2. **Vessels** refines the sound of Transmissions. It improves everything great from its predecessor and smooths out some of the rough edges, especially in terms of production. They released a deluxe version a year later, which included some of the [best instrumental versions](https://www.youtube.com/watch?v=j7l7ekbR-9c) I've every heard.
 3. **Divisions** deviates from the classic Starset formula by having a much more futuristic sound design with heavy industrial influences. The narrative takes a leap forward in terms of storytelling and discusses dystopian themes like surveillance, human-machine integration and oppressive systems.
 4. **Horizons** on the other hand is much more introspective and emotionally driven. It's polished, melodic, calm and has a pop-style production, making it more accessible to newer audiences while still retaining the cinematic rock identity.
 
-When listening to music, I tend to focus on the sound and the emotion it conveys. To me, a melodic, powerful chorus makes a good song. Lyrics tend to play a background role, which is shame, because I've seen comments comparing Starset's singer Dustin Bates to a human thesaurus. So I took this post as an opportunity to analyze some of my favorite songs.
+When listening to music, I tend to focus on the sound and the emotion it conveys. To me, a melodic, powerful chorus makes a good song. Lyrics tend to play a background role, which is shame, because I've seen comments comparing Starset's singer Dustin Bates to a human thesaurus. So I took this post as an opportunity to analyze some of my favorite songs. If you are not interested in that find of stuff, feel free to [skip this part](#symbolism).
 
 ### Otherworldly
-[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the classic ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a typical love song in which the narrator describes his feelings. The song culminates in probably the best bridge of the album:
+[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the classic ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a love song in which the narrator describes his feelings. The song culminates in probably the best bridge of the album:
 
 > I wanna become lucid<br>
 > Clear, just like a window<br>
@@ -106,7 +106,7 @@ Its spoken outro foreshadows the next song:
 
 ### Icarus
 <!-- https://www.youtube.com/watch?v=ZfiSaBxGB9E -->
-An energetic song about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
+An energetic song about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by king Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
 
 > And you climb right up to the highest peaks<br>
 > And reach out to the edge of the world you seek<br>
@@ -142,7 +142,7 @@ He acts tough and confident, but doesn't even believe it himself. He will always
 > Then I saw you from a distance, you were worlds away<br>
 > Oh, but you had me from the vision, I never looked away again<br>
 
-The lyrics describe a lonely person falling in love.
+The lyrics describe the narrator almost giving up on finding a partner, but falling in love right before that.
 
 > I still fall for you like suns do for skies<br>
 > Cerulean pouring in from your eyes<br>
@@ -184,8 +184,69 @@ He thinks about disappearing, as in isolating himself, or, given the context of 
 The song ends with the only through-composed outro of the album and leads seamlessly into the next one.
 
 ### This Endless Endeavor
-<!-- https://www.youtube.com/watch?v=mcL8i_895QI -->
-The song starts with a heavy guitar riff and then continues to be surprisingly calm outside of the chorus. The lyrics describe the narrator mourning either the end of a relationship or the death of a loved person.
+<!--
+[Verse 1]
+I separate
+Into the arms of the broken
+Accept this fate
+Exposed to the world in the open
+To drift from all I know
+
+[Pre-Chorus]
+I get lost in the world sometimes
+Star-crossed, looking out for a light but it won't shine
+So, North Star, come and guide me to you
+In the wake of my own confines
+I will wait for the day you call through the skylines
+And I'll be waiting, I'll be waiting
+
+[Chorus]
+(Oh-Woah, Oh-Woah) I'm gone without you
+(Oh-Woah, Oh-Woah) Could it be forever?
+(Oh-Woah, Oh-Woah) Go on without you
+(Oh-Woah, Oh-Woah) This endless endeavor
+This endless endeavor
+
+[Verse 2]
+Lonely wade
+Out to the depths of an ocean
+A castaway
+I suffer the death of emotion
+Between the waves of woe
+
+[Chorus]
+(Oh-Woah, Oh-Woah) I'm gone without you
+(Oh-Woah, Oh-Woah) Could it be forever?
+(Oh-Woah, Oh-Woah) Go on without you
+(Oh-Woah, Oh-Woah) This endless endeavor
+This endless endeavor
+This endless endeavor
+This endless endeavor
+
+[Pre-Chorus]
+I get lost in the world sometimes
+Star-crossed, looking out for a light but it won't shine
+So, North Star come, North Star come
+In the wake of my own confines
+I will wait for the day you call through the skylines
+And I'll be waiting, I'll be waiting
+
+[Chorus]
+(Oh-Woah, Oh-Woah) I'm gone without you
+(Oh-Woah, Oh-Woah) Could it be forever?
+(Oh-Woah, Oh-Woah) Go on without you
+(Oh-Woah, Oh-Woah) This endless endeavor
+This endless endeavor
+-->
+[This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI) starts out strong with a memorable guitar riff and heavy drums. The energy quickly subsides and the song continues to alternate between calm, saddening verses and a haunting chorus. The lyrics explore the loss, death or otherwise, of an important individual.
+
+> I separate<br>
+> Into the arms of the broken<br>
+> Accept this fate<br>
+> Exposed to the world in the open<br>
+> To drift from all I know<br>
+
+The first verse describes the moments following a tragic event. The narrator is emotionally torn apart, separated, by what happened and resigns to the pain by falling into the arms of the broken. He accepts his fate, but feels vulnerable because he is exposed to the whole world, out in the open for everyone to see. This causes him to drift away from friends and family, reinforcing the feeling of loss, disconnection and isolation.
 
 > Lonely wade<br>
 > Out to the depths of an ocean<br>
@@ -193,7 +254,7 @@ The song starts with a heavy guitar riff and then continues to be surprisingly c
 > I suffer the death of emotion<br>
 > Between the waves of woe<br>
 
-He feels overwhelmed and isolated, lost at sea, a castaway. The event caused him to so much pain that he's gone emotionally numb and only feel pain.
+The isolation overwhelms the narrator. It causes him to break. Go shipwreck over the endless depths of an ocean. Go emotionally numb with only the waves of woe crashing against the broken remains of a ship that he used to call himself.
 
 > I get lost in the world sometimes<br>
 > Star-crossed, looking out for a light but it won't shine<br>
@@ -201,6 +262,8 @@ He feels overwhelmed and isolated, lost at sea, a castaway. The event caused him
 > In the wake of my own confines<br>
 > I will wait for the day you call through the skylines<br>
 > And I'll be waiting, I'll be waiting<br>
+
+He is lost in the world, looking out for a North Star to guide him through the rest of his life. He is filled with hope
 
 ### Something Wicked
 <!-- https://www.youtube.com/watch?v=CDq5TO05NcQ -->
