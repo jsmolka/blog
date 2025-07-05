@@ -78,6 +78,92 @@ I am writing this post because of my admiration for the creative direction. It's
 When listening to music, I tend to focus on the sound and the emotion it conveys. To me, a melodic, powerful chorus makes a good song. Lyrics tend to play a background role, which is shame, because I've seen comments comparing Starset's singer Dustin Bates to a human thesaurus. So I took this post as an opportunity to analyze some of my favorite songs. If you are not interested in that find of stuff, feel free to [skip this part](#symbolism).
 
 ### Otherworldly
+<!--
+[Intro]
+Otherworld, otherworldly
+Otherworld, otherworldly
+Otherworld, otherworldly
+Otherworld, otherworldly
+
+[Verse 1]
+You're like an angel's song
+I'm on my knees, waiting for the sound
+Stuck in a world gone wrong
+So lift me up, I'll never let you down
+Light like a brand new day
+Surreal and astounding
+The site of a mystery
+But I'm here on the ground
+
+[Pre-Chorus]
+Bring me to the edge and let me stay
+Pull me in, I'll never push away
+Searching for the words that I can say
+How it feels when you're with me
+
+[Chorus]
+Otherworld, otherworldly
+Sеnd a light then, I'll be waiting
+Otherworld, othеrworldly
+I come alive when you are with me
+Otherworld, otherworldly
+Far away from all the mayhem
+Otherworld, otherworldly
+At the speed of light and beauty
+
+[Verse 2]
+Supernatural
+Like an oracle
+When darkness starts to call
+You'll find me after all
+A face that could emanate
+A stare like a spotlight
+If you guide me into your space
+I'll be there at the first light
+
+[Chorus]
+Otherworld, otherworldly
+Send a light then, I'll be waiting
+Otherworld, otherworldly
+I come alive when you are with me
+Otherworld, otherworldly
+Far away from all the mayhem
+Otherworld, otherworldly
+At the speed of light and beauty
+
+[Bridge]
+I wanna become lucid
+Clear, just like a window
+I tried so hard to open up
+And show you what's behind it
+But you didn't need to hear me
+'Cause you were supraliminal
+Knew me without an uttered word
+You always seemed to know me
+An ethereal feeling
+That I cannot describe
+The way that I feel you
+Something that I cannot hide
+How you illuminate
+In a profound way, I feel your space
+I can't explain this place you're taking me
+[Chorus]
+Otherworld, otherworldly
+Send a light then, I'll be waiting
+Otherworld, otherworldly
+I come alive when you are with me
+Otherworld, otherworldly
+Far away from all the mayhem
+Otherworld, otherworldly
+At the speed of light and beauty
+
+[Spoken Outro]
+And he told him
+"Beware, do not fly too close to the sun
+The blaze will surely melt those wings."
+But alas, he fell
+His cries, swallowed by the sea
+-->
 [Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the classic ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a love song in which the narrator describes his feelings. The song culminates in probably the best bridge of the album:
 
 > I wanna become lucid<br>
@@ -104,8 +190,61 @@ Its spoken outro foreshadows the next song:
 > But alas, he fell<br>
 > His cries, swallowed by the sea<br>
 
-### Icarus
-<!-- https://www.youtube.com/watch?v=ZfiSaBxGB9E -->
+### Icarus <!-- https://www.youtube.com/watch?v=ZfiSaBxGB9E -->
+<!--
+[Verse 1]
+Fell out of the air and you broke your wings
+Like you're doing every other time
+Made a new pair out of broken things
+To give it all another try
+And you climb right up to the highest peaks
+And reach out to the edge of the world you seek
+Afraid of heights so you don't believe
+You could ever be good enough
+
+[Chorus]
+Go on then, Icarus, take your turn
+You always fly right up until it burns
+Your wings you never could change
+Always the victim, into the flames again
+Go on then, Icarus, take your turn
+You'll never go through thеm
+
+[Verse 2]
+Head in the clouds
+Buried your feet in thе ground
+Telling yourself it's the world that holds you down
+But you've got your chin held high
+And your chest pumped up
+The replica of a runner-up
+You were made for skies but you called your bluff
+Now you'll never be good enough
+
+[Chorus]
+Go on then, Icarus, take your turn
+You always fly right up until it burns
+Your wings you never could change
+Always the victim, into the flames again
+Go on then, Icarus, take your turn
+You'll never go through them
+You'll never go through them
+You'll never go through them
+
+[Bridge]
+Fall back down, back down again
+You've got your head in the clouds, on the ground again
+Oh, looking for a scapegoat to hold your feet
+Pounding on your chest so you don't feel weak
+You fall back down, back down again
+
+[Chorus]
+Go on then, Icarus, take your turn
+You always fly right up until it burns
+Your wings you never could change
+Always the victim, into the flames again
+Go on then, Icarus, take your turn
+You'll never go through them
+-->
 An energetic song about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by king Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
 
 > And you climb right up to the highest peaks<br>
@@ -133,6 +272,51 @@ He is described a person refusing to change. He repeats the same mistakes over a
 He acts tough and confident, but doesn't even believe it himself. He will always be the _replica of a runner-up_, destined to be second, _never be good enough_.
 
 ### Earthrise
+<!--
+[Verse 1]
+I push my feet to the edge
+I look and I face my world
+This lonely scene, I take it in
+It's hard to say where all of it begins and I end
+And I waited for the sky to change but, oh, it never did
+And I almost dropped my head and lost my faith
+Then I saw you from a distance, you were worlds away
+Oh, but you had me from the vision, I never looked away again
+
+[Chorus]
+I still fall for you like suns do for skies
+Cerulean pouring in from your eyes
+Just a hollow moon that you colorize
+So powerful, I feel so small but so alive
+Like watching the Earth rise
+
+[Verse 2]
+I walk these streets of loneliness
+A tranquil sea on all horizons
+This empty scene of might-have-beens
+I stare at starless skies that call to me and I still wish
+(I still wish, I still wish, I still wish)
+
+[Chorus]
+I still fall for you like suns do for skies
+Cerulean pouring in from your eyes
+Just a hollow moon that you colorize
+So powerful, I feel so small but so alive
+Like watching the Earth rise
+
+[Bridge]
+They said that we both were too different
+That all of the shine would fade away
+But I wish that I never listened
+'Cause you pulled me through the grey
+
+[Chorus]
+I still fall for you like suns do for skies
+Cerulean pouring in from your eyes
+Just a hollow moon that you colorize
+So powerful, I feel so small but so alive
+Like watching the Earth rise
+-->
 [Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w) is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees clockwise to better convey the sense of the Earth rising over the moonscape.
 
 ![](img/earthrise.jpg "[Earthrise](https://en.wikipedia.org/wiki/Earthrise)")
@@ -152,8 +336,57 @@ The lyrics describe the narrator almost giving up on finding a partner, but fall
 
 The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by science fiction writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
 
-### Leaving This World Behind
-<!-- https://www.youtube.com/watch?v=6Od_dO3ENJo -->
+### Leaving This World Behind <!-- https://www.youtube.com/watch?v=6Od_dO3ENJo -->
+<!--
+[Verse 1]
+Beautiful, new frontier
+High above the rain in the atmosphere
+What wonders I have discovered
+My soul is everclear
+Never felt the way I do with you here
+I hope there's never another
+
+[Chorus]
+So sing tonight, we're everbright
+Burning through space, I see your face
+I could beat kryptonite
+We're so alive, forever high
+Hold on, my dear, there'll be no fear
+Leaving this world behind (This world behind)
+
+[Verse 2]
+Far away, above the earth
+We'll soar through the curvature
+Away from all our dark matters
+And escape the barriers
+That we’ve manufactured
+Going into the hereafter
+And I'll wait if you take forever long
+I'll listen for your song
+
+[Chorus]
+So sing tonight, we're everbright
+Burning through space, I see your face
+I could beat kryptonite
+We're so alive, forever high
+Hold on, my dear, there'll be no fear
+Leaving this world behind
+
+[Chorus]
+So sing tonight, we're everbright
+Burning through space, I see your face
+I could beat kryptonite
+We're so alive, forever high
+Hold on, my dear, there'll be no fear
+Leaving this world behind (This world behind)
+Leaving this world behind
+(Leaving this world behind)
+
+[Spoken Outro]
+All good things
+Must come to pass
+Now is your time
+-->
 The arc continues. The narrator and other person are now in a relationship. The lyrics explore their feelings.
 
 > Beautiful, new frontier<br>
@@ -163,8 +396,80 @@ The arc continues. The narrator and other person are now in a relationship. The 
 > Never felt the way I do with you here<br>
 > I hope there's never another    <br>
 
-### Disappear
-<!-- https://www.youtube.com/watch?v=m-8n9YyfBB8 -->
+### Disappear <!-- https://www.youtube.com/watch?v=m-8n9YyfBB8 -->
+<!--
+[Verse 1]
+So how long were you numb?
+'Cause it was cold as ice
+And I keep saying that I'm okay with it
+But that's another lie
+The truth is I've been dying slowly
+But no, not you, you just
+Turned to drift into the night
+A parting scene of apathy
+In an instant shift to a
+Stone heart, paired with empty eyes
+That stared right through mine
+
+[Chorus]
+I did the math but it just don't add up
+There's a whole world that used to be us
+Now there's an echo calling me
+Just a shred of memory
+Emptiness but there's still a shadow
+I catch a glimpse of someone I should know
+Hard to tell if you were ever here
+I disappear, disappear
+I disappear, disappear
+
+[Verse 2]
+All is lost, slipped away
+Gone without a trace
+I sometimes wonder if it was real because
+All that's left seems fake
+Like I'm trapped within a wrong dimension
+I tried so hard just to
+Make you feel my pain
+If you had empathy, you'd see I'd changed
+But like a ghost in your presence, I dissipate
+I tried it all, it's all in vain
+
+[Chorus]
+I did the math but it just don't add up
+There's a whole world that used to be us
+Now there's an echo calling me
+Just a shred of memory
+Emptiness but there's still a shadow
+I catch a glimpse of someone I should know
+Hard to tell if you were ever here
+I disappear, disappear
+I disappear, disappear
+
+[Bridge]
+Sometimes, I still slip
+And start to question if
+It was only in my mind
+It's hard to come to grips
+That you still exist
+When it feels just like you died
+So come one and all
+Step right up and I'll
+Perform a trick before your eyes
+I'll evaporate
+Gone without a trace
+Off the radar, out of sight
+
+[Chorus]
+I did the math but it just don't add up
+There's a whole world that used to be us
+Now there's an echo calling me
+Just a shred of memory
+Emptiness but there's still a shadow
+I catch a glimpse of someone I should know
+Hard to tell if you were ever here
+I disappear, disappear
+I disappear, disappear
+-->
 The relationship formed in previous songs came to an end. The narrator struggles to move on and mourns a person that's still alive.
 
 > There's a whole world that used to be us<br>
@@ -265,8 +570,66 @@ The isolation overwhelms the narrator. It causes him to break. Go shipwreck over
 
 He is lost in the world, looking out for a North Star to guide him through the rest of his life. He is filled with hope
 
-### Something Wicked
-<!-- https://www.youtube.com/watch?v=CDq5TO05NcQ -->
+### Something Wicked <!-- https://www.youtube.com/watch?v=CDq5TO05NcQ -->
+<!--
+[Intro]
+Loving
+Hating
+Hoping
+Faking
+
+[Verse]
+I've been digging through the dirt that was left behind
+I've been dredging through the mud for it
+There's nothing that's alive or dead inside
+In you or in this
+The crucifix in my hand's a lie
+'Cause nothing ever kills you
+I've watered down the pain 'til the well went dry
+So pray for rain
+
+[Pre-Chorus]
+And it gnawed
+Rose to the top again
+Back like a long-lost friend
+A wretch that I can't defend
+Oh my god
+Is this where the dreamer ends?
+Dark where the light had been
+Lost at the war within
+
+[Chorus]
+And it clawеd
+Back in the world again
+Here for a nеw revenge
+An enemy I can't condemn
+Oh my god
+Is this where the liar ends?
+Dark where the light had been
+Lost at the war within
+
+[Bridge]
+Out of myself, I can feel it crawling
+How can I tell if this is the ending?
+Out of myself, it began evolving
+I am not well, repent, I'm guilty
+How can I tell if the sky is falling?
+How can I fix what there is no mending?
+How can I tell if I am not well?
+I've lost myself, I have come undone
+And all of the horses
+And all of the men
+Won't put it back in place
+Or bury it where it had been
+When all of the forces
+Have been overrun
+You'll whisper, serpent tongue
+What you fear you have become
+
+[Outro]
+Something wicked this way comes
+Something wicked this way comes
+-->
 The last song of the album. Outros in previous albums tended to be on quieter side, and this one is no exception until its finale. The song is unusual, as it doesn't follow the familiar ABABCB structure, and instead feels like a carefully crafted, through-composed narrative.
 
 The lyrics are littered with biblical references (_pray_, _crucifix_, _god_, _serpent tongue_) and tell the story of a protagonist being consumed/overtaken by _Something Wicked_. The song starts calm with just a piano and then layers in strings and other instruments over the following verses. It climaxes during the bridge, when it turns from calm to violent:
