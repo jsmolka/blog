@@ -247,6 +247,20 @@ You'll never go through them
 -->
 An energetic song about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by king Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
 
+> Fell out of the air and you broke your wings<br>
+> Like you're doing every other time<br>
+> Made a new pair out of broken things<br>
+> To give it all another try<br>
+
+The song starts with Icarus falling from the sky yet again, but he is determined to give it another try. He reconstructs the wings from broken things, which might be a hint that he'll never achieve the thing he is striving for without a solid foundation. It might even be a hint that he himself is broken.
+
+> And you climb right up to the highest peaks<br>
+> And reach out to the edge of the world you seek<br>
+> Afraid of heights so you don't believe<br>
+> You could ever be good enough<br>
+
+But despite his recent failure he willing to try again.
+
 > And you climb right up to the highest peaks<br>
 > And reach out to the edge of the world you seek<br>
 > Afraid of heights so you don't believe<br>
@@ -568,9 +582,16 @@ The isolation overwhelms the narrator. It causes him to break. Go shipwreck over
 > I will wait for the day you call through the skylines<br>
 > And I'll be waiting, I'll be waiting<br>
 
-He is lost in the world, looking out for a North Star to guide him through the rest of his life. He is filled with hope
+He is lost in the world, star-crossed --- destined to fail --- looking out for a North Star to guide him through the rest of his life. He is filled with hope to one day connect with his significant again.
 
-### Something Wicked <!-- https://www.youtube.com/watch?v=CDq5TO05NcQ -->
+> (Oh-Woah, Oh-Woah) I'm gone without you<br>
+> (Oh-Woah, Oh-Woah) Could it be forever?<br>
+> (Oh-Woah, Oh-Woah) Go on without you<br>
+> (Oh-Woah, Oh-Woah) This endless endeavor<br>
+
+The narrator doesn't feel like himself without his significant other. He fears that he has to go on forever like this.
+
+### Something Wicked
 <!--
 [Intro]
 Loving
@@ -630,9 +651,23 @@ What you fear you have become
 Something wicked this way comes
 Something wicked this way comes
 -->
-The last song of the album. Outros in previous albums tended to be on quieter side, and this one is no exception until its finale. The song is unusual, as it doesn't follow the familiar ABABCB structure, and instead feels like a carefully crafted, through-composed narrative.
+The album ends with [Something Wicked](https://www.youtube.com/watch?v=CDq5TO05NcQ). Outro songs in previous albums tended to be on the quieter side and this one is no exception until its finale. It begins calm with just a piano and then layers in strings and other instruments over the following verses. It doesn't adhere to the ABABCB structure and instead feels like a carefully crafted narrative of a person slowly being consumed/overtaken by _Something Wicked_.
 
-The lyrics are littered with biblical references (_pray_, _crucifix_, _god_, _serpent tongue_) and tell the story of a protagonist being consumed/overtaken by _Something Wicked_. The song starts calm with just a piano and then layers in strings and other instruments over the following verses. It climaxes during the bridge, when it turns from calm to violent:
+> The crucifix in my hand's a lie<br>
+> 'Cause nothing ever kills you<br>
+> I've watered down the pain 'til the well went dry<br>
+> So pray for rain<br>
+
+The lyrics are littered with biblical references. The narrator describes the thing inside of him as powerful enough that even a crucifix can't kill it, hinting at its profoundly evil nature. He tried everything in his power to stop it, but had to resign in the end. Praying for rain feels more like a warning than a request. The narrator seems to have lost control and only a godly intervention can prevent the events lying.
+
+> And it clawеd<br>
+> Back in the world again<br>
+> Here for a nеw revenge<br>
+> An enemy I can't condemn<br>
+
+It seems like it isn't the first time that the narrator had to confront the thing. It's crawling back into his world, looking for revenge. He's is describing it as an enemy, which he can't condemn. Maybe he think's that the feeling is justified.
+
+As we enter the bridge, the song turns from calm to violent:
 
 > Out of myself, I can feel it crawling<br>
 > How can I tell if this is the ending?<br>
@@ -651,12 +686,12 @@ The lyrics are littered with biblical references (_pray_, _crucifix_, _god_, _se
 > You'll whisper, serpent tongue<br>
 > What you fear you have become<br>
 
-After that, the silence and piano return. The protagonist has lost the fight with his inner darkness. The album concludes with the whispered words:
+After that, the silence and piano return. The narrator has lost the fight with his inner darkness. The album concludes with the whispered words:
 
 > Something wicked this way comes<br>
 > Something wicked this way comes<br>
 
-A theme that has been referenced in newer releases like [Dystopia](https://www.youtube.com/watch?v=E2uwT_SctB0):
+The ending has been referenced in one of their [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
@@ -664,13 +699,6 @@ A theme that has been referenced in newer releases like [Dystopia](https://www.y
 > We're the victims of our device<br>
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
-
-And [Dark Things](https://www.youtube.com/watch?v=2AB3_l0iqSk):
-
-> You came in on a whisper, drip by drip<br>
-> And leaked in 'til my heart was filled with this<br>
-> The middle of your ocean, here I sit<br>
-> In my emptiness, in my own wickedness<br>
 
 ## Symbolism
 With knowledge about some songs I want to end this post by talking about the symbols, which were created for every Starset song since Divisions.
@@ -708,9 +736,8 @@ The lyrics and symbol of a song go hand in hand. Some of them are obvious, while
 - **Infected** is the top of three Starset symbols arranged like a biohazard warning sign.
 - **Something Wicked** is an upside down Starset logo
 
-## [End]
-<!-- Hard post, struggled to explain my feelings because of lacking vocabulary in music theory and general analysis -->
-Ok, that's it. I didn't expect this post to be that long. All I wanted to do is talk about the cover.
+## Fin
+Puh, finally it's out of my system. This was a really hard post for me to write, especially considering my lacking vocabulary and knowledge in music theory and lyrical analysis. It wasn't a strength back in school and still isn't to this day. At least there isn't a teacher to tell me how my opinion is wrong. But writing it gave me a whole new appreciation for the lyrics and their deeper meaning, something I'm grateful for.
 
 ---
 
