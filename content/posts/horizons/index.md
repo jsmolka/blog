@@ -40,7 +40,8 @@ The album promotion began five months later with The Breach, continued with Leav
 The font used on covers and other media is called Axion RND. It features rounded and futuristic-looking characters with a small height difference between uppercase and lowercase ones. That probably influenced the decision to capitalize all text, something I'm usually opposed to. I dislike song titles screaming at me in filenames or apps, but they do look good on covers.
 {.font-axion-rnd}
 
-![](img/band.jpg "Band banner")
+- ![](img/band.jpg "Band banner")
+{.overflow}
 
 ## Artwork
 While cover artworks might appear supplemental to the musical experience, they are of great importance to me. Good covers stand out and draw you in. If you find one that resonates with you, it's almost impossible to not listen to the album. That's the feeling I had, and still have, with the cover of Horizons, which is one of my favorites, if not the favorite. Its vinyl version is used as a decorative piece between the speakers in my living room and catches the eye every so often.
@@ -140,6 +141,7 @@ But you didn't need to hear me
 'Cause you were supraliminal
 Knew me without an uttered word
 You always seemed to know me
+
 An ethereal feeling
 That I cannot describe
 The way that I feel you
@@ -147,6 +149,7 @@ Something that I cannot hide
 How you illuminate
 In a profound way, I feel your space
 I can't explain this place you're taking me
+
 [Chorus]
 Otherworld, otherworldly
 Send a light then, I'll be waiting
@@ -164,7 +167,9 @@ The blaze will surely melt those wings."
 But alas, he fell
 His cries, swallowed by the sea
 -->
-[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the classic ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a love song in which the narrator describes his feelings. The song culminates in probably the best bridge of the album:
+[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a classic love song in which the narrator describes his feelings towards his significant other.
+
+The song culminates in probably the best bridge of the album:
 
 > I wanna become lucid<br>
 > Clear, just like a window<br>
@@ -174,6 +179,7 @@ His cries, swallowed by the sea
 > 'Cause you were supraliminal<br>
 > Knew me without an uttered word<br>
 > You always seemed to know me<br>
+>
 > An ethereal feeling<br>
 > That I cannot describe<br>
 > The way that I feel you<br>
@@ -190,7 +196,7 @@ Its spoken outro foreshadows the next song:
 > But alas, he fell<br>
 > His cries, swallowed by the sea<br>
 
-### Icarus <!-- https://www.youtube.com/watch?v=ZfiSaBxGB9E -->
+### Icarus
 <!--
 [Verse 1]
 Fell out of the air and you broke your wings
@@ -245,37 +251,27 @@ Always the victim, into the flames again
 Go on then, Icarus, take your turn
 You'll never go through them
 -->
-An energetic song about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by king Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
+An energetic [song](https://www.youtube.com/watch?v=ZfiSaBxGB9E) about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by king Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
 
 > Fell out of the air and you broke your wings<br>
 > Like you're doing every other time<br>
 > Made a new pair out of broken things<br>
 > To give it all another try<br>
 
-The song starts with Icarus falling from the sky yet again, but he is determined to give it another try. He reconstructs the wings from broken things, which might be a hint that he'll never achieve the thing he is striving for without a solid foundation. It might even be a hint that he himself is broken.
+The song starts with Icarus falling from the sky yet again, but he is determined to keep trying. He reconstructs the wings from _broken things_, hinting that he himself might be broken and that, without fixing himself first, he will never be able to achieve what he is striving for.
 
 > And you climb right up to the highest peaks<br>
 > And reach out to the edge of the world you seek<br>
 > Afraid of heights so you don't believe<br>
 > You could ever be good enough<br>
 
-But despite his recent failure he willing to try again.
+Filled with false pride, he is unwilling to learn and goes for the hardest challenge immediately. He feels compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
 
-> And you climb right up to the highest peaks<br>
-> And reach out to the edge of the world you seek<br>
-> Afraid of heights so you don't believe<br>
-> You could ever be good enough<br>
+> Head in the clouds<br>
+> Buried your feet in thе ground<br>
+> Telling yourself it's the world that holds you down<br>
 
-He is compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
-
-> Go on then, Icarus, take your turn<br>
-> You always fly right up until it burns<br>
-> Your wings you never could change<br>
-> Always the victim, into the flames again<br>
-> Go on then, Icarus, take your turn<br>
-> You'll never go through thеm<br>
-
-He is described a person refusing to change. He repeats the same mistakes over and over again, but blames the world around him for his failure, seeing himself as the victim.
+He is described as a dreamer with his _head in the clouds_, while simultaneously burring his _feet in the ground_. He blames failure on the world around him, but is responsible for it himself.
 
 > But you've got your chin held high<br>
 > And your chest pumped up<br>
@@ -284,6 +280,15 @@ He is described a person refusing to change. He repeats the same mistakes over a
 > Now you'll never be good enough<br>
 
 He acts tough and confident, but doesn't even believe it himself. He will always be the _replica of a runner-up_, destined to be second, _never be good enough_.
+
+> Go on then, Icarus, take your turn<br>
+> You always fly right up until it burns<br>
+> Your wings you never could change<br>
+> Always the victim, into the flames again<br>
+> Go on then, Icarus, take your turn<br>
+> You'll never go through thеm<br>
+
+He refuses to change and repeats the same mistakes over and over again, but blames the world around him for his failure, destined to repeat the cycle, forever the victim.
 
 ### Earthrise
 <!--
@@ -333,14 +338,29 @@ Like watching the Earth rise
 -->
 [Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w) is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees clockwise to better convey the sense of the Earth rising over the moonscape.
 
-![](img/earthrise.jpg "[Earthrise](https://en.wikipedia.org/wiki/Earthrise)")
+- ![](img/earthrise.jpg "[Earthrise by Willam Anders](https://en.wikipedia.org/wiki/Earthrise)")
+{.overflow}
+
+> I push my feet to the edge<br>
+> I look and I face my world<br>
+> This lonely scene, I take it in<br>
+> It's hard to say where all of it begins and I end<br>
+
+The song starts with the description of a lonely person. It's a beautiful metaphor given the context of the Earthrise image. The feeling of loneliness emerging in oneself while standing on the moon's surface and looking back at Earth is probably something most people could relate to.
 
 > And I waited for the sky to change but, oh, it never did<br>
 > And I almost dropped my head and lost my faith<br>
 > Then I saw you from a distance, you were worlds away<br>
 > Oh, but you had me from the vision, I never looked away again<br>
 
-The lyrics describe the narrator almost giving up on finding a partner, but falling in love right before that.
+The narrator has almost lost faith, but ends up falling in love with a person _worlds away_. Given the context of the upcoming verses, this could either be meant literally as in "distance" or metaphorically as in "out of their league".
+
+> I walk these streets of loneliness<br>
+> A tranquil sea on all horizons<br>
+> This empty scene of might-have-beens<br>
+> I stare at starless skies that call to me and I still wish<br>
+
+The second verse further develops
 
 > I still fall for you like suns do for skies<br>
 > Cerulean pouring in from your eyes<br>
@@ -348,7 +368,7 @@ The lyrics describe the narrator almost giving up on finding a partner, but fall
 > So powerful, I feel so small but so alive<br>
 > Like watching the Earth rise<br>
 
-The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by science fiction writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
+The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by sci-fi writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
 
 ### Disappear <!-- https://www.youtube.com/watch?v=m-8n9YyfBB8 -->
 <!--
@@ -605,7 +625,7 @@ The lyrics are littered with biblical references. The narrator describes the thi
 > Here for a nеw revenge<br>
 > An enemy I can't condemn<br>
 
-It isn't the first confrontation between the two. The thing is coming back for _a new revenge_, having lost the fight once before. The narrator is unsure how to feel about it. On one hand, he describes it as an enemy, something he hates and doesn't want in his life. On the other hand, he can't condemn it, feeling like its existence is justified --- an important part of himself.
+It isn't the first confrontation between the two. The thing is coming back for _a new revenge_, having lost the fight once before. The narrator is unsure how to feel about it. On one hand, he describes it as an enemy, something he hates and doesn't want in his life. On the other hand, he can't condemn it, feeling like its existence is justified --- a natural part of himself.
 
 As we enter the bridge, the song turns from calm to violent:
 
@@ -632,7 +652,7 @@ After that, the silence and piano return. The narrator has lost the fight with h
 > Something wicked this way comes<br>
 > Something wicked this way comes<br>
 
-The ending has been referenced in one of their [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
+The theme has been referenced in one of their [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
