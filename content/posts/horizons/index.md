@@ -15,11 +15,11 @@ draft: true
 
 ---
 
-Around eleven years ago, I watched a [gaming montage](https://www.youtube.com/watch?v=fli0N0RVmXw) featuring the song [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) by a newly formed band called Starset. I didn't know it back then, but they would one day become my favorite. Its frontman, Dustin Bates, a PhD in electrical engineering and former U.S. Air Force researcher, created the band to combine his interests in [science and music](https://x.com/starsetonline/status/346082788879003648).
+Over a decade ago, I watched a [gaming montage](https://www.youtube.com/watch?v=fli0N0RVmXw) featuring the song [My Demons](https://www.youtube.com/watch?v=nkll0StZJLA) by a newly formed band called Starset. I didn't know it back then, but they would one day become my favorite. Its frontman, Dustin Bates, a PhD in electrical engineering and former U.S. Air Force researcher, created the band to combine his interests in [science and music](https://x.com/starsetonline/status/346082788879003648).
 
-Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love, space and science fiction to the dystopian use of technology in authoritarian societies.
+Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love, space and sci-fi to the dystopian use of technology in authoritarian societies.
 
-Their latest album, Horizons, was released on October 22, 2021 and is the thing I want to dissect in this post.
+Their latest album, Horizons, was released on October 22, 2021. Since then, it has been an important part of my life. I want to use this post as an opportunity to dive deeper into the creative direction and lyrics of a few songs.
 
 ## Creative Direction
 Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest, I don't really care about that kind of stuff. I'm here for the music.
@@ -350,66 +350,6 @@ The lyrics describe the narrator almost giving up on finding a partner, but fall
 
 The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by science fiction writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
 
-### Leaving This World Behind <!-- https://www.youtube.com/watch?v=6Od_dO3ENJo -->
-<!--
-[Verse 1]
-Beautiful, new frontier
-High above the rain in the atmosphere
-What wonders I have discovered
-My soul is everclear
-Never felt the way I do with you here
-I hope there's never another
-
-[Chorus]
-So sing tonight, we're everbright
-Burning through space, I see your face
-I could beat kryptonite
-We're so alive, forever high
-Hold on, my dear, there'll be no fear
-Leaving this world behind (This world behind)
-
-[Verse 2]
-Far away, above the earth
-We'll soar through the curvature
-Away from all our dark matters
-And escape the barriers
-That we’ve manufactured
-Going into the hereafter
-And I'll wait if you take forever long
-I'll listen for your song
-
-[Chorus]
-So sing tonight, we're everbright
-Burning through space, I see your face
-I could beat kryptonite
-We're so alive, forever high
-Hold on, my dear, there'll be no fear
-Leaving this world behind
-
-[Chorus]
-So sing tonight, we're everbright
-Burning through space, I see your face
-I could beat kryptonite
-We're so alive, forever high
-Hold on, my dear, there'll be no fear
-Leaving this world behind (This world behind)
-Leaving this world behind
-(Leaving this world behind)
-
-[Spoken Outro]
-All good things
-Must come to pass
-Now is your time
--->
-The arc continues. The narrator and other person are now in a relationship. The lyrics explore their feelings.
-
-> Beautiful, new frontier<br>
-> High above the rain in the atmosphere<br>
-> What wonders I have discovered<br>
-> My soul is everclear<br>
-> Never felt the way I do with you here<br>
-> I hope there's never another    <br>
-
 ### Disappear <!-- https://www.youtube.com/watch?v=m-8n9YyfBB8 -->
 <!--
 [Verse 1]
@@ -651,21 +591,21 @@ What you fear you have become
 Something wicked this way comes
 Something wicked this way comes
 -->
-The album ends with [Something Wicked](https://www.youtube.com/watch?v=CDq5TO05NcQ). Outro songs in previous albums tended to be on the quieter side and this one is no exception until its finale. It begins calm with just a piano and then layers in strings and other instruments over the following verses. It doesn't adhere to the ABABCB structure and instead feels like a carefully crafted narrative of a person slowly being consumed/overtaken by _Something Wicked_.
+The album ends with [Something Wicked](https://www.youtube.com/watch?v=CDq5TO05NcQ). Previous outro songs tended to be on the quieter side and this one is no exception until its climax. It begins calm with just a piano and then layers in strings and other instruments over the next verses. It doesn't adhere to the ABABCB song structure and instead feels like a carefully crafted narrative of a person slowly being overwhelmed by an unknown evil.
 
 > The crucifix in my hand's a lie<br>
 > 'Cause nothing ever kills you<br>
 > I've watered down the pain 'til the well went dry<br>
 > So pray for rain<br>
 
-The lyrics are littered with biblical references. The narrator describes the thing inside of him as powerful enough that even a crucifix can't kill it, hinting at its profoundly evil nature. He tried everything in his power to stop it, but had to resign in the end. Praying for rain feels more like a warning than a request. The narrator seems to have lost control and only a godly intervention can prevent the events lying.
+The lyrics are littered with biblical references. The narrator describes the thing inside of him as so profoundly evil, that even a crucifix can't kill it. He tried everything in his power to stop it, but had to resign eventually. _So pray for rain_ is a warning that only a divine intervention can prevent him from losing control and a sign of things to come.
 
 > And it clawеd<br>
 > Back in the world again<br>
 > Here for a nеw revenge<br>
 > An enemy I can't condemn<br>
 
-It seems like it isn't the first time that the narrator had to confront the thing. It's crawling back into his world, looking for revenge. He's is describing it as an enemy, which he can't condemn. Maybe he think's that the feeling is justified.
+It isn't the first confrontation between the two. The thing is coming back for _a new revenge_, having lost the fight once before. The narrator is unsure how to feel about it. On one hand, he describes it as an enemy, something he hates and doesn't want in his life. On the other hand, he can't condemn it, feeling like its existence is justified --- an important part of himself.
 
 As we enter the bridge, the song turns from calm to violent:
 
@@ -677,6 +617,7 @@ As we enter the bridge, the song turns from calm to violent:
 > How can I fix what there is no mending?<br>
 > How can I tell if I am not well?<br>
 > I've lost myself, I have come undone<br>
+>
 > And all of the horses<br>
 > And all of the men<br>
 > Won't put it back in place<br>
@@ -693,10 +634,6 @@ After that, the silence and piano return. The narrator has lost the fight with h
 
 The ending has been referenced in one of their [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
-> Lock your windows, close your doors and hide<br>
-> Something wicked has got inside<br>
-> Post-dramatic trauma addict high<br>
-> We're the victims of our device<br>
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
 
@@ -737,7 +674,7 @@ The lyrics and symbol of a song go hand in hand. Some of them are obvious, while
 - **Something Wicked** is an upside down Starset logo
 
 ## Fin
-Puh, finally it's out of my system. This was a really hard post for me to write, especially considering my lacking vocabulary and knowledge in music theory and lyrical analysis. It wasn't a strength back in school and still isn't to this day. At least there isn't a teacher to tell me how my opinion is wrong. But writing it gave me a whole new appreciation for the lyrics and their deeper meaning, something I'm grateful for.
+Puh, finally it's out of my system. This was a really hard post for me to write, especially considering my lack of vocabulary and knowledge in music theory and lyrical analysis. Interpretation wasn't a strength back in school and still isn't to this day. At least there isn't a teacher to tell me how my opinion is wrong. But writing it gave me a whole new appreciation for the lyrics and their deeper meaning, something I'm grateful for.
 
 ---
 
