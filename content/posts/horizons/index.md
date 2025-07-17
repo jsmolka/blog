@@ -196,6 +196,9 @@ Its spoken outro foreshadows the next song:
 > But alas, he fell<br>
 > His cries, swallowed by the sea<br>
 
+![](img/symbol-otherworldly.png)
+{.w-25}
+
 ### Icarus
 <!--
 [Verse 1]
@@ -290,6 +293,9 @@ He acts tough and confident, but doesn't even believe it himself. He will always
 
 He refuses to change and repeats the same mistakes over and over again, but blames the world around him for his failure, destined to repeat the cycle, forever the victim.
 
+![](img/symbol-icarus.png)
+{.w-25}
+
 ### Earthrise
 <!--
 [Verse 1]
@@ -336,7 +342,7 @@ Just a hollow moon that you colorize
 So powerful, I feel so small but so alive
 Like watching the Earth rise
 -->
-[Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w) is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees clockwise to better convey the sense of the Earth rising over the moonscape.
+[Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w) is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees to better convey the sense of the Earth rising over the moonscape.
 
 - ![](img/earthrise.jpg "[Earthrise by Willam Anders](https://en.wikipedia.org/wiki/Earthrise)")
 {.overflow}
@@ -346,21 +352,28 @@ Like watching the Earth rise
 > This lonely scene, I take it in<br>
 > It's hard to say where all of it begins and I end<br>
 
-The song starts with the description of a lonely person. It's a beautiful metaphor given the context of the Earthrise image. The feeling of loneliness emerging in oneself while standing on the moon's surface and looking back at Earth is probably something most people could relate to.
+The song starts with the description of a lonely person. It's a beautiful metaphor given the context of the Earthrise image. The feeling of loneliness emerging in oneself while standing on the moon's surface and looking back at Earth is probably something most people can imagine.
 
 > And I waited for the sky to change but, oh, it never did<br>
 > And I almost dropped my head and lost my faith<br>
 > Then I saw you from a distance, you were worlds away<br>
 > Oh, but you had me from the vision, I never looked away again<br>
 
-The narrator has almost lost faith, but ends up falling in love with a person _worlds away_. Given the context of the upcoming verses, this could either be meant literally as in "distance" or metaphorically as in "out of their league".
+The narrator has almost lost faith, but ends up falling in love with a person _worlds away_. Considering the other verses, this could either be meant literally as in "distance" or metaphorically as in "out of their league".
 
 > I walk these streets of loneliness<br>
 > A tranquil sea on all horizons<br>
 > This empty scene of might-have-beens<br>
 > I stare at starless skies that call to me and I still wish<br>
 
-The second verse further develops
+The second verse further develops the themes of loneliness, isolation and hopelessness. The narrator is surrounded by deserted streets and tranquil seas, trapped inside an empty scene of endless possibilities. Staring at starless skies conveys hopelessness, but despite that he hasn't given up.
+
+> They said that we both were too different<br>
+> That all of the shine would fade away<br>
+> But I wish that I never listened<br>
+> 'Cause you pulled me through the grey<br>
+
+The bridge describes the narrators regrets of listening ot others calling the possible relationship, because it's been the only thing to pull his out of this grey, monotonous life.
 
 > I still fall for you like suns do for skies<br>
 > Cerulean pouring in from your eyes<br>
@@ -370,7 +383,12 @@ The second verse further develops
 
 The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by sci-fi writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
 
-### Disappear <!-- https://www.youtube.com/watch?v=m-8n9YyfBB8 -->
+<!-- Todo: colonize would have been so much better! -->
+
+![](img/symbol-earthrise.png)
+{.w-25}
+
+### Disappear
 <!--
 [Verse 1]
 So how long were you numb?
@@ -444,23 +462,65 @@ Hard to tell if you were ever here
 I disappear, disappear
 I disappear, disappear
 -->
-The relationship formed in previous songs came to an end. The narrator struggles to move on and mourns a person that's still alive.
+[Disappear](https://www.youtube.com/watch?v=m-8n9YyfBB8) is a hauntingly sad song and explores the end of a relationship.
+
+> So how long were you numb?<br>
+> 'Cause it was cold as ice<br>
+> And I keep saying that I'm okay with it<br>
+> But that's another lie<br>
+> The truth is I've been dying slowly<br>
+
+The narrator is finding himself in a one-sided relationship. His partner doesn't return his affection and instead acts emotionally _numb_ and _cold as ice_. He tricks himself into thinking that this behavior is ok, but knows deep down that it's a lie, which is going to ruin him.
+
+> But no, not you, you just<br>
+> Turned to drift into the night<br>
+> A parting scene of apathy<br>
+> In an instant shift to a<br>
+> Stone heart, paired with empty eyes<br>
+> That stared right through mine<br>
+
+His partner on the other hand is completely indifferent to the whole situation. The loss of love seems to have happened in an _instant_. The heart turned to stone and empty, emotionless eyes stare right through our narrator, not even acknowledging his existence.
+
+> I tried so hard just to<br>
+> Make you feel my pain<br>
+> If you had empathy, you'd see I'd changed<br>
+> But like a ghost in your presence, I dissipate<br>
+> I tried it all, it's all in vain<br>
+
+The narrator describes his partner as empathyless. He tried everything to reignite the love, but ended up failing. _If you had empathy, you'd see I'd changed_ hints that the narrator is the cause of the relationship, but this theme isn't explored further.
 
 > There's a whole world that used to be us<br>
 > Now there's an echo calling me<br>
 > Just a shred of memory<br>
 
+The narrator remembers better times, but those are just a distant echo, just _shred of memory_.
+
+> Sometimes, I still slip<br>
+> And start to question if<br>
+> It was only in my mind<br>
 > It's hard to come to grips<br>
 > That you still exist<br>
 > When it feels just like you died<br>
+> Off the radar, out of sight<br>
 
-He thinks about disappearing, as in isolating himself, or, given the context of a song not discussed here, taking his life.
+The narrator is having a horrible time of letting go. He is mourning his partner as if he was dead.
 
+> So come one and all<br>
+> Step right up and I'll<br>
+> Perform a trick before your eyes<br>
 > I'll evaporate<br>
 > Gone without a trace<br>
 > Off the radar, out of sight<br>
 
-The song ends with the only through-composed outro of the album and leads seamlessly into the next one.
+He loss the relationship is affecting the narrator so bad that we he's seriously considering suicide. The song ends with the word
+
+> I disappear, disappear<br>
+> I disappear, disappear<br>
+
+and the only through-composed outro of the album and leads seamlessly into the next one.
+
+![](img/symbol-disappear.png)
+{.w-25}
 
 ### This Endless Endeavor
 <!--
@@ -517,7 +577,7 @@ And I'll be waiting, I'll be waiting
 (Oh-Woah, Oh-Woah) This endless endeavor
 This endless endeavor
 -->
-[This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI) starts out strong with a memorable guitar riff and heavy drums. The energy quickly subsides and the song continues to alternate between calm, saddening verses and a haunting chorus. The lyrics explore the loss, death or otherwise, of an important individual.
+[This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI) starts out strong with a memorable guitar riff and heavy drums. The energy quickly subsides and the song continues to alternate between calm, saddening verses and a haunting chorus. The lyrics explore the loss, death or otherwise, of an important individual, possibly continuing the narrative of the previous one.
 
 > I separate<br>
 > Into the arms of the broken<br>
@@ -550,6 +610,9 @@ He is lost in the world, star-crossed --- destined to fail --- looking out for a
 > (Oh-Woah, Oh-Woah) This endless endeavor<br>
 
 The narrator doesn't feel like himself without his significant other. He fears that he has to go on forever like this.
+
+![](img/symbol-this-endless-endeavor.png)
+{.w-25}
 
 ### Something Wicked
 <!--
@@ -657,8 +720,11 @@ The theme has been referenced in one of their [newer singles](https://www.youtub
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
 
+![](img/symbol-something-wicked.png)
+{.w-25}
+
 ## Symbolism
-With knowledge about some songs I want to end this post by talking about the symbols, which were created for every Starset song since Divisions.
+I included the symbol of each discussed song at the end. Starset started doing this back in Divisions and since then every released song got one. It's a nice alternative way to refer to a certain song. Lots of fan go their favorite as a tattoo. The lyrics of a song the symbol often go hand in hand. Some are obvious, while others leave room for interpretation. I leave these up for the reader to decide.
 
 - ![](img/symbol-unveiling-the-architecture.png "Unveiling The Architecture")
 - ![](img/symbol-the-breach.png "The Breach")
@@ -677,21 +743,6 @@ With knowledge about some songs I want to end this post by talking about the sym
 - ![](img/symbol-infected.png "Infected")
 - ![](img/symbol-something-wicked.png "Something Wicked")
 {.symbols}
-
-The lyrics and symbol of a song go hand in hand. Some of them are obvious, while other leave some room for interpretation. Here are some of my thoughts and ideas:
-
-- **The Breach** is a planet surrounded by shields, about to the breached
-- **Otherworldly** is a planet surrounded by three Saturn-like rings
-- **Icarus** is a person with wings
-- **Earthrise** is the earth rising on the moon's horizon. It looks like the sun rising over the sea and reflecting on the waves.
-- **Annihilated Love** is a broken heart
-- **Alchemy** is an homage to [alchemical symbols](https://en.wikipedia.org/wiki/Alchemical_symbol). It's composed of circle and an inwardly rounded triangle. Both of them don't correlate to anything in our world.
-- **This Endless Endeavor** is an endless corridor
-- **Symbiotic** is a flower made of leaves
-- **Dreamcatcher** is a [dreamcatcher](https://en.wikipedia.org/wiki/Dreamcatcher)
-- **Tunnelvision** is a tunnel
-- **Infected** is the top of three Starset symbols arranged like a biohazard warning sign.
-- **Something Wicked** is an upside down Starset logo
 
 ## Fin
 Puh, finally it's out of my system. This was a really hard post for me to write, especially considering my lack of vocabulary and knowledge in music theory and lyrical analysis. Interpretation wasn't a strength back in school and still isn't to this day. At least there isn't a teacher to tell me how my opinion is wrong. But writing it gave me a whole new appreciation for the lyrics and their deeper meaning, something I'm grateful for.
