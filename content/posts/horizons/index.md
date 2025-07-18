@@ -167,7 +167,7 @@ The blaze will surely melt those wings."
 But alas, he fell
 His cries, swallowed by the sea
 -->
-[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a classic love song in which the narrator describes his feelings towards his significant other.
+[Otherworldly](https://www.youtube.com/watch?v=l_MtK_kPtNU) is a prime example for the emotional lyrics and pop-style production of Horizons. Like most songs of the album, it follows the ABABCB structure (verse, chorus, verse, chorus, bridge, chorus). It's a classic love song in which the narrator describes his feelings for his partner.
 
 The song culminates in probably the best bridge of the album:
 
@@ -261,14 +261,14 @@ An energetic [song](https://www.youtube.com/watch?v=ZfiSaBxGB9E) about a figure 
 > Made a new pair out of broken things<br>
 > To give it all another try<br>
 
-The song starts with Icarus falling from the sky yet again, but he is determined to keep trying. He reconstructs the wings from _broken things_, hinting that he himself might be broken and that, without fixing himself first, he will never be able to achieve what he is striving for.
+The song starts with Icarus falling from the sky yet again, but he is determined to keep trying. He builds a _new pair_ of wings from _broken things_, hinting that he himself might be broken and that, without fixing himself first, he will never be able to achieve what he is striving for.
 
 > And you climb right up to the highest peaks<br>
 > And reach out to the edge of the world you seek<br>
 > Afraid of heights so you don't believe<br>
 > You could ever be good enough<br>
 
-Filled with false pride, he is unwilling to learn and goes for the hardest challenge immediately. He feels compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
+Filled with false pride, he is unwilling to learn and faces the hardest challenge immediately. He feels compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
 
 > Head in the clouds<br>
 > Buried your feet in thе ground<br>
@@ -291,7 +291,7 @@ He acts tough and confident, but doesn't even believe it himself. He will always
 > Go on then, Icarus, take your turn<br>
 > You'll never go through thеm<br>
 
-He refuses to change and repeats the same mistakes over and over again, but blames the world around him for his failure, destined to repeat the cycle, forever the victim.
+He refuses to change and repeats the same mistakes over and over again, but blames the world around him for his failure, destined to repeat the cycle, _always the victim_.
 
 ![](img/symbol-icarus.png)
 {.w-25}
@@ -359,21 +359,21 @@ The song starts with the description of a lonely person. It's a beautiful metaph
 > Then I saw you from a distance, you were worlds away<br>
 > Oh, but you had me from the vision, I never looked away again<br>
 
-The narrator has almost lost faith, but ends up falling in love with a person _worlds away_. Considering the other verses, this could either be meant literally as in "distance" or metaphorically as in "out of their league".
+The narrator has almost lost faith, but ends up falling in love with a person _worlds away_. Considering upcoming verses, this could either be meant literally as in "distance" or metaphorically as in "out of his league".
 
 > I walk these streets of loneliness<br>
 > A tranquil sea on all horizons<br>
 > This empty scene of might-have-beens<br>
 > I stare at starless skies that call to me and I still wish<br>
 
-The second verse further develops the themes of loneliness, isolation and hopelessness. The narrator is surrounded by deserted streets and tranquil seas, trapped inside an empty scene of endless possibilities. Staring at starless skies conveys hopelessness, but despite that he hasn't given up.
+The second verse further develops the themes of loneliness, isolation and hopelessness. The narrator is surrounded by deserted streets and tranquil seas, trapped inside an empty scene of endless possibilities. Staring at and being called upon starless skies conveys hopelessness, but despite that he hasn't given up.
 
 > They said that we both were too different<br>
 > That all of the shine would fade away<br>
 > But I wish that I never listened<br>
 > 'Cause you pulled me through the grey<br>
 
-The bridge describes the narrators regrets of listening ot others calling the possible relationship, because it's been the only thing to pull his out of this grey, monotonous life.
+The bridge describes the narrator regretting listening to others calling the relationship impossible, because his potential partner is the only thing pulling him out of this grey, monotonous life.
 
 > I still fall for you like suns do for skies<br>
 > Cerulean pouring in from your eyes<br>
@@ -381,9 +381,9 @@ The bridge describes the narrators regrets of listening ot others calling the po
 > So powerful, I feel so small but so alive<br>
 > Like watching the Earth rise<br>
 
-The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by sci-fi writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
+The chorus starts with a beautiful wordplay on falling in love and sunsets. The following lines mention the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by sci-fi writer H. G. Wells about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling hollow himself. The void is then filled/colorized [^colorize] by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, which might the blue eyes of the other person.
 
-<!-- Todo: colonize would have been so much better! -->
+[^colorize]: I think "colonize" would have been the better word choice here, given the context of a hollow, uninhabited moon.
 
 ![](img/symbol-earthrise.png)
 {.w-25}
@@ -470,7 +470,7 @@ I disappear, disappear
 > But that's another lie<br>
 > The truth is I've been dying slowly<br>
 
-The narrator is finding himself in a one-sided relationship. His partner doesn't return his affection and instead acts emotionally _numb_ and _cold as ice_. He tricks himself into thinking that this behavior is ok, but knows deep down that it's a lie, which is going to ruin him.
+The narrator is finding himself in a one-sided relationship. His partner doesn't return his affection and instead acts emotionally _numb_ and _cold as ice_. He tricks himself into thinking that this behavior is okay, but knows deep down that it's a lie, which is going to ruin him.
 
 > But no, not you, you just<br>
 > Turned to drift into the night<br>
@@ -479,7 +479,7 @@ The narrator is finding himself in a one-sided relationship. His partner doesn't
 > Stone heart, paired with empty eyes<br>
 > That stared right through mine<br>
 
-His partner on the other hand is completely indifferent to the whole situation. The loss of love seems to have happened in an _instant_. The heart turned to stone and empty, emotionless eyes stare right through our narrator, not even acknowledging his existence.
+His partner on the other hand is completely indifferent to the whole situation. The loss of love seems to have happened in an _instant_. Their heart turned to stone and the empty, emotionless eyes stare right through our narrator, not even acknowledging his existence.
 
 > I tried so hard just to<br>
 > Make you feel my pain<br>
@@ -487,13 +487,7 @@ His partner on the other hand is completely indifferent to the whole situation. 
 > But like a ghost in your presence, I dissipate<br>
 > I tried it all, it's all in vain<br>
 
-The narrator describes his partner as empathyless. He tried everything to reignite the love, but ended up failing. _If you had empathy, you'd see I'd changed_ hints that the narrator is the cause of the relationship, but this theme isn't explored further.
-
-> There's a whole world that used to be us<br>
-> Now there's an echo calling me<br>
-> Just a shred of memory<br>
-
-The narrator remembers better times, but those are just a distant echo, just _shred of memory_.
+The partner is described as not having empathy. The narrator tried to rekindle their relationship, but ended up failed. _If you had empathy, you'd see I'd changed_ hints that he might be at fault, but this theory isn't explored further.
 
 > Sometimes, I still slip<br>
 > And start to question if<br>
@@ -503,7 +497,7 @@ The narrator remembers better times, but those are just a distant echo, just _sh
 > When it feels just like you died<br>
 > Off the radar, out of sight<br>
 
-The narrator is having a horrible time of letting go. He is mourning his partner as if he was dead.
+The narrator is having a hard time letting go. He questions if the good times were real or only in his mind. He is mourning his partner as if he was dead.
 
 > So come one and all<br>
 > Step right up and I'll<br>
@@ -512,12 +506,7 @@ The narrator is having a horrible time of letting go. He is mourning his partner
 > Gone without a trace<br>
 > Off the radar, out of sight<br>
 
-He loss the relationship is affecting the narrator so bad that we he's seriously considering suicide. The song ends with the word
-
-> I disappear, disappear<br>
-> I disappear, disappear<br>
-
-and the only through-composed outro of the album and leads seamlessly into the next one.
+The ended relationship is affecting our narrator in a seriously bad way and drives him to consider ending his life. The song ends with the words _I disappear, disappear_ and thus leaves room for interpretation. The only [through-composed outro of the album](https://www.youtube.com/watch?v=m-8n9YyfBB8&t=280s) sounds adventurous and gives hope for a good outcome.
 
 ![](img/symbol-disappear.png)
 {.w-25}
@@ -577,7 +566,7 @@ And I'll be waiting, I'll be waiting
 (Oh-Woah, Oh-Woah) This endless endeavor
 This endless endeavor
 -->
-[This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI) starts out strong with a memorable guitar riff and heavy drums. The energy quickly subsides and the song continues to alternate between calm, saddening verses and a haunting chorus. The lyrics explore the loss, death or otherwise, of an important individual, possibly continuing the narrative of the previous one.
+[This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI) starts out strong with a memorable guitar riff and heavy drums. The energy quickly subsides and the song continues to alternate between calm, saddening verses and a haunting chorus. The lyrics explore the loss, death or otherwise, of an important individual, possibly continuing the narrative of [Disappear](#disappear).
 
 > I separate<br>
 > Into the arms of the broken<br>
@@ -585,7 +574,7 @@ This endless endeavor
 > Exposed to the world in the open<br>
 > To drift from all I know<br>
 
-The first verse describes the moments following a tragic event. The narrator is emotionally torn apart, separated, by what happened and resigns to the pain by falling into the arms of the broken. He accepts his fate, but feels vulnerable because he is exposed to the whole world, out in the open for everyone to see. This causes him to drift away from friends and family, reinforcing the feeling of loss, disconnection and isolation.
+The first verse describes the moments following a tragic event. The narrator is emotionally torn apart, separated, by what happened and resigns to the pain by falling into the _arms of the broken_. He accepts his fate, but feels vulnerable because he is exposed to the whole world, out in the open for everyone to see. This causes him to drift away from friends and family, reinforcing the feeling of loss, disconnection and isolation.
 
 > Lonely wade<br>
 > Out to the depths of an ocean<br>
@@ -593,7 +582,7 @@ The first verse describes the moments following a tragic event. The narrator is 
 > I suffer the death of emotion<br>
 > Between the waves of woe<br>
 
-The isolation overwhelms the narrator. It causes him to break. Go shipwreck over the endless depths of an ocean. Go emotionally numb with only the waves of woe crashing against the broken remains of a ship that he used to call himself.
+The isolation overwhelms the narrator. He goes on a _lonely wade_ out to the ocean and ends up shipwreck. Emotionally numb with only the _waves of woe_ crashing against the broken remains of a ship that he used to call himself.
 
 > I get lost in the world sometimes<br>
 > Star-crossed, looking out for a light but it won't shine<br>
@@ -602,14 +591,14 @@ The isolation overwhelms the narrator. It causes him to break. Go shipwreck over
 > I will wait for the day you call through the skylines<br>
 > And I'll be waiting, I'll be waiting<br>
 
-He is lost in the world, star-crossed --- destined to fail --- looking out for a North Star to guide him through the rest of his life. He is filled with hope to one day connect with his significant again.
+He is lost in the world. Star-crossed, destined to fail, looking out for a light, a _North Star_, to guide him through the rest of his life. He is filled with hope to one day connect with his significant again.
 
 > (Oh-Woah, Oh-Woah) I'm gone without you<br>
 > (Oh-Woah, Oh-Woah) Could it be forever?<br>
 > (Oh-Woah, Oh-Woah) Go on without you<br>
 > (Oh-Woah, Oh-Woah) This endless endeavor<br>
 
-The narrator doesn't feel like himself without his significant other. He fears that he has to go on forever like this.
+The narrator doesn't feel like himself without his significant other. He fears that he has to go on like this forever.
 
 ![](img/symbol-this-endless-endeavor.png)
 {.w-25}
@@ -710,12 +699,7 @@ As we enter the bridge, the song turns from calm to violent:
 > You'll whisper, serpent tongue<br>
 > What you fear you have become<br>
 
-After that, the silence and piano return. The narrator has lost the fight with his inner darkness. The album concludes with the whispered words:
-
-> Something wicked this way comes<br>
-> Something wicked this way comes<br>
-
-The theme has been referenced in one of their [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
+After that, the silence and piano return. The narrator has lost the fight with his inner darkness. The album concludes with the whispered words _Something wicked this way comes_, a theme that has been referenced in one of Starsets [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
