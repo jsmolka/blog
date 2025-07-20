@@ -218,7 +218,10 @@
   }
 
   @include narrow {
-    .w-25,
+    .w-25 {
+      width: 50%;
+    }
+
     .w-50,
     .w-75 {
       width: 100%;
