@@ -17,12 +17,12 @@ Over a decade ago, I watched a [gaming montage](https://www.youtube.com/watch?v=
 
 Bates self-describes their music as cinematic rock, [blending symphonics with electronics with guitar hard rock](https://eu.goerie.com/story/entertainment/local/2015/09/10/cinematic-band-starset-opens-for/24940226007/). The symphonics appear in form of through-composed outros with [adventurous and space-travel-like melodies](https://youtu.be/W7qIlpV-uwo?t=229). Unfortunately, they have become less frequent in newer releases. The lyrics cover everything from love, space and sci-fi to the dystopian use of technology in authoritarian societies.
 
-Their latest album, Horizons, was released on October 22, 2021. Since then, it has been an important and recurring part of my life. I want to use this post as an opportunity to dive deeper into the creative direction and lyrics of this masterpiece. This isn't my area of expertise, so expect some rough edges and lacking vocabulary.
+Their latest album, Horizons, was released on October 22, 2021. Since then, it has become an important and ever present part of my life. I want to use this post as an opportunity to dive deeper into the creative direction and music of this masterpiece. This isn't my area of expertise, so expect some rough edges and lacking vocabulary.
 
 ## Creative Direction
 Something Starset has nailed since its inception is the creative direction. They publish lots of supplemental material and Bates even authored two novels, [The PROX Transmissions](https://merch.starsetonline.com/products/the-prox-transmissions-novel) and [A Brief History of the Future](https://merch.starsetonline.com/products/a-brief-history-of-the-future-novel), fleshing out the Starset universe.  Music videos take place inside of it and fans often comment about wanting an entire movie. There exists a [Google Doc](https://docs.google.com/document/d/e/2PACX-1vQAtvJU4ghdGGvpDfss4ZTCz5_Ns3jaAyz9r-2eR_heL96kWWZ2i9mOrEqv6SWMyXEI9OC8bGeO12Fn/pub) summarizing all the lore, but to be honest: I don't really care about that kind of stuff. I'm here for the music.
 
-Speaking of which, the first single of Horizons to be released was [Infected](https://www.youtube.com/watch?v=pggN6f4h4So). At that point, nobody knew there was a new album in the works. The cover artwork features a different visual style compared to the following singles. It has a scanned-paper-like appearance, doesn't use the outlined Starset wordmark, uses less kerning for the title and doesn't fit the color scheme in general.
+Speaking of which, the first single of Horizons to be released was [Infected](https://www.youtube.com/watch?v=pggN6f4h4So). At that point, nobody knew there was a new album in the works. The cover artwork features a different visual style compared to the following singles. It has a scanned-paper-like appearance, doesn't use the outlined Starset wordmark, uses less kerning for the title and doesn't match the color scheme of the others.
 
 - ![](img/cover-infected.jpg "Infected cover (Apr 26)")
 - ![](img/cover-the-breach.jpg "The Breach cover (Sep 10)")
@@ -35,7 +35,7 @@ The album promotion began five months later with [The Breach](https://www.youtub
 {.fluent}
 
 ### Font
-The font used on covers and other media is called Axion RND. It features rounded and futuristic-looking characters with a small height difference between uppercase and lowercase ones. That probably influenced the decision to capitalize all text, something I'm usually opposed to. I dislike text **SCREAMING** at me, but it does look good on covers.
+The font used on covers and other media is called Axion RND. It features rounded and futuristic-looking characters with a small height difference between uppercase and lowercase ones. That probably influenced the decision to capitalize all text, something I'm usually opposed to. I dislike words **SCREAMING** at me, but it does look good on covers.
 {.font-axion-rnd}
 
 - ![](img/band.jpg "Band banner")
@@ -74,7 +74,7 @@ This post was inspired by my admiration for the creative direction. It's great i
 3. **Divisions** deviates from the classic Starset formula by having a much more futuristic sound design with heavy industrial influences. The narrative takes a leap forward in terms of storytelling and discusses dystopian themes like surveillance, human-machine integration and oppressive systems. It contains my two favorites songs: [Where The Skies End](https://www.youtube.com/watch?v=1DHY4cgQwE8) and [Perfect Machine](https://www.youtube.com/watch?v=keMBtyjYUPQ).
 4. **Horizons** on the other hand is much more introspective and emotionally driven. It's polished, melodic, calm and has a pop-style production, making it more accessible to newer audiences while still retaining the cinematic rock identity.
 
-When listening to music, I tend to focus on the musical aspects instead of the lyrics. To me, a melodic, powerful chorus makes a good song. Lyrics tend to play a background role, which is shame, because I've seen comments comparing Starset's singer Dustin Bates to a human thesaurus. So I took this post as an opportunity to analyze some of my favorites.
+When listening to music, I tend to focus on the musical aspects instead of the lyrics. To me, a melodic, powerful chorus makes a good song. Lyrics play a background role, which is shame, because I've seen comments comparing Starset's lead vocalist Dustin Bates to a human thesaurus. So I took this post as an opportunity to analyze some of my favorites.
 
 ### Otherworldly
 <!--
@@ -266,7 +266,7 @@ The song starts with Icarus falling from the sky yet again, but he is determined
 > Afraid of heights so you don't believe<br>
 > You could ever be good enough<br>
 
-Filled with false pride, he is unwilling to learn and immediately faces the hardest challenges without a proper foundation. He feels compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
+Filled with false pride, he is unwilling to learn and faces the hardest challenges without a solid foundation. He feels compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
 
 > Head in the clouds<br>
 > Buried your feet in thе ground<br>
@@ -280,7 +280,7 @@ He stands on the _highest peaks_ with his _head in the clouds_, while simultaneo
 > You were made for skies but you called your bluff<br>
 > Now you'll never be good enough<br>
 
-He acts tough and confident. He is Icarus, the son of master craftsman Daedalus. He was _made for skies_, but doesn't even believe it himself. Instead, he will always be the _replica of a runner-up_, destined to be second and _never be good enough_.
+He acts tough and confident. He is Icarus, the son of master craftsman Daedalus. He was _made for skies_, but doesn't even believe it himself. Instead, he will always be the _replica of a runner-up_, destined to be second, and _never be good enough_.
 
 > Go on then, Icarus, take your turn<br>
 > You always fly right up until it burns<br>
@@ -357,7 +357,7 @@ The song starts with the description of a lonely person. It's a beautiful metaph
 > This empty scene of might-have-beens<br>
 > I stare at starless skies that call to me and I still wish<br>
 
-He is surrounded by deserted streets and tranquil seas, trapped inside an empty scene of endless, unmaterialized possibilities. Staring at and being called upon starless skies conveys loneliness and hopelessness, but despite that he hasn't given up.
+The narrator is surrounded by deserted streets and tranquil seas, trapped inside an empty scene of endless, unmaterialized possibilities. Staring at and being called upon starless skies implies loneliness and hopelessness, but despite that he hasn't given up.
 
 > And I waited for the sky to change but, oh, it never did<br>
 > And I almost dropped my head and lost my faith<br>
@@ -380,8 +380,6 @@ The chorus opens with a beautiful wordplay on falling in love and sunsets. The f
 > 'Cause you pulled me through the grey<br>
 
 The narrator regrets listening to others calling the relationship impossible and doomed to fail, because it was the only thing filling his grey, monotonous life with color and worth living.
-
-
 
 ![](img/symbol-earthrise.png)
 {.w-25}
@@ -494,7 +492,7 @@ The partner is described as not having empathy. The narrator tried to rekindle t
 > That you still exist<br>
 > When it feels just like you died<br>
 
-The narrator is losing his mind. The pain is so great that he is mourning his partner as if he was dead.
+The narrator is losing his mind. The whole situation doesn't feel real to him. The pain is so great that it feels like mourning a dead person, despite his partner still being alive.
 
 > So come one and all<br>
 > Step right up and I'll<br>
@@ -503,7 +501,7 @@ The narrator is losing his mind. The pain is so great that he is mourning his pa
 > Gone without a trace<br>
 > Off the radar, out of sight<br>
 
-The ended relationship is affecting the narrator in a horrendous way and drives him to consider ending his own life. The song ends with the words _I disappear, disappear_ and thus leaves little room for interpretation. The music goes quite and sad for while and is then followed by the only [through-composed outro of the album](https://www.youtube.com/watch?v=m-8n9YyfBB8&t=280s).
+The ended relationship is affecting the narrator in a horrendous way and drives him to consider ending his own life. The song ends with the words _I disappear, disappear_ and thus leaves little room for interpretation. After that, the music goes quiet for while and is then followed by the only [through-composed outro of the album](https://www.youtube.com/watch?v=m-8n9YyfBB8&t=280s). Its adventurous sound gives hope for a better ending to the narrator's story.
 
 ![](img/symbol-disappear.png)
 {.w-25}
@@ -579,7 +577,7 @@ The first verse describes the moments following a tragic event. The narrator is 
 > I suffer the death of emotion<br>
 > Between the waves of woe<br>
 
-The isolation overwhelms the narrator. He goes on a _lonely wade_ out to the ocean and ends up shipwreck. Emotionally numb with only the _waves of woe_ crashing against the broken remains of a ship that he used to call himself.
+The isolation overwhelms our narrator. He goes on a _lonely wade_ out to the ocean and ends up shipwreck. Emotionally numb with only the _waves of woe_ crashing against the broken remains of a ship that he used to call himself.
 
 > I get lost in the world sometimes<br>
 > Star-crossed, looking out for a light but it won't shine<br>
@@ -588,14 +586,14 @@ The isolation overwhelms the narrator. He goes on a _lonely wade_ out to the oce
 > I will wait for the day you call through the skylines<br>
 > And I'll be waiting, I'll be waiting<br>
 
-He is lost in the world. Star-crossed, destined to fail, looking out for a light. A _North Star_ to guide him through the rest of his life. He is filled with hope to one day connect with his significant other again.
+He is _lost in the world_. _Star-crossed_, destined to fail, and _looking out for a light_. A _North Star_ to guide him through the rest of his life. Despite the chances being slim, he is filled with hope to one day reconnect with his significant other once again.
 
 > (Oh-Woah, Oh-Woah) I'm gone without you<br>
 > (Oh-Woah, Oh-Woah) Could it be forever?<br>
 > (Oh-Woah, Oh-Woah) Go on without you<br>
 > (Oh-Woah, Oh-Woah) This endless endeavor<br>
 
-The narrator doesn't feel like himself without his partner. He fears that he has to go on like this forever.
+The narrator doesn't feel like himself without his partner and fears that he has to go on _this endless endeavor_ alone.
 
 ![](img/symbol-this-endless-endeavor.png)
 {.w-25}
@@ -667,14 +665,14 @@ The album ends with [Something Wicked](https://www.youtube.com/watch?v=CDq5TO05N
 > I've watered down the pain 'til the well went dry<br>
 > So pray for rain<br>
 
-The lyrics are littered with biblical references. The narrator describes the thing inside of him as so profoundly evil, that even a crucifix can't kill it. He tried everything in his power to stop it, but had to resign eventually. _So pray for rain_ is a warning that only a divine intervention can prevent him from losing control and a sign of things to come.
+The lyrics are littered with biblical references. The narrator describes the thing inside of him as so profoundly evil, that even a _crucifix_ can't kill it. He tried everything in his power to stop it, but had to resign eventually. _So pray for rain_ is a warning that only a divine intervention can prevent him from losing control and a sign of things to come.
 
 > And it clawеd<br>
 > Back in the world again<br>
 > Here for a nеw revenge<br>
 > An enemy I can't condemn<br>
 
-It isn't the first confrontation between the two. The thing is coming back for _a new revenge_, having lost the fight once before. The narrator is unsure how to feel about it. On one hand, he describes it as an enemy, something he hates and doesn't want in his life. On the other hand, he can't condemn it, feeling like its existence is justified --- a natural part of himself.
+It isn't the first confrontation between the two. The thing is coming back for _a new revenge_, having lost the fight once before. The narrator is unsure how to feel about it. On one hand, he describes it as an enemy, something he hates and doesn't want in his life. On the other hand, he _can't condemn_ it, feeling like its existence is justified --- a natural part of himself.
 
 As we enter the bridge, the song turns from calm to violent:
 
@@ -696,7 +694,7 @@ As we enter the bridge, the song turns from calm to violent:
 > You'll whisper, serpent tongue<br>
 > What you fear you have become<br>
 
-After that, the silence returns and the piano starts playing. The narrator has lost the fight with his inner darkness. The album concludes with the whispered words _Something wicked this way comes_, a theme that has been referenced in one of Starsets [newer singles](https://www.youtube.com/watch?v=E2uwT_SctB0):
+After that, the silence returns and a piano starts playing. The narrator has lost the fight with his inner darkness. The album concludes with the whispered words _Something wicked this way comes_, a theme that has been referenced in a [newer single](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
 > Lock your windows, close your doors and hide<br>
 > Something wicked has got inside<br>
@@ -705,7 +703,7 @@ After that, the silence returns and the piano starts playing. The narrator has l
 {.w-25}
 
 ## Symbolism
-I included the symbol of each discussed song at the end. Starset started doing this back in Divisions and since then every released song got one. It's a nice alternative way to refer to a certain song. Lots of fan go their favorite as a tattoo. The lyrics of a song the symbol often go hand in hand. Some are obvious, while others leave room for interpretation. I leave these up for the reader to decide.
+I included the symbol of each song at the end. Starset began designing them back in Divisions. Lots of fans got tattoos of their favorite ones. The lyrics of a song the symbol often go hand in hand. Some are obvious, while others leave room for interpretation. I leave these up for the reader to decode.
 
 - ![](img/symbol-unveiling-the-architecture.png "Unveiling The Architecture")
 - ![](img/symbol-the-breach.png "The Breach")
@@ -726,7 +724,7 @@ I included the symbol of each discussed song at the end. Starset started doing t
 {.symbols}
 
 ## Fin
-Puh, finally it's out of my system. This was a really hard post for me to write, especially considering my lack of vocabulary and knowledge in music theory and lyrical analysis. Interpretation wasn't a strength back in school and still isn't to this day. At least there isn't a teacher to tell me how my opinion is wrong. But writing it gave me a whole new appreciation for the lyrics and their deeper meaning, something I'm grateful for.
+Puh, finally it's out of my system. This was an especially hard post to write, given my lack of music theory knowledge. Interpretation wasn't a strength back in school and still isn't to this day. At least there isn't a teacher to tell me how my opinion is wrong. Writing it gave me a whole new appreciation for the album and cemented it as one of my all-time favorites.
 
 ---
 
