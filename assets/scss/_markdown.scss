@@ -105,7 +105,7 @@
   }
 
   :is(ul, ol):not([class]) {
-    margin-left: spacing(12);
+    margin-left: spacing(11);
 
     @include narrow {
       margin-left: spacing(4);
