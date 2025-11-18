@@ -20,12 +20,12 @@ def main(args):
     analyze(activities)
 
     grouped_activities = group_activities(activities)
-    create_plot_distance(grouped_activities)
-    create_plot_average_watts(grouped_activities)
-    create_plot_average_normalized_watts(grouped_activities)
-    create_plot_average_heartrate(grouped_activities)
-    create_plot_efficiency_factor(grouped_activities)
-    create_plot_calories(grouped_activities)
+    plot_distance(grouped_activities)
+    plot_average_watts(grouped_activities)
+    plot_average_normalized_watts(grouped_activities)
+    plot_average_heartrate(grouped_activities)
+    plot_efficiency_factor(grouped_activities)
+    plot_calories(grouped_activities)
 
 
 def calculate_calories(average_watts, hours):
@@ -236,7 +236,7 @@ def set_plot_axes_style(axes):
     axes.tick_params(colors=COLOR_SHADE_1, length=8, labelsize=24)
 
 
-def create_plot_distance(grouped_activities):
+def plot_distance(grouped_activities):
     values = {
         "indoor": np.zeros(len(grouped_activities)),
         "outdoor": np.zeros(len(grouped_activities)),
@@ -259,7 +259,7 @@ def create_plot_distance(grouped_activities):
     plt.savefig("../img/distance.png", dpi=PLOT_DPI, transparent=True)
 
 
-def create_plot_average_watts(grouped_activities):
+def plot_average_watts(grouped_activities):
     values = np.zeros(len(grouped_activities))
     for i, activities in enumerate(grouped_activities.values()):
         watts_time = 0
@@ -281,7 +281,7 @@ def create_plot_average_watts(grouped_activities):
     plt.savefig("../img/watts.png", dpi=PLOT_DPI, transparent=True)
 
 
-def create_plot_average_normalized_watts(grouped_activities):
+def plot_average_normalized_watts(grouped_activities):
     values = np.zeros(len(grouped_activities))
     for i, activities in enumerate(grouped_activities.values()):
         normalized_watts_time = 0
@@ -303,7 +303,7 @@ def create_plot_average_normalized_watts(grouped_activities):
     plt.savefig("../img/normalized-watts.png", dpi=PLOT_DPI, transparent=True)
 
 
-def create_plot_average_heartrate(grouped_activities):
+def plot_average_heartrate(grouped_activities):
     values = np.zeros(len(grouped_activities))
     for i, activities in enumerate(grouped_activities.values()):
         heartrate_time = 0
@@ -325,7 +325,7 @@ def create_plot_average_heartrate(grouped_activities):
     plt.savefig("../img/heartrate.png", dpi=PLOT_DPI, transparent=True)
 
 
-def create_plot_efficiency_factor(grouped_activities):
+def plot_efficiency_factor(grouped_activities):
     values = np.zeros(len(grouped_activities))
     for i, activities in enumerate(grouped_activities.values()):
         efficiency_factor_time = 0
@@ -349,7 +349,7 @@ def create_plot_efficiency_factor(grouped_activities):
     plt.savefig("../img/efficiency-factor.png", dpi=PLOT_DPI, transparent=True)
 
 
-def create_plot_calories(grouped_activities):
+def plot_calories(grouped_activities):
     values = {
         "no_power": np.zeros(len(grouped_activities)),
         "power": np.zeros(len(grouped_activities)),
