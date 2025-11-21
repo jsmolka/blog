@@ -78,7 +78,7 @@ Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have
 | --------- | ---------------: | ----------: | -------------: |
 | Sodium    |    10--90 mmol/l |     22.99 u | 230--2070 mg/l |
 | Chlorine  |    10--90 mmol/l |     35.45 u | 355--3191 mg/l |
-| Potassium |      2--8 mmol/l |      39.1 u |   78--313 mg/l |
+| Potassium |      2--8 mmol/l |     39.10 u |   78--313 mg/l |
 | Calcium   |    0.2--2 mmol/l |     40.08 u |     8--80 mg/l |
 | Magnesium | 0.02--0.4 mmol/l |     24.31 u |     1--10 mg/l |
 {.font-feature-tnum}
