@@ -152,16 +152,16 @@ And the resulting [mGBA suite](https://github.com/mgba-emu/suite) coverage compa
 
 | Test           | eggvance 0.2 | eggvance 0.3 | mGBA 0.8.4 | higan v115 | Total |
 | -------------- | -----------: | -----------: | ---------: | ---------: | ----: |
-| Memory         | 1456         | 1552         | 1552       | 1552       | 1552  |
-| I/O read       | 123          | 123          | 114        | 123        | 123   |
-| Timing         | 404          | 1496         | 1520       | 1424       | 1660  |
-| Timer count-up | 365          | 496          | 610        | 449        | 936   |
-| Timer IRQ      | 28           | 65           | 70         | 36         | 90    |
-| Shifter        | 140          | 140          | 132        | 132        | 140   |
-| Carry          | 93           | 93           | 93         | 93         | 93    |
-| Multiply long  | 52           | 52           | 52         | 52         | 72    |
-| DMA            | 1048         | 1220         | 1232       | 1136       | 1256  |
-| Edge case      | 1            | 2            | 6          | 1          | 10    |
+| Memory         |         1456 |         1552 |       1552 |       1552 |  1552 |
+| I/O read       |          123 |          123 |        114 |        123 |   123 |
+| Timing         |          404 |         1496 |       1520 |       1424 |  1660 |
+| Timer count-up |          365 |          496 |        610 |        449 |   936 |
+| Timer IRQ      |           28 |           65 |         70 |         36 |    90 |
+| Shifter        |          140 |          140 |        132 |        132 |   140 |
+| Carry          |           93 |           93 |         93 |         93 |    93 |
+| Multiply long  |           52 |           52 |         52 |         52 |    72 |
+| DMA            |         1048 |         1220 |       1232 |       1136 |  1256 |
+| Edge case      |            1 |            2 |          6 |          1 |    10 |
 {.font-feature-tnum}
 
 I was happy to finally have something you could call relatively cycle-accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald hometown down to a mere 485 fps. I was shocked, but the issue turned out to be easier to fix than expected. The MSVC optimizer just didn't inline the prefetch code.
