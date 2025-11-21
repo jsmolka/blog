@@ -32,7 +32,7 @@
       <div class="markdown">
         {{
           .Content
-            | replaceRE `(<table>(?:.|\n)*?</table>)` `<div class="table-wrapper">${1}</div>`
+            | replaceRE `(<table[^>]*>(?:.|\n)*?</table>)` `<div class="table-wrapper">${1}</div>`
             | replaceRE `&#160;` ``
             | safeHTML
         }}
