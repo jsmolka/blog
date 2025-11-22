@@ -33,16 +33,16 @@ The recommended carbohydrate intake varies based on exercise duration and intens
 
 <figure>
 
-| Workout duration | Minimum | Recommended |      Maximum |
-| ---------------: | ------: | ----------: | -----------: |
-|       0.0--0.5 h |   0 g/h |      10 g/h |       30 g/h |
-|       0.5--1.0 h |   0 g/h |      20 g/h |       50 g/h |
-|       1.0--1.5 h |  20 g/h |      30 g/h |       70 g/h |
-|       1.5--2.0 h |  40 g/h |      60 g/h |       90 g/h |
-|       2.0--2.5 h |  50 g/h |      80 g/h |      120 g/h |
-|       2.5--3.0 h |  60 g/h |      90 g/h | 120--150 g/h |
-|       3.0--6.0 h |  75 g/h |     100 g/h | 120--150 g/h |
-|           >6.0 h |  75 g/h |      90 g/h |       90 g/h |
+| Duration [h] | Minimum [g/h] | Recommended [g/h] | Maximum [g/h] |
+| -----------: | ------------: | ----------------: | ------------: |
+|         <0.5 |             0 |                10 |            30 |
+|       0.5--1 |             0 |                20 |            50 |
+|       1--1.5 |            20 |                30 |            70 |
+|       1.5--2 |            40 |                60 |            90 |
+|       2--2.5 |            50 |                80 |           120 |
+|       2.5--3 |            60 |                90 |      120--150 |
+|         3--6 |            75 |               100 |      120--150 |
+|           >6 |            75 |                90 |            90 |
 {.font-feature-tnum}
   <figcaption>
 
@@ -74,13 +74,13 @@ I experienced this [once](https://www.strava.com/activities/9412522570). The mer
 
 Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have helped me:
 
-| Element   |    Concentration | Atomic mass |  Concentration |
-| --------- | ---------------: | ----------: | -------------: |
-| Sodium    |    10--90 mmol/l |     22.99 u | 230--2070 mg/l |
-| Chlorine  |    10--90 mmol/l |     35.45 u | 355--3191 mg/l |
-| Potassium |      2--8 mmol/l |     39.10 u |   78--313 mg/l |
-| Calcium   |    0.2--2 mmol/l |     40.08 u |     8--80 mg/l |
-| Magnesium | 0.02--0.4 mmol/l |     24.31 u |     1--10 mg/l |
+| Element   | Concentration [mmol/l] | Atomic mass [u] | Concentration [mg/l] |
+| --------- | ---------------------: | --------------: | -------------------: |
+| Sodium    |                 10--90 |           22.99 |            230--2070 |
+| Chlorine  |                 10--90 |           35.45 |            355--3191 |
+| Potassium |                   2--8 |           39.10 |              78--313 |
+| Calcium   |                 0.2--2 |           40.08 |                8--80 |
+| Magnesium |              0.02--0.4 |           24.31 |                1--10 |
 {.font-feature-tnum}
 
 The most important mineral to replenish is sodium. This can be done with table salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred over the other will be explained in the [chapter on osmolarity](#electrolytes-1).
@@ -135,12 +135,12 @@ Osmolality and osmolarity are calculated using `O = c / M * n` [^osmotic-coeffic
 - `M` is the solutes [molar mass](https://en.wikipedia.org/wiki/Molar_mass) in g/mol.
 - `n` is the solutes number of particles in solution. Ionic compounds, such as salts, can dissociate into their ions in solution and therefore contribute multiple particles per molecule.
 
-| Name            | Chemical formula                                      |   Molar mass | Particles                                                                   |
-| --------------- | ----------------------------------------------------- | -----------: | --------------------------------------------------------------------------- |
-| Glucose         | C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>              | 180.16 g/mol | 1                                                                           |
-| Sucrose         | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>            | 342.30 g/mol | 1                                                                           |
-| Sodium chloride | NaCl                                                  |  58.44 g/mol | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
-| Sodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07 g/mol | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
+| Name            | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
+| --------------- | ----------------------------------------------------- | -----------------: | --------------------------------------------------------------------------- |
+| Glucose         | C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>              |             180.16 | 1                                                                           |
+| Sucrose         | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>            |             342.30 | 1                                                                           |
+| Sodium chloride | NaCl                                                  |              58.44 | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
+| Sodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> |             258.07 | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
 {.font-feature-tnum}
 
 It is possible to convert between osmolality and osmolarity using `R = L * D`, where:
@@ -160,13 +160,13 @@ Glucose polymers are classified by a [dextrose equivalent](https://en.wikipedia.
 
 Here is a table that shows the correlation between the chain length `n` and the DE:
 
-|    n | Chemical formula                             |    Molar mass |     DE |
-| ---: | -------------------------------------------- | ------------: | -----: |
-|    3 | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>   |  504.44 g/mol | 35.70% |
-|    5 | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>   |  828.72 g/mol | 21.73% |
-|   10 | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  | 1639.43 g/mol | 10.99% |
-|   15 | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  | 2450.13 g/mol |  7.35% |
-|   19 | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> | 3098.69 g/mol |  5.81% |
+|    n | Chemical formula                             | Molar mass [g/mol] | DE [%] |
+| ---: | -------------------------------------------- | -----------------: | -----: |
+|    3 | C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>   |             504.44 |  35.70 |
+|    5 | C<sub>30</sub>H<sub>52</sub>O<sub>26</sub>   |             828.72 |  21.73 |
+|   10 | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  |            1639.43 |  10.99 |
+|   15 | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  |            2450.13 |   7.35 |
+|   19 | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> |            3098.69 |   5.81 |
 {.font-feature-tnum}
 
 If we assume smaller osmolarities to be superior (foreshadowing), then we would want to go for a maltodextrin with a long chain length/low DE. Unfortunately, it can be quite tricky to find out for consumer-grade products, because they don't need to be labeled and usually aren't. The typical range of commercial maltodextrin I've seen online lies between 5% and 20%.
@@ -193,26 +193,26 @@ The key takeaways from the study are the following:
 
 The first one can be applied universally. Dilute the carbohydrates and electrolytes in your bottle as much as possible/practical. The second one informs the source of carbohydrates in the bottle. Let's say we go for a concentration of 100 g/l, which would not be untypical for a large bottle. There are a few ways to achieve the previously discussed even ratio of glucose to fructose:
 
-| Solution                                       |            Osmolarity |
-| ---------------------------------------------- | --------------------: |
-| 50 g/l maltodextrin (n = 10) + 50 g/l fructose | 30 + 278 = 308 mOsm/l |
-| 50 g/l maltodextrin (n = 15) + 50 g/l fructose | 20 + 278 = 298 mOsm/l |
-| 50 g/l maltodextrin (n = 19) + 50 g/l fructose | 16 + 278 = 294 mOsm/l |
-| 100 g/l sucrose                                | 292            mOsm/l |
+| Solution                                       | Osmolarity [mOsm/l] |
+| ---------------------------------------------- | ------------------: |
+| 50 g/l maltodextrin (n = 10) + 50 g/l fructose |      30 + 278 = 308 |
+| 50 g/l maltodextrin (n = 15) + 50 g/l fructose |      20 + 278 = 298 |
+| 50 g/l maltodextrin (n = 19) + 50 g/l fructose |      16 + 278 = 294 |
+| 100 g/l sucrose                                |                 292 |
 {.font-feature-tnum}
 
 All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long-chained version.
 
 The same thing applies when going for a more traditional 2:1 ratio:
 
-| Solution                                       |            Osmolarity |
-| ---------------------------------------------- | --------------------: |
-| 66 g/l maltodextrin (n = 10) + 33 g/l fructose | 40 + 183 = 214 mOsm/l |
-| 66 g/l maltodextrin (n = 15) + 33 g/l fructose | 27 + 183 = 210 mOsm/l |
-| 66 g/l maltodextrin (n = 19) + 33 g/l fructose | 21 + 183 = 204 mOsm/l |
-| 33 g/l maltodextrin (n = 10) + 66 g/l sucrose  | 20 + 193 = 213 mOsm/l |
-| 33 g/l maltodextrin (n = 15) + 66 g/l sucrose  | 13 + 193 = 206 mOsm/l |
-| 33 g/l maltodextrin (n = 19) + 66 g/l sucrose  | 11 + 193 = 203 mOsm/l |
+| Solution                                       | Osmolarity [mOsm/l] |
+| ---------------------------------------------- | ------------------: |
+| 66 g/l maltodextrin (n = 10) + 33 g/l fructose |      40 + 183 = 214 |
+| 66 g/l maltodextrin (n = 15) + 33 g/l fructose |      27 + 183 = 210 |
+| 66 g/l maltodextrin (n = 19) + 33 g/l fructose |      21 + 183 = 204 |
+| 33 g/l maltodextrin (n = 10) + 66 g/l sucrose  |      20 + 193 = 213 |
+| 33 g/l maltodextrin (n = 15) + 66 g/l sucrose  |      13 + 193 = 206 |
+| 33 g/l maltodextrin (n = 19) + 66 g/l sucrose  |      11 + 193 = 203 |
 {.font-feature-tnum}
 
 Again, all solutions perform roughly the same. The fructose-containing carbohydrate drives most of the osmolarity, while maltodextrin adds next to nothing. Substituting fructose with sucrose seems like a reasonable choice when factoring in cost. The solution's sweetness might differ, but that can be offset with salt and flavorings.
@@ -222,21 +222,21 @@ The ratio part of this chapter turned out a little different than expected. I th
 ### Electrolytes
 Salts are a little harder to calculate because they dissociate into their ions in solution:
 
-| Name               | Chemical formula                                      |   Molar mass | Particles                                                                   |
-| ------------------ | ----------------------------------------------------- | -----------: | --------------------------------------------------------------------------- |
-| Sodium chloride    | NaCl                                                  |  58.44 g/mol | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
-| Potassium chloride | KCl                                                   |  74.55 g/mol | 2 (K<sup>+</sup> + Cl<sup>-</sup>)                                          |
-| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             | 156.38 g/mol | 2 (Mg<sup>2+</sup> + C<sub>4</sub>H<sub>4</sub>O<sub>5</sub><sup>2-</sup>)  |
-| Sodium citrate     | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> | 258.07 g/mol | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
+| Name               | Chemical formula                                      | Molar mass [g/mol] | Particles                                                                   |
+| ------------------ | ----------------------------------------------------- | -----------------: | --------------------------------------------------------------------------- |
+| Sodium chloride    | NaCl                                                  |              58.44 | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
+| Potassium chloride | KCl                                                   |              74.55 | 2 (K<sup>+</sup> + Cl<sup>-</sup>)                                          |
+| Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             |             156.38 | 2 (Mg<sup>2+</sup> + C<sub>4</sub>H<sub>4</sub>O<sub>5</sub><sup>2-</sup>)  |
+| Sodium citrate     | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> |             258.07 | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
 {.font-feature-tnum}
 
 Let's calculate the osmolarity for a realistic sodium requirement of 1500 mg/l:
 
-| Solution                                               |                Osmolarity |
-| ------------------------------------------------------ | ------------------------: |
-| 3.82 g/l sodium chloride                               |                132 mOsm/l |
-| 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) | 132 + 15 + 7 = 154 mOsm/l |
-| 5.55 g/l sodium citrate                                |                 86 mOsm/l |
+| Solution                                               | Osmolarity [mOsm/l] |
+| ------------------------------------------------------ | ------------------: |
+| 3.82 g/l sodium chloride                               |                 132 |
+| 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) |  132 + 15 + 7 = 154 |
+| 5.55 g/l sodium citrate                                |                  86 |
 {.font-feature-tnum}
 
 I think the osmolarities are insane. 4 g of sodium chloride (137 mOsm/l) contributes almost as much as 50 g of sucrose (146 mOsm/l). That's because the sodium chloride molecule is small to begin with, and it even has the audacity to dissociate into two ions. Rude. Here the alternative of sodium citrate is clearly superior if you can stand the taste.
@@ -254,16 +254,16 @@ Here are some examples of popular soft and sports drinks:
 
 <figure>
 
-| Name        |  Osmolality |   Density | Osmolarity |
-| ----------- | ----------: | --------: | ---------: |
-| Coke        | 493 mOsm/kg | 1.04 kg/l | 513 mOsm/l |
-| Fanta       | 415 mOsm/kg | 1.04 kg/l | 432 mOsm/l |
-| Fruit juice | 724 mOsm/kg | 1.06 kg/l | 767 mOsm/l |
-| Gatorade    | 353 mOsm/kg | 1.03 kg/l | 363 mOsm/l |
-| Isostar     | 312 mOsm/kg | 1.03 kg/l | 320 mOsm/l |
-| Powerade    | 368 mOsm/kg | 1.03 kg/l | 378 mOsm/l |
-| Red Bull    | 601 mOsm/kg | 1.04 kg/l | 625 mOsm/l |
-| Sprite      | 479 mOsm/kg | 1.04 kg/l | 498 mOsm/l |
+| Name        | Osmolality [mOsm/kg] | Density [kg/l] | Osmolarity [mOsm/l] |
+| ----------- | -------------------: | -------------: | ------------------: |
+| Isostar     |                  312 |           1.03 |                 320 |
+| Gatorade    |                  353 |           1.03 |                 363 |
+| Powerade    |                  368 |           1.03 |                 378 |
+| Fanta       |                  415 |           1.04 |                 432 |
+| Sprite      |                  479 |           1.04 |                 498 |
+| Coke        |                  493 |           1.04 |                 513 |
+| Red Bull    |                  601 |           1.04 |                 625 |
+| Fruit juice |                  724 |           1.06 |                 767 |
 {.font-feature-tnum}
   <figcaption>
 
@@ -291,14 +291,14 @@ I am neither a professional athlete nor an influencer with a nutrition sponsor. 
 
 It has served me well over the last year. No bonks caused by underfueling or cramps caused by electrolyte loss. Is it significantly better or worse than commercial products? Probably not. Are there minor differences? Probably. But if these minor differences are worth the uptick in price is up for you to decide:
 
-| Drink mix                                                                                              | Day (160 g) | Month (20 × 160 g) | Year (240 × 160g) |
-| ------------------------------------------------------------------------------------------------------ | ----------: | -----------------: | ----------------: |
-| Mine                                                                                                   |       €0.34 |              €6.80 |            €81.60 |
-| [HSN Evocarbs 2.0](https://www.hsnstore.eu/brands/sport-series/evocarbs-2-0)                           |       €0.93 |             €18.60 |           €223.20 |
-| [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 |       €3.51 |             €70.20 |           €842.40 |
-| [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     |       €5.42 |            €108.48 |          €1301.76 |
-| [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) |       €6.00 |            €120.00 |          €1440.00 |
-| [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             |       €6.71 |            €134.11 |          €1609.37 |
+| Drink mix                                                                                              | Day (160 g) [€] | Month (20 × 160 g) [€] | Year (240 × 160g) [€] |
+| ------------------------------------------------------------------------------------------------------ | --------------: | ---------------------: | --------------------: |
+| Mine                                                                                                   |            0.34 |                   6.80 |                 81.60 |
+| [HSN Evocarbs 2.0](https://www.hsnstore.eu/brands/sport-series/evocarbs-2-0)                           |            0.93 |                  18.60 |                223.20 |
+| [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 |            3.51 |                  70.20 |                842.40 |
+| [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     |            5.42 |                 108.48 |               1301.76 |
+| [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) |            6.00 |                 120.00 |               1440.00 |
+| [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             |            6.71 |                 134.11 |               1609.37 |
 {.font-feature-tnum}
 
 ## Conclusion

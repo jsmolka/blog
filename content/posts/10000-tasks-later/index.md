@@ -15,15 +15,20 @@ The year of high numbers concludes with a follow-up post to my [2024 Todoist rev
 
     I hope the last part is true, because **performance is lacking**, to say the least:
 
-    | Tasks | Duplicate #1 | Duplicate #2 | Duplicate #3 |  Average |
-    | ----: | -----------: | -----------: | -----------: | -------: |
-    |    10 |       5.85 s |       3.60 s |       4.58 s |   4.68 s |
-    |    25 |       8.15 s |      11.19 s |       7.59 s |   8.98 s |
-    |    50 |      20.52 s |      15.59 s |      14.90 s |  17.00 s |
-    |   100 |      29.70 s |      32.71 s |      31.72 s |  25.77 s |
-    |   200 |      60.66 s |      78.19 s |      71.06 s |  69.97 s |
-    |   300 |     128.09 s |     130.58 s |     109.47 s | 122.71 s |
-    {.font-feature-tnum}
+    <figure>
+
+      | Tasks | Sample #1 [s] | Sample #2 [s] | Sample #3 [s] | Average [s] |
+      | ----: | ------------: | ------------: | ------------: | ----------: |
+      |    10 |          5.85 |          3.60 |          4.58 |        4.68 |
+      |    25 |          8.15 |         11.19 |          7.59 |        8.98 |
+      |    50 |         20.52 |         15.59 |         14.90 |       17.00 |
+      |   100 |         29.70 |         32.71 |         31.72 |       25.77 |
+      |   200 |         60.66 |         78.19 |         71.06 |       69.97 |
+      |   300 |        128.09 |        130.58 |        109.47 |      122.71 |
+      {.font-feature-tnum}
+      <figcaption>Time needed to duplicate a project</figcaption>
+    </figure>
+
 
     That being said, I never noticed any issues outside of duplicating projects.
 
