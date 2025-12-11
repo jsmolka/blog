@@ -46,9 +46,10 @@ function clamp(value, min, max) {
 function initBarEvents(element) {
   const createBarEvent = (name) => {
     return (event) => {
+      const { left, right } = element.getBoundingClientRect();
       element.dispatchEvent(
         new CustomEvent(name, {
-          detail: clamp((event.pageX - element.offsetLeft) / element.offsetWidth, 0, 1),
+          detail: clamp((event.x - left) / (right - left), 0, 1),
         })
       );
     };
