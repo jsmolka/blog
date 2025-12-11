@@ -1,7 +1,5 @@
 @import 'utils';
 
-$content-toc: 15rem;
-
 .toc {
   position: absolute;
   top: 0;
@@ -9,7 +7,7 @@ $content-toc: 15rem;
   height: 100%;
 }
 
-@media screen and (max-width: calc(#{$content} + 2 * #{$content-toc} + 16px)) {
+@include narrow-toc {
   .toc {
     display: none;
   }

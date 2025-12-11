@@ -1,7 +1,14 @@
 $content: 45rem;
+$content-toc: 15rem;
 
 @mixin narrow {
   @media screen and (max-width: $content) {
+    @content;
+  }
+}
+
+@mixin narrow-toc {
+  @media screen and (max-width: ($content + 2 * $content-toc + 1rem)) {
     @content;
   }
 }
