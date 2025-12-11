@@ -1,0 +1,63 @@
+@import 'utils';
+
+$content-toc: 15rem;
+
+.toc {
+  position: absolute;
+  top: 0;
+  left: calc(50% + (#{$content} / 2));
+  height: 100%;
+}
+
+@media screen and (max-width: calc(#{$content} + 2 * #{$content-toc} + 16px)) {
+  .toc {
+    display: none;
+  }
+}
+
+@media print {
+  .toc {
+    display: none;
+  }
+}
+
+#TableOfContents {
+  position: sticky;
+  top: spacing(8);
+  width: $content-toc;
+  padding-left: spacing(8);
+  padding-right: spacing(4);
+
+  a {
+    position: relative;
+    display: block;
+    color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-indent: spacing(6);
+    white-space: nowrap;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: spacing(12);
+      height: 2px;
+      background-color: var(--shade-7);
+    }
+
+    &:hover {
+      color: var(--shade-2);
+
+      &::before {
+        width: spacing(4);
+        background-color: var(--shade-3);
+      }
+    }
+
+    &.active::before {
+      background-color: var(--shade-3);
+    }
+  }
+}

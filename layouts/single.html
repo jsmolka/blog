@@ -29,14 +29,17 @@
           {{ end }}
         </header>
       {{ end }}
-      <div class="markdown">
-        {{
-          .Content
-            | replaceRE `(<table[^>]*>(?:.|\n)*?</table>)` `<div class="table-wrapper">${1}</div>`
-            | replaceRE `&#160;` ``
-            | safeHTML
-        }}
-      </div>
+      <section>
+        {{ partial "toc" . }}
+        <div class="markdown">
+          {{
+            .Content
+              | replaceRE `(<table[^>]*>(?:.|\n)*?</table>)` `<div class="table-wrapper">${1}</div>`
+              | replaceRE `&#160;` ``
+              | safeHTML
+          }}
+        </div>
+      </section>
     </article>
   </main>
 {{ end }}
