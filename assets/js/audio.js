@@ -43,8 +43,8 @@ function clamp(value, min, max) {
   return Math.min(Math.max(min, value), max);
 }
 
-function initBarEvents(element) {
-  const createBarEvent = (name) => {
+function initBar(element) {
+  const dispatch = (name) => {
     return (event) => {
       const { left, right } = element.getBoundingClientRect();
       element.dispatchEvent(
@@ -55,9 +55,9 @@ function initBarEvents(element) {
     };
   };
 
-  const down = createBarEvent('bardown');
-  const move = createBarEvent('barmove');
-  const up = createBarEvent('barup');
+  const down = dispatch('bardown');
+  const move = dispatch('barmove');
+  const up = dispatch('barup');
 
   element.addEventListener('pointerdown', (event) => {
     if (event.button !== 0) {
@@ -191,7 +191,7 @@ class XAudio extends HTMLElement {
   }
 
   initProgress() {
-    initBarEvents(this.progressBar);
+    initBar(this.progressBar);
 
     let wasPaused = false;
     this.progressBar.addEventListener('bardown', () => {
@@ -229,7 +229,7 @@ class XAudio extends HTMLElement {
     this.volumeArea.addEventListener('pointerenter', enter);
     this.volumeArea.addEventListener('pointerleave', leave);
 
-    initBarEvents(this.volumeBar);
+    initBar(this.volumeBar);
     this.volumeBar.addEventListener('bardown', enter);
     this.volumeBar.addEventListener('barmove', ({ detail: volume }) => (this.volume = volume));
     this.volumeBar.addEventListener('barup', leave);

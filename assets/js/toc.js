@@ -14,5 +14,7 @@ function update() {
   }
 }
 
-window.addEventListener('scroll', update, { passive: true });
-window.addEventListener('hashchange', update, { passive: true });
+if (tocLinks.length > 0) {
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('hashchange', update, { passive: true });
+}
