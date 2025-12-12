@@ -15,6 +15,7 @@ function update() {
 }
 
 if (tocLinks.length > 0) {
+  update();
   window.addEventListener('scroll', update, { passive: true });
   window.addEventListener('hashchange', update, { passive: true });
 }
