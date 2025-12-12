@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # sudo apt-get install fonttools
 
 # https://jrgraphix.net/r/Unicode/
