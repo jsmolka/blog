@@ -1,6 +1,6 @@
 const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')];
 const headings = tocLinks
-  .map((tocLink) => document.querySelector(`#${tocLink.getAttribute('href').slice(1)}`))
+  .map((tocLink) => document.querySelector(`#${CSS.escape(tocLink.getAttribute('href').slice(1))}`))
   .reverse();
 
 function update() {
