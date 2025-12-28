@@ -8,7 +8,7 @@ Today, workin celebrates its [second birthday](https://github.com/jsmolka/workin
 
 Stepping into the role of a user offers a different perspective. You notice bugs, missing features and UX flaws. I still remember workouts where time just flew by, but in reality it was running at twice the rate it should have. You also reconsider some design decisions. Reading gets harder with increasing heart rate, so you opt for larger font sizes for relevant UI elements.
 
-Using something for hours daily over weeks also gives you time to think about possible improvements. The feature list grew longer and longer and workin slowly turned into my new [procrastination project](/posts/procrastination-project/). The following chapters explore the most notable features.
+Using something for hours daily over weeks also gives you time to think about possible improvements. The feature list grew longer and longer and workin slowly turned into my new [procrastination project](/posts/procrastination-project/). The following chapters explore the most notable new features.
 
 ## Creator -> Editor
 The old version was more like a workout creator than an editor. You were able to add intervals in sequential order and could delete selected ones later. But you better not make any mistakes. There was no interval editing, sorting or insertion in between. Once created, the workout was set in stone. The new editor implements all of those features, has many minor enhancements and also allows you to edit/duplicate existing workouts.
@@ -76,7 +76,7 @@ async upload(activity) {
 The Strava API doesn't support image upload, so the user has to add it manually. Other indoor training apps like Zwift and TrainerRoad seem to have access to a custom version with image support, but mere mortals like myself aren't allowed to use it.
 
 ## PWA
-Using the Strava API also meant that there was no need to open other websites after finishing a workout. The app was now self-contained and ready to be turned into a progressive web app. There are multiple ways to do that, but adding a simple [manifest](https://github.com/jsmolka/workin/blob/master/public/manifest.json) makes it installable. There is no advantage apart from freeing up vertical space by removing the browser's address bar.
+Using the Strava API also meant that there was no need to open other websites after finishing a workout. The app was now self-contained and ready to be turned into a progressive web app. There are multiple ways to do that, but adding a simple [manifest](https://github.com/jsmolka/workin/blob/master/public/manifest.json) makes it installable. There is no real advantage apart from freeing up vertical space by removing the browser's address bar.
 
 I had some trouble with the icon and needed to add additional padding to an already padded icon to fit within the [maskable icon safe zone](https://w3c.github.io/manifest/#icon-masks).
 
