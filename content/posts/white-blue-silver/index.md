@@ -8,49 +8,69 @@ draft: true
 I fell into the Japanese knife rabbit hole over christmas and spent way too much time researching and thickening about my ideal _collection_.
 
 ## Steel
-- Alloy
-  - Iron
-  - Carbon
-    - 0.02% - 2.14% by weight
-    - More than 2.1% is called cast iron
-- Additives (https://en.wikipedia.org/wiki/Steel#Origins_and_production)
+- Alloy of icon and carbon (0.05-2.1%)
+- Define properties of steel
+  - Hardness
+  - Hardenability
+  - Tensile strength
+  - Wear/Abrasion resistance
+    - Edge retention?
+  - Toughness
+    - How much energy can be absorbed before breaking
+    - Allows knife to take a sharp edge
+  - Corrosion resistance
+    - Difference to oxidation?
+  - Brittleness
+    - Tendency to fracture suddenly with little or no plastic deformation
+  - Machinability
+  - Strength
+    - Same as tensile strength?
+- Elements (https://zknives.com/knives/steels/steelelements.shtml)
   - Carbon (C)
-    - Why do we add it?
-    - How does it improve performance?
+    - Present in all carbon steel knives
+    - Most important hardening element
+    - Increases tensile strength and edge retention
+    - Improves resistance to wear and abrasion
+    - Decreases toughness in isolation
   - Silicon (Si)
-    - Helps with controlling the carbon amount
+    - Increases strength
+    - Deoxidizes and degases to remove oxygen from molten material
+      - Oxygen is considered a contaminant
+      - Promotes pitting (extremely localized corrosion leading to small holes)
   - Phosphorus (P)
+    - Present in small amounts in most steels (comes with raw material like iron ore)
+    - Contaminant, which reduces toughness
+    - Improves strength, machinability and hardness in small amounts
   - Sulfur (S)
-    - Improves machinability despite being an impurity
-    - Why is it considered to be an impurity?
+    - Considered an impurity (comes from iron ore or coke in blast furnace)
+    - Increase machinability
+    - Decreases toughness
   - Manganese (Mn)
-    - Sulfur-fixing and deoxidizing
-    - Improve workability at high temperatures
+    - Improves grain structure
+    - Contributes to hardenability, strength and wear resistance
+    - Deoxidizes and degases the steel during manufacturing
+    - Increases hardness and brittleness in larger quantities
   - Vanadium (V)
-    - 0.15% - 5%
-    - Considerable increase in strength (wear resistance)
-    - Forms stable nitrides and carbides (what are those)
+    - Improves wear resistance and hardenability
+    - Forms the hardest carbides, which contributes to wear resistance
+    - Refines grain structure of steel, which contributes to toughness
   - Tungsten (W)
-    - Increases hardness and heat resistance
+    - Strong carbide former
+    - Increases wear resistance
   - Chromium (Cr)
-    - 10.5% (or more) for stainless steel
-    - Greater corrosion and oxidation (rust) resistance
-    - Rust only affects a few layers of atoms
+    - Increases wear resistance, hardness, tensile strength corrosion resistance
+    - Decreases toughness in high amounts
+    - 13% or more is deemed stainless
+    - Can rust despite its name
+    - Forms large, complex carbides
+- Carbides?
 
 ## Paper Steel
-- Why is it called paper steel?
-  - Metals by Proterial, formerly Hitachi Metals
-- Where do the names come from?
+- Metals produced by Proterial, formerly Hitachi Metals
+- Called white, blue and silver based on their wrapping paper
+  - Footnote: annoyed at this because I couldn't find any images to prove this
   - Literal translation ("shiro" white, "ao" blue?, "gin" silver", "san" three)
   - Ginsan comes from Gingami #3
-- Dissatisfaction about not being able to find an image of the actual paper
-- Blog
-  - W1 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/white-steel-1
-  - W2 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/white-steel-2
-  - B1 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-1
-  - B2 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-2
-  - BS https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-super
-  - S3 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/silver-steel-3
 
 | Steel                                                                            |   C   |  Si   |   P   |   S   |  Mn   |   V   |   W   |  Cr   |
 | -------------------------------------------------------------------------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -62,7 +82,13 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
 | [Ginsan](https://zknives.com/knives/steels/steelgraph.php?nm=ginsan)             | 1.025 | 0.35  | 0.03  | 0.02  |  0.8  |       |       | 13.75 |
 
 - Comparison chart with edge retention and hardness
-- Blue vs White
-  - Increased material cost due to additives
-  - Blue gains more resistance to wear and toughness in general, but therefore also more difficult to sharpen
-  - Heat treatment on white is difficult, difficult to achieve high hardness rating without cracking the blade
+
+- Benefits and drawbacks of each steel
+  - W2 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/white-steel-2
+  - W1 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/white-steel-1
+  - B2 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-2
+  - B1 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-1
+  - BS https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-super
+  - S3 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/silver-steel-3
+
+## Powdered Steel
