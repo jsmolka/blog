@@ -9,12 +9,12 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
 
 ## Steel
 - Alloy of icon and carbon (0.05-2.1%)
-- Define properties of steel
+- Alloy properties (https://www.neonickel.com/technical-resources/introduction-to-the-structure-and-properties-of-metal-alloys)
   - Hardness
   - Hardenability
   - Tensile strength
   - Wear/Abrasion resistance
-    - Edge retention?
+  - Edge retention
   - Toughness
     - How much energy can be absorbed before breaking
     - Allows knife to take a sharp edge
@@ -63,6 +63,8 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
     - 13% or more is deemed stainless
     - Can rust despite its name
     - Forms large, complex carbides
+
+- Steel atomic lattice?
 - Carbides?
 
 ## Paper Steel
