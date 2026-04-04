@@ -10,8 +10,8 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
 ## Steel
 - Alloy of icon and carbon (0.05-2.1%)
 - Alloy properties (https://www.neonickel.com/technical-resources/introduction-to-the-structure-and-properties-of-metal-alloys)
-  - Hardness
-  - Hardenability
+  - **Hardness** is a measure of the resistance to localized deformation, such as indentation or scratching, induced mechanically by either by pressing or abrasion. It is measured by performing the Rockwell hardness test. A diamond shaped cone is pressed into the metal and its penetration depth defines the Rockwell hardness (0.002 mm = 1 HRC).
+  - **Hardenability** is the depth to which a steel is hardened after putting it through a heat treatment process.
   - Tensile strength
   - Wear/Abrasion resistance
   - Edge retention
@@ -71,7 +71,7 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
 - Metals produced by Proterial, formerly Hitachi Metals
 - Called white, blue and silver based on their wrapping paper
   - Footnote: annoyed at this because I couldn't find any images to prove this
-  - Literal translation ("shiro" white, "ao" blue?, "gin" silver", "san" three)
+  - Literal translation ("shiro" white, "ao" blue, "gin" silver", "san" three, "gami" paper)
   - Ginsan comes from Gingami #3
 
 | Steel                                                                            |   C   |  Si   |   P   |   S   |  Mn   |   V   |   W   |  Cr   |
@@ -79,9 +79,10 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
 | [Shirogami #2](https://zknives.com/knives/steels/steelgraph.php?nm=shirogami+2)  |  1.1  | 0.15  | 0.025 | 0.004 | 0.25  |       |       |       |
 | [Shirogami #1](https://zknives.com/knives/steels/steelgraph.php?nm=shirogami+1)  |  1.3  | 0.15  | 0.025 | 0.004 | 0.25  |       |       |       |
 | [Aogami #2](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+2)        |  1.1  | 0.15  | 0.025 | 0.004 | 0.25  |       | 1.25  | 0.35  |
-| [Aogami #1](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+1)        |  1.3  | 0.15  | 0.025 | 0.004 | 0.25  |  0.4  | 1.75  |  0.4  |
-| [Aogami Super](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+super) | 1.45  | 0.15  | 0.025 | 0.004 | 0.25  |       | 2.25  |  0.4  |
+| [Aogami #1](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+1)        |  1.3  | 0.15  | 0.025 | 0.004 | 0.25  |       | 1.75  |  0.4  |
+| [Aogami Super](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+super) | 1.45  | 0.15  | 0.025 | 0.004 | 0.25  |  0.4  | 2.25  |  0.4  |
 | [Ginsan](https://zknives.com/knives/steels/steelgraph.php?nm=ginsan)             | 1.025 | 0.35  | 0.03  | 0.02  |  0.8  |       |       | 13.75 |
+{.font-feature-tnum}
 
 - Comparison chart with edge retention and hardness
 
