@@ -8,10 +8,10 @@ draft: true
 I fell into the Japanese knife rabbit hole over christmas and spent way too much time researching and thickening about my ideal _collection_.
 
 ## Steel
-Steel is an alloy of iron and 0.05--2.1% carbon. It has several important properties that define its performance:
+Steel is an alloy of iron and 0.05--2.1% carbon. Carbon atoms are much smaller than iron atoms and fit into the gaps of the iron crystal lattice. It has several important properties that define its performance:
 
-- **Strength** is the ability of a material to withstand loads without failure. This includes yield strength, the maximum stress before permanent plastic deformation, and tensile strength, the maximum stretching stress before breaking.
-- **Hardness** is a measure of the resistance to localized deformation, such as indentation or scratching, induced mechanically by either by pressing or abrasion. It is measured by performing the Rockwell hardness test, during with a 120° diamond cone is pressed into the metal. The penetration depth defines the Rockwell hardness C (0.002 mm = 1 HRC).
+- **Strength** is the ability of a material to withstand loads without failure. This includes yield strength, the maximum stress before permanent plastic deformation, and tensile strength, the maximum stress before breaking when stretched.
+- **Hardness** is a measure of the resistance to localized deformation, such as indentation or scratching, induced mechanically by either by pressing or abrasion. It is measured by performing the Rockwell hardness test, during which a 120° diamond cone is pressed into the metal. The penetration depth defines the Rockwell hardness C (0.002 mm = 1 HRC).
 - **Wear resistance** refers to a material's ability to resist surface degradation or loss under mechanical actions such as rubbing, sliding, rolling, or impact.
 - **Hardenability** is the depth to which a steel is hardened after putting it through a heat treatment process.
 - **Ductility** is the ability to stretch/deform without breaking. Opposite of brittleness.
