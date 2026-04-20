@@ -14,5 +14,5 @@ Recently, the older me stumbled across a much more beautiful method to preserve 
 >
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Gyotaku)</cite>
 
-![xx](img/tarakihi.webp "[New Zealand Tarakihi by Victor Huang](https://victorhuang.co/gyotaku)")
-{.escape}
+- ![](img/tarakihi.webp "[New Zealand Tarakihi by Victor Huang](https://victorhuang.co/gyotaku)")
+{.overflow}
