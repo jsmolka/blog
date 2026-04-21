@@ -10,6 +10,13 @@ I fell into the Japanese knife rabbit hole over christmas and spent way too much
 ## Steel
 Steel is an alloy of iron and 0.05--2.1% carbon. Carbon atoms are much smaller than iron atoms and fit into the gaps of the iron crystal lattice. It has several important properties that define its performance:
 
+![](img/lattice.svg "Interstitial alloy")
+
+<!--
+https://www.neonickel.com/technical-resources/introduction-to-the-structure-and-properties-of-metal-alloys
+https://www.lansky.com/resources/post/secrets-steel.html
+ -->
+
 - **Strength** is the ability of a material to withstand loads without failure. This includes yield strength, the maximum stress before permanent plastic deformation, and tensile strength, the maximum stress before breaking when stretched.
 - **Hardness** is a measure of the resistance to localized deformation, such as indentation or scratching, induced mechanically by either by pressing or abrasion. It is measured by performing the Rockwell hardness test, during which a 120° diamond cone is pressed into the metal. The penetration depth defines the Rockwell hardness C (0.002 mm = 1 HRC).
 - **Wear resistance** refers to a material's ability to resist surface degradation or loss under mechanical actions such as rubbing, sliding, rolling, or impact.
@@ -27,6 +34,8 @@ TODO: wear resistance vs hardness
 -->
 
 Elements (https://zknives.com/knives/steels/steelelements.shtml, https://www.huyett.com/blog/alloy-steel-properties-and-types)
+
+![](img/lattice-elements.svg "Combined substitutional and interstitial alloy")
 
 - Carbon (C)
   - Present in all carbon steel knives
@@ -67,10 +76,6 @@ Elements (https://zknives.com/knives/steels/steelelements.shtml, https://www.huy
   - Forms large, complex carbides
 
 
-## Structure
-- Steel atomic lattice?
-- Carbides?
-
 ## Paper Steel
 - Metals produced by Proterial, formerly Hitachi Metals
 - Called white, blue and silver based on their wrapping paper
@@ -97,5 +102,3 @@ Elements (https://zknives.com/knives/steels/steelelements.shtml, https://www.huy
   - B1 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-1
   - BS https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-super
   - S3 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/silver-steel-3
-
-## Powdered Steel
