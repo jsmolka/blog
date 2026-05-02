@@ -8,9 +8,11 @@ draft: true
 I fell into the Japanese knife rabbit hole over christmas and spent way too much time researching and thickening about my ideal _collection_.
 
 ## Steel
-Steel is an alloy of iron and 0.05--2.1% carbon. Carbon atoms are much smaller than iron atoms and fit into the gaps of the iron crystal lattice. It has several important properties that define its performance:
+Steel is an alloy of iron and 0.05--2.1% carbon. The small carbon atoms fill the voids between the larger iron atoms in the crystal lattice without replacing them. This is called interstitial alloy.
 
 ![](img/lattice.svg "Interstitial alloy")
+
+ Alloys have several properties that quantify their performance:
 
 <!--
 https://www.neonickel.com/technical-resources/introduction-to-the-structure-and-properties-of-metal-alloys
@@ -18,44 +20,56 @@ https://www.lansky.com/resources/post/secrets-steel.html
  -->
 
 - **Strength** is the ability of a material to withstand loads without failure. This includes yield strength, the maximum stress before permanent plastic deformation, and tensile strength, the maximum stress before breaking when stretched.
-- **Hardness** is a measure of the resistance to localized deformation, such as indentation or scratching, induced mechanically by either by pressing or abrasion. It is measured by performing the Rockwell hardness test, during which a 120° diamond cone is pressed into the metal. The penetration depth defines the Rockwell hardness C (0.002 mm = 1 HRC).
-- **Wear resistance** refers to a material's ability to resist surface degradation or loss under mechanical actions such as rubbing, sliding, rolling, or impact.
+- **Hardness** is a measure of the resistance to localized deformation, such as indentation or scratching, induced mechanically by either by pressing or abrasion. It is measured by performing the Rockwell hardness test, during which a 120° diamond cone is pressed into the metal. The penetration depth defines the Rockwell hardness C (0.002 mm = 1 HRC) [^vickers].
+- **Wear resistance** refers to a material's ability to resist surface degradation or loss under mechanical actions such as rubbing, sliding, rolling or impact.
 - **Hardenability** is the depth to which a steel is hardened after putting it through a heat treatment process.
 - **Ductility** is the ability to stretch/deform without breaking. Opposite of brittleness.
-- **Toughness** is a combination of strength and ductility and is a measure of how much resistance a steel has to fracturing. In knives this includes chipping. (how much energy can be absorbed without fracturing)
+- **Toughness** is a combination of strength and ductility. It measures how much resistance a steel has to fracturing. In knives this includes chipping.
 - **Corrosion resistance** ability to resist oxidation in air or water.
 
 <!--
 A strong bar resists bending.
 A ductile bar bends a lot before breaking.
 A tough bar can be hit hard and still not crack.
-
-TODO: wear resistance vs hardness
 -->
 
-Elements (https://zknives.com/knives/steels/steelelements.shtml, https://www.huyett.com/blog/alloy-steel-properties-and-types)
+[^vickers]: Rockwell hardness is non-linear because of the diamond-shaped cone. Pressing it further into the metal becomes increasingly hard. Converting it to the linear Vickers hardness can help with comparison.
 
-![](img/lattice-elements.svg "Combined substitutional and interstitial alloy")
+    | Rockwell Hardness C | Vickers Hardness |
+    | ------------------- | ---------------- |
+    | 68                  | 940              |
+    | 67                  | 900              |
+    | 66                  | 865              |
+    | 65                  | 832              |
+    | 64                  | 800              |
+    | 63                  | 772              |
+    | 62                  | 746              |
+    | 61                  | 720              |
+    | 60                  | 697              |
+    | 59                  | 674              |
+    | 58                  | 653              |
+    | 57                  | 633              |
+    | 56                  | 613              |
+    | 55                  | 595              |
+    | 54                  | 577              |
+    | 53                  | 560              |
+    | 52                  | 544              |
 
-- Carbon (C)
-  - Present in all carbon steel knives
-  - Most important hardening element
-  - Increases tensile strength and edge retention
-  - Improves resistance to wear and abrasion
-  - Decreases toughness in isolation
-- Silicon (Si)
-  - Increases strength
-  - Deoxidizes and degases to remove oxygen from molten material
-    - Oxygen is considered a contaminant
-    - Promotes pitting (extremely localized corrosion leading to small holes)
-- Phosphorus (P)
-  - Present in small amounts in most steels (comes with raw material like iron ore)
-  - Contaminant, which reduces toughness
-  - Improves strength, machinability and hardness in small amounts
-- Sulfur (S)
-  - Considered an impurity (comes from iron ore or coke in blast furnace)
-  - Increase machinability
-  - Decreases toughness
+    Typical HRC ranges are 52--58 for Western and 58--68 for Japanese knives.
+
+These properties can be altered by the addition of other elements. Their atoms are much larger than the carbon ones and don't fit inside the voids. Instead, they replace them. The result is called a substitutional alloy.
+
+![](img/lattice-elements.svg "Combined interstitial and substitutional alloy")
+
+<!--
+https://zknives.com/knives/steels/steelelements.shtml
+https://www.huyett.com/blog/alloy-steel-properties-and-types
+ -->
+
+- **Carbon (C)** is present in all knife steels and the most important hardening element. It increases tensile strength and edge retention and improves resistance to wear and abrasion. Added in isolation, it decreases toughness.
+- **Silicon (Si)** increases strength. It deoxidizes and degases to remove oxygen from molten material. Oxygen is considered a contaminant and promotes pitting, an extremely localized form of corrosion leading to small holes.
+- **Phosphorus (P)** is present in small amounts in most steels, because it is part of the raw materials like iron ore. It is considered a contaminant and reduces toughness. In really small amounts it improves strength, machinability and hardness.
+- **Sulfur (S)** is considered an impurity and comes from iron ore or coke in blast furnace. It increases machinability, but decreases toughness.
 - Manganese (Mn)
   - Improves grain structure
   - Contributes to hardenability, strength and wear resistance
