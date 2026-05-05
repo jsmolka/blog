@@ -67,35 +67,25 @@ https://www.huyett.com/blog/alloy-steel-properties-and-types
  -->
 
 - **Carbon (C)** is present in all knife steels and the most important hardening element. It increases tensile strength and edge retention and improves resistance to wear and abrasion. Added in isolation, it decreases toughness.
-- **Silicon (Si)** increases strength. It deoxidizes and degases to remove oxygen from molten material. Oxygen is considered a contaminant and promotes pitting, an extremely localized form of corrosion leading to small holes.
-- **Phosphorus (P)** is present in small amounts in most steels, because it is part of the raw materials like iron ore. It is considered a contaminant and reduces toughness. In really small amounts it improves strength, machinability and hardness.
-- **Sulfur (S)** is considered an impurity and comes from iron ore or coke in blast furnace. It increases machinability, but decreases toughness.
-- Manganese (Mn)
-  - Improves grain structure
-  - Contributes to hardenability, strength and wear resistance
-  - Deoxidizes and degases the steel during manufacturing
-  - Increases hardness and brittleness in larger quantities
-- Vanadium (V)
-  - Improves wear resistance and hardenability
-  - Forms the hardest carbides, which contributes to wear resistance
-  - Refines grain structure of steel, which contributes to toughness
-- Tungsten (W)
-  - Strong carbide former
-  - Increases wear resistance
-- Chromium (Cr)
-  - Increases wear resistance, hardness, tensile strength, corrosion resistance
-  - Decreases toughness in high amounts
-  - 13% or more is deemed stainless
-  - Can rust despite its name
-  - Forms large, complex carbides
-
+- **Silicon (Si)** increases strength. It also deoxidizes the molten material by reacting with oxygen, which is considered a contaminant, because it promotes pitting, an extremely localized form of corrosion leading to small holes.
+- **Phosphorus (P)** is also considered an impurity and reduces toughness. It is present in small amounts in most steels, because it comes as part of the raw materials. In really small amounts it improves strength, machinability and hardness.
+- **Sulfur (S)** is also considered an impurity and comes from iron ore or coke in blast furnaces. It increases machinability, but decreases toughness.
+- **Manganese (Mn)** improves grain structure and contributes to hardenability, strength and wear resistance. It deoxidizes and desulfurizes the steel during manufacturing. In larger quantities, it increases hardness and brittleness.
+- **Vanadium (V)** refines the grain structure of the steel and contributes to wear resistance and hardenability by forming the hardest carbides. Carbides are hard little crystals which form when carbon atoms bond with metal atoms inside the steel.
+- **Tungsten (W)** is the strongest carbide former after vanadium and improves wear resistance.
+- **Chromium (Cr)** increase wear resistance, hardness, tensile strength and corrosion resistance. Steel with at least 13% chromium is deemed stainless. The chromium atoms form a microscopic layer of chromium oxide on the surface when exposed to oxygen. Despite it's name stainless steel can rust. It just stains less, not never.
 
 ## Paper Steel
-- Metals produced by Proterial, formerly Hitachi Metals
-- Called white, blue and silver based on their wrapping paper
-  - Footnote: annoyed at this because I couldn't find any images to prove this
-  - Literal translation ("shiro" white, "ao" blue, "gin" silver", "san" three, "gami" paper)
-  - Ginsan comes from Gingami #3
+Paper steels are produced by [Proterial Ltd](https://www.proterial.com/e/)., formerly known as Hitachi Metals, and make up most of the steel used for Japanese knives. The most relevant ones are known as white, blue and silver steel. Their names are based on the ingot wrapping paper [^paper]:
+
+[^paper]: This fact gets repeated all over the internet. This made it even more frustrating that I wasn't able to find a single image portraying some sort of colored paper.
+
+- Shirogami (白紙; from shiro "white" and gami "paper") -> white paper steel
+- Aogami (青紙; from ao "blue" and gami "paper") -> blue paper steel
+- Gingami (銀紙; from gin "silver" and gami "paper") -> silver paper steel
+- Ginsan (銀三; from gin "silver" and san "three") -> silver paper steel #3
+
+Each steel comes in multiple variants with different compositions:
 
 | Steel                                                                            |   C   |  Si   |   P   |   S   |  Mn   |   V   |   W   |  Cr   |
 | -------------------------------------------------------------------------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -107,7 +97,7 @@ https://www.huyett.com/blog/alloy-steel-properties-and-types
 | [Ginsan](https://zknives.com/knives/steels/steelgraph.php?nm=ginsan)             | 1.025 | 0.35  | 0.03  | 0.02  |  0.8  |       |       | 13.75 |
 {.font-feature-tnum}
 
-- Comparison chart with edge retention and hardness
+![](img/chart.svg "Combined interstitial and substitutional alloy")
 
 - Benefits and drawbacks of each steel
   - W2 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/white-steel-2

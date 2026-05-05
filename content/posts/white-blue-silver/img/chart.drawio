@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="_lOySAdSVhc2C0VtrSfN">
+    <mxGraphModel dx="822" dy="441" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=none;fillColor=light-dark(#DFE1E6,#DFE1E6);" value="&lt;font style=&quot;color: light-dark(rgb(36, 41, 51), rgb(36, 41, 51));&quot; face=&quot;Inter&quot;&gt;&lt;b style=&quot;&quot;&gt;Shirogami #2&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="80" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=none;fillColor=light-dark(#DFE1E6,#DFE1E6);" value="&lt;font style=&quot;color: light-dark(rgb(36, 41, 51), rgb(36, 41, 51));&quot; face=&quot;Inter&quot;&gt;&lt;b style=&quot;&quot;&gt;Shirogami #1&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=none;fillColor=light-dark(#608FB3,#608FB3);fontFamily=Inter;" value="&lt;font style=&quot;color: light-dark(rgb(36, 41, 51), rgb(36, 41, 51));&quot;&gt;&lt;b style=&quot;&quot;&gt;Aogami #2&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="230" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=none;fillColor=light-dark(#608FB3,#608FB3);" value="&lt;font style=&quot;color: light-dark(rgb(36, 41, 51), rgb(36, 41, 51));&quot; face=&quot;Inter&quot;&gt;&lt;b style=&quot;&quot;&gt;Aogami #1&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="230" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;strokeColor=none;fillColor=light-dark(#608FB3,#608FB3);" value="&lt;font style=&quot;color: light-dark(rgb(36, 41, 51), rgb(36, 41, 51));&quot; face=&quot;Inter&quot;&gt;&lt;b style=&quot;&quot;&gt;Aogami Super&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="380" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-6" edge="1" parent="1" style="endArrow=blockThin;startArrow=none;html=1;rounded=0;curved=0;strokeColor=light-dark(#DFE1E6,#DFE1E6);startFill=0;endFill=1;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="290" as="sourcePoint" />
+            <mxPoint x="520" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-7" edge="1" parent="1" style="endArrow=blockThin;startArrow=none;html=1;rounded=0;curved=0;strokeColor=light-dark(#DFE1E6,#DFE1E6);startFill=0;endFill=1;strokeWidth=2;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="290" as="sourcePoint" />
+            <mxPoint x="68.75" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inbJTNKKQxgdgoLQqk4k-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;color: light-dark(rgb(223, 225, 230), rgb(223, 225, 230));&quot; face=&quot;Inter&quot;&gt;&lt;b style=&quot;&quot;&gt;Toughness&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="440" x="80" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="i29gfrtP5uMXYV0s1F_p-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-90;" value="&lt;font style=&quot;color: light-dark(rgb(223, 225, 230), rgb(223, 225, 230));&quot; face=&quot;Inter&quot;&gt;&lt;b style=&quot;&quot;&gt;Hardness&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="172" x="-32" y="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
