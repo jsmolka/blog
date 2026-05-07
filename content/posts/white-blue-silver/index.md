@@ -1,7 +1,7 @@
 ---
 title: "White / Blue / Silver"
 tags: ["knives"]
-date: 2026-05-07T21:00:05+01:00
+date: 2026-05-07T19:11:03+02:00
 type: post
 ---
 I went down the Japanese knife rabbit hole over Christmas. Getting into something new can feel quite overwhelming, especially for me. I tend to skip the Dunning-Kruger effect and immediately notice that I know nothing about the topic and that it is infinitely complex. Even in this post, there are some details I skip because they are too difficult for my liking [^carbides].
