@@ -11,7 +11,7 @@
     }
   }
 
-  :not(h1, h2, h3) > a {
+  a:not(:is(h1, h2, h3) a) {
     font-weight: 700;
     text-decoration: underline;
     text-decoration-color: var(--shade-5);
@@ -26,9 +26,10 @@
   svg,
   table {
     width: 100%;
+    height: auto;
   }
 
-  b,
+  b:not(svg b),
   th,
   strong {
     color: var(--shade-1);
