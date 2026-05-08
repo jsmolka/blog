@@ -113,7 +113,7 @@ https://global.ichimonji.co.jp/blogs/japanese-knife-steel/blue-steel-super
 https://global.ichimonji.co.jp/blogs/japanese-knife-steel/silver-steel-3
  -->
 
-The differences in hardness are caused by the carbon content. More carbon results in a steel with higher hardness, which in knives translates to longer edge retention and the ability to take a sharp edge. The increased toughness of blue steels is caused by the addition of rare materials like tungsten and vanadium, which also drives up the price. High toughness prevents chipping but also makes the knife harder to sharpen.
+The differences in hardness are caused by the carbon content. More carbon results in a steel with higher hardness, which in knives translates to longer edge retention and the ability to take a sharp edge. The increased toughness of blue steels is caused by the addition of rare materials like tungsten and vanadium, which drives up the price. High toughness prevents chipping but also makes the knife harder to sharpen.
 
 So choosing a knife steel comes down to two questions:
 
