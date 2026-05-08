@@ -100,7 +100,7 @@ Each steel comes in multiple variants with different compositions:
 | [Ginsan](https://zknives.com/knives/steels/steelgraph.php?nm=ginsan)             | 1.025 | 0.35  | 0.03  | 0.02  |  0.8  |       |       | 13.75 |
 {.font-feature-tnum}
 
-The composition influences the steel's behavior:
+The composition influences the steel's properties:
 
 ![](img/chart.svg "Comparison of white and blue paper steel")
 
