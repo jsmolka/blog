@@ -4,9 +4,9 @@ tags: ["starset", "music"]
 date: 2025-07-20T19:55:00+02:00
 type: post
 ---
-> In a restless search for new opportunities and new ways of living<br>
-> The mystery and the promise of distant horizons<br>
-> Always have called men forward<br>
+> In a restless search for new opportunities and new ways of living\
+> The mystery and the promise of distant horizons\
+> Always have called men forward\
 >
 > <cite>[Where The Skies End intro](https://www.youtube.com/watch?v=1DHY4cgQwE8), quote from [To New Horizons](https://www.youtube.com/watch?v=tAz4R6F0aaY&t=55s)</cite>
 
@@ -168,30 +168,30 @@ His cries, swallowed by the sea
 
 The song culminates in probably the best bridge of the album:
 
-> I wanna become lucid<br>
-> Clear, just like a window<br>
-> I tried so hard to open up<br>
-> And show you what's behind it<br>
-> But you didn't need to hear me<br>
-> 'Cause you were supraliminal<br>
-> Knew me without an uttered word<br>
-> You always seemed to know me<br>
+> I wanna become lucid\
+> Clear, just like a window\
+> I tried so hard to open up\
+> And show you what's behind it\
+> But you didn't need to hear me\
+> 'Cause you were supraliminal\
+> Knew me without an uttered word\
+> You always seemed to know me\
 >
-> An ethereal feeling<br>
-> That I cannot describe<br>
-> The way that I feel you<br>
-> Something that I cannot hide<br>
-> How you illuminate<br>
-> In a profound way, I feel your space<br>
-> I can't explain this place you're taking me<br>
+> An ethereal feeling\
+> That I cannot describe\
+> The way that I feel you\
+> Something that I cannot hide\
+> How you illuminate\
+> In a profound way, I feel your space\
+> I can't explain this place you're taking me\
 
 Its spoken outro foreshadows the next song:
 
-> And he told him<br>
-> "Beware, do not fly too close to the sun<br>
-> The blaze will surely melt those wings."<br>
-> But alas, he fell<br>
-> His cries, swallowed by the sea<br>
+> And he told him\
+> "Beware, do not fly too close to the sun\
+> The blaze will surely melt those wings."\
+> But alas, he fell\
+> His cries, swallowed by the sea\
 
 ![](img/symbol-otherworldly.png)
 {.w-25}
@@ -253,40 +253,40 @@ You'll never go through them
 -->
 [An energetic song](https://www.youtube.com/watch?v=ZfiSaBxGB9E) about a figure in Greek mythology. Icarus and his father Daedalus were imprisoned by King Minos and constructed wings from beeswax and bird feathers to escape. Daedalus warned his son to _not fly too close to the sun_, but he fell from the sky, plunged into the sea, and drowned. The lyrics explore the character flaws of Icarus, which led to his eventual downfall --- pun intended.
 
-> Fell out of the air and you broke your wings<br>
-> Like you're doing every other time<br>
-> Made a new pair out of broken things<br>
-> To give it all another try<br>
+> Fell out of the air and you broke your wings\
+> Like you're doing every other time\
+> Made a new pair out of broken things\
+> To give it all another try\
 
 The song starts with Icarus falling from the sky yet again, but he is determined to keep trying. He builds a _new pair_ of wings from _broken things_, hinting that he himself might be broken and that, without fixing himself first, he will never be able to achieve what he is striving for.
 
-> And you climb right up to the highest peaks<br>
-> And reach out to the edge of the world you seek<br>
-> Afraid of heights so you don't believe<br>
-> You could ever be good enough<br>
+> And you climb right up to the highest peaks\
+> And reach out to the edge of the world you seek\
+> Afraid of heights so you don't believe\
+> You could ever be good enough\
 
 Filled with false pride, he is unwilling to learn and faces the hardest challenges without a solid foundation. He feels compelled to seek greatness but is simultaneously afraid of it, feeling inherently unworthy.
 
-> Head in the clouds<br>
-> Buried your feet in thе ground<br>
-> Telling yourself it's the world that holds you down<br>
+> Head in the clouds\
+> Buried your feet in thе ground\
+> Telling yourself it's the world that holds you down\
 
 He stands on the _highest peaks_ with his _head in the clouds_, while simultaneously burring his _feet in the ground_. He tells himself that the weight of the whole world is holding him back instead of recognizing that it is he himself.
 
-> But you've got your chin held high<br>
-> And your chest pumped up<br>
-> The replica of a runner-up<br>
-> You were made for skies but you called your bluff<br>
-> Now you'll never be good enough<br>
+> But you've got your chin held high\
+> And your chest pumped up\
+> The replica of a runner-up\
+> You were made for skies but you called your bluff\
+> Now you'll never be good enough\
 
 He acts tough and confident because he is Icarus, the son of master craftsman Daedalus. He was _made for skies_, but doesn't even believe it himself. Instead, he will always be the _replica of a runner-up_, destined to be second, and _never be good enough_.
 
-> Go on then, Icarus, take your turn<br>
-> You always fly right up until it burns<br>
-> Your wings you never could change<br>
-> Always the victim, into the flames again<br>
-> Go on then, Icarus, take your turn<br>
-> You'll never go through thеm<br>
+> Go on then, Icarus, take your turn\
+> You always fly right up until it burns\
+> Your wings you never could change\
+> Always the victim, into the flames again\
+> Go on then, Icarus, take your turn\
+> You'll never go through thеm\
 
 He refuses to change and repeats the same mistakes over and over again but blames the world around him for his failure --- _always the victim_.
 
@@ -344,39 +344,39 @@ Like watching the Earth rise
 - ![](img/earthrise.jpg "[Earthrise by Willam Anders](https://en.wikipedia.org/wiki/Earthrise)")
 {.overflow}
 
-> I push my feet to the edge<br>
-> I look and I face my world<br>
-> This lonely scene, I take it in<br>
-> It's hard to say where all of it begins and I end<br>
+> I push my feet to the edge\
+> I look and I face my world\
+> This lonely scene, I take it in\
+> It's hard to say where all of it begins and I end\
 
 The song starts with the description of a lonely person. It's a beautiful metaphor given the context of the Earthrise image. The feeling of loneliness emerging in oneself while standing on the moon's desolate surface and looking back at Earth is probably something most people can imagine.
 
-> I walk these streets of loneliness<br>
-> A tranquil sea on all horizons<br>
-> This empty scene of might-have-beens<br>
-> I stare at starless skies that call to me and I still wish<br>
+> I walk these streets of loneliness\
+> A tranquil sea on all horizons\
+> This empty scene of might-have-beens\
+> I stare at starless skies that call to me and I still wish\
 
 The narrator is surrounded by deserted streets and a _tranquil sea on all horizons_, trapped inside an _empty scene_ of endless, unmaterialized possibilities. Staring at and being called upon by _starless skies_ implies loneliness and hopelessness, but despite that he hasn't given up.
 
-> And I waited for the sky to change but, oh, it never did<br>
-> And I almost dropped my head and lost my faith<br>
-> Then I saw you from a distance, you were worlds away<br>
-> Oh, but you had me from the vision, I never looked away again<br>
+> And I waited for the sky to change but, oh, it never did\
+> And I almost dropped my head and lost my faith\
+> Then I saw you from a distance, you were worlds away\
+> Oh, but you had me from the vision, I never looked away again\
 
 He has almost lost faith, but ends up falling in love with a person _worlds away_. This could either be meant literally, as in "distance," or metaphorically, as in "out of his league".
 
-> I still fall for you like suns do for skies<br>
-> Cerulean pouring in from your eyes<br>
-> Just a hollow moon that you colorize<br>
-> So powerful, I feel so small but so alive<br>
-> Like watching the Earth rise<br>
+> I still fall for you like suns do for skies\
+> Cerulean pouring in from your eyes\
+> Just a hollow moon that you colorize\
+> So powerful, I feel so small but so alive\
+> Like watching the Earth rise\
 
 The chorus opens with a beautiful wordplay on falling in love and sunsets. It then continues mentioning the [hollow moon](https://en.wikipedia.org/wiki/Hollow_Moon), a pseudoscientific hypotheses by sci-fi writer [H. G. Wells](https://en.wikipedia.org/wiki/H._G._Wells) about the moon's interior being inhabited by aliens. It might be a metaphor for the narrator feeling empty and hollow himself. The void is then filled and the grey moon colorized by [cerulean](https://en.wikipedia.org/wiki/Cerulean), a sky blue color, possibly referring to the eye color of this love interest.
 
-> They said that we both were too different<br>
-> That all of the shine would fade away<br>
-> But I wish that I never listened<br>
-> 'Cause you pulled me through the grey<br>
+> They said that we both were too different\
+> That all of the shine would fade away\
+> But I wish that I never listened\
+> 'Cause you pulled me through the grey\
 
 The narrator regrets listening to others calling the relationship impossible and doomed to fail because it was the only thing filling his grey, monotonous life with color and worth living.
 
@@ -459,46 +459,46 @@ I disappear, disappear
 -->
 [Disappear](https://www.youtube.com/watch?v=m-8n9YyfBB8) is a hauntingly sad song and explores the end of a relationship.
 
-> So how long were you numb?<br>
-> 'Cause it was cold as ice<br>
-> And I keep saying that I'm okay with it<br>
-> But that's another lie<br>
-> The truth is I've been dying slowly<br>
+> So how long were you numb?\
+> 'Cause it was cold as ice\
+> And I keep saying that I'm okay with it\
+> But that's another lie\
+> The truth is I've been dying slowly\
 
 The narrator is finding himself in a one-sided relationship. His partner doesn't return his affection and instead acts emotionally _numb_ and _cold as ice_. He tricks himself into thinking that this behavior is okay, but knows deep down that it's just _another lie_, which is going to ruin him.
 
-> But no, not you, you just<br>
-> Turned to drift into the night<br>
-> A parting scene of apathy<br>
-> In an instant shift to a<br>
-> Stone heart, paired with empty eyes<br>
-> That stared right through mine<br>
+> But no, not you, you just\
+> Turned to drift into the night\
+> A parting scene of apathy\
+> In an instant shift to a\
+> Stone heart, paired with empty eyes\
+> That stared right through mine\
 
 His partner, on the other hand, is completely indifferent to the whole situation. The loss of love seems to have happened in an _instant_. Their heart turned to stone, and the empty, emotionless eyes stare right through our narrator, not even acknowledging his existence.
 
-> I tried so hard just to<br>
-> Make you feel my pain<br>
-> If you had empathy, you'd see I'd changed<br>
-> But like a ghost in your presence, I dissipate<br>
-> I tried it all, it's all in vain<br>
+> I tried so hard just to\
+> Make you feel my pain\
+> If you had empathy, you'd see I'd changed\
+> But like a ghost in your presence, I dissipate\
+> I tried it all, it's all in vain\
 
 The partner is described as having no empathy. The narrator tried to rekindle their relationship, but ended up failed. _If you had empathy, you'd see I'd changed_ hints that he might be at fault, but this theory isn't explored further.
 
-> Sometimes, I still slip<br>
-> And start to question if<br>
-> It was only in my mind<br>
-> It's hard to come to grips<br>
-> That you still exist<br>
-> When it feels just like you died<br>
+> Sometimes, I still slip\
+> And start to question if\
+> It was only in my mind\
+> It's hard to come to grips\
+> That you still exist\
+> When it feels just like you died\
 
 The narrator is losing his mind. The whole situation doesn't feel real to him. The pain is so great that it feels like mourning a dead person, despite his partner still being alive.
 
-> So come one and all<br>
-> Step right up and I'll<br>
-> Perform a trick before your eyes<br>
-> I'll evaporate<br>
-> Gone without a trace<br>
-> Off the radar, out of sight<br>
+> So come one and all\
+> Step right up and I'll\
+> Perform a trick before your eyes\
+> I'll evaporate\
+> Gone without a trace\
+> Off the radar, out of sight\
 
 The ended relationship is affecting the narrator horrendously and drives him to consider suicide. The song ends with the words _I disappear, disappear_ and leaves little room for interpretation. After that, the music goes quiet for while and is then followed by the only [through-composed outro of the album](https://www.youtube.com/watch?v=m-8n9YyfBB8&t=280s). Its adventurous sound gives hope for a better ending to the narrator's story.
 
@@ -562,35 +562,35 @@ This endless endeavor
 -->
 [This Endless Endeavor](https://www.youtube.com/watch?v=mcL8i_895QI) starts out strong with a memorable guitar riff and heavy drums. The energy quickly subsides, and the song continues to alternate between calm, saddening verses and a haunting chorus. The lyrics explore the loss, death or otherwise, of an important individual, possibly continuing the narrative of [Disappear](#disappear).
 
-> I separate<br>
-> Into the arms of the broken<br>
-> Accept this fate<br>
-> Exposed to the world in the open<br>
-> To drift from all I know<br>
+> I separate\
+> Into the arms of the broken\
+> Accept this fate\
+> Exposed to the world in the open\
+> To drift from all I know\
 
 The first verse describes the moments following a tragic event. The narrator is emotionally torn apart, separated, by what happened and resigns to the pain by falling into the _arms of the broken_. He accepts his fate but feels vulnerable because he is exposed to the whole world, out in the open for everyone to see. This causes him to drift away from friends and family, reinforcing the feeling of loss, disconnection and isolation.
 
-> Lonely wade<br>
-> Out to the depths of an ocean<br>
-> A castaway<br>
-> I suffer the death of emotion<br>
-> Between the waves of woe<br>
+> Lonely wade\
+> Out to the depths of an ocean\
+> A castaway\
+> I suffer the death of emotion\
+> Between the waves of woe\
 
 The isolation overwhelms our narrator. He goes on a _lonely wade_ out to the ocean and ends up shipwrecked. Emotionally numb with only the _waves of woe_ crashing against the broken remains of the ship that he used to call himself.
 
-> I get lost in the world sometimes<br>
-> Star-crossed, looking out for a light but it won't shine<br>
-> So, North Star come, North Star come<br>
-> In the wake of my own confines<br>
-> I will wait for the day you call through the skylines<br>
-> And I'll be waiting, I'll be waiting<br>
+> I get lost in the world sometimes\
+> Star-crossed, looking out for a light but it won't shine\
+> So, North Star come, North Star come\
+> In the wake of my own confines\
+> I will wait for the day you call through the skylines\
+> And I'll be waiting, I'll be waiting\
 
 He is _lost in the world_. _Star-crossed_, destined to fail, and _looking out for a light_. A _North Star_ to guide him through the rest of his life. Despite the chances being slim, he is filled with hope to one day reconnect with his significant other once again.
 
-> (Oh-Woah, Oh-Woah) I'm gone without you<br>
-> (Oh-Woah, Oh-Woah) Could it be forever?<br>
-> (Oh-Woah, Oh-Woah) Go on without you<br>
-> (Oh-Woah, Oh-Woah) This endless endeavor<br>
+> (Oh-Woah, Oh-Woah) I'm gone without you\
+> (Oh-Woah, Oh-Woah) Could it be forever?\
+> (Oh-Woah, Oh-Woah) Go on without you\
+> (Oh-Woah, Oh-Woah) This endless endeavor\
 
 The narrator doesn't feel whole without his partner and fears that he has to go on _this endless endeavor_ alone.
 
@@ -659,44 +659,44 @@ Something wicked this way comes
 -->
 The album ends with [Something Wicked](https://www.youtube.com/watch?v=CDq5TO05NcQ). Previous outro songs tended to be on the quieter side, and this one is no exception until its climax. It begins calm with just a piano and then layers in strings and other instruments over the next verses. It doesn't adhere to the ABABCB song structure and instead feels like a carefully crafted narrative of a person slowly being overwhelmed by an unknown evil.
 
-> The crucifix in my hand's a lie<br>
-> 'Cause nothing ever kills you<br>
-> I've watered down the pain 'til the well went dry<br>
-> So pray for rain<br>
+> The crucifix in my hand's a lie\
+> 'Cause nothing ever kills you\
+> I've watered down the pain 'til the well went dry\
+> So pray for rain\
 
 The lyrics are littered with biblical references. The narrator describes the thing inside of him as so profoundly evil, that even a _crucifix_ can't kill it. He tried everything in his power to stop it, but had to resign eventually. _So pray for rain_ is a warning that only a divine intervention can prevent him from losing control and a sign of things to come.
 
-> And it clawеd<br>
-> Back in the world again<br>
-> Here for a nеw revenge<br>
-> An enemy I can't condemn<br>
+> And it clawеd\
+> Back in the world again\
+> Here for a nеw revenge\
+> An enemy I can't condemn\
 
 It isn't the first confrontation between the two. The thing is coming back for _a new revenge_, having lost the fight once before. The narrator is unsure how to feel about it. On one hand, he describes it as an enemy, something he hates and doesn't want in his life. On the other hand, he _can't condemn_ it, feeling like its existence is justified --- a natural part of himself.
 
 As we enter the bridge, the song turns from calm to violent:
 
-> Out of myself, I can feel it crawling<br>
-> How can I tell if this is the ending?<br>
-> Out of myself, it began evolving<br>
-> I am not well, repent, I'm guilty<br>
-> How can I tell if the sky is falling?<br>
-> How can I fix what there is no mending?<br>
-> How can I tell if I am not well?<br>
-> I've lost myself, I have come undone<br>
+> Out of myself, I can feel it crawling\
+> How can I tell if this is the ending?\
+> Out of myself, it began evolving\
+> I am not well, repent, I'm guilty\
+> How can I tell if the sky is falling?\
+> How can I fix what there is no mending?\
+> How can I tell if I am not well?\
+> I've lost myself, I have come undone\
 >
-> And all of the horses<br>
-> And all of the men<br>
-> Won't put it back in place<br>
-> Or bury it where it had been<br>
-> When all of the forces<br>
-> Have been overrun<br>
-> You'll whisper, serpent tongue<br>
-> What you fear you have become<br>
+> And all of the horses\
+> And all of the men\
+> Won't put it back in place\
+> Or bury it where it had been\
+> When all of the forces\
+> Have been overrun\
+> You'll whisper, serpent tongue\
+> What you fear you have become\
 
 After that, the silence returns and a piano starts playing. The narrator has lost the fight with his inner darkness. The album concludes with the whispered words _Something wicked this way comes_, a theme that has been referenced in a [newer single](https://www.youtube.com/watch?v=E2uwT_SctB0):
 
-> Lock your windows, close your doors and hide<br>
-> Something wicked has got inside<br>
+> Lock your windows, close your doors and hide\
+> Something wicked has got inside\
 
 ![](img/symbol-something-wicked.png)
 {.w-25}
@@ -727,12 +727,12 @@ Finally, it's out of my system. This was a hard post to write, especially given 
 
 ---
 
-> In a search that has continued for centuries<br>
-> Some far distant view<br>
-> With this promise of the unseen<br>
-> And it's promise of the unknown<br>
-> Has forever fathered the impulse<br>
-> To seek for new things in new places<br>
-> New horizons<br>
+> In a search that has continued for centuries\
+> Some far distant view\
+> With this promise of the unseen\
+> And it's promise of the unknown\
+> Has forever fathered the impulse\
+> To seek for new things in new places\
+> New horizons\
 >
 > <cite>[Where The Skies End outro](https://www.youtube.com/watch?v=1DHY4cgQwE8&t=277s), quote from [To New Horizons](https://www.youtube.com/watch?v=tAz4R6F0aaY&t=108s)</cite>
