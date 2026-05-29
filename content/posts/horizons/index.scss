@@ -1,4 +1,4 @@
-@import 'utils';
+@use 'utils' as *;
 
 :root {
   --horizons-1: #5a1335;
@@ -10,14 +10,14 @@
   --horizons-7: #0f1466;
   --horizons-8: #04040e;
 
-  --shade-1: #{hsv(240, 0%, 95%)};
-  --shade-2: #{hsv(240, 0%, 90%)};
-  --shade-3: #{hsv(240, 20%, 55%)};
-  --shade-4: #{hsv(240, 40%, 45%)};
-  --shade-5: #{hsv(240, 40%, 35%)};
-  --shade-6: #{hsv(240, 40%, 30%)};
-  --shade-7: #{hsv(240, 40%, 20%)};
-  --shade-8: #{hsv(240, 70%, 5%)};
+  --shade-1: #f2f2f2;
+  --shade-2: #e6e6e6;
+  --shade-3: #70708c;
+  --shade-4: #454573;
+  --shade-5: #363659;
+  --shade-6: #2e2e4d;
+  --shade-7: #1f1f33;
+  --shade-8: #04040d;
 }
 
 ::selection {

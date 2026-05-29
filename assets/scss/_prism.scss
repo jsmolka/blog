@@ -1,5 +1,5 @@
-@import 'hugo:vars';
-@import 'utils';
+@use 'hugo:vars' as *;
+@use 'utils' as *;
 
 @font-face {
   font-family: 'JetBrains Mono';

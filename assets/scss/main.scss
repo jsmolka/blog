@@ -1,10 +1,10 @@
-@import 'reset';
-@import 'base';
+@use 'reset' as *;
+@use 'base' as *;
 
-@import 'audio';
-@import 'list';
-@import 'markdown';
-@import 'navigation';
-@import 'post';
-@import 'prism';
-@import 'toc';
+@use 'audio' as *;
+@use 'list' as *;
+@use 'markdown' as *;
+@use 'navigation' as *;
+@use 'post' as *;
+@use 'prism' as *;
+@use 'toc' as *;

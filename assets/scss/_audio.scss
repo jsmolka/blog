@@ -1,4 +1,4 @@
-@import 'utils';
+@use 'utils' as *;
 
 x-audio {
   display: flex;

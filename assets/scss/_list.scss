@@ -1,3 +1,5 @@
+@use 'utils' as *;
+
 .list {
   display: flex;
   flex-direction: column;

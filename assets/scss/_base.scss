@@ -1,5 +1,5 @@
-@import 'hugo:vars';
-@import 'utils';
+@use 'hugo:vars' as *;
+@use 'utils' as *;
 
 @font-face {
   font-family: 'Inter';
@@ -24,17 +24,17 @@
   --text-xl: 1.6rem;
   --rounded: #{spacing(0.5)};
 
-  --shade-1: #{hsv(220, 3%, 95%)};
-  --shade-2: #{hsv(220, 3%, 90%)};
-  --shade-3: #{hsv(220, 29%, 50%)};
-  --shade-4: #{hsv(220, 29%, 40%)};
-  --shade-5: #{hsv(220, 29%, 35%)};
-  --shade-6: #{hsv(220, 29%, 30%)};
-  --shade-7: #{hsv(220, 29%, 25%)};
-  --shade-8: #{hsv(220, 29%, 20%)};
-  --brand-1: #{hsv(206, 46%, 80%)};
-  --brand-2: #{hsv(206, 46%, 75%)};
-  --brand-3: #{hsv(206, 46%, 70%)};
+  --shade-1: #ebedf2; /* hsv(220,  3%, 95%) */
+  --shade-2: #dfe1e6; /* hsv(220,  3%, 90%) */
+  --shade-3: #5b6780; /* hsv(220, 29%, 50%) */
+  --shade-4: #485266; /* hsv(220, 29%, 40%) */
+  --shade-5: #3f4859; /* hsv(220, 29%, 35%) */
+  --shade-6: #363e4d; /* hsv(220, 29%, 30%) */
+  --shade-7: #2d3340; /* hsv(220, 29%, 25%) */
+  --shade-8: #242933; /* hsv(220, 29%, 20%) */
+  --brand-1: #6ea3cc; /* hsv(206, 46%, 80%) */
+  --brand-2: #6799bf; /* hsv(206, 46%, 75%) */
+  --brand-3: #608fb3; /* hsv(206, 46%, 70%) */
 }
 
 body {
