@@ -37,7 +37,7 @@
   blockquote {
     position: relative;
     max-width: fit-content;
-    padding: 1rem 3;
+    padding: 1rem 3rem;
     font-style: italic;
 
     &::before,
@@ -53,7 +53,7 @@
 
     &::before {
       content: '“';
-      top: -2.5rem;
+      top: -0.75rem;
       left: -0.5rem;
     }
 
@@ -104,7 +104,7 @@
   }
 
   :is(ul, ol):not([class]) {
-    margin-left: 2.75;
+    margin-left: 2.75rem;
 
     @media screen and (max-width: 45rem) {
       margin-left: 1rem;
