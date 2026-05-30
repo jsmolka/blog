@@ -1,5 +1,3 @@
-@use 'utils' as *;
-
 :root {
   --horizons-1: #5a1335;
   --horizons-2: #953564;
@@ -26,7 +24,7 @@
 }
 
 body {
-  background-image: url('/posts/horizons/img/noise.png');
+  /* background-image: url('/posts/horizons/img/noise.png'); */
 }
 
 h1,
@@ -43,7 +41,7 @@ h3 {
   font-weight: 500;
   font-display: block;
   font-style: normal;
-  src: url('fonts/axion-rnd.woff') format('woff2');
+  /* src: url('fonts/axion-rnd.woff') format('woff2'); */
 }
 
 .font-axion-rnd {
@@ -53,7 +51,7 @@ h3 {
 .markdown .symbols {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: spacing(2);
+  gap: 0.5rem;
 
   figcaption {
     overflow: hidden;

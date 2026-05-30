@@ -1,12 +1,9 @@
-@use 'hugo:vars' as *;
-@use 'utils' as *;
-
 @font-face {
   font-family: 'JetBrains Mono';
   font-weight: 100 800;
   font-display: block;
   font-style: normal;
-  src: url($jetbrains-mono) format('woff2');
+  src: url('/fonts/jetbrains-mono.woff2') format('woff2');
 }
 
 @font-face {
@@ -14,7 +11,7 @@
   font-weight: 100 800;
   font-display: block;
   font-style: italic;
-  src: url($jetbrains-mono-italic) format('woff2');
+  src: url('/fonts/jetbrains-mono-italic.woff2') format('woff2');
 }
 
 pre,
@@ -26,19 +23,19 @@ code {
 }
 
 pre {
-  padding: spacing(2) spacing(3);
+  padding: 0.5rem 0.75rem;
   background-color: var(--shade-7);
   overflow-x: auto;
   white-space: pre;
 }
 
 :not(pre) > code {
-  padding: spacing(0.5) spacing(1.5);
+  padding: 0.125rem 0.375rem;
   background-color: var(--shade-6);
 }
 
-// Workaround for background culling
-// https://stackoverflow.com/a/8513330
+/* Workaround for background culling */
+/* https://stackoverflow.com/a/8513330 */
 code[class*='language-'] {
   min-width: 100%;
   float: left;
@@ -102,11 +99,11 @@ code[class*='language-'] {
   color: inherit;
 
   & > :first-child {
-    margin-left: spacing(3);
+    margin-left: 0.75rem;
   }
 
   & > :last-child {
-    margin-right: spacing(3);
+    margin-right: 0.75rem;
   }
 }
 

@@ -1,19 +1,11 @@
-@use 'utils' as *;
-
 .toc {
   position: absolute;
   top: 0;
-  left: calc(50% + (#{$content} / 2));
+  left: calc(50% + var(--content) / 2);
   height: 100%;
 }
 
-@include narrow-toc {
-  .toc {
-    display: none;
-  }
-}
-
-@media print {
+@media print, screen and (max-width: (45rem + 2 * 15rem + 1rem)) {
   .toc {
     display: none;
   }
@@ -21,10 +13,10 @@
 
 #TableOfContents {
   position: sticky;
-  top: spacing(8);
-  width: $content-toc;
-  padding-left: spacing(8);
-  padding-right: spacing(4);
+  top: 2rem;
+  width: var(--content-toc);
+  padding-left: 2rem;
+  padding-right: 1rem;
 
   a {
     position: relative;
@@ -32,7 +24,7 @@
     color: transparent;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-indent: spacing(6);
+    text-indent: 1.5rem;
     white-space: nowrap;
 
     &::before {
@@ -40,7 +32,7 @@
       position: absolute;
       top: 50%;
       left: 0;
-      width: spacing(12);
+      width: 3;
       height: 2px;
       background-color: var(--shade-7);
     }
@@ -49,7 +41,7 @@
       color: var(--shade-2);
 
       &::before {
-        width: spacing(4);
+        width: 1rem;
         background-color: var(--shade-4);
       }
     }

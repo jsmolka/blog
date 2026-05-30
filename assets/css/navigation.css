@@ -1,30 +1,28 @@
-@use 'utils' as *;
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: spacing(8);
+  gap: 2rem;
   width: 100%;
-  max-width: $content;
+  max-width: var(--content);
   margin: 0 auto;
-  padding: spacing(4);
+  padding: 1rem;
   color: var(--shade-1);
 
   ul {
     display: flex;
-    gap: spacing(8);
+    gap: 2rem;
     font-weight: 500;
   }
 }
 
 footer {
   margin: 0 auto;
-  padding: spacing(8) spacing(4);
+  padding: 2rem 1rem;
   font-size: var(--text-sm);
 
   ul {
     display: flex;
-    gap: spacing(6);
+    gap: 1.5rem;
   }
 }

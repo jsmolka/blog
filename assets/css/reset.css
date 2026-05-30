@@ -1,4 +1,4 @@
-// Based on https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css
+/* Based on https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css */
 
 *,
 ::before,
@@ -29,8 +29,8 @@ button {
   color: inherit;
   background-color: transparent;
   background-image: none;
-  font: inherit;
   border: none;
+  font: inherit;
   cursor: pointer;
   appearance: button;
 }

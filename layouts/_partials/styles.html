@@ -5,12 +5,8 @@
   {{ $vars = $vars | merge (dict . $link) }}
 {{ end }}
 
-{{ with resources.Get "scss/main.scss" }}
-  {{ $style := . | css.Sass (dict
-    "transpiler" "dartsass"
-    "targetPath" "main.css"
-    "vars" $vars)
-  }}
+{{ with resources.Get "css/main.css" }}
+  {{ $style := . | css.Build (dict "targetPath" "main.css") }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
   {{ end }}
@@ -18,13 +14,8 @@
   <link rel="stylesheet" href="{{ $link }}">
 {{ end }}
 
-{{ with .Resources.GetMatch "index.scss" }}
-  {{ $style := . | css.Sass (dict
-    "transpiler" "dartsass"
-    "targetPath" (path.Join (path.Dir .RelPermalink) "index.css")
-    "vars" $vars
-    "includePaths" (slice "assets/scss"))
-  }}
+{{ with .Resources.GetMatch "index.css" }}
+  {{ $style := . | css.Build (dict "targetPath" (path.Join (path.Dir .RelPermalink) "index.css")) }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
   {{ end }}
