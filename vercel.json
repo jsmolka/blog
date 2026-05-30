@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "build": {
     "env": {
       "HUGO_VERSION": "0.162.0"
