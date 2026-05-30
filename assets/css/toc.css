@@ -5,7 +5,7 @@
   height: 100%;
 }
 
-@media print, screen and (max-width: (45rem + 2 * 15rem + 1rem)) {
+@media print, screen and (max-width: calc(45rem + 2 * 15rem + 1rem)) {
   .toc {
     display: none;
   }
