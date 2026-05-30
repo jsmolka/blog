@@ -24,7 +24,7 @@
 }
 
 body {
-  /* background-image: url('/posts/horizons/img/noise.png'); */
+  background-image: url('./content/posts/horizons/img/noise.png');
 }
 
 h1,
@@ -41,7 +41,7 @@ h3 {
   font-weight: 500;
   font-display: block;
   font-style: normal;
-  /* src: url('fonts/axion-rnd.woff') format('woff2'); */
+  src: url('./content/posts/horizons/fonts/axion-rnd.woff') format('woff2');
 }
 
 .font-axion-rnd {
