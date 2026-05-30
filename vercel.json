@@ -1,4 +1,9 @@
 {
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.162.0"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
