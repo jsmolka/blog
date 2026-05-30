@@ -1,14 +1,8 @@
-{{ $vars := dict }}
-{{ range slice "inter" "jetbrains-mono" "jetbrains-mono-italic" }}
-  {{ $font := resources.Get (path.Join "fonts" (add . ".woff2")) }}
-  {{ $link := partial "resource" $font }}
-  {{ $vars = $vars | merge (dict . $link) }}
-{{ end }}
-
 {{ with resources.Get "css/main.css" }}
   {{ $style := . | css.Build (dict "targetPath" "main.css") }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
+    {{ partial "preload" $style.Content }}
   {{ end }}
   {{ $link := partial "resource" $style }}
   <link rel="stylesheet" href="{{ $link }}">
@@ -18,6 +12,7 @@
   {{ $style := . | css.Build (dict "targetPath" (path.Join (path.Dir .RelPermalink) "index.css")) }}
   {{ if hugo.IsProduction }}
     {{ $style = $style | minify }}
+    {{ partial "preload" $style.Content }}
   {{ end }}
   {{ $link := partial "resource" $style }}
   <link rel="stylesheet" href="{{ $link }}">
