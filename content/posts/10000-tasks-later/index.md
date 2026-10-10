@@ -25,7 +25,7 @@ The year of high numbers concludes with a follow-up post to my [2024 Todoist rev
       |   100 |         29.70 |         32.71 |         31.72 |       25.77 |
       |   200 |         60.66 |         78.19 |         71.06 |       69.97 |
       |   300 |        128.09 |        130.58 |        109.47 |      122.71 |
-      {.font-feature-tnum}
+      {.tabular-nums}
       <figcaption>Time needed to duplicate a project</figcaption>
     </figure>
 

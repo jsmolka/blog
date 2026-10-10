@@ -162,7 +162,7 @@ And the resulting [mGBA suite](https://github.com/mgba-emu/suite) coverage compa
 | Multiply long  |           52 |           52 |         52 |         52 |    72 |
 | DMA            |         1048 |         1220 |       1232 |       1136 |  1256 |
 | Edge case      |            1 |            2 |          6 |          1 |    10 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 I was happy to finally have something you could call relatively cycle-accurate. But it came at a cost. Prefetch emulation tanked performance, going from 635 fps in the Pokémon Emerald hometown down to a mere 485 fps. I was shocked, but the issue turned out to be easier to fix than expected. The MSVC optimizer just didn't inline the prefetch code.
 

@@ -76,7 +76,7 @@ The last failing tests are extremely timing sensitive and don't even pass in mGB
 | Timer IRQ      |            0 |           28 |           65 |           65 |    90 |
 | Multiply long  |           52 |           52 |           52 |           52 |    72 |
 | Edge case      |            1 |            1 |            2 |            6 |    10 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 All that being said, passing tests might not translate well into actual game coverage. But it certainly helps and gives us programmers some peace of mind.
 
@@ -122,7 +122,7 @@ It's time to compare the performance across all release versions. I benchmarked 
 | eggvance 0.2 |       619.5 fps |      538.5 fps | 1033.9 fps |
 | eggvance 0.3 |       589.7 fps |      508.9 fps |  813.2 fps |
 | eggvance 1.0 |       550.4 fps |      501.6 fps |  866.6 fps |
-{.font-feature-tnum}
+{.tabular-nums}
 
 The following things can be observed:
 - 0.2 is the fastest

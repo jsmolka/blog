@@ -43,7 +43,7 @@ The recommended carbohydrate intake varies based on exercise duration and intens
 |       2.5--3 |            60 |                90 |      120--150 |
 |         3--6 |            75 |               100 |      120--150 |
 |           >6 |            75 |                90 |            90 |
-{.font-feature-tnum}
+{.tabular-nums}
   <figcaption>
 
   Recommended carbohydrate intake by [Dr. Alex Harrison](https://www.trainerroad.com/forum/t/140g-carbs-per-hour/51650/19)
@@ -81,7 +81,7 @@ Perhaps knowing the [composition of sweat](pdf/sweat-composition.pdf) would have
 | Potassium |                   2--8 |           39.10 |              78--313 |
 | Calcium   |                 0.2--2 |           40.08 |                8--80 |
 | Magnesium |              0.02--0.4 |           24.31 |                1--10 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 The most important mineral to replenish is sodium. This can be done with table salt, which is around 39% sodium, or more exotic options like sodium citrate, which is around 27% sodium. The reason why one should be preferred over the other will be explained in the [chapter on osmolarity](#electrolytes-1).
 
@@ -141,7 +141,7 @@ Osmolality and osmolarity are calculated using `O = c / M * n` [^osmotic-coeffic
 | Sucrose         | C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>            |             342.30 | 1                                                                           |
 | Sodium chloride | NaCl                                                  |              58.44 | 2 (Na<sup>+</sup> + Cl<sup>-</sup>)                                         |
 | Sodium citrate  | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> |             258.07 | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
-{.font-feature-tnum}
+{.tabular-nums}
 
 It is possible to convert between osmolality and osmolarity using `R = L * D`, where:
 
@@ -167,7 +167,7 @@ Here is a table that shows the correlation between the chain length `n` and the 
 |   10 | C<sub>60</sub>H<sub>102</sub>O<sub>51</sub>  |            1639.43 |  10.99 |
 |   15 | C<sub>90</sub>H<sub>152</sub>O<sub>76</sub>  |            2450.13 |   7.35 |
 |   19 | C<sub>114</sub>H<sub>192</sub>O<sub>96</sub> |            3098.69 |   5.81 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 If we assume smaller osmolarities to be superior (foreshadowing), then we would want to go for a maltodextrin with a long chain length/low DE. Unfortunately, it can be quite tricky to find out for consumer-grade products, because they don't need to be labeled and usually aren't. The typical range of commercial maltodextrin I've seen online lies between 5% and 20%.
 
@@ -199,7 +199,7 @@ The first one can be applied universally. Dilute the carbohydrates and electroly
 | 50 g/l maltodextrin (n = 15) + 50 g/l fructose |      20 + 278 = 298 |
 | 50 g/l maltodextrin (n = 19) + 50 g/l fructose |      16 + 278 = 294 |
 | 100 g/l sucrose                                |                 292 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 All solutions have roughly the same osmolarity with a slight advantage for sucrose. As you can see, pure fructose causes most of the osmoles in solution due to its low molar mass. Maltodextrin contributes very little, especially the long-chained version.
 
@@ -213,7 +213,7 @@ The same thing applies when going for a more traditional 2:1 ratio:
 | 33 g/l maltodextrin (n = 10) + 66 g/l sucrose  |      20 + 193 = 213 |
 | 33 g/l maltodextrin (n = 15) + 66 g/l sucrose  |      13 + 193 = 206 |
 | 33 g/l maltodextrin (n = 19) + 66 g/l sucrose  |      11 + 193 = 203 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 Again, all solutions perform roughly the same. The fructose-containing carbohydrate drives most of the osmolarity, while maltodextrin adds next to nothing. Substituting fructose with sucrose seems like a reasonable choice when factoring in cost. The solution's sweetness might differ, but that can be offset with salt and flavorings.
 
@@ -228,7 +228,7 @@ Salts are a little harder to calculate because they dissociate into their ions i
 | Potassium chloride | KCl                                                   |              74.55 | 2 (K<sup>+</sup> + Cl<sup>-</sup>)                                          |
 | Magnesium malate   | C<sub>4</sub>H<sub>4</sub>MgO<sub>5</sub>             |             156.38 | 2 (Mg<sup>2+</sup> + C<sub>4</sub>H<sub>4</sub>O<sub>5</sub><sup>2-</sup>)  |
 | Sodium citrate     | Na<sub>3</sub>C<sub>6</sub>H<sub>5</sub>O<sub>7</sub> |             258.07 | 4 (3 Na<sup>+</sup> + C<sub>6</sub>H<sub>5</sub>O<sub>7</sub><sup>3-</sup>) |
-{.font-feature-tnum}
+{.tabular-nums}
 
 Let's calculate the osmolarity for a realistic sodium requirement of 1500 mg/l:
 
@@ -237,7 +237,7 @@ Let's calculate the osmolarity for a realistic sodium requirement of 1500 mg/l:
 | 3.82 g/l sodium chloride                               |                 132 |
 | 5.00 g/l LMNT (3.85 g/l Na + 0.58 g/l K + 0.58 g/l Mg) |  132 + 15 + 7 = 154 |
 | 5.55 g/l sodium citrate                                |                  86 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 I think the osmolarities are insane. 4 g of sodium chloride (137 mOsm/l) contributes almost as much as 50 g of sucrose (146 mOsm/l). That's because the sodium chloride molecule is small to begin with, and it even has the audacity to dissociate into two ions. Rude. Here the alternative of sodium citrate is clearly superior if you can stand the taste.
 
@@ -264,7 +264,7 @@ Here are some examples of popular soft and sports drinks:
 | Coke        |                  493 |           1.04 |                 513 |
 | Red Bull    |                  601 |           1.04 |                 625 |
 | Fruit juice |                  724 |           1.06 |                 767 |
-{.font-feature-tnum}
+{.tabular-nums}
   <figcaption>
 
   Based on a [study by Mettler et al.](pdf/drink-osmolarities.pdf) and [densities](https://kg-m3.com/)
@@ -299,7 +299,7 @@ It has served me well over the last year. No bonks caused by underfueling or cra
 | [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     |            5.42 |                 108.48 |               1301.76 |
 | [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) |            6.00 |                 120.00 |               1440.00 |
 | [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             |            6.71 |                 134.11 |               1609.37 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 ## Conclusion
 That's it. More than you ever wanted to know about carbohydrates, electrolytes and osmolarity. The key takeaways of this post are:

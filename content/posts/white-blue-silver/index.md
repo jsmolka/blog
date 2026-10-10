@@ -98,7 +98,7 @@ Each steel comes in multiple variants with different compositions:
 | [Aogami #1](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+1)        |  1.3  | 0.15  | 0.025 | 0.004 | 0.25  |       | 1.75  |  0.4  |
 | [Aogami Super](https://zknives.com/knives/steels/steelgraph.php?nm=aogami+super) | 1.45  | 0.15  | 0.025 | 0.004 | 0.25  |  0.4  | 2.25  |  0.4  |
 | [Ginsan](https://zknives.com/knives/steels/steelgraph.php?nm=ginsan)             | 1.025 | 0.35  | 0.03  | 0.02  |  0.8  |       |       | 13.75 |
-{.font-feature-tnum}
+{.tabular-nums}
 
 The composition influences the steel's properties:
 
