@@ -15,7 +15,7 @@ Unfortunately, those sectors not only attract fans. Arenberg forest had to deal 
 
 ## poi
 
-I like to explore the unknown roads around Leipzig, which can be adventurous at times. You tend to get a bit of everything: new, smooth tarmac, patched roads, gravel and sometimes even short cobblestone sections. I enjoy the ones I'd classify between one and three stars but recently hit a two-kilometer stretch of something well above that and swore to myself: **never again**, time to extended [poi](https://poi.smolka.dev/).
+I like to explore the unknown roads around Leipzig, which can be adventurous at times. You tend to get a bit of everything: new, smooth tarmac, patched roads, gravel and sometimes even short cobblestone sections. I enjoy the ones I'd classify between one and three stars but recently hit a two-kilometer stretch of something well above that and swore to myself: **never again**, time to extend [poi](https://poi.smolka.dev/).
 
 ```
 way
