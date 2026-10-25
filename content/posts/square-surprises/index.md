@@ -19,8 +19,8 @@ I like to explore the unknown roads around Leipzig, which can be adventurous at 
 
 ```
 way
-  [highway]
-  [surface~"cobblestone|sett|cobblestone:flattened|unhewn_cobblestone"]
+  ["highway"]
+  ["surface"~"^(cobblestone|sett|cobblestone:flattened|unhewn_cobblestone)$"]
   (area);
 ```
 
@@ -32,4 +32,3 @@ Here is what it looks like for Leipzig [^germany]. Clicking on a road opens a po
 
 - ![](img/leipzig.png "Roads with cobblestone surface in Leipzig")
 {.overflow}
-
