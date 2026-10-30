@@ -1,0 +1,11 @@
+{
+  "name": "main",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "main": "node main.js"
+  },
+  "devDependencies": {
+    "simplify-js": "^1.2.4"
+  }
+}
