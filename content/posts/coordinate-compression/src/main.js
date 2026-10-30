@@ -1,11 +1,12 @@
+import data from './data/1-geometry.json' with { type: 'json' };
 import { writeFileSync } from 'fs';
 import simplify_ from 'simplify-js';
-import data from './data/1-geometry.json' with { type: 'json' };
 
 function simplify(polylines) {
   return polylines.map((polyline) => {
     const degToMetersLat = 110574;
     const degToMetersLng = 111320 * Math.cos(polyline[0][0] * (Math.PI / 180));
+
     return simplify_(
       polyline.map((coordinates) => ({
         x: coordinates[0] * degToMetersLat,
