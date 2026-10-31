@@ -13,7 +13,7 @@ function simplify(polylines) {
         y: coordinates[1] * degToMetersLng,
         coordinates,
       })),
-      1,
+      0.5,
       true,
     ).map(({ coordinates }) => coordinates);
   });

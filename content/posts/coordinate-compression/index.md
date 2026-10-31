@@ -11,4 +11,12 @@ way["highway"]["surface"~"^(gravel|fine_gravel|compacted|pebblestone)$"](area);
 out geom;
 ```
 
-This innocent looking query forced Node.js into its knees. "Cannot create a string longer than `0x1fffffe8` characters" it whispered with its dying breath. It couldn't handle the incoming wave a
+> Cannot create a string longer than `0x1fffffe8` characters
+
+- ![](img/simplify-0.0.png "Tolerance 0")
+- ![](img/simplify-0.5.png "Tolerance 0.5")
+{.fluent}
+
+- ![](img/simplify-1.0.png "Tolerance 1")
+- ![](img/simplify-2.0.png "Tolerance 2")
+{.fluent}
