@@ -291,14 +291,14 @@ I am neither a professional athlete nor an influencer with a nutrition sponsor. 
 
 It has served me well over the last year. No bonks caused by underfueling or cramps caused by electrolyte loss. Is it significantly better or worse than commercial products? Probably not. Are there minor differences? Probably. But if these minor differences are worth the uptick in price is up for you to decide:
 
-| Drink mix                                                                                              | Day (160 g) [€] | Month (20 × 160 g) [€] | Year (240 × 160g) [€] |
-| ------------------------------------------------------------------------------------------------------ | --------------: | ---------------------: | --------------------: |
-| Mine                                                                                                   |            0.34 |                   6.80 |                 81.60 |
-| [HSN Evocarbs 2.0](https://www.hsnstore.eu/brands/sport-series/evocarbs-2-0)                           |            0.93 |                  18.60 |                223.20 |
-| [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 |            3.51 |                  70.20 |                842.40 |
-| [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     |            5.42 |                 108.48 |               1301.76 |
-| [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) |            6.00 |                 120.00 |               1440.00 |
-| [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             |            6.71 |                 134.11 |               1609.37 |
+| Drink mix                                                                                              | Day (160 g) [€] | Month (20 × 160 g) [€] | Year (240 × 160 g) [€] |
+| ------------------------------------------------------------------------------------------------------ | --------------: | ---------------------: | ---------------------: |
+| Mine                                                                                                   |            0.34 |                   6.80 |                  81.60 |
+| [HSN Evocarbs 2.0](https://www.hsnstore.eu/brands/sport-series/evocarbs-2-0)                           |            0.93 |                  18.60 |                 223.20 |
+| [Powerbar IsoActive](https://www.powerbar.eu/de_DE/isoactive/24707502)                                 |            3.51 |                  70.20 |                 842.40 |
+| [MNSTRY Fast Carb](https://mnstry.com/en/collections/topseller/products/fast-carb)                     |            5.42 |                 108.48 |                1301.76 |
+| [SIS Beta Fuel](https://www.scienceinsport.com/eu/shop-sis/go-range/beta-fuel/beta-fuel-80-15-pack-eu) |            6.00 |                 120.00 |                1440.00 |
+| [Maurten Drink Mix 320](https://www.maurten.com/de/products/drink-mix-320)                             |            6.71 |                 134.11 |                1609.37 |
 {.tabular-nums}
 
 ## Conclusion
