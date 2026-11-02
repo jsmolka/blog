@@ -4,13 +4,13 @@ import simplify_ from 'simplify-js';
 
 function simplify(polylines) {
   return polylines.map((polyline) => {
-    const degToMetersLat = 110574;
-    const degToMetersLng = 111320 * Math.cos(polyline[0][0] * (Math.PI / 180));
+    const lngToMeters = 111320 * Math.cos(polyline[0][1] * (Math.PI / 180));
+    const latToMeters = 110574;
 
     return simplify_(
       polyline.map((coordinates) => ({
-        x: coordinates[0] * degToMetersLat,
-        y: coordinates[1] * degToMetersLng,
+        x: coordinates[0] * lngToMeters,
+        y: coordinates[1] * latToMeters,
         coordinates,
       })),
       0.5,
@@ -20,12 +20,11 @@ function simplify(polylines) {
 }
 
 const PRECISION = 5;
+const SCALE = 10 ** PRECISION;
 
 function precision(polylines) {
   return polylines.map((polyline) =>
-    polyline.map((coordinates) =>
-      coordinates.map((coordinate) => Math.round(coordinate * 10 ** PRECISION)),
-    ),
+    polyline.map((coordinates) => coordinates.map((coordinate) => Math.round(coordinate * SCALE))),
   );
 }
 
@@ -69,7 +68,6 @@ function encode(polylines) {
       }
     }
   }
-  out.push(0); // Metadata length
   return Uint8Array.from(out);
 }
 
