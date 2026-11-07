@@ -10,10 +10,9 @@ area["ISO3166-1"="DE"][admin_level=2];
 way["highway"]["surface"~"^(gravel|fine_gravel|compacted|pebblestone)$"](area);
 out skel geom qt;
 ```
+Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js onto its knees. _Cannot create a string longer than `0x1fffffe8` characters_, it whispered with its dying breath. Its internal string length in capped at 536 MB. But this response was 614 MB.
 
-> Cannot create a string longer than `0x1fffffe8` characters
->
-> <cite>Node.js</cite>
+[^gravel]: I hereby use the power granted to me by myself to define what is gravel and what is not. Something the gravel community still struggles with.
 
 ## Simplify
 <!-- https://poi.smolka.dev/#19.98/51.2961833/12.3971305 -->
@@ -52,6 +51,8 @@ function offset(polyline) {
 }
 ```
 
+Ordering the output by quad tile `out qt;` improved compression.
+
 ## Zigzag
 ```js
 function zigzag(polyline) {
@@ -85,6 +86,24 @@ function writeVarint(out, value) {
 | Zigzag    | Convert negative to positive numbers       |    70,296 |
 | Encode    | Encode in a binary format using varints    |    20,783 |
 | Compress  | Compress with deflate                      |    17,994 |
+{.tabular-nums}
+
+Similar compression applied to all data. Vercel static file limit is 100 MB.
+
+| Country     | Cafes | Cemeteries | Cobbles |  Gas | Gravel | Grocers | Water |
+| ----------- | ----: | ---------: | ------: | ---: | -----: | ------: | ----: |
+| Austria     |   126 |         29 |      78 |   26 |  2,880 |      80 |    35 |
+| Belgium     |   111 |         39 |     218 |   23 |    653 |      80 |     6 |
+| Czechia     |    91 |         34 |     232 |   34 |    887 |      98 |     9 |
+| Denmark     |    80 |         17 |      48 |   15 |  1,586 |      41 |     5 |
+| France      |   699 |        277 |     337 |   96 |  5,142 |     461 |   106 |
+| Germany     | 1,103 |        277 |   2,018 |  181 | 17,886 |     586 |    46 |
+| Italy       |   629 |        152 |     807 |  139 |  5,208 |     268 |   267 |
+| Netherlands |   146 |         32 |      43 |   39 |    873 |      87 |    12 |
+| Poland      |   198 |        118 |     377 |   65 |  2,249 |     373 |    10 |
+| Portugal    |   182 |         40 |     645 |   23 |    471 |      68 |    28 |
+| Spain       |   394 |        139 |     289 |  118 |  3,153 |     247 |   185 |
+| Switzerland |   100 |         19 |     103 |   30 |  2,123 |      89 |    59 |
 {.tabular-nums}
 
 But with great datasets come great performance problems.
