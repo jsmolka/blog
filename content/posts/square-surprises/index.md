@@ -9,7 +9,7 @@ Paris--Roubaix, also known as the [_Hell of the North_](https://hellofthenorth.i
 This year's [edition](https://www.paris-roubaix.fr/en/news/2026/54-8-km-of-cobblestones-the-ratings-game/4775) featured 30 cobbled sectors with a combined length of 54.8 km. Each sector receives a [rating](https://www.paris-roubaix.fr/en/news/2023/paris-roubaix-sector-ratings/3925) between one and five stars based on its length, unevenness, overall condition of the cobbles and location within the race. The mythical sectors deserving of a five-star rating are [Trouée d'Arenberg](https://en.wikipedia.org/wiki/Trou%C3%A9e_d%27Arenberg), Mons-en-Pévèle and Carrefour de l'Arbre.
 
 - ![](img/arenberg.jpg "Trouée d'Arenberg, the most notorious sector of Paris--Roubaix (© A.S.O.)")
-{.overflow}
+{.cover}
 
 Unfortunately, those sectors not only attract fans. Arenberg forest had to deal with [thieves](https://road.cc/news/paris-roubaix-cobbles-stolen-from-arenberg-forest) taking pavé-shaped souvenirs back home for years, a privilege usually reserved for the winner of the race. In contrast, there are the [Les Amis de Paris--Roubaix](https://lesamisdeparis-roubaix.com/), the _Friends of Paris--Roubaix_, a group of enthusiasts dedicated to the preservation, restoration and maintenance of the iconic cobbled sectors.
 
@@ -31,4 +31,4 @@ Here is what it looks like for Leipzig [^germany]. Clicking on a road opens a po
 [^germany]: If you zoom out far enough to cover [Germany](img/germany.png), you can see something I, and probably others, like to call "every map of Germany ever", which is a clear distinction between post-war East and West Germany. The East usually takes the short end of the stick in the visualized statistic.
 
 - ![](img/leipzig.png "Roads with cobblestone surface in Leipzig")
-{.overflow}
+{.cover}

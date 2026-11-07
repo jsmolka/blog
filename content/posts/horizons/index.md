@@ -38,7 +38,7 @@ The font used on covers and other media is called Axion RND. It features rounded
 {.font-axion-rnd}
 
 - ![](img/band.jpg "Band banner")
-{.overflow}
+{.cover}
 
 ### Artwork
 While cover artworks might appear supplemental to the musical experience, they are of great importance to me. Thought-trough covers stand out from an endless sea of mediocrity and capture attention. If you find one that resonates with you, it's almost impossible to not listen to the album. That's the feeling I had, and still have, with the cover of Horizons. It is one of my favorites, if not the favorite. Its vinyl version is used as a decorative piece between the speakers in my living room and sparks joy every time I notice it.
@@ -342,7 +342,7 @@ Like watching the Earth rise
 [Earthrise](https://www.youtube.com/watch?v=ggCkN3Sve9w) is named after a famous picture taken by Willam Anders during the Apollo 8 space mission, the first crewed voyage to orbit the moon. The original image was rotated by 95 degrees to better convey the sense of the Earth rising over the moonscape.
 
 - ![](img/earthrise.jpg "[Earthrise by Willam Anders](https://en.wikipedia.org/wiki/Earthrise)")
-{.overflow}
+{.cover}
 
 > I push my feet to the edge\
 > I look and I face my world\

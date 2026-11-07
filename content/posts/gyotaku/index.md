@@ -15,4 +15,4 @@ My father commissioned two of his largest catches to be preserved --- their [hea
 > <cite>[Wikipedia](https://en.wikipedia.org/wiki/Gyotaku)</cite>
 
 - ![](img/tarakihi.webp "[New Zealand Tarakihi by Victor Huang](https://victorhuang.co/gyotaku)")
-{.overflow}
+{.cover}

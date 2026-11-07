@@ -134,7 +134,7 @@
     list-style: decimal;
   }
 
-  & > :is(pre, .overflow) {
+  & > :is(pre, .cover) {
     margin-left: 0;
     margin-right: 0;
 

@@ -12,6 +12,8 @@ out skel geom qt;
 ```
 
 > Cannot create a string longer than `0x1fffffe8` characters
+>
+> <cite>Node.js</cite>
 
 ## Simplify
 <!-- https://poi.smolka.dev/#19.98/51.2961833/12.3971305 -->
