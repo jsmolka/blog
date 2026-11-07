@@ -4,12 +4,12 @@ showMeta: false
 showTitle: false
 ---
 # bottle
-[bottle](https://github.com/jsmolka/bottle) is a companion [web app](https://bottle.smolka.dev/) for the [identically titled post](/posts/the-bottle). It calculates the glucose/fructose ratio, electrolyte contents and osmolarity of a cycling bottle. It also provides reference values to aid evaluation and tries to shed some light on an often overlooked nutrition topic.
+[bottle](https://github.com/jsmolka/bottle) is a companion [web app](https://bottle.smolka.dev/) for the identically titled [post](/posts/the-bottle). It calculates the glucose/fructose ratio, electrolyte contents and osmolarity of a cycling bottle. It also provides reference values to aid evaluation and tries to shed some light on an often overlooked nutrition topic.
 
 ![](img/tonicity.svg "Osmolarity [mOsm/l]")
 
 # poi
-[poi](https://github.com/jsmolka/poi) is a [web app](https://poi.smolka.dev) that visualizes cycling-related points of interest on a map. The data is sourced using [OpenStreetMap's Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) and includes locations of gas stations, supermarkets, cafes and even cemeteries for emergency water refills. It can also display GPX files to assist with planning.
+[poi](https://github.com/jsmolka/poi) is a [web app](https://poi.smolka.dev) that visualizes cycling-related points of interest on a map. The data is sourced using OpenStreetMap's [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) and includes locations of gas stations, supermarkets, cafes and even cemeteries for emergency water refills. It can also display GPX files to assist with planning.
 
 ![](img/poi.png "Route from Leipzig to Cottbus")
 
