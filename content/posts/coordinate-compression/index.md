@@ -10,7 +10,7 @@ area["ISO3166-1"="DE"][admin_level=2];
 way["highway"]["surface"~"^(gravel|fine_gravel|compacted|pebblestone)$"](area);
 out skel geom qt;
 ```
-Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js onto its knees. _Cannot create a string longer than `0x1fffffe8` characters_, it whispered with its dying breath. Its internal string length in capped at 536 MB. But this response was 614 MB.
+Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js onto its knees. _Cannot create a string longer than `0x1fffffe8` characters_, it whispered with its dying breath. Its internal string length capped at 536 MB. But this response was 614 MB.
 
 [^gravel]: I hereby use the power granted to me by myself to define what is gravel and what is not. Something the gravel community still struggles with.
 
@@ -24,6 +24,16 @@ Return all gravel roads [^gravel] in Germany and their geometry. This innocent l
 - ![](img/simplify-2.0.png "Tolerance 2")
 {.fluent}
 
+```js
+[
+  [6.6714466, 49.2574289],  // [longitude, latitude]
+  [6.6714863, 49.257563],
+  [6.6714959, 49.2580319],
+  [6.6714861, 49.2582483],
+  [6.6715423, 49.2582771]
+]
+```
+
 ## Precision
 ```js
 const PRECISION = 5;
@@ -34,6 +44,16 @@ function precision(polyline) {
     coordinates.map((coordinate) => Math.round(coordinate * SCALE)),
   );
 }
+```
+
+```js
+[
+  [667145, 4925743],
+  [667149, 4925756],
+  [667150, 4925803],
+  [667149, 4925825],
+  [667154, 4925828]
+]
 ```
 
 ## Offset
@@ -51,6 +71,16 @@ function offset(polyline) {
 }
 ```
 
+```js
+[
+  [-15, -88],
+  [4, 13],
+  [1, 47],
+  [-1, 22],
+  [5, 3]
+]
+```
+
 Ordering the output by quad tile `out qt;` improved compression.
 
 ## Zigzag
@@ -64,6 +94,16 @@ function zigzag(polyline) {
 }
 ```
 
+```js
+[
+  [29, 175],
+  [8, 26],
+  [2, 94],
+  [1, 44],
+  [10, 6]
+]
+```
+
 ## Encode
 ```js
 function writeVarint(out, value) {
@@ -73,6 +113,16 @@ function writeVarint(out, value) {
   }
   out.push(value);
 }
+```
+
+```js
+[
+  0x1d, 0xaf, 0x01,  // 175 = (0xaf & ~0x80) + ((0x01 & ~0x80) << 7)
+  0x08, 0x1a,
+  0x02, 0x5e,
+  0x01, 0x2c,
+  0x0a, 0x06
+]
 ```
 
 ## Conclusion

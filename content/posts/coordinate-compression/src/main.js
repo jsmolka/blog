@@ -1,4 +1,4 @@
-import data from './data/1-geometry.json' with { type: 'json' };
+import step1 from './data/1-geometry.json' with { type: 'json' };
 import { writeFileSync } from 'fs';
 import simplify_ from 'simplify-js';
 
@@ -55,6 +55,7 @@ function writeVarint(out, value) {
     value >>>= 7;
   }
   out.push(value);
+  return out;
 }
 
 function encode(polylines) {
@@ -78,15 +79,31 @@ async function compress(bytes) {
 }
 
 async function main() {
-  const step2 = simplify(data);
+  const sample = 6;
+  console.log('1 >', step1[sample]);
+  const step2 = simplify(step1);
+  console.log('2 >', step2[sample]);
   writeFileSync('./data/2-simplify.json', JSON.stringify(step2));
   const step3 = precision(step2);
+  console.log('3 >', step3[sample]);
   writeFileSync('./data/3-precision.json', JSON.stringify(step3));
   const step4 = offset(step3);
+  console.log('4 >', step4[sample]);
   writeFileSync('./data/4-offset.json', JSON.stringify(step4));
   const step5 = zigzag(step4);
+  console.log('5 >', step5[sample]);
   writeFileSync('./data/5-zigzag.json', JSON.stringify(step5));
   const step6 = encode(step5);
+  console.log(
+    '6 >',
+    step5[sample].map((coordinates) =>
+      coordinates.map((coordinate) =>
+        writeVarint([], coordinate)
+          .map((byte) => byte.toString(16).padStart(2, '0'))
+          .join(' '),
+      ),
+    ),
+  );
   writeFileSync('./data/6-encode.bin', step6);
   const step7 = await compress(step6);
   writeFileSync('./data/7-compress.bin', step7);
