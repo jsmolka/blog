@@ -86,3 +86,12 @@ function writeVarint(out, value) {
 | Encode    | Encode in a binary format using varints    |    20,783 |
 | Compress  | Compress with deflate                      |    17,994 |
 {.tabular-nums}
+
+But with great datasets come great performance problems.
+
+- ![](img/snap.png "Aw, Snap! :(")
+{.cover}
+
+> But from a global allocation perspective, actually, it’s quite terrible to have everybody have a bunch of the world’s limited supply of DRAM sitting in their own computer. And, being used 5% of the time. You want maximum utilization in the cloud if you’re trying to deal with this very supply constrained environment.
+>
+> <cite>Sam Altman</cite>
