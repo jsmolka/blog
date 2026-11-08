@@ -22,6 +22,7 @@
   --rounded: 0.125rem;
   --content: 45rem;
   --content-toc: 15rem;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 
   --shade-1: #ebedf2; /* hsv(220,  3%, 95%) */
   --shade-2: #dfe1e6; /* hsv(220,  3%, 90%) */

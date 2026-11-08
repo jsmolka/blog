@@ -95,7 +95,7 @@ code[class*='language-'] {
 
 :is(.prism-deleted, .prism-inserted):not(.prism-prefix) {
   display: block;
-  margin: 0 spacing(-3);
+  margin: 0 -0.75rem;
   color: inherit;
 
   & > :first-child {
