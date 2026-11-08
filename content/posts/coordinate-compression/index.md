@@ -140,6 +140,11 @@ function writeVarint(out, value) {
 
 Similar compression applied to all data. Vercel static file limit is 100 MB.
 
+<details>
+  <summary>:)</summary>
+  :(
+</details>
+
 | Country     | Cafes | Cemeteries | Cobbles |  Gas | Gravel | Grocers | Water |
 | ----------- | ----: | ---------: | ------: | ---: | -----: | ------: | ----: |
 | Austria     |   126 |         29 |      78 |   26 |  2,880 |      80 |    35 |
