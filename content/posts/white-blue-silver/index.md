@@ -38,27 +38,32 @@ A tough bar can be hit hard and still not crack.
 
 [^vickers]: Rockwell hardness is non-linear because of the diamond-shaped cone. Pressing it further into the metal becomes increasingly hard. Converting it to the linear Vickers hardness can help with comparison.
 
-    | Rockwell Hardness C | Vickers Hardness |
-    | ------------------- | ---------------- |
-    | 68                  | 940              |
-    | 67                  | 900              |
-    | 66                  | 865              |
-    | 65                  | 832              |
-    | 64                  | 800              |
-    | 63                  | 772              |
-    | 62                  | 746              |
-    | 61                  | 720              |
-    | 60                  | 697              |
-    | 59                  | 674              |
-    | 58                  | 653              |
-    | 57                  | 633              |
-    | 56                  | 613              |
-    | 55                  | 595              |
-    | 54                  | 577              |
-    | 53                  | 560              |
-    | 52                  | 544              |
+    <details>
+      <summary>HRC to HV conversion</summary>
 
-    Typical HRC ranges are 52--58 for Western and 58--68 for Japanese knives.
+      | Rockwell Hardness C | Vickers Hardness |
+      | ------------------- | ---------------- |
+      | 68                  | 940              |
+      | 67                  | 900              |
+      | 66                  | 865              |
+      | 65                  | 832              |
+      | 64                  | 800              |
+      | 63                  | 772              |
+      | 62                  | 746              |
+      | 61                  | 720              |
+      | 60                  | 697              |
+      | 59                  | 674              |
+      | 58                  | 653              |
+      | 57                  | 633              |
+      | 56                  | 613              |
+      | 55                  | 595              |
+      | 54                  | 577              |
+      | 53                  | 560              |
+      | 52                  | 544              |
+    </details>
+
+
+    The typical HRC ranges are 52--58 for Western and 58--68 for Japanese knives.
 
 These properties can be altered by the addition of other elements. Their atoms are much larger than the carbon ones and don't fit inside the voids. Instead, they replace them. The result is called a substitutional alloy.
 

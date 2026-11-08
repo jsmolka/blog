@@ -277,7 +277,8 @@ Ingesting hypertonic solutions causes your body to draw water from the tissue an
 
 Understanding the link between ingesting too hypertonic solutions and osmotic diarrhea wasn't easy. At one point it was 23:00 on a Monday night. I opened a website and was greeted by a calming, dark blue background titled "Evaluation of Diarrhea", a 129-page presentation, and thought to myself: "What the fuck am I doing here. Time to go to bed."
 
-![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
+- ![](img/diarrhea.png "[Evaluation of Diarrhea](https://louisville.edu/medicine/departments/medicine/divisions/gimedicine/physician-resources/lectures/diarrhea/evaluation-of-diarrhea)")
+{.cover}
 
 But some of the best insights into this topic came from a [recent podcast episode of Peter Attias Drive](https://youtu.be/QpK3jXLwz_Y?si=42eaaXb_V9D-or-2&t=7707), where he interviewed Olav Aleksander Bu, the coach of the world-famous triathletes Gustav Iden and Kristian Blummenfelt. He mentioned that his athletes consume up to 240 g per hour diluted with a minimum of 1.4 liters of water. Assuming an even glucose/fructose ratio, that's an osmolarity of ~500 mOsm/l from just carbohydrates alone. Tolerating such amounts requires serious nutritional training, and even with that, they are known to [vomit during competition](https://www.youtube.com/shorts/hTQooMGcX8c).
 
