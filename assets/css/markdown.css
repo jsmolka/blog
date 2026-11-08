@@ -173,6 +173,11 @@
     @media screen and (max-width: 45rem) {
       margin-left: -1rem;
       margin-right: -1rem;
+
+      figcaption {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
     }
   }
 
