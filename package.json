@@ -7,15 +7,16 @@
   "scripts": {
     "dev": "hugo server -D -F",
     "build": "hugo --minify && npm run postprocess",
-    "update": "npx npm-check-updates -u && npm i && npm audit fix",
+    "update": "npx npm-check-updates --interactive --install always && npm audit fix",
     "postprocess": "node scripts/postprocess.js"
   },
   "prettier": {
     "singleQuote": true
   },
   "devDependencies": {
-    "glob": "^13.0.6",
-    "jsdom": "^29.1.1",
+    "glob": "^14.0.4",
+    "jsdom": "^31.0.0",
+    "prettier": "^3.9.10",
     "prismjs": "^1.30.0"
   }
 }
