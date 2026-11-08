@@ -86,7 +86,7 @@ function initBar(element) {
 
 const template = /* html */ `
   <button ref="stateButton">
-    <svg width="16" height="16" viewBox="5 5 14 14">
+    <svg width="16" height="16" viewBox="2 2 20 20">
       <path ref="stateButtonPath" fill="currentColor" />
     </svg>
   </button>
@@ -101,7 +101,7 @@ const template = /* html */ `
       </div>
     </div>
     <button ref="volumeButton">
-      <svg width="16" height="16" viewBox="3 3 18 18">
+      <svg width="16" height="16" viewBox="2 2 20 20">
         <path ref="volumeButtonPath" fill="currentColor" />
       </svg>
     </button>
