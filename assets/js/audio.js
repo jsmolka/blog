@@ -50,7 +50,7 @@ function initBar(element) {
       element.dispatchEvent(
         new CustomEvent(name, {
           detail: clamp((event.x - left) / (right - left), 0, 1),
-        })
+        }),
       );
     };
   };
@@ -136,7 +136,7 @@ class XAudio extends HTMLElement {
           observer.unobserve(entry.target);
         }
       },
-      { rootMargin: '256px' }
+      { rootMargin: '256px' },
     ).observe(this);
   }
 
@@ -148,14 +148,14 @@ class XAudio extends HTMLElement {
     this.stateButtonPath.setAttribute(
       'd',
       this.audio.paused
-        ? 'M8 5.14v14l11-7l-11-7z'
-        : 'M14 19h4V5h-4M6 19h4V5H6v14z' // prettier-ignore
+        ? 'M8,19V5l11,7L8,19Z'
+        : 'M14,19V5h4V19H14ZM6,19V5h4V19H6Z', // prettier-ignore
     );
     this.volumeButtonPath.setAttribute(
       'd',
       this.audio.muted || this.audio.volume === 0
-        ? 'M12 4L9.91 6.09L12 8.18M4.27 3L3 4.27L7.73 9H3v6h4l5 5v-6.73l4.25 4.26c-.67.51-1.42.93-2.25 1.17v2.07c1.38-.32 2.63-.95 3.68-1.81L19.73 21L21 19.73l-9-9M19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.916 8.916 0 0 0 21 12c0-4.28-3-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71m-2.5 0c0-1.77-1-3.29-2.5-4.03v2.21l2.45 2.45c.05-.2.05-.42.05-.63z'
-        : 'M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.7v2.07c4-.91 7-4.49 7-8.77c0-4.28-3-7.86-7-8.77M16.5 12c0-1.77-1-3.29-2.5-4.03V16c1.5-.71 2.5-2.24 2.5-4M3 9v6h4l5 5V4L7 9H3z'
+        ? 'M19.8,22.6l-3.02-3.03q-0.63,0.4-1.33,0.69T14,20.73V18.68q0.35-0.13 0.69-0.25q0.34-0.13 0.64-0.3L12,14.8V20L7,15H3V9H6.2L1.4,4.2L2.8,2.8L21.2,21.2l-1.4,1.4Zm-0.2-5.8l-1.45-1.45q0.42-0.78 0.64-1.63T19,11.98q0-2.35-1.38-4.2Q16.25,5.93 14,5.27V3.22q3.1,0.7 5.05,3.14T21,11.98q0,1.32-0.36,2.55T19.6,16.8Zm-3.35-3.35L14,11.2V7.95Q15.18,8.5 15.84,9.6T16.5,12q0,0.38-0.06,0.74t-0.19,0.71ZM12,9.2L9.4,6.6L12,4V9.2Z'
+        : 'M14,20.73V18.68q2.25-0.65 3.63-2.5T19,11.98t-1.38-4.2Q16.25,5.93 14,5.27V3.22q3.1,0.7 5.05,3.14T21,11.98t-1.95,5.61T14,20.73ZM3,15V9H7l5-5V20L7,15H3Zm11,1V7.95Q15.18,8.5 15.84,9.6T16.5,12q0,1.27-0.66,2.36T14,16Z',
     );
     this.progressBarSeeker.style.setProperty('--value', duration > 0 ? position / duration : 0);
   }
