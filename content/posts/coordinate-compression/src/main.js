@@ -1,6 +1,26 @@
-import step1 from './data/1-geometry.json' with { type: 'json' };
+import Flatbush from 'flatbush';
 import { writeFileSync } from 'fs';
 import simplify_ from 'simplify-js';
+import step1 from './data/1-geometry.json' with { type: 'json' };
+
+function sort(polylines) {
+  const bush = new Flatbush(polylines.length);
+  for (const [[lng, lat]] of polylines) {
+    bush.add(lng, lat);
+  }
+  bush.finish();
+
+  const sorted = [];
+  const sortedIndices = new Set();
+  while (sorted.length < polylines.length) {
+    const [lng, lat] = sorted.at(-1)?.at(-1) ?? [0, 0];
+    const index = bush.neighbors(lng, lat, 1, Infinity, (index) => !sortedIndices.has(index))[0];
+
+    sorted.push(polylines[index]);
+    sortedIndices.add(index);
+  }
+  return sorted;
+}
 
 function simplify(polylines) {
   return polylines.map((polyline) => {
@@ -86,24 +106,32 @@ async function compress(bytes) {
 }
 
 async function main() {
-  const sample = 6;
-  console.log('1 >', step1[sample]);
-  const step2 = simplify(step1);
-  console.log('2 >', step2[sample]);
-  writeFileSync('./data/2-simplify.json', JSON.stringify(step2));
-  const step3 = precision(step2);
-  console.log('3 >', step3[sample]);
-  writeFileSync('./data/3-precision.json', JSON.stringify(step3));
-  const step4 = offset(step3);
-  console.log('4 >', step4[sample]);
-  writeFileSync('./data/4-offset.json', JSON.stringify(step4));
-  const step5 = zigzag(step4);
-  console.log('5 >', step5[sample]);
-  writeFileSync('./data/5-zigzag.json', JSON.stringify(step5));
-  const step6 = encode(step5);
+  const sample = 556430;
+
+  const step2 = sort(step1);
+  console.log('sort >', step2[sample]);
+  writeFileSync('./data/2-sort.json', JSON.stringify(step2));
+
+  const step3 = simplify(step2);
+  console.log('simplify >', step3[sample]);
+  writeFileSync('./data/3-simplify.json', JSON.stringify(step3));
+
+  const step4 = precision(step3);
+  console.log('precision >', step4[sample]);
+  writeFileSync('./data/4-precision.json', JSON.stringify(step4));
+
+  const step5 = offset(step4);
+  console.log('offset >', step5[sample]);
+  writeFileSync('./data/5-offset.json', JSON.stringify(step5));
+
+  const step6 = zigzag(step5);
+  console.log('zigzag >', step6[sample]);
+  writeFileSync('./data/6-zigzag.json', JSON.stringify(step6));
+
+  const step7 = encode(step6);
   console.log(
-    '6 >',
-    step5[sample].map((coordinates) =>
+    'encode >',
+    step6[sample].map((coordinates) =>
       coordinates.map((coordinate) =>
         writeVarint([], coordinate)
           .map((byte) => byte.toString(16).padStart(2, '0'))
@@ -111,9 +139,10 @@ async function main() {
       ),
     ),
   );
-  writeFileSync('./data/6-encode.bin', step6);
-  const step7 = await compress(step6);
-  writeFileSync('./data/7-compress.bin', step7);
+  writeFileSync('./data/7-encode.bin', step7);
+
+  const step8 = await compress(step7);
+  writeFileSync('./data/8-compress.bin', step8);
 }
 
 main();

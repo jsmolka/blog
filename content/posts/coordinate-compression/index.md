@@ -8,11 +8,22 @@ type: post
 [out:json][timeout:3600];
 area["ISO3166-1"="DE"][admin_level=2];
 way["highway"]["surface"~"^(gravel|fine_gravel|compacted|pebblestone)$"](area);
-out skel geom qt;
+out skel geom;
 ```
 Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js onto its knees. _Cannot create a string longer than `0x1fffffe8` characters_, it whispered with its dying breath. Its internal string length capped at 536 MB. But this response was 614 MB.
 
 [^gravel]: I hereby use the power granted to me by myself to define what is gravel and what is not. Something the gravel community still struggles with.
+
+
+```js
+[
+  [9.5720777, 51.8684697], // [longitude, latitude]
+  [9.5713593, 51.8682805],
+  [9.5709083, 51.8681333],
+  [9.5705485, 51.8679984],
+  [9.5703925, 51.8679399]
+]
+```
 
 ## Simplify
 <!-- https://poi.smolka.dev/#19.98/51.2961833/12.3971305 -->
@@ -26,11 +37,11 @@ Return all gravel roads [^gravel] in Germany and their geometry. This innocent l
 
 ```js
 [
-  [6.6714466, 49.2574289],  // [longitude, latitude]
-  [6.6714863, 49.257563],
-  [6.6714959, 49.2580319],
-  [6.6714861, 49.2582483],
-  [6.6715423, 49.2582771]
+  [9.5720777, 51.8684697],
+  [9.5713593, 51.8682805],
+  [9.5709083, 51.8681333],
+  // Removed [9.5705485, 51.8679984]
+  [9.5703925, 51.8679399]
 ]
 ```
 
@@ -48,11 +59,10 @@ function precision(polyline) {
 
 ```js
 [
-  [667145, 4925743],
-  [667149, 4925756],
-  [667150, 4925803],
-  [667149, 4925825],
-  [667154, 4925828]
+  [957208, 5186847], // [r(9.5720777 * 1e5), r(51.8684697 * 1e5)]
+  [957136, 5186828], // [r(9.5713593 * 1e5), r(51.8682805 * 1e5)]
+  [957091, 5186813], // [r(9.5709083 * 1e5), r(51.8681333 * 1e5)]
+  [957039, 5186794]  // [r(9.5703925 * 1e5), r(51.8679399 * 1e5)]
 ]
 ```
 
@@ -73,15 +83,12 @@ function offset(polyline) {
 
 ```js
 [
-  [-15, -88],
-  [4, 13],
-  [1, 47],
-  [-1, 22],
-  [5, 3]
+  [240, 356], // [957448 - 957208, 5187203 - 5186847]
+  [-72, -19], // [957136 - 957208, 5186828 - 5186847]
+  [-45, -15], // [957091 - 957136, 5186813 - 5186828]
+  [-52, -19]  // [957039 - 957091, 5186794 - 5186813]
 ]
 ```
-
-Ordering the output by quad tile `out qt;` improved compression.
 
 ## Zigzag
 ```js
@@ -96,11 +103,10 @@ function zigzag(polyline) {
 
 ```js
 [
-  [29, 175],
-  [8, 26],
-  [2, 94],
-  [1, 44],
-  [10, 6]
+  [480, 712], // [240 * 2, 356 * 2]
+  [143,  37], // [72 * 2 - 1, 19 * 2 - 1]
+  [ 89,  29], // [45 * 2 - 1, 15 * 2 - 1]
+  [103,  37]  // [52 * 2 - 1, 19 * 2 - 1]
 ]
 ```
 
@@ -117,11 +123,10 @@ function writeVarint(out, value) {
 
 ```js
 [
-  0x1d, 0xaf, 0x01,  // 175 = (0xaf & ~0x80) + ((0x01 & ~0x80) << 7)
-  0x08, 0x1a,
-  0x02, 0x5e,
-  0x01, 0x2c,
-  0x0a, 0x06
+  0xe0, 0x03, 0xc8, 0x05, // [(480 & 0x7f) | 0x80, (480 >> 7) & 0x7f, ...]
+  0x8f, 0x01, 0x25,       // [(143 & 0x7f) | 0x80, (143 >> 7) & 0x7f, ...]
+  0x59,       0x1d,       // [89 & 0x7f, ...]
+  0x67,       0x25        // [103 & 0x7f, ...]
 ]
 ```
 
@@ -131,36 +136,38 @@ function writeVarint(out, value) {
 | Raw       | Raw data returned by the Overpass query    |   614,312 |
 | Geometry  | Remove all but geometric data              |   239,784 |
 | Simplify  | Simplify polylines with a tolerance of 0.5 |   196,512 |
-| Precision | Round coordinates to 5 decimal places      |   148,189 |
-| Offset    | Store offset to previous coordinates       |    73,864 |
-| Zigzag    | Convert negative to positive numbers       |    70,296 |
-| Encode    | Encode in a binary format using varints    |    20,783 |
-| Compress  | Compress with deflate                      |    17,994 |
+| Precision | Round coordinates to 5 decimal places      |   148,188 |
+| Offset    | Store offset to previous coordinates       |    72,932 |
+| Zigzag    | Convert negative to positive numbers       |    69,300 |
+| Encode    | Encode in a binary format using varints    |    20,390 |
+| Compress  | Compress with deflate                      |    17,501 |
 {.tabular-nums}
 
-Similar compression applied to all data. Vercel static file limit is 100 MB.
+<details>
+  <summary>Individual file sizes</summary>
 
-| Country     | Cafes | Cemeteries | Cobbles |  Gas | Gravel | Grocers | Water |
-| ----------- | ----: | ---------: | ------: | ---: | -----: | ------: | ----: |
-| Austria     |   126 |         29 |      78 |   26 |  2,880 |      80 |    35 |
-| Belgium     |   111 |         39 |     218 |   23 |    653 |      80 |     6 |
-| Czechia     |    91 |         34 |     232 |   34 |    887 |      98 |     9 |
-| Denmark     |    80 |         17 |      48 |   15 |  1,586 |      41 |     5 |
-| France      |   699 |        277 |     337 |   96 |  5,142 |     461 |   106 |
-| Germany     | 1,103 |        277 |   2,018 |  181 | 17,886 |     586 |    46 |
-| Italy       |   629 |        152 |     807 |  139 |  5,208 |     268 |   267 |
-| Netherlands |   146 |         32 |      43 |   39 |    873 |      87 |    12 |
-| Poland      |   198 |        118 |     377 |   65 |  2,249 |     373 |    10 |
-| Portugal    |   182 |         40 |     645 |   23 |    471 |      68 |    28 |
-| Spain       |   394 |        139 |     289 |  118 |  3,153 |     247 |   185 |
-| Switzerland |   100 |         19 |     103 |   30 |  2,123 |      89 |    59 |
-{.tabular-nums}
+  Similar compression applied to all data. Pois also include metadata, which makes up the largest amount. Vercel static file limit is 100 MB.
 
-But with great datasets come great performance problems.
+  | Country      | Cafes | Cemeteries | Cobbles |  Gas | Gravel | Grocers | Water |
+  | ------------ | ----: | ---------: | ------: | ---: | -----: | ------: | ----: |
+  | Austria      |   123 |         29 |      73 |   26 |  2,831 |      78 |    34 |
+  | Belgium      |   109 |         38 |     204 |   23 |    637 |      78 |     6 |
+  | Czechia      |    89 |         33 |     211 |   34 |    870 |      96 |     9 |
+  | Denmark      |    78 |         17 |      45 |   15 |  1,545 |      40 |     4 |
+  | France       |   683 |        269 |     317 |   91 |  5,045 |     450 |   101 |
+  | Germany      | 1,082 |        270 |   1,887 |  176 | 17,387 |     571 |    44 |
+  | Italy        |   611 |        149 |     755 |  133 |  5,131 |     262 |   257 |
+  | Lichtenstein |     1 |          1 |       1 |    1 |     25 |       1 |     1 |
+  | Luxembourg   |     8 |          4 |      12 |    3 |    102 |       6 |     1 |
+  | Monaco       |     1 |          1 |       1 |    1 |      1 |       1 |     1 |
+  | Netherlands  |   144 |         31 |      41 |   38 |    848 |      86 |    12 |
+  | Poland       |   193 |        114 |     358 |   61 |  2,211 |     358 |    10 |
+  | Portugal     |   178 |         39 |     610 |   23 |    466 |      66 |    27 |
+  | Slovenia     |    27 |          9 |       7 |   10 |    847 |      15 |     8 |
+  | Spain        |   381 |        135 |     270 |  114 |  3,119 |     239 |   178 |
+  | Switzerland  |    98 |         18 |      96 |   29 |  2,067 |      88 |    57 |
+  {.tabular-nums}
+</details>
 
-- ![](img/snap.png "Aw, Snap! :(")
-{.cover}
 
-> But from a global allocation perspective, actually, it’s quite terrible to have everybody have a bunch of the world’s limited supply of DRAM sitting in their own computer. And, being used 5% of the time. You want maximum utilization in the cloud if you’re trying to deal with this very supply constrained environment.
->
-> <cite>Sam Altman</cite>
+But with great datasets come great performance problems. To be continued.

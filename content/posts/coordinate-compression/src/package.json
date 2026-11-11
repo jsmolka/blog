@@ -5,7 +5,8 @@
   "scripts": {
     "main": "node main.js"
   },
-  "devDependencies": {
+  "dependencies": {
+    "flatbush": "^4.7.0",
     "simplify-js": "^1.2.4"
   }
 }
