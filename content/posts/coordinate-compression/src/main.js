@@ -105,16 +105,29 @@ async function compress(bytes) {
   return new Uint8Array(await response.arrayBuffer());
 }
 
+function stats(polylines) {
+  let vertices = 0;
+  for (const polyline of polylines) {
+    vertices += polyline.length;
+  }
+
+  console.log('polylines:', polylines.length);
+  console.log('vertices', vertices);
+  console.log('average length', vertices / polylines.length);
+}
+
 async function main() {
   const sample = 556430;
 
   const step2 = sort(step1);
   console.log('sort >', step2[sample]);
   writeFileSync('./data/2-sort.json', JSON.stringify(step2));
+  stats(step2);
 
   const step3 = simplify(step2);
   console.log('simplify >', step3[sample]);
   writeFileSync('./data/3-simplify.json', JSON.stringify(step3));
+  stats(step3);
 
   const step4 = precision(step3);
   console.log('precision >', step4[sample]);

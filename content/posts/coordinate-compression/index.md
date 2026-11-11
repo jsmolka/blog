@@ -10,14 +10,16 @@ area["ISO3166-1"="DE"][admin_level=2];
 way["highway"]["surface"~"^(gravel|fine_gravel|compacted|pebblestone)$"](area);
 out skel geom;
 ```
-Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js onto its knees. _Cannot create a string longer than `0x1fffffe8` characters_, it whispered with its dying breath. Its internal string length capped at 536 MB. But this response was 614 MB.
+Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js to its knees. _"Cannot create a string longer than `0x1fffffe8` characters"_, it whispered with its dying breath. Limited to an internal string length of 512 MB, it was not prepared to deal with vast amounts of data flooding in.
 
 [^gravel]: I hereby use the power granted to me by myself to define what is gravel and what is not. Something the gravel community still struggles with.
 
+I had to switch the response type to `stream` and use the [stream-json](https://github.com/uhop/stream-json) library to parse it. The result measured 614 MB, even though it only contained the basic structural `skel` and geometric `geom` data. I stripped it down even further to just the polylines and their coordinates. 239 MB and 1,032,029 polylines with an average length of 10.15 coordinates to be exact.
+
 
 ```js
-[
-  [9.5720777, 51.8684697], // [longitude, latitude]
+[ // [longitude, latitude]
+  [9.5720777, 51.8684697],
   [9.5713593, 51.8682805],
   [9.5709083, 51.8681333],
   [9.5705485, 51.8679984],
@@ -25,14 +27,20 @@ Return all gravel roads [^gravel] in Germany and their geometry. This innocent l
 ]
 ```
 
+614,312 KB -> 239,784 KB
+
 ## Simplify
+There are many algorithms to [simplify polylines](https://dulldrums.github.io/polygon-reduction-algorithms-demo/). One of them is the [Douglas--Peucker algorithm](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm). It recursively  divides the polyline into segments by including most distant point from the current segment until all points are either included or within a given epsilon. I used the [simplify.js](https://mourner.github.io/simplify-js/) library by [mourner](https://github.com/mourner) [^mourner].
+
+[^mourner]: Remark about leading people in certain fields.
+
 <!-- https://poi.smolka.dev/#19.98/51.2961833/12.3971305 -->
-- ![](img/simplify-0.0.png "Tolerance 0")
-- ![](img/simplify-0.5.png "Tolerance 0.5")
+- ![](img/simplify-0.0.png "Full detail")
+- ![](img/simplify-0.5.png "Tolerance of 0.5 meters")
 {.fluent}
 
-- ![](img/simplify-1.0.png "Tolerance 1")
-- ![](img/simplify-2.0.png "Tolerance 2")
+- ![](img/simplify-1.0.png "Tolerance of 1 meter")
+- ![](img/simplify-2.0.png "Tolerance of 2 meters")
 {.fluent}
 
 ```js
@@ -45,15 +53,23 @@ Return all gravel roads [^gravel] in Germany and their geometry. This innocent l
 ]
 ```
 
+Polylines: 1032029
+Vertices 8571910
+Average length 8.305880939392207
+
+239,784 KB -> 196,512 KB
+
 ## Precision
 ```js
 const PRECISION = 5;
 const SCALE = 10 ** PRECISION;
 
 function precision(polyline) {
-  return polyline.map((coordinates) =>
-    coordinates.map((coordinate) => Math.round(coordinate * SCALE)),
-  );
+  return polyline.map((coordinates) => {
+    return coordinates.map((coordinate) => {
+      return Math.round(coordinate * SCALE);
+    });
+  });
 }
 ```
 
@@ -66,38 +82,44 @@ function precision(polyline) {
 ]
 ```
 
+196,512 KB -> 148,188 KB
+
 ## Offset
 ```js
 const previous = [0, 0];
 
 function offset(polyline) {
-  return polyline.map((coordinates) =>
-    coordinates.map((coordinate, index) => {
+  return polyline.map((coordinates) => {
+    return coordinates.map((coordinate, index) => {
       const offset = coordinate - previous[index];
       previous[index] = coordinate;
       return offset;
-    }),
-  );
+    });
+  });
 }
 ```
 
 ```js
 [
-  [240, 356], // [957448 - 957208, 5187203 - 5186847]
+  [240, 356], // [957208 - 957448, 5186847 - 5187203]
   [-72, -19], // [957136 - 957208, 5186828 - 5186847]
   [-45, -15], // [957091 - 957136, 5186813 - 5186828]
   [-52, -19]  // [957039 - 957091, 5186794 - 5186813]
 ]
 ```
 
+148,188 KB -> 72,932 KB
+
 ## Zigzag
 ```js
 function zigzag(polyline) {
-  return polyline.map((coordinates) =>
-    coordinates.map((coordinate) => (
-      coordinate >= 0 ? coordinate * 2 : -coordinate * 2 - 1
-    )),
-  );
+  return polyline.map((coordinates) => {
+    return coordinates.map((coordinate) => {
+      return coordinate >= 0
+        ? +coordinate * 2
+        : -coordinate * 2 - 1;
+    });
+  });
 }
 ```
 
@@ -109,6 +131,8 @@ function zigzag(polyline) {
   [103,  37]  // [52 * 2 - 1, 19 * 2 - 1]
 ]
 ```
+
+72,932 KB -> 69,300 KB
 
 ## Encode
 ```js
@@ -129,6 +153,8 @@ function writeVarint(out, value) {
   0x67,       0x25        // [103 & 0x7f, ...]
 ]
 ```
+
+69,300 KB -> 20,390 KB
 
 ## Conclusion
 | Step      | Description                                | Size [KB] |
