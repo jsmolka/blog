@@ -3,8 +3,9 @@
 
   &,
   blockquote,
+  details,
   li {
-    & > *:not(:first-child) {
+    & > *:not(:first-child, summary + *) {
       margin-top: 1rem;
     }
   }
