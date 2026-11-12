@@ -18,7 +18,7 @@ I had to switch the response type to `stream` and use the [stream-json](https://
 
 
 ```js
-[ // [longitude, latitude]
+[
   [9.5720777, 51.8684697],
   [9.5713593, 51.8682805],
   [9.5709083, 51.8681333],
@@ -30,11 +30,10 @@ I had to switch the response type to `stream` and use the [stream-json](https://
 614,312 KB -> 239,784 KB
 
 ## Simplify
-There are many algorithms to [simplify polylines](https://dulldrums.github.io/polygon-reduction-algorithms-demo/). One of them is the [Douglas--Peucker algorithm](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm). It recursively  divides the polyline into segments by including most distant point from the current segment until all points are either included or within a given epsilon. I used the [simplify.js](https://mourner.github.io/simplify-js/) library by [mourner](https://github.com/mourner) [^mourner].
+The first two rounds of compression are lossy. The polylines contain more detail than we need, so we drop as many coordinates as possible. There are [a couple algorithms](https://dulldrums.github.io/polygon-reduction-algorithms-demo/) to choose from and one of them is [Douglas--Peucker](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm). It recursively  divides a polyline into segments by including the most distant point from the current segment until all points are either included or within a given tolerance.
 
-[^mourner]: Remark about leading people in certain fields.
+Here are some examples of different tolerances applied to the same [polyline](https://poi.smolka.dev/#19.98/51.2961833/12.3971305):
 
-<!-- https://poi.smolka.dev/#19.98/51.2961833/12.3971305 -->
 - ![](img/simplify-0.0.png "Full detail")
 - ![](img/simplify-0.5.png "Tolerance of 0.5 meters")
 {.fluent}
@@ -42,6 +41,8 @@ There are many algorithms to [simplify polylines](https://dulldrums.github.io/po
 - ![](img/simplify-1.0.png "Tolerance of 1 meter")
 - ![](img/simplify-2.0.png "Tolerance of 2 meters")
 {.fluent}
+
+I chose a tolerance of 0.5 meters because it still looks smooth and close to the original compared to the other ones. Using it decreased the average polyline length by around 20% to 8.3 coordinates.
 
 ```js
 [
@@ -53,13 +54,25 @@ There are many algorithms to [simplify polylines](https://dulldrums.github.io/po
 ]
 ```
 
-Polylines: 1032029
-Vertices 8571910
-Average length 8.305880939392207
-
 239,784 KB -> 196,512 KB
 
 ## Precision
+The second lossy compression step concerns the [coordinate precision](https://wiki.openstreetmap.org/wiki/Precision_of_coordinates). More decimal places mean more precision, but also more data. The following applies to latitudes:
+
+| DD.dddddd° | Decimal places | DD°MM'SS.ssss" | Meters   |
+| ---------- | -------------- | -------------- | -------- |
+| 1°         | 0              | 1°             | 111,120  |
+| 0.1°       | 1              | 0°06'          | 11,112   |
+| 0.01°      | 2              | 0°00'36"       | 1,111.2  |
+| 0.001°     | 3              | 0°00'03.6"     | 111.12   |
+| 0.0001°    | 4              | 0°00'00.36"    | 11.112   |
+| 0.00001°   | 5              | 0°00'00.04"    | 1.1112   |
+| 0.000001°  | 6              | 0°00'00.004"   | 0.11112  |
+| 0.0000001° | 7              | 0°00'00.0004"  | 0.011112 |
+{.tabular-nums}
+
+Longitudes have the same precision at the equator and get more accurate closer to the poles.
+
 ```js
 const PRECISION = 5;
 const SCALE = 10 ** PRECISION;
@@ -73,12 +86,14 @@ function precision(polyline) {
 }
 ```
 
+The obvious choice here is five decimal places, because it is neither too coarse nor too fine.
+
 ```js
 [
-  [957208, 5186847], // [r(9.5720777 * 1e5), r(51.8684697 * 1e5)]
-  [957136, 5186828], // [r(9.5713593 * 1e5), r(51.8682805 * 1e5)]
-  [957091, 5186813], // [r(9.5709083 * 1e5), r(51.8681333 * 1e5)]
-  [957039, 5186794]  // [r(9.5703925 * 1e5), r(51.8679399 * 1e5)]
+  [957208, 5186847], // [round(9.5720777 * 1e5), round(51.8684697 * 1e5)]
+  [957136, 5186828], // [round(9.5713593 * 1e5), round(51.8682805 * 1e5)]
+  [957091, 5186813], // [round(9.5709083 * 1e5), round(51.8681333 * 1e5)]
+  [957039, 5186794]  // [round(9.5703925 * 1e5), round(51.8679399 * 1e5)]
 ]
 ```
 
