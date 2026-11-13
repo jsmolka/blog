@@ -9,7 +9,7 @@ import os
 import xml.etree.ElementTree as ET
 from dateutil.relativedelta import relativedelta
 from dateutil.parser import parse
-from datetime import datetime, timezone
+from datetime import datetime, UTC
 
 
 plt.rcParams["font.family"] = "Inter"
@@ -80,7 +80,7 @@ def parse_power_data_tcx(tcx_path):
 
 
 def get_normalized_power(meta_path):
-    base_path = meta_path.rstrip(".meta.json")
+    base_path = meta_path.removesuffix(".meta.json")
 
     for extension, parse_power_data in {
         "fit": parse_power_data_fit,
@@ -122,7 +122,7 @@ def group_activities(activities):
         activities[0]["start_date"].year,
         activities[0]["start_date"].month,
         1,
-        tzinfo=timezone.utc,
+        tzinfo=UTC,
     )
 
     groups = {}
