@@ -19,6 +19,7 @@ I had to switch the response type to `stream` and use the [stream-json](https://
 
 ```js
 [
+  // [longitude, latitude]
   [9.5720777, 51.8684697],
   [9.5713593, 51.8682805],
   [9.5709083, 51.8681333],
@@ -74,15 +75,8 @@ The second lossy compression step concerns the [coordinate precision](https://wi
 Longitudes have the same precision at the equator and get more accurate closer to the poles.
 
 ```js
-const PRECISION = 5;
-const SCALE = 10 ** PRECISION;
-
-function precision(polyline) {
-  return polyline.map((coordinates) => {
-    return coordinates.map((coordinate) => {
-      return Math.round(coordinate * SCALE);
-    });
-  });
+function precision(coordinate) {
+  return Math.round(coordinate * 1e5);
 }
 ```
 
@@ -100,19 +94,27 @@ The obvious choice here is five decimal places, because it is neither too coarse
 196,512 KB -> 148,188 KB
 
 ## Offset
+Now come the lossless compression steps. Coordinates in polylines are usually within close proximity, so it makes sense to store their offset instead of the full coordinate.
+
 ```js
 const previous = [0, 0];
 
-function offset(polyline) {
-  return polyline.map((coordinates) => {
-    return coordinates.map((coordinate, index) => {
-      const offset = coordinate - previous[index];
-      previous[index] = coordinate;
-      return offset;
-    });
+function offset(coordinates) {
+  return coordinates.map((coordinate, index) => {
+    const offset = coordinate - previous[index];
+    previous[index] = coordinate;
+    return offset;
   });
 }
 ```
+The offset is calculated across polylines boundaries, so the offset of a polyline's first coordinates is calculated by using the previous polyline's last coordinate. That means the actual order of polylines is important too. There are four options to do that:
+
+1. Random
+2. Sort query output by quad tile `out qt;`
+3. Sort polylines by nearest neighbor
+4. Sort polylines optimally
+
+Option four is impossible for our data size, because it resembles the infamous [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) and it thus NP-hard. The second best option, sorting by nearest neighbors, yields a [minor compression improvement](https://github.com/jsmolka/poi/commit/1ffb6adfa8fea924f4425c73d0883f76834c2a26) compared to the others.
 
 ```js
 [
@@ -126,17 +128,53 @@ function offset(polyline) {
 148,188 KB -> 72,932 KB
 
 ## Zigzag
+This step acts as preparation for the next one. We need to convert signed to unsigned integers while preserving a one-to-one mapping. To achieve that, we use the zigzag algorithm. If the offset is positive we zig `offset * 2 `, otherwise we zag `offset * 2 - 1`.
+
 ```js
-function zigzag(polyline) {
-  return polyline.map((coordinates) => {
-    return coordinates.map((coordinate) => {
-      return coordinate >= 0
-        ? +coordinate * 2
-        : -coordinate * 2 - 1;
-    });
-  });
+function zigzag(offset) {
+  return offset >= 0
+    ? +offset * 2
+    : -offset * 2 - 1;
 }
 ```
+
+To keep the mapped numbers as small as possible, one could also think about using a [Huffman table](https://en.wikipedia.org/wiki/Huffman_coding) for encoding. Fortunately, small offsets are the most frequent by nature, so there is no reason to make to code more complicated.
+
+<details>
+  <summary>Distribution of the hundred most occurring offsets</summary>
+
+  ```js
+  [
+    // [offset, occurrences]
+    [  0, 664212 ], [ 3,  316156], [ 2,  316039], [ -3, 313387],
+    [ -2, 313331 ], [ 1,  311335], [ 4,  310986], [ -1, 309073],
+    [ -4, 306045 ], [ 5,  301595], [-5,  296371], [  6, 291592],
+    [ -6, 283468 ], [ 7,  276716], [-7,  269840], [  8, 262965],
+    [ -8, 255064 ], [ 9,  248909], [-9,  241486], [ 10, 233819],
+    [-10, 226594 ], [ 11, 220411], [-11, 214053], [ 12, 208307],
+    [-12, 200581 ], [ 13, 196530], [-13, 188953], [ 14, 184725],
+    [-14, 177287 ], [ 15, 174513], [-15, 167567], [ 16, 163977],
+    [-16, 157801 ], [ 17, 155238], [-17, 149536], [ 18, 146882],
+    [-18, 140333 ], [ 19, 139270], [-19, 133223], [ 20, 131587],
+    [-20, 125269 ], [ 21, 124411], [-21, 118928], [ 22, 117509],
+    [-22, 112827 ], [ 23, 112070], [-23, 107260], [ 24, 106017],
+    [-24, 101619 ], [ 25, 100549], [ 26,  96364], [-25,  96302],
+    [-26,  92203 ], [ 27,  91810], [ 28,  87467], [-27,  87117],
+    [-28,  83365 ], [ 29,  83290], [-29,  79892], [ 30,  79573],
+    [ 31,  76055 ], [-30,  75874], [ 32,  73157], [-31,  71550],
+    [ 33,  69216 ], [-32,  68699], [ 34,  66438], [-33,  65757],
+    [ 35,  63873 ], [-34,  63422], [ 36,  60686], [-35,  60215],
+    [ 37,  58634 ], [-36,  58119], [ 38,  55735], [-37,  55250],
+    [ 39,  53330 ], [-38,  52848], [ 40,  51642], [-39,  51235],
+    [ 41,  49524 ], [-40,  48811], [ 42,  47384], [-41,  46975],
+    [ 43,  45748 ], [-42,  44719], [ 44,  43725], [-43,  43560],
+    [ 45,  42272 ], [-44,  41448], [ 46,  40686], [-45,  40066],
+    [ 47,  39368 ], [-46,  38352], [ 48,  37835], [-47,  37047],
+    [ 49,  36283 ], [-48,  35819], [ 50,  35253], [-49,  34461],
+    // ... 12325 more items
+  ]
+  ```
+</details>
 
 ```js
 [
@@ -150,6 +188,8 @@ function zigzag(polyline) {
 72,932 KB -> 69,300 KB
 
 ## Encode
+The last step concerns encoding the polylines as variable integers, aka varints.
+
 ```js
 function writeVarint(out, value) {
   while (value > 0x7f) {
@@ -161,12 +201,27 @@ function writeVarint(out, value) {
 ```
 
 ```js
-[
-  0xe0, 0x03, 0xc8, 0x05, // [(480 & 0x7f) | 0x80, (480 >> 7) & 0x7f, ...]
-  0x8f, 0x01, 0x25,       // [(143 & 0x7f) | 0x80, (143 >> 7) & 0x7f, ...]
-  0x59,       0x1d,       // [89 & 0x7f, ...]
-  0x67,       0x25        // [103 & 0x7f, ...]
-]
+function encode(polylines) {
+  const out = [];
+  writeVarint(out, polylines.length);
+  for (const polyline of polylines) {
+    writeVarint(out, polyline.length);
+    for (const offsets of polyline) {
+      for (const offset of offsets) {
+        writeVarint(out, offset);
+      }
+    }
+  }
+  return Uint8Array.from(out);
+}
+```
+
+```js
+0x0b,                   // Length
+0xe0, 0x03, 0xc8, 0x05, // [(480 & 0x7f) | 0x80, (480 >> 7) & 0x7f, ...]
+0x8f, 0x01, 0x25,       // [(143 & 0x7f) | 0x80, (143 >> 7) & 0x7f, ...]
+0x59,       0x1d,       // [89 & 0x7f, ...]
+0x67,       0x25        // [103 & 0x7f, ...]
 ```
 
 69,300 KB -> 20,390 KB

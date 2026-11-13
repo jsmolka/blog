@@ -50,30 +50,45 @@ const PRECISION = 5;
 const SCALE = 10 ** PRECISION;
 
 function precision(polylines) {
-  return polylines.map((polyline) =>
-    polyline.map((coordinates) => coordinates.map((coordinate) => Math.round(coordinate * SCALE))),
-  );
+  return polylines.map((polyline) => {
+    return polyline.map((coordinates) => {
+      return coordinates.map((coordinate) => {
+        return Math.round(coordinate * SCALE);
+      });
+    });
+  });
 }
 
 function offset(polylines) {
   const previous = [0, 0];
-  return polylines.map((polyline) =>
-    polyline.map((coordinates) =>
+  return polylines.map((polyline) => {
+    return polyline.map((coordinates) =>
       coordinates.map((coordinate, index) => {
         const offset = coordinate - previous[index];
         previous[index] = coordinate;
         return offset;
       }),
-    ),
-  );
+    );
+  });
 }
 
 function zigzag(polylines) {
-  return polylines.map((polyline) =>
-    polyline.map((coordinates) =>
-      coordinates.map((coordinate) => (coordinate >= 0 ? coordinate * 2 : -coordinate * 2 - 1)),
-    ),
-  );
+  const occurrences = new Map();
+  return {
+    polylines: polylines.map((polyline) => {
+      return polyline.map((offsets) => {
+        return offsets.map((offset) => {
+          if (occurrences.has(offset)) {
+            occurrences.set(offset, occurrences.get(offset) + 1);
+          } else {
+            occurrences.set(offset, 1);
+          }
+          return offset >= 0 ? offset * 2 : -offset * 2 - 1;
+        });
+      });
+    }),
+    occurrences: Array.from(occurrences.entries()).sort((a, b) => b[1] - a[1]),
+  };
 }
 
 function writeVarint(out, value) {
@@ -90,9 +105,9 @@ function encode(polylines) {
   writeVarint(out, polylines.length);
   for (const polyline of polylines) {
     writeVarint(out, polyline.length);
-    for (const coordinates of polyline) {
-      for (const coordinate of coordinates) {
-        writeVarint(out, coordinate);
+    for (const offsets of polyline) {
+      for (const offset of offsets) {
+        writeVarint(out, offset);
       }
     }
   }
@@ -112,38 +127,45 @@ function stats(polylines) {
   }
 
   console.log('polylines:', polylines.length);
-  console.log('vertices', vertices);
-  console.log('average length', vertices / polylines.length);
+  console.log('length:', vertices / polylines.length);
 }
 
 async function main() {
   const sample = 556430;
 
   const step2 = sort(step1);
-  console.log('sort >', step2[sample]);
   writeFileSync('./data/2-sort.json', JSON.stringify(step2));
+  console.log('# sort');
+  console.log('data:', step2[sample]);
   stats(step2);
 
   const step3 = simplify(step2);
-  console.log('simplify >', step3[sample]);
   writeFileSync('./data/3-simplify.json', JSON.stringify(step3));
+  console.log('\n# simplify');
+  console.log('data:', step3[sample]);
   stats(step3);
 
   const step4 = precision(step3);
-  console.log('precision >', step4[sample]);
   writeFileSync('./data/4-precision.json', JSON.stringify(step4));
+  console.log('\n# precision');
+  console.log('data:', step4[sample]);
 
   const step5 = offset(step4);
-  console.log('offset >', step5[sample]);
   writeFileSync('./data/5-offset.json', JSON.stringify(step5));
+  console.log('\n# offset');
+  console.log('data:', step5[sample]);
 
-  const step6 = zigzag(step5);
-  console.log('zigzag >', step6[sample]);
+  const { polylines: step6, occurrences } = zigzag(step5);
   writeFileSync('./data/6-zigzag.json', JSON.stringify(step6));
+  console.log('\n# zigzag');
+  console.log('data:', step6[sample]);
+  console.log('occurrences:', occurrences);
 
   const step7 = encode(step6);
+  writeFileSync('./data/7-encode.bin', step7);
+  console.log('\n# encode');
   console.log(
-    'encode >',
+    'data:',
     step6[sample].map((coordinates) =>
       coordinates.map((coordinate) =>
         writeVarint([], coordinate)
@@ -152,7 +174,6 @@ async function main() {
       ),
     ),
   );
-  writeFileSync('./data/7-encode.bin', step7);
 
   const step8 = await compress(step7);
   writeFileSync('./data/8-compress.bin', step8);
