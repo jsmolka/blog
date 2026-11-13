@@ -10,11 +10,11 @@ area["ISO3166-1"="DE"][admin_level=2];
 way["highway"]["surface"~"^(gravel|fine_gravel|compacted|pebblestone)$"](area);
 out skel geom;
 ```
-Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js to its knees. _"Cannot create a string longer than `0x1fffffe8` characters"_, it whispered with its dying breath. Limited to an internal string length of 512 MB, it was not prepared to deal with vast amounts of data flooding in.
+Return all gravel roads [^gravel] in Germany and their geometry. This innocent looking [Overpass](https://wiki.openstreetmap.org/wiki/Overpass_API) query forced Node.js to its knees. _"Cannot create a string longer than `0x1fffffe8` characters"_, it whispered with its dying breath. Limited to an internal string length of 512 MB, it was not prepared to deal with the data flooding in.
 
-[^gravel]: I hereby use the power granted to me by myself to define what is gravel and what is not. Something the gravel community still struggles with.
+[^gravel]: Gravel isn't well defined by the community, so I used my would-I-ride-that metic while looking at OSM's [unpaved surfaces](https://wiki.openstreetmap.org/wiki/Key:surface#Unpaved).
 
-I had to switch the response type to `stream` and use the [stream-json](https://github.com/uhop/stream-json) library to parse it. The result measured 614 MB, even though it only contained the basic structural `skel` and geometric `geom` data. I stripped it down even further to just the polylines and their coordinates. 239 MB and 1,032,029 polylines with an average length of 10.15 coordinates to be exact.
+I had to switch the response type to `stream` and use the [stream-json](https://github.com/uhop/stream-json) library to parse it. The result measured 614 MB, despite only containing basic structural `skel` and geometric `geom` information. I stripped it down even further to just the polylines. 240 MB and 1,032,029 polylines with an average length of 10.15 coordinates to be exact.
 
 
 ```js
@@ -43,7 +43,7 @@ Here are some examples of different tolerances applied to the same [polyline](ht
 - ![](img/simplify-2.0.png "Tolerance of 2 meters")
 {.fluent}
 
-I chose a tolerance of 0.5 meters because it still looks smooth and close to the original compared to the other ones. Using it decreased the average polyline length by around 20% to 8.3 coordinates.
+I chose the 0.5 meters tolerance because it still looks smooth and close to the original compared to the other ones. Using it decreased the average polyline length by around 20% to 8.3 coordinates.
 
 ```js
 [
@@ -58,7 +58,7 @@ I chose a tolerance of 0.5 meters because it still looks smooth and close to the
 239,784 KB -> 196,512 KB
 
 ## Precision
-The second lossy compression step concerns the [coordinate precision](https://wiki.openstreetmap.org/wiki/Precision_of_coordinates). More decimal places mean more precision, but also more data. The following applies to latitudes:
+The second lossy compression step concerns the [coordinate precision](https://wiki.openstreetmap.org/wiki/Precision_of_coordinates). More decimal places mean higher precision, but also more data. The following relation of between decimal places and precision applies to latitudes:
 
 | DD.dddddd° | Decimal places | DD°MM'SS.ssss" | Meters   |
 | ---------- | -------------- | -------------- | -------- |
@@ -80,7 +80,7 @@ function precision(coordinate) {
 }
 ```
 
-The obvious choice here is five decimal places, because it is neither too coarse nor too fine.
+The obvious choice here is five decimal places, because it's neither too coarse nor too fine.
 
 ```js
 [
@@ -94,7 +94,7 @@ The obvious choice here is five decimal places, because it is neither too coarse
 196,512 KB -> 148,188 KB
 
 ## Offset
-Now come the lossless compression steps. Coordinates in polylines are usually within close proximity, so it makes sense to store their offset instead of the full coordinate.
+Now come the lossless compression steps. Coordinates in polylines are usually within close proximity, so it makes sense to store the offset to their predecessor instead of the full coordinate.
 
 ```js
 const previous = [0, 0];
@@ -114,7 +114,7 @@ The offset is calculated across polylines boundaries, so the offset of a polylin
 3. Sort polylines by nearest neighbor
 4. Sort polylines optimally
 
-Option four is impossible for our data size, because it resembles the infamous [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) and it thus NP-hard. The second best option, sorting by nearest neighbors, yields a [minor compression improvement](https://github.com/jsmolka/poi/commit/1ffb6adfa8fea924f4425c73d0883f76834c2a26) compared to the others.
+Option four is impossible for our data size, because it resembles the infamous [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) and is thus NP-hard. The second best option, sorting by nearest neighbors, yields a [minor compression improvement](https://github.com/jsmolka/poi/commit/1ffb6adfa8fea924f4425c73d0883f76834c2a26) compared to the others.
 
 ```js
 [
@@ -128,7 +128,7 @@ Option four is impossible for our data size, because it resembles the infamous [
 148,188 KB -> 72,932 KB
 
 ## Zigzag
-This step acts as preparation for the next one. We need to convert signed to unsigned integers while preserving a one-to-one mapping. To achieve that, we use the zigzag algorithm. If the offset is positive we zig `offset * 2 `, otherwise we zag `offset * 2 - 1`.
+This step acts as preparation for the next one. We need to convert signed integers to unsigned ones while preserving a one-to-one mapping. To achieve that, we use the zigzag algorithm. If the offset is positive we zig `offset * 2 `, otherwise we zag `offset * 2 - 1`.
 
 ```js
 function zigzag(offset) {
@@ -138,7 +138,7 @@ function zigzag(offset) {
 }
 ```
 
-To keep the mapped numbers as small as possible, one could also think about using a [Huffman table](https://en.wikipedia.org/wiki/Huffman_coding) for encoding. Fortunately, small offsets are the most frequent by nature, so there is no reason to make to code more complicated.
+The next step also works best with small numbers. Fortunately, small offsets are the most frequent in polylines, so there is no reason to use a more complicated alternative like [Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding).
 
 ![](img/offset-distribution.png "Offset distribution excluding zero")
 
@@ -154,7 +154,7 @@ To keep the mapped numbers as small as possible, one could also think about usin
 72,932 KB -> 69,300 KB
 
 ## Encode
-The last step concerns encoding the polylines as variable integers, aka varints.
+In the last step we convert the zigzagged offsets into binary data. For that, we use [variables integers](https://en.wikipedia.org/wiki/Variable-length_integer), a base-128 integer encoding that can, as the name suggests, span a variable number of bytes depending on its size. The lower bits of a byte contain the data, while the upper bit defines whether or the integer continues in the next byte. Compared to other encodings, small numbers take up very little space, which makes it ideal for our use case.
 
 ```js
 function writeVarint(out, value) {
@@ -166,21 +166,7 @@ function writeVarint(out, value) {
 }
 ```
 
-```js
-function encode(polylines) {
-  const out = [];
-  writeVarint(out, polylines.length);
-  for (const polyline of polylines) {
-    writeVarint(out, polyline.length);
-    for (const offsets of polyline) {
-      for (const offset of offsets) {
-        writeVarint(out, offset);
-      }
-    }
-  }
-  return Uint8Array.from(out);
-}
-```
+We also need to include the line's length in the encoded data. Otherwise we wouldn't know when they start or stop once we get to decoding.
 
 ```js
 0x0b,                   // Length
@@ -193,43 +179,18 @@ function encode(polylines) {
 69,300 KB -> 20,390 KB
 
 ## Conclusion
+Now all that's left to do is zip up the data and the wrap up post. We went from 614 MB down to 18 MB. That's a 97% reduction. Here is each steps with its size:
+
 | Step      | Description                                | Size [KB] |
 | --------- | ------------------------------------------ | --------: |
-| Raw       | Raw data returned by the Overpass query    |   614,312 |
+| Raw       | Raw data returned by the Overpass API      |   614,312 |
 | Geometry  | Remove all but geometric data              |   239,784 |
 | Simplify  | Simplify polylines with a tolerance of 0.5 |   196,512 |
 | Precision | Round coordinates to 5 decimal places      |   148,188 |
 | Offset    | Store offset to previous coordinates       |    72,932 |
 | Zigzag    | Convert negative to positive numbers       |    69,300 |
-| Encode    | Encode in a binary format using varints    |    20,390 |
+| Encode    | Encode  using variable integers            |    20,390 |
 | Compress  | Compress with deflate                      |    17,501 |
 {.tabular-nums}
 
-<details>
-  <summary>Individual file sizes</summary>
-
-  Similar compression applied to all data. Pois also include metadata, which makes up the largest amount. Vercel static file limit is 100 MB.
-
-  | Country      | Cafes | Cemeteries | Cobbles |  Gas | Gravel | Grocers | Water |
-  | ------------ | ----: | ---------: | ------: | ---: | -----: | ------: | ----: |
-  | Austria      |   123 |         29 |      73 |   26 |  2,831 |      78 |    34 |
-  | Belgium      |   109 |         38 |     204 |   23 |    637 |      78 |     6 |
-  | Czechia      |    89 |         33 |     211 |   34 |    870 |      96 |     9 |
-  | Denmark      |    78 |         17 |      45 |   15 |  1,545 |      40 |     4 |
-  | France       |   683 |        269 |     317 |   91 |  5,045 |     450 |   101 |
-  | Germany      | 1,082 |        270 |   1,887 |  176 | 17,387 |     571 |    44 |
-  | Italy        |   611 |        149 |     755 |  133 |  5,131 |     262 |   257 |
-  | Lichtenstein |     1 |          1 |       1 |    1 |     25 |       1 |     1 |
-  | Luxembourg   |     8 |          4 |      12 |    3 |    102 |       6 |     1 |
-  | Monaco       |     1 |          1 |       1 |    1 |      1 |       1 |     1 |
-  | Netherlands  |   144 |         31 |      41 |   38 |    848 |      86 |    12 |
-  | Poland       |   193 |        114 |     358 |   61 |  2,211 |     358 |    10 |
-  | Portugal     |   178 |         39 |     610 |   23 |    466 |      66 |    27 |
-  | Slovenia     |    27 |          9 |       7 |   10 |    847 |      15 |     8 |
-  | Spain        |   381 |        135 |     270 |  114 |  3,119 |     239 |   178 |
-  | Switzerland  |    98 |         18 |      96 |   29 |  2,067 |      88 |    57 |
-  {.tabular-nums}
-</details>
-
-
-But with great datasets come great performance problems. To be continued.
+But with great datasets come great performance problems. To be continued...
