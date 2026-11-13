@@ -11,7 +11,6 @@ from dateutil.relativedelta import relativedelta
 from dateutil.parser import parse
 from datetime import datetime, UTC
 
-
 plt.rcParams["font.family"] = "Inter"
 
 

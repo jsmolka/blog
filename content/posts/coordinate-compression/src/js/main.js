@@ -73,22 +73,13 @@ function offset(polylines) {
 }
 
 function zigzag(polylines) {
-  const occurrences = new Map();
-  return {
-    polylines: polylines.map((polyline) => {
-      return polyline.map((offsets) => {
-        return offsets.map((offset) => {
-          if (occurrences.has(offset)) {
-            occurrences.set(offset, occurrences.get(offset) + 1);
-          } else {
-            occurrences.set(offset, 1);
-          }
-          return offset >= 0 ? offset * 2 : -offset * 2 - 1;
-        });
+  return polylines.map((polyline) => {
+    return polyline.map((offsets) => {
+      return offsets.map((offset) => {
+        return offset >= 0 ? offset * 2 : -offset * 2 - 1;
       });
-    }),
-    occurrences: Array.from(occurrences.entries()).sort((a, b) => b[1] - a[1]),
-  };
+    });
+  });
 }
 
 function writeVarint(out, value) {
@@ -155,11 +146,10 @@ async function main() {
   console.log('\n# offset');
   console.log('data:', step5[sample]);
 
-  const { polylines: step6, occurrences } = zigzag(step5);
+  const step6 = zigzag(step5);
   writeFileSync('./data/6-zigzag.json', JSON.stringify(step6));
   console.log('\n# zigzag');
   console.log('data:', step6[sample]);
-  console.log('occurrences:', occurrences);
 
   const step7 = encode(step6);
   writeFileSync('./data/7-encode.bin', step7);
