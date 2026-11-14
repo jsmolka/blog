@@ -1,5 +1,6 @@
 import json
 import matplotlib.pyplot as plt
+from matplotlib.ticker import StrMethodFormatter
 
 plt.rcParams["font.family"] = "Inter"
 
@@ -31,6 +32,7 @@ def main():
 
     axes.set_xlim(-WINDOW, WINDOW)
     axes.set_ylim(bottom=0)
+    axes.yaxis.set_major_formatter(StrMethodFormatter("{x:,.0f}"))
     axes.tick_params(colors=COLOR_SHADE_1, length=8, labelsize=24)
 
     for spine in axes.spines.values():

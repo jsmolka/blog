@@ -58,7 +58,7 @@ I chose the 0.5 meters tolerance because it still looks smooth and close to the 
 239,784 KB -> 196,512 KB
 
 ## Precision
-The second lossy compression step concerns the [coordinate precision](https://wiki.openstreetmap.org/wiki/Precision_of_coordinates). More decimal places mean higher precision, but also more data. The following relation of between decimal places and precision applies to latitudes:
+The second lossy compression step concerns the [coordinate precision](https://wiki.openstreetmap.org/wiki/Precision_of_coordinates). More decimal places mean higher precision, but also more data. The following relation between decimal places and precision applies to latitudes:
 
 | DD.dddddd° | Decimal places | DD°MM'SS.ssss" | Meters   |
 | ---------- | -------------- | -------------- | -------- |
@@ -72,15 +72,7 @@ The second lossy compression step concerns the [coordinate precision](https://wi
 | 0.0000001° | 7              | 0°00'00.0004"  | 0.011112 |
 {.tabular-nums}
 
-Longitudes have the same precision at the equator and get more accurate closer to the poles.
-
-```js
-function precision(coordinate) {
-  return Math.round(coordinate * 1e5);
-}
-```
-
-The obvious choice here is five decimal places, because it's neither too coarse nor too fine.
+Longitudes have the same precision at the equator and get more accurate closer to the poles, because the distance between meridians decreases. So the values in the table above are the worst case in terms of precision. The obvious choice here is five decimal places, because it's neither too coarse nor too fine.
 
 ```js
 [
@@ -107,14 +99,14 @@ function offset(coordinates) {
   });
 }
 ```
-The offset is calculated across polylines boundaries, so the offset of a polyline's first coordinates is calculated by using the previous polyline's last coordinate. That means the actual order of polylines is important too. There are four options to do that:
+They are calculated across polyline boundaries. For the offset of a polyline's first coordinate, the previous polyline's last coordinate is used. As a result, the order of polylines has a minor influence on compression. There are four options to sort them:
 
 1. Random
 2. Sort query output by quad tile `out qt;`
 3. Sort polylines by nearest neighbor
 4. Sort polylines optimally
 
-Option four is impossible for our data size, because it resembles the infamous [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) and is thus NP-hard. The second best option, sorting by nearest neighbors, yields a [minor compression improvement](https://github.com/jsmolka/poi/commit/1ffb6adfa8fea924f4425c73d0883f76834c2a26) compared to the others.
+Option four is impossible for the data size, because it resembles the infamous [traveling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem) and thus is NP-hard. The second best option, sorting by nearest neighbors, yields a [minor compression improvement](https://github.com/jsmolka/poi/commit/1ffb6adfa8fea924f4425c73d0883f76834c2a26) compared to the others and also takes some load off the Overpass server because it doesn't need to sort.
 
 ```js
 [
@@ -128,13 +120,11 @@ Option four is impossible for our data size, because it resembles the infamous [
 148,188 KB -> 72,932 KB
 
 ## Zigzag
-This step acts as preparation for the next one. We need to convert signed integers to unsigned ones while preserving a one-to-one mapping. To achieve that, we use the zigzag algorithm. If the offset is positive we zig `offset * 2 `, otherwise we zag `offset * 2 - 1`.
+This step acts as preparation for the last one. We need to convert signed integers to unsigned ones while preserving a one-to-one mapping. To achieve that, we use the zigzag algorithm. If the offset is positive we zig `offset * 2 `, otherwise we zag `-offset * 2 - 1`.
 
 ```js
 function zigzag(offset) {
-  return offset >= 0
-    ? +offset * 2
-    : -offset * 2 - 1;
+  return offset >= 0 ? offset * 2 : -offset * 2 - 1;
 }
 ```
 
@@ -168,8 +158,10 @@ function writeVarint(out, value) {
 
 We also need to include the line's length in the encoded data. Otherwise we wouldn't know when they start or stop once we get to decoding.
 
+<!-- Todo: sequential with 0 lng/lat: calculation -->
+
 ```js
-0x0b,                   // Length
+0x04,                   // Length
 0xe0, 0x03, 0xc8, 0x05, // [(480 & 0x7f) | 0x80, (480 >> 7) & 0x7f, ...]
 0x8f, 0x01, 0x25,       // [(143 & 0x7f) | 0x80, (143 >> 7) & 0x7f, ...]
 0x59,       0x1d,       // [89 & 0x7f, ...]
